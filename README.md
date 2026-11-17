@@ -4,6 +4,6 @@ Court decisions and legal sources on migration, collected region by region for t
 
 | Folder | Region |
 |---|---|
-| `east-asia/` | Hong Kong, Japan, South Korea, Macau, Mongolia, Taiwan (China noted) |
+| `east-asia/` | Hong Kong, Japan, South Korea, Macau (cases); statutes also for Taiwan, Mongolia and China |
 
 Each region folder uses the same columns as theimr.org's `court-decisions/data/decisions.csv`, so rows can move into the site's database as they are.

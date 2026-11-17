@@ -1,0 +1,32 @@
+id,jurisdiction,title_en,title_local,type,year,topic,farm_relevant,official_source,notes
+kr-immigration-act,KR,Immigration Act,출입국관리법,act,1963,entry; stay; deportation; detention,,law.go.kr,Detention (보호) and deportation (강제퇴거) provisions litigated often
+kr-refugee-act,KR,Refugee Act,난민법,act,2012,refugees,,law.go.kr,In force July 2013; first stand-alone refugee act in East Asia
+kr-foreign-workers-act,KR,Act on the Employment of Foreign Workers (Employment Permit System),외국인근로자의 고용 등에 관한 법률,act,2003,labour migration,yes,law.go.kr,EPS covers agriculture/livestock and fisheries sectors
+kr-labor-standards-63,KR,Labor Standards Act art. 63,근로기준법 제63조,act provision,1953,labour standards,yes,law.go.kr,Excludes agriculture livestock and fisheries workers from working-hours rest and holiday rules
+kr-nationality-act,KR,Nationality Act,국적법,act,1948,nationality,,law.go.kr,
+kr-foreigners-framework,KR,Framework Act on Treatment of Foreigners Residing in the Republic of Korea,재한외국인 처우 기본법,act,2007,integration,,law.go.kr,
+kr-multicultural-families,KR,Multicultural Families Support Act,다문화가족지원법,act,2008,marriage migration,,law.go.kr,
+kr-trafficking-act,KR,Act on the Prevention of Human Trafficking and Protection of Victims,인신매매등방지 및 피해자보호 등에 관한 법률,act,2021,trafficking,,law.go.kr,In force January 2023
+jp-icrra,JP,Immigration Control and Refugee Recognition Act,出入国管理及び難民認定法,act,1951,entry; stay; refugees; deportation; detention,yes,e-Gov / Japanese Law Translation,Specified Skilled Worker (特定技能) status includes agriculture and fisheries; 2023 amendment on complementary protection and repeat refugee applications
+jp-technical-intern-act,JP,Act on Proper Technical Intern Training and Protection of Technical Intern Trainees,外国人の技能実習の適正な実施及び技能実習生の保護に関する法律,act,2016,labour migration,yes,e-Gov / Japanese Law Translation,To be replaced by the Employment for Skill Development (育成就労) system under the 2024 amendment
+jp-labor-standards-41,JP,Labor Standards Act art. 41,労働基準法 第41条,act provision,1947,labour standards,yes,e-Gov / Japanese Law Translation,Excludes agriculture livestock and fisheries workers from working-hours rest and holiday rules
+jp-nationality-act,JP,Nationality Act,国籍法,act,1950,nationality,,e-Gov / Japanese Law Translation,
+tw-immigration-act,TW,Immigration Act,入出國及移民法,act,1999,entry; stay; deportation; detention,,Laws & Regulations Database (law.moj.gov.tw),
+tw-employment-services-act,TW,Employment Service Act,就業服務法,act,1992,labour migration,yes,Laws & Regulations Database (law.moj.gov.tw),Governs migrant workers incl. agricultural migrant workers (農業移工) and caregivers
+tw-foreign-crew-regs,TW,Regulations on the Authorization and Management of Overseas Employment of Foreign Crew Members,境外僱用非我國籍船員許可及管理辦法,regulation,2017,distant-water fishing crew,yes,Laws & Regulations Database (law.moj.gov.tw),Foreign fishers hired abroad fall outside the Employment Service Act
+tw-trafficking-act,TW,Human Trafficking Prevention Act,人口販運防制法,act,2009,trafficking,yes,Laws & Regulations Database (law.moj.gov.tw),
+tw-nationality-act,TW,Nationality Act,國籍法,act,1929,nationality,,Laws & Regulations Database (law.moj.gov.tw),
+hk-immigration-ordinance,HK,Immigration Ordinance (Cap. 115),入境條例,ordinance,1971,entry; stay; removal; non-refoulement,,Hong Kong e-Legislation,Part VIIC unified screening mechanism for non-refoulement claims
+hk-employment-ordinance,HK,Employment Ordinance (Cap. 57),僱傭條例,ordinance,1968,labour standards,,Hong Kong e-Legislation,Applies to foreign domestic helpers; two-week rule and live-in requirement are administrative
+hk-minimum-wage-ordinance,HK,Minimum Wage Ordinance (Cap. 608),最低工資條例,ordinance,2010,labour standards,,Hong Kong e-Legislation,Live-in domestic workers excluded
+mo-migration-law,MO,Law 16/2021: Legal regime of migration control and authorisations of stay and residence,Lei n.º 16/2021 / 第16/2021號法律,law,2021,entry; stay; expulsion,,Boletim Oficial (bo.io.gov.mo),
+mo-non-resident-workers,MO,Law 21/2009: Employment of non-resident workers,Lei n.º 21/2009 / 第21/2009號法律,law,2009,labour migration,,Boletim Oficial (bo.io.gov.mo),
+mo-refugee-law,MO,Law 1/2004: Regime for recognition and loss of refugee status,Lei n.º 1/2004 / 第1/2004號法律,law,2004,refugees,,Boletim Oficial (bo.io.gov.mo),
+mo-trafficking-law,MO,Law 6/2008: Combating the crime of trafficking in persons,Lei n.º 6/2008 / 第6/2008號法律,law,2008,trafficking,,Boletim Oficial (bo.io.gov.mo),
+mn-foreign-citizens,MN,Law on the Legal Status of Foreign Citizens,Гадаадын иргэний эрх зүйн байдлын тухай хууль,law,2010,entry; stay; expulsion,,legalinfo.mn,
+mn-labour-migration,MN,Law on Sending Labour Force Abroad and Receiving Labour Force and Specialists from Abroad,Хөдөлмөр эрхлэлтийг дэмжих... (to confirm),law,2001,labour migration,yes,legalinfo.mn,Title in Mongolian to confirm
+mn-trafficking,MN,Law on Combating Trafficking in Persons,Хүн худалдаалахтай тэмцэх тухай хууль,law,2012,trafficking,,legalinfo.mn,
+mn-citizenship,MN,Law on Citizenship,Монгол Улсын иргэншлийн тухай хууль,law,1995,nationality,,legalinfo.mn,
+cn-exit-entry-law,CN,Exit and Entry Administration Law,中华人民共和国出境入境管理法,law,2012,entry; stay; deportation; illegal employment,,National Database of Laws and Regulations (flk.npc.gov.cn),
+cn-nationality-law,CN,Nationality Law,中华人民共和国国籍法,law,1980,nationality,,National Database of Laws and Regulations (flk.npc.gov.cn),Also applies in Hong Kong and Macau with NPCSC interpretations
+cn-foreigners-employment,CN,Regulations on the Administration of Employment of Foreigners in China,外国人在中国就业管理规定,regulation,1996,labour migration,,Ministry of Human Resources and Social Security,
