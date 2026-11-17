@@ -14,7 +14,7 @@ from sitefilter import site, clean, level  # noqa: E402
 from names_en import N  # noqa: E402
 
 INCOMING = HERE.parent.parent / "data" / "east-asia" / "incoming"
-KR_ROM = [("헌마", "Hun-Ma"), ("헌바", "Hun-Ba"), ("헌가", "Hun-Ka"), ("헌사", "Hun-Sa"), ("헌라", "Hun-Ra"),
+KR_ROM = [("구합", "Guhap"), ("구단", "Gudan"), ("가합", "Gahap"), ("가단", "Gadan"), ("헌마", "Hun-Ma"), ("헌바", "Hun-Ba"), ("헌가", "Hun-Ka"), ("헌사", "Hun-Sa"), ("헌라", "Hun-Ra"),
           ("헌아", "Hun-A"), ("두", "Du"), ("누", "Nu"), ("도", "Do"), ("다", "Da"), ("구", "Gu"), ("나", "Na"),
           ("노", "No"), ("므", "Meu"), ("마", "Ma"), ("부", "Bu"), ("카", "Ka"), ("초", "Cho"), ("모", "Mo"),
           ("그", "Geu"), ("아", "A"), ("재", "Jae"), ("오", "O"), ("스", "Seu"), ("즈", "Jeu"), ("느", "Neu"), ("드", "Deu")]
