@@ -9,7 +9,7 @@ Collected 17 November 2026. The cases are search hits, not read judgments: every
 | File | What it holds |
 |---|---|
 | `tables/candidates.csv` | Every migration case found, one row per case (see counts below). Columns: `jurisdiction`, `source`, `court`, `case_no`, `date`, `title`, `url`, `lang`, `matched_terms`, `farm_terms`, `retrieved`. |
-| `tables/imr_candidates.csv`, `.json` | The subset that goes onto theimr.org as unchecked candidates (status C): apex and appeal courts, plus every farm or fishing case. Same columns as IMR's `decisions.csv`; the JSON uses the site's own field names. English names are translations of the court's title, not the parties' names. |
+| `tables/imr_candidates.csv`, `.json` | The subset that goes onto theimr.org as unchecked candidates (status C): 287 cases from the top courts (Supreme Courts and Constitutional Court of Korea and Japan, Courts of Final Appeal of Hong Kong and Macau), plus every farm or fishing case. Two Hong Kong Court of Final Appeal hits that are not about migration are left out (see `scripts/sitefilter.py`). Same columns as IMR's `decisions.csv`; the JSON uses the site's own field names. English names are translations of the court's title, not the parties' names. |
 | `tables/decisions.csv` | Cases that have been read and coded (empty for now). Rows start at status S. |
 | `tables/legislation.csv` | Migration statutes for KR, JP, TW, HK, MO, MN and CN, with official sources. |
 | `tables/raw/` | The search results as exported from each site, before filtering. |

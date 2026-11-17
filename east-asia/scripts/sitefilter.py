@@ -8,10 +8,16 @@ def level(x):
     if any(k in c for k in ('最高裁','대법원','헌법재판소','Court of Final Appeal','終審法院')): return 'apex'
     if any(k in c for k in ('高等裁判所','고등법원','Court of Appeal','中級法院')): return 'appeal'
     return ''
+# HKLII searches full text, so some hits only mention a search term in passing.
+# These Court of Final Appeal cases are about other things (a ship arrest, an unauthorised assembly).
+HK_NO = {'[2023] HKCFA 20', '[2024] HKCFA 24'}
+
+
 def site(x):
+    if x['jurisdiction'] == 'HK' and x['case_no'].split(';')[0] in HK_NO: return False
     t=clean(x['title']); j=x['jurisdiction']
     if x['farm_terms']: return True
-    if not level(x): return False
+    if level(x)!='apex': return False
     if j=='JP': return bool(JP.search(t))
     if j=='KR': return bool(KR.search(t)) and not KR_NO.search(t)
     return True

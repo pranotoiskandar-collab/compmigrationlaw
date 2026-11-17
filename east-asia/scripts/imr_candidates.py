@@ -79,7 +79,17 @@ def court_en(c):
     for k, v in COURTS.items():
         if c.startswith(k):
             return v
-    return c
+    return LOWER.get(c, c)
+
+
+LOWER = {
+    "서울행정법원": "Seoul Administrative Court",
+    "대전지방법원": "Daejeon District Court",
+    "광주지방법원": "Gwangju District Court",
+    "수원지방법원": "Suwon District Court",
+    "대구지방법원포항지원": "Daegu District Court (Pohang branch)",
+    "横浜地方裁判所": "Yokohama District Court",
+}
 
 
 def cite(x):
