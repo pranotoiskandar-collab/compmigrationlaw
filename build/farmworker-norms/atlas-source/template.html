@@ -1,0 +1,1137 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an app shell like a treaty database. Header, a sticky tab bar, one view at a time, and a side drawer for country and instrument profiles. */
+:root{
+  --bg:#E5EEE8; --surface:#ffffff; --fg:#172D24; --muted:#3D5A4D; --rule:#B2C7BC; --accent:#172D24; --accent-ink:#ffffff; --chip:#E0EBE4;
+  --t5:#184f95; --t4:#256abf; --t3:#3987e5; --t2:#6da7ec; --t1:#9ec5f4; --t1ink:#182E24;
+  --grid:#DAE6DF; --nat:#c26a1f; --pub:#7a5bc4;
+  --s0:#E0EBE4; --s1:#cde2fb; --s2:#9ec5f4; --s3:#5598e7; --s4:#256abf; --s5:#104281; --nodata:#C8D8D0; --land-stroke:#ffffff;
+  --f-display:"Familjen Grotesk", system-ui, sans-serif;
+  --f-body:"Familjen Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12271E; --surface:#182E25; --fg:#E0EBE4; --muted:#8DA699; --rule:#294338; --accent:#8cc29a; --accent-ink:#10241C; --chip:#20382E;
+  --t5:#cde2fb; --t4:#9ec5f4; --t3:#6da7ec; --t2:#3987e5; --t1:#256abf; --t1ink:#E0EBE4; --grid:#21392F; --nat:#e08a3c; --pub:#a993e6;
+  --s0:#233B31; --s1:#184f95; --s2:#256abf; --s3:#3987e5; --s4:#86b6ef; --s5:#cde2fb; --nodata:#2F4A3E; --land-stroke:#182E25; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12271E; --surface:#182E25; --fg:#E0EBE4; --muted:#8DA699; --rule:#294338; --accent:#8cc29a; --accent-ink:#10241C; --chip:#20382E;
+  --t5:#cde2fb; --t4:#9ec5f4; --t3:#6da7ec; --t2:#3987e5; --t1:#256abf; --t1ink:#E0EBE4; --grid:#21392F; --nat:#e08a3c; --pub:#a993e6;
+  --s0:#233B31; --s1:#184f95; --s2:#256abf; --s3:#3987e5; --s4:#86b6ef; --s5:#cde2fb; --nodata:#2F4A3E; --land-stroke:#182E25; color-scheme:dark}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.col{max-width:70ch}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,4.6vw,44px);font-weight:700}
+h2{font-size:24px;font-weight:700}
+h3{font-size:19px;font-weight:700}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:12px}
+.lede{font-size:17px}
+.muted{color:var(--muted)}
+.note{font-size:12px;color:var(--muted)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Lens switch and news */
+.lens{display:inline-flex;align-self:flex-start;border:1px solid var(--rule);border-radius:8px;background:var(--surface);padding:3px;gap:3px;flex-wrap:wrap;max-width:100%}
+.lens button{font:inherit;font-size:13.5px;font-weight:600;padding:6px 12px;border:0;border-radius:6px;background:transparent;color:var(--muted);cursor:pointer}
+.lens button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.news{display:flex;flex-direction:column;gap:0;max-width:820px}
+.news article{display:grid;grid-template-columns:110px 1fr;gap:4px 18px;padding:14px 0;border-top:1px solid var(--rule)}
+.news article:last-child{border-bottom:1px solid var(--rule)}
+.news time{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);padding-top:3px}
+.news h3{font-size:17px}
+.news .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.news p{margin-top:4px}
+.signup{border:1px solid var(--rule);border-radius:8px;background:var(--surface);padding:16px;display:flex;flex-direction:column;gap:10px;max-width:820px}
+.signup form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.signup input[type=email]{flex:1 1 240px;min-width:0}
+@media (max-width:560px){.news article{grid-template-columns:1fr}}
+
+/* Tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule);display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding-inline:4px}
+.tabs a{flex:0 0 auto;padding:12px 12px 10px;color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;border-bottom:3px solid transparent}
+.tabs a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--accent)}
+.tabs a:hover{color:var(--fg)}
+.view{display:flex;flex-direction:column;gap:16px;min-width:0}
+
+/* Controls */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls input,.controls select,.signup input{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:var(--surface);color:var(--fg)}
+.controls input[type=search]{flex:1 1 220px;min-width:0}
+.controls select{max-width:100%;min-width:0}
+.controls label{font-size:13px;color:var(--muted)}
+.btn{font:inherit;font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--surface);color:var(--fg);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.spacer{flex:1}
+
+/* Tables */
+.tablebox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--surface)}
+table.reg{border-collapse:collapse;width:100%;min-width:1180px;font-size:13.5px}
+.reg th,.ctab th,.cmp th{position:sticky;top:0;background:var(--surface);text-align:left;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:10px;border-bottom:1px solid var(--rule);white-space:nowrap}
+.reg th,.ctab th[data-k]{cursor:pointer}
+.reg th[aria-sort="descending"]::after{content:" ↓"} .reg th[aria-sort="ascending"]::after{content:" ↑"}
+.reg td{padding:10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.reg tbody tr{cursor:pointer}
+.reg tbody tr:hover td,.ctab tbody tr:hover td{background:var(--chip)}
+.reg tr:last-child td{border-bottom:0}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.reg .name{font-weight:600;min-width:200px}
+.cite{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);font-weight:400;display:block;margin-top:2px}
+.reg .txt{min-width:240px;max-width:340px}
+.linkbtn{all:unset;cursor:pointer;color:var(--fg);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.linkbtn:hover{text-decoration-color:var(--accent)}
+.linkbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.score{display:inline-flex;align-items:center;justify-content:center;min-width:2.4em;padding:2px 6px;border-radius:4px;font-weight:600;background:var(--chip)}
+.tier{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:12.5px}
+.fam{display:inline-block;padding:1px 7px;border-radius:999px;background:var(--chip);font-size:11.5px;white-space:nowrap;color:var(--muted)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+
+.ctab{border-collapse:collapse;width:100%;min-width:1140px;font-size:13px}
+.ctab th{font-size:11.5px;padding:8px 6px}
+.ctab th.ins{text-align:center;font-family:var(--f-mono);letter-spacing:0;text-transform:none}
+.ctab th.farm{color:var(--accent)}
+.ctab td{padding:6px;border-bottom:1px solid var(--rule);white-space:nowrap}
+.ctab tbody tr{cursor:pointer}
+.ctab td.cn{font-weight:600;white-space:normal;min-width:150px}
+.bar{display:inline-block;height:8px;border-radius:0 4px 4px 0;background:var(--t4);vertical-align:middle;margin-left:6px}
+.cell{display:block;text-align:center;font-family:var(--f-mono);font-size:11px;padding:3px 4px;border-radius:3px;font-style:normal}
+.cell.r{background:var(--t1);color:var(--t1ink)}
+.cell.rf{background:var(--t3);color:#fff}
+.cell.w{outline:1.5px dashed var(--t3);outline-offset:-1.5px;color:var(--fg)}
+.cell.d{text-decoration:line-through;color:var(--muted)}
+.cell.s{color:var(--muted)}
+.cell.n{color:var(--muted)}
+.ckey{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);align-items:center}
+.ckey .cell{display:inline-block;min-width:44px}
+.cmpbox{width:16px;height:16px;accent-color:var(--accent)}
+
+/* Map */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+@media (max-width:860px){.mapgrid{grid-template-columns:1fr}}
+.mapbox{background:var(--surface);border:1px solid var(--rule);border-radius:8px;position:relative;overflow:hidden}
+#map{display:block;width:100%;height:auto}
+#map path.land{stroke:var(--land-stroke);stroke-width:.5;cursor:pointer}
+#map path.land:hover,#map path.land:focus{stroke:var(--fg);stroke-width:1.2;outline:none}
+#map path.land.sel{stroke:var(--accent);stroke-width:2}
+#map .sphere{fill:var(--bg);stroke:var(--rule)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lg-box{width:14px;height:10px;border-radius:2px;display:inline-block}
+.side{display:flex;flex-direction:column;gap:12px;min-width:0}
+.toplist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:8px;background:var(--surface)}
+.toplist li{display:flex;gap:10px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--rule);font-size:13.5px}
+.toplist li:last-child{border-bottom:0}
+.toplist .num{color:var(--muted);width:2em}
+.toplist button{all:unset;cursor:pointer;flex:1;font-weight:600}
+.toplist button:focus-visible{outline:2px solid var(--accent)}
+#tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);padding:8px 10px;border-radius:6px;font-size:12.5px;max-width:280px;line-height:1.4;z-index:5}
+#tip b{display:block;margin-bottom:2px}
+
+/* Timeline */
+.chartbox{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--surface);position:relative}
+#chart{display:block}
+#chart text{fill:var(--muted);font-family:var(--f-body);font-size:11px}
+#chart .lane-label{fill:var(--fg);font-weight:600;font-size:12px}
+#chart .gridline{stroke:var(--grid);stroke-width:1}
+#chart .lanerule{stroke:var(--rule);stroke-width:1}
+#chart .lag{stroke-width:2;stroke-linecap:round;opacity:.55}
+#chart .dot{stroke:var(--surface);stroke-width:2}
+#chart .eif{fill:var(--surface);stroke-width:2}
+#chart .hit{fill:transparent;cursor:pointer}
+#chart g.item:hover .dot,#chart g.item:focus .dot{stroke:var(--fg)}
+#chart g.item:focus{outline:none}
+.lg-eif{width:10px;height:10px;border-radius:50%;border:2px solid var(--muted);display:inline-block;background:var(--surface)}
+.lg-line{width:22px;height:2px;background:var(--muted);display:inline-block;opacity:.6}
+#ttip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);padding:8px 10px;border-radius:6px;font-size:12.5px;max-width:280px;line-height:1.4;z-index:5}
+#ttip b{display:block;margin-bottom:2px}
+
+/* Compare */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 6px 4px 12px;border-radius:999px;background:var(--chip);font-size:13.5px;font-weight:600}
+.chip button{all:unset;cursor:pointer;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--muted)}
+.chip button:hover{background:var(--rule);color:var(--fg)}
+.cmp{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+.cmp td{padding:8px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.cmp td:first-child{font-weight:600;white-space:nowrap}
+.cmp .cell{display:inline-block;min-width:52px}
+.empty{padding:28px;border:1px dashed var(--rule);border-radius:8px;color:var(--muted);text-align:center}
+
+/* Data */
+.dlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.dl{border:1px solid var(--rule);border-radius:8px;background:var(--surface);padding:16px;display:flex;flex-direction:column;gap:8px}
+.dl h3{font-size:17px}
+.dl .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.citebox{font-family:var(--f-mono);font-size:12.5px;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:12px;user-select:all}
+
+/* Method */
+.scale{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.scale table{border-collapse:collapse;width:100%;font-size:13.5px}
+.scale td{padding:6px 8px;border-top:1px solid var(--rule);vertical-align:top}
+.scale td:first-child{font-family:var(--f-mono);font-weight:500;white-space:nowrap;width:2.5em}
+.scale td[colspan]{white-space:normal;width:auto;font-family:inherit}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+
+/* Drawer */
+.scrim{position:fixed;inset:0;background:rgba(12,12,12,.35);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);border-left:1px solid var(--rule);z-index:41;display:flex;flex-direction:column;box-shadow:-12px 0 32px rgba(0,0,0,.12)}
+.drawer header{display:flex;gap:12px;align-items:flex-start;padding:calc(16px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) 12px 20px;border-bottom:1px solid var(--rule)}
+.drawer header .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.drawer .x{all:unset;cursor:pointer;width:32px;height:32px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted)}
+.drawer .x:hover{background:var(--chip);color:var(--fg)}
+.drawer .x:focus-visible{outline:2px solid var(--accent)}
+.drawer .body{overflow-y:auto;padding:16px max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:flex;flex-direction:column;gap:18px}
+.drawer .actions{display:flex;flex-wrap:wrap;gap:8px}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;font-size:13.5px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{border:1px solid var(--rule);border-radius:8px;padding:10px}
+.stat .v{font-family:var(--f-mono);font-size:22px;font-weight:500}
+.stat .l{font-size:12px;color:var(--muted)}
+.ilist{width:100%;border-collapse:collapse;font-size:13px}
+.imp-sum{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+@media (max-width:560px){.imp-sum{grid-template-columns:1fr 1fr}.imp-sum button{padding:8px 10px}}
+.imp-sum button{font:inherit;text-align:left;border:1px solid var(--rule);background:var(--surface);color:var(--fg);border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+.imp-sum button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.imp-sum b{font-size:14px}
+.imp-bar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--chip)}
+.imp-bar i{display:block;height:100%}
+.st{display:inline-block;font-style:normal;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.st.F,.imp-bar .F{background:#2f7d4a;color:#fff}.st.P,.imp-bar .P{background:#d9a21b;color:#182E24}.st.G,.imp-bar .G{background:#1E6B4A;color:#fff}.st.D,.imp-bar .D{background:#5d6fb0;color:#fff}
+.impcard{border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 20px}
+.impcard h4{margin:0;font-size:15px}
+.impcard .meta{grid-column:1;font-size:12.5px;color:var(--muted)}
+.impcard .law{grid-column:2;grid-row:1 / span 3;font-size:13.5px}
+.impcard .law p{margin:0 0 6px}
+@media (max-width:720px){.impcard{grid-template-columns:1fr}.impcard .law{grid-column:1;grid-row:auto}}
+.implist{display:flex;flex-direction:column;gap:10px}
+.impsys{border-left:3px solid var(--accent);padding:4px 0 4px 12px;font-size:14px}
+.gaplink{display:inline-block;margin-top:4px;font-size:13px;font-weight:600}
+.clinicbridge .gaplink{margin-right:18px}
+.recs{display:flex;flex-direction:column;gap:8px}
+.rec{border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;font-size:13.5px}
+.rec .who{font-size:12px;color:var(--muted)}
+.rs{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap;align-self:start}
+.rs.done{background:#2f7d4a;color:#fff}.rs.part{background:#d9a21b;color:#182E24}.rs.open{background:#1E6B4A;color:#fff}
+.caselist{display:flex;flex-direction:column;gap:10px}
+.case .norms .fam{white-space:normal;text-align:left;max-width:100%}
+.sdg{margin-top:6px}
+.case{min-width:0;border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:14px 16px}
+.case h4{margin:0;font-size:15px}
+.case .meta{font-size:12.5px;color:var(--muted);margin-top:2px}
+.case p{margin:8px 0 0;font-size:13.5px}
+.case .norms{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.corrgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.corrgrid{grid-template-columns:1fr}}
+#cmap{width:100%;height:auto;background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+#cmap .cl{fill:var(--nodata);stroke:var(--land-stroke);stroke-width:.5}
+#cmap .cl.dest{fill:var(--s2)}#cmap .cl.orig{fill:var(--accent)}#cmap .cl.sel{fill:var(--s4)}
+#cmap .arc{fill:none;stroke:var(--nat);stroke-width:2;opacity:.75;cursor:pointer}
+#cmap .arc.farm{stroke-dasharray:none}#cmap .arc.sel{stroke-width:4;opacity:1}
+#cmap .lbl{font:600 11px var(--f-body);fill:var(--fg);paint-order:stroke;stroke:var(--surface);stroke-width:3px;cursor:pointer}
+.corrbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.corrbtns button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.cdetail{border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:16px 18px;font-size:13.5px}
+.cdetail h3{margin:0 0 4px}
+.cdetail dt{font-weight:600;margin-top:10px}.cdetail dd{margin:2px 0 0}
+.ilist td{padding:6px 4px;border-bottom:1px solid var(--rule);vertical-align:top}
+.ilist td:first-child{font-family:var(--f-mono);white-space:nowrap}
+.cols{columns:2 180px;column-gap:20px;font-size:13px;margin:0;padding:0;list-style:none}
+.cols li{break-inside:avoid;padding:2px 0;display:flex;justify-content:space-between;gap:8px}
+.cols li span:last-child{font-family:var(--f-mono);color:var(--muted);font-size:12px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:13.5px;z-index:60;max-width:calc(100% - 32px)}
+@media print{
+  .tabs,.controls,.actions,.scrim,.toast,.btn{display:none!important}
+  body.print-drawer .wrap{display:none}
+  body.print-drawer .drawer{position:static;width:auto;box-shadow:none;border:0}
+  body.print-drawer .drawer .body{overflow:visible}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="col stack">
+    __BACKLINK__
+    <div class="eyebrow" id="aeyebrow"></div>
+    <h1 id="atitle"></h1>
+    <p class="lede" id="alede"></p>
+    <div class="lens" role="group" aria-label="Scope of the Atlas" id="scope">
+      <button type="button" data-lens="mig">All migration law</button>
+      <button type="button" data-lens="farm">Farmworker law only</button>
+    </div>
+    <p class="muted" id="count"></p>
+  </header>
+
+  <nav class="tabs" aria-label="Atlas sections">
+    <a href="#map">World map</a>
+    <a href="#norms">Norms</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#countries">Country ranking</a>
+    <a href="#implementation">Implementation</a>
+    <a href="#cases">Case law</a>
+    <a href="#corridors">Corridors</a>
+    <a href="#compare">Compare</a>
+    <a href="#stats">Statistics</a>
+    <a href="#data">Data &amp; downloads</a>
+    <a href="#news">News</a>
+    <a href="#method">Method</a>
+  </nav>
+
+  <!-- MAP -->
+  <section class="view" data-view="map" aria-labelledby="h-map">
+    <div class="col stack">
+      <h2 id="h-map">Which states have committed to protecting farmworkers?</h2>
+      <p class="muted">Countries are shaded by their score on 13 farm-relevant treaties, or by whether they ratified one treaty. Click a country to open its profile.</p>
+      <p class="note" id="mapnote">The ratification map covers 13 treaties chosen for farm work, three of them migration treaties: the Migrant Workers Convention, C181 on recruitment agencies and P29 on forced labor. Ratifications of the other migration treaties, such as the Refugee Convention, C97, C143 and C189, are not in the map yet.</p>
+    </div>
+    <div class="controls">
+      <label for="metric">Show</label>
+      <select id="metric"></select>
+    </div>
+    <div class="mapgrid">
+      <div class="stack" style="gap:10px;min-width:0">
+        <div class="mapbox" id="mapbox"><svg id="map" role="img" aria-label="World map of farmworker treaty ratification"></svg><div id="tip" hidden></div></div>
+        <div class="legend" id="maplegend"></div>
+      </div>
+      <aside class="side" aria-labelledby="h-top">
+        <h3 id="h-top">Top 10</h3>
+        <ol class="toplist" id="toplist"></ol>
+        <p class="note">Data: ILO NORMLEX and UN Treaty Collection, collected 30 October 2026. Hatched areas are territories that are not separate ILO or UN treaty parties.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- NORMS -->
+  <section class="view" data-view="norms" aria-labelledby="h-norms" hidden>
+    <div class="col stack">
+      <h2 id="h-norms">Ranked register of norms</h2>
+      <p class="muted" id="normsintro"></p>
+    </div>
+    <div class="controls">
+      <div class="lens" role="group" aria-label="Tier" id="tiers">
+        <button type="button" data-tier="G" aria-pressed="true">Global</button><button type="button" data-tier="R">Regional</button><button type="button" data-tier="N">National</button><button type="button" data-tier="P">Publications</button>
+      </div>
+      <div class="lens" role="group" aria-label="Regional system" id="systems" hidden>
+        <button type="button" data-sys="" aria-pressed="true">All systems</button><button type="button" data-sys="Europe">Europe</button><button type="button" data-sys="Africa">Africa</button><button type="button" data-sys="Americas">Americas</button><button type="button" data-sys="ASEAN">ASEAN</button>
+      </div>
+      <input id="q" type="search" placeholder="Search name, citation or provision" aria-label="Search the register">
+      <label for="fb">Binding</label>
+      <select id="fb"><option value="">All</option><option value="5">B5 Binding in force</option><option value="4">B4 Binding, weakened</option><option value="3">B3 Authoritative interpretation</option><option value="2">B2 Soft law</option><option value="1">B1 Voluntary standard</option></select>
+      <label for="ff">Family</label>
+      <select id="ff"><option value="">All</option></select>
+      <label for="ft">Topic</label>
+      <select id="ft"><option value="">All</option></select>
+      <span class="spacer"></span>
+      <button class="btn" id="dl-reg" type="button">Download these results (CSV)</button>
+    </div>
+    <p class="note" id="regcount"></p>
+    <div class="tablebox">
+      <table class="reg" id="reg">
+        <thead><tr>
+          <th data-k="rank" aria-sort="ascending">#</th>
+          <th data-k="score">Score</th>
+          <th data-k="name">Instrument</th>
+          <th data-k="b">Binding</th>
+          <th data-k="rm">Migration rel.</th>
+          <th data-k="r">Farm rel.</th>
+          <th data-k="ay">Adopted</th>
+          <th data-k="ey">In force</th>
+          <th data-k="rat">Ratifications</th>
+          <th data-k="farm">What it requires for farm work</th>
+          <th data-k="why">Likely drivers of adoption</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="view" data-view="timeline" aria-labelledby="h-tl" hidden>
+    <div class="col stack">
+      <h2 id="h-tl">Timeline of promulgation</h2>
+      <p class="muted">Each dot marks adoption, and the line runs to entry into force, so its length shows how long states took to bring an instrument into effect. Lanes group norms by tier (global, regional, national) and, within the global and regional tiers, into binding and soft law. Dot color shows binding quality. Click a dot to open the entry.</p>
+    </div>
+    <div class="legend" id="tlegend"></div>
+    <div class="chartbox" id="chartbox"><svg id="chart" role="img" aria-label="Timeline of farmworker norms by adoption year"></svg><div id="ttip" hidden></div></div>
+  </section>
+
+  <!-- COUNTRIES -->
+  <section class="view" data-view="countries" aria-labelledby="h-cr" hidden>
+    <div class="col stack">
+      <h2 id="h-cr">Country ratification ranking</h2>
+      <p class="muted">187 states scored on 13 farm-relevant treaties. You can also count the three migrant-worker conventions (C97, C143, C189) with the switch below; this changes the ranks and is off by default. Click a row to open the country profile, or tick up to four countries to compare them.</p>
+    </div>
+    <div class="ckey"><span><i class="cell rf">1978</i> farm-specific ratified</span><span><i class="cell r">2004</i> other ratified</span><span><i class="cell w">2025</i> ratified, not yet in force</span><span><i class="cell d">1965</i> denounced</span><span><i class="cell s">sig.</i> signed only (UN)</span></div>
+    <div class="controls">
+      <input id="cq" type="search" placeholder="Find a country" aria-label="Find a country">
+      <label class="note" style="display:inline-flex;align-items:center;gap:6px;min-height:44px"><input type="checkbox" id="migconv"> Include migrant-worker conventions (C97, C143, C189) in the score</label>
+      <span class="spacer"></span>
+      <a class="btn" href="#compare" id="gocmp">Compare selected (0)</a>
+      <button class="btn" id="dl-cty" type="button">Download ranking (CSV)</button>
+    </div>
+    <div class="tablebox"><table class="ctab" id="ctab"><thead></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- IMPLEMENTATION -->
+  <section class="view" data-view="implementation" aria-labelledby="h-imp" hidden>
+    <div class="col stack">
+      <h2 id="h-imp">Domestic implementation</h2>
+      <p class="muted">Ratifying a treaty is a promise. This section shows how each country has turned the frameworks and standards it accepted into national law, and where the law falls short. Pick a country to see each instrument, the laws that implement it and our assessment.</p>
+      <div class="ckey"><span><i class="st F">Implemented</i> national law gives effect to the instrument</span><span><i class="st P">Partly</i> law exists, with gaps in coverage or enforcement</span><span><i class="st G">Gap</i> ratified or binding, but law falls short or excludes workers</span><span><i class="st D">Law without ratification</i> national law on a standard the state has not ratified</span></div>
+    </div>
+    <div class="imp-sum" id="impsum"></div>
+    <p class="note" id="impcover"></p>
+    <div class="controls">
+      <select id="impst" aria-label="Filter by assessment"><option value="">All assessments</option><option value="F">Implemented</option><option value="P">Partly implemented</option><option value="G">Gaps</option><option value="D">Law without ratification</option></select>
+      <span class="spacer"></span>
+      <button class="btn" id="dl-imp" type="button">Download all (CSV)</button>
+    </div>
+    <div class="stack" id="impbody"></div>
+    <p class="note">Assessment by the Institute for Migrant Rights, October 2026, for discussion. Before citing it, check the latest comments of the ILO Committee of Experts (NORMLEX) and the concluding observations of the UN treaty bodies.</p>
+  </section>
+
+  <!-- CASE LAW -->
+  <section class="view" data-view="cases" aria-labelledby="h-cases" hidden>
+    <div class="col stack">
+      <h2 id="h-cases">Case law: how courts and committees apply the norms</h2>
+      <p class="muted">Key decisions of regional courts, national supreme courts and ILO and UN bodies. Each decision is linked to the norms it applies, which you can open from here or find in a norm's profile.</p>
+      <p class="muted">For the full collection of decisions, with Indonesian summaries and downloads, see <a href="https://theimr.org/court-decisions/">Court Decisions</a>.</p>
+    </div>
+    <div class="controls">
+      <input id="caseq" type="search" placeholder="Search decisions" aria-label="Search decisions">
+      <select id="casef" aria-label="Filter by forum"><option value="">All courts and bodies</option></select>
+      <span class="spacer"></span>
+      <button class="btn" id="dl-cases" type="button">Download (CSV)</button>
+    </div>
+    <div class="caselist" id="caselist"></div>
+  </section>
+
+  <!-- CORRIDORS -->
+  <section class="view" data-view="corridors" aria-labelledby="h-corr" hidden>
+    <div class="col stack">
+      <h2 id="h-corr">Migration corridors: Indonesian workers abroad</h2>
+      <p class="muted">The main routes Indonesian migrant workers take, and the law that protects them at each end. Pick a destination on the map or in the list.</p>
+    </div>
+    <div class="corrgrid">
+      <div><svg id="cmap" role="img" aria-label="Map of migration routes from Indonesia"></svg><div class="corrbtns" id="corrbtns"></div></div>
+      <div class="cdetail" id="cdetail" aria-live="polite"></div>
+    </div>
+    <p class="note">IMR summary, October 2026. Taiwan and Hong Kong are not separate parties to UN or ILO treaties. Check current rules with BP2MI and the destination's labor ministry.</p>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="view" data-view="compare" aria-labelledby="h-cmp" hidden>
+    <div class="col stack">
+      <h2 id="h-cmp">Compare countries</h2>
+      <p class="muted">Pick up to four countries to see their ratifications side by side, along with the national and EU laws in the Atlas that apply to them.</p>
+    </div>
+    <div class="controls">
+      <input id="addc" list="clist" placeholder="Type a country and press Enter" aria-label="Add a country to compare" style="flex:1 1 240px;min-width:0">
+      <datalist id="clist"></datalist>
+      <button class="btn" id="addbtn" type="button">Add</button>
+      <span class="spacer"></span>
+      <button class="btn" id="dl-cmp" type="button">Download comparison (CSV)</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="cmpout"></div>
+  </section>
+
+  <!-- STATISTICS -->
+  <section class="view" data-view="stats" aria-labelledby="h-st" hidden>
+    <div class="col stack">
+      <h2 id="h-st">Test it yourself</h2>
+      <p class="muted">Ask your own questions of the country data: compare groups of countries and see which pairs differ, check whether two measures move together, see which factors still matter once others are held constant, or follow how fast countries ratify a treaty. Every answer sets out the null and alternative hypotheses, the test used, the p-value and whether the null hypothesis is rejected at the significance level you choose, with a 95% interval and a plain reading. You can also take the p-value from a permutation test, which reshuffles the data thousands of times instead of assuming a random sample.</p>
+    </div>
+    <div id="statsout"></div>
+  </section>
+
+  <!-- DATA -->
+  <section class="view" data-view="data" aria-labelledby="h-data" hidden>
+    <div class="col stack">
+      <h2 id="h-data">Data and downloads</h2>
+      <p class="muted">Download the Atlas data for your own research. Tables come as CSV files, which open in Excel, Google Sheets or any statistics package. The full dataset is also available as one JSON file.</p>
+      <p class="note" id="dlnote"></p>
+    </div>
+    <div class="dlgrid" id="dlgrid"></div>
+    <div class="col stack">
+      <h3>How to cite</h3>
+      <p class="citebox" id="citation">Institute for Migrant Rights, Migration Law Atlas, including the Farmworker Norms Atlas (version of 30 October 2026). Ratification data from ILO NORMLEX and the UN Treaty Collection.</p>
+      <p class="note">Scores and the "likely drivers" are analytical judgments by the Atlas authors. Check live ratification status with ILO NORMLEX and the UN Treaty Collection before citing a count.</p>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="view" data-view="news" aria-labelledby="h-news" hidden>
+    <div class="col stack">
+      <h2 id="h-news">Significant developments</h2>
+      <p class="muted">New laws, court rulings and ratifications in migration and farmworker law, newest first. Each item links to its source.</p>
+    </div>
+    __SIGNUP__
+    <div class="controls">
+      <div class="lens" role="group" aria-label="Show news about" id="newsf">
+        <button type="button" data-nf="" aria-pressed="true">All</button><button type="button" data-nf="Migration">Migration law</button><button type="button" data-nf="Farmworkers">Farmworker law</button><button type="button" data-nf="Ratification">Ratifications</button>
+      </div>
+    </div>
+    <div class="news" id="newslist"></div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="view" data-view="method" aria-labelledby="h-m" hidden>
+    <div class="col stack">
+      <h2 id="h-m">How the scores work</h2>
+      <p>Each norm gets a binding-quality score and two relevance scores, all from 1 to 5. Its rank is binding quality multiplied by the relevance for the scope you are viewing (maximum 25). With <b>All migration law</b> selected, the Atlas uses migration relevance (RM). With <b>Farmworker law only</b>, it uses farm relevance (R), so a binding farm-specific convention outranks both a binding general treaty and a farm-specific guideline. Ties are broken by relevance, then by date. Norms are ranked separately within each tier.</p>
+      <h3>Tiers</h3>
+      <ul class="plain">
+        <li><b>Global</b>: UN and ILO treaties, declarations, treaty-body interpretations, and global private or multi-stakeholder standards.</li>
+        <li><b>Regional</b>: four regional systems. <b>Europe</b> covers Council of Europe treaties, EU law and the European Court of Human Rights. <b>Africa</b> covers the African Union, the OAU and ECOWAS. The <b>Americas</b> covers the OAS system, the Inter-American Court and MERCOSUR. <b>ASEAN</b> covers ASEAN instruments and the Asian-African Bangkok Principles.</li>
+        <li><b>National</b>: statutes, regulations and leading judgments of individual states. They bind only within one country, so they are ranked among themselves.</li>
+        <li><b>Publications</b>: reports and studies, scored by the issuer's authority (A) instead of binding quality.</li>
+      </ul>
+      <p>The farmworker subset contains every norm in the original Farmworker Norms Atlas, plus migration instruments with a farm relevance of 3 or more. The migration view leaves out norms whose relevance to migrants is only indirect (RM 1), such as pesticide codes.</p>
+    </div>
+    <div class="scale">
+      <table aria-label="Binding quality scale"><tbody>
+        <tr><td colspan="2"><b>Binding quality (B)</b></td></tr>
+        <tr><td>5</td><td>Treaty or EU legislation in force, binding on parties, with a supervisory body</td></tr>
+        <tr><td>4</td><td>Binding but weakened: an outdated or superseded convention, adopted but not yet applicable, or an obligation that arises from ILO membership itself</td></tr>
+        <tr><td>3</td><td>Authoritative interpretation of a binding treaty (general comments, court judgments) or a declaration widely treated as customary law</td></tr>
+        <tr><td>2</td><td>Intergovernmental soft law: recommendations, declarations, guidelines, codes of practice</td></tr>
+        <tr><td>1</td><td>Private or multi-stakeholder standard, enforceable only through contracts or certification</td></tr>
+      </tbody></table>
+      <table aria-label="Migration relevance scale"><tbody>
+        <tr><td colspan="2"><b>Migration relevance (RM)</b></td></tr>
+        <tr><td>5</td><td>The whole instrument is about migration, migrants, refugees or nationality</td></tr>
+        <tr><td>4</td><td>A dedicated chapter on migrants, or a central application to them (trafficking, recruitment, non-refoulement)</td></tr>
+        <tr><td>3</td><td>A general instrument with an explicit clause on non-nationals or migrant workers</td></tr>
+        <tr><td>2</td><td>A general standard that covers migrants by its scope</td></tr>
+        <tr><td>1</td><td>Indirect relevance only</td></tr>
+      </tbody></table>
+      <table aria-label="Farm relevance scale"><tbody>
+        <tr><td colspan="2"><b>Farm relevance (R)</b></td></tr>
+        <tr><td>5</td><td>The whole instrument is about agricultural or plantation work</td></tr>
+        <tr><td>4</td><td>A dedicated rural or agricultural chapter, or a sector where farm work dominates</td></tr>
+        <tr><td>3</td><td>A general instrument with an explicit agriculture clause or a central farm application</td></tr>
+        <tr><td>2</td><td>A general labor or human-rights standard that covers farmworkers by its scope</td></tr>
+        <tr><td>1</td><td>Indirect relevance only</td></tr>
+      </tbody></table>
+      <table aria-label="Issuer authority scale"><tbody>
+        <tr><td colspan="2"><b>Issuer authority (A), publications only</b></td></tr>
+        <tr><td>5</td><td>Output of an ILO or UN supervisory mechanism, or an official global estimate</td></tr>
+        <tr><td>4</td><td>Intergovernmental agency or UN special-procedure report; official government inquiry or statistics</td></tr>
+        <tr><td>3</td><td>Peer-reviewed scholarship or academic monograph</td></tr>
+        <tr><td>2</td><td>NGO or trade-union investigation</td></tr>
+        <tr><td>1</td><td>Journalism or documentary</td></tr>
+      </tbody></table>
+    </div>
+    <div class="col stack">
+      <h3>Country ratification scores</h3>
+      <p>Ratification lists for C97, C143 and C189 (NORMLEX, checked 11 November 2026) are shown with each norm but are not part of the score, so that the ranking stays comparable with earlier releases. Each state is scored on 13 instruments. Six are farm-specific ILO conventions, which count double: C11, C99, C110, C129, C141 and C184. Seven are farm-relevant: C169, C170, C181, C190, P29, the ICESCR and the Migrant Workers Convention (ICRMW).</p>
+      <ul class="plain">
+        <li><b>Breadth</b> is the weighted share of the basket in force, or ratified and awaiting entry into force, out of 19 points. Denunciations count as zero.</li>
+        <li><b>Enthusiasm</b> looks only at the seven instruments adopted since 1989, so states that became independent late are not penalized for missing 1920s conventions. Each ratification earns half a point, plus up to half a point more for speed: full marks if ratified in the adoption year, falling to zero after 15 years.</li>
+        <li><b>Overall score</b> = 60% breadth + 40% enthusiasm.</li>
+      </ul>
+      <h3>How implementation is assessed</h3>
+      <p>Each instrument a country has ratified, or that binds it, is assessed against four questions: Is there a national law that gives effect to it? Does that law cover everyone the instrument protects, including farmworkers, domestic workers and migrants in irregular status? Is it enforced, judging by inspection, prosecutions and the latest comments of ILO and UN supervisory bodies? Have those bodies asked for changes that remain open?</p>
+      <p><b>Implemented</b> means yes to the first three with no major open request. <b>Partly</b> means a law exists but coverage or enforcement falls short. <b>Gap</b> means the law is missing, excludes a group the instrument protects, or is contradicted in practice. <b>Law without ratification</b> marks national law on a standard the state has not ratified. Recommendations are tagged with the Sustainable Development Goal targets they serve: 8.7 (forced and child labor), 8.8 (labor rights and safe work), 10.7 (safe and orderly migration) and 5 (gender equality).</p>
+      <h3>Changes to the data</h3>
+      <ul class="changes">
+        <li><b>30 October 2026.</b> Domestic implementation extended from 18 to 31 countries; recruitment fees and remedies after return added to each corridor; SDG tags added to recommendations.</li>
+        <li><b>30 October 2026.</b> Case law, recommendations tracker, Indonesian migration corridors and country briefs added.</li>
+        <li><b>30 October 2026.</b> Ratification records refreshed from ILO NORMLEX and the UN Treaty Collection.</li>
+      </ul>
+      <h3>Scope and limits</h3>
+      <p>The national tier covers a selection of frameworks chosen for the size of their migrant or hired farm workforce or the influence of their model. It is a selection, not a census. Two patterns stand out. Many founding labor statutes excluded farmworkers, and much later law exists to close those gaps. National reforms also tend to follow a single visible tragedy or strike.</p>
+      <p>The "likely drivers" column is an interpretive reading of each instrument's drafting history and political context. It does not quote the drafting records (travaux préparatoires).</p>
+      <p class="note">Sources: ILO NORMLEX; UN Treaty Collection; Council of Europe Treaty Office; EUR-Lex; FAO, OECD and CFS publication records; scheme owners' standard documents; official national gazettes and codes. Ratification records collected 30 October 2026. Every per-instrument count matched the official total. Malaysia's separate Peninsular and Sarawak ratifications of C11 are counted once.</p>
+    </div>
+  </section>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" hidden>
+  <header><div class="t"><div class="eyebrow" id="deyebrow"></div><h2 id="dtitle"></h2><div id="dsub" class="note"></div></div><button class="x" id="dclose" type="button" aria-label="Close">×</button></header>
+  <div class="body" id="dbody"></div>
+</aside>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+__STATSLIB__
+</script>
+<script>
+__DATA__
+__MIGRATION__
+__IMPL__
+const NEWS = __NEWS__;
+const RATS = __RATS__;
+const C = __COUNTRIES__;
+const TOPO = __TOPO__;
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmt = s => { if(!s) return "—"; const p=s.split("-"); return p.length===3 ? `${+p[2]} ${MON[p[1]-1]} ${p[0]}` : p.length===2 ? `${MON[p[1]-1]} ${p[0]}` : p[0]; };
+const yr = s => { if(!s) return null; const p=s.split("-").map(Number); return p[0] + ((p[1]||6)-1)/12 + ((p[2]||15)-1)/365; };
+const slug = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const csvCell = v => { const s = v==null ? "" : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s; };
+const toCSV = (head, rows) => "﻿" + [head, ...rows].map(r=>r.map(csvCell).join(",")).join("\r\n");
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,3500); }
+
+/* Downloads: inside claude.ai the page asks the viewer through the downloads capability; on a normal website it saves directly. */
+const IN_CLAUDE = !!(window.claude && window.claude.use);
+let DL = null;
+if (IN_CLAUDE) { window.claude.use("downloads").then(d => { DL = d; }).catch(()=>{}); }
+async function save(filename, data){
+  if (DL) {
+    try { await DL.save({filename, data}); toast(`Saved ${filename}`); }
+    catch(e){ if(e && e.code==="declined") return; toast(e && e.code==="rate_limited" ? "Another download is waiting for your answer. Try again in a moment." : "Downloads aren't available in this view. Open the Atlas on theimr.org to download."); }
+    return;
+  }
+  if (IN_CLAUDE) { toast("Downloads aren't available in this view. Open the Atlas on theimr.org to download."); return; }
+  const type = filename.endsWith(".json") ? "application/json" : filename.endsWith(".md") ? "text/markdown" : "text/csv";
+  const url = URL.createObjectURL(new Blob([data], {type: type+";charset=utf-8"}));
+  const a = document.createElement("a"); a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 2000);
+}
+function printDrawer(){ document.body.classList.add("print-drawer"); window.print(); setTimeout(()=>document.body.classList.remove("print-drawer"), 500); }
+
+/* ---------- norms data ---------- */
+const TIER = {5:"Binding in force",4:"Binding, weakened",3:"Authoritative interpretation",2:"Soft law",1:"Voluntary standard"};
+const AUTH = {5:"ILO/UN supervisory or official estimate",4:"Intergovernmental or government report",3:"Scholarly",2:"NGO or union investigation",1:"Journalism"};
+const RAT = {"C11":[123,123],"C99":[54,53,"1 denounced"],"C110":[12,10,"2 denounced"],"P110":[2,2],"C129":[58,58],"C141":[41,41],"C184":[23,23],"C169":[24,24],"C170":[24,24],"C181":[40,38,"2 awaiting entry into force"],"C190":[56,51,"5 awaiting entry into force"],"P29":[66,62,"4 awaiting entry into force"],"ICESCR":[174,174,"parties; 4 signatories only, including the USA"],"ICRMW":[60,60,"parties; 11 signatories only"],"C97":[54,54,"Malaysia for Sabah only and Tanzania for Zanzibar only; also declared applicable to 7 non-metropolitan territories, including Hong Kong SAR; several states exclude some annexes"],"C143":[30,30],"C189":[40,40]};
+const LEVEL = {G:"Global",R:"Regional",N:"National",P:"Publications"};
+const TOPICS = ["Labor migration","Recruitment","Refugees & asylum","Borders, entry & return","Trafficking & smuggling","Non-discrimination & equality","Social security","Nationality & statelessness","Children","Farmworkers"];
+const findBy = (list,name,def) => { const m=list.find(([k])=>name.includes(k)); return m?m[1]:def; };
+// Regional systems for the Regional tier
+const SYSTEMS = ["Europe","Africa","Americas","ASEAN"];
+const SYSTEM_OF = t => /ASEAN|Bangkok Principles/.test(t) ? "ASEAN" : /Afric|\bAU\b|OAU|ECOWAS|Kampala|Maputo/.test(t) ? "Africa" : /Americ|OAS|MERCOSUR|Cartagena|CARICOM|Chaguaramas|NAALC|OC-\d/.test(t) ? "Americas" : "Europe";
+const REGIONAL_FAM = new Set(["EU law","Regional treaty","Court judgment","Regional declaration"]);
+// src: I = original international/regional farm norms, N = national farm frameworks, P = farm publications, M = migration layer
+function mk(src,d,i){
+  const x={id:src+i,src,name:d[0],cite:d[1],fam:d[2],b:d[3],r:d[4],a:d[5],e:d[6],farm:d[7],why:d[8],link:d[9],ay:yr(d[5]),ey:yr(d[6]),rat:null};
+  if(src==="M"){ x.lvl=d[10]; x.rm=d[11]; x.topics=d[12]; x.inFarm=d[4]>=3; }
+  else {
+    x.lvl = src==="I" ? (REGIONAL_FAM.has(d[2])?"R":"G") : src;
+    const ilo=(d[1].match(/ILO (C\d+|P\d+)/)||[])[1];
+    x.rm = ilo&&RM_OVERRIDE[ilo]!=null ? RM_OVERRIDE[ilo] : findBy(src==="N"?RM_NAT:RM_BYNAME, d[0], 2);
+    x.topics = [...new Set([...findBy(TOPIC_BYNAME,d[0],[]),"Farmworkers"])];
+    x.inFarm = true;
+  }
+  x.inMig = x.rm>=2;
+  x.sys = x.lvl!=="R" ? "" : SYSTEM_OF(x.name+" "+x.cite);
+  return x;
+}
+const ROWS=[...D.map((d,i)=>mk("I",d,i)),...DN.map((d,i)=>mk("N",d,i)),...DP.map((d,i)=>mk("P",d,i)),...DM.map((d,i)=>mk("M",d,i))];
+ROWS.forEach(d=>{ const m=d.cite.match(/ILO (C\d+|P\d+)/); const k=m?m[1]:d.cite==="993 UNTS 3"?"ICESCR":d.cite==="2220 UNTS 3"?"ICRMW":null; if(k&&RAT[k]){d.key=k; d.ratv=RAT[k]; d.rat=RAT[k][0];} });
+const BYID=Object.fromEntries(ROWS.map(d=>[d.id,d]));
+let LENS = "__LENS__";
+const LOCKED = __LOCKED__; // the standalone Farmworker Norms Atlas stays on farm law
+const relOf = d => LENS==="farm" ? d.r : d.rm;
+const inLens = d => LENS==="farm" ? d.inFarm : d.inMig;
+const relLabel = () => LENS==="farm" ? "R" : "RM";
+function rerank(){
+  ROWS.forEach(d=>{ d.score=d.b*relOf(d); d.rank=null; });
+  ["G","R","N","P"].forEach(l=>ROWS.filter(d=>d.lvl===l&&inLens(d)).sort((x,y)=>y.score-x.score||relOf(y)-relOf(x)||x.ay-y.ay).forEach((d,i)=>d.rank=i+1));
+}
+rerank();
+const lensRows = l => ROWS.filter(d=>(!l||d.lvl===l)&&inLens(d));
+const STATUS = {F:"In force",W:"Ratified, not yet in force",D:"Denounced",P:"Party",S:"Signed only"};
+
+/* ---------- country data ---------- */
+const FARM=["C11","C99","C110","C129","C141","C184"], REL=["C169","C170","C181","C190","P29","ICESCR","ICRMW"], BASKET=FARM.concat(REL);
+const INAME = {C11:"Right of Association (Agriculture), 1921",C99:"Minimum Wage Fixing Machinery (Agriculture), 1951",C110:"Plantations, 1958",C129:"Labour Inspection (Agriculture), 1969",C141:"Rural Workers' Organisations, 1975",C184:"Safety and Health in Agriculture, 2001",C169:"Indigenous and Tribal Peoples, 1989",C170:"Chemicals, 1990",C181:"Private Employment Agencies, 1997",C190:"Violence and Harassment, 2019",P29:"Protocol to the Forced Labour Convention, 2014",ICESCR:"Covenant on Economic, Social and Cultural Rights, 1966",ICRMW:"Migrant Workers Convention, 1990"};
+const CBY = Object.fromEntries(C.map(d=>[d.c,d]));
+const RBY = {}; for (const k in RATS) for (const [c,d,f] of RATS[k]) (RBY[c] ??= {})[k]=[d,f];
+const EU27 = ["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland","Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"];
+const NATMAP = {"United States":"United States of America","United States (California)":"United States of America","South Korea":"Republic of Korea"};
+const natFor = c => lensRows("N").filter(d => { const k=d.fam.replace("National: ",""); return (NATMAP[k]||k)===c; });
+const euFor = c => EU27.includes(c) ? lensRows("R").filter(d=>d.fam==="EU law") : [];
+const MAPALIAS = {"Tanzania":"United Republic of Tanzania","Dem. Rep. Congo":"Democratic Republic of the Congo","Dominican Rep.":"Dominican Republic","Russia":"Russian Federation","Central African Rep.":"Central African Republic","Eq. Guinea":"Equatorial Guinea","eSwatini":"Eswatini","Palestine":"State of Palestine","Laos":"Lao People's Democratic Republic","Vietnam":"Viet Nam","North Korea":"Democratic People's Republic of Korea","South Korea":"Republic of Korea","Syria":"Syrian Arab Republic","Moldova":"Republic of Moldova","Turkey":"Türkiye","Solomon Is.":"Solomon Islands","Bosnia and Herz.":"Bosnia and Herzegovina","Macedonia":"North Macedonia","S. Sudan":"South Sudan"};
+const NONSTATE = new Set(["W. Sahara","Falkland Is.","Greenland","Fr. S. Antarctic Lands","Puerto Rico","New Caledonia","Taiwan","N. Cyprus","Somaliland","Kosovo"]);
+// States on the map with no record in any of the 13 treaty lists score zero
+function countryRec(name){ return CBY[name] || {c:name,rk:null,n:0,nf:0,br:0,en:0,sc:0,den:[],cells:{},none:true}; }
+
+const HEAD = {
+  mig:{title:"Migration Law Atlas",eyebrow:"Global, regional and national law · status as of October 2026",lede:"Compare the law on migration across three tiers: global, regional and national. Farmworker law is a subset you can switch to at any time. Browse the norms, see which states have ratified them, compare countries, follow new developments and download the data.",intro:"Each norm is scored for binding quality and migration relevance (see Method), and ranked within its tier. Click any row for the full entry, ratifying states and downloads."},
+  standalone:{title:"Farmworker Norms Atlas",eyebrow:"Institute for Migrant Rights · status as of October 2026",lede:"The full register of law on work on farms and plantations: international, regional and national norms, ratifications of farm-specific conventions, country profiles, news and downloadable data. For farm work within migration law as a whole, see the Migration Law Atlas.",intro:"Each norm is scored for binding quality and farm relevance (see Method), and ranked within its tier. Click any row for the full entry, ratifying states and downloads."},
+  farm:{title:"Farmworker Norms Atlas",eyebrow:"Part of the Migration Law Atlas · status as of October 2026",lede:"Explore the law that governs work on farms and plantations. Browse the norms, see which states have ratified them, compare countries, follow new developments and download the data.",intro:"Each norm is scored for binding quality and farm relevance (see Method), and ranked within its tier. Click any row for the full entry, ratifying states and downloads."}};
+function updateHead(){
+  const h=LOCKED?HEAD.standalone:HEAD[LENS]; $("#scope").hidden=LOCKED; $("#atitle").textContent=h.title; $("#aeyebrow").textContent=h.eyebrow; $("#alede").textContent=h.lede; $("#normsintro").textContent=h.intro; document.title=h.title;
+  document.querySelectorAll("[data-lens]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lens===LENS));
+  const n=l=>lensRows(l).length, ctry=new Set(lensRows("N").map(d=>d.fam)).size;
+  $("#count").textContent=`${n("G")} global · ${n("R")} regional · ${n("N")} national norms from ${ctry} countries · ${n("P")} publications · ratification records for ${C.length} states`;
+  $("#mapnote").hidden = LENS==="farm";
+}
+
+/* ---------- routing ---------- */
+const VIEWS=["map","norms","timeline","countries","implementation","cases","corridors","compare","stats","data","news","method"];
+function route(){
+  const h=location.hash.slice(1);
+  if (h.startsWith("country-")) { const c=C.find(d=>slug(d.c)===h.slice(8)); if(c){ show("map"); openCountry(c.c,false); return; } }
+  show(VIEWS.includes(h)?h:"map");
+}
+function show(v){
+  document.querySelectorAll(".view").forEach(s=>s.hidden = s.dataset.view!==v);
+  document.querySelectorAll(".tabs a").forEach(a=>a.toggleAttribute("aria-current", a.getAttribute("href")==="#"+v) || a.getAttribute("href")==="#"+v && a.setAttribute("aria-current","page"));
+  document.querySelectorAll(".tabs a").forEach(a=>{ if(a.getAttribute("href")==="#"+v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  if (v==="compare") drawCompare();
+  if (v==="implementation") drawImpl();
+  if (v==="cases") drawCases();
+  if (v==="corridors") drawCorr();
+  if (v==="stats") drawStats();
+}
+window.addEventListener("hashchange", route);
+
+/* ---------- domestic implementation ---------- */
+const IMPST={F:"Implemented",P:"Partly",G:"Gap",D:"Law without ratification"};
+const CLINIC_LINK='<a class="gaplink" href="https://theimr.org/legal-clinic/" target="_blank" rel="noopener">Has this happened to you? Prepare a rights communication →</a>';
+const RECST={done:"Implemented",part:"Partly",open:"Not implemented"};
+const SDG=[[/forced labor|trafficking|slavery|bond|child/i,"SDG 8.7"],[/union|association|bargain|wage|inspection|housing|health|safety|piece rate|employer|working|labor rights|work permit/i,"SDG 8.8"],[/migra|refugee|recruit|ICRMW|seasonal|visa|detention/i,"SDG 10.7"],[/women|domestic workers|C189|discrimination/i,"SDG 5"]];
+const sdgTags = t => SDG.filter(([re])=>re.test(t)).map(([,g])=>g);
+function recsHTML(c){ const rs=RECS[c]||[]; if(!rs.length) return "";
+  return `<h3 style="margin:18px 0 0">What supervisory bodies asked ${esc(impLabel(c))} to do</h3><p class="note" style="margin:2px 0 8px">From the ILO Committee of Experts, UN committees, the Universal Periodic Review and others, with our assessment of follow-up.</p><div class="recs">${rs.map(r=>`<div class="rec"><div><div class="who">${esc(r[0])} · ${r[1]}</div><div>${esc(r[2])}</div>${r[4]?`<div class="note" style="margin-top:4px">${esc(r[4])}</div>`:""}${sdgTags(r[2]+" "+r[4]).length?`<div class="sdg">${sdgTags(r[2]+" "+r[4]).map(g=>`<span class="fam" title="Sustainable Development Goal target">${g}</span>`).join(" ")}</div>`:""}</div><span class="rs ${r[3]}">${RECST[r[3]]}</span></div>`).join("")}</div>`; }
+/* ---------- case law ---------- */
+const caseNorms = cs => ROWS.filter(d=>cs[6].some(p=>d.name.toLowerCase().includes(p.toLowerCase())));
+const casesFor = d => CASES.filter(cs=>cs[6].some(p=>d.name.toLowerCase().includes(p.toLowerCase())));
+const ctyName = c => ({"United States":"United States of America","South Korea":"Republic of Korea"})[c]||c;
+function caseHTML(cs){ const ns=caseNorms(cs).filter(inLens).slice(0,6);
+  return `<article class="case"><h4>${cs[7]?`<a href="${cs[7]}" target="_blank" rel="noopener">${esc(cs[0])}</a>`:esc(cs[0])}</h4><div class="meta">${esc(cs[1])} · ${cs[2]} · ${esc(cs[3])}${cs[4]?' · <span class="fam">farm work</span>':""}</div><p>${esc(cs[5])}</p>${ns.length?`<div class="norms">${ns.map(d=>`<button class="linkbtn fam" type="button" data-open="${d.id}">${esc(d.name)}</button>`).join("")}</div>`:""}</article>`; }
+function caseList(){ const q=$("#caseq").value.trim().toLowerCase(), f=$("#casef").value;
+  return CASES.filter(cs=>(LENS!=="farm"||cs[4]) && (!f||cs[1]===f) && (!q||(cs.slice(0,6).join(" ")).toLowerCase().includes(q))).sort((a,b)=>b[2]-a[2]); }
+function drawCases(){
+  const sel=$("#casef"); if(sel.options.length===1) [...new Set(CASES.map(c=>c[1]))].sort().forEach(f=>sel.add(new Option(f,f)));
+  const L=caseList(); $("#caselist").innerHTML=L.map(caseHTML).join("")||'<p class="muted">No decisions match.</p>'; }
+$("#caseq").addEventListener("input",drawCases); $("#casef").addEventListener("change",drawCases);
+$("#dl-cases").addEventListener("click",()=>save(`${PFX()}_case-law.csv`, toCSV(["decision","forum","year","country","farm_work","summary","norms_applied","link"], caseList().map(cs=>[cs[0],cs[1],cs[2],cs[3],cs[4]?"yes":"no",cs[5],caseNorms(cs).map(d=>d.name).join("; "),cs[7]]))));
+/* ---------- corridors ---------- */
+let CORSEL=0;
+function drawCorr(){
+  const box=$("#cmap"), W=760, H=520; box.setAttribute("viewBox",`0 0 ${W} ${H}`); box.innerHTML="";
+  const ns="http://www.w3.org/2000/svg", el=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  if(window.d3&&window.topojson){
+    const fc=topojson.feature(TOPO,TOPO.objects.countries);
+    const proj=d3.geoMercator().fitExtent([[10,10],[W-10,H-10]],{type:"MultiPoint",coordinates:[[40,40],[145,40],[40,-11],[145,-11]]}), path=d3.geoPath(proj);
+    const dests=CORRIDORS.map(c=>c[1]).filter(Boolean), sel=CORRIDORS[CORSEL];
+    fc.features.forEach(f=>{ const n=mapName(f)||f.properties.name, cls="cl"+(n==="Indonesia"?" orig":"")+((sel[1]&&n===sel[1])||n===sel[0]?" sel":dests.includes(n)||n==="Taiwan"?" dest":""); box.appendChild(el("path",{d:path(f),class:cls})); });
+    const [ox,oy]=proj([ORIGIN.lon,ORIGIN.lat]);
+    CORRIDORS.forEach((c,i)=>{ const [x,y]=proj([c[2],c[3]]), mx=(ox+x)/2, my=(oy+y)/2-Math.hypot(x-ox,y-oy)*0.22;
+      const a=el("path",{d:`M${ox},${oy} Q${mx},${my} ${x},${y}`,class:"arc"+(i===CORSEL?" sel":"")}); a.addEventListener("click",()=>{CORSEL=i;drawCorr();}); box.appendChild(a);
+      box.appendChild(el("circle",{cx:x,cy:y,r:4,fill:"var(--nat)"}));
+      const t=el("text",{x:x+6,y:y-6,class:"lbl"}); t.textContent=c[0]; t.addEventListener("click",()=>{CORSEL=i;drawCorr();}); box.appendChild(t); });
+    box.appendChild(el("circle",{cx:ox,cy:oy,r:6,fill:"var(--accent)"}));
+    const ti=el("text",{x:ox+8,y:oy+14,class:"lbl"}); ti.textContent="Indonesia"; box.appendChild(ti);
+  }
+  $("#corrbtns").innerHTML=CORRIDORS.map((c,i)=>`<button class="btn" type="button" data-corr="${i}" aria-pressed="${i===CORSEL}">${esc(c[0])}</button>`).join("");
+  const c=CORRIDORS[CORSEL], rb=c[1]?RBY[c[1]]||{}:null, n=rb?BASKET.filter(k=>rb[k]&&rb[k][1]!=="S"&&rb[k][1]!=="D").length:null;
+  $("#cdetail").innerHTML=`<h3>Indonesia → ${esc(c[0])}</h3><p class="note">${esc(c[4])}${c[5]?' · <span class="fam">farm work</span>':""}</p><dl>
+    <dt>At home: Indonesian law</dt><dd>${esc(ORIGIN.law)}</dd>
+    <dt>At destination: ${esc(c[0])}</dt><dd>${esc(c[6])}</dd>
+    <dt>Agreement between the two</dt><dd>${esc(c[7])}</dd>
+    <dt>Treaties</dt><dd>${c[1]?`${esc(c[0])} has ratified ${n} of the 13 farm-relevant treaties the Atlas tracks. <button class="linkbtn" type="button" data-country="${esc(c[1])}">Open its profile</button>`:"Not a separate party to UN or ILO treaties."}</dd>
+    <dt>Main gaps</dt><dd>${esc(c[8])}</dd>
+    ${CORR_MORE[c[0]]?`<dt>Recruitment fees</dt><dd>${esc(CORR_MORE[c[0]][0])}</dd><dt>Remedy after return</dt><dd>${esc(CORR_MORE[c[0]][1])} <a href="https://theimr.org/legal-clinic/after-return.html" target="_blank" rel="noopener">Getting your rights after you return</a></dd>`:""}
+    <dt>Company allegations</dt><dd>Reported abuses by companies employing migrant workers are tracked by the <a href="https://www.business-humanrights.org/en/from-us/abuse-allegations-migrant-workers/" target="_blank" rel="noopener">Business &amp; Human Rights Resource Centre</a>.</dd></dl>${CLINIC_LINK}`;
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-corr]"); if(b){ CORSEL=+b.dataset.corr; drawCorr(); } });
+const impRat = (c,v) => { if(!v.startsWith("@")) return v; const k=v.slice(1), r=(RBY[c]||{})[k]; return r?(r[1]==="S"?"Signed only":r[1]==="D"?r[0]+" (denounced)":r[0]+(r[1]==="W"?" (not yet in force)":"")):"Not ratified"; };
+const impRows = c => (IMPL[c]?.rows||[]).filter(r=>LENS!=="farm"||r[5]);
+const impLabel = c => c==="United States of America"?"United States":c;
+let IMPC="Indonesia";
+function drawImpl(){
+  const st=$("#impst").value, cs=Object.keys(IMPL).filter(c=>impRows(c).length);
+  if(!cs.includes(IMPC)) IMPC=cs[0];
+  $("#impsum").innerHTML=cs.map(c=>{ const rs=impRows(c), n=k=>rs.filter(r=>r[3]===k).length;
+    return `<button type="button" data-impc="${esc(c)}" aria-pressed="${c===IMPC}"><b>${esc(impLabel(c))}</b><span class="imp-bar" aria-hidden="true">${["F","P","G","D"].map(k=>n(k)?`<i class="${k}" style="flex:${n(k)}"></i>`:"").join("")}</span><span class="note">${rs.length} instruments · ${n("F")} implemented · ${n("G")} ${n("G")===1?"gap":"gaps"}</span></button>`; }).join("");
+  $("#impcover").textContent=`${cs.length} countries assessed so far. Other countries are not yet assessed; their ratifications are in each country profile.`;
+  const rs=impRows(IMPC).filter(r=>!st||r[3]===st);
+  $("#impbody").innerHTML=`<h3 style="margin:8px 0 0">${esc(impLabel(IMPC))}</h3><p class="impsys" style="max-width:820px"><b>How treaties enter national law.</b> ${esc(IMPL[IMPC].sys)}</p>
+    <div class="implist">${rs.map(r=>`<article class="impcard"><h4>${esc(r[0])}</h4><div class="meta">Ratified: ${esc(impRat(IMPC,r[1]))}</div><div class="meta"><span class="st ${r[3]}">${IMPST[r[3]]}</span></div><div class="law"><p><b>National law:</b> ${esc(r[2])}</p>${r[4]?`<p class="muted">${esc(r[4])}</p>`:""}${r[3]==="G"||r[3]==="P"?CLINIC_LINK.replace("/legal-clinic/","/legal-clinic/?country="+encodeURIComponent(IMPC)):""}</div></article>`).join("")||'<p class="muted">No instruments with this assessment.</p>'}</div>
+    ${recsHTML(IMPC)}
+    <p><button class="linkbtn" type="button" data-country="${esc(IMPC)}">Open the ${esc(impLabel(IMPC))} country profile</button></p>`;
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-impc]"); if(!b) return; IMPC=b.dataset.impc; if(!$("#drawer").hidden) closeDrawer(); if(location.hash!=="#implementation"){ e.preventDefault(); location.hash="implementation"; } else { drawImpl(); if(b.closest("#impsum")) $("#impbody").scrollIntoView({behavior:"smooth",block:"start"}); } });
+$("#impst").addEventListener("change",drawImpl);
+$("#dl-imp").addEventListener("click",()=>save(`${PFX()}_domestic-implementation.csv`, toCSV(["country","how_treaties_enter_national_law","instrument","ratified","national_law","assessment","note","farm_relevant"], Object.keys(IMPL).flatMap(c=>impRows(c).map(r=>[impLabel(c),IMPL[c].sys,r[0],impRat(c,r[1]),r[2],IMPST[r[3]],r[4],r[5]?"yes":"no"])))));
+
+/* ---------- country brief (one printable page, English or Bahasa Indonesia) ---------- */
+const BRIEF_ID={"Country brief":"Ringkasan negara","Prepared by the Institute for Migrant Rights":"Disusun oleh Institute for Migrant Rights","Ratification of 13 farm-relevant treaties":"Ratifikasi 13 perjanjian yang relevan bagi buruh tani","Instrument":"Instrumen","Status":"Status","Not ratified":"Belum diratifikasi","In force":"Berlaku","Ratified, not yet in force":"Diratifikasi, belum berlaku","Denounced":"Dibatalkan","Party":"Negara pihak","Signed only":"Hanya ditandatangani","How treaties enter national law":"Bagaimana perjanjian berlaku dalam hukum nasional","Domestic implementation":"Pelaksanaan dalam negeri","National law":"Hukum nasional","Assessment":"Penilaian","What supervisory bodies asked for":"Apa yang diminta badan pengawas","Key decisions":"Putusan penting","National frameworks in the Atlas":"Kerangka nasional dalam Atlas","Overall score":"Skor keseluruhan","rank":"peringkat","Implemented":"Terlaksana","Partly":"Sebagian","Gap":"Kesenjangan","Law without ratification":"Hukum tanpa ratifikasi","Not implemented":"Belum terlaksana","Sources: ILO NORMLEX, UN Treaty Collection; assessments by IMR. Content in English where no translation is available.":"Sumber: ILO NORMLEX, UN Treaty Collection; penilaian oleh IMR. Isi tetap dalam bahasa Inggris jika belum tersedia terjemahan.","Need help with a case? Prepare a rights communication at theimr.org/legal-clinic":"Butuh bantuan untuk sebuah kasus? Siapkan pengaduan hak di theimr.org/legal-clinic"};
+function briefDoc(name, lang){
+  const t=s=>lang==="id"&&BRIEF_ID[s]?BRIEF_ID[s]:s, d=countryRec(name), rb=RBY[name]||{}, im=IMPL[name], rs=RECS[name]||[], cs=CASES.filter(c=>ctyName(c[3])===name), nat=natFor(name);
+  const IMPT={F:t("Implemented"),P:t("Partly"),G:t("Gap"),D:t("Law without ratification")}, RT={done:t("Implemented"),part:t("Partly"),open:t("Not implemented")};
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${esc(t("Country brief"))}: ${esc(name)}</title><style>body{font:11pt/1.45 Georgia,serif;color:#182E24;max-width:780px;margin:24px auto;padding:0 20px}h1{font-size:22pt;margin:0}h2{font:600 10pt Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#2f5d3a;border-bottom:1px solid #BBCEC4;padding-bottom:3px;margin:18px 0 6px}table{width:100%;border-collapse:collapse;font-size:9.5pt}td,th{border-bottom:1px solid #D6E3DC;padding:4px 6px;text-align:left;vertical-align:top}.k{font:600 9pt Arial,sans-serif;color:#415E51}.foot{margin-top:20px;font:9pt Arial,sans-serif;color:#415E51}@media print{body{margin:0}}</style></head><body>
+<p class="k">${esc(t("Country brief"))} · ${esc(t("Prepared by the Institute for Migrant Rights"))} · ${new Date().toISOString().slice(0,10)}</p><h1>${esc(name)}</h1>
+<p>${esc(t("Overall score"))}: <b>${d.sc.toFixed(1)}</b>${d.rk?` (${esc(t("rank"))} ${d.rk}/${C.length})`:""}</p>
+<h2>${esc(t("Ratification of 13 farm-relevant treaties"))}</h2><table><tr><th>${esc(t("Instrument"))}</th><th>${esc(t("Status"))}</th></tr>${BASKET.map(k=>{const r=rb[k];return `<tr><td>${k} ${esc(INAME[k])}</td><td>${r?esc(r[0]||"")+" "+esc(t(STATUS[r[1]])):esc(t("Not ratified"))}</td></tr>`;}).join("")}</table>
+${im?`<h2>${esc(t("How treaties enter national law"))}</h2><p>${esc(im.sys)}</p><h2>${esc(t("Domestic implementation"))}</h2><table><tr><th>${esc(t("Instrument"))}</th><th>${esc(t("National law"))}</th><th>${esc(t("Assessment"))}</th></tr>${im.rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[2])}${r[4]?`<br><i>${esc(r[4])}</i>`:""}</td><td>${IMPT[r[3]]}</td></tr>`).join("")}</table>`:""}
+${rs.length?`<h2>${esc(t("What supervisory bodies asked for"))}</h2><table>${rs.map(r=>`<tr><td>${esc(r[0])}, ${r[1]}</td><td>${esc(r[2])}${r[4]?`<br><i>${esc(r[4])}</i>`:""}</td><td>${RT[r[3]]}</td></tr>`).join("")}</table>`:""}
+${cs.length?`<h2>${esc(t("Key decisions"))}</h2>${cs.map(c=>`<p><b>${esc(c[0])}</b> (${esc(c[1])}, ${c[2]}). ${esc(c[5])}</p>`).join("")}`:""}
+${nat.length?`<h2>${esc(t("National frameworks in the Atlas"))}</h2><ul>${nat.map(x=>`<li>${esc(x.name)} (${esc(x.cite)})</li>`).join("")}</ul>`:""}
+<p class="foot">${esc(t("Sources: ILO NORMLEX, UN Treaty Collection; assessments by IMR. Content in English where no translation is available."))}<br>${esc(t("Need help with a case? Prepare a rights communication at theimr.org/legal-clinic"))}</p></body></html>`;
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-brief]"); if(!b) return; const name=$("#dtitle").textContent;
+  save(`${b.dataset.brief==="id"?"ringkasan":"brief"}_${slug(name)}.html`, briefDoc(name,b.dataset.brief)); });
+
+/* ---------- drawer ---------- */
+let lastFocus=null;
+function openDrawer(eyebrow, title, sub, html){
+  lastFocus=document.activeElement;
+  $("#deyebrow").textContent=eyebrow; $("#dtitle").textContent=title; $("#dsub").innerHTML=sub||""; $("#dbody").innerHTML=html;
+  $("#drawer").hidden=false; $("#scrim").hidden=false; $("#dbody").scrollTop=0; $("#dclose").focus();
+}
+function closeDrawer(){ $("#drawer").hidden=true; $("#scrim").hidden=true; if(location.hash.startsWith("#country-")) history.replaceState(null,"","#map"); if(lastFocus&&lastFocus.focus) lastFocus.focus(); }
+$("#dclose").addEventListener("click",closeDrawer); $("#scrim").addEventListener("click",closeDrawer);
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && !$("#drawer").hidden) closeDrawer(); });
+
+/* ---------- compare state ---------- */
+let CMP=[]; try{ CMP=JSON.parse(localStorage.getItem("fna-cmp")||"[]").filter(c=>CBY[c]).slice(0,4);}catch(e){}
+function setCmp(list){ CMP=list.slice(0,4); try{localStorage.setItem("fna-cmp",JSON.stringify(CMP));}catch(e){} $("#gocmp").textContent=`Compare selected (${CMP.length})`; document.querySelectorAll(".cmpbox").forEach(b=>b.checked=CMP.includes(b.dataset.c)); }
+function toggleCmp(c){ if(CMP.includes(c)) setCmp(CMP.filter(x=>x!==c)); else if(CMP.length>=4) toast("You can compare up to four countries. Remove one first."); else setCmp([...CMP,c]); }
+
+/* ---------- country profile ---------- */
+function cellHTML(v,k){
+  if(!v) return `<span class="cell n">—</span>`;
+  if(v[1]==="D") return `<span class="cell d" title="Denounced">${v[0]}</span>`;
+  if(v[1]==="S") return `<span class="cell s" title="Signed, not ratified">sig.</span>`;
+  if(v[1]==="W") return `<span class="cell w" title="Ratified ${v[0]}, not yet in force">${v[0]}</span>`;
+  return `<span class="cell ${FARM.includes(k)?"rf":"r"}" title="${v[2]!=null?v[2]+" years after adoption":""}">${v[0]}</span>`;
+}
+function openCountry(name, setHash=true){
+  const d=countryRec(name), rb=RBY[name]||{};
+  if(setHash && !d.none) history.replaceState(null,"","#country-"+slug(name));
+  const rows=BASKET.map(k=>{ const r=rb[k], cl=d.cells[k];
+    return `<tr><td>${k}</td><td>${esc(INAME[k])}${FARM.includes(k)?' <span class="fam">farm-specific</span>':""}</td><td>${r? (r[1]==="S"?"Signed only":`${esc(r[0])}<div class="note">${STATUS[r[1]]}${cl&&cl[2]!=null?` · ${cl[2]} yrs after adoption`:""}</div>`):'<span class="note">Not ratified</span>'}</td></tr>`;}).join("");
+  const nat=natFor(name), eu=euFor(name);
+  const lawList=(arr)=>arr.map(x=>`<li><button class="linkbtn" data-open="${x.id}">${esc(x.name)}</button> <span class="note">${fmt(x.a)}</span></li>`).join("");
+  const html=`
+    <div class="stats">
+      <div class="stat"><div class="v">${d.sc.toFixed(1)}</div><div class="l">Overall score${d.rk?` · rank ${d.rk} of ${C.length}`:""}</div></div>
+      <div class="stat"><div class="v">${d.br.toFixed(1)}</div><div class="l">Breadth</div></div>
+      <div class="stat"><div class="v">${d.en.toFixed(1)}</div><div class="l">Enthusiasm</div></div>
+    </div>
+    <p>${esc(name)} has ratified <b>${d.n} of 13</b> farm-relevant treaties, including <b>${d.nf} of 6</b> farm-specific ILO conventions.${d.den.length?` It has denounced ${d.den.join(", ")}.`:""}${d.none?" None of the 13 treaties appear in its ratification records.":""}</p>
+    <p class="clinicbridge"><a class="gaplink" href="https://theimr.org/legal-clinic/?country=${encodeURIComponent(name)}" target="_blank" rel="noopener">Rights violated in ${esc(name)}? Start a communication →</a> <a class="gaplink" href="https://theimr.org/legal-help/?country=${encodeURIComponent(name)}" target="_blank" rel="noopener">Find free legal help →</a></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-cmp="${esc(name)}">${CMP.includes(name)?"Remove from comparison":"Add to comparison"}</button>
+      <button class="btn" type="button" id="dl-prof">Download profile (CSV)</button>
+      <button class="btn" type="button" data-brief="en">Country brief</button>
+      <button class="btn" type="button" data-brief="id" lang="id">Ringkasan negara (ID)</button>
+      ${IN_CLAUDE?"":'<button class="btn" type="button" id="pr-prof">Print or save as PDF</button>'}
+    </div>
+    <div class="stack"><h3>Ratification record</h3><table class="ilist"><tbody>${rows}</tbody></table></div>
+    ${nat.length?`<div class="stack"><h3>National frameworks in the Atlas</h3><ul class="plain">${lawList(nat)}</ul></div>`:""}
+    ${eu.length?`<div class="stack"><h3>EU law that applies</h3><ul class="plain">${lawList(eu)}</ul></div>`:""}
+    ${impRows(name).length?`<div class="stack"><h3>Domestic implementation</h3><table class="ilist"><tbody>${impRows(name).map(r=>`<tr><td><span class="st ${r[3]}">${IMPST[r[3]]}</span></td><td><b>${esc(r[0])}</b><div class="note">${esc(r[2])}</div></td></tr>`).join("")}</tbody></table><p><a href="#implementation" data-impc="${esc(name)}">Open the full implementation view →</a></p></div>`:`<div class="stack"><h3>Domestic implementation</h3><p class="muted">Not yet assessed. The Atlas covers ${Object.keys(IMPL).length} countries so far; the ratifications above show what this country has accepted.</p></div>`}
+    ${(RECS[name]||[]).length?`<div class="stack">${recsHTML(name)}</div>`:""}
+    ${CASES.filter(cs=>ctyName(cs[3])===name).length?`<div class="stack"><h3>Key decisions</h3>${CASES.filter(cs=>ctyName(cs[3])===name).map(cs=>`<p><a href="${cs[7]}" target="_blank" rel="noopener">${esc(cs[0])}</a> <span class="note">${esc(cs[1])}, ${cs[2]}</span></p>`).join("")}</div>`:""}
+    <p class="note">Source: ILO NORMLEX and UN Treaty Collection, collected 30 October 2026.</p>`;
+  openDrawer("Country profile", name, "", html);
+  $("#dl-prof").onclick=()=>save(`farmworker-atlas_${slug(name)}.csv`, toCSV(["country","instrument","instrument_name","farm_specific","date","status","years_after_adoption","overall_score","breadth","enthusiasm","rank"],
+    BASKET.map(k=>{const r=rb[k],cl=d.cells[k]; return [name,k,INAME[k],FARM.includes(k)?"yes":"no",r?r[0]:"",r?STATUS[r[1]]:"Not ratified",cl&&cl[2]!=null?cl[2]:"",d.sc,d.br,d.en,d.rk??""];})));
+  if($("#pr-prof")) $("#pr-prof").onclick=printDrawer;
+}
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-open]"); if(o){ e.preventDefault(); openNorm(o.dataset.open); return; }
+  const c=e.target.closest("[data-country]"); if(c){ e.preventDefault(); openCountry(c.dataset.country); return; }
+  const m=e.target.closest("[data-cmp]"); if(m){ toggleCmp(m.dataset.cmp); m.textContent=CMP.includes(m.dataset.cmp)?"Remove from comparison":"Add to comparison"; return; }
+});
+
+/* ---------- norm detail ---------- */
+function normRecord(d){
+  return [LEVEL[d.lvl], d.sys, d.rank??"", d.b*d.rm, d.b*d.r, d.name, d.cite, d.fam, d.b, d.rm, d.r, d.topics.join("; "), d.inFarm?"yes":"no", d.a, d.e||"", d.rat??"", d.farm, d.why, d.link||""];
+}
+const NORMHEAD=["tier","regional_system","rank_in_current_view","score_migration","score_farm","name","citation","family","binding_or_authority","migration_relevance","farm_relevance","topics","in_farmworker_subset","adopted_or_published","in_force","ratifications","provisions_or_findings","drivers_or_influence","link"];
+const PFX = () => LENS==="farm" ? "farmworker-atlas" : "migration-atlas";
+function openNorm(id){
+  const d=BYID[id]; if(!d) return;
+  const P=d.lvl==="P";
+  const list = d.key ? RATS[d.key] : null;
+  const ratHTML = list ? `<div class="stack"><h3>Ratifying states (${d.ratv[0]})</h3>${d.ratv[2]?`<p class="note">${esc(d.ratv[2])}</p>`:""}<ul class="cols">${list.slice().sort((a,b)=>a[0].localeCompare(b[0])).map(([c,dt,f])=>`<li><span><button class="linkbtn" data-country="${esc(c)}">${esc(c)}</button>${f==="D"?" (denounced)":f==="W"?" (not yet in force)":f==="S"?" (signed only)":""}</span><span>${dt?dt.slice(-4):"sig."}</span></li>`).join("")}</ul></div>` : "";
+  const html=`
+    <dl class="kv">
+      <dt>${P?"Authority":"Binding quality"}</dt><dd>${P?"A":"B"}${d.b} · ${P?AUTH[d.b]:d.lvl==="N"?(d.b===5?"Binding statute or regulation":"Binding precedent"):TIER[d.b]}</dd>
+      <dt>Tier</dt><dd>${LEVEL[d.lvl]}${d.sys?" · "+d.sys:""}</dd>
+      <dt>Migration relevance</dt><dd>RM${d.rm} of 5</dd>
+      <dt>Farm relevance</dt><dd>R${d.r} of 5${d.inFarm?" · in the farmworker subset":""}</dd>
+      <dt>Score</dt><dd>${d.score} (${P?"A":"B"}${d.b} × ${relLabel()}${relOf(d)})${d.rank?` · rank ${d.lvl}${d.rank}`:" · outside the current view"}</dd>
+      <dt>Topics</dt><dd>${d.topics.map(t=>`<span class="fam">${esc(t)}</span>`).join(" ")}</dd>
+      <dt>${P?"Published":"Adopted"}</dt><dd>${fmt(d.a)}</dd>
+      ${!P?`<dt>In force</dt><dd>${d.e && d.e!==d.a ? fmt(d.e) : d.e ? "On adoption" : "n/a"}</dd>`:""}
+      ${d.rat!=null?`<dt>Ratifications</dt><dd>${d.ratv[0]}${d.ratv[1]!==d.ratv[0]?` (${d.ratv[1]} in force)`:""}</dd>`:""}
+      <dt>Family</dt><dd>${esc(d.fam)}</dd>
+    </dl>
+    <div class="actions">
+      ${d.link?`<a class="btn primary" href="${d.link}" target="_blank" rel="noopener">Official text and status ↗</a>`:""}
+      <button class="btn" type="button" id="dl-norm">Download entry (CSV)</button>
+      ${list?'<button class="btn" type="button" id="dl-normrat">Download ratifications (CSV)</button>':""}
+      ${IN_CLAUDE?"":'<button class="btn" type="button" id="pr-norm">Print or save as PDF</button>'}
+    </div>
+    <div class="stack"><h3>${P?"What it documents":"What it requires"}</h3><p>${esc(d.farm)}</p></div>
+    <div class="stack"><h3>${P?"Influence on law and policy":"Likely drivers of adoption"}</h3><p>${esc(d.why)}</p></div>
+    ${casesFor(d).length?`<div class="stack"><h3>Key decisions applying it</h3>${casesFor(d).map(cs=>`<p><a href="${cs[7]}" target="_blank" rel="noopener">${esc(cs[0])}</a> <span class="note">${esc(cs[1])}, ${cs[2]}</span><br><span class="note">${esc(cs[5])}</span></p>`).join("")}</div>`:""}
+    ${ratHTML}
+    ${!d.link&&!P?'<p class="note">Full text: search the citation above in the issuing body\'s official treaty or law database.</p>':""}`;
+  openDrawer(P?"Publication":d.lvl==="N"?"National framework":LEVEL[d.lvl]+" norm", d.name, `<span class="cite">${esc(d.cite)}</span>`, html);
+  $("#dl-norm").onclick=()=>save(`${PFX()}_${slug(d.name).slice(0,60)}.csv`, toCSV(NORMHEAD,[normRecord(d)]));
+  if($("#dl-normrat")) $("#dl-normrat").onclick=()=>save(`ratifications_${d.key}.csv`, toCSV(["instrument","country","date","status"], list.map(([c,dt,f])=>[d.key,c,dt,STATUS[f]])));
+  if($("#pr-norm")) $("#pr-norm").onclick=printDrawer;
+}
+
+/* ---------- register ---------- */
+const ff=$("#ff"), ft=$("#ft"); let TIERSEL="G";
+function famOptions(){
+  const L=lensRows(TIERSEL), keepF=ff.value, keepT=ft.value;
+  const fams=[...new Set(L.map(d=>d.fam))].sort(), tops=TOPICS.filter(t=>L.some(d=>d.topics.includes(t)));
+  ff.innerHTML='<option value="">All</option>'+fams.map(f=>`<option>${esc(f)}</option>`).join(""); ff.value=fams.includes(keepF)?keepF:"";
+  ft.innerHTML='<option value="">All</option>'+tops.map(f=>`<option>${esc(f)}</option>`).join(""); ft.value=tops.includes(keepT)?keepT:"";
+  document.querySelectorAll("[data-tier]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.tier===TIERSEL));
+}
+let sortK="rank", sortDir=1, REGLIST=[], SYS="";
+function renderReg(){
+  const q=$("#q").value.trim().toLowerCase(), fb=$("#fb").value, fv=ff.value, tv=ft.value, lv=TIERSEL;
+  const H = lv==="P" ? {b:"Authority",ay:"Published",farm:"What it documents",why:"Influence on law and policy"} : {b:"Binding",ay:"Adopted",farm:LENS==="farm"?"What it requires for farm work":"What it requires",why:"Likely drivers of adoption"};
+  document.querySelectorAll("#reg th").forEach(th=>{ if(H[th.dataset.k]) th.textContent=H[th.dataset.k]; });
+  $("#fb").disabled = lv==="P"; if(lv==="P") $("#fb").value="";
+  $("#systems").hidden = lv!=="R"; document.querySelectorAll("[data-sys]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.sys===SYS));
+  REGLIST = lensRows(lv).filter(d=>(lv!=="R"||!SYS||d.sys===SYS) && (!fb||d.b==fb) && (!fv||d.fam===fv) && (!tv||d.topics.includes(tv)) && (!q||(d.name+" "+d.cite+" "+d.farm+" "+d.why+" "+d.fam).toLowerCase().includes(q)));
+  REGLIST.sort((x,y)=>{ let a=x[sortK], b=y[sortK]; if(a==null) a=sortDir>0?9e9:-9e9; if(b==null) b=sortDir>0?9e9:-9e9; return (typeof a==="string"?a.localeCompare(b):a-b)*sortDir; });
+  $("#regcount").textContent=`${REGLIST.length} ${lv==="P"?"publications":"entries"} shown · ${LEVEL[lv]} tier${lv==="R"&&SYS?" · "+SYS:""} · ${LENS==="farm"?"farmworker law":"all migration law"}`;
+  $("#reg tbody").innerHTML = REGLIST.map(d=>`<tr data-open="${d.id}">
+    <td class="num">${d.lvl}${d.rank}</td>
+    <td class="num"><span class="score">${d.score}</span></td>
+    <td class="name"><button class="linkbtn" data-open="${d.id}">${d.lvl==="P"?`<i>${esc(d.name)}</i>`:esc(d.name)}</button><span class="cite">${esc(d.cite)}</span> <span class="fam">${esc(d.fam)}</span>${d.sys?` <span class="fam">${d.sys}</span>`:""}</td>
+    <td><span class="tier"><i class="sw" style="background:${d.lvl==="N"?"var(--nat)":d.lvl==="P"?"var(--pub)":`var(--t${d.b})`}"></i>${d.lvl==="P"?"A":"B"}${d.b}</span><div class="note">${d.lvl==="P"?AUTH[d.b]:d.lvl==="N"?(d.b===5?"Binding statute or regulation":"Binding precedent"):TIER[d.b]}</div></td>
+    <td class="num">${LENS==="mig"?"<b>":""}RM${d.rm}${LENS==="mig"?"</b>":""}</td>
+    <td class="num">${LENS==="farm"?"<b>":""}R${d.r}${LENS==="farm"?"</b>":""}</td>
+    <td class="num">${fmt(d.a)}</td>
+    <td class="num">${d.lvl==="P"?"—":d.e && d.e!==d.a ? fmt(d.e) : (d.e? "On adoption" : "n/a")}</td>
+    <td class="num">${d.ratv?`${d.ratv[0]}${d.ratv[1]!==d.ratv[0]?` <span class="note">(${d.ratv[1]} in force)</span>`:""}`:`<span class="note">${d.fam==="EU law"?"Binds all 27 EU states":(d.lvl==="G"||d.lvl==="R")&&d.b>=4?"Not collected":"—"}</span>`}</td>
+    <td class="txt">${esc(d.farm)}</td>
+    <td class="txt">${esc(d.why)}</td></tr>`).join("") || `<tr><td colspan="11" class="muted">No entries match these filters. Clear the search or set the filters to All.</td></tr>`;
+}
+document.querySelectorAll("#reg th").forEach(th=>th.addEventListener("click",()=>{
+  const k=th.dataset.k; if(sortK===k) sortDir*=-1; else {sortK=k; sortDir=(k==="score"||k==="b"||k==="r"||k==="rm"||k==="rat")?-1:1;}
+  document.querySelectorAll("#reg th").forEach(h=>h.removeAttribute("aria-sort")); th.setAttribute("aria-sort", sortDir>0?"ascending":"descending"); renderReg(); }));
+document.querySelectorAll("[data-tier]").forEach(b=>b.addEventListener("click",()=>{ TIERSEL=b.dataset.tier; famOptions(); renderReg(); }));
+document.querySelectorAll("[data-sys]").forEach(b=>b.addEventListener("click",()=>{ SYS=b.dataset.sys; renderReg(); }));
+["q","fb","ff","ft"].forEach(id=>document.getElementById(id).addEventListener("input",renderReg));
+$("#dl-reg").addEventListener("click",()=>save(`${PFX()}_register_${LEVEL[TIERSEL].toLowerCase()}.csv`, toCSV(NORMHEAD, REGLIST.map(normRecord))));
+famOptions(); renderReg();
+
+/* ---------- country ranking ---------- */
+(function(){
+  const thead=$("#ctab thead"), tbody=$("#ctab tbody"); let key="rk", dir=1;
+  const cols=[["",""],["rk","#"],["c","Country"],["sc","Overall"],["br","Breadth"],["en","Enthusiasm"],["n","Ratified"]];
+  thead.innerHTML="<tr>"+cols.map(([k,l])=>k?`<th data-k="${k}">${l}</th>`:'<th><span class="note" style="text-transform:none">Compare</span></th>').join("")+FARM.map(k=>`<th class="ins farm" title="${esc(INAME[k])} (farm-specific)">${k}</th>`).join("")+REL.map(k=>`<th class="ins" title="${esc(INAME[k])}">${k}</th>`).join("")+"</tr>";
+  function draw(){
+    const q=$("#cq").value.trim().toLowerCase();
+    const L=C.filter(d=>!q||d.c.toLowerCase().includes(q)).sort((a,b)=>{const x=a[key],y=b[key];return (typeof x==="string"?x.localeCompare(y):x-y)*dir;});
+    tbody.innerHTML=L.map(d=>`<tr data-country="${esc(d.c)}"><td><input type="checkbox" class="cmpbox" data-c="${esc(d.c)}" aria-label="Compare ${esc(d.c)}" ${CMP.includes(d.c)?"checked":""}></td><td class="num">${d.rk}</td><td class="cn">${esc(d.c)}</td>
+      <td class="num">${d.sc.toFixed(1)}<span class="bar" style="width:${d.sc*0.6}px"></span></td>
+      <td class="num">${d.br.toFixed(1)}</td><td class="num">${d.en.toFixed(1)}</td><td class="num">${d.n}/${NBASK} <span class="note">(${d.nf} farm)</span></td>
+      ${BASKET.map(k=>`<td>${d.cells[k]?cellHTML(d.cells[k],k):""}</td>`).join("")}</tr>`).join("") || `<tr><td colspan="20" class="muted">No country matches that search.</td></tr>`;
+  }
+  tbody.addEventListener("click",e=>{ const b=e.target.closest(".cmpbox"); if(b){ e.stopPropagation(); toggleCmp(b.dataset.c); } },true);
+  thead.querySelectorAll("th[data-k]").forEach(th=>th.addEventListener("click",()=>{const k=th.dataset.k; if(key===k) dir*=-1; else {key=k; dir=(k==="rk"||k==="c")?1:-1;} draw();}));
+  $("#cq").addEventListener("input",draw);
+  window.redrawRanking=draw;
+  draw();
+})();
+/* visitor option: count C97, C143 and C189 in the score (off by default; breadth over 16 treaties, enthusiasm unchanged) */
+var NBASK=13;
+(function(){
+  const MIG=["C97","C143","C189"], box=$("#migconv"); if(!box) return;
+  C.forEach(d=>{ d._o={sc:d.sc,br:d.br,rk:d.rk,n:d.n}; });
+  function apply(on){
+    NBASK=on?16:13;
+    C.forEach(d=>{
+      if(!on){ Object.assign(d,d._o); return; }
+      const r=RBY[d.c]||{}, k=MIG.filter(m=>r[m]&&(r[m][1]==="F"||r[m][1]==="P")).length;
+      d.br=+(100*(2*d.nf+(d._o.n-d.nf)+k)/22).toFixed(1); d.sc=+(0.6*d.br+0.4*d.en).toFixed(1); d.n=d._o.n+k;
+    });
+    if(on) C.slice().sort((a,b)=>b.sc-a.sc||a._o.rk-b._o.rk).forEach((d,i)=>{ d.rk=i+1; });
+    if(window.redrawRanking) window.redrawRanking();
+    try{ drawMap(); }catch(e){}
+  }
+  box.addEventListener("change",()=>apply(box.checked));
+})();
+$("#dl-cty").addEventListener("click",()=>save("farmworker-atlas_country-ranking.csv", toCSV(["rank","country","overall_score","breadth","enthusiasm","ratified_of_13","farm_specific_of_6",...BASKET.map(k=>k+"_date")], C.map(d=>[d.rk,d.c,d.sc,d.br,d.en,d.n,d.nf,...BASKET.map(k=>{const r=(RBY[d.c]||{})[k]; return r?(r[1]==="S"?"signed only":r[1]==="D"?r[0]+" (denounced)":r[0]):"";})]))));
+
+/* ---------- compare ---------- */
+$("#clist").innerHTML=C.map(d=>`<option value="${esc(d.c)}">`).join("");
+function addFromInput(){ const v=$("#addc").value.trim(); const m=C.find(d=>d.c.toLowerCase()===v.toLowerCase()) || C.find(d=>d.c.toLowerCase().startsWith(v.toLowerCase())); if(!v) return; if(!m){ toast(`No country named "${v}" in the Atlas.`); return; } if(!CMP.includes(m.c)) toggleCmp(m.c); $("#addc").value=""; drawCompare(); }
+$("#addbtn").addEventListener("click",addFromInput);
+$("#addc").addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); addFromInput(); }});
+function drawCompare(){
+  $("#chips").innerHTML=CMP.map(c=>`<span class="chip">${esc(c)}<button type="button" aria-label="Remove ${esc(c)}" data-rm="${esc(c)}">×</button></span>`).join("");
+  $("#chips").querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{toggleCmp(b.dataset.rm);drawCompare();});
+  if(!CMP.length){ $("#cmpout").innerHTML='<div class="empty">No countries selected yet. Type a country above, or tick countries in the Country ranking.</div>'; return; }
+  const ds=CMP.map(c=>CBY[c]);
+  const row=(label,f)=>`<tr><td>${label}</td>${ds.map(f).join("")}</tr>`;
+  $("#cmpout").innerHTML=`<div class="tablebox"><table class="cmp"><thead><tr><th>Country</th>${ds.map(d=>`<th><button class="linkbtn" data-country="${esc(d.c)}">${esc(d.c)}</button></th>`).join("")}</tr></thead><tbody>
+    ${row("Rank",d=>`<td class="num">${d.rk} of ${C.length}</td>`)}
+    ${row("Overall score",d=>`<td class="num"><b>${d.sc.toFixed(1)}</b></td>`)}
+    ${row("Breadth",d=>`<td class="num">${d.br.toFixed(1)}</td>`)}
+    ${row("Enthusiasm",d=>`<td class="num">${d.en.toFixed(1)}</td>`)}
+    ${row("Ratified",d=>`<td class="num">${d.n}/13 (${d.nf} farm)</td>`)}
+    ${BASKET.map(k=>row(`${k} <div class="note" style="font-weight:400">${esc(INAME[k])}</div>`,d=>`<td>${cellHTML(d.cells[k],k)}</td>`)).join("")}
+    ${row("National and EU law in the Atlas",d=>{const l=[...natFor(d.c),...euFor(d.c)]; return `<td>${l.length?l.map(x=>`<div><button class="linkbtn" data-open="${x.id}">${esc(x.name)}</button></div>`).join(""):'<span class="note">None in the Atlas</span>'}</td>`;})}
+  </tbody></table></div>`;
+}
+$("#dl-cmp").addEventListener("click",()=>{ if(!CMP.length){toast("Add at least one country first.");return;} const ds=CMP.map(c=>CBY[c]);
+  save(`farmworker-atlas_compare_${CMP.map(slug).join("_")}.csv`, toCSV(["measure",...CMP], [["rank",...ds.map(d=>d.rk)],["overall_score",...ds.map(d=>d.sc)],["breadth",...ds.map(d=>d.br)],["enthusiasm",...ds.map(d=>d.en)],["ratified_of_13",...ds.map(d=>d.n)],
+    ...BASKET.map(k=>[k+" "+INAME[k],...CMP.map(c=>{const r=(RBY[c]||{})[k]; return r?(r[1]==="S"?"signed only":r[1]==="D"?r[0]+" (denounced)":r[0]+(r[1]==="W"?" (not yet in force)":"")):"not ratified";})])])); });
+setCmp(CMP);
+
+/* ---------- data downloads ---------- */
+(function(){
+  const ALL=ROWS.filter(d=>d.inMig||d.inFarm), FARMS=ROWS.filter(d=>d.inFarm);
+  const byT=l=>ALL.filter(d=>d.lvl===l).length;
+  const items=[
+    ["Migration law register, all tiers",`${ALL.length} norms and publications (${byT("G")} global, ${byT("R")} regional, ${byT("N")} national, ${byT("P")} publications), with both relevance scores, topics, dates, citations, provisions and drivers.`,()=>save("migration-atlas_register_all-tiers.csv",toCSV(NORMHEAD,ALL.map(normRecord)))],
+    ["Farmworker law subset",`${FARMS.length} entries in the farmworker subset, across all four tiers.`,()=>save("farmworker-atlas_register.csv",toCSV(NORMHEAD,FARMS.map(normRecord)))],
+    ["Country ranking","Scores for 187 states, with ratification dates for all 13 treaties.",()=>$("#dl-cty").click()],
+    ["Ratification records","Raw records: one row per state and treaty, from NORMLEX and the UN Treaty Collection.",()=>save("imr-atlas_ratifications.csv",toCSV(["instrument","country","date","status"],Object.entries(RATS).flatMap(([k,l])=>l.map(([c,dt,f])=>[k,c,dt,STATUS[f]]))))],
+    ["News log","Every development listed under News, with dates, tiers and sources.",()=>save("imr-atlas_news.csv",toCSV(["date","type","tags","tier","title","summary","source","url"],newsItems().map(n=>[n.date,n.kind,n.tags.join("; "),LEVEL[n.tier]||"",n.title,n.summary,n.source,n.url])))],
+    ["Codebook","Every scale, code and formula behind the ranks, ratification scores and implementation ratings.",()=>{const a=document.createElement("a");a.href="data/codebook.csv";a.download="imr-atlas_codebook.csv";document.body.appendChild(a);a.click();a.remove();}],
+    ["Full dataset (JSON)","Everything above in one machine-readable file.",()=>save("imr-atlas_full.json",JSON.stringify({title:"Migration Law Atlas, including the Farmworker Norms Atlas",publisher:"Institute for Migrant Rights",version:"2026-10-30",fields:NORMHEAD,norms:ALL.map(normRecord),countries:C.map(({c,rk,sc,br,en,n,nf})=>({country:c,rank:rk,overall:sc,breadth:br,enthusiasm:en,ratified:n,farm_specific:nf})),ratifications:RATS,news:newsItems()},null,1))],
+  ];
+  $("#dlgrid").innerHTML=items.map((it,i)=>`<div class="dl"><h3>${it[0]}</h3><p class="muted" style="font-size:13.5px">${it[1]}</p><div class="row"><button class="btn primary" type="button" data-dl="${i}">Download</button></div></div>`).join("");
+  $("#dlgrid").addEventListener("click",e=>{const b=e.target.closest("[data-dl]"); if(b) items[+b.dataset.dl][2]();});
+  if(IN_CLAUDE) $("#dlnote").textContent="In this preview you'll be asked to confirm each download.";
+})();
+
+/* ---------- world map ---------- */
+const BINS=[[0,"s0","0"],[15,"s1","0.1–15"],[30,"s2","15–30"],[45,"s3","30–45"],[60,"s4","45–60"],[101,"s5","60 and above"]];
+const binOf=v=> v<=0?"s0":v<=15?"s1":v<=30?"s2":v<=45?"s3":v<=60?"s4":"s5";
+const metricSel=$("#metric");
+metricSel.innerHTML=`<option value="sc">Overall score</option><option value="br">Breadth</option><option value="en">Enthusiasm</option><optgroup label="Ratified this treaty">${BASKET.map(k=>`<option value="i:${k}">${k} · ${esc(INAME[k])}</option>`).join("")}</optgroup>`;
+let mapPaths=null;
+function mapName(f){ const n=f.properties.name; return NONSTATE.has(n)?null:(MAPALIAS[n]||n); }
+function fillFor(name){
+  if(!name) return "url(#hatch)";
+  const m=metricSel.value, d=countryRec(name);
+  if(m.startsWith("i:")){ const r=(RBY[name]||{})[m.slice(2)]; return r&&(r[1]==="F"||r[1]==="P")?"var(--s4)":r&&r[1]==="W"?"var(--s2)":"var(--s0)"; }
+  return `var(--${binOf(d[m])})`;
+}
+function drawLegend(){
+  const m=metricSel.value;
+  $("#maplegend").innerHTML = (m.startsWith("i:")
+    ? `<span><i class="lg-box" style="background:var(--s4)"></i>Ratified, in force</span><span><i class="lg-box" style="background:var(--s2)"></i>Ratified, not yet in force</span><span><i class="lg-box" style="background:var(--s0);outline:1px solid var(--rule)"></i>Not ratified or denounced</span>`
+    : BINS.map(([,c,l])=>`<span><i class="lg-box" style="background:var(--${c});${c==="s0"?"outline:1px solid var(--rule)":""}"></i>${l}</span>`).join(""))
+    + `<span><i class="lg-box" style="background:repeating-linear-gradient(45deg,var(--nodata) 0 2px,var(--bg) 2px 5px)"></i>Not a separate treaty party</span>`;
+  const list = m.startsWith("i:") ? (RATS[m.slice(2)]||[]).filter(r=>r[2]!=="D"&&r[2]!=="S").sort((a,b)=>new Date(a[1])-new Date(b[1])).slice(0,10).map(r=>[r[0],r[1].slice(-4)])
+    : C.slice().sort((a,b)=>b[m]-a[m]||a.rk-b.rk).slice(0,10).map(d=>[d.c,d[m].toFixed(1)]);
+  $("#h-top").textContent = m.startsWith("i:") ? `First 10 to ratify ${m.slice(2)}` : `Top 10 by ${metricSel.selectedOptions[0].textContent.toLowerCase()}`;
+  $("#toplist").innerHTML=list.map((r,i)=>`<li><span class="num">${i+1}</span><button type="button" data-country="${esc(r[0])}">${esc(r[0])}</button><span class="num">${r[1]}</span></li>`).join("");
+}
+function recolor(){ if(mapPaths) mapPaths.forEach(([p,n])=>p.setAttribute("fill",fillFor(n))); drawLegend(); }
+metricSel.addEventListener("input",recolor);
+function drawMap(){
+  if(!window.d3||!window.topojson){ $("#mapbox").innerHTML='<div class="empty">The map could not load. Check your connection, or use the Country ranking tab.</div>'; drawLegend(); return; }
+  const W=960,H=470, svg=$("#map"); svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const fc=topojson.feature(TOPO,TOPO.objects.countries);
+  const proj=d3.geoNaturalEarth1().fitExtent([[8,8],[W-8,H-8]],fc), path=d3.geoPath(proj);
+  const ns="http://www.w3.org/2000/svg";
+  const defs=document.createElementNS(ns,"defs"); defs.innerHTML='<pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--bg)"></rect><line x1="0" y1="0" x2="0" y2="5" stroke="var(--nodata)" stroke-width="2"></line></pattern>'; svg.appendChild(defs);
+  const sph=document.createElementNS(ns,"path"); sph.setAttribute("d",path({type:"Sphere"})); sph.setAttribute("class","sphere"); svg.appendChild(sph);
+  const tip=$("#tip"), box=$("#mapbox");
+  mapPaths=fc.features.map(f=>{
+    const n=mapName(f), p=document.createElementNS(ns,"path"); p.setAttribute("d",path(f)); p.setAttribute("class","land");
+    const label = n||f.properties.name;
+    if(n){ p.setAttribute("tabindex","0"); p.setAttribute("role","button"); p.setAttribute("aria-label",`${n}: open profile`); }
+    const showTip=(ev)=>{ const d=n?countryRec(n):null, m=metricSel.value;
+      tip.innerHTML = `<b>${esc(label)}</b>` + (!n ? "Not a separate treaty party" : m.startsWith("i:") ? (()=>{const r=(RBY[n]||{})[m.slice(2)]; return r?`${m.slice(2)}: ${STATUS[r[1]]}${r[0]?" · "+esc(r[0]):""}`:`${m.slice(2)}: not ratified`;})()
+        : `Overall ${d.sc.toFixed(1)}${d.rk?` · rank ${d.rk}`:""}<br>Ratified ${d.n} of 13 (${d.nf} farm-specific)`);
+      tip.hidden=false; const bb=box.getBoundingClientRect(); let x,y;
+      if(ev&&ev.clientX!=null){ x=ev.clientX-bb.left+12; y=ev.clientY-bb.top+12; } else { const r=p.getBoundingClientRect(); x=r.left-bb.left+r.width/2; y=r.top-bb.top+r.height/2; }
+      if(x+280>bb.width) x=Math.max(4,x-292); tip.style.left=x+"px"; tip.style.top=y+"px"; };
+    p.addEventListener("mousemove",showTip); p.addEventListener("focus",()=>showTip()); p.addEventListener("mouseleave",()=>tip.hidden=true); p.addEventListener("blur",()=>tip.hidden=true);
+    if(n){ p.addEventListener("click",()=>openCountry(n)); p.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openCountry(n);} }); }
+    svg.appendChild(p); return [p,n];
+  });
+  recolor();
+}
+
+/* ---------- timeline ---------- */
+function drawTimeline(){
+  const svg=$("#chart"), tip=$("#ttip"), box=$("#chartbox"); svg.innerHTML="";
+  $("#tlegend").innerHTML=[5,4,3,2,1].map(t=>`<span><i class="sw" style="background:var(--t${t})"></i>B${t} ${TIER[t]}</span>`).join("")+`<span><i class="sw" style="background:var(--nat)"></i>National framework</span><span><i class="sw" style="background:var(--pub)"></i>Publication</span><span><i class="lg-line"></i>Adoption to entry into force</span><span><i class="lg-eif"></i>Entry into force</span>`;
+  const W=1140, L=150, Rm=24, x0=1920, x1=2030, rowH=15, laneGap=22, top=28;
+  const X = y => L + (y-x0)/(x1-x0)*(W-L-Rm);
+  const ns="http://www.w3.org/2000/svg", el=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  let y=top; const lanes=[];
+  const LANES=[["G","Global · binding",d=>d.b>=4],["G","Global · soft law",d=>d.b<=3],["R","Regional · binding",d=>d.b>=4],["R","Regional · soft law",d=>d.b<=3],["N","National",()=>true],["P","Publications",()=>true]];
+  LANES.forEach(([lv,label,f])=>{
+    const t=lv==="N"||lv==="P"?lv:"B";
+    const items=lensRows(lv).filter(f).sort((a,b)=>a.ay-b.ay); const ends=[];
+    items.forEach(d=>{ const s=X(d.ay)-7, e=Math.max(X(d.ay),X(d.ey||d.ay))+7; let r=ends.findIndex(v=>v<s); if(r<0){r=ends.length;ends.push(0);} ends[r]=e; d._row=r; });
+    lanes.push({t,label,items,y0:y}); y+=Math.max(1,ends.length)*rowH+laneGap;
+  });
+  const H=y+8; svg.setAttribute("viewBox",`0 0 ${W} ${H}`); svg.setAttribute("width",W); svg.setAttribute("height",H);
+  for(let yy=1920; yy<=2030; yy+=10){ svg.appendChild(el("line",{x1:X(yy),x2:X(yy),y1:top-8,y2:H-10,class:"gridline"})); const tx=el("text",{x:X(yy),y:top-14,"text-anchor":"middle"}); tx.textContent=yy; svg.appendChild(tx); }
+  lanes.forEach((ln,i)=>{
+    if(i) svg.appendChild(el("line",{x1:0,x2:W,y1:ln.y0-laneGap/2,y2:ln.y0-laneGap/2,class:"lanerule"}));
+    const t1=el("text",{x:8,y:ln.y0+11,class:"lane-label"}); t1.textContent=ln.label; svg.appendChild(t1);
+    const t2=el("text",{x:8,y:ln.y0+26}); t2.textContent=`${ln.items.length} ${ln.t==="P"?"reports and studies":"instruments"}`; svg.appendChild(t2);
+    ln.items.forEach(d=>{
+      const cy=ln.y0+d._row*rowH+rowH/2, cx=X(d.ay), col= ln.t==="N"?"var(--nat)":ln.t==="P"?"var(--pub)":`var(--t${d.b})`;
+      const g=el("g",{class:"item",tabindex:0,role:"button","aria-label":`${d.name}, ${fmt(d.a)}. Open entry`});
+      if(d.ey && d.ey-d.ay>0.05){ g.appendChild(el("line",{x1:cx,x2:X(d.ey),y1:cy,y2:cy,class:"lag",stroke:col})); g.appendChild(el("circle",{cx:X(d.ey),cy,r:3.5,class:"eif",stroke:col})); }
+      g.appendChild(el("circle",{cx,cy,r:5,class:"dot",fill:col}));
+      g.appendChild(el("rect",{x:cx-8,y:cy-7,width:Math.max(16,(d.ey?X(d.ey)-cx:0)+16),height:14,class:"hit"}));
+      const showT=()=>{ const lag=d.ey&&d.ey-d.ay>0.05?` · ${(d.ey-d.ay).toFixed(1)} years to entry into force`:"";
+        tip.innerHTML=`<b>${esc(d.name)}</b>${d.lvl==="P"?"Published":"Adopted"} ${fmt(d.a)}${d.e&&d.e!==d.a?` · in force ${fmt(d.e)}`:""}${lag}<br>Score ${d.score} (${d.lvl==="P"?"A":"B"}${d.b} × ${relLabel()}${relOf(d)})`;
+        tip.hidden=false; const sc=svg.getBoundingClientRect().width/W; let left=cx*sc+12; if(left+290>box.scrollWidth) left=cx*sc-290; tip.style.left=left+"px"; tip.style.top=(cy*sc+12)+"px"; };
+      g.addEventListener("mouseenter",showT); g.addEventListener("mouseleave",()=>tip.hidden=true); g.addEventListener("focus",showT); g.addEventListener("blur",()=>tip.hidden=true);
+      g.addEventListener("click",()=>openNorm(d.id)); g.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openNorm(d.id);} });
+      svg.appendChild(g);
+    });
+  });
+}
+
+
+/* ---------- news ---------- */
+const RAT_SINCE = "2025-07-01";
+const toISO = s => { const m=String(s).match(/^(\d{1,2}) (\w{3}) (\d{4})$/); return m ? `${m[3]}-${String(MON.indexOf(m[2])+1).padStart(2,"0")}-${m[1].padStart(2,"0")}` : null; };
+const longName = k => k==="ICESCR" ? "International Covenant on Economic, Social and Cultural Rights (1966)" : k==="ICRMW" ? "International Convention on the Protection of the Rights of All Migrant Workers and Members of Their Families (1990)" : INAME[k].startsWith("Protocol") ? `ILO ${INAME[k].replace(/, (\d{4})$/," ($1)")}` : `ILO ${INAME[k].replace(/, (\d{4})$/," Convention ($1)")}, ${k}`;
+function newsItems(){
+  const rat=[]; for(const k in RATS) for(const [c,dt,f] of RATS[k]){ const iso=toISO(dt); if(iso && iso>=RAT_SINCE && f!=="S" && f!=="D") rat.push({date:iso,kind:"Ratification",tags:["Ratification",...(k==="ICRMW"||k==="C181"||k==="P29"?["Migration"]:[]),...(FARM.includes(k)?["Farmworkers"]:[])],tier:"G",title:`${c} ratifies ${k}`,summary:`${c} ratified the ${longName(k)}${f==="W"?". It enters into force for "+c+" twelve months after registration":""}.`,source:k.startsWith("C")||k.startsWith("P")?"ILO NORMLEX":"UN Treaty Collection",url:k.startsWith("C")||k.startsWith("P")?ILO(k.replace(/^([CP])(\d+)$/,(m,x,n)=>x+n.padStart(3,"0"))):"https://treaties.un.org/",country:c}); }
+  return [...NEWS.map(n=>({date:n[0],kind:n[1],tags:n[2],tier:n[3],title:n[4],summary:n[5],source:n[6],url:n[7]})),...rat].sort((a,b)=>b.date.localeCompare(a.date));
+}
+let NF="";
+function renderNews(){
+  const L=newsItems().filter(n=>!NF||n.tags.includes(NF));
+  document.querySelectorAll("[data-nf]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.nf===NF));
+  $("#newslist").innerHTML=L.map(n=>`<article><time datetime="${n.date}">${fmt(n.date)}</time><div><h3>${esc(n.title)}</h3><div class="tags"><span class="fam">${esc(n.kind)}</span>${n.tier?`<span class="fam">${LEVEL[n.tier]}</span>`:""}${n.tags.filter(t=>t!=="Ratification").map(t=>`<span class="fam">${t==="Farmworkers"?"Farmworker law":t==="Migration"?"Migration law":esc(t)}</span>`).join("")}</div><p>${esc(n.summary)}</p><p class="note">Source: <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.source)} ↗</a></p></div></article>`).join("") || '<div class="empty">No news in this category yet.</div>';
+}
+document.querySelectorAll("[data-nf]").forEach(b=>b.addEventListener("click",()=>{ NF=b.dataset.nf; renderNews(); }));
+renderNews();
+
+/* ---------- scope switch ---------- */
+function setLens(l){
+  LENS=l; rerank(); updateHead(); famOptions(); renderReg(); drawTimeline();
+  if(!$("#drawer").hidden && $("#dtitle").textContent && CBY[$("#dtitle").textContent]) openCountry($("#dtitle").textContent,false);
+  if(location.hash.slice(1)==="compare") drawCompare();
+  if(location.hash.slice(1)==="implementation") drawImpl();
+  if(location.hash.slice(1)==="stats") drawStats();
+}
+document.querySelectorAll("[data-lens]").forEach(b=>b.addEventListener("click",()=>setLens(b.dataset.lens)));
+updateHead(); drawTimeline();
+
+drawMap();
+route();
+</script>

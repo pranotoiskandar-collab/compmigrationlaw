@@ -1,0 +1,81 @@
+id,gcc,origin,stock,log_stock,share,bilat_any,bilat_n,dw_agr,first_year,region,income,origin_score,origin_icrmw,origin_gdppc,income_gap,origin_unemp,origin_youth_unemp,origin_remit_gdp,origin_working_age
+Bahrain – India,Bahrain,India,327698,5.515,39.0,1,1,0,2009,Asia,Lower middle income,15.8,0,9416,0.797,4.2,15.7,3.7,68.2
+Bahrain – Bangladesh,Bahrain,Bangladesh,103283,5.014,12.29,0,0,0,,Asia,Lower middle income,30.6,1,8487,0.843,3.6,9.1,6.1,65.5
+Bahrain – Pakistan,Bahrain,Pakistan,93973,4.973,11.18,1,1,0,2014,Asia,Lower middle income,16.3,0,5502,1.031,5.5,9.5,9.4,59.0
+Bahrain – Egypt,Bahrain,Egypt,84943,4.929,10.11,0,0,0,,Africa,Lower middle income,24.2,1,16798,0.546,6.8,17.3,7.6,62.9
+Bahrain – Philippines,Bahrain,Philippines,53307,4.727,6.34,1,2,0,2003,Asia,Upper middle income,38.1,1,10378,0.755,2.2,7.0,8.7,66.6
+Bahrain – Indonesia,Bahrain,Indonesia,30062,4.478,3.58,0,0,0,,Asia,Upper middle income,9.2,1,14471,0.611,3.3,13.1,1.1,68.1
+Bahrain – Yemen,Bahrain,Yemen,19392,4.288,2.31,0,0,0,,Asia,Low income,3.2,0,,,17.0,32.2,,56.3
+Bahrain – Jordan,Bahrain,Jordan,15949,4.203,1.9,0,0,0,,Asia,Upper middle income,3.2,0,10468,0.751,16.7,39.1,7.6,64.8
+Bahrain – Sudan,Bahrain,Sudan,12550,4.099,1.49,0,0,0,,Africa,Low income,10.7,0,1861,1.501,7.5,12.0,0.0,56.2
+Bahrain – Sri Lanka,Bahrain,Sri Lanka,11369,4.056,1.35,1,1,0,2008,Asia,Upper middle income,45.5,1,13793,0.632,4.2,19.1,6.7,65.9
+Bahrain – State of Palestine,Bahrain,State of Palestine,5501,3.74,0.65,0,0,0,,,,3.2,0,4191,1.149,24.4,36.1,4.6,58.1
+Bahrain – Syrian Arab Republic,Bahrain,Syrian Arab Republic,4984,3.698,0.59,0,0,0,,Asia,Low income,34.2,1,4579,1.11,13.4,32.8,,66.1
+Bahrain – Lebanon,Bahrain,Lebanon,3961,3.598,0.47,0,0,0,,Asia,Lower middle income,9.2,0,10469,0.751,11.0,22.7,33.3,63.7
+Kuwait – India,Kuwait,India,1231094,6.09,37.05,1,1,0,2007,Asia,Lower middle income,15.8,0,9416,0.695,4.2,15.7,3.7,68.2
+Kuwait – Egypt,Kuwait,Egypt,449863,5.653,13.54,1,1,0,1993,Africa,Lower middle income,24.2,1,16798,0.444,6.8,17.3,7.6,62.9
+Kuwait – Bangladesh,Kuwait,Bangladesh,406077,5.609,12.22,1,2,0,2000,Asia,Lower middle income,30.6,1,8487,0.74,3.6,9.1,6.1,65.5
+Kuwait – Pakistan,Kuwait,Pakistan,362255,5.559,10.9,1,1,0,1995,Asia,Lower middle income,16.3,0,5502,0.928,5.5,9.5,9.4,59.0
+Kuwait – Philippines,Kuwait,Philippines,210397,5.323,6.33,1,4,1,1997,Asia,Upper middle income,38.1,1,10378,0.653,2.2,7.0,8.7,66.6
+Kuwait – Indonesia,Kuwait,Indonesia,115347,5.062,3.47,1,1,0,1996,Asia,Upper middle income,9.2,1,14471,0.508,3.3,13.1,1.1,68.1
+Kuwait – Yemen,Kuwait,Yemen,75513,4.878,2.27,0,0,0,,Asia,Low income,3.2,0,,,17.0,32.2,,56.3
+Kuwait – Jordan,Kuwait,Jordan,58434,4.767,1.76,1,1,0,2001,Asia,Upper middle income,3.2,0,10468,0.649,16.7,39.1,7.6,64.8
+Kuwait – Sudan,Kuwait,Sudan,52783,4.722,1.59,0,0,0,,Africa,Low income,10.7,0,1861,1.399,7.5,12.0,0.0,56.2
+Kuwait – Sri Lanka,Kuwait,Sri Lanka,42384,4.627,1.28,1,1,0,2012,Asia,Upper middle income,45.5,1,13793,0.529,4.2,19.1,6.7,65.9
+Kuwait – Nepal,Kuwait,Nepal,26292,4.42,0.79,0,0,0,,Asia,Lower middle income,15.7,0,5047,0.966,10.5,20.6,26.0,65.1
+Kuwait – Syrian Arab Republic,Kuwait,Syrian Arab Republic,24742,4.393,0.74,1,1,0,2008,Asia,Low income,34.2,1,4579,1.008,13.4,32.8,,66.1
+Kuwait – State of Palestine,Kuwait,State of Palestine,16524,4.218,0.5,0,0,0,,,,3.2,0,4191,1.047,24.4,36.1,4.6,58.1
+Kuwait – Türkiye,Kuwait,Türkiye,14256,4.154,0.43,0,0,0,,Asia,Upper middle income,22.0,1,36154,0.111,8.8,16.3,0.1,68.3
+Oman – India,Oman,India,803105,5.905,35.17,1,1,0,2008,Asia,Lower middle income,15.8,0,9416,0.591,4.2,15.7,3.7,68.2
+Oman – Bangladesh,Oman,Bangladesh,737087,5.868,32.28,1,1,0,2008,Asia,Lower middle income,30.6,1,8487,0.636,3.6,9.1,6.1,65.5
+Oman – Pakistan,Oman,Pakistan,280339,5.448,12.28,0,0,0,,Asia,Lower middle income,16.3,0,5502,0.824,5.5,9.5,9.4,59.0
+Oman – Egypt,Oman,Egypt,84977,4.929,3.72,0,0,0,,Africa,Lower middle income,24.2,1,16798,0.34,6.8,17.3,7.6,62.9
+Oman – Philippines,Oman,Philippines,61483,4.789,2.69,0,0,0,,Asia,Upper middle income,38.1,1,10378,0.549,2.2,7.0,8.7,66.6
+Oman – Sri Lanka,Oman,Sri Lanka,30611,4.486,1.34,1,2,0,2012,Asia,Upper middle income,45.5,1,13793,0.425,4.2,19.1,6.7,65.9
+Oman – Sudan,Oman,Sudan,22405,4.35,0.98,0,0,0,,Africa,Low income,10.7,0,1861,1.295,7.5,12.0,0.0,56.2
+Oman – United Republic of Tanzania,Oman,United Republic of Tanzania,20860,4.319,0.91,0,0,0,,Africa,Lower middle income,16.7,0,3713,0.995,1.6,2.3,1.4,54.4
+Oman – Nepal,Oman,Nepal,18147,4.259,0.79,0,0,0,,Asia,Lower middle income,15.7,0,5047,0.862,10.5,20.6,26.0,65.1
+Oman – Jordan,Oman,Jordan,15210,4.182,0.67,0,0,0,,Asia,Upper middle income,3.2,0,10468,0.545,16.7,39.1,7.6,64.8
+Qatar – India,Qatar,India,736955,5.867,31.53,1,3,0,1985,Asia,Lower middle income,15.8,0,9416,1.073,4.2,15.7,3.7,68.2
+Qatar – Bangladesh,Qatar,Bangladesh,274697,5.439,11.75,1,2,0,1988,Asia,Lower middle income,30.6,1,8487,1.118,3.6,9.1,6.1,65.5
+Qatar – Nepal,Qatar,Nepal,266580,5.426,11.41,1,3,0,2005,Asia,Lower middle income,15.7,0,5047,1.343,10.5,20.6,26.0,65.1
+Qatar – Pakistan,Qatar,Pakistan,247227,5.393,10.58,1,3,0,1978,Asia,Lower middle income,16.3,0,5502,1.306,5.5,9.5,9.4,59.0
+Qatar – Egypt,Qatar,Egypt,192680,5.285,8.24,1,1,0,1974,Africa,Lower middle income,24.2,1,16798,0.821,6.8,17.3,7.6,62.9
+Qatar – Philippines,Qatar,Philippines,178516,5.252,7.64,1,3,0,1981,Asia,Upper middle income,38.1,1,10378,1.03,2.2,7.0,8.7,66.6
+Qatar – Sri Lanka,Qatar,Sri Lanka,161747,5.209,6.92,1,1,0,2008,Asia,Upper middle income,45.5,1,13793,0.907,4.2,19.1,6.7,65.9
+Qatar – Indonesia,Qatar,Indonesia,46021,4.663,1.97,1,1,0,2008,Asia,Upper middle income,9.2,1,14471,0.886,3.3,13.1,1.1,68.1
+Qatar – Yemen,Qatar,Yemen,37285,4.572,1.6,0,0,0,,Asia,Low income,3.2,0,,,17.0,32.2,,56.3
+Qatar – Jordan,Qatar,Jordan,34441,4.537,1.47,0,0,0,,Asia,Upper middle income,3.2,0,10468,1.027,16.7,39.1,7.6,64.8
+Qatar – Syrian Arab Republic,Qatar,Syrian Arab Republic,25981,4.415,1.11,1,2,0,2003,Asia,Low income,34.2,1,4579,1.386,13.4,32.8,,66.1
+Qatar – Sudan,Qatar,Sudan,24580,4.391,1.05,1,2,0,1981,Africa,Low income,10.7,0,1861,1.777,7.5,12.0,0.0,56.2
+Qatar – Lebanon,Qatar,Lebanon,8844,3.947,0.38,0,0,0,,Asia,Lower middle income,9.2,0,10469,1.027,11.0,22.7,33.3,63.7
+Qatar – United Kingdom,Qatar,United Kingdom,7210,3.858,0.31,0,0,0,,Europe,High income,32.7,0,53412,0.319,4.4,14.3,0.1,63.3
+Saudi Arabia – Bangladesh,Saudi Arabia,Bangladesh,2362680,6.373,17.27,1,1,0,2015,Asia,Lower middle income,30.6,1,8487,0.872,3.6,9.1,6.1,65.5
+Saudi Arabia – Yemen,Saudi Arabia,Yemen,1999619,6.301,14.61,0,0,0,,Asia,Low income,3.2,0,,,17.0,32.2,,56.3
+Saudi Arabia – India,Saudi Arabia,India,1953496,6.291,14.28,1,2,1,2012,Asia,Lower middle income,15.8,0,9416,0.827,4.2,15.7,3.7,68.2
+Saudi Arabia – Pakistan,Saudi Arabia,Pakistan,1937044,6.287,14.16,0,0,0,,Asia,Lower middle income,16.3,0,5502,1.06,5.5,9.5,9.4,59.0
+Saudi Arabia – Egypt,Saudi Arabia,Egypt,1498313,6.176,10.95,0,0,0,,Africa,Lower middle income,24.2,1,16798,0.575,6.8,17.3,7.6,62.9
+Saudi Arabia – Sudan,Saudi Arabia,Sudan,895646,5.952,6.55,0,0,0,,Africa,Low income,10.7,0,1861,1.531,7.5,12.0,0.0,56.2
+Saudi Arabia – Philippines,Saudi Arabia,Philippines,755432,5.878,5.52,1,3,1,2005,Asia,Upper middle income,38.1,1,10378,0.785,2.2,7.0,8.7,66.6
+Saudi Arabia – Syrian Arab Republic,Saudi Arabia,Syrian Arab Republic,496044,5.696,3.63,0,0,0,,Asia,Low income,34.2,1,4579,1.14,13.4,32.8,,66.1
+Saudi Arabia – Nepal,Saudi Arabia,Nepal,297561,5.474,2.17,0,0,0,,Asia,Lower middle income,15.7,0,5047,1.098,10.5,20.6,26.0,65.1
+Saudi Arabia – Jordan,Saudi Arabia,Jordan,209093,5.32,1.53,0,0,0,,Asia,Upper middle income,3.2,0,10468,0.781,16.7,39.1,7.6,64.8
+Saudi Arabia – Ethiopia,Saudi Arabia,Ethiopia,180746,5.257,1.32,1,1,0,2017,Africa,Low income,18.0,0,2892,1.339,3.4,5.4,4.8,57.7
+Saudi Arabia – Indonesia,Saudi Arabia,Indonesia,169846,5.23,1.24,1,1,1,2014,Asia,Upper middle income,9.2,1,14471,0.64,3.3,13.1,1.1,68.1
+Saudi Arabia – Myanmar,Saudi Arabia,Myanmar,163252,5.213,1.19,0,0,0,,,,9.5,0,5276,1.078,2.9,10.0,3.4,68.4
+Saudi Arabia – Afghanistan,Saudi Arabia,Afghanistan,153258,5.185,1.12,0,0,0,,Asia,Low income,9.5,0,1964,1.507,13.7,17.2,4.0,54.7
+Saudi Arabia – State of Palestine,Saudi Arabia,State of Palestine,131779,5.12,0.96,0,0,0,,,,3.2,0,4191,1.178,24.4,36.1,4.6,58.1
+United Arab Emirates – India,United Arab Emirates,India,3248545,6.512,39.83,1,4,0,2006,Asia,Lower middle income,15.8,0,9416,0.869,4.2,15.7,3.7,68.2
+United Arab Emirates – Bangladesh,United Arab Emirates,Bangladesh,1024949,6.011,12.57,1,2,0,2007,Asia,Lower middle income,30.6,1,8487,0.915,3.6,9.1,6.1,65.5
+United Arab Emirates – Pakistan,United Arab Emirates,Pakistan,932356,5.97,11.43,1,1,0,2006,Asia,Lower middle income,16.3,0,5502,1.103,5.5,9.5,9.4,59.0
+United Arab Emirates – Egypt,United Arab Emirates,Egypt,841883,5.925,10.32,1,1,0,1988,Africa,Lower middle income,24.2,1,16798,0.618,6.8,17.3,7.6,62.9
+United Arab Emirates – Philippines,United Arab Emirates,Philippines,528527,5.723,6.48,1,3,1,2007,Asia,Upper middle income,38.1,1,10378,0.827,2.2,7.0,8.7,66.6
+United Arab Emirates – Indonesia,United Arab Emirates,Indonesia,298351,5.475,3.66,1,2,0,2007,Asia,Upper middle income,9.2,1,14471,0.683,3.3,13.1,1.1,68.1
+United Arab Emirates – Yemen,United Arab Emirates,Yemen,192423,5.284,2.36,0,0,0,,Asia,Low income,3.2,0,,,17.0,32.2,,56.3
+United Arab Emirates – Jordan,United Arab Emirates,Jordan,158125,5.199,1.94,1,1,0,2006,Asia,Upper middle income,3.2,0,10468,0.823,16.7,39.1,7.6,64.8
+United Arab Emirates – Sudan,United Arab Emirates,Sudan,124677,5.096,1.53,1,1,0,1981,Africa,Low income,10.7,0,1861,1.573,7.5,12.0,0.0,56.2
+United Arab Emirates – Sri Lanka,United Arab Emirates,Sri Lanka,112759,5.052,1.38,1,1,0,2007,Asia,Upper middle income,45.5,1,13793,0.704,4.2,19.1,6.7,65.9
+United Arab Emirates – State of Palestine,United Arab Emirates,State of Palestine,54566,4.737,0.67,0,0,0,,,,3.2,0,4191,1.221,24.4,36.1,4.6,58.1
+United Arab Emirates – Syrian Arab Republic,United Arab Emirates,Syrian Arab Republic,49529,4.695,0.61,1,1,0,2008,Asia,Low income,34.2,1,4579,1.182,13.4,32.8,,66.1
+United Arab Emirates – Lebanon,United Arab Emirates,Lebanon,39223,4.594,0.48,0,0,0,,Asia,Lower middle income,9.2,0,10469,0.823,11.0,22.7,33.3,63.7
+United Arab Emirates – Türkiye,United Arab Emirates,Türkiye,35736,4.553,0.44,0,0,0,,Asia,Upper middle income,22.0,1,36154,0.285,8.8,16.3,0.1,68.3

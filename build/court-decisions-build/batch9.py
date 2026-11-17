@@ -1,0 +1,45 @@
+# Batch 9 (2026-11-01): more non-Western decisions (South Asia, Philippines, South Africa). All status S.
+from batch3 import E
+from batch4 import SAF, IK, SCI, ZACC, ZASCA
+PSC='Supreme Court of the Philippines'
+PHL=('Supreme Court E-Library','https://elibrary.judiciary.gov.ph/')
+B9=[
+E('in-bba-2011','Bachpan Bachao Andolan v. Union of India (children in circuses)',SCI,'IN','asia','destination','apex','2011-04-18','(2011) 5 SCC 1','circus and entertainment',['forced','children'],['forced','fees'],[1,3],'won','partly',
+ 'Must the state rescue children, including children trafficked from Nepal, working in circuses?','Wajibkah negara menyelamatkan anak, termasuk anak yang diperdagangkan dari Nepal, yang bekerja di sirkus?',
+ 'Yes. Employing children in circuses was prohibited, raids and rescue were ordered, and the government had to act against trafficking.',
+ 'Children, many of them brought from Nepal, were found working and abused in Indian circuses. The Supreme Court banned child labour in circuses and ordered rescues and rehabilitation.',
+ 'Anak-anak, banyak yang dibawa dari Nepal, ditemukan bekerja dan dianiaya di sirkus India. MA melarang pekerja anak di sirkus dan memerintahkan penyelamatan dan rehabilitasi.',
+ [('punish',1),('investigate',1)],[('2011-04-18','Judgment.','Putusan.')],[IK('Bachpan Bachao Andolan circus')]),
+E('in-vishal-jeet-1990','Vishal Jeet v. Union of India',SCI,'IN','asia','destination','apex','1990-05-02','(1990) 3 SCC 318','sex work (forced)',['forced','children'],['forced'],[1,3],'won','partly',
+ 'What must the state do about girls trafficked into forced prostitution, including across borders?','Apa yang wajib dilakukan negara terhadap anak perempuan yang diperdagangkan untuk prostitusi paksa, termasuk lintas batas?',
+ 'The state must take strict action under the trafficking law and set up advisory committees and rehabilitation schemes.',
+ 'A lawyer asked the Supreme Court to act on girls forced into prostitution, some brought from neighbouring countries. The court told governments to enforce the law and help the girls rebuild their lives.',
+ 'Seorang advokat meminta MA bertindak terhadap anak perempuan yang dipaksa melacur, sebagian dibawa dari negara tetangga. Pengadilan memerintahkan pemerintah menegakkan hukum dan membantu mereka membangun hidup kembali.',
+ [('punish',1)],[('1990-05-02','Directions issued.','Arahan dikeluarkan.')],[IK('Vishal Jeet Union of India')]),
+E('bd-hc-qatar-2023','Writ on Bangladeshi workers who died on World Cup projects','High Court Division, Supreme Court of Bangladesh','BD','asia','origin','first','2023-01-30','[writ petition number to be added]','construction',['injury','welfare'],['injury','welfare'],[3,5],'advisory','unknown',
+ 'Must the government list Bangladeshi workers who died or were injured on construction projects abroad, and consider compensation for families?','Wajibkah pemerintah mendata pekerja Bangladesh yang meninggal atau cedera di proyek konstruksi di luar negeri, dan mempertimbangkan ganti rugi bagi keluarga?',
+ 'The court directed the ministries to compile the list within a month and asked them to show cause why compensation should not be ordered; the Appellate Division chamber judge stayed the list directive until March 2023.',
+ 'A lawyer asked Bangladesh’s High Court to make the government account for workers who died or were hurt building stadiums abroad. The court ordered a list and asked about compensation. A higher judge paused part of the order.',
+ 'Seorang advokat meminta Pengadilan Tinggi Bangladesh mewajibkan pemerintah mendata pekerja yang meninggal atau cedera saat membangun stadion di luar negeri. Pengadilan memerintahkan pendataan dan menanyakan ganti rugi. Hakim yang lebih tinggi menangguhkan sebagian perintah itu.',
+ [('welfare',1)],[('2022-12','Writ filed.','Permohonan diajukan.'),('2023-01-30','List ordered; rule issued on compensation.','Pendataan diperintahkan; perintah ganti rugi dipertanyakan.'),('2023-02','Chamber judge stays the list directive until 6 March. [Later course to check.]','Hakim kamar menangguhkan perintah pendataan sampai 6 Maret. [Kelanjutannya perlu diperiksa.]')],
+ [('The Daily Star','https://www.thedailystar.net/node/3234391'),('The Financial Express (stay)','https://old.thefinancialexpress.com.bd/national/chamber-court-stays-order-of-listing-of-dead-injured-bangladeshi-workers-1675260135')]),
+E('ph-vinuya-2012','PERT/CPM Manpower Exponent Co. v. Vinuya',PSC,'PH','asia','origin','apex','2012-09-05','G.R. No. 197528','manufacturing (aluminium)',['contract','dismissed','fees'],['dismissed','fees','wages'],[1,4],'won','carried',
+ 'Were workers who resigned abroad after their contracts were changed for the worse illegally dismissed, and is the recruiter liable?','Apakah pekerja yang mengundurkan diri di luar negeri setelah kontraknya diubah merugikan dipecat secara tidak sah, dan apakah perekrut bertanggung jawab?',
+ 'Yes. Substituting worse contracts amounted to constructive dismissal, and the recruitment agency was jointly liable for the workers’ money claims.',
+ 'Filipino workers sent abroad were made to sign new contracts with lower pay than promised, then quit and came home. The Supreme Court said they had effectively been dismissed and the agency had to pay.',
+ 'Pekerja Filipina yang dikirim ke luar negeri dipaksa menandatangani kontrak baru dengan upah lebih rendah dari yang dijanjikan, lalu berhenti dan pulang. MA menyatakan mereka pada dasarnya dipecat dan agen harus membayar.',
+ [('recruiter',1)],[('2012-09-05','Judgment.','Putusan.')],[PHL]),
+E('ph-macalintal-2003','Macalintal v. Commission on Elections (overseas absentee voting)',PSC,'PH','asia','origin','apex','2003-07-10','G.R. No. 157013','all sectors',['vote','residence'],['residence'],[5],'won','carried',
+ 'Can Filipinos working abroad vote in national elections without returning home?','Bisakah warga Filipina yang bekerja di luar negeri memilih dalam pemilu nasional tanpa pulang?',
+ 'Yes. The Overseas Absentee Voting Act was largely upheld; Filipinos abroad keep their domicile at home for voting purposes. Some provisions giving Congress oversight of the election body were struck down.',
+ 'A lawyer challenged the new law letting Filipinos abroad vote. The Supreme Court upheld the right of overseas workers to vote from abroad.',
+ 'Seorang advokat menggugat UU baru yang membolehkan warga Filipina di luar negeri memilih. MA mempertahankan hak pekerja di luar negeri untuk memilih dari luar negeri.',
+ [('vote',1)],[('2003-07-10','Act upheld in large part.','UU sebagian besar dipertahankan.'),('2004-05','First overseas absentee vote.','Pemungutan suara pertama dari luar negeri.')],[PHL]),
+E('za-rafoneke-2022','Rafoneke v. Minister of Justice and Correctional Services',ZACC,'ZA','africa','destination','apex','2022-08-02','[2022] ZACC 29','legal profession',['equality','work'],['discrimination'],[3],'lost','none',
+ 'May qualified foreign lawyers, such as Lesotho nationals trained in South Africa, be barred from practising because they are not citizens or permanent residents?','Bolehkah pengacara asing yang berkualifikasi, seperti warga Lesotho yang dididik di Afrika Selatan, dilarang berpraktik karena bukan warga negara atau penduduk tetap?',
+ 'Yes. Section 24(2) of the Legal Practice Act was held not to be unfair discrimination.',
+ 'Law graduates from Lesotho and Zimbabwe who studied in South Africa could not be admitted as lawyers because they were not citizens or permanent residents. The Constitutional Court let the rule stand.',
+ 'Lulusan hukum dari Lesotho dan Zimbabwe yang belajar di Afrika Selatan tidak bisa diangkat sebagai pengacara karena bukan warga negara atau penduduk tetap. MK mempertahankan aturan itu.',
+ [('equality',0)],[('2022-08-02','Judgment.','Putusan.')],[SAF('ZACC','2022','29')]),
+]
+ARGS9=[('vote','Migrant workers abroad keep the right to vote at home','Pekerja migran di luar negeri tetap berhak memilih di negaranya','constitution')]

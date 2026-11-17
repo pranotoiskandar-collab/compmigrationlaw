@@ -1,0 +1,285 @@
+gcc_state,indicator,category,value,unit,year,src
+Bahrain,population_by_nationality,nationals,742234,persons,2024 (Dec),T1
+Bahrain,population_by_nationality,non-nationals,852420,persons,2024 (Dec),T1
+Bahrain,population_by_nationality,total,1594654,persons,2024 (Dec),T1
+Bahrain,share_non_nationals,non-nationals as % of total population,53.5,percent,2024 (Dec),T1
+Bahrain,non_national_population_by_sex,male,611888,persons,2024 (Dec),T1
+Bahrain,non_national_population_by_sex,female,240532,persons,2024 (Dec),T1
+Bahrain,non_national_employed_by_sex,"private sector, male",473578,workers,2023 Q2,T2
+Bahrain,non_national_employed_by_sex,"private sector, female",48389,workers,2023 Q2,T2
+Bahrain,domestic_workers,"non-national domestic workers, male",22850,workers,2023 Q2,T3
+Bahrain,domestic_workers,"non-national domestic workers, female",56050,workers,2023 Q2,T3
+Bahrain,domestic_workers,"non-national domestic workers, total",78900,workers,2023 Q2,T3
+Bahrain,non_national_workers_by_citizenship,India,232969,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Bangladesh,105962,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Pakistan,60784,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Philippines,27202,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Nepal,20048,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Egypt,11692,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Sri Lanka,4419,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Jordan,3014,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Yemen,2946,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Kenya,2360,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Uganda,2255,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Cameroon,2037,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,UK,1992,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Morocco,1992,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Thailand,1843,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Sudan,1779,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Nigeria,1723,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Syria,1707,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Ghana,1586,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,China,1214,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,non_national_workers_by_citizenship,Total (all countries),503169,"workers (LMRA work-visa holders, excl. dependants)",2022 (Dec),T4
+Bahrain,domestic_workers_by_citizenship,India,20446,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Philippines,21362,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Bangladesh,8782,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Indonesia,5434,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Sri Lanka,3587,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Pakistan,3516,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Ethiopia,10047,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Kenya,1798,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_citizenship,Total (all countries),77707,workers,2022 Q4,T5
+Bahrain,domestic_workers_by_occupation,Housemaid,53642,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Private chauffeur,13077,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Servant,4582,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Gardener (Private homes),2598,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Cook (Private homes),1816,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Nursemaid,832,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Cook,723,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Concierge (private residences),217,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Yachtsman,122,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Nurse (general),47,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Aide (nursing),20,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Cook (assistant),14,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Nurse (general),11,workers,2022 Q4,T6
+Bahrain,domestic_workers_by_occupation,Waiter (private service),6,workers,2022 Q4,T6
+Kuwait,population_by_nationality,nationals,1566168,persons,2024,T7
+Kuwait,population_by_nationality,non-nationals,3315086,persons,2024,T7
+Kuwait,population_by_nationality,total,4881254,persons,2024,T7
+Kuwait,share_non_nationals,non-nationals as % of total population,67.9,percent,2024,T7
+Kuwait,non_national_population_by_sex,male,2214667,persons,2024,T7
+Kuwait,non_national_population_by_sex,female,1100419,persons,2024,T7
+Kuwait,non_national_employed_by_sex,"all sectors, male",1861598,workers,2025 Q1,T8
+Kuwait,non_national_employed_by_sex,"all sectors, female",645144,workers,2025 Q1,T8
+Kuwait,non_national_employed_by_sex,"all sectors, total",2506742,workers,2025 Q1,T8
+Kuwait,domestic_workers,"non-national domestic workers, male",330091,workers,2025 Q1,T9
+Kuwait,domestic_workers,"non-national domestic workers, female",415055,workers,2025 Q1,T9
+Kuwait,domestic_workers,"non-national domestic workers, total",745146,workers,2025 Q1,T9
+Kuwait,non_national_employed_by_sector,"Agriculture, forestry and fishing",44628,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Mining and quarrying,9103,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Manufacturing,123220,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,"Electricity, gas, steam and air conditioning supply",237,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,"Water supply; sewerage, waste management and remediation activities",429,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Construction,321038,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Wholesale and retail trade; repair of motor vehicles and motorcycles,382064,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Transportation and storage,59052,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Accommodation and food service activities,102966,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Information and communication,6602,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Financial and insurance activities,14340,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Real estate activities,10710,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,"Professional, scientific and technical activities",120326,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Administrative and support service activities,20424,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Public administration and defense; compulsory social security,51041,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Education,49537,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Human health and social work activities,47361,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,"Arts, entertainment and recreation",15953,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Other service activities,45352,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use,636132,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Activities of extraterritorial organizations and bodies,479,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Not stated,40331,workers (census),2021 (census),T10
+Kuwait,non_national_employed_by_sector,Total,2101325,workers (census),2021 (census),T10
+Kuwait,domestic_workers_by_citizenship,India,311502,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Philippines,132100,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Bangladesh,86569,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Sri Lanka,132121,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Ethiopia,5535,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Nepal,55157,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Indonesia,1665,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Benin,9408,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Sudan,1360,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Mali,3377,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Other countries,6352,workers,2025 Q1,T11
+Kuwait,domestic_workers_by_citizenship,Total (all countries),745146,workers,2025 Q1,T11
+Kuwait,workers_private_govt_by_citizenship,India,497087,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Egypt,483183,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Bangladesh,161927,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Pakistan,68843,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Philippines,66914,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Syria,63897,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Nepal,62930,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Jordan,27395,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Sri Lanka,21121,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,Other countries,141046,workers (private + government sectors),2022 Q4,T12
+Kuwait,workers_private_govt_by_citizenship,"Total (all countries, incl. Kuwaitis)",2036990,workers (private + government sectors),2022 Q4,T12
+Oman,population_by_nationality,nationals,3039349,persons,2025 (end of year),T13
+Oman,population_by_nationality,non-nationals,2320208,persons,2025 (end of year),T13
+Oman,population_by_nationality,total,5359557,persons,2025 (end of year),T13
+Oman,share_non_nationals,non-nationals as % of total population,43.3,percent,2025 (end of year),T13
+Oman,non_national_population_by_sex,male,1715244,persons,2025 (end of year),T13
+Oman,non_national_population_by_sex,female,604964,persons,2025 (end of year),T13
+Oman,non_national_employed_by_sex,"government sector, male",27985,workers,2024,T14
+Oman,non_national_employed_by_sex,"government sector, female",14783,workers,2024,T14
+Oman,non_national_employed_by_sex,"private sector, male",1374759,workers,2024,T14
+Oman,non_national_employed_by_sex,"private sector, female",58365,workers,2024,T14
+Oman,non_national_employed_by_sex,"all sectors, male",1550354,workers,2024,T14
+Oman,non_national_employed_by_sex,"all sectors, female",258572,workers,2024,T14
+Oman,non_national_employed_by_sex,"all sectors, total",1808926,workers,2024,T14
+Oman,domestic_workers,"non-national domestic workers, male",147610,workers,2024,T14
+Oman,domestic_workers,"non-national domestic workers, female",185424,workers,2024,T14
+Oman,domestic_workers,"non-national domestic workers, total",333034,workers,2024,T14
+Oman,non_national_employed_by_sector,"Agriculture, forestry & fishing",82717,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Mining & quarrying,12856,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Manufacturing,171296,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,"Electricity, gas, steam and air conditioning supply",968,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,"Water supply, sewerage, waste management and remediation activities",5,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Construction,353584,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Wholesale & Retail Trade; Repair of motor vehicles & motorcycles,206868,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,"Transport, Storage",62310,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Accommodation and food service activities,103471,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Information and communications,7926,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Financial and insurance activities,2771,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Real estate activities,10076,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,"Professional, scientific and technical activities",19446,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Administrative and support services activities,67125,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Education,12826,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Human health and social work activities,11793,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,"Arts, entertainment and recreation",3069,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Other service activities,53911,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use,182600,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Activities of extraterritorial organizations and bodies,864,workers (private + domestic sectors),2021,T15
+Oman,non_national_employed_by_sector,Total,1371477,workers (private + domestic sectors),2021,T15
+Oman,non_national_workers_by_citizenship,Egypt,37832,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Yemen,11417,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Bangladesh,654529,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,India,529884,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Pakistan,261300,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Philippines,48030,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Sri Lanka,26232,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Nepal,20623,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Tanzania,11526,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Other countries,105935,workers (all sectors),2022 (Dec),T16
+Oman,non_national_workers_by_citizenship,Total (all countries),1707308,workers (all sectors),2022 (Dec),T16
+Qatar,population_by_nationality,nationals,340349,persons,2020 (census; GLMM estimate),T17
+Qatar,population_by_nationality,non-nationals,2505769,persons,2020 (census; GLMM estimate),T17
+Qatar,population_by_nationality,total,2846118,persons,2020 (census),T17
+Qatar,share_non_nationals,non-nationals as % of total population,88.0,percent,2020 (census; GLMM estimate),T17
+Qatar,total_population_by_sex,male (all nationalities; no nationality split published),2215203,persons,2024,T18
+Qatar,total_population_by_sex,female (all nationalities),928288,persons,2024,T18
+Qatar,total_population_by_sex,total,3143491,persons,2024,T18
+Qatar,non_national_employed_by_sex,male (aged 15+),1784020,workers,2024,T19
+Qatar,non_national_employed_by_sex,female (aged 15+),328569,workers,2024,T19
+Qatar,non_national_employed_by_sector,"Agriculture, forestry and fishing",40049,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Mining and quarrying,28446,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Manufacturing,110754,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,"Electricity, gas, steam and air conditioning supply",14990,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,"Water supply; sewerage, waste management and remediation activities",6099,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Construction,701356,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Wholesale and retail trade; repair of motor vehicles and motorcycles,254494,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Transportation and storage,150372,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Accommodation and food service activities,95779,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Information and communication,22333,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Financial and insurance activities,24827,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Real estate activities,21338,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,"Professional, scientific and technical activities",31646,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Administrative and support service activities,197323,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Public administration and defense; compulsory social security,47085,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Education,63253,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Human health and social work activities,98185,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,"Arts, entertainment and recreation",11448,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Other service activities,17304,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use,169205,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Activities of extraterritorial organizations and bodies,6743,"workers (aged 15+, LFS)",2024,T20
+Qatar,non_national_employed_by_sector,Total,2113029,"workers (aged 15+, LFS)",2024,T20
+Qatar,domestic_workers,non-nationals employed in activities of households as employers,169205,workers,2024,T20
+Qatar,non_national_employed_by_occupation,"Legislators, Senior Officials and Managers",48065,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Professionals,295928,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Technicians and Associate Professionals,199097,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Clerks,155966,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Service Workers and Shop and Market Sales Workers,223234,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Skilled Agricultural and Fishery Workers,32126,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Craft and Related Trades Workers,558280,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Plant and Machine Operators and Assemblers,299381,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Elementary Occupations,300952,"workers (aged 15+, LFS)",2024,T21
+Qatar,non_national_employed_by_occupation,Total,2113029,"workers (aged 15+, LFS)",2024,T21
+Saudi Arabia,population_by_nationality,nationals,19635258,persons,2024,T22
+Saudi Arabia,population_by_nationality,non-nationals,15665022,persons,2024,T22
+Saudi Arabia,population_by_nationality,total,35300280,persons,2024,T22
+Saudi Arabia,share_non_nationals,non-nationals as % of total population,44.4,percent,2024,T22
+Saudi Arabia,non_national_population_by_sex,male,12088577,persons,2024,T22
+Saudi Arabia,non_national_population_by_sex,female,3576445,persons,2024,T22
+Saudi Arabia,non_national_employed_by_sex,male (incl. domestic workers),12450975,workers,2025 Q3,T23
+Saudi Arabia,non_national_employed_by_sex,female (incl. domestic workers),1948094,workers,2025 Q3,T23
+Saudi Arabia,non_national_employed_by_sex,total,14399069,workers,2025 Q3,T23
+Saudi Arabia,non_national_employed_by_sector,"Agriculture, forestry and fishing",179181,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Mining and quarrying,68646,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Manufacturing,971814,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,"Electricity, gas, steam and air conditioning supply",12503,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,"Water supply; sewerage, waste management and remediation activities",133381,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Construction,2494244,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Wholesale and retail trade; repair of motor vehicles and motorcycles,1252451,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Transportation and storage,429590,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Accommodation and food service activities,538446,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Information and communication,48515,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Financial and insurance activities,16845,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Real estate activities,32557,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,"Professional, scientific and technical activities",129204,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Administrative and support service activities,985419,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Public administration and defense; compulsory social security,57447,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Education,89292,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Human health and social work activities,224659,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,"Arts, entertainment and recreation",18886,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Other service activities,208368,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Activities of households as employers (as published; domestic workers are largely excluded from this table),59,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Activities of extraterritorial organizations and bodies,213,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Other activities,1042623,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_sector,Total,8934343,workers (excl. most domestic workers),2024 Q2,T24
+Saudi Arabia,non_national_employed_by_occupation,Managers,141302,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Professionals,843502,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Technicians and associate professionals,587159,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Clerical support workers,56012,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Service and sales workers,625818,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,"Skilled agricultural, forestry and fishery workers",21229,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Craft and related trades workers,1227098,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,"Plant and machine operators, and assemblers",1262485,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Elementary occupations,5450861,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Other Occupations,7185,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Not specified,0,workers,2025 Q3,T25
+Saudi Arabia,non_national_employed_by_occupation,Total,10222651,workers,2025 Q3,T25
+Saudi Arabia,domestic_workers,"non-national domestic workers, male",2682049,workers,2023 Q3,T26
+Saudi Arabia,domestic_workers,"non-national domestic workers, female",1056542,workers,2023 Q3,T26
+Saudi Arabia,domestic_workers,"non-national domestic workers, total",3738591,workers,2023 Q3,T26
+United Arab Emirates,total_population_by_sex,male (all nationalities; FCSC publishes no national/non-national split),7235074,persons,2024,T27
+United Arab Emirates,total_population_by_sex,female (all nationalities),4059169,persons,2024,T27
+United Arab Emirates,total_population_by_sex,total,11294243,persons,2024,T27
+United Arab Emirates,non_national_employed,"private sector (MoHRE-registered), non-Emiratis",5829377,workers,2023 (June),T28
+United Arab Emirates,non_national_employed,"private sector, Emiratis",79000,workers,2023 (June),T28
+United Arab Emirates,private_sector_labour_force_by_activity,Agriculture (all nationalities; ~99% non-Emirati),28009,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Fishing (all nationalities; ~99% non-Emirati),11668,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Mining and quarrying (all nationalities; ~99% non-Emirati),8300,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Manufacturing (all nationalities; ~99% non-Emirati),660863,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,"Electricity, gas and water supply (all nationalities; ~99% non-Emirati)",9455,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Construction (all nationalities; ~99% non-Emirati),1386498,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Trade and repair services (all nationalities; ~99% non-Emirati),1129192,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Hotels and restaurants (all nationalities; ~99% non-Emirati),286935,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,"Transport, storage and communications (all nationalities; ~99% non-Emirati)",297330,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Financial intermediation (all nationalities; ~99% non-Emirati),77246,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Business activities (all nationalities; ~99% non-Emirati),1068497,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Education (all nationalities; ~99% non-Emirati),67495,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Health and social work (all nationalities; ~99% non-Emirati),84846,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Social and personal services (all nationalities; ~99% non-Emirati),306913,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Public administration (all nationalities; ~99% non-Emirati),51253,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Undefined/other activities (all nationalities; ~99% non-Emirati),2866,workers,2022,T29
+United Arab Emirates,private_sector_labour_force_by_activity,Total (all nationalities; ~99% non-Emirati),5477366,workers,2022,T29
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Federal Government, male",2,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Federal Government, female",1.6,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Federal Government, total",1.9,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Local government, male",5.2,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Local government, female",3.7,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Local government, total",4.9,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Sector, male",82.4,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Sector, female",46.4,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Sector, total",73.9,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Households, male",4.3,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Households, female",42.8,percent of employed non-Emiratis,2019,T30
+United Arab Emirates,non_national_employed_by_employer_sector_pct,"Private Households, total",13.4,percent of employed non-Emiratis,2019,T30

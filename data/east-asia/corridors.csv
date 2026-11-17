@@ -1,0 +1,13 @@
+destination,origin,workers,population,year,bilateral,origin_icrmw
+Taiwan,Indonesia,314751,Migrant workers with valid permits,Sep 2026,1,1
+Taiwan,Vietnam,244822,Migrant workers with valid permits,Sep 2026,0,0
+Taiwan,Philippines,190798,Migrant workers with valid permits,Sep 2026,0,1
+Taiwan,Thailand,71479,Migrant workers with valid permits,Sep 2026,0,0
+Hong Kong,Philippines,205764,Foreign domestic helpers,end 2025,0,1
+Hong Kong,Indonesia,163718,Foreign domestic helpers,end 2025,0,1
+Japan,Vietnam,605906,All foreign workers,Oct 2025,1,0
+Japan,China,431949,All foreign workers,Oct 2025,0,0
+Japan,Philippines,260869,All foreign workers,Oct 2025,1,1
+Japan,Indonesia,228118,All foreign workers,Oct 2025,1,1
+Japan,Myanmar,163311,All foreign workers,Oct 2025,1,0
+South Korea,Indonesia,3469,Distant-water fishing crew,end 2024,1,1

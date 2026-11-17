@@ -1,0 +1,22 @@
+/* IMR shared masthead, model F (chosen by oto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
+   Same fonts (Familjen Grotesk, JetBrains Mono) and Puncak green palette. Loaded after notebook.css on every page.
+   Selectors use .ed-navrow>nav, not nav[aria-label="Main"], because lang.js translates aria-label in Indonesian. */
+header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #B2C7BC!important;font-family:'Familjen Grotesk',system-ui,sans-serif;color:#172D24}
+.ed-mast .ed-in{max-width:1180px;margin:0 auto;padding:10px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px}
+.ed-brand{display:flex;align-items:center;gap:12px;color:#172D24!important;text-decoration:none!important}
+.ed-brand i{display:block;width:36px;height:36px;background:#1E6B4A;color:#FFFFFF;font:700 15px/36px 'Familjen Grotesk',system-ui,sans-serif;text-align:center;font-style:normal;letter-spacing:0}
+.ed-brand b{display:block;font-size:19px;line-height:1.15;letter-spacing:-.01em;font-weight:700}
+.ed-brand small{display:block;font:500 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#3D5A4D;letter-spacing:.06em;text-transform:uppercase}
+.ed-navrow>nav{display:flex!important;flex-wrap:wrap;align-items:center;gap:0 20px!important;font-size:14.5px}
+.ed-navrow>nav>a,.ed-navrow>nav>details>summary{display:block;padding:10px 0!important;color:#172D24!important;text-decoration:none;font-weight:600}
+.ed-navrow>nav>a:hover,.ed-navrow>nav>details>summary:hover{color:#1E6B4A!important}
+.ed-navrow>nav>a.cta-clinic{background:#1E6B4A!important;color:#FFFFFF!important;padding:8px 14px!important;border-radius:0!important}
+.ed-navrow>nav>a.cta-clinic:hover{background:#134A33!important;color:#FFFFFF!important}
+.ed-navrow>nav .imr-lang{color:#172D24}
+.ed-mast .nav .menu{text-align:left;border:1px solid #172D24!important;border-top:3px solid #1E6B4A!important;background:#FFFFFF!important;box-shadow:0 10px 24px rgba(23,45,36,.12)}
+.ed-mast .nav .menu a{font-weight:400}
+.imr-hd.ed-mast{margin-top:0!important}
+@media (max-width:720px){
+  .ed-navrow>nav{gap:0 14px!important}
+  .ed-mast .nav .menu{position:fixed!important;left:12px!important;right:12px!important;top:auto;min-width:0!important;max-height:70vh}
+}

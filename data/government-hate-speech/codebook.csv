@@ -1,0 +1,43 @@
+section,code,label,meaning
+framework criterion,bind,Legally binding,The response creates legally binding obligations
+framework criterion,ind,Individual liability,Individuals (not only states) can be held liable
+framework criterion,off,Reaches sitting office-holders,It reaches people who hold public office while in office
+framework criterion,cand,Reaches candidates and parties,"It reaches candidates, parties and people seeking power"
+framework criterion,nonv,Reaches vilification short of violence,It reaches vilification and dehumanization that falls short of incitement to violence
+framework criterion,grounds,Covers all protected grounds,"It covers all protected grounds (race, ethnicity, religion, nationality, gender, sexual orientation), not only some"
+framework criterion,speaker,Treats the official’s status as the wrong,"It treats the speaker's official status as part of the wrong, not as irrelevant"
+framework rating,Yes,,Fully meets the criterion: 2 points
+framework rating,Partly,,Partly meets it: 1 point
+framework rating,No,,Does not meet it: 0 points
+framework score,,,"Sum of points over the criteria the visitor ticks. Ratings are IMR's reading of the working paper's survey (Table 1), not a legal opinion; the reason for each rating is given in the frameworks download."
+episode speaker category,Office-holder or state agent,,The core of the definition: a person who holds public office or acts for the state
+episode speaker category,Politician or candidate,,The outer ring: a person or party seeking public power
+episode speaker category,State-recognized authority,,"The edge of the definition: a leader whose office the state recognizes or funds, such as a traditional ruler"
+episode selection,,,"Documented episodes, 1992–2024, in which hateful speech by officials or state-recognized leaders preceded or accompanied violence against the group targeted. A selection of well-documented cases, not a sample."
+violence before and after,,,Monthly counts of recorded violence in the episode country for 12 months before and after the month of the statement. UCDP counts organized violence (at least 25 deaths a year in the same conflict) and one-sided violence against civilians; ACLED counts reported events including riots and mob violence and starts later in many countries. Descriptive only.
+country variable,polhate,"Hate speech by political parties (V-Dem, higher = more often)","type: number; source: V-Dem v2smpolhate, sign reversed"
+country variable,polhate_chg,Change in party hate speech since 2010,"type: number; source: V-Dem v2smpolhate, latest minus 2010, sign reversed"
+country variable,govdom,"Government spreads false information at home (V-Dem, higher = more often)","type: number; source: V-Dem v2smgovdom, sign reversed"
+country variable,libdem,Liberal democracy index (0–1),type: number; source: V-Dem v2x_libdem
+country variable,rol,Equality before the law and individual liberty (0–1),type: number; source: V-Dem v2xcl_rol
+country variable,relig,Freedom of religion (V-Dem),type: number; source: V-Dem v2clrelig
+country variable,gri,"Government restrictions on religion (Pew, 0–10)",type: number; source: Pew Research Center GRI
+country variable,shi,"Social hostilities involving religion (Pew, 0–10)",type: number; source: Pew Research Center SHI
+country variable,osv_any,Any one-sided violence against civilians since 2015,type: yes/no; source: UCDP one-sided violence
+country variable,orgviol,"Social media used to organize offline violence (V-Dem, higher = more often)","type: number; source: V-Dem v2smorgviol, sign reversed"
+country variable,caviol,"Political violence by non-state actors (V-Dem, higher = more)",type: number; source: V-Dem v2caviol
+country variable,polsoc,"Polarization of society (V-Dem, higher = more polarised)","type: number; source: V-Dem v2smpolsoc, sign reversed"
+country variable,cacamps,"Political polarization (V-Dem, higher = more)",type: number; source: V-Dem v2cacamps
+country variable,exclsoc,"Exclusion by social group (V-Dem, 0–1, higher = more exclusion)","type: number; source: V-Dem v2xpe_exlsocgr, 2023"
+country variable,communal_dpm,"Deaths in communal clashes since 2015, per million people",type: number; source: UCDP Non-State 26.1 (informally organized groups) and World Bank population
+country variable,ns_dpm,"Deaths in fighting between non-state groups since 2015, per million people",type: number; source: UCDP GED 26.1 and World Bank population
+country variable,acled_riot,"Riots per million people a year, 2021–2025 (ACLED)","type: number; source: ACLED regional aggregated data, event type Riots"
+country variable,acled_mob,"Mob violence per million people a year, 2021–2025 (ACLED)","type: number; source: ACLED regional aggregated data, sub-event Mob violence"
+country variable,acled_civ,"Violence against civilians per million people a year, 2021–2025 (ACLED)",type: number; source: ACLED regional aggregated data
+country variable,acled_demo,"Protests and riots per million people a year, 2021–2025 (ACLED)",type: number; source: ACLED regional aggregated data
+country variable,pew_mob_yrs,"Years with religious mob violence, 2013–2022 (Pew, 0–10)","type: number; source: Pew Global Restrictions on Religion, SHI_Q_2"
+country variable,pew_comm_yrs,"Years with communal violence between religious groups, 2013–2022 (Pew, 0–10)","type: number; source: Pew Global Restrictions on Religion, SHI_Q_3"
+country variable,pew_denounce_yrs,"Years the government denounced religious groups as dangerous ""cults"" or ""sects"", 2013–2022 (Pew, 0–10)","type: number; source: Pew Global Restrictions on Religion, GRI_Q_15"
+country variable,pew_hatelaw,"Government penalises hate speech (Pew, 2022)","type: yes/no; source: Pew Global Restrictions on Religion, GRX_22_Hate_Speech"
+country variable,region,Region (UN),type: category; source: UN M49
+country variable,income,Income group (World Bank),type: category; source: World Bank

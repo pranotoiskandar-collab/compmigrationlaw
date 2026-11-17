@@ -1,0 +1,982 @@
+[
+ {
+  "en": "English",
+  "cur": "Sekarang di situs",
+  "v2": "Versi baru",
+  "final": "Versi baru",
+  "sugg": false
+ },
+ {
+  "en": "Every man his own lawyer!",
+  "cur": "Setiap orang menjadi pengacara bagi dirinya sendiri!",
+  "v2": "Setiap orang [harus] menjadi pengacara bagi dirinya sendiri!",
+  "final": "Setiap orang [harus] menjadi pengacara bagi dirinya sendiri!",
+  "sugg": false
+ },
+ {
+  "en": "Whatever is not in the code of laws, ought not to be law.",
+  "cur": "Apa pun yang tidak tercantum dalam kitab undang-undang, tidak semestinya menjadi hukum.",
+  "v2": "Apa pun yang tidak tercantum dalam kitab undang-undang, tidak semestinya menjadi hukum.",
+  "final": "Apa pun yang tidak tercantum dalam kitab undang-undang, tidak semestinya menjadi hukum.",
+  "sugg": false
+ },
+ {
+  "en": "Jeremy Bentham, Legislator of the World",
+  "cur": "Jeremy Bentham, Legislator Dunia",
+  "v2": "Jeremy Bentham, Penulis Hukum bagi Dunia",
+  "final": "Jeremy Bentham, Penulis Hukum bagi Dunia",
+  "sugg": false
+ },
+ {
+  "en": "Another maxim",
+  "cur": "Maksim lain",
+  "v2": "Kata bijak lain",
+  "final": "Kata bijak lain",
+  "sugg": false
+ },
+ {
+  "en": "Migration Jurisprudence from the South",
+  "cur": "Yurisprudensi Migrasi dari Selatan",
+  "v2": "Pandangan Hukum Migrasi dari Dunia Berkembang",
+  "final": "Pandangan Hukum Migrasi dari Dunia Berkembang",
+  "sugg": false
+ },
+ {
+  "en": "Legal Clinic",
+  "cur": "Klinik Hukum",
+  "v2": "Klinik Hukum",
+  "final": "Klinik Hukum",
+  "sugg": false
+ },
+ {
+  "en": "Prepare a rights communication",
+  "cur": "Siapkan pengaduan hak",
+  "v2": "Siapkan pengaduan hak",
+  "final": "Siapkan pengaduan hak",
+  "sugg": false
+ },
+ {
+  "en": "Could this be trafficking? Self-check",
+  "cur": "Apakah ini perdagangan orang? Periksa sendiri",
+  "v2": "Apakah ini perdagangan orang? Cari tahu sendiri",
+  "final": "Apakah ini perdagangan orang? Cari tahu sendiri",
+  "sugg": false
+ },
+ {
+  "en": "How the Clinic works",
+  "cur": "Cara kerja Klinik",
+  "v2": "Cara Klinik bekerja",
+  "final": "Cara Klinik bekerja",
+  "sugg": false
+ },
+ {
+  "en": "Find free legal help",
+  "cur": "Cari bantuan hukum gratis",
+  "v2": "Cari bantuan hukum gratis",
+  "final": "Cari bantuan hukum gratis",
+  "sugg": false
+ },
+ {
+  "en": "Arguments that work",
+  "cur": "Argumen yang berhasil",
+  "v2": "Gugatan hukum yang berhasil",
+  "final": "Gugatan hukum yang berhasil",
+  "sugg": false
+ },
+ {
+  "en": "What works where",
+  "cur": "Apa yang berhasil, dan di mana",
+  "v2": "Apa yang berhasil, dan di mana",
+  "final": "Apa yang berhasil, dan di mana",
+  "sugg": false
+ },
+ {
+  "en": "Arguments courts accepted or rejected",
+  "cur": "Argumen yang diterima atau ditolak pengadilan",
+  "v2": "Gugatan yang diterima dan yang ditolak pengadilan",
+  "final": "Gugatan yang diterima dan yang ditolak pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Compare courts and countries",
+  "cur": "Bandingkan pengadilan dan negara",
+  "v2": "Bandingkan pengadilan dan negara",
+  "final": "Bandingkan pengadilan dan negara",
+  "sugg": false
+ },
+ {
+  "en": "Where to take a case",
+  "cur": "Ke mana membawa perkara",
+  "v2": "Ke mana perkara bisa ditujukan",
+  "final": "Ke mana perkara bisa ditujukan",
+  "sugg": false
+ },
+ {
+  "en": "Gulf States",
+  "cur": "Negara-Negara Teluk",
+  "v2": "Negara-Negara Teluk",
+  "final": "Negara-Negara Teluk",
+  "sugg": false
+ },
+ {
+  "en": "East Asia",
+  "cur": "Asia Timur",
+  "v2": "Asia Timur",
+  "final": "Asia Timur",
+  "sugg": false
+ },
+ {
+  "en": "From research to practice",
+  "cur": "Dari riset ke praktik",
+  "v2": "Dari cari tahu ke penerapan",
+  "final": "Dari cari tahu ke penerapan",
+  "sugg": false
+ },
+ {
+  "en": "Southeast Asia",
+  "cur": "Asia Tenggara",
+  "v2": "Asia Tenggara",
+  "final": "Asia Tenggara",
+  "sugg": false
+ },
+ {
+  "en": "Countries of Origin",
+  "cur": "Negara Asal",
+  "v2": "Negara Asal",
+  "final": "Negara Asal",
+  "sugg": false
+ },
+ {
+  "en": "Migrant Domestic Workers",
+  "cur": "Pekerja Rumah Tangga Migran",
+  "v2": "Pekerja Rumah Tangga Migran",
+  "final": "Pekerja Rumah Tangga Migran",
+  "sugg": false
+ },
+ {
+  "en": "Elections and non-citizens",
+  "cur": "Pemilu dan orang yang bukan warga negara",
+  "v2": "Pemilu dan orang yang bukan warga negara",
+  "final": "Pemilu dan orang yang bukan warga negara",
+  "sugg": false
+ },
+ {
+  "en": "Report official hate speech",
+  "cur": "Laporkan ucapan kebencian oleh pejabat",
+  "v2": "Laporkan ucapan kebencian oleh pejabat",
+  "final": "Laporkan ucapan kebencian oleh pejabat",
+  "sugg": false
+ },
+ {
+  "en": "Overview",
+  "cur": "Ikhtisar",
+  "v2": "Ikhtisar",
+  "final": "Ikhtisar",
+  "sugg": false
+ },
+ {
+  "en": "Law across tiers",
+  "cur": "Hukum lintas tingkat",
+  "v2": "Hukum lintas tingkat",
+  "final": "Hukum lintas tingkat",
+  "sugg": false
+ },
+ {
+  "en": "Migration Law Atlas",
+  "cur": "Atlas Hukum Migrasi",
+  "v2": "Atlas Hukum Migrasi",
+  "final": "Atlas Hukum Migrasi",
+  "sugg": false
+ },
+ {
+  "en": "Farmworker law view",
+  "cur": "Tampilan hukum buruh tani",
+  "v2": "Tampilan hukum buruh tani",
+  "final": "Tampilan hukum buruh tani",
+  "sugg": false
+ },
+ {
+  "en": "Destination states",
+  "cur": "Negara tujuan",
+  "v2": "Negara tujuan",
+  "final": "Negara tujuan",
+  "sugg": false
+ },
+ {
+  "en": "Origin states",
+  "cur": "Negara asal",
+  "v2": "Negara asal",
+  "final": "Negara asal",
+  "sugg": false
+ },
+ {
+  "en": "Themes",
+  "cur": "Tema",
+  "v2": "Tema",
+  "final": "Tema",
+  "sugg": false
+ },
+ {
+  "en": "Government Hate Speech",
+  "cur": "Ucapan Kebencian oleh Pemerintah",
+  "v2": "Ucapan Kebencian oleh Negara",
+  "final": "Ucapan Kebencian oleh Negara",
+  "sugg": false
+ },
+ {
+  "en": "Courts",
+  "cur": "Pengadilan",
+  "v2": "Pengadilan",
+  "final": "Pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Court Decisions",
+  "cur": "Putusan Pengadilan",
+  "v2": "Putusan Pengadilan",
+  "final": "Putusan Pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Publications",
+  "cur": "Publikasi",
+  "v2": "Publikasi",
+  "final": "Publikasi",
+  "sugg": false
+ },
+ {
+  "en": "People",
+  "cur": "Tim",
+  "v2": "Tim",
+  "final": "Tim",
+  "sugg": false
+ },
+ {
+  "en": "Contact",
+  "cur": "Hubungi Kami",
+  "v2": "Hubungi Kami",
+  "final": "Hubungi Kami",
+  "sugg": false
+ },
+ {
+  "en": "Submit a rights communication",
+  "cur": "Kirim pengaduan hak",
+  "v2": "Kirim pengaduan hak",
+  "final": "Kirim pengaduan hak",
+  "sugg": false
+ },
+ {
+  "en": "English",
+  "cur": "Sekarang di situs",
+  "v2": "Versi baru",
+  "final": "Versi baru",
+  "sugg": false
+ },
+ {
+  "en": "Institute for Migrant Rights · Cianjur, West Java",
+  "cur": "Institute for Migrant Rights · Cianjur, Jawa Barat",
+  "v2": "Institute for Migrant Rights · Cianjur, Jawa Barat",
+  "final": "Institute for Migrant Rights · Cianjur, Jawa Barat",
+  "sugg": false
+ },
+ {
+  "en": "Migration law, collected, coded and explained.",
+  "cur": "Hukum migrasi, dihimpun, dikodekan, dan dijelaskan.",
+  "v2": "Hukum migrasi: kami himpun, kami kodekan, dan kami jelaskan.",
+  "final": "Hukum migrasi: kami himpun, kami kodekan, dan kami jelaskan.",
+  "sugg": false
+ },
+ {
+  "en": "An initiative trying to be of some use to people who cross borders to work: free legal help for workers and families, open data for researchers.",
+  "cur": "Sebuah prakarsa yang berusaha sedikit berguna bagi mereka yang melintasi batas negara untuk bekerja: bantuan hukum gratis bagi pekerja dan keluarganya, data terbuka bagi peneliti.",
+  "v2": "Sebuah prakarsa yang berusaha sedikit berguna bagi mereka yang melintasi batas negara untuk bekerja. Kami memberikan bantuan hukum gratis bagi pekerja dan keluarganya, serta data terbuka bagi peneliti.",
+  "final": "Sebuah prakarsa yang berusaha sedikit berguna bagi mereka yang melintasi batas negara untuk bekerja. Kami memberikan bantuan hukum gratis bagi pekerja dan keluarganya, serta data terbuka bagi peneliti.",
+  "sugg": false
+ },
+ {
+  "en": "Get legal help →",
+  "cur": "Cari bantuan hukum →",
+  "v2": "Cari bantuan hukum →",
+  "final": "Cari bantuan hukum →",
+  "sugg": false
+ },
+ {
+  "en": "Explore the data →",
+  "cur": "Jelajahi data →",
+  "v2": "Telusuri sumber datanya →",
+  "final": "Telusuri sumber datanya →",
+  "sugg": false
+ },
+ {
+  "en": "529 court decisions on migrant workers. Each square is one.",
+  "cur": "529 putusan pengadilan tentang pekerja migran. Satu kotak untuk satu putusan.",
+  "v2": "529 putusan pengadilan tentang pekerja migran. Setiap kotak mewakili satu putusan.",
+  "final": "529 putusan pengadilan tentang pekerja migran. Setiap kotak mewakili satu putusan.",
+  "sugg": false
+ },
+ {
+  "en": "Worker side won (161)",
+  "cur": "Pihak pekerja menang (161)",
+  "v2": "Pihak pekerja menang (161)",
+  "final": "Pihak pekerja menang (161)",
+  "sugg": false
+ },
+ {
+  "en": "Advisory (7)",
+  "cur": "Nasihat (7)",
+  "v2": "Nasihat hukum (advisory) (7)",
+  "final": "Nasihat hukum (advisory) (7)",
+  "sugg": false
+ },
+ {
+  "en": "Worker side lost (45)",
+  "cur": "Pihak pekerja kalah (45)",
+  "v2": "Pihak pekerja kalah (45)",
+  "final": "Pihak pekerja kalah (45)",
+  "sugg": false
+ },
+ {
+  "en": "To be checked (316)",
+  "cur": "Perlu diperiksa (316)",
+  "v2": "Masih kami periksa (316)",
+  "final": "Masih kami periksa (316)",
+  "sugg": false
+ },
+ {
+  "en": "Source: IMR Court Decisions database.",
+  "cur": "Sumber: basis data Putusan Pengadilan IMR.",
+  "v2": "Sumber: basis data Putusan Pengadilan IMR.",
+  "final": "Sumber: basis data Putusan Pengadilan IMR.",
+  "sugg": false
+ },
+ {
+  "en": "Explore the decisions →",
+  "cur": "Jelajahi putusan →",
+  "v2": "Telusuri putusannya →",
+  "final": "Telusuri putusannya →",
+  "sugg": false
+ },
+ {
+  "en": "Where are you on the journey?",
+  "cur": "Di mana Anda dalam perjalanan?",
+  "v2": "Di tahap mana anda dalam migrasi?",
+  "final": "Di tahap mana anda dalam migrasi?",
+  "sugg": false
+ },
+ {
+  "en": "Pick a step: the law, the decisions, the help",
+  "cur": "Pilih satu tahap: hukumnya, putusannya, bantuannya",
+  "v2": "Pilih satu tahap. Di sana anda akan menemukan hukumnya, putusannya, dan bantuannya.",
+  "final": "Pilih satu tahap. Di sana anda akan menemukan hukumnya, putusannya, dan bantuannya.",
+  "sugg": false
+ },
+ {
+  "en": "Recruitment at home",
+  "cur": "Perekrutan di dalam negeri",
+  "v2": "Perekrutan di dalam negeri",
+  "final": "Perekrutan di dalam negeri",
+  "sugg": false
+ },
+ {
+  "en": "Fees, agencies, false promises",
+  "cur": "Biaya, agen, janji palsu",
+  "v2": "Biaya, agen, dan janji palsu",
+  "final": "Biaya, agen, dan janji palsu",
+  "sugg": false
+ },
+ {
+  "en": "33 court decisions",
+  "cur": "33 putusan pengadilan",
+  "v2": "33 putusan pengadilan",
+  "final": "33 putusan pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Most often: recruitment and the agency, wages not paid",
+  "cur": "Paling sering: perekrutan dan agen, upah tidak dibayar",
+  "v2": "Yang paling sering muncul: perekrutan dan agen, serta upah yang tidak dibayar",
+  "final": "Yang paling sering muncul: perekrutan dan agen, serta upah yang tidak dibayar",
+  "sugg": false
+ },
+ {
+  "en": "Find free legal help →",
+  "cur": "Cari bantuan hukum gratis →",
+  "v2": "Cari bantuan hukum gratis →",
+  "final": "Cari bantuan hukum gratis →",
+  "sugg": false
+ },
+ {
+  "en": "Leaving the country",
+  "cur": "Berangkat ke luar negeri",
+  "v2": "Berangkat ke luar negeri",
+  "final": "Berangkat ke luar negeri",
+  "sugg": false
+ },
+ {
+  "en": "Exit rules, visas, documents",
+  "cur": "Aturan keberangkatan, visa, dokumen",
+  "v2": "Aturan keberangkatan, visa, dan dokumen",
+  "final": "Aturan keberangkatan, visa, dan dokumen",
+  "sugg": false
+ },
+ {
+  "en": "36 court decisions",
+  "cur": "36 putusan pengadilan",
+  "v2": "36 putusan pengadilan",
+  "final": "36 putusan pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Most often: arrested, detained or expelled, residence and staying on",
+  "cur": "Paling sering: ditangkap, ditahan atau diusir, izin tinggal dan menetap",
+  "v2": "Paling sering: ditangkap, ditahan atau diusir, izin tinggal dan menetap",
+  "final": "Paling sering: ditangkap, ditahan atau diusir, izin tinggal dan menetap",
+  "sugg": false
+ },
+ {
+  "en": "Working abroad",
+  "cur": "Bekerja di luar negeri",
+  "v2": "Bekerja di luar negeri",
+  "final": "Bekerja di luar negeri",
+  "sugg": false
+ },
+ {
+  "en": "Wages, hours, passport, abuse, unions",
+  "cur": "Upah, jam kerja, paspor, kekerasan, serikat",
+  "v2": "Upah, jam kerja, paspor, kekerasan, dan serikat pekerja",
+  "final": "Upah, jam kerja, paspor, kekerasan, dan serikat pekerja",
+  "sugg": false
+ },
+ {
+  "en": "189 court decisions",
+  "cur": "189 putusan pengadilan",
+  "v2": "189 putusan pengadilan",
+  "final": "189 putusan pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Most often: treated worse as a foreigner, forced labour or trafficking",
+  "cur": "Paling sering: diperlakukan lebih buruk sebagai orang asing, kerja paksa atau perdagangan orang",
+  "v2": "Yang paling sering muncul: perlakuan yang lebih buruk sebagai orang asing, serta kerja paksa atau perdagangan orang",
+  "final": "Yang paling sering muncul: perlakuan yang lebih buruk sebagai orang asing, serta kerja paksa atau perdagangan orang",
+  "sugg": false
+ },
+ {
+  "en": "What works where →",
+  "cur": "Apa yang berhasil, dan di mana →",
+  "v2": "Apa yang berhasil, dan di mana →",
+  "final": "Apa yang berhasil, dan di mana →",
+  "sugg": false
+ },
+ {
+  "en": "Changing or losing the job",
+  "cur": "Pindah atau kehilangan pekerjaan",
+  "v2": "Pindah atau kehilangan pekerjaan",
+  "final": "Pindah atau kehilangan pekerjaan",
+  "sugg": false
+ },
+ {
+  "en": "Changing employer, dismissal",
+  "cur": "Pindah majikan, pemecatan",
+  "v2": "Pindah majikan dan pemecatan",
+  "final": "Pindah majikan dan pemecatan",
+  "sugg": false
+ },
+ {
+  "en": "190 court decisions",
+  "cur": "190 putusan pengadilan",
+  "v2": "190 putusan pengadilan",
+  "final": "190 putusan pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Prepare a rights communication →",
+  "cur": "Siapkan pengaduan hak →",
+  "v2": "Siapkan pengaduan hak →",
+  "final": "Siapkan pengaduan hak →",
+  "sugg": false
+ },
+ {
+  "en": "Return and after",
+  "cur": "Pulang dan sesudahnya",
+  "v2": "Pulang dan sesudahnya",
+  "final": "Pulang dan sesudahnya",
+  "sugg": false
+ },
+ {
+  "en": "Claims from home, residence",
+  "cur": "Tuntutan dari rumah, izin tinggal",
+  "v2": "Tuntutan dari tanah air dan izin tinggal",
+  "final": "Tuntutan dari tanah air dan izin tinggal",
+  "sugg": false
+ },
+ {
+  "en": "184 court decisions",
+  "cur": "184 putusan pengadilan",
+  "v2": "184 putusan pengadilan",
+  "final": "184 putusan pengadilan",
+  "sugg": false
+ },
+ {
+  "en": "Most often: residence and staying on, hurt or injured at work",
+  "cur": "Paling sering: izin tinggal dan menetap, terluka saat bekerja",
+  "v2": "Yang paling sering muncul: izin tinggal dan menetap, serta cedera saat bekerja",
+  "final": "Yang paling sering muncul: izin tinggal dan menetap, serta cedera saat bekerja",
+  "sugg": false
+ },
+ {
+  "en": "Questions people ask us",
+  "cur": "Pertanyaan yang sering diajukan kepada kami",
+  "v2": "Pertanyaan yang sering diajukan kepada kami",
+  "final": "Pertanyaan yang sering diajukan kepada kami",
+  "sugg": false
+ },
+ {
+  "en": "Short answers from the databases",
+  "cur": "Jawaban singkat dari basis data",
+  "v2": "Jawaban singkat yang kami ambil dari basis data",
+  "final": "Jawaban singkat yang kami ambil dari basis data",
+  "sugg": false
+ },
+ {
+  "en": "Can my employer keep my passport?",
+  "cur": "Bolehkah majikan menahan paspor saya?",
+  "v2": "Bolehkah majikan menahan paspor saya?",
+  "final": "Bolehkah majikan menahan paspor saya?",
+  "sugg": false
+ },
+ {
+  "en": "court decisions deal with a passport kept by the employer. See what the courts said.",
+  "cur": "putusan pengadilan membahas paspor yang ditahan majikan. Lihat apa kata pengadilan.",
+  "v2": "putusan pengadilan membahas paspor yang ditahan majikan. Silakan lihat apa kata pengadilan.",
+  "final": "putusan pengadilan membahas paspor yang ditahan majikan. Silakan lihat apa kata pengadilan.",
+  "sugg": false
+ },
+ {
+  "en": "Read the decisions →",
+  "cur": "Baca putusannya →",
+  "v2": "Baca putusannya →",
+  "final": "Baca putusannya →",
+  "sugg": false
+ },
+ {
+  "en": "Do I have rights if my papers are not in order?",
+  "cur": "Apakah saya punya hak jika dokumen saya tidak lengkap?",
+  "v2": "Apakah saya tetap memiliki hak jika dokumen saya tidak lengkap?",
+  "final": "Apakah saya tetap memiliki hak jika dokumen saya tidak lengkap?",
+  "sugg": false
+ },
+ {
+  "en": "decisions accepted that labor rights apply whatever a worker’s immigration status.",
+  "cur": "putusan menerima bahwa hak pekerja berlaku apa pun status imigrasinya.",
+  "v2": "putusan menerima bila hak pekerja tetap berlaku, apa pun status keimigrasiannya.",
+  "final": "putusan menerima bila hak pekerja tetap berlaku, apa pun status keimigrasiannya.",
+  "sugg": false
+ },
+ {
+  "en": "Arguments that work →",
+  "cur": "Argumen yang berhasil →",
+  "v2": "Gugatan yang berhasil →",
+  "final": "Gugatan yang berhasil →",
+  "sugg": false
+ },
+ {
+  "en": "Can I take my case to the UN?",
+  "cur": "Bisakah saya membawa kasus saya ke PBB?",
+  "v2": "Bisakah saya ajukan perkara saya ke PBB?",
+  "final": "Bisakah saya ajukan perkara saya ke PBB?",
+  "sugg": false
+ },
+ {
+  "en": "Free",
+  "cur": "Gratis",
+  "v2": "Gratis",
+  "final": "Gratis",
+  "sugg": false
+ },
+ {
+  "en": "The Clinic drafts a rights communication with you, and an IMR lawyer reviews it.",
+  "cur": "Klinik menyusun pengaduan hak bersama Anda, lalu pengacara IMR memeriksanya.",
+  "v2": "Klinik menyusun pengaduan hak bersama anda. Setelah itu, pengacara IMR memeriksanya.",
+  "final": "Klinik menyusun pengaduan hak bersama anda. Setelah itu, pengacara IMR memeriksanya.",
+  "sugg": false
+ },
+ {
+  "en": "Prepare a communication →",
+  "cur": "Siapkan pengaduan →",
+  "v2": "Siapkan pengaduan →",
+  "final": "Siapkan pengaduan →",
+  "sugg": false
+ },
+ {
+  "en": "Free · International Legal Clinic",
+  "cur": "Gratis · Klinik Hukum Internasional",
+  "v2": "Gratis · Klinik Hukum Internasional",
+  "final": "Gratis · Klinik Hukum Internasional",
+  "sugg": false
+ },
+ {
+  "en": "Were your rights violated? Prepare a rights communication to a UN or regional human rights body.",
+  "cur": "Hak Anda dilanggar? Siapkan pengaduan hak (rights communication) ke badan hak asasi manusia PBB atau badan HAM kawasan.",
+  "v2": "Apakah hak anda dilanggar? Siapkan pengaduan hak (rights communication) ke badan hak asasi manusia PBB atau badan HAM kawasan.",
+  "final": "Apakah hak anda dilanggar? Siapkan pengaduan hak (rights communication) ke badan hak asasi manusia PBB atau badan HAM kawasan.",
+  "sugg": false
+ },
+ {
+  "en": "Answer a few short questions. An IMR lawyer reviews the draft with you.",
+  "cur": "Jawab beberapa pertanyaan singkat. Pengacara IMR memeriksa drafnya bersama Anda.",
+  "v2": "Jawab beberapa pertanyaan singkat. Setelah itu, pengacara IMR memeriksa drafnya bersama anda.",
+  "final": "Jawab beberapa pertanyaan singkat. Setelah itu, pengacara IMR memeriksa drafnya bersama anda.",
+  "sugg": false
+ },
+ {
+  "en": "Start your communication →",
+  "cur": "Mulai pengaduan Anda →",
+  "v2": "Mulai pengaduan anda →",
+  "final": "Mulai pengaduan anda →",
+  "sugg": false
+ },
+ {
+  "en": "Charts from the databases",
+  "cur": "Grafik dari basis data",
+  "v2": "Grafik dari basis data",
+  "final": "Grafik dari basis data",
+  "sugg": false
+ },
+ {
+  "en": "All data and downloads",
+  "cur": "Semua data dan unduhan",
+  "v2": "Semua sumber data dan unduhan",
+  "final": "Semua sumber data dan unduhan",
+  "sugg": false
+ },
+ {
+  "en": "Migrant-worker cases in the database, by year",
+  "cur": "Kasus pekerja migran dalam basis data, per tahun",
+  "v2": "Perkara pekerja migran dalam basis data, per tahun",
+  "final": "Perkara pekerja migran dalam basis data, per tahun",
+  "sugg": false
+ },
+ {
+  "en": "Coded court decisions per year, 1996–2025; recent years are still being added",
+  "cur": "Putusan pengadilan yang dikodekan per tahun, 1996–2025; tahun-tahun terakhir masih terus ditambah",
+  "v2": "Putusan pengadilan yang kami kodekan per tahun, 1996–2025. Putusan untuk tahun-tahun terakhir masih terus kami tambahkan.",
+  "final": "Putusan pengadilan yang kami kodekan per tahun, 1996–2025. Putusan untuk tahun-tahun terakhir masih terus kami tambahkan.",
+  "sugg": false
+ },
+ {
+  "en": "Source: Migration Jurisprudence from the South, Court Decisions database (IMR). Peak year: 2015 (30 decisions).",
+  "cur": "Sumber: Yurisprudensi Migrasi dari Selatan, basis data Putusan Pengadilan (IMR). Tahun tertinggi: 2015 (30 putusan).",
+  "v2": "Sumber: Yurisprudensi Migrasi dari Selatan, basis data Putusan Pengadilan (IMR). Jumlah tertinggi terdapat pada tahun 2015, yakni 30 putusan.",
+  "final": "Sumber: Yurisprudensi Migrasi dari Selatan, basis data Putusan Pengadilan (IMR). Jumlah tertinggi terdapat pada tahun 2015, yakni 30 putusan.",
+  "sugg": false
+ },
+ {
+  "en": "Ratifications of migrant-worker treaties",
+  "cur": "Ratifikasi perjanjian tentang pekerja migran",
+  "v2": "Ratifikasi perjanjian tentang pekerja migran",
+  "final": "Ratifikasi perjanjian tentang pekerja migran",
+  "sugg": false
+ },
+ {
+  "en": "Cumulative ratifications, 1950–2025",
+  "cur": "Ratifikasi kumulatif, 1950–2025",
+  "v2": "Jumlah ratifikasi secara keseluruhan, 1950–2025",
+  "final": "Jumlah ratifikasi secara keseluruhan, 1950–2025",
+  "sugg": false
+ },
+ {
+  "en": "Source: NORMLEX, UN Treaty Collection, via the Migration Law Atlas",
+  "cur": "Sumber: NORMLEX, UN Treaty Collection, melalui Atlas Hukum Migrasi",
+  "v2": "Sumber: NORMLEX dan UN Treaty Collection, melalui Atlas Hukum Migrasi",
+  "final": "Sumber: NORMLEX dan UN Treaty Collection, melalui Atlas Hukum Migrasi",
+  "sugg": false
+ },
+ {
+  "en": "In the news",
+  "cur": "IMR di media",
+  "v2": "IMR di publik",
+  "final": "IMR di publik",
+  "sugg": false
+ },
+ {
+  "en": "Cited by the U.S. Court of Appeals, 9th Cir.",
+  "cur": "Dikutip oleh U.S. Court of Appeals, 9th Cir.",
+  "v2": "Dikutip oleh pengadilan banding Amerika Serikat (U.S. Court of Appeals, 9th Cir.)",
+  "final": "Dikutip oleh pengadilan banding Amerika Serikat (U.S. Court of Appeals, 9th Cir.)",
+  "sugg": false
+ },
+ {
+  "en": "How Indonesian migrant remittances help the economy",
+  "cur": "Bagaimana remitansi pekerja migran Indonesia membantu perekonomian",
+  "v2": "Bagaimana kiriman uang pekerja migran Indonesia membantu perekonomian",
+  "final": "Bagaimana kiriman uang pekerja migran Indonesia membantu perekonomian",
+  "sugg": false
+ },
+ {
+  "en": "Farmworkers and migrant labor in Asia",
+  "cur": "Buruh tani dan buruh migran di Asia",
+  "v2": "Buruh tani dan buruh migran di Asia",
+  "final": "Buruh tani dan buruh migran di Asia",
+  "sugg": false
+ },
+ {
+  "en": "Why low-skilled migration matters",
+  "cur": "Mengapa migrasi berketerampilan rendah itu penting",
+  "v2": "Mengapa migrasi pekerja berketerampilan rendah itu penting",
+  "final": "Mengapa migrasi pekerja berketerampilan rendah itu penting",
+  "sugg": false
+ },
+ {
+  "en": "All databases",
+  "cur": "Semua basis data",
+  "v2": "Semua basis data",
+  "final": "Semua basis data",
+  "sugg": false
+ },
+ {
+  "en": "Global, regional and national migration law in one comparative explorer.",
+  "cur": "Hukum migrasi tingkat dunia, kawasan, dan nasional dalam satu alat jelajah perbandingan.",
+  "v2": "Hukum migrasi tingkat dunia, kawasan, dan nasional, yang kami himpun untuk anda bandingkan.",
+  "final": "Hukum migrasi tingkat dunia, kawasan, dan nasional, yang kami himpun untuk anda bandingkan.",
+  "sugg": false
+ },
+ {
+  "en": "529 decisions, searchable by situation, argument and journey.",
+  "cur": "529 putusan, bisa dicari menurut keadaan, argumen, dan tahap perjalanan.",
+  "v2": "529 putusan yang bisa ditemukan berdasarkan keadaan, argumen, maupun tahap migrasi.",
+  "final": "529 putusan yang bisa ditemukan berdasarkan keadaan, argumen, maupun tahap migrasi.",
+  "sugg": false
+ },
+ {
+  "en": "Statistics and legal frameworks for hateful speech by officials.",
+  "cur": "Statistik dan kerangka hukum untuk ucapan kebencian oleh pejabat.",
+  "v2": "Statistik dan kerangka hukum atas ucapan kebencian oleh pejabat.",
+  "final": "Statistik dan kerangka hukum atas ucapan kebencian oleh pejabat.",
+  "sugg": false
+ },
+ {
+  "en": "Comparative notes on labor and migration law.",
+  "cur": "Catatan perbandingan tentang hukum ketenagakerjaan dan migrasi.",
+  "v2": "Catatan perbandingan tentang hukum ketenagakerjaan dan hukum migrasi.",
+  "final": "Catatan perbandingan tentang hukum ketenagakerjaan dan hukum migrasi.",
+  "sugg": false
+ },
+ {
+  "en": "Japan, Korea, Taiwan, Hong Kong and more.",
+  "cur": "Jepang, Korea, Taiwan, Hong Kong, dan lainnya.",
+  "v2": "Jepang, Korea, Taiwan, Hong Kong, dan negara lainnya.",
+  "final": "Jepang, Korea, Taiwan, Hong Kong, dan negara lainnya.",
+  "sugg": false
+ },
+ {
+  "en": "What sending states promise their workers abroad.",
+  "cur": "Apa yang dijanjikan negara asal kepada pekerjanya di luar negeri.",
+  "v2": "Apa yang dijanjikan negara asal kepada warganya yang bekerja di luar negeri.",
+  "final": "Apa yang dijanjikan negara asal kepada warganya yang bekerja di luar negeri.",
+  "sugg": false
+ },
+ {
+  "en": "Instruments that cover work in private homes.",
+  "cur": "Instrumen yang mengatur kerja di rumah tangga.",
+  "v2": "Instrumen hukum yang mengatur pekerjaan di rumah tangga.",
+  "final": "Instrumen hukum yang mengatur pekerjaan di rumah tangga.",
+  "sugg": false
+ },
+ {
+  "en": "Destination and origin states in ASEAN.",
+  "cur": "Negara tujuan dan negara asal di ASEAN.",
+  "v2": "Negara tujuan dan negara asal di ASEAN.",
+  "final": "Negara tujuan dan negara asal di ASEAN.",
+  "sugg": false
+ },
+ {
+  "en": "Arguments that courts accepted, by jurisdiction.",
+  "cur": "Argumen yang diterima pengadilan, menurut yurisdiksi.",
+  "v2": "Argumen yang diterima pengadilan, menurut yurisdiksinya.",
+  "final": "Argumen yang diterima pengadilan, menurut yurisdiksinya.",
+  "sugg": false
+ },
+ {
+  "en": "Ideas from the fields",
+  "cur": "Gagasan dari sawah dan ladang",
+  "v2": "Gagasan dari sawah dan ladang",
+  "final": "Gagasan dari sawah dan ladang",
+  "sugg": false
+ },
+ {
+  "en": "2024 · Ideas from the fields",
+  "cur": "2024 · Gagasan dari sawah dan ladang",
+  "v2": "2024 · Gagasan dari sawah dan ladang",
+  "final": "2024 · Gagasan dari sawah dan ladang",
+  "sugg": false
+ },
+ {
+  "en": "2018 · Ideas from the fields",
+  "cur": "2018 · Gagasan dari sawah dan ladang",
+  "v2": "2018 · Gagasan dari sawah dan ladang",
+  "final": "2018 · Gagasan dari sawah dan ladang",
+  "sugg": false
+ },
+ {
+  "en": "IMR Press · Journal",
+  "cur": "IMR Press · Jurnal",
+  "v2": "IMR Press · Jurnal",
+  "final": "IMR Press · Jurnal",
+  "sugg": false
+ },
+ {
+  "en": "Peer-reviewed, since 2014 ·",
+  "cur": "Ditelaah sejawat, sejak 2014 ·",
+  "v2": "Ditelaah oleh sejawat (peer-reviewed), sejak 2014 ·",
+  "final": "Ditelaah oleh sejawat (peer-reviewed), sejak 2014 ·",
+  "sugg": false
+ },
+ {
+  "en": "All IMR Press books",
+  "cur": "Semua buku IMR Press",
+  "v2": "Semua buku IMR Press",
+  "final": "Semua buku IMR Press",
+  "sugg": false
+ },
+ {
+  "en": "and IMR Press",
+  "cur": "dan IMR Press",
+  "v2": "dan IMR Press",
+  "final": "dan IMR Press",
+  "sugg": false
+ },
+ {
+  "en": "How we use AI",
+  "cur": "Cara kami memakai kecerdasan buatan (AI)",
+  "v2": "Cara kami memanfaatkan kecerdasan buatan (AI)",
+  "final": "Cara kami memanfaatkan kecerdasan buatan (AI)",
+  "sugg": false
+ },
+ {
+  "en": "English",
+  "cur": "Sekarang di situs",
+  "v2": "Versi baru",
+  "final": "Versi baru",
+  "sugg": false
+ },
+ {
+  "en": "Where are you now?",
+  "cur": "Anda sekarang di tahap mana?",
+  "v2": "Anda sekarang berada di tahap mana?",
+  "final": "Anda sekarang berada di tahap mana?",
+  "sugg": false
+ },
+ {
+  "en": "Tap the step that fits you. You will see what to do and where to get help.",
+  "cur": "Ketuk tahap yang sesuai dengan Anda. Anda akan melihat apa yang bisa dilakukan dan ke mana mencari bantuan.",
+  "v2": "Ketuk tahap yang sesuai dengan keadaan anda. Di sana anda akan melihat apa yang bisa dilakukan dan ke mana anda bisa mencari bantuan.",
+  "final": "Ketuk tahap yang sesuai dengan keadaan anda. Di sana anda akan melihat apa yang bisa dilakukan dan ke mana anda bisa mencari bantuan.",
+  "sugg": false
+ },
+ {
+  "en": "Before you leave",
+  "cur": "Sebelum berangkat",
+  "v2": "Sebelum berangkat",
+  "final": "Sebelum berangkat",
+  "sugg": false
+ },
+ {
+  "en": "An agent, fees or a promise of a job",
+  "cur": "Agen, biaya, atau janji pekerjaan",
+  "v2": "Agen, biaya, atau janji pekerjaan",
+  "final": "Agen, biaya, atau janji pekerjaan",
+  "sugg": false
+ },
+ {
+  "en": "Papers, visa, exit rules",
+  "cur": "Dokumen, visa, aturan keberangkatan",
+  "v2": "Dokumen, visa, dan aturan keberangkatan",
+  "final": "Dokumen, visa, dan aturan keberangkatan",
+  "sugg": false
+ },
+ {
+  "en": "Pay, hours, passport, abuse",
+  "cur": "Gaji, jam kerja, paspor, kekerasan",
+  "v2": "Gaji, jam kerja, paspor, dan kekerasan",
+  "final": "Gaji, jam kerja, paspor, dan kekerasan",
+  "sugg": false
+ },
+ {
+  "en": "Losing or changing the job",
+  "cur": "Kehilangan atau pindah pekerjaan",
+  "v2": "Kehilangan atau pindah pekerjaan",
+  "final": "Kehilangan atau pindah pekerjaan",
+  "sugg": false
+ },
+ {
+  "en": "Sent away, arrested, cannot change employer",
+  "cur": "Dipulangkan, ditangkap, tidak bisa pindah majikan",
+  "v2": "Dipulangkan, ditangkap, atau tidak bisa pindah majikan",
+  "final": "Dipulangkan, ditangkap, atau tidak bisa pindah majikan",
+  "sugg": false
+ },
+ {
+  "en": "Back home",
+  "cur": "Sudah pulang",
+  "v2": "Sudah pulang",
+  "final": "Sudah pulang",
+  "sugg": false
+ },
+ {
+  "en": "Claims after you return",
+  "cur": "Tuntutan setelah pulang",
+  "v2": "Gugatan setelah pulang",
+  "final": "Gugatan setelah pulang",
+  "sugg": false
+ },
+ {
+  "en": "Keep every receipt and message from the agent. Ask for your contract in your own language before you pay anything.",
+  "cur": "Simpan semua kuitansi dan pesan dari agen. Minta kontrak dalam bahasa Anda sendiri sebelum membayar apa pun.",
+  "v2": "Simpan semua kuitansi dan pesan dari agen. Sebelum membayar apa pun, mintalah kontrak dalam bahasa yang anda bisa pahami sendiri.",
+  "final": "Simpan semua kuitansi dan pesan dari agen. Sebelum membayar apa pun, mintalah kontrak dalam bahasa yang anda bisa pahami sendiri.",
+  "sugg": false
+ },
+ {
+  "en": "Could this be trafficking? Self-check →",
+  "cur": "Apakah ini perdagangan orang? Periksa sendiri →",
+  "v2": "Apakah ini perdagangan orang? Cari tahu sendiri →",
+  "final": "Apakah ini perdagangan orang? Cari tahu sendiri →",
+  "sugg": false
+ },
+ {
+  "en": "What your government promises →",
+  "cur": "Apa yang dijanjikan pemerintah Anda →",
+  "v2": "Apa yang dijanjikan oleh pemerintah anda →",
+  "final": "Apa yang dijanjikan oleh pemerintah anda →",
+  "sugg": false
+ },
+ {
+  "en": "Keep a copy of your passport, visa and contract with your family. Note the phone number of your embassy.",
+  "cur": "Titipkan salinan paspor, visa, dan kontrak kepada keluarga. Catat nomor telepon kedutaan negara Anda.",
+  "v2": "Titipkan salinan paspor, visa, dan kontrak kepada keluarga. Selain itu, catat nomor telepon kedutaan negara anda.",
+  "final": "Titipkan salinan paspor, visa, dan kontrak kepada keluarga. Selain itu, catat nomor telepon kedutaan negara anda.",
+  "sugg": false
+ },
+ {
+  "en": "In most countries an employer may not keep your passport. Write down unpaid wages, dates and hours. Courts have ruled for workers in cases like these.",
+  "cur": "Di sebagian besar negara, majikan tidak boleh menahan paspor Anda. Catat upah yang belum dibayar, tanggal, dan jam kerja. Pengadilan pernah memenangkan pekerja dalam kasus seperti ini.",
+  "v2": "Di sebagian besar negara, majikan tidak boleh menahan paspor anda. Catat upah yang belum dibayar, beserta tanggal dan jam kerjanya. Pengadilan pernah memenangkan pekerja dalam perkara seperti ini.",
+  "final": "Di sebagian besar negara, majikan tidak boleh menahan paspor anda. Catat upah yang belum dibayar, beserta tanggal dan jam kerjanya. Pengadilan pernah memenangkan pekerja dalam perkara seperti ini.",
+  "sugg": false
+ },
+ {
+  "en": "Ask for a letter that says why the job ended. If you are detained, ask to contact your embassy.",
+  "cur": "Minta surat yang menjelaskan mengapa pekerjaan berakhir. Jika Anda ditahan, minta untuk menghubungi kedutaan negara Anda.",
+  "v2": "Mintalah surat yang menjelaskan alasan mengapa pekerjaan anda berakhir. Jika anda ditahan, mintalah untuk bisa menghubungi kedutaan negara anda.",
+  "final": "Mintalah surat yang menjelaskan alasan mengapa pekerjaan anda berakhir. Jika anda ditahan, mintalah untuk bisa menghubungi kedutaan negara anda.",
+  "sugg": false
+ },
+ {
+  "en": "In many cases you can still make a claim after you come home. Keep your documents. The Clinic can help you take the case to an international body.",
+  "cur": "Dalam banyak kasus, Anda masih bisa menuntut setelah pulang. Simpan dokumen Anda. Klinik bisa membantu membawa kasus ke badan internasional.",
+  "v2": "Dalam banyak perkara, anda tetap bisa menggugat setelah pulang. Simpan dokumen anda. Klinik bisa membantu membawa perkara tersebut ke badan internasional.",
+  "final": "Dalam banyak perkara, anda tetap bisa menggugat setelah pulang. Simpan dokumen anda. Klinik bisa membantu membawa perkara tersebut ke badan internasional.",
+  "sugg": false
+ }
+]

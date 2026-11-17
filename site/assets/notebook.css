@@ -1,0 +1,11 @@
+/* IMR "Field notebook" layer: grey-green paper, ink, stamp red, Figtree with Figtree labels. Loaded after each page's own styles. */
+:root{--nb-paper:#EEE9E5;--nb-ink:#2E2116;--nb-soft:#4A3B2D;--nb-mute:#5B4A3C;--nb-red:#8F5E12;--nb-rule:#C8BCB1;--nb-mono:'Figtree',ui-monospace,Menlo,Consolas,monospace}
+body{background:var(--nb-paper)}
+h1,h2{font-weight:700!important;letter-spacing:-.02em}
+h3{font-weight:600!important;letter-spacing:-.01em}
+.eyebrow{font-family:var(--nb-mono)!important;letter-spacing:.02em!important;font-size:13px!important;color:var(--nb-red)!important}
+.btn,.cta-clinic{border-radius:0!important}
+.card{border-radius:0!important;box-shadow:none!important;background:transparent!important;border-top:4px solid var(--nb-ink);transform:none!important}
+.card:hover{box-shadow:none!important}
+.card .b{padding-left:0!important;padding-right:0!important}
+figcaption,.caption{font-family:var(--nb-mono)}
