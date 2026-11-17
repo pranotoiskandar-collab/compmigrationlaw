@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find free legal help · Institute for Migrant Rights</title>
+<meta name="keywords" content="legal aid, access to justice, legal services, legal needs, empirical legal studies, empirical legal scholarship, quantitative legal research, statistical analysis in law, law and economics, law and economics of migration, comparative law, socio-legal studies, legal pluralism, migration law, labor migration, migrant workers’ rights, human rights law, access to justice, Global South, Asia, Africa, Middle East, Latin America, Indonesia, open data, replication data">
+<meta name="description" content="A map and directory of free legal help for migrant workers in Indonesia and in major origin and destination countries worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#8F5E12}a:hover{color:#6B450B}
+</style>
+<link rel="canonical" href="https://theimr.org/legal-help/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Institute for Migrant Rights">
+<meta property="og:title" content="Find free legal help · Institute for Migrant Rights">
+<meta property="og:description" content="A map and directory of free legal help for migrant workers in Indonesia and in major origin and destination countries worldwide.">
+<meta property="og:url" content="https://theimr.org/legal-help/">
+<meta property="og:image" content="https://theimr.org/images/rice-fields-cianjur-1975.jpg">
+<style>
+.nav details{position:relative}
+.nav summary{cursor:pointer;padding:10px 0;list-style:none;color:#2E2116;font-weight:600}
+.nav summary::-webkit-details-marker{display:none}
+.nav summary::after{content:" \25BE";font-size:11px}
+.nav .menu{position:absolute;right:0;top:100%;z-index:5;min-width:230px;background:#E8E2DC;border:1px solid #C8BCB1;padding:6px 0}
+.nav .menu a{display:block;padding:8px 16px;color:#2E2116;text-decoration:none}
+.nav .menu a:hover{color:#8F5E12}
+@media (max-width:640px){.nav .menu{right:auto;left:0}}
+</style>
+<link rel="stylesheet" href="/assets/leaflet/leaflet.css">
+<style>
+.lh-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.lh-eye{margin:0;font-family:'Figtree',monospace;font-size:13px;color:#8F5E12}
+.lh-h1{margin:14px 0 0;font-weight:400!important;font-size:52px;line-height:1.1}
+.lh-lede{margin:18px 0 0;color:#4A3B2D;max-width:760px}
+.lh-warn{margin:28px 0 0;padding:14px 0;border-top:4px solid #8F5E12;border-bottom:1px solid #C8BCB1;font-size:17px}
+.lh-tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:32px 0 16px}
+.lh-tools label{display:block;font-family:'Figtree',monospace;font-size:13px;color:#5B4A3C;margin-bottom:4px}
+.lh-tools input,.lh-tools select{width:100%;box-sizing:border-box;min-height:48px;padding:0 12px;font:inherit;font-size:17px;background:#fff;border:1px solid #2E2116;border-radius:0;color:#2E2116}
+.lh-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.lh-chip{min-height:40px;padding:0 14px;border:1px solid #2E2116;background:transparent;font:inherit;font-size:15px;cursor:pointer;color:#2E2116}
+.lh-chip[aria-pressed="true"]{background:#2E2116;color:#EEE9E5}
+.lh-chip i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:0}
+#lh-map{height:440px;border:1px solid #2E2116;background:#E8E2DC}
+#lh-map .leaflet-tile-pane{filter:grayscale(.6) contrast(.95)}
+.lh-count{font-family:'Figtree',monospace;font-size:13px;color:#5B4A3C;margin:20px 0 8px}
+.lh-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:0 32px}
+.lh-item{border-top:1px solid #2E2116;padding:16px 0 22px}
+.lh-item h3{margin:4px 0 6px;font-size:21px;line-height:1.25}
+.lh-meta{font-family:'Figtree',monospace;font-size:13px;color:#5B4A3C}
+.lh-meta b{color:#8F5E12;font-weight:500}
+.lh-item p{margin:6px 0;font-size:17px;line-height:1.5}
+.lh-item a.lh-call{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;margin:6px 8px 0 0;background:#2E2116;color:#EEE9E5;text-decoration:none;font-weight:500;font-size:16px}
+.lh-item a.lh-call:hover{background:#8F5E12;color:#fff}
+.lh-item a.lh-out{display:inline-flex;align-items:center;min-height:44px;margin-right:14px;font-size:16px}
+.lh-src{font-family:'Figtree',monospace;font-size:12px;color:#5B4A3C;margin-top:8px}
+.lh-empty{padding:24px 0;color:#4A3B2D}
+.lh-foot{margin:48px 0 0;padding-top:20px;border-top:1px solid #C8BCB1;font-size:16px;color:#4A3B2D;display:grid;gap:10px}
+.leaflet-popup-content{font-family:'Figtree',system-ui,sans-serif;font-size:15px}
+@media (max-width:760px){.lh-tools{grid-template-columns:1fr}.lh-h1{font-size:38px}#lh-map{height:320px}.lh-list{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/assets/notebook.css">
+<link rel="stylesheet" href="/assets/editorial.css">
+<meta name="twitter:card" content="summary_large_image">
+<!-- imr-analytics -->
+<script data-goatcounter="https://theimr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="/assets/imr-events.js" defer></script>
+<style>body{font-variant-numeric:tabular-nums}</style>
+</head>
+<body>
+<div style="background: #EEE9E5; color: #2E2116; font-family: 'Figtree', system-ui, sans-serif; font-size: 19px; line-height: 1.65">
+
+<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#2E2116;color:#E5DED8;font-family:'Figtree',system-ui,sans-serif;font-size:14px;line-height:1.4"><div style="max-width:1120px;margin:0 auto;padding:7px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px"><q class="imr-bq" style="font-style:italic">Every man his own lawyer!</q><q class="imr-bq" style="font-style:italic" hidden>Whatever is not in the code of laws, ought not to be law.</q><a href="/databases/#bentham" style="color:#E3C58F;text-underline-offset:3px">Jeremy Bentham, Legislator of the World</a><button type="button" class="imr-bnext" style="margin-left:auto;background:none;border:0;padding:0;color:#E3C58F;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Another maxim</button></div></nav>
+<script>(function(){var b=document.currentScript.previousElementSibling,q=b.querySelectorAll(".imr-bq"),i=0;function sw(){q[i].hidden=true;i=(i+1)%q.length;q[i].hidden=false;}b.querySelector(".imr-bnext").addEventListener("click",sw);if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))setInterval(function(){if(!b.matches(":hover"))sw();},12000);})();</script>
+<header class="ed-mast">
+<div class="ed-in">
+<a class="ed-brand" href="/"><i>IMR</i><span><b>Institute for Migrant Rights</b><small>Migration Jurisprudence from the South</small></span></a>
+<button type="button" class="ed-burger" aria-expanded="false" aria-label="Menu" onclick="var h=this.closest('header');var o=h.classList.toggle('ed-open');this.setAttribute('aria-expanded',o)"><span aria-hidden="true"></span>Menu</button>
+<div class="ed-navrow">
+<nav aria-label="Main" class="nav">
+<details data-imr-nav="clinic">
+<summary>Legal Clinic</summary>
+<div class="menu" style="left:0;right:auto;max-height:80vh;overflow-y:auto;min-width:290px">
+<a href="/legal-clinic/" style="font-weight:600">Prepare a rights communication</a>
+<a href="/legal-clinic/trafficking-check/">Could this be trafficking? Self-check</a>
+<a href="/legal-clinic/how-we-work/">How the Clinic works</a>
+<a href="/legal-help/" aria-current="page">Find free legal help</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Arguments that work</span>
+<a href="/legal-clinic/what-works/">What works where</a>
+<a href="/court-decisions/#argument">Arguments courts accepted or rejected</a>
+<a href="/court-decisions/#compare">Compare courts and countries</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Where to take a case</span>
+<a href="/gcc/mechanisms/">Gulf States</a>
+<a href="/east-asia/mechanisms/">East Asia</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">From research to practice</span>
+<a href="/gcc/#help">Gulf States</a>
+<a href="/east-asia/#help">East Asia</a>
+<a href="/southeast-asia/#help">Southeast Asia</a>
+<a href="/countries-of-origin/#help">Countries of Origin</a>
+<a href="/domestic-workers/#help">Migrant Domestic Workers</a>
+<a href="/government-hate-speech/elections/#help">Elections and non-citizens</a>
+<a href="/government-hate-speech/#report">Report official hate speech</a>
+</div>
+</details>
+<details data-imr-nav="mjs">
+<summary>Migration Jurisprudence from the South</summary>
+<div class="menu" style="max-height:80vh;overflow-y:auto">
+<a href="/databases/" style="font-weight:600">Overview</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Law across tiers</span>
+<a href="/migration-law/">Migration Law Atlas</a>
+<a href="/migration-law/?lens=farm" style="padding-left:28px">Farmworker law view</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Destination states</span>
+<a href="/gcc/">Gulf States</a>
+<a href="/east-asia/">East Asia</a>
+<a href="/southeast-asia/">Southeast Asia</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Origin states</span>
+<a href="/countries-of-origin/">Countries of Origin</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Themes</span>
+<a href="/domestic-workers/">Migrant Domestic Workers</a>
+<a href="/government-hate-speech/">Government Hate Speech</a>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Courts</span>
+<a href="/court-decisions/">Court Decisions</a>
+</div>
+</details>
+<a href="/publications.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">Publications</a>
+<a href="/people.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">People</a>
+<a href="/contact.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">Contact</a>
+<a class="cta-clinic" href="/legal-clinic/">Submit a rights communication</a>
+</nav>
+</div>
+</div>
+</header>
+<figure class="imr-band" style="margin:0;position:relative;line-height:0;background:#E8E2DC"><img src="/images/cianjur-old/sindanglaya-plain.jpg" alt="" loading="lazy" decoding="async" width="2000" height="500" style="display:block;width:100%;height:clamp(84px,11vw,160px);object-fit:cover"><figcaption style="position:absolute;right:12px;bottom:8px;max-width:calc(100% - 24px);box-sizing:border-box;padding:3px 7px;border-radius:3px;background:rgba(46,33,22,.62);text-align:right;font:400 10.5px/1.45 'Figtree',monospace;letter-spacing:.05em;text-transform:uppercase;color:#F4F1EE"><span>Sindanglaya plain, Cianjur, c. 1900</span> · <a href="https://commons.wikimedia.org/wiki/File:Vlakte_van_Sindanglaja_bij_Tjiandjoer,_KITLV_407957.tiff" rel="noopener" style="color:#F4F1EE;text-decoration:underline;text-underline-offset:2px">KITLV, CC BY 4.0</a></figcaption></figure>
+
+
+
+<section style="padding: 64px 0 80px">
+<div class="lh-wrap">
+<p class="lh-eye">FREE LEGAL HELP</p>
+<h1 class="lh-h1">Find free legal help near you</h1>
+<p class="lh-lede">Organizations that give free legal advice or help migrant workers with their cases, in Indonesia, in the countries where many Indonesians work, and in other major countries of origin and destination around the world. Search by country or by the kind of help you need.</p>
+<p class="lh-warn"><b>If you are in danger now,</b> call the local emergency number or your embassy first. This list is a guide, not legal advice. Call before you visit, because opening hours change.</p>
+
+<div class="lh-tools">
+<div><label for="lh-q">Search</label><input id="lh-q" type="search" placeholder="City, organization or problem" autocomplete="off"></div>
+<div><label for="lh-c">Country</label><select id="lh-c"><option value="">All countries</option></select></div>
+<div><label for="lh-near">Location</label><button id="lh-near" type="button" class="lh-chip" style="width:100%;min-height:48px">Show the nearest first</button></div>
+</div>
+<div class="lh-chips" id="lh-types" role="group" aria-label="Type of help"></div>
+<div id="lh-map" role="region" aria-label="Map of places"></div>
+<p class="lh-count" id="lh-count" data-noi18n></p>
+<ul class="lh-list" id="lh-list" data-noi18n></ul>
+
+<div class="lh-foot">
+<p style="margin:0">Want to take a case to a UN or regional human rights body? Use our <a href="/legal-clinic/">Legal Clinic</a>.</p>
+<p style="margin:0">We check each entry against its source and show the date we checked it. If something is wrong or missing, write to <a href="mailto:secretariat@theimr.org">secretariat@theimr.org</a>.</p>
+<p style="margin:0">Map data © OpenStreetMap contributors.</p>
+</div>
+</div>
+</section>
+
+<div class="imr-ridge" aria-hidden="true" style="line-height:0;margin:48px 0 -2px;position:relative;z-index:1"><svg viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice" style="display:block;width:100%;height:clamp(84px,11vw,170px)" focusable="false"><path fill="#D8CFC7" d="M0 128 L180 112 L330 96 L470 70 L560 44 L610 26 L640 18 L668 26 L720 46 L760 52 L800 44 L840 34 L866 30 L896 36 L940 52 L1010 72 L1120 90 L1260 104 L1440 116 L1440 170 L0 170Z"/><path fill="#9B8C7E" d="M0 140 C120 124 220 120 320 128 C420 136 470 112 560 108 C650 104 700 126 790 128 C880 130 930 108 1030 106 C1130 104 1190 126 1290 128 C1360 129 1400 124 1440 120 L1440 170 L0 170Z"/><path fill="none" stroke="#C8BCB1" stroke-width="1" opacity=".55" d="M330 140 C420 146 470 126 560 122 C650 118 700 138 790 140 M960 130 C1030 120 1130 118 1220 136"/><path fill="#2E2116" d="M0 156 C160 144 300 142 440 150 C580 158 700 140 840 142 C980 144 1100 158 1240 154 C1330 151 1390 146 1440 144 L1440 170 L0 170Z"/></svg></div>
+<section id="imr-research" style="max-width:1120px;margin:0 auto;padding:28px 24px 36px;font-family:'Figtree',system-ui,sans-serif;color:#2E2116;border-top:1px solid #C8BCB1"><h2 style="font-size:18px;margin:0 0 8px">For researchers</h2><p style="margin:0 0 8px;max-width:760px">This directory is built for empirical legal scholarship and socio-legal research on migration and the rights of migrant workers, as well as for advocacy.</p><p style="margin:0 0 8px;max-width:760px">The coded variables support statistical analysis in law: cross-national comparison, regression and event-history designs, and law and economics questions such as how recruitment fees, wage protection and limits on changing employer affect migrant workers. The data can be downloaded for replication.</p><p style="margin:0;max-width:760px;font-size:13px;color:#5B4A3C">Keywords: legal aid; access to justice; legal services; legal needs; empirical legal studies; empirical legal scholarship; quantitative legal research; statistical analysis in law; law and economics; law and economics of migration; comparative law; socio-legal studies; legal pluralism; migration law; labor migration; migrant workers’ rights; human rights law; access to justice; Global South; Asia; Africa; Middle East; Latin America; Indonesia; open data; replication data.</p></section>
+<footer style="background: #2E2116; color: #E5DED8; padding: 56px 0 44px">
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px,100%),1fr)); gap: 28px; font-family: 'Figtree', sans-serif; font-size: 16px">
+<div><p style="margin: 0; font-family: 'Figtree', system-ui, sans-serif; font-size: 26px; color: #FFFFFF">Institute for Migrant Rights</p><p style="margin: 6px 0 0; color: #CFC5BC">and IMR Press</p></div>
+<p style="margin: 0">Jl. Amalia Rubini 35, Sayang<br>Cianjur, Jawa Barat 43213<br>Indonesia</p>
+<p style="margin: 0"><a href="mailto:secretariat@theimr.org" style="color: #FFFFFF">secretariat@theimr.org</a><br>+62 263 271 769<br>+62 263 271 284</p>
+</div>
+<div class="imr-foot-ai" style="max-width: 1120px; margin: 32px auto 0; padding: 0 24px; font-family: 'Figtree', sans-serif; font-size: 14px"><p style="margin: 0; padding-top: 16px; border-top: 1px solid #4A3B2D; color: #CFC5BC"><a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></p></div>
+</footer>
+</div>
+<script>
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.nav details[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+</script>
+<script src="/assets/leaflet/leaflet.js"></script>
+<script src="/legal-help/places.js"></script>
+<script>
+(function () {
+  var D = window.LEGAL_HELP, P = D.places, C = D.countries;
+  var TYPES = {
+    legal: { en: "Free legal aid", id: "Bantuan hukum gratis", col: "#2E2116" },
+    ngo: { en: "Support organization", id: "Organisasi pendamping", col: "#8F5E12" },
+    union: { en: "Workers' union", id: "Serikat pekerja", col: "#6B5B2E" },
+    gov: { en: "Official hotline or office", id: "Layanan resmi pemerintah", col: "#4A6E8A" }
+  };
+  var T = {
+    en: { all: "All countries", n: function (k, t) { return k + " of " + t + " places"; }, none: "Nothing matches. Try another country or clear the search.",
+      call: "Call", wa: "WhatsApp", web: "Website", mail: "Email", src: "Source", chk: "checked", noTel: "No verified phone number yet: use the website.",
+      near: "Show the nearest first", nearOn: "Sorted by distance from you", nearErr: "Your location is not available.", km: "km away", map: "Directions" },
+    id: { all: "Semua negara", n: function (k, t) { return k + " dari " + t + " tempat"; }, none: "Tidak ada yang cocok. Coba negara lain atau hapus pencarian.",
+      call: "Telepon", wa: "WhatsApp", web: "Situs", mail: "Email", src: "Sumber", chk: "diperiksa", noTel: "Belum ada nomor telepon terverifikasi: gunakan situsnya.",
+      near: "Tampilkan yang terdekat", nearOn: "Diurutkan dari yang terdekat", nearErr: "Lokasi Anda tidak tersedia.", km: "km", map: "Petunjuk arah" }
+  };
+  var lang = function () { return document.documentElement.lang === "id" ? "id" : "en"; };
+  var st = { q: "", c: "", types: {}, here: null };
+  try { var u = new URLSearchParams(location.search); st.c = u.get("country") || ""; } catch (e) {}
+  if (st.c && !C[st.c]) { // accept a country name too, as the atlases link with names
+    var ALIAS = { "republic of korea": "KR", "united states of america": "US", "hong kong sar, china": "HK" }, cn = st.c.toLowerCase();
+    st.c = ALIAS[cn] || C[st.c.toUpperCase()] && st.c.toUpperCase() || Object.keys(C).filter(function (k) { return C[k].en.toLowerCase() === cn; })[0] || "";
+    if (!C[st.c]) st.c = "";
+  }
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (m) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]; }); };
+  var tel = function (s) { return s.replace(/\(.*?\)/g, "").replace(/[^\d+]/g, ""); };
+  function dist(a, b) { var r = Math.PI / 180, x = Math.sin((b.lat - a.lat) * r / 2), y = Math.sin((b.lng - a.lng) * r / 2); return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a.lat * r) * Math.cos(b.lat * r) * y * y)); }
+
+  var map = null, layer = null;
+  if (window.L) {
+    map = L.map("lh-map", { scrollWheelZoom: false, worldCopyJump: true }).setView([10, 100], 3);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    layer = L.layerGroup().addTo(map);
+  } else { $("lh-map").style.display = "none"; }
+
+  function match(p) {
+    if (st.c && p.c !== st.c && !(p.c === "XB")) return false;
+    var on = Object.keys(st.types).filter(function (k) { return st.types[k]; });
+    if (on.length && on.indexOf(p.t) < 0) return false;
+    if (st.q) {
+      var hay = [p.n, p.city, p.city_id, p.addr, p.d, p.d_id, C[p.c].en, C[p.c].id, TYPES[p.t].en, TYPES[p.t].id].join(" ").toLowerCase();
+      if (st.q.toLowerCase().split(/\s+/).some(function (w) { return w && hay.indexOf(w) < 0; })) return false;
+    }
+    return true;
+  }
+  function card(p, L_) {
+    var t = T[L_], h = '<li class="lh-item" id="lh-' + P.indexOf(p) + '">';
+    h += '<div class="lh-meta"><b>' + esc(TYPES[p.t][L_]) + '</b> · ' + esc(C[p.c][L_]) + (p.city ? " · " + esc((L_ === "id" && p.city_id) || p.city) : "") + (p._km != null ? " · " + Math.round(p._km) + " " + t.km : "") + '</div>';
+    h += '<h3>' + esc(p.n) + '</h3><p>' + esc((L_ === "id" && p.d_id) || p.d) + '</p>';
+    if (p.addr) h += '<p class="lh-meta">' + esc(p.addr) + '</p>';
+    if (p.hours) h += '<p class="lh-meta">' + esc((L_ === "id" && p.hours_id) || p.hours) + '</p>';
+    var b = "";
+    (p.tel || []).forEach(function (n) { b += '<a class="lh-call" href="tel:' + tel(n) + '">' + t.call + " " + esc(n) + '</a>'; });
+    (p.wa || []).forEach(function (n) { var m = n.match(/\((.*)\)/); b += '<a class="lh-call" href="https://wa.me/' + tel(n).replace("+", "") + '" rel="noopener">' + t.wa + " " + esc(n.replace(/\s*\(.*\)/, "")) + (m ? " · " + esc(m[1]) : "") + '</a>'; });
+    if (b) h += '<div>' + b + '</div>';
+    var o = "";
+    if (p.web) o += '<a class="lh-out" href="' + esc(p.web) + '" rel="noopener" target="_blank">' + t.web + '</a>';
+    if (p.email) o += '<a class="lh-out" href="mailto:' + esc(p.email) + '">' + esc(p.email) + '</a>';
+    if (p.lat != null && p.c !== "XB" && p.addr) o += '<a class="lh-out" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.addr) + '" rel="noopener" target="_blank">' + t.map + '</a>';
+    if (o) h += '<div>' + o + '</div>';
+    if (!(p.tel || []).length && !(p.wa || []).length) h += '<p class="lh-meta">' + t.noTel + '</p>';
+    h += '<div class="lh-src">' + t.src + ": " + esc(p.src) + " · " + t.chk + " " + esc(p.checked) + '</div></li>';
+    return h;
+  }
+  function draw() {
+    var L_ = lang(), t = T[L_];
+    var rows = P.filter(match);
+    if (st.here) { rows.forEach(function (p) { p._km = p.lat != null && p.c !== "XB" ? dist(st.here, p) : null; }); rows.sort(function (a, b) { return (a._km == null ? 1e9 : a._km) - (b._km == null ? 1e9 : b._km); }); }
+    else P.forEach(function (p) { p._km = null; });
+    $("lh-count").textContent = t.n(rows.length, P.length) + (st.here ? " · " + t.nearOn : "");
+    $("lh-list").innerHTML = rows.length ? rows.map(function (p) { return card(p, L_); }).join("") : '<li class="lh-empty">' + t.none + '</li>';
+    if (map) {
+      layer.clearLayers();
+      var pts = [];
+      rows.forEach(function (p) {
+        if (p.lat == null || p.c === "XB") return;
+        pts.push([p.lat, p.lng]);
+        L.circleMarker([p.lat, p.lng], { radius: 8, color: "#EEE9E5", weight: 2, fillColor: TYPES[p.t].col, fillOpacity: 1 })
+          .bindPopup("<b>" + esc(p.n) + "</b><br>" + esc((L_ === "id" && p.city_id) || p.city || "") + '<br><a href="#lh-' + P.indexOf(p) + '">' + (L_ === "id" ? "Lihat rincian" : "See details") + "</a>")
+          .addTo(layer);
+      });
+      if (st.c && C[st.c] && st.c !== "XB") map.setView([C[st.c].lat, C[st.c].lng], C[st.c].z);
+      else if (pts.length) map.fitBounds(pts, { padding: [24, 24], maxZoom: 11 });
+    }
+  }
+  function chrome() {
+    var L_ = lang(), sel = $("lh-c"), cur = st.c;
+    sel.innerHTML = '<option value="">' + T[L_].all + '</option>' + Object.keys(C).map(function (k) { return '<option value="' + k + '"' + (k === cur ? " selected" : "") + ">" + C[k][L_] + "</option>"; }).join("");
+    $("lh-types").innerHTML = Object.keys(TYPES).map(function (k) { return '<button type="button" class="lh-chip" data-t="' + k + '" aria-pressed="' + (!!st.types[k]) + '"><i style="background:' + TYPES[k].col + '"></i>' + TYPES[k][L_] + "</button>"; }).join("");
+    $("lh-near").textContent = st.here ? T[L_].nearOn : T[L_].near;
+  }
+  $("lh-types").setAttribute("data-noi18n", ""); $("lh-c").setAttribute("data-noi18n", ""); $("lh-near").setAttribute("data-noi18n", "");
+  $("lh-q").addEventListener("input", function () { st.q = this.value.trim(); draw(); });
+  $("lh-c").addEventListener("change", function () { st.c = this.value; draw(); });
+  $("lh-types").addEventListener("click", function (e) { var b = e.target.closest("[data-t]"); if (!b) return; st.types[b.dataset.t] = !st.types[b.dataset.t]; b.setAttribute("aria-pressed", !!st.types[b.dataset.t]); draw(); });
+  $("lh-near").addEventListener("click", function () {
+    var btn = this;
+    if (!navigator.geolocation) { btn.textContent = T[lang()].nearErr; return; }
+    navigator.geolocation.getCurrentPosition(function (pos) { st.here = { lat: pos.coords.latitude, lng: pos.coords.longitude }; btn.setAttribute("aria-pressed", "true"); chrome(); draw(); },
+      function () { btn.textContent = T[lang()].nearErr; }, { timeout: 10000 });
+  });
+  new MutationObserver(function () { chrome(); draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  chrome(); draw();
+})();
+</script>
+
+<script src="/assets/lang.js" defer></script>
+</body>
+</html>

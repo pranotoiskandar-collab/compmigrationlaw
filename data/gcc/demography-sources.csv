@@ -1,0 +1,31 @@
+key,source,url
+T1,"GLMM (orig.: Information & eGovernment Authority (IGA), Open Data Portal)",https://gulfmigration.grc.net/bahrain-population-estimates-by-nationality-bahraini-non-bahraini-and-sex-1991-dec-2024/
+T2,"GLMM (orig.: BLMI, LMRA)",https://gulfmigration.grc.net/bahrain-estimated-population-employed-in-the-private-sector-by-nationality-bahraini-non-bahraini-and-sex-q1-2012-q2-2023/
+T3,"GLMM (orig.: BLMI, LMRA)",https://gulfmigration.grc.net/bahrain-estimated-population-employed-in-the-domestic-sector-by-nationality-bahraini-non-bahraini-and-sex-q1-2012-q2-2023/
+T4,"GLMM (orig.: LMRA, Expatriate Management System)",https://gulfmigration.grc.net/bahrain-foreign-population-by-country-of-citizenship-sex-and-migration-status-worker-family-dependent-selected-countries-december-2022/
+T5,"GLMM (orig.: BLMI, LMRA)",https://gulfmigration.grc.net/bahrain-domestic-workers-by-country-of-citizenship-top-8-countries-q4-2018-q4-2022/
+T6,"GLMM (orig.: BLMI, LMRA)",https://gulfmigration.grc.net/bahrain-domestic-workers-by-sex-and-occupation-q4-2022/
+T7,GLMM (orig.: PACI and CSB),https://gulfmigration.grc.net/kuwait-population-by-nationality-kuwaiti-non-kuwaiti-and-sex-1990-2024/
+T8,"GLMM (orig.: CSB, Labour Market Information System)",https://gulfmigration.grc.net/kuwait-total-employed-population-public-private-domestic-sectors-by-nationality-kuwaiti-non-kuwaiti-and-sex-q4-2014-q1-2025/
+T9,"GLMM (orig.: CSB, LMIS)",https://gulfmigration.grc.net/kuwait-population-employed-in-the-domestic-sector-by-nationality-kuwaiti-non-kuwaiti-and-sex-q4-2014-q1-2025/
+T10,"GLMM (orig.: CSB/PACI, census 2021)",https://gulfmigration.grc.net/kuwait-employed-population-by-nationality-kuwaiti-non-kuwaiti-sex-and-sector-of-economic-activity-census-2021/
+T11,"GLMM (orig.: CSB, LMIS)",https://gulfmigration.grc.net/kuwait-population-employed-in-the-domestic-work-sector-by-country-of-citizenship-top-10-countries-q2-2015-q1-2025/
+T12,"GLMM (orig.: CSB, LMIS)",https://gulfmigration.grc.net/kuwait-population-employed-in-the-private-and-government-sectors-by-country-of-citizenship-top-10-countries-q2-2015-q4-2022/
+T13,GLMM (orig.: NCSI),https://gulfmigration.grc.net/oman-end-of-year-population-by-nationality-omani-non-omani-and-sex-2015-2025/
+T14,GLMM (orig.: NCSI Statistical Yearbooks),https://gulfmigration.grc.net/oman-employed-non-omani-population-by-sex-and-sector-of-employment-public-private-domestic-2010-2024/
+T15,GLMM (orig.: NCSI Monthly Statistical Bulletin),https://gulfmigration.grc.net/oman-employed-population-by-nationality-omani-non-omani-sex-and-sector-of-economic-activity-private-and-domestic-sectors-2021/
+T16,GLMM (orig.: NCSI Monthly Statistical Bulletin),https://gulfmigration.grc.net/oman-employed-foreign-workers-by-country-of-citizenship-all-sectors-selected-nationalities-2013-2022/
+T17,GLMM (orig.: MDPS/PSA/NPC plus GLMM estimate),https://gulfmigration.grc.net/qatar-population-by-nationality-qatari-non-qatari-at-dates-of-censuses-1970-2020/
+T18,GLMM (orig.: PSA/NPC),https://gulfmigration.grc.net/qatar-estimates-of-total-population-by-sex-and-annual-demographic-growth-rates-1986-2024/
+T19,GLMM (orig.: NPC Labour Force Survey bulletins),https://gulfmigration.grc.net/qatar-employed-population-15-years-and-above-by-nationality-qatari-non-qatari-and-sex-2006-2024/
+T20,GLMM (orig.: NPC Labour Force Survey 2024),https://gulfmigration.grc.net/qatar-employed-population-15-years-and-above-by-nationality-qatari-non-qatari-and-sector-of-economic-activity-2024/
+T21,GLMM (orig.: NPC Labour Force Survey 2024),https://gulfmigration.grc.net/qatar-employed-population-15-years-and-above-by-nationality-qatari-non-qatari-and-occupation-2024/
+T22,GLMM (orig.: GAStat),https://gulfmigration.grc.net/saudi-arabia-population-by-nationality-saudi-non-saudi-sex-and-age-group-2024-2-2/
+T23,GLMM (orig.: GAStat register-based labor market statistics),https://gulfmigration.grc.net/saudi-arabia-employed-population-by-nationality-saudi-non-saudi-and-sex-q1-2017-q3-2025/
+T24,GLMM (orig.: GAStat),https://gulfmigration.grc.net/saudi-arabia-employed-population-aged-15-and-above-by-nationality-saudi-non-saudi-sex-and-main-group-of-economic-activities-q2-2024/
+T25,GLMM (orig.: GAStat),https://gulfmigration.grc.net/saudi-arabia-non-saudi-employed-population-by-occupation-category-q1-2021-q3-2025/
+T26,GLMM (orig.: GAStat),https://gulfmigration.grc.net/saudi-arabia-non-saudi-domestic-workers-by-sex-q1-2017-q3-2023/
+T27,"GLMM (orig.: FCSC, preliminary)",https://gulfmigration.grc.net/uae-total-population-residing-in-the-uae-by-sex-2000-2024/
+T28,GLMM (orig.: MoHRE Labour Market Information System),https://gulfmigration.grc.net/uae-employed-workers-in-the-private-sector-by-nationality-emirati-non-emirati-2018-2022/
+T29,GLMM (orig.: MoHRE Labour Market Information System),https://gulfmigration.grc.net/uae-total-labor-force-in-the-private-sector-by-economic-activity-2017-2022/
+T30,GLMM (orig.: FCSC),https://gulfmigration.grc.net/uae-percentage-distribution-of-employed-population-aged-15-and-above-by-sex-and-sector-of-economic-activity-2021-2/

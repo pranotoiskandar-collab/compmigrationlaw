@@ -1,0 +1,353 @@
+country,country_name,instrument,status,date,note,evidence
+AE,United Arab Emirates,C189,no,,,P
+AE,United Arab Emirates,C181,no,,,P
+AE,United Arab Emirates,C97,no,,,P
+AE,United Arab Emirates,C143,no,,,P
+AE,United Arab Emirates,C190,no,,,P
+AE,United Arab Emirates,P29,pending,15 Jan 2026,"Ratified, not yet in force",P
+AE,United Arab Emirates,ICRMW,no,,,P
+AE,United Arab Emirates,ICESCR,no,,,P
+SA,Saudi Arabia,C189,no,,,P
+SA,Saudi Arabia,C181,no,,,P
+SA,Saudi Arabia,C97,no,,,P
+SA,Saudi Arabia,C143,no,,,P
+SA,Saudi Arabia,C190,no,,,P
+SA,Saudi Arabia,P29,yes,26 May 2021,,P
+SA,Saudi Arabia,ICRMW,no,,,P
+SA,Saudi Arabia,ICESCR,no,,,P
+KW,Kuwait,C189,no,,,P
+KW,Kuwait,C181,no,,,P
+KW,Kuwait,C97,no,,,P
+KW,Kuwait,C143,no,,,P
+KW,Kuwait,C190,no,,,P
+KW,Kuwait,P29,no,,,P
+KW,Kuwait,ICRMW,no,,,P
+KW,Kuwait,ICESCR,yes,21 May 1996,,P
+QA,Qatar,C189,no,,,P
+QA,Qatar,C181,no,,,P
+QA,Qatar,C97,no,,,P
+QA,Qatar,C143,no,,,P
+QA,Qatar,C190,no,,,P
+QA,Qatar,P29,no,,,P
+QA,Qatar,ICRMW,no,,,P
+QA,Qatar,ICESCR,yes,21 May 2018,,P
+BH,Bahrain,C189,no,,,P
+BH,Bahrain,C181,no,,,P
+BH,Bahrain,C97,no,,,P
+BH,Bahrain,C143,no,,,P
+BH,Bahrain,C190,no,,,P
+BH,Bahrain,P29,no,,,P
+BH,Bahrain,ICRMW,no,,,P
+BH,Bahrain,ICESCR,yes,27 Sep 2007,,P
+OM,Oman,C189,no,,,P
+OM,Oman,C181,no,,,P
+OM,Oman,C97,no,,,P
+OM,Oman,C143,no,,,P
+OM,Oman,C190,no,,,P
+OM,Oman,P29,no,,,P
+OM,Oman,ICRMW,no,,,P
+OM,Oman,ICESCR,yes,9 Jun 2020,,P
+JO,Jordan,C189,no,,,P
+JO,Jordan,C181,no,,,P
+JO,Jordan,C97,no,,,P
+JO,Jordan,C143,no,,,P
+JO,Jordan,C190,no,,,P
+JO,Jordan,P29,no,,,P
+JO,Jordan,ICRMW,no,,,P
+JO,Jordan,ICESCR,yes,28 May 1975,,P
+LB,Lebanon,C189,no,,,P
+LB,Lebanon,C181,no,,,P
+LB,Lebanon,C97,no,,,P
+LB,Lebanon,C143,no,,,P
+LB,Lebanon,C190,no,,,P
+LB,Lebanon,P29,no,,,P
+LB,Lebanon,ICRMW,no,,,P
+LB,Lebanon,ICESCR,yes,3 Nov 1972,,P
+IL,Israel,C189,no,,,P
+IL,Israel,C181,yes,04 Oct 2012,,P
+IL,Israel,C97,yes,30 Mar 1953,,P
+IL,Israel,C143,no,,,P
+IL,Israel,C190,no,,,P
+IL,Israel,P29,yes,11 Oct 2018,,P
+IL,Israel,ICRMW,no,,,P
+IL,Israel,ICESCR,yes,3 Oct 1991,,P
+MA,Morocco,C189,no,,,P
+MA,Morocco,C181,yes,10 May 1999,,P
+MA,Morocco,C97,yes,14 Jun 2019,Annexes I-III excluded,P
+MA,Morocco,C143,no,,,P
+MA,Morocco,C190,no,,,P
+MA,Morocco,P29,no,,,P
+MA,Morocco,ICRMW,yes,21 Jun 1993,,P
+MA,Morocco,ICESCR,yes,3 May 1979,,P
+HK,Hong Kong SAR,C189,no,,Not declared applicable to Hong Kong SAR,P
+HK,Hong Kong SAR,C181,na,,Application to Hong Kong depends on China's declarations; not coded,S
+HK,Hong Kong SAR,C97,yes,01 Jul 1997,Declared applicable to Hong Kong SAR by China,P
+HK,Hong Kong SAR,C143,no,,Not declared applicable to Hong Kong SAR,P
+HK,Hong Kong SAR,C190,na,,Application to Hong Kong depends on China's declarations; not coded,S
+HK,Hong Kong SAR,P29,na,,Application to Hong Kong depends on China's declarations; not coded,S
+HK,Hong Kong SAR,ICRMW,na,,Application to Hong Kong depends on China's declarations; not coded,S
+HK,Hong Kong SAR,ICESCR,yes,27 Mar 2001,Applies to Hong Kong (China's party status),P
+SG,Singapore,C189,no,,,P
+SG,Singapore,C181,no,,,P
+SG,Singapore,C97,no,,,P
+SG,Singapore,C143,no,,,P
+SG,Singapore,C190,no,,,P
+SG,Singapore,P29,no,,,P
+SG,Singapore,ICRMW,no,,,P
+SG,Singapore,ICESCR,no,,,P
+MY,Malaysia,C189,no,,,P
+MY,Malaysia,C181,no,,,P
+MY,Malaysia,C97,yes,03 Mar 1964,Sabah only; Annexes I-III excluded,P
+MY,Malaysia,C143,no,,,P
+MY,Malaysia,C190,no,,,P
+MY,Malaysia,P29,yes,21 Mar 2022,,P
+MY,Malaysia,ICRMW,no,,,P
+MY,Malaysia,ICESCR,no,,,P
+TW,Taiwan,C189,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,C181,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,C97,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,C143,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,C190,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,P29,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,ICRMW,ne,,Not eligible to join UN or ILO treaties,S
+TW,Taiwan,ICESCR,ne,,Not eligible to join UN or ILO treaties,S
+TH,Thailand,C189,no,,,P
+TH,Thailand,C181,no,,,P
+TH,Thailand,C97,no,,,P
+TH,Thailand,C143,no,,,P
+TH,Thailand,C190,no,,,P
+TH,Thailand,P29,yes,04 Jun 2018,,P
+TH,Thailand,ICRMW,no,,,P
+TH,Thailand,ICESCR,yes,5 Sep 1999,,P
+PK,Pakistan,C189,no,,,P
+PK,Pakistan,C181,no,,,P
+PK,Pakistan,C97,no,,,P
+PK,Pakistan,C143,no,,,P
+PK,Pakistan,C190,no,,,P
+PK,Pakistan,P29,yes,14 Mar 2025,,P
+PK,Pakistan,ICRMW,no,,,P
+PK,Pakistan,ICESCR,yes,17 Apr 2008,,P
+IT,Italy,C189,yes,22 Jan 2013,,P
+IT,Italy,C181,yes,01 Feb 2000,,P
+IT,Italy,C97,yes,22 Oct 1952,,P
+IT,Italy,C143,yes,23 Jun 1981,,P
+IT,Italy,C190,yes,29 Oct 2021,,P
+IT,Italy,P29,pending,09 Jun 2026,"Ratified, not yet in force",P
+IT,Italy,ICRMW,no,,,P
+IT,Italy,ICESCR,yes,15 Sep 1978,,P
+ES,Spain,C189,yes,28 Feb 2023,,P
+ES,Spain,C181,yes,15 Jun 1999,,P
+ES,Spain,C97,yes,21 Mar 1967,,P
+ES,Spain,C143,no,,,P
+ES,Spain,C190,yes,25 May 2022,,P
+ES,Spain,P29,yes,20 Sep 2017,,P
+ES,Spain,ICRMW,no,,,P
+ES,Spain,ICESCR,yes,27 Apr 1977,,P
+GB,United Kingdom,C189,no,,,P
+GB,United Kingdom,C181,no,,,P
+GB,United Kingdom,C97,yes,22 Jan 1951,Annexes I and III excluded,P
+GB,United Kingdom,C143,no,,,P
+GB,United Kingdom,C190,yes,07 Mar 2022,,P
+GB,United Kingdom,P29,yes,22 Jan 2016,,P
+GB,United Kingdom,ICRMW,no,,,P
+GB,United Kingdom,ICESCR,yes,20 May 1976,,P
+US,United States,C189,no,,,P
+US,United States,C181,no,,,P
+US,United States,C97,no,,,P
+US,United States,C143,no,,,P
+US,United States,C190,no,,,P
+US,United States,P29,no,,,P
+US,United States,ICRMW,no,,,P
+US,United States,ICESCR,sig,,Signed only,P
+CA,Canada,C189,no,,,P
+CA,Canada,C181,no,,,P
+CA,Canada,C97,no,,,P
+CA,Canada,C143,no,,,P
+CA,Canada,C190,yes,30 Jan 2023,,P
+CA,Canada,P29,yes,17 Jun 2019,,P
+CA,Canada,ICRMW,no,,,P
+CA,Canada,ICESCR,yes,19 May 1976,,P
+AR,Argentina,C189,yes,24 Mar 2014,,P
+AR,Argentina,C181,no,,,P
+AR,Argentina,C97,no,,,P
+AR,Argentina,C143,no,,,P
+AR,Argentina,C190,yes,23 Feb 2021,,P
+AR,Argentina,P29,yes,09 Nov 2016,,P
+AR,Argentina,ICRMW,yes,23 Feb 2007,,P
+AR,Argentina,ICESCR,yes,8 Aug 1986,,P
+BR,Brazil,C189,yes,31 Jan 2018,,P
+BR,Brazil,C181,no,,,P
+BR,Brazil,C97,yes,18 Jun 1965,,P
+BR,Brazil,C143,no,,,P
+BR,Brazil,C190,no,,,P
+BR,Brazil,P29,yes,25 Aug 2025,,P
+BR,Brazil,ICRMW,no,,,P
+BR,Brazil,ICESCR,yes,24 Jan 1992,,P
+MX,Mexico,C189,yes,03 Jul 2020,,P
+MX,Mexico,C181,no,,,P
+MX,Mexico,C97,no,,,P
+MX,Mexico,C143,no,,,P
+MX,Mexico,C190,yes,06 Jul 2022,,P
+MX,Mexico,P29,yes,11 Jun 2023,,P
+MX,Mexico,ICRMW,yes,8 Mar 1999,,P
+MX,Mexico,ICESCR,yes,23 Mar 1981,,P
+CR,Costa Rica,C189,yes,20 Jan 2014,,P
+CR,Costa Rica,C181,no,,,P
+CR,Costa Rica,C97,no,,,P
+CR,Costa Rica,C143,no,,,P
+CR,Costa Rica,C190,yes,02 Oct 2025,,P
+CR,Costa Rica,P29,yes,16 Nov 2020,,P
+CR,Costa Rica,ICRMW,no,,,P
+CR,Costa Rica,ICESCR,yes,29 Nov 1968,,P
+BO,Bolivia,C189,yes,15 Apr 2013,,P
+BO,Bolivia,C181,no,,,P
+BO,Bolivia,C97,no,,,P
+BO,Bolivia,C143,no,,,P
+BO,Bolivia,C190,no,,,P
+BO,Bolivia,P29,no,,,P
+BO,Bolivia,ICRMW,yes,16 Oct 2000,,P
+BO,Bolivia,ICESCR,yes,12 Aug 1982,,P
+PE,Peru,C189,yes,26 Nov 2018,,P
+PE,Peru,C181,no,,,P
+PE,Peru,C97,no,,,P
+PE,Peru,C143,no,,,P
+PE,Peru,C190,yes,08 Jun 2022,,P
+PE,Peru,P29,yes,18 Jun 2021,,P
+PE,Peru,ICRMW,yes,14 Sep 2005,,P
+PE,Peru,ICESCR,yes,28 Apr 1978,,P
+CL,Chile,C189,yes,10 Jun 2015,,P
+CL,Chile,C181,no,,,P
+CL,Chile,C97,no,,,P
+CL,Chile,C143,no,,,P
+CL,Chile,C190,yes,12 Jun 2023,,P
+CL,Chile,P29,yes,19 Jan 2021,,P
+CL,Chile,ICRMW,yes,21 Mar 2005,,P
+CL,Chile,ICESCR,yes,10 Feb 1972,,P
+PY,Paraguay,C189,yes,07 May 2013,,P
+PY,Paraguay,C181,no,,,P
+PY,Paraguay,C97,no,,,P
+PY,Paraguay,C143,no,,,P
+PY,Paraguay,C190,no,,,P
+PY,Paraguay,P29,no,,,P
+PY,Paraguay,ICRMW,yes,23 Sep 2008,,P
+PY,Paraguay,ICESCR,yes,10 Jun 1992,,P
+UY,Uruguay,C189,yes,14 Jun 2012,,P
+UY,Uruguay,C181,yes,14 Jun 2004,,P
+UY,Uruguay,C97,yes,18 Mar 1954,,P
+UY,Uruguay,C143,no,,,P
+UY,Uruguay,C190,yes,12 Jun 2020,,P
+UY,Uruguay,P29,no,,,P
+UY,Uruguay,ICRMW,yes,15 Feb 2001,,P
+UY,Uruguay,ICESCR,yes,1 Apr 1970,,P
+ZA,South Africa,C189,yes,20 Jun 2013,,P
+ZA,South Africa,C181,no,,,P
+ZA,South Africa,C97,no,,,P
+ZA,South Africa,C143,no,,,P
+ZA,South Africa,C190,yes,29 Nov 2021,,P
+ZA,South Africa,P29,no,,,P
+ZA,South Africa,ICRMW,no,,,P
+ZA,South Africa,ICESCR,yes,12 Jan 2015,,P
+NA,Namibia,C189,yes,09 Dec 2020,,P
+NA,Namibia,C181,no,,,P
+NA,Namibia,C97,no,,,P
+NA,Namibia,C143,no,,,P
+NA,Namibia,C190,yes,09 Dec 2020,,P
+NA,Namibia,P29,yes,06 Nov 2017,,P
+NA,Namibia,ICRMW,no,,,P
+NA,Namibia,ICESCR,yes,28 Nov 1994,,P
+ZM,Zambia,C189,no,,,P
+ZM,Zambia,C181,yes,23 Dec 2013,,P
+ZM,Zambia,C97,yes,02 Dec 1964,Annexes I-III excluded,P
+ZM,Zambia,C143,no,,,P
+ZM,Zambia,C190,yes,13 Dec 2024,,P
+ZM,Zambia,P29,no,,,P
+ZM,Zambia,ICRMW,no,,,P
+ZM,Zambia,ICESCR,yes,10 Apr 1984,,P
+TZ,Tanzania,C189,no,,,P
+TZ,Tanzania,C181,no,,,P
+TZ,Tanzania,C97,yes,22 Jun 1964,Zanzibar only; Annexes I-III excluded,P
+TZ,Tanzania,C143,no,,,P
+TZ,Tanzania,C190,no,,,P
+TZ,Tanzania,P29,no,,,P
+TZ,Tanzania,ICRMW,no,,,P
+TZ,Tanzania,ICESCR,yes,11 Jun 1976,,P
+ID,Indonesia,C189,no,,,P
+ID,Indonesia,C181,no,,,P
+ID,Indonesia,C97,no,,,P
+ID,Indonesia,C143,no,,,P
+ID,Indonesia,C190,no,,,P
+ID,Indonesia,P29,no,,,P
+ID,Indonesia,ICRMW,yes,31 May 2012,,P
+ID,Indonesia,ICESCR,yes,23 Feb 2006,,P
+PH,Philippines,C189,yes,05 Sep 2012,,P
+PH,Philippines,C181,no,,,P
+PH,Philippines,C97,yes,21 Apr 2009,Annexes II-III excluded,P
+PH,Philippines,C143,yes,14 Sep 2006,,P
+PH,Philippines,C190,yes,20 Feb 2024,,P
+PH,Philippines,P29,no,,,P
+PH,Philippines,ICRMW,yes,5 Jul 1995,,P
+PH,Philippines,ICESCR,yes,7 Jun 1974,,P
+VN,Viet Nam,C189,no,,,P
+VN,Viet Nam,C181,no,,,P
+VN,Viet Nam,C97,no,,,P
+VN,Viet Nam,C143,no,,,P
+VN,Viet Nam,C190,no,,,P
+VN,Viet Nam,P29,no,,,P
+VN,Viet Nam,ICRMW,no,,,P
+VN,Viet Nam,ICESCR,yes,24 Sep 1982,,P
+LK,Sri Lanka,C189,no,,,P
+LK,Sri Lanka,C181,no,,,P
+LK,Sri Lanka,C97,no,,,P
+LK,Sri Lanka,C143,no,,,P
+LK,Sri Lanka,C190,pending,16 Apr 2026,"Ratified, not yet in force",P
+LK,Sri Lanka,P29,yes,10 Apr 2019,,P
+LK,Sri Lanka,ICRMW,yes,11 Mar 1996,,P
+LK,Sri Lanka,ICESCR,yes,11 Jun 1980,,P
+NP,Nepal,C189,no,,,P
+NP,Nepal,C181,no,,,P
+NP,Nepal,C97,no,,,P
+NP,Nepal,C143,no,,,P
+NP,Nepal,C190,no,,,P
+NP,Nepal,P29,pending,07 Aug 2026,"Ratified, not yet in force",P
+NP,Nepal,ICRMW,no,,,P
+NP,Nepal,ICESCR,yes,14 May 1991,,P
+IN,India,C189,no,,,P
+IN,India,C181,no,,,P
+IN,India,C97,no,,,P
+IN,India,C143,no,,,P
+IN,India,C190,no,,,P
+IN,India,P29,no,,,P
+IN,India,ICRMW,no,,,P
+IN,India,ICESCR,yes,10 Apr 1979,,P
+BD,Bangladesh,C189,no,,,P
+BD,Bangladesh,C181,no,,,P
+BD,Bangladesh,C97,no,,,P
+BD,Bangladesh,C143,no,,,P
+BD,Bangladesh,C190,pending,20 Nov 2025,"Ratified, not yet in force",P
+BD,Bangladesh,P29,yes,20 Jan 2022,,P
+BD,Bangladesh,ICRMW,yes,24 Aug 2011,,P
+BD,Bangladesh,ICESCR,yes,5 Oct 1998,,P
+ET,Ethiopia,C189,no,,,P
+ET,Ethiopia,C181,yes,24 Mar 1999,,P
+ET,Ethiopia,C97,no,,,P
+ET,Ethiopia,C143,no,,,P
+ET,Ethiopia,C190,no,,,P
+ET,Ethiopia,P29,no,,,P
+ET,Ethiopia,ICRMW,no,,,P
+ET,Ethiopia,ICESCR,yes,11 Jun 1993,,P
+KE,Kenya,C189,no,,,P
+KE,Kenya,C181,no,,,P
+KE,Kenya,C97,yes,30 Nov 1965,Annexes I-III excluded,P
+KE,Kenya,C143,yes,09 Apr 1979,,P
+KE,Kenya,C190,no,,,P
+KE,Kenya,P29,no,,,P
+KE,Kenya,ICRMW,no,,,P
+KE,Kenya,ICESCR,yes,1 May 1972,,P
+UG,Uganda,C189,no,,,P
+UG,Uganda,C181,no,,,P
+UG,Uganda,C97,no,,,P
+UG,Uganda,C143,yes,31 Mar 1978,,P
+UG,Uganda,C190,yes,07 Aug 2023,,P
+UG,Uganda,P29,no,,,P
+UG,Uganda,ICRMW,yes,14 Nov 1995,,P
+UG,Uganda,ICESCR,yes,21 Jan 1987,,P

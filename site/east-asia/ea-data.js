@@ -1,0 +1,438 @@
+/* East Asia comparative labor law: data and codebook (version 1.5, coded 31 October 2026, checked 13 November 2026).
+   Every coded value carries its own note, source and verification status. "checked" means compared with the official
+   legal text; everything else rests on the secondary sources named. Corrections: secretariat@theimr.org */
+window.EA = {
+  updated: "13 November 2026",
+  version: "1.5",
+
+  /* Cells compared with the official legal text on 13 November 2026 (all 70 rechecked; first check 31 October 2026): "confirmed" or "partly" (part of the note rests on a secondary source, on official ministry or agency guidance rather than legislation, or on our reading). Files: IMR-data/east-asia-check-2026-10-31 and IMR-data/east-asia-verify-2026-11-13. */
+  checked_on: "2026-11-13",
+  checked: {
+    "TW-DWF.lab":"partly", "TW-DWF.wage":"confirmed", "TW-DWF.hours":"confirmed", "TW-DWF.mob":"confirmed", "TW-DWF.fees":"confirmed", "TW-DWF.ins":"confirmed", "TW-DWF.comp":"confirmed", "TW-DWF.res":"confirmed", "TW-DWF.fam":"confirmed",
+    "TW-C.lab":"confirmed", "TW-C.wage":"confirmed", "TW-C.hours":"confirmed", "TW-C.mob":"confirmed", "TW-C.union":"confirmed", "TW-C.fees":"confirmed", "TW-C.ins":"confirmed", "TW-C.res":"partly", "TW-C.fam":"confirmed", "TW-C.comp":"partly",
+    "KR-E10.lab":"confirmed", "KR-E10.wage":"partly", "KR-E10.hours":"confirmed", "KR-E10.fees":"confirmed", "KR-E10.ins":"partly", "KR-E10.res":"partly", "KR-E10.fam":"confirmed", "KR-E10.comp":"partly",
+    "KR-E9.lab":"confirmed", "KR-E9.wage":"confirmed", "KR-E9.hours":"confirmed", "KR-E9.mob":"confirmed", "KR-E9.union":"confirmed", "KR-E9.fees":"confirmed", "KR-E9.ins":"confirmed", "KR-E9.res":"partly", "KR-E9.fam":"confirmed", "KR-E9.comp":"partly",
+    "HK-FDH.lab":"confirmed", "HK-FDH.wage":"confirmed", "HK-FDH.hours":"confirmed", "HK-FDH.mob":"partly", "HK-FDH.fees":"confirmed", "HK-FDH.res":"confirmed", "HK-FDH.fam":"partly", "HK-FDH.ins":"partly", "HK-FDH.comp":"partly",
+    "JP-TITP.lab":"confirmed", "JP-TITP.wage":"confirmed", "JP-TITP.hours":"confirmed", "JP-TITP.mob":"confirmed", "JP-TITP.union":"confirmed", "JP-TITP.ins":"confirmed", "JP-TITP.res":"confirmed", "JP-TITP.fam":"confirmed", "JP-TITP.comp":"partly",
+    "JP-SSW.lab":"confirmed", "JP-SSW.wage":"confirmed", "JP-SSW.hours":"confirmed", "JP-SSW.mob":"confirmed", "JP-SSW.union":"confirmed", "JP-SSW.fees":"confirmed", "JP-SSW.ins":"confirmed", "JP-SSW.res":"confirmed", "JP-SSW.fam":"confirmed"
+  },
+
+  states: [
+    {k:"TW", iso3:"TWN", n:"Taiwan", n_id:"Taiwan",
+     focus:"Migrant fishers, especially crew of the distant-water fleet", focus_id:"Nelayan migran, terutama awak armada perikanan jarak jauh",
+     law:"Labor Standards Act 1984; Employment Service Act 1992; Act for Distant Water Fisheries 2016 and the Regulations on the Authorization and Management of Overseas Employment of Foreign Crew Members 2017",
+     status:"Not a member of the UN or the ILO, so it cannot ratify their treaties. It gave the two UN covenants domestic legal force by statute in 2009 and has its periodic reports reviewed by independent international experts.",
+     status_id:"Bukan anggota PBB maupun ILO, sehingga tidak bisa meratifikasi traktat keduanya. Taiwan memberi kekuatan hukum domestik kepada kedua kovenan PBB melalui undang-undang pada 2009, dan laporan berkalanya ditinjau oleh pakar internasional independen.",
+     complaints:"1955 Foreign Worker Hotline (24 hours, free, several languages); local labor bureaus for mediation; labor courts under the Labor Incident Act 2020; Fisheries Agency for distant-water crew; National Human Rights Commission (since 2020).",
+     complaints_id:"Saluran 1955 (24 jam, gratis, beberapa bahasa); dinas tenaga kerja setempat untuk mediasi; pengadilan perburuhan menurut UU Perkara Ketenagakerjaan 2020; Badan Perikanan untuk awak kapal jarak jauh; Komnas HAM Taiwan (sejak 2020)."},
+    {k:"KR", iso3:"KOR", n:"South Korea", n_id:"Korea Selatan",
+     focus:"Migrant fishers on coastal vessels and on the distant-water fleet", focus_id:"Nelayan migran di kapal pesisir dan armada jarak jauh",
+     law:"Labor Standards Act 1953 (Art. 63 excludes agriculture and fisheries from working-time rules); Act on the Employment of Foreign Workers 2003 (Employment Permit System); Seafarers Act (vessels of 20 tons and over)",
+     status:"UN and ILO member. Ratified ILO forced-labor and freedom-of-association conventions in 2021.",
+     status_id:"Anggota PBB dan ILO. Meratifikasi konvensi ILO tentang kerja paksa dan kebebasan berserikat pada 2021.",
+     complaints:"Regional labor offices (petitions on unpaid wages); 1350 labor hotline and 1577-0071 counseling line for foreign workers; Labor Relations Commissions; Ministry of Oceans and Fisheries for seafarers; National Human Rights Commission of Korea; migrant worker support centers.",
+     complaints_id:"Kantor tenaga kerja daerah (pengaduan upah tidak dibayar); saluran 1350 dan saluran konseling pekerja asing 1577-0071; Komisi Hubungan Industrial; Kementerian Kelautan dan Perikanan untuk pelaut; Komnas HAM Korea; pusat dukungan pekerja migran."},
+    {k:"HK", iso3:"HKG", n:"Hong Kong", n_id:"Hong Kong",
+     focus:"Foreign domestic helpers", focus_id:"Pekerja rumah tangga asing",
+     law:"Employment Ordinance (Cap. 57); Minimum Wage Ordinance (Cap. 608), which excludes live-in domestic workers; Employment Agency Regulations (Cap. 57A); Standard Employment Contract (ID 407) set by the Immigration Department",
+     status:"A Special Administrative Region of China. UN treaties and ILO conventions apply as extended by the United Kingdom before 1997 or by China since; Hong Kong cannot ratify on its own.",
+     status_id:"Daerah Administratif Khusus Tiongkok. Traktat PBB dan konvensi ILO berlaku sebagaimana diperluas oleh Inggris sebelum 1997 atau oleh Tiongkok sejak itu; Hong Kong tidak bisa meratifikasi sendiri.",
+     complaints:"Labour Department conciliation; Labour Tribunal and Minor Employment Claims Adjudication Board; Labour Department hotline for helpers; Equal Opportunities Commission; consulates of the sending states.",
+     complaints_id:"Konsiliasi Departemen Tenaga Kerja; Pengadilan Perburuhan dan Badan Ajudikasi Klaim Kecil; saluran khusus Departemen Tenaga Kerja untuk PRT; Komisi Kesetaraan Kesempatan; konsulat negara pengirim."},
+    {k:"JP", iso3:"JPN", n:"Japan", n_id:"Jepang",
+     focus:"Technical Intern Training (to be replaced by Employment for Skill Development in April 2027) and Specified Skilled Worker", focus_id:"Pemagangan Teknis (diganti Pengembangan Keterampilan Kerja pada April 2027) dan Pekerja Berketerampilan Spesifik",
+     law:"Labor Standards Act 1947 (Art. 41 excludes agriculture, livestock and fisheries from working-time rules); Immigration Control and Refugee Recognition Act; Technical Intern Training Act 2016; amending act of June 2024 creating Employment for Skill Development",
+     status:"UN and ILO member. Has accepted no UN individual complaints procedure.",
+     status_id:"Anggota PBB dan ILO. Belum menerima prosedur pengaduan individu PBB mana pun.",
+     complaints:"Labor Standards Inspection Offices; prefectural labor bureaus (dispute adjustment); Organization for Technical Intern Training, with consultation in workers' languages; Japan Legal Support Center (Houterasu).",
+     complaints_id:"Kantor Pengawas Standar Ketenagakerjaan; biro tenaga kerja prefektur (penyelesaian sengketa); Organisasi Pemagangan Teknis, dengan konsultasi dalam bahasa pekerja; Pusat Bantuan Hukum Jepang (Houterasu)."}
+  ],
+
+  /* Codebook. Each protection is coded for the law as written (de jure), 2 / 1 / 0. Practice is described in the notes, never coded. */
+  codebook: [
+    {k:"lab", en:"Coverage by labor statute", id:"Cakupan undang-undang ketenagakerjaan",
+     l2:"The general labor statute applies in full", l1:"A labor statute applies with exclusions, or a sector-specific labor statute applies", l0:"Only administrative regulations under a non-labor statute apply",
+     l2_id:"UU ketenagakerjaan umum berlaku penuh", l1_id:"UU ketenagakerjaan berlaku dengan pengecualian, atau berlaku UU ketenagakerjaan sektoral", l0_id:"Hanya peraturan administratif di bawah UU non-ketenagakerjaan"},
+    {k:"wage", en:"Minimum wage", id:"Upah minimum",
+     l2:"The national statutory minimum wage applies", l1:"A separate floor applies that is lower than, or not linked to, the national minimum", l0:"No wage floor",
+     l2_id:"Upah minimum nasional berlaku", l1_id:"Berlaku batas terpisah yang lebih rendah atau tidak terkait dengan upah minimum nasional", l0_id:"Tidak ada batas upah"},
+    {k:"hours", en:"Working time and rest", id:"Waktu kerja dan istirahat",
+     l2:"Statutory limits on hours apply", l1:"Only minimum rest periods apply, or limits apply with sector exclusions", l0:"Excluded from working-time rules",
+     l2_id:"Batas jam kerja berlaku", l1_id:"Hanya waktu istirahat minimum, atau batas berlaku dengan pengecualian sektor", l0_id:"Dikecualikan dari aturan waktu kerja"},
+    {k:"mob", en:"Changing employer", id:"Pindah majikan",
+     l2:"May change employer without the employer's consent", l1:"May change only on listed grounds, a limited number of times or with official approval", l0:"Cannot change without the employer's consent",
+     l2_id:"Boleh pindah tanpa izin majikan", l1_id:"Hanya dengan alasan tertentu, terbatas jumlahnya, atau dengan persetujuan resmi", l0_id:"Tidak bisa pindah tanpa izin majikan"},
+    {k:"union", en:"Freedom of association", id:"Kebebasan berserikat",
+     l2:"May form and join unions on equal terms", l1:"May join but faces legal limits, or residence status makes membership largely theoretical", l0:"Barred",
+     l2_id:"Boleh membentuk dan bergabung dalam serikat secara setara", l1_id:"Boleh bergabung tetapi ada batasan hukum, atau status tinggal membuatnya hanya teoretis", l0_id:"Dilarang"},
+    {k:"fees", en:"Recruitment fees", id:"Biaya rekrutmen",
+     l2:"Fees charged to the worker are prohibited in the destination's law", l1:"Fees charged to the worker are capped or regulated", l0:"Fees are not regulated",
+     l2_id:"Biaya yang dibebankan kepada pekerja dilarang", l1_id:"Biaya dibatasi atau diatur", l0_id:"Biaya tidak diatur"},
+    {k:"ins", en:"Social insurance", id:"Jaminan sosial",
+     l2:"Enrolled in the national labor or health insurance schemes", l1:"Only employer-bought private or accident insurance is required", l0:"No insurance required",
+     l2_id:"Terdaftar dalam jaminan ketenagakerjaan atau kesehatan nasional", l1_id:"Hanya asuransi swasta atau kecelakaan dari majikan yang diwajibkan", l0_id:"Tidak ada kewajiban asuransi"},
+    {k:"comp", en:"Complaint channel", id:"Saluran pengaduan",
+     l2:"A dedicated public channel for migrant workers in their languages", l1:"Only general channels, or channels hard to reach from the workplace (for example at sea)", l0:"No accessible channel",
+     l2_id:"Saluran publik khusus pekerja migran dalam bahasa mereka", l1_id:"Hanya saluran umum, atau sulit dijangkau dari tempat kerja (misalnya di laut)", l0_id:"Tidak ada saluran yang bisa diakses"},
+    {k:"res", en:"Route to long-term residence", id:"Jalur ke izin tinggal jangka panjang",
+     l2:"Time in the status counts toward permanent residence", l1:"May move to another status that can lead to permanent residence, on conditions", l0:"No route: fixed maximum stay, or time does not count",
+     l2_id:"Masa tinggal dihitung untuk izin tinggal tetap", l1_id:"Bisa beralih ke status lain yang bisa mengarah ke izin tinggal tetap, dengan syarat", l0_id:"Tidak ada jalur: batas tinggal tetap, atau masa tinggal tidak dihitung"},
+    {k:"fam", en:"Family may accompany", id:"Keluarga boleh ikut",
+     l2:"Spouse and children may accompany or join", l1:"Only in a later status or on conditions", l0:"Barred",
+     l2_id:"Pasangan dan anak boleh ikut atau menyusul", l1_id:"Hanya pada status berikutnya atau dengan syarat", l0_id:"Dilarang"}
+  ],
+
+  /* Worker groups: the unit of comparison. size = best available headcount; codes = [value, note, source]. */
+  groups: [
+    {k:"TW-DWF", s:"TW", n:"Taiwan · distant-water fishing crew", n_id:"Taiwan · awak kapal ikan jarak jauh", flagship:true,
+     basis:"Recruited abroad through licensed overseas agencies; never admitted to Taiwan as workers. Regulated by the Fisheries Agency, not the Ministry of Labor.",
+     basis_id:"Direkrut di luar negeri melalui agensi luar negeri berizin; tidak pernah masuk Taiwan sebagai pekerja. Diatur Badan Perikanan, bukan Kementerian Tenaga Kerja.",
+     size:[18864, "2020", "Fisheries Agency, cited in NYCU CJD Project (2020)"],
+     codes:{
+      lab:[0, "Labor terms sit in regulations under the Act for Distant Water Fisheries (Art. 26), outside the Labor Standards Act. A pending civil case (the Yu Fu case, hearings 2025) argues the Labor Standards Act should apply.", "Act for Distant Water Fisheries 2016; NYCU Transit Asia court observation 2025"],
+      wage:[1, "The Regulations set a minimum of US$550 a month, adjustable by annual announcement (Art. 6-1(2), added 18 Nov 2025). US$570 for crew newly recruited from 2026 is reported by the Ministry of Agriculture, but the Fisheries Agency notice could not be found or reached (rechecked 13 Nov 2026), so that figure is unverified. Both are well below Taiwan's national minimum wage under the Minimum Wage Act (in force 1 Jan 2024; NT$29,500 a month in 2026, rising to NT$30,900 from 1 Jan 2027, per the Ministry of Labor).", "Overseas Employment Regulations Art. 6-1(2) (amended 18 Nov 2025); Minimum Wage Act; Ministry of Agriculture annual report 2025; Focus Taiwan, 6 Jan 2026"],
+      hours:[1, "At least 10 hours of rest in any 24 (6 of them consecutive) and 77 hours in any 7 days, benchmarked to ILO C188; temporary exceptions with compensatory rest; no limit on hours as such.", "Overseas Employment Regulations Art. 6(1)(7); ICSF Samudra 88 (2022)"],
+      mob:[0, "Contracts are with the vessel operator through an overseas agency. A transfer procedure exists, but only with the former operator's signed release, so crew cannot change employer without consent. Agencies may not force a transfer.", "Overseas Employment Regulations Arts 4, 13(2)(6), 24, 25"],
+      union:[1, "No statutory bar, but crew who never enter Taiwan's labor market cannot in practice join a Taiwanese union. Indonesian unions seek a bilateral agreement.", "Focus Taiwan, 1 Mar 2024"],
+      fees:[2, "The Regulations bar agencies from charging crew service or recruitment fees and from withholding wages as a penalty, bar operators from making crew bear recruitment costs or keeping passports (safekeeping with consent allowed), and require full, direct wage payment. Recoded from 1 to 2 after checking the text; NGOs still report deposits and deductions in practice, which this de jure code does not capture.", "Overseas Employment Regulations Arts 13(2)(3), 13(2)(5), 30(4), 30(19), 30(20); Greenpeace, Choppy Waters (2020)"],
+      ins:[1, "Employer-bought accident, life and medical insurance (medical cover at least NT$300,000, death cover at least NT$1.5 million, payable to the crew member); not national labor insurance.", "Overseas Employment Regulations Art. 6(1)(3)"],
+      comp:[1, "The 1955 hotline accepts calls, and vessels must allow crew to communicate, but access at sea is limited. Since the 18 November 2025 amendment, operators must join a wage-advance mechanism or give a bank guarantee before hiring, and report wage payments within 10 days.", "Overseas Employment Regulations Arts 2-1, 6-1 (amended 18 Nov 2025); Ministry of Agriculture, 18 Nov 2025"],
+      res:[0, "Crew are never admitted to Taiwan as workers; no residence accrues.", "Overseas Employment Regulations"],
+      fam:[0, "Not applicable: no residence in Taiwan.", "Overseas Employment Regulations"]}},
+    {k:"TW-C", s:"TW", n:"Taiwan · coastal and offshore fishers", n_id:"Taiwan · nelayan pesisir dan lepas pantai",
+     basis:"Admitted to Taiwan with an employment permit under the Employment Service Act; work on Taiwan-based vessels.",
+     basis_id:"Masuk Taiwan dengan izin kerja menurut UU Layanan Ketenagakerjaan; bekerja di kapal yang berpangkalan di Taiwan.",
+     size:[11343, "2020", "Fisheries Agency, cited in NYCU CJD Project (2020)"],
+     codes:{
+      lab:[2, "The Labor Standards Act applies to fishing employers.", "Labor Standards Act; Ministry of Labor"],
+      wage:[2, "The national minimum wage under the Minimum Wage Act (in force 1 Jan 2024) applies, replacing the basic wage; the reported rule allowing deductions for board and lodging was not confirmed from an official text.", "Minimum Wage Act Art. 3; Ministry of Labor"],
+      hours:[2, "Labor Standards Act hours apply in law; enforcement on board is reported to be weak.", "Labor Standards Act; ICSF Samudra 88 (2022)"],
+      mob:[1, "Transfer only on grounds listed in Employment Service Act Art. 59 (for example closure, abuse, employer's death) or by three-party agreement. The rule requiring workers to leave Taiwan for a day before starting a new contract (Art. 52(4)) was deleted in November 2016. Total stay remains capped at 12 years (14 for qualifying home carers).", "Employment Service Act Arts 52, 59"],
+      union:[2, "May join and form unions; the Yilan Migrant Fishermen Union was registered in 2013.", "Trade Union Act; union records"],
+      fees:[1, "Broker service fees are capped by the Ministry of Labor (monthly, falling with years of service); fees in sending countries vary.", "Ministry of Labor fee standards"],
+      ins:[2, "Labor insurance since the early 1990s and National Health Insurance; work-permit holders are enrolled in NHI at once, without the six-month wait that applies to other foreign residents.", "Labor Insurance Act; National Health Insurance Act; Oishi and Chien (2026)"],
+      comp:[2, "1955 hotline in five languages; local labor bureaus.", "Ministry of Labor (official guidance)"],
+      res:[1, "Since 30 April 2022 migrant workers with six years' continuous service may be retained as intermediate skilled workers. Time as an ordinary migrant worker does not count toward permanent residence (Immigration Act Art. 25), so the route runs through years in the intermediate status; this reading is ours and is not stated by the Ministry. The route now rests on a new regulation in force from 30 Dec 2025, with a wage threshold of NT$35,000 a month for fishing.", "Ministry of Labor, Long-term Retention of Migrant Workers Program (releases 17 Feb and 29 Apr 2022) and regulation of 30 Dec 2025 (official guidance); Immigration Act Arts 23, 25"],
+      fam:[0, "Families of migrant workers under Employment Service Act Art. 46(1)(8)–(10) cannot obtain residence.", "Immigration Act Art. 23(1)"]}},
+    {k:"KR-E10", s:"KR", n:"South Korea · crew of vessels of 20 tons and over (E-10)", n_id:"Korea Selatan · awak kapal 20 ton ke atas (E-10)", flagship:true,
+     basis:"E-10 crew visa for coastal vessels of 20 tons and over; distant-water crew are hired through manning agencies.",
+     basis_id:"Visa awak E-10 untuk kapal pesisir 20 ton ke atas; awak kapal jarak jauh direkrut melalui agensi awak.",
+     size:[4352, "2024", "Distant-water fleet only, 184 vessels; Pulitzer Center reporting (2025)"],
+     codes:{
+      lab:[1, "The Seafarers Act, a sector-specific labor statute, applies instead of the Labor Standards Act. It excludes fishing vessels under 20 tons that a Ministry of Oceans and Fisheries ordinance names.", "Seafarers Act Art. 3(1) proviso item 3"],
+      wage:[1, "Wages for foreign crew are set by collective agreement between shipowners and the seafarers' union, below Korean crew; the Minister may set a seafarers' minimum wage (KRW 2,694,560 a month in 2026) and the Act draws no nationality line. The Ministry of Oceans and Fisheries notice setting the 2026 figure lets a collective agreement set the minimum for foreign crew, which is why the code is 1 (official guidance, not legislation).", "Seafarers Act Art. 59; Ministry of Oceans and Fisheries Notice 2025-200 (official guidance); NHRCK recommendations to the Ministry of Oceans and Fisheries; Korea Times, 12 Jul 2023"],
+      hours:[0, "The Seafarers Act's working-time chapter (Chapter 6, including the Art. 60 hours and rest rules) does not apply to fishing vessels other than fish carriers. The Minister may set separate standards, but none were found in the Act or its Enforcement Rule. Recoded from 1 to 0 on 13 Nov 2026.", "Seafarers Act Arts 60, 68(1)(ii), 68(2); Enforcement Rule Art. 46"],
+      mob:[0, "Placement runs through manning agencies; changing vessel needs the shipowner's release. Under review: the Immigration Act and the Ministry of Justice visa manual allow a change of vessel with the Ministry's prior permission on listed grounds, and no shipowner-consent rule was found in them, which would support a code of 1; the Ministry of Oceans and Fisheries guideline requires repatriation when the contract ends. Editors to decide.", "NHRCK; EJF (2024); Immigration Act; Ministry of Justice visa manual and Ministry of Oceans and Fisheries guideline (official guidance)"],
+      union:[1, "May join the Korean seafarers' union that negotiates their wages, but have little voice in it.", "Secondary sources"],
+      fees:[2, "The Seafarers Act bars anyone who recruits, places or manages seafarers from taking money from them on any pretext, with no nationality limit, and penalizes breaches. Owners hiring through agencies in states outside the Maritime Labour Convention must check that the agency meets its standards. Fees charged by sending-country agencies remain an enforcement gap. Recoded from 1 to 2 on 13 Nov 2026.", "Seafarers Act Arts 111, 113(2); World Fishing / EJF, Mar 2024"],
+      ins:[2, "A statutory fishing-vessel crew accident insurance is compulsory for owners of covered vessels, replacing industrial accident insurance, with no nationality exclusion; registered foreign workers at covered workplaces are also enrolled in National Health Insurance. Distant-water and family-only vessels are excepted. Recoded from 1 to 2 on 13 Nov 2026 (coding judgment: the sector-specific statutory scheme is treated as the national scheme).", "Fishing Vessel Crew Insurance Act Arts 6, 16; National Health Insurance Act Art. 109(2)"],
+      comp:[1, "General labor and maritime channels. In 2026 the Ministry of Gender Equality and Family issued indicators for identifying trafficking victims (often reported as forced-labor guidelines for migrant fishers).", "Ministry of Gender Equality and Family Notice 2026-32 (official guidance); Korea Times, 2 Sep 2026"],
+      res:[1, "E-10 holders may switch to the skilled-worker status (E-7-4) for long-term residence (confirmed by the Ministry of Justice, 22 Oct 2026). The Ministry's guidance sets the conditions: at least four years' stay, 200 points, annual income of KRW 25 million and Korean language level 2, with a quota of 33,000 for 2026.", "Ministry of Justice release, 22 Oct 2026; Ministry of Justice visa manual (official guidance)"],
+      fam:[0, "E-10 holders are not among the statuses whose spouses and children may receive the F-3 dependant visa.", "Immigration Act Enforcement Decree, Annex 1-2 item 25"]}},
+    {k:"KR-E9", s:"KR", n:"South Korea · coastal fishers and aquaculture (E-9)", n_id:"Korea Selatan · nelayan pesisir dan budidaya (E-9)",
+     basis:"Employment Permit System, government-to-government recruitment with 17 sending states; vessels under 20 tons and fish farms.",
+     basis_id:"Sistem Izin Kerja, rekrutmen antarpemerintah dengan 17 negara pengirim; kapal di bawah 20 ton dan tambak.",
+     size:[null, "", "No official count found"],
+     codes:{
+      lab:[1, "The Labor Standards Act applies, but Art. 63 excludes fisheries from its working-time, rest and holiday rules.", "Labor Standards Act Art. 63"],
+      wage:[2, "The national minimum wage applies.", "Minimum Wage Act"],
+      hours:[0, "Excluded from working-time limits by Art. 63.", "Labor Standards Act Art. 63"],
+      mob:[1, "May change workplace only on listed grounds: at most three times in the initial three years and twice in the extension; changes caused by the employer do not count.", "Act on the Employment of Foreign Workers Art. 25(1), (4)"],
+      union:[2, "May form and join unions; the Supreme Court recognized the Migrants' Trade Union in 2015.", "Supreme Court of Korea, 25 Jun 2015"],
+      fees:[2, "Recruitment is run by public agencies in both states; private brokers are excluded.", "Act on the Employment of Foreign Workers"],
+      ins:[2, "National Health Insurance from the start of employment at covered workplaces, unlike the residence condition for other foreign residents; work accidents on fishing vessels are covered by the statutory fishing-vessel crew insurance rather than industrial accident insurance, and small fishery businesses must take out accident insurance for EPS workers.", "National Health Insurance Act Art. 109(2); Fishing Vessel Crew Insurance Act Art. 6; Act on the Employment of Foreign Workers Art. 23(2); Oishi and Chien (2026)"],
+      comp:[2, "Counseling line for foreign workers (1577-0071) in several languages, alongside the general 1350 labor hotline; migrant worker support centers.", "Ministry of Employment and Labor (official guidance)"],
+      res:[1, "E-9 holders may switch to the skilled-worker status (E-7-4) for long-term residence (confirmed by the Ministry of Justice, 22 Oct 2026). The Ministry's guidance sets the conditions: at least four years' stay, 200 points, annual income of KRW 25 million and Korean language level 2, with a quota of 33,000 for 2026.", "Ministry of Justice release, 22 Oct 2026; Ministry of Justice visa manual (official guidance)"],
+      fam:[0, "E-9 holders are not among the statuses whose spouses and children may receive the F-3 dependant visa.", "Immigration Act Enforcement Decree, Annex 1-2 item 25"]}},
+    {k:"HK-FDH", s:"HK", n:"Hong Kong · foreign domestic helpers", n_id:"Hong Kong · pekerja rumah tangga asing", flagship:true,
+     basis:"Admitted under the Standard Employment Contract; must live in the employer's home (rule since 2003); may not change sector.",
+     basis_id:"Masuk dengan Kontrak Kerja Standar; wajib tinggal di rumah majikan (sejak 2003); tidak boleh pindah sektor.",
+     size:[378830, "2025", "Immigration Department open data, end of 2025"],
+     codes:{
+      lab:[2, "The Employment Ordinance applies in full.", "Employment Ordinance (Cap. 57)"],
+      wage:[1, "The statutory minimum wage does not apply to domestic workers who live in the household free of charge, a class wider than foreign helpers. A Minimum Allowable Wage set by government applies instead: HK$5,100 for contracts from 30 Sep 2025 and HK$5,220 for contracts signed on or after 3 Oct 2026, plus food or a food allowance.", "Minimum Wage Ordinance (Cap. 608) s. 7(3); HKSAR press releases, 29 Sep 2025 and 2 Oct 2026"],
+      hours:[1, "No statutory limit on hours (none exists for any worker in Hong Kong); a weekly rest day and statutory holidays apply.", "Employment Ordinance Parts IV and VIII"],
+      mob:[1, "May change employer, but must normally leave Hong Kong within two weeks of the contract ending and apply from abroad; frequent changes are refused as 'job-hopping'.", "Immigration Department, Foreign Domestic Helpers page and guidance (official guidance)"],
+      union:[2, "May form and join unions under the Trade Unions Ordinance.", "Trade Unions Ordinance (Cap. 332)"],
+      fees:[1, "Agencies may charge job-seekers no more than 10% of the first month's wage.", "Employment Agency Regulations (Cap. 57A) reg. 10(2), Second Schedule Part II"],
+      ins:[1, "Employees' compensation insurance is compulsory and the employer must provide free medical treatment; helpers are exempt from the Mandatory Provident Fund.", "Employees' Compensation Ordinance; Standard Employment Contract (ID 407) cl. 9(a)"],
+      comp:[2, "Labour Department hotline and a dedicated portal for helpers in 12 languages.", "fdh.labour.gov.hk (official guidance)"],
+      res:[0, "Time as a helper does not count as ordinary residence for permanent residence (Immigration Ordinance s. 2(4)(a)(vi)); upheld by the Court of Final Appeal in Vallejos (2013).", "Immigration Ordinance (Cap. 115); Vallejos v Commissioner of Registration, FACV 19/2012 (2013)"],
+      fam:[0, "Helpers may not bring dependants.", "Immigration Department guidance (official guidance)"]}},
+    {k:"JP-TITP", s:"JP", n:"Japan · technical intern trainees", n_id:"Jepang · peserta pemagangan teknis", flagship:true,
+     basis:"Technical Intern Training, officially a skills-transfer scheme, in about 90 job types including fishing and aquaculture. To be replaced by Employment for Skill Development from 1 April 2027.",
+     basis_id:"Pemagangan Teknis, secara resmi skema alih keterampilan, di sekitar 90 jenis pekerjaan termasuk perikanan. Diganti Pengembangan Keterampilan Kerja mulai 1 April 2027.",
+     size:[499394, "Oct 2025", "Ministry of Health, Labour and Welfare, foreign employment report (October 2025), workers in Technical Intern Training"],
+     codes:{
+      lab:[2, "The Labor Standards Act applies to trainees as employees.", "Technical Intern Training Act 2016"],
+      wage:[2, "Prefectural minimum wages apply.", "Minimum Wage Act"],
+      hours:[1, "Hours, break and rest-day rules apply, except in agriculture, livestock, sericulture and fisheries; forestry is not exempt.", "Labor Standards Act Art. 41(i) and Appended Table 1 items 6–7"],
+      mob:[0, "The current Act gives trainees no right to request a change of employer. Under Employment for Skill Development (from 1 April 2027) a worker may request a change in the same field after a period of one to two years set by ordinance, subject to skill and Japanese-language standards, with exceptions for unavoidable circumstances.", "Technical Intern Training Act (No. 89 of 2016) Art. 19; amending Act No. 60 of 2024, Arts 8-2, 9-2"],
+      union:[2, "May form and join unions.", "Trade Union Act"],
+      fees:[1, "Bilateral memoranda bind sending states to screen agencies; fees charged in sending countries are not prohibited under Japanese law. The 2027 system is to share costs with employers.", "Memoranda of cooperation; US TIP Report 2025"],
+      ins:[2, "Enrolled in employees' health and pension insurance (all legal residents staying over three months must be enrolled). Public schemes leave a copayment of about 30%, and the government recommends supplementary private insurance for trainees.", "Health Insurance Act; Oishi and Chien (2026)"],
+      comp:[2, "OTIT consultation in eight languages; labor inspection offices.", "Organization for Technical Intern Training (official guidance)"],
+      res:[1, "Maximum five years as a trainee; may move to Specified Skilled Worker, from which (ii) can lead to permanent residence.", "Immigration Control Act; Immigration Services Agency"],
+      fam:[0, "Technical intern training is excluded from the statuses whose families may hold Dependent status.", "Immigration Control Act, Appended Table I(4)"]}},
+    {k:"JP-SSW", s:"JP", n:"Japan · specified skilled workers", n_id:"Jepang · pekerja berketerampilan spesifik",
+     basis:"Specified Skilled Worker (i) and (ii), created April 2019, in designated fields including fishery and agriculture.",
+     basis_id:"Pekerja Berketerampilan Spesifik (i) dan (ii), dibuat April 2019, di bidang tertentu termasuk perikanan dan pertanian.",
+     size:[390296, "2025", "Immigration Services Agency, end of 2025, via Adnkronos (27 Mar 2026)"],
+     codes:{
+      lab:[2, "The Labor Standards Act applies.", "Labor Standards Act"],
+      wage:[2, "Pay must at least equal that of Japanese workers in the same job.", "Immigration Control Act ordinances"],
+      hours:[1, "Hours, break and rest-day rules apply, except in agriculture, livestock, sericulture and fisheries; forestry is not exempt.", "Labor Standards Act Art. 41(i) and Appended Table 1 items 6–7"],
+      mob:[2, "May change employer within the same field.", "Immigration Services Agency"],
+      union:[2, "May form and join unions.", "Trade Union Act"],
+      fees:[1, "Bilateral memoranda with sending states address fees; not prohibited in Japanese law.", "Memoranda of cooperation"],
+      ins:[2, "Enrolled in employees' health insurance and employees' pension from the first day of employment at covered workplaces; the three-month residence rule applies only to National Health Insurance.", "Health Insurance Act Arts 3, 35; Employees' Pension Insurance Act Art. 9; Oishi and Chien (2026)"],
+      comp:[2, "Registered support organizations must give consultation in the worker's language.", "Immigration Services Agency"],
+      res:[1, "SSW (i) is capped at five years in total, or six with good reason, not counting time lost to pregnancy, childbirth or childcare (from 1 Apr 2026); SSW (ii) has no cap and can lead to permanent residence under the general criteria.", "Immigration Services Agency, Specified Skilled Worker page"],
+      fam:[1, "SSW (i) is excluded from the statuses whose families may hold Dependent status; SSW (ii) is not, so its holders may bring spouse and children.", "Immigration Control Act, Appended Table I(4)"]}}
+  ],
+
+  /* International layer. Values: "p YYYY" party since; "a YYYY" applies (Hong Kong, by extension); "d YYYY" domestic incorporation without ratification; "s" partial alignment; "" not party; "?" unclear. */
+  treaties: [
+    ["iccpr", "ICCPR", "UN civil and political rights covenant", "Kovenan hak sipil dan politik"],
+    ["icescr", "ICESCR", "UN economic, social and cultural rights covenant", "Kovenan hak ekonomi, sosial dan budaya"],
+    ["icrmw", "ICRMW", "UN migrant workers convention", "Konvensi pekerja migran PBB"],
+    ["palermo", "Palermo Protocol", "UN trafficking protocol", "Protokol perdagangan orang PBB"],
+    ["c29", "C29", "ILO forced labor", "ILO kerja paksa"],
+    ["p29", "P29", "ILO forced labor protocol", "Protokol kerja paksa ILO"],
+    ["c105", "C105", "ILO abolition of forced labor", "ILO penghapusan kerja paksa"],
+    ["c87", "C87", "ILO freedom of association", "ILO kebebasan berserikat"],
+    ["c98", "C98", "ILO collective bargaining", "ILO perundingan bersama"],
+    ["c188", "C188", "ILO work in fishing", "ILO kerja di sektor perikanan"],
+    ["c189", "C189", "ILO domestic workers", "ILO pekerja rumah tangga"],
+    ["mlc", "MLC 2006", "ILO maritime labor", "ILO ketenagakerjaan maritim"]
+  ],
+  intl: {
+    TW: {iccpr:"d 2009", icescr:"d 2009", icrmw:"", palermo:"", c29:"", p29:"", c105:"", c87:"", c98:"", c188:"s", c189:"", mlc:""},
+    KR: {iccpr:"p 1990", icescr:"p 1990", icrmw:"", palermo:"p 2015", c29:"p 2021", p29:"", c105:"", c87:"p 2021", c98:"p 2021", c188:"", c189:"", mlc:"p 2014"},
+    HK: {iccpr:"a 1976", icescr:"a 1976", icrmw:"", palermo:"", c29:"a 1997", p29:"", c105:"a 1997", c87:"a 1997", c98:"a 1997", c188:"", c189:"", mlc:"a 2018"},
+    JP: {iccpr:"p 1979", icescr:"p 1979", icrmw:"", palermo:"p 2017", c29:"p 1932", p29:"", c105:"p 2022", c87:"p 1965", c98:"p 1953", c188:"", c189:"", mlc:"p 2013"}
+  },
+  intl_note: "Dates are years of ratification or extension. Hong Kong: covenants applied since the United Kingdom's 1976 ratification and continued after 1997; China's 2010 declaration excludes Hong Kong from the Palermo Protocol unless notified; ILO C29, C87, C98 and C105 are notified as applicable from 1 July 1997 and the MLC from 6 August 2018. Taiwan: the 2009 Act to Implement the ICCPR and ICESCR gives both covenants domestic force; C188 standards are partly written into the 2022 crew regulations and a C188 implementing bill is being drafted (no Legislative Yuan vote found). Checked against NORMLEX and the UN Treaty Collection on 31 October 2026.",
+  intl_note_id: "Tahun adalah tahun ratifikasi atau perluasan. Hong Kong: kovenan berlaku sejak ratifikasi Inggris 1976 dan berlanjut setelah 1997; Protokol Palermo belum diperluas ke Hong Kong. Taiwan: UU 2009 memberi kedua kovenan kekuatan hukum domestik; standar C188 sebagian dimuat dalam peraturan awak 2022 dan RUU pelaksanaan C188 sedang disusun. Status perlu diperiksa di NORMLEX dan UN Treaty Collection sebelum dikutip.",
+
+  /* Instruments. level: international | regional | market (measures by importing states) | bilateral. nature: treaty | domestic | measure | mou | agreement | listing */
+  frameworks: [
+    {s:"TW", partner:"—", title:"Act to Implement the ICCPR and the ICESCR", level:"international", nature:"domestic", signed:"2009", in_force:"2009-12-10", scope:"Gives both UN covenants domestic legal force; independent international review of reports"},
+    {s:"TW", partner:"—", title:"C188 alignment in the Overseas Employment Regulations; C188 implementing bill (draft)", level:"international", nature:"domestic", signed:"2022", in_force:"", scope:"Rest hours, insurance, written agreements benchmarked to ILO C188"},
+    {s:"KR", partner:"ILO", title:"Forced Labor Convention (C29)", level:"international", nature:"treaty", signed:"2021", in_force:"2022", scope:"Ratified with C87 and C98 in April 2021"},
+    {s:"KR", partner:"ILO", title:"Freedom of Association Convention (C87)", level:"international", nature:"treaty", signed:"2021", in_force:"2022", scope:""},
+    {s:"KR", partner:"ILO", title:"Right to Organise and Collective Bargaining Convention (C98)", level:"international", nature:"treaty", signed:"2021", in_force:"2022", scope:""},
+    {s:"KR", partner:"ILO", title:"Maritime Labor Convention 2006", level:"international", nature:"treaty", signed:"2014", in_force:"2015", scope:"Merchant shipping; fishing vessels largely outside its scope"},
+    {s:"KR", partner:"UN", title:"Trafficking in Persons Protocol (Palermo)", level:"international", nature:"treaty", signed:"2015", in_force:"2015", scope:""},
+    {s:"JP", partner:"ILO", title:"Abolition of Forced Labor Convention (C105)", level:"international", nature:"treaty", signed:"2022", in_force:"2023", scope:""},
+    {s:"JP", partner:"ILO", title:"Maritime Labor Convention 2006", level:"international", nature:"treaty", signed:"2013", in_force:"2014", scope:""},
+    {s:"JP", partner:"UN", title:"Trafficking in Persons Protocol (Palermo)", level:"international", nature:"treaty", signed:"2017", in_force:"2017", scope:""},
+    {s:"HK", partner:"UN", title:"ICESCR and ICCPR (applied)", level:"international", nature:"treaty", signed:"1976", in_force:"1976", scope:"Applied by extension; China reports for Hong Kong"},
+    {s:"TW", partner:"WCPFC", title:"Conservation and Management Measure on crew labor standards", level:"regional", nature:"measure", signed:"2024", in_force:"2028", scope:"Western and Central Pacific Fisheries Commission; Taiwan takes part as a fishing entity"},
+    {s:"KR", partner:"WCPFC", title:"Conservation and Management Measure on crew labor standards", level:"regional", nature:"measure", signed:"2024", in_force:"2028", scope:""},
+    {s:"JP", partner:"WCPFC", title:"Conservation and Management Measure on crew labor standards", level:"regional", nature:"measure", signed:"2024", in_force:"2028", scope:""},
+    {s:"TW", partner:"United States", title:"US Department of Labor list of goods produced by forced labor: fish (TVPRA)", level:"market", nature:"listing", signed:"2020", in_force:"", scope:"Listed in 2020, 2022 and 2024 editions"},
+    {s:"TW", partner:"United States", title:"US Customs Withhold Release Orders on named Taiwan-flagged or -owned vessels", level:"market", nature:"listing", signed:"2020", in_force:"", scope:"Imports from named vessels detained under 19 USC 1307"},
+    {s:"TW", partner:"European Union", title:"EU IUU 'yellow card' (pre-identification)", level:"market", nature:"listing", signed:"2015", in_force:"2019", scope:"Lifted June 2019"},
+    {s:"KR", partner:"European Union", title:"EU IUU 'yellow card' (pre-identification)", level:"market", nature:"listing", signed:"2013", in_force:"2015", scope:"Lifted April 2015"},
+    {s:"TW", partner:"European Union", title:"EU Forced Labour Regulation (2024/3015)", level:"market", nature:"measure", signed:"2024", in_force:"2027-12", scope:"Bans products made with forced labor from the EU market; applies to all four"},
+    {s:"KR", partner:"European Union", title:"EU Forced Labour Regulation (2024/3015)", level:"market", nature:"measure", signed:"2024", in_force:"2027-12", scope:""},
+    {s:"JP", partner:"European Union", title:"EU Forced Labour Regulation (2024/3015)", level:"market", nature:"measure", signed:"2024", in_force:"2027-12", scope:""},
+    {s:"HK", partner:"European Union", title:"EU Forced Labour Regulation (2024/3015)", level:"market", nature:"measure", signed:"2024", in_force:"2027-12", scope:""},
+    {s:"TW", partner:"Indonesia", title:"MOU on the recruitment, placement and protection of Indonesian migrant workers (KDEI–TETO)", level:"bilateral", nature:"mou", signed:"2018-12", in_force:"", scope:"Excludes distant-water fishers; talks on a fishers' MOU stalled in March 2024"},
+    {s:"KR", partner:"Indonesia", title:"Arrangement on the placement of Indonesian fishers on Korean coastal vessels", level:"bilateral", nature:"mou", signed:"2021-05", in_force:"", scope:"Government-to-government recruitment and a training center; vessels over 20 tons"},
+    {s:"KR", partner:"Laos", title:"E-10-2 fishing crew pathway", level:"bilateral", nature:"agreement", signed:"2025-06", in_force:"", scope:"Crew of vessels beyond coastal waters"}
+  ],
+  /* Employment Permit System memoranda (dates approximate to the year; source: HRD Korea EPS) */
+  eps: ["Philippines", "Mongolia", "Sri Lanka", "Vietnam", "Thailand", "Indonesia", "Uzbekistan", "Pakistan", "Cambodia", "China", "Nepal", "Myanmar", "Kyrgyzstan", "Bangladesh", "Timor-Leste", "Laos", "Tajikistan"],
+  /* Specified Skilled Worker memoranda of cooperation (year signed; source: Ministry of Foreign Affairs of Japan) */
+  ssw: [["Philippines", "2019"], ["Cambodia", "2019"], ["Nepal", "2019"], ["Myanmar", "2019"], ["Mongolia", "2019"], ["Sri Lanka", "2019"], ["Indonesia", "2019"], ["Vietnam", "2019"], ["Bangladesh", "2019"], ["Uzbekistan", "2019"], ["Pakistan", "2019"], ["Thailand", "2020"], ["India", "2021"]],
+
+  /* Corridor headcounts: origin × destination, with the population each figure measures. */
+  stock: [
+    {s:"TW", o:"Indonesia", v:314751, pop:"Migrant workers with valid permits", y:"Sep 2026"},
+    {s:"TW", o:"Vietnam", v:244822, pop:"Migrant workers with valid permits", y:"Sep 2026"},
+    {s:"TW", o:"Philippines", v:190798, pop:"Migrant workers with valid permits", y:"Sep 2026"},
+    {s:"TW", o:"Thailand", v:71479, pop:"Migrant workers with valid permits", y:"Sep 2026"},
+    {s:"HK", o:"Philippines", v:205764, pop:"Foreign domestic helpers", y:"end 2025"},
+    {s:"HK", o:"Indonesia", v:163718, pop:"Foreign domestic helpers", y:"end 2025"},
+    {s:"HK", o:"Others", v:9348, pop:"Foreign domestic helpers", y:"end 2025"},
+    {s:"JP", o:"Vietnam", v:605906, pop:"All foreign workers", y:"Oct 2025"},
+    {s:"JP", o:"China", v:431949, pop:"All foreign workers", y:"Oct 2025"},
+    {s:"JP", o:"Philippines", v:260869, pop:"All foreign workers", y:"Oct 2025"},
+    {s:"JP", o:"Indonesia", v:228118, pop:"All foreign workers", y:"Oct 2025"},
+    {s:"JP", o:"Myanmar", v:163311, pop:"All foreign workers", y:"Oct 2025"},
+    {s:"KR", o:"Indonesia", v:3469, pop:"Distant-water fishing crew", y:"end 2024"},
+    {s:"KR", o:"Others", v:883, pop:"Distant-water fishing crew", y:"end 2024"}
+  ],
+  stock_src: {
+    TW: [["Ministry of Labor statistics database, end of September 2026 (table 212030)", "https://statdb.mol.gov.tw/html/mon/212030.htm"]],
+    HK: [["Immigration Department open data, foreign domestic helpers by nationality, end of 2025", "https://www.immd.gov.hk/opendata/eng/law-and-security/visas/statistics_FDH.csv"]],
+    JP: [["Ministry of Health, Labour and Welfare, foreign employment report, end of October 2025", "https://www.mhlw.go.jp/stf/newpage_68794.html"]],
+    KR: [["Pulitzer Center, 'When Korean ships go dark on the high seas' (2025)", "https://pulitzercenter.org/stories/when-korean-ships-go-dark-high-seas"]]
+  },
+
+  /* People and jobs: headline figures per state. */
+  demog: {
+    TW: {rows:[["All migrant workers (industry and care)", "Semua pekerja migran (industri dan perawatan)", 917278, "Sep 2026"], ["of whom Indonesian (valid permits)", "di antaranya warga Indonesia (izin berlaku)", 314751, "Sep 2026"], ["Coastal and offshore foreign fishers", "Nelayan asing pesisir dan lepas pantai", 11343, "2020"], ["Distant-water foreign crew", "Awak asing kapal jarak jauh", 18864, "2020"]],
+         note:"Fisheries figures are the latest official breakdown we found and are dated; NGO estimates for the distant-water fleet are higher, and the Fisheries Agency publishes no current count of distant-water foreign crew. In September 2026, 821,857 of the 917,278 migrant workers held valid permits; 25,734 worked in agriculture, forestry, fishery and husbandry. Indonesians are the largest group of fishers. For comparison, contract workers numbered about 420,000 in November 2011, 38% of them Indonesian (Niyomsilpa 2020).", note_id:"Angka perikanan adalah rincian resmi terbaru yang kami temukan dan sudah lama; perkiraan LSM untuk armada jarak jauh lebih tinggi. Warga Indonesia adalah kelompok nelayan terbesar. Sebagai pembanding, pekerja kontrak berjumlah sekitar 420.000 pada November 2011, 38% di antaranya warga Indonesia (Niyomsilpa 2020)."},
+    KR: {rows:[["Foreign crew on the distant-water fleet", "Awak asing armada jarak jauh", 4352, "end 2024"], ["of whom Indonesian", "di antaranya warga Indonesia", 3469, "end 2024"]],
+         note:"Foreign workers were close to half of all fishing crew in 2022 (Ministry of Oceans and Fisheries) and about 80% on distant-water vessels. No official count of E-9 fishers by nationality was found. Irregular stay is large: an estimated 188,000 Thai workers were in Korea in 2018, of whom only 66,011 held work permits, which led to a voluntary-return amnesty to March 2019 (Niyomsilpa 2020). Foreign residents rose from under 50,000 in 1990 to about 2 million by the end of 2018 (Wang et al. 2020).", note_id:"Pekerja asing mendekati separuh dari seluruh awak kapal ikan pada 2022 dan sekitar 80% di kapal jarak jauh. Belum ditemukan data resmi nelayan E-9 menurut kewarganegaraan. Jumlah pekerja tanpa dokumen besar: sekitar 188.000 pekerja Thailand berada di Korea pada 2018, hanya 66.011 yang memiliki izin kerja, sehingga diadakan amnesti pulang sukarela hingga Maret 2019 (Niyomsilpa 2020). Penduduk asing naik dari kurang dari 50.000 pada 1990 menjadi sekitar 2 juta pada akhir 2018 (Wang dkk. 2020)."},
+    HK: {rows:[["Foreign domestic helpers", "Pekerja rumah tangga asing", 378830, "end 2025"], ["Philippines", "Filipina", 205764, "end 2025"], ["Indonesia", "Indonesia", 163718, "end 2025"]],
+         note:"Almost all helpers are women. Figures are from the Immigration Department's open data.", note_id:"Hampir semua PRT adalah perempuan. Angka dari data terbuka Departemen Imigrasi."},
+    JP: {rows:[["All foreign workers", "Semua pekerja asing", 2571037, "Oct 2025"], ["Specified skilled workers", "Pekerja berketerampilan spesifik", 390296, "end 2025"], ["Technical intern trainees", "Peserta pemagangan teknis", 499394, "Oct 2025"]],
+         note:"Vietnam is the largest origin of foreign workers (605,906 in October 2025). Fishery is a small share of both schemes.", note_id:"Vietnam adalah asal pekerja asing terbesar (605.906 pada Oktober 2025). Perikanan adalah bagian kecil dari kedua skema."}
+  },
+
+  /* Legal developments: [date, state, EN, ID, kind]. kind: law | real | partial | market | origin */
+  reforms: [
+    ["1990-06", "JP", "Amended Immigration Act allows employers' associations to take in foreign trainees.", "Perubahan UU Imigrasi mengizinkan asosiasi pengusaha menerima peserta pelatihan asing.", "law"],
+    ["1992-05", "TW", "Employment Service Act enacted, formalizing the admission of migrant workers first allowed in 1989.", "UU Layanan Ketenagakerjaan disahkan, meresmikan penerimaan pekerja migran yang pertama diizinkan pada 1989.", "law"],
+    ["1993-04", "JP", "Technical Intern Training introduced, together with the Japan International Training Cooperation Organization (month approximate).", "Pemagangan Teknis diperkenalkan bersama Organisasi Kerja Sama Pelatihan Internasional Jepang (bulan perkiraan).", "law"],
+    ["1999-02", "HK", "Minimum Allowable Wage cut by 5%, from HK$3,860 to HK$3,670, citing the recession.", "Upah Minimum yang Diizinkan dipotong 5%, dari HK$3.860 menjadi HK$3.670, dengan alasan resesi.", "cut"],
+    ["2009-04", "TW", "Act to Implement the ICCPR and ICESCR adopted; in force December 2009.", "UU Pelaksanaan ICCPR dan ICESCR disahkan; berlaku Desember 2009.", "law"],
+    ["2013-11", "KR", "EU issues an IUU 'yellow card' to South Korea (lifted April 2015).", "UE memberi 'kartu kuning' IUU kepada Korea Selatan (dicabut April 2015).", "market"],
+    ["2015-06", "KR", "Supreme Court recognizes the Migrants' Trade Union.", "Mahkamah Agung mengakui Serikat Pekerja Migran.", "real"],
+    ["2015-10", "TW", "EU issues an IUU 'yellow card' to Taiwan (lifted June 2019).", "UE memberi 'kartu kuning' IUU kepada Taiwan (dicabut Juni 2019).", "market"],
+    ["2004-08", "KR", "Employment Permit System starts under the Act on the Employment of Foreign Workers (2003); the industrial trainee system it replaced is abolished in 2007.", "Sistem Izin Kerja dimulai berdasarkan UU Penempatan Pekerja Asing (2003); sistem pelatihan industri yang digantikannya dihapus pada 2007.", "law"],
+    ["2016-07", "TW", "Act for Distant Water Fisheries adopted; crew regulations follow in January 2017.", "UU Perikanan Jarak Jauh disahkan; peraturan awak menyusul Januari 2017.", "law"],
+    ["2016-11", "TW", "Rule requiring migrant workers to leave Taiwan for one day before a new contract deleted (Employment Service Act Art. 52(4)).", "Aturan wajib keluar Taiwan satu hari sebelum kontrak baru dihapus (UU Layanan Ketenagakerjaan Pasal 52(4)).", "real"],
+    ["2017-11", "JP", "Technical Intern Training Act in force; Organization for Technical Intern Training created.", "UU Pemagangan Teknis berlaku; Organisasi Pemagangan Teknis dibentuk.", "partial"],
+    ["2019-04", "JP", "Specified Skilled Worker status introduced, with change of employer allowed within a field.", "Status Pekerja Berketerampilan Spesifik diperkenalkan; boleh pindah majikan dalam bidang yang sama.", "real"],
+    ["2020-09", "TW", "US Department of Labor adds Taiwan-caught fish to its forced-labor goods list.", "Departemen Tenaga Kerja AS memasukkan ikan tangkapan Taiwan ke daftar barang kerja paksa.", "market"],
+    ["2021-04", "KR", "Ratifies ILO C29, C87 and C98 (in force April 2022).", "Meratifikasi ILO C29, C87 dan C98 (berlaku April 2022).", "law"],
+    ["2021-05", "KR", "Government-to-government arrangement with Indonesia for fishers on coastal vessels.", "Pengaturan antarpemerintah dengan Indonesia untuk nelayan di kapal pesisir.", "origin"],
+    ["2022-04", "TW", "Long-term Retention of Migrant Workers Program: after six years' service, workers may move to intermediate skilled status (from 30 April).", "Program Retensi Jangka Panjang Pekerja Migran: setelah enam tahun bekerja, pekerja bisa beralih ke status tenaga terampil menengah (mulai 30 April).", "real"],
+    ["2022-05", "TW", "Fisheries and Human Rights Action Plan, first phase 2022–2025.", "Rencana Aksi Perikanan dan HAM, tahap pertama 2022–2025.", "partial"],
+    ["2022-07", "TW", "Minimum wage for distant-water foreign crew raised from US$450 to US$550; minimum medical insurance.", "Upah minimum awak asing kapal jarak jauh naik dari US$450 ke US$550; asuransi medis minimum.", "partial"],
+    ["2022-07", "JP", "Ratifies ILO C105 (in force July 2023).", "Meratifikasi ILO C105 (berlaku Juli 2023).", "law"],
+    ["2024-03", "KR", "Plan for distant-water crew: voyages capped at 12 months; companies to drop agencies that deduct wages.", "Rencana untuk awak jarak jauh: pelayaran maksimal 12 bulan; perusahaan wajib memutus agensi yang memotong upah.", "partial"],
+    ["2024-03", "TW", "Talks on an Indonesia–Taiwan MOU for distant-water fishers end without agreement.", "Perundingan MOU Indonesia–Taiwan untuk nelayan jarak jauh berakhir tanpa kesepakatan.", "origin"],
+    ["2024-06", "JP", "Diet passes the act replacing Technical Intern Training with Employment for Skill Development (Act No. 60 of 2024, promulgated 21 June).", "Parlemen mengesahkan UU pengganti Pemagangan Teknis dengan Pengembangan Keterampilan Kerja.", "law"],
+    ["2024-12", "TW", "WCPFC adopts a measure on crew labor standards, to apply from 2028.", "WCPFC mengadopsi ketentuan standar kerja awak, berlaku mulai 2028.", "law"],
+    ["2025-06", "KR", "Laos begins sending fishing crew on the E-10-2 visa.", "Laos mulai mengirim awak kapal ikan dengan visa E-10-2.", "origin"],
+    ["2025-09", "HK", "Minimum Allowable Wage raised to HK$5,100.", "Upah Minimum yang Diizinkan naik menjadi HK$5.100.", "partial"],
+    ["2025-11", "TW", "Crew regulations amended: wage reporting and a wage-reserve mechanism.", "Peraturan awak diubah: pelaporan upah dan dana cadangan upah.", "partial"],
+    ["2026-01", "TW", "Second-phase action plan 2026–2029; US$570 minimum for newly recruited distant-water crew.", "Rencana aksi tahap kedua 2026–2029; minimum US$570 bagi awak jarak jauh yang baru direkrut.", "partial"],
+    ["2026-09", "KR", "Indicators for identifying trafficking victims issued by the Ministry of Gender Equality and Family (Notice 2026-32), applied to migrant fishers.", "Indikator identifikasi korban perdagangan orang diterbitkan Kementerian Kesetaraan Gender dan Keluarga (Pengumuman 2026-32), diterapkan pada nelayan migran.", "partial"],
+    ["2026-10", "KR", "Ministry of Justice confirms a route for E-9 and E-10 workers to the skilled-worker status (E-7-4).", "Kementerian Kehakiman menegaskan jalur bagi pekerja E-9 dan E-10 ke status tenaga terampil (E-7-4).", "partial"],
+    ["2026-10", "HK", "Minimum Allowable Wage raised to HK$5,220 for contracts signed from 3 October.", "Upah Minimum yang Diizinkan naik menjadi HK$5.220.", "partial"],
+    ["2027-04", "JP", "Employment for Skill Development scheduled to start.", "Pengembangan Keterampilan Kerja dijadwalkan mulai.", "law"],
+    ["2027-12", "TW", "EU Forced Labour Regulation applies, including to catch from Taiwan's fleet and goods from the other three.", "Regulasi Kerja Paksa UE berlaku untuk impor dari keempatnya.", "market"]
+  ],
+
+  /* Arguments and avenues for advocacy, per jurisdiction: [EN, ID] */
+  advocacy: {
+    TW: {
+      args: [
+        ["Since 2009 the ICESCR has the force of domestic law. Its Article 7 (fair wages and equal remuneration for work of equal value) can be argued against a separate, lower wage floor for distant-water crew.", "Sejak 2009 ICESCR berkekuatan hukum domestik. Pasal 7 (upah yang adil dan setara) bisa dipakai untuk menggugat batas upah terpisah yang lebih rendah bagi awak kapal jarak jauh."],
+        ["Whether the Labor Standards Act reaches distant-water crew employed by Taiwanese operators is being tested in the civil courts (the Yu Fu case). A ruling either way will matter for every crew member.", "Apakah UU Standar Ketenagakerjaan berlaku bagi awak kapal jarak jauh yang dipekerjakan operator Taiwan sedang diuji di pengadilan perdata (kasus Yu Fu)."],
+        ["The government has itself benchmarked the crew regulations to ILO C188 and is drafting an implementing act. Gaps between the regulations and C188 (for example on wages, deductions and repatriation) can be measured and named.", "Pemerintah sendiri menjadikan ILO C188 acuan peraturan awak dan sedang menyusun UU pelaksanaannya. Kesenjangan antara peraturan dan C188 bisa diukur dan disebutkan."]
+      ],
+      avenues: [
+        ["Shadow reports to the independent international review of Taiwan's ICCPR and ICESCR reports.", "Laporan bayangan untuk tinjauan internasional independen atas laporan ICCPR dan ICESCR Taiwan."],
+        ["Evidence to the US Department of Labor for its forced-labor goods list, and allegations to US Customs under 19 USC 1307 (vessel-level detention orders).", "Bukti kepada Departemen Tenaga Kerja AS untuk daftar barang kerja paksa, dan pengaduan ke Bea Cukai AS menurut 19 USC 1307 (perintah penahanan per kapal)."],
+        ["From December 2027, submissions to the European Commission under the EU Forced Labour Regulation.", "Mulai Desember 2027, pengaduan ke Komisi Eropa menurut Regulasi Kerja Paksa UE."],
+        ["Pressing for the Indonesia–Taiwan fishers' memorandum that stalled in 2024, through Indonesian unions and the Indonesian migrant worker protection ministry.", "Mendorong nota kesepahaman nelayan Indonesia–Taiwan yang macet pada 2024, melalui serikat pekerja Indonesia dan kementerian perlindungan pekerja migran Indonesia."]
+      ]},
+    KR: {
+      args: [
+        ["South Korea ratified ILO C29, C87 and C98 in 2021. The ILO Committee of Experts can examine forced-labor indicators on fishing vessels and the exclusion of fishers from working-time rules.", "Korea Selatan meratifikasi ILO C29, C87 dan C98 pada 2021. Komite Ahli ILO bisa memeriksa indikator kerja paksa di kapal ikan dan pengecualian nelayan dari aturan waktu kerja."],
+        ["Labor Standards Act Art. 63 leaves fishers without working-time limits; the Seafarers Act leaves foreign crew wages to agreements they do not negotiate. Both can be framed as indirect nationality discrimination under ICCPR Art. 26 and ICESCR Art. 7.", "Pasal 63 UU Standar Ketenagakerjaan membuat nelayan tanpa batas waktu kerja; UU Pelaut menyerahkan upah awak asing pada perjanjian yang tidak mereka rundingkan. Keduanya bisa dibingkai sebagai diskriminasi tidak langsung."]
+      ],
+      avenues: [
+        ["Complaints to the National Human Rights Commission of Korea, which has already made recommendations on migrant fishers.", "Pengaduan ke Komnas HAM Korea, yang sudah memberi rekomendasi tentang nelayan migran."],
+        ["Individual communications to the UN Human Rights Committee: South Korea accepts the ICCPR Optional Protocol (after domestic remedies).", "Komunikasi individu ke Komite HAM PBB: Korea Selatan menerima Protokol Opsional ICCPR (setelah upaya hukum domestik)."],
+        ["Comments by workers' organizations to the ILO on C29, and representations under Article 24 of the ILO Constitution.", "Komentar organisasi pekerja kepada ILO tentang C29, dan representasi menurut Pasal 24 Konstitusi ILO."]
+      ]},
+    HK: {
+      args: [
+        ["The exclusion of live-in domestic workers from the statutory minimum wage, the compulsory live-in rule and the two-week rule fall almost entirely on migrant women: arguments under ICESCR Art. 7 and CEDAW, both of which apply to Hong Kong.", "Pengecualian PRT tinggal-dalam dari upah minimum, aturan wajib tinggal di rumah majikan dan aturan dua minggu hampir seluruhnya menimpa perempuan migran: argumen menurut Pasal 7 ICESCR dan CEDAW, yang keduanya berlaku di Hong Kong."],
+        ["ILO Convention 189 (not binding on Hong Kong, but the standard the ILO applies to Asia) sets a benchmark: live-in domestic workers may not be obliged to stay in the household during rest periods, and must keep their own documents. The ILO cites the 2013 abuse of Erwiana Sulistyaningsih and Hong Kong's two-week and live-in rules as the reasons protection matters (ILO, Migration and domestic work, 2015).", "Konvensi ILO 189 (tidak mengikat Hong Kong, tetapi menjadi standar ILO di Asia) menetapkan tolok ukur: PRT yang tinggal di rumah majikan tidak boleh diwajibkan tetap di rumah saat istirahat dan berhak memegang dokumennya sendiri. ILO menyebut kasus kekerasan terhadap Erwiana Sulistyaningsih (2013) serta aturan dua minggu dan wajib tinggal di Hong Kong sebagai alasan pentingnya perlindungan."],
+        ["The live-in rule was upheld by the courts; reform is now a policy question, best argued with evidence on hours and rest.", "Aturan wajib tinggal di rumah majikan telah dikuatkan pengadilan; reformasi kini soal kebijakan, paling baik diperjuangkan dengan bukti tentang jam kerja dan istirahat."]
+      ],
+      avenues: [
+        ["Claims at the Labour Tribunal or the Minor Employment Claims Adjudication Board for unpaid wages and benefits.", "Gugatan di Pengadilan Perburuhan atau Badan Ajudikasi Klaim Kecil atas upah dan tunjangan yang tidak dibayar."],
+        ["Complaints to the Labour Department's Employment Agencies Administration about agencies charging more than 10% of the first month's wage.", "Pengaduan ke Administrasi Agensi Tenaga Kerja tentang agensi yang memungut lebih dari 10% upah bulan pertama."],
+        ["Shadow reports to the UN committees when they review China's reports for Hong Kong (CESCR, CEDAW).", "Laporan bayangan ke komite PBB saat meninjau laporan Tiongkok untuk Hong Kong (CESCR, CEDAW)."]
+      ]},
+    JP: {
+      args: [
+        ["The move from Technical Intern Training to Employment for Skill Development in April 2027 is still being written into ordinances and operating policies: rules on changing employer, fees and supervision can still be shaped.", "Peralihan dari Pemagangan Teknis ke Pengembangan Keterampilan Kerja pada April 2027 masih dituangkan dalam peraturan pelaksana: aturan pindah majikan, biaya dan pengawasan masih bisa dipengaruhi."],
+        ["Labor Standards Act Art. 41 removes working-time limits for agriculture and fisheries, sectors where interns and specified skilled workers are concentrated.", "Pasal 41 UU Standar Ketenagakerjaan menghapus batas waktu kerja untuk pertanian dan perikanan, sektor tempat banyak peserta magang dan pekerja berketerampilan spesifik bekerja."]
+      ],
+      avenues: [
+        ["Public comment procedures on the implementing ordinances of the 2024 amending act.", "Prosedur komentar publik atas peraturan pelaksana UU perubahan 2024."],
+        ["Reports to the ILO Committee of Experts under C29 and C105, and to the UN Human Rights Committee and CESCR when they review Japan.", "Laporan ke Komite Ahli ILO menurut C29 dan C105, serta ke Komite HAM PBB dan CESCR saat meninjau Jepang."],
+        ["Renegotiation of the bilateral memoranda with sending states for the new system.", "Perundingan ulang nota kerja sama bilateral dengan negara pengirim untuk sistem baru."]
+      ]}
+  },
+
+  /* Domestic laws database. type: constitution | statute | regulation | contract | policy. link: "text" = official text page, "db" = official database (search the title). */
+  laws: [
+    {s:"TW", title:"Labor Standards Act", orig:"勞動基準法", year:"1984", amended:"2024", type:"statute", topic:"Labor standards", groups:"TW-C", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001", link:"text"},
+    {s:"TW", title:"Employment Service Act", orig:"就業服務法", year:"1992", amended:"2025-01", type:"statute", topic:"Admission, permits, change of employer (Art. 59), brokers", groups:"TW-C", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001", link:"text"},
+    {s:"TW", title:"Act for Distant Water Fisheries", orig:"遠洋漁業條例", year:"2016", amended:"2024", type:"statute", topic:"Distant-water fleet; Art. 26 basis for crew regulations", groups:"TW-DWF", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050051", link:"text"},
+    {s:"TW", title:"Regulations on the Authorization and Management of Overseas Employment of Foreign Crew Members", orig:"境外僱用非我國籍船員許可及管理辦法", year:"2017", amended:"2025-11", type:"regulation", topic:"Wages, rest, insurance, agencies for distant-water crew", groups:"TW-DWF", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050061", link:"text"},
+    {s:"TW", title:"Act to Implement the ICCPR and the ICESCR", orig:"公民與政治權利國際公約及經濟社會文化權利國際公約施行法", year:"2009", amended:"", type:"statute", topic:"Domestic force of the UN covenants", groups:"all", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020028", link:"text"},
+    {s:"TW", title:"Human Trafficking Prevention Act", orig:"人口販運防制法", year:"2009", amended:"2023", type:"statute", topic:"Trafficking, labor exploitation", groups:"all", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080177", link:"text"},
+    {s:"TW", title:"Labor Incident Act", orig:"勞動事件法", year:"2018", amended:"2023", type:"statute", topic:"Labor courts and procedure (in force 2020)", groups:"TW-C", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064", link:"text"},
+    {s:"TW", title:"Constitution, Art. 7 (equality) and Art. 15 (right to work)", orig:"中華民國憲法", year:"1947", amended:"", type:"constitution", topic:"Equality and work", groups:"all", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001", link:"text"},
+    {s:"KR", title:"Labor Standards Act (Art. 63: exclusions for agriculture and fisheries)", orig:"근로기준법", year:"1953", amended:"2026-04", type:"statute", topic:"Labor standards", groups:"KR-E9", url:"https://www.law.go.kr/법령/근로기준법", link:"text"},
+    {s:"KR", title:"Act on the Employment, etc. of Foreign Workers", orig:"외국인근로자의 고용 등에 관한 법률", year:"2003", amended:"2025-10", type:"statute", topic:"Employment Permit System; change of workplace (Art. 25)", groups:"KR-E9", url:"https://www.law.go.kr/법령/외국인근로자의%20고용%20등에%20관한%20법률", link:"text"},
+    {s:"KR", title:"Seafarers Act", orig:"선원법", year:"1962", amended:"2026-10", type:"statute", topic:"Labor terms on vessels of 20 tons and over", groups:"KR-E10", url:"https://www.law.go.kr/법령/선원법", link:"text"},
+    {s:"KR", title:"Distant Water Fisheries Development Act", orig:"원양산업발전법", year:"2007", amended:"2026-03", type:"statute", topic:"Distant-water fleet licensing and obligations", groups:"KR-E10", url:"https://www.law.go.kr/법령/원양산업발전법", link:"text"},
+    {s:"KR", title:"Minimum Wage Act", orig:"최저임금법", year:"1986", amended:"2020", type:"statute", topic:"Minimum wage", groups:"KR-E9", url:"https://www.law.go.kr/법령/최저임금법", link:"text"},
+    {s:"KR", title:"Act on the Prevention of Human Trafficking and Protection of Victims", orig:"인신매매등방지 및 피해자보호 등에 관한 법률", year:"2021", amended:"2026-09", type:"statute", topic:"Trafficking (in force 2023)", groups:"all", url:"https://www.law.go.kr/법령/인신매매등방지%20및%20피해자보호%20등에%20관한%20법률", link:"text"},
+    {s:"HK", title:"Employment Ordinance (Cap. 57)", orig:"《僱傭條例》", year:"1968", amended:"2026-05", type:"statute", topic:"Wages, rest days, holidays, termination", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap57", link:"text"},
+    {s:"HK", title:"Employment Agency Regulations (Cap. 57A)", orig:"《職業介紹所規例》", year:"1968", amended:"2018", type:"regulation", topic:"10% commission cap", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap57A", link:"text"},
+    {s:"HK", title:"Minimum Wage Ordinance (Cap. 608), s. 7 (live-in domestic workers excluded)", orig:"《最低工資條例》", year:"2010", amended:"2026-08", type:"statute", topic:"Minimum wage", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap608", link:"text"},
+    {s:"HK", title:"Employees' Compensation Ordinance (Cap. 282)", orig:"《僱員補償條例》", year:"1953", amended:"2026-05", type:"statute", topic:"Compulsory work-injury insurance", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap282", link:"text"},
+    {s:"HK", title:"Trade Unions Ordinance (Cap. 332)", orig:"《職工會條例》", year:"1961", amended:"2026-01", type:"statute", topic:"Freedom of association", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap332", link:"text"},
+    {s:"HK", title:"Immigration Ordinance (Cap. 115)", orig:"《入境條例》", year:"1972", amended:"2025-08", type:"statute", topic:"Admission and conditions of stay", groups:"HK-FDH", url:"https://www.elegislation.gov.hk/hk/cap115", link:"text"},
+    {s:"HK", title:"Standard Employment Contract for Domestic Helpers (ID 407)", orig:"", year:"", amended:"2016 (version 11/2016)", type:"contract", topic:"Wage, food, live-in, medical care", groups:"HK-FDH", url:"https://www.immd.gov.hk/eng/forms/forms/id407.html", link:"text"},
+    {s:"JP", title:"Labor Standards Act (Art. 41: exclusions for agriculture, livestock and fisheries)", orig:"労働基準法", year:"1947", amended:"2026-07", type:"statute", topic:"Labor standards", groups:"JP-TITP JP-SSW", url:"https://laws.e-gov.go.jp/law/322AC0000000049", link:"text"},
+    {s:"JP", title:"Act on Proper Technical Intern Training and Protection of Technical Intern Trainees", orig:"外国人の技能実習の適正な実施及び技能実習生の保護に関する法律", year:"2016", amended:"2022", type:"statute", topic:"Technical Intern Training; replaced from April 2027", groups:"JP-TITP", url:"https://laws.e-gov.go.jp/law/428AC0000000089", link:"text"},
+    {s:"JP", title:"Immigration Control and Refugee Recognition Act", orig:"出入国管理及び難民認定法", year:"1951", amended:"2026-06", type:"statute", topic:"Residence statuses incl. Specified Skilled Worker", groups:"JP-TITP JP-SSW", url:"https://laws.e-gov.go.jp/law/326CO0000000319", link:"text"},
+    {s:"JP", title:"Minimum Wage Act", orig:"最低賃金法", year:"1959", amended:"2022", type:"statute", topic:"Prefectural minimum wages", groups:"JP-TITP JP-SSW", url:"https://laws.e-gov.go.jp/law/334AC0000000137", link:"text"},
+    {s:"JP", title:"Mariners Act", orig:"船員法", year:"1947", amended:"2025-05", type:"statute", topic:"Labor terms for crew of larger vessels", groups:"JP-TITP JP-SSW", url:"https://laws.e-gov.go.jp/law/322AC0000000100", link:"text"}
+  ],
+
+  changelog: [
+    ["2026-11-13", "1.5", "Follow-up check on official ministry and agency websites, cited as official guidance and marked partly verified, never treated as legislation. No value changes. The three Korean E-10 recodes stand (no separate working-time standard for fishing vessels exists). Now supported: the Korean seafarers' minimum (MOF Notice 2025-200, which lets a collective agreement set the minimum for foreign crew), the E-7-4 conditions, Taiwan's new skilled-worker regulation (30 Dec 2025), Taiwan's 1955 hotline, Japan's OTIT languages, and Hong Kong's two-week rule, dependants rule, helper portal and free medical care. Corrected: Hong Kong contract ID 407 is the 11/2016 version; the Hong Kong changing-employer source; Korea's 2026 guidelines are trafficking-victim indicators (Notice 2026-32); Korea's foreign-worker line is 1577-0071. Taiwan's minimum wage rises to NT$30,900 from 1 January 2027. Still unverified: US$570 for Taiwan's distant-water crew. Under review by editors: Korea E-10 changing employer (0 or 1).", "Pemeriksaan lanjutan pada situs resmi kementerian dan lembaga, dikutip sebagai panduan resmi dan ditandai terverifikasi sebagian, tidak pernah diperlakukan sebagai undang-undang. Tidak ada perubahan nilai. Tiga perubahan kode E-10 Korea tetap berlaku (tidak ada standar waktu kerja terpisah untuk kapal ikan). Kini didukung: upah minimum pelaut Korea (Pengumuman MOF 2025-200, yang membolehkan perjanjian kerja bersama menetapkan minimum bagi awak asing), syarat E-7-4, peraturan baru tenaga terampil Taiwan (30 Des 2025), saluran 1955 Taiwan, bahasa layanan OTIT Jepang, serta aturan dua minggu, larangan membawa tanggungan, portal PRT, dan perawatan medis gratis di Hong Kong. Koreksi: kontrak ID 407 Hong Kong adalah versi 11/2016; sumber pindah majikan Hong Kong; pedoman Korea 2026 adalah indikator korban perdagangan orang (Pengumuman 2026-32); saluran pekerja asing Korea adalah 1577-0071. Upah minimum Taiwan naik menjadi NT$30.900 mulai 1 Januari 2027. Masih belum terverifikasi: US$570 bagi awak jarak jauh Taiwan. Sedang ditinjau editor: pindah majikan E-10 Korea (0 atau 1)."],
+    ["2026-11-13", "1.4", "All 70 cells and 26 laws checked against official legal texts on government and court sites only: 40 cells match, 11 needed correction, 19 remain unclear (mostly resting on news or NGO sources). Three recodes for Korean E-10 crew: working time 1 to 0 (Seafarers Act Art. 68 disapplies the working-time chapter to fishing vessels), recruitment fees 1 to 2 (Art. 111 bans taking money from seafarers), social insurance 1 to 2 (statutory fishing-crew insurance; a coding judgment). Corrected citations and notes for Taiwan distant-water wages, fees and changing employer, Taiwan coastal wages (Minimum Wage Act since 2024), Korea E-9 insurance, Hong Kong holidays, and Japan SSW insurance and residence. Laws list: amendment dates updated and links now point to the official texts.", "Seluruh 70 sel dan 26 undang-undang diperiksa terhadap teks hukum resmi, hanya dari situs pemerintah dan pengadilan: 40 sel cocok, 11 perlu dikoreksi, 19 masih belum jelas (sebagian besar bersandar pada sumber berita atau LSM). Tiga perubahan kode untuk awak E-10 Korea: waktu kerja 1 menjadi 0 (Pasal 68 UU Pelaut mengecualikan bab waktu kerja bagi kapal ikan), biaya rekrutmen 1 menjadi 2 (Pasal 111 melarang memungut uang dari pelaut), jaminan sosial 1 menjadi 2 (asuransi awak kapal ikan menurut undang-undang; penilaian pengodean). Rujukan dan catatan dikoreksi untuk upah, biaya, dan pindah majikan awak jarak jauh Taiwan, upah awak pesisir Taiwan (UU Upah Minimum sejak 2024), asuransi E-9 Korea, hari libur Hong Kong, serta asuransi dan izin tinggal SSW Jepang. Daftar undang-undang: tanggal perubahan diperbarui dan tautan kini menuju teks resmi."],
+    ["2026-10-31", "1.3", "30 of 70 cells checked against the official legal texts (evidence now P). One recode: Taiwan distant-water recruitment fees 1 to 2, since the Regulations prohibit charging crew. Corrected: the 2016 Taiwan reform (one-day exit rule, not a three-year exit); Japan's farm exemption from hours rules excludes forestry; Hong Kong's minimum-wage exclusion covers all live-in domestic workers; ILO status for Hong Kong (dates added, no modifications). Headcounts updated from the Taiwan Ministry of Labor (Sep 2026), Hong Kong Immigration Department (end 2025) and Japan MHLW (Oct 2025). Sources added: Chung (2024, bpb) and Chung and Tian (2025, MPI).", "30 dari 70 sel diperiksa terhadap teks hukum resmi (bukti kini P). Satu pengodean ulang: biaya rekrutmen awak kapal jarak jauh Taiwan dari 1 ke 2, karena Peraturan melarang pembebanan kepada awak. Koreksi: reformasi Taiwan 2016 (aturan keluar satu hari, bukan tiga tahun); pengecualian pertanian Jepang dari aturan jam kerja tidak mencakup kehutanan; pengecualian upah minimum Hong Kong mencakup semua PRT yang tinggal di rumah majikan; status ILO Hong Kong (tanggal ditambahkan). Jumlah pekerja diperbarui. Sumber ditambahkan: Chung (2024, bpb) dan Chung dan Tian (2025, MPI)."],
+    ["2026-10-31", "1.2", "Sources added: Oberoi and Sheill (2024) in the Palgrave Handbook of South–South Migration and Inequality, and UN OHCHR (2022) on temporary labor migration programs; Niyomsilpa (2020) and Wang et al. (2020) for 2011 and 2018 headcount baselines in Taiwan and Korea. Their typology of program restrictions (employer tie, no change of sector, no route to residence, no family) is cited as the basis for the mobility, residence and family features.", "Sumber ditambahkan: Oberoi dan Sheill (2024) dalam Palgrave Handbook of South–South Migration and Inequality, dan OHCHR PBB (2022) tentang program migrasi kerja sementara; Niyomsilpa (2020) dan Wang dkk. (2020) untuk data pembanding jumlah pekerja 2011 dan 2018 di Taiwan dan Korea. Tipologi pembatasan program mereka (terikat pada majikan, tidak boleh pindah sektor, tanpa jalur izin tinggal, tanpa keluarga) dikutip sebagai dasar fitur mobilitas, izin tinggal dan keluarga."],
+    ["2026-10-31", "1.1", "Two immigration-law features added (route to long-term residence; family may accompany), following the categories of IOM (2002), International Comparative Study of Migration Legislation and Practice.", "Dua fitur hukum keimigrasian ditambahkan (jalur ke izin tinggal jangka panjang; keluarga boleh ikut), mengikuti kategori IOM (2002)."],
+    ["2026-10-31", "1.0", "First release: 7 worker groups × 8 features, 4 jurisdictions, instruments, corridors, developments, domestic laws.", "Rilis pertama: 7 kelompok pekerja × 8 fitur, 4 yurisdiksi, instrumen, koridor, perkembangan, hukum domestik."]
+  ],
+
+  sources: [
+    ["Act for Distant Water Fisheries and crew regulations (Taiwan, Laws & Regulations Database)", "https://law.moj.gov.tw/ENG/", "Statutes and regulations", "Undang-undang dan peraturan"],
+    ["Ministry of Agriculture, amendment of the foreign crew regulations, 18 Nov 2025", "https://www.moa.gov.tw/ws.php?id=2517544", "", ""],
+    ["Focus Taiwan, second-phase fisheries and human rights plan, 6 Jan 2026", "https://focustaiwan.tw/society/202601060017", "", ""],
+    ["Taipei Times, distant-water wage raised to US$550, 3 Oct 2022", "https://taipeitimes.com/News/taiwan/archives/2022/10/03/2003786349", "", ""],
+    ["Focus Taiwan, Indonesia–Taiwan fishers MOU talks, 1 Mar 2024", "https://focustaiwan.tw/society/202403010018", "", ""],
+    ["ICSF Samudra 88, 'Taiwan: a safe harbor?' (2022)", "https://demo2.icsf.net/wp-content/uploads/2022/12/Sam_88_art07_Taiwan_A_Safe_Harbour.pdf", "", ""],
+    ["Greenpeace, Choppy Waters (2020)", "https://www.greenpeace.org/southeastasia/publication/3690/choppy-waters-forced-labor-and-illegal-fishing-in-taiwans-distant-water-fisheries/", "Advocacy report", "Laporan advokasi"],
+    ["NYCU Center for Justice and Development, Indonesian fishers on Taiwanese vessels", "https://cjdproject.web.nycu.edu.tw/?p=2299", "", ""],
+    ["Korea Times, guidelines on forced labor of migrant fishermen, 2 Sep 2026", "https://www.koreatimes.co.kr/southkorea/law-crime/20260902/korea-moves-to-protect-migrant-fishermen-from-forced-labor", "", ""],
+    ["World Fishing, EJF on Korea's distant-water crew plan (2024)", "https://www.worldfishing.net/fisheries/ejf-koreas-new-plan-to-protect-migrant-crew-is-a-step-forward/1492663.article", "", ""],
+    ["Pulitzer Center, 'When Korean ships go dark on the high seas'", "https://pulitzercenter.org/stories/when-korean-ships-go-dark-high-seas", "", ""],
+    ["HKSAR Government, Minimum Allowable Wage, 29 Sep 2025", "https://www.info.gov.hk/gia/general/202509/29/P2025092900318p.htm", "", ""],
+    ["OECD (2001). International Migration in Asia: Trends and Policies. Paris: OECD (chapters by Iguchi on Japan and Chiu on Hong Kong)", "https://doi.org/10.1787/9789264188679-en", "Historical baseline", "Rujukan sejarah"],
+    ["Oberoi, P. and Sheill, K. (2024). Unfair and unjust: temporary labor migration programs in and from Asia and the Pacific as barriers to justice. In H. Crawley and J. K. Teye (eds), The Palgrave Handbook of South–South Migration and Inequality, ch. 32. Palgrave Macmillan. doi:10.1007/978-3-031-39814-8", "https://doi.org/10.1007/978-3-031-39814-8", "Peer-reviewed; open access (CC BY 4.0)", "Telaah sejawat; akses terbuka (CC BY 4.0)"],
+    ["UN OHCHR (2022). 'We wanted workers, but human beings came': human rights and temporary labor migration programs in and from Asia and the Pacific. Geneva: OHCHR", "https://www.ohchr.org/en/documents/thematic-reports/we-wanted-workers-human-beings-came-human-rights-and-temporary-labor", "UN report", "Laporan PBB"],
+    ["Niyomsilpa, S. (2020). International migration trends and policies in Southeast Asia. In C. Inglis, W. Li and B. Khadria (eds), The Sage Handbook of International Migration. London: SAGE. doi:10.4135/9781526470416", "https://doi.org/10.4135/9781526470416", "Historical baseline", "Rujukan sejarah"],
+    ["Wang, H., Miao, L., Yang, J. and Jiang, Y. (2020). International migration in East Asia. In C. Inglis, W. Li and B. Khadria (eds), The Sage Handbook of International Migration. London: SAGE. doi:10.4135/9781526470416", "https://doi.org/10.4135/9781526470416", "Historical baseline", "Rujukan sejarah"],
+    ["Chung, E. A. (2024). Migration politics in East Asia: comparing Japan, South Korea, and Taiwan. Bundeszentrale für politische Bildung (bpb), Migration country profiles. CC BY-NC-ND 4.0", "https://www.bpb.de/themen/migration-integration/regionalprofile/english-version-country-profiles/543674/migration-politics-in-east-asia-comparing-japan-south-korea-and-taiwan/", "Expert overview", "Tinjauan pakar"],
+    ["Chung, E. A. and Tian, Y. (2025). Immigration systems in labor-needy Japan and South Korea have evolved, but remain restrictive. Migration Information Source, Migration Policy Institute, 28 Jan 2025. Note: predates Korea's E-7-4 route and the text of Japan's 2024 ESD Act", "https://www.migrationpolicy.org/article/immigration-systems-labor-needy-japan-and-south-korea-have-evolved-remain", "Policy analysis", "Analisis kebijakan"],
+    ["Oishi, N. and Chien, Y.-C. (2026). Migration and transnational health protection in East Asia. Journal of Ethnic and Migration Studies. doi:10.1080/1369183X.2026.2713265", "https://doi.org/10.1080/1369183X.2026.2713265", "Peer-reviewed; open access", "Telaah sejawat; akses terbuka"],
+    ["ILO Regional Office for Asia and the Pacific, Migration and domestic work: an outline of international standards, regional trends and good practices (GMS TRIANGLE, c. 2015)", "https://www.ilo.org/asia/publications/WCMS_322642/", "Policy brief", "Ringkasan kebijakan"],
+    ["Labour Department, Foreign Domestic Helpers' portal", "https://www.fdh.labor.gov.hk/en/", "", ""],
+    ["US State Department, Trafficking in Persons Report 2025: Japan", "https://www.ecoi.net/en/document/2130632.html", "", ""],
+    ["US Department of Labor, List of Goods Produced by Child Labor or Forced Labor", "https://www.dol.gov/agencies/ilab/reports/child-labor/list-of-goods", "", ""],
+    ["ILO NORMLEX, ratifications by country", "https://normlex.ilo.org/", "Check treaty status here", "Periksa status traktat di sini"],
+    ["UN Treaty Collection", "https://treaties.un.org/", "", ""]
+  ]
+};

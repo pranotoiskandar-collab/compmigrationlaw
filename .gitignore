@@ -1,0 +1,7 @@
+# Data files are copied into site/ at publish time; the copies are not kept.
+site/**/data/
+!site/images/
+.DS_Store
+__pycache__/
+*.zip
+.env

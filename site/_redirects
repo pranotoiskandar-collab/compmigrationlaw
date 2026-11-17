@@ -1,0 +1,8 @@
+/about           /legal-clinic/how-we-work/  301
+/about.html      /legal-clinic/how-we-work/  301
+/about/          /legal-clinic/how-we-work/  301
+/hate-speech-voting       /government-hate-speech/elections/  301
+/hate-speech-voting/*     /government-hate-speech/elections/:splat  301
+/atlas                    /migration-law/?lens=farm  301
+/atlas/                   /migration-law/?lens=farm  301
+/atlas/index.html         /migration-law/?lens=farm  301

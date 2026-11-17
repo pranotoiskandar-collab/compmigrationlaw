@@ -1,0 +1,18 @@
+origin,destination,region,workers,share,bilateral,origin_icrmw,period,derived
+BD,Saudi Arabia,Gulf,615487,60.83,1,1,2024,0
+BD,Qatar,Gulf,106805,10.56,1,1,2024,0
+BD,Malaysia,Other,93631,9.25,1,1,2024,0
+PK,Saudi Arabia,Gulf,452562,62.22,0,0,2024,0
+PK,Oman,Gulf,81587,11.22,0,0,2024,0
+PK,United Arab Emirates,Gulf,64130,8.82,0,0,2024,0
+PK,Qatar,Gulf,40818,5.61,0,0,2024,0
+PK,Bahrain,Gulf,25198,3.46,0,0,2024,0
+LK,Kuwait,Gulf,77546,24.79,0,1,2024,0
+LK,United Arab Emirates,Gulf,51550,16.48,0,1,2024,0
+LK,Israel,Other,9665,3.09,0,1,2024,0
+LK,Japan,Other,8665,2.77,1,1,2024,0
+VN,Japan,Other,69188,48.33,1,0,Jan–Nov 2024,0
+VN,Taiwan,Other,53271,37.21,1,0,Jan–Nov 2024,0
+VN,South Korea,Other,11273,7.87,1,0,Jan–Nov 2024,0
+IN,Saudi Arabia,Gulf,200713,50.39,1,0,2023,0
+ID,Hong Kong,Other,99343,33.40,0,1,2024,1

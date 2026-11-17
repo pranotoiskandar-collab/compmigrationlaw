@@ -1,0 +1,45 @@
+variable,code,meaning
+rank,,"Rank of a norm within its tier = binding quality (B) × relevance for the scope viewed: farm relevance (R) in the Farmworker view, migration relevance (RM) in the migration view. Maximum 25. Ties broken by relevance, then by date. Publications use issuer authority (A) instead of B."
+authority_B (binding quality),5,"Treaty or EU legislation in force, binding on parties, with a supervisory body"
+authority_B (binding quality),4,"Binding but weakened: an outdated or superseded convention, adopted but not yet applicable, or an obligation that arises from ILO membership itself"
+authority_B (binding quality),3,"Authoritative interpretation of a binding treaty (general comments, court judgments) or a declaration widely treated as customary law"
+authority_B (binding quality),2,"Intergovernmental soft law: recommendations, declarations, guidelines, codes of practice"
+authority_B (binding quality),1,"Private or multi-stakeholder standard, enforceable only through contracts or certification"
+relevance_R (farm relevance),5,The whole instrument is about agricultural or plantation work
+relevance_R (farm relevance),4,"A dedicated rural or agricultural chapter, or a sector where farm work dominates"
+relevance_R (farm relevance),3,A general instrument with an explicit agriculture clause or a central farm application
+relevance_R (farm relevance),2,A general labor or human-rights standard that covers farmworkers by its scope
+relevance_R (farm relevance),1,Indirect relevance only
+relevance_RM (migration relevance),5,"The whole instrument is about migration, migrants, refugees or nationality"
+relevance_RM (migration relevance),4,"A dedicated chapter on migrants, or a central application to them (trafficking, recruitment, non-refoulement)"
+relevance_RM (migration relevance),3,A general instrument with an explicit clause on non-nationals or migrant workers
+relevance_RM (migration relevance),2,A general standard that covers migrants by its scope
+relevance_RM (migration relevance),1,Indirect relevance only
+authority_A (publications only),5,"Output of an ILO or UN supervisory mechanism, or an official global estimate"
+authority_A (publications only),4,Intergovernmental agency or UN special-procedure report; official government inquiry or statistics
+authority_A (publications only),3,Peer-reviewed scholarship or academic monograph
+authority_A (publications only),2,NGO or trade-union investigation
+authority_A (publications only),1,Journalism or documentary
+tier,G,"Global: UN and ILO treaties, declarations, treaty-body interpretations, and global private or multi-stakeholder standards"
+tier,R,"Regional: Europe (Council of Europe, EU, European Court of Human Rights), Africa (AU, OAU, ECOWAS), Americas (OAS system, Inter-American Court, MERCOSUR), ASEAN (ASEAN instruments and the Bangkok Principles)"
+tier,N,"National: statutes, regulations and leading judgments of individual states, ranked among themselves"
+tier,P,"Publications: reports and studies, scored by issuer authority (A)"
+farm subset,,"Every norm in the original Farmworker Norms Atlas, plus migration instruments with farm relevance (R) of 3 or more. The migration view leaves out norms with RM 1."
+basket,13 instruments,"Six farm-specific ILO conventions counting 2 points each (C11, C99, C110, C129, C141, C184) and seven farm-relevant instruments counting 1 point each (C169, C170, C181, C190, P29, ICESCR, ICRMW). Maximum 19 points."
+breadth,0–100,"Weighted share of the basket in force, or ratified and awaiting entry into force, out of 19 points. Denunciations count as zero."
+enthusiasm,0–100,"Seven instruments adopted since 1989 (C169, C170, C181, C184, C190, P29, ICRMW). Each ratification earns 0.5 plus up to 0.5 for speed: 0.5 × (1 − years after adoption / 15), floored at 0. Sum divided by 7, × 100."
+ratification_score (overall),0–100,0.6 × breadth + 0.4 × enthusiasm.
+ratification status_code,F,In force
+ratification status_code,P,"Ratified, not yet in force"
+ratification status_code,W,Withdrawn or denounced
+ratification status_code,D,Denounced
+ratification status_code,S,Signed only (not counted)
+implementation questions,,"For each instrument that binds the country: (1) Is there a national law giving effect to it? (2) Does it cover everyone the instrument protects, including farmworkers, domestic workers and migrants in irregular status? (3) Is it enforced, judging by inspection, prosecutions and the latest ILO and UN supervisory comments? (4) Have those bodies asked for changes that remain open?"
+implementation status_code,F,Implemented: yes to questions 1–3 with no major open request
+implementation status_code,P,Partly implemented: a law exists but coverage or enforcement falls short
+implementation status_code,G,"Gap: the law is missing, excludes a protected group, or is contradicted in practice"
+implementation status_code,D,National law on a standard the state has not ratified
+implementation share (statistics tool),0–100,"Implemented = 1, partly = 0.5, gap = 0, averaged over the country's assessed instruments; computed only where at least three are assessed."
+SDG tag (recommendations),8.7; 8.8; 10.7; 5,Forced and child labor; labor rights and safe work; safe and orderly migration; gender equality.
+likely drivers,,Interpretive reading of each instrument's drafting history and political context by IMR; not a quotation of the travaux préparatoires.
+sources,,"ILO NORMLEX; UN Treaty Collection; Council of Europe Treaty Office; EUR-Lex; FAO, OECD and CFS publication records; scheme owners' standard documents; official national gazettes and codes. Ratification records collected 30 October 2026."

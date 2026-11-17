@@ -1,0 +1,21 @@
+variable,definition,values
+id,Stable identifier of the decision entry,text
+name,Case name as commonly cited,text
+court,Court or body that decided,text
+tier,national = a domestic court; regional = a regional human rights court; international = a global court or treaty body,national | regional | international
+forum,For national courts: destination = the country where the migrant worked; origin = the worker’s own country. Regional and international bodies are coded as such,destination | origin | regional | international
+level,Place of the court in its hierarchy,apex | appeal | first | regional | advisory | international
+country,ISO 3166 code of the state whose law or conduct was at issue,code
+region,"Region of that state, used for ordering (Asia, Africa, the Middle East and Latin America first)",asia | africa | mideast | gulf | latam | pacific | europe | americas | intl (pacific includes Australia and New Zealand)
+date,Date of the decision (YYYY-MM-DD; a year alone where the day is not yet confirmed),date
+citation,Docket or report citation,text
+sector,Sector of work involved,text
+issues,"Legal issues, semicolon separated",list
+situations,Visitor-facing situations the decision speaks to,list
+stages,"Stage of the migration journey where the problem arose: 1 recruitment, 2 leaving, 3 working abroad, 4 changing or losing the job, 5 return and after",list of 1–5
+branch,"Type of case: criminal = prosecution of a person; private = dispute between private parties (labor, contract, tort), including claims against recruitment agencies and employers; administrative = challenge to a decision or practice of a government agency (immigration, labor, welfare) on ordinary legal grounds; constitutional = constitutional review, fundamental-rights petitions, and complaints to regional or international human rights bodies. Coded by rule from the court, the parties and the arguments, then corrected by hand; to be confirmed by researchers",criminal | private | administrative | constitutional
+outcome,Result for the worker or migrant side,won | lost | advisory | unknown (candidates not yet checked)
+follow_up,"What happened after the decision: carried = remedy or reform carried out; partly; not = not carried out; unknown = not yet established; none = nothing to carry out (worker lost, advisory, or law kept as it was)",carried | partly | not | unknown | none
+arguments,"Argument codes made for the worker side with 1 = accepted, 0 = rejected (see arguments.csv)",list
+tools,"Reasoning tools (after Farnsworth, The Legal Analyst, 2007): exante | lca | agency | rule | standard | slope | remedy | baseline | proof; see reasoning-tools.csv. Coded by rule from the argument codes and the wording of the question and holding (AI-assisted), full entries only; to be confirmed against the judgment",list
+status,"C = unchecked candidate: name, court, year and topic only, shown with a mark, to be confirmed or removed; S = full entry coded from secondary sources and summaries, pending a line-by-line check against the judgment; P = checked against the judgment",C | S | P

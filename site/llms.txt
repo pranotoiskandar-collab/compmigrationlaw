@@ -1,0 +1,35 @@
+# Institute for Migrant Rights (IMR)
+
+> IMR (West Java, Indonesia) runs a free Legal Clinic for migrant workers and publishes open research datasets on migration law and migrant workers' rights, built for empirical legal scholarship, statistical analysis in law, law and economics, comparative law and socio-legal research, and for advocacy. Most pages are in English and Indonesian.
+
+## Datasets and comparisons
+- [Court Decisions](https://theimr.org/court-decisions/): about 500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
+- [All decisions, one page each](https://theimr.org/court-decisions/d/)
+- [Migration Law Atlas](https://theimr.org/migration-law/): global, regional and national migration law, ratifications, country profiles
+- [Farmworker Norms Atlas](https://theimr.org/atlas/): ranked international, regional and national norms on farm work
+- [Gulf States](https://theimr.org/gcc/): migration and labor laws in comparison, six Gulf states
+- [East Asia](https://theimr.org/east-asia/): Taiwan, South Korea, Hong Kong and Japan
+- [Migrant workers in Southeast Asia](https://theimr.org/southeast-asia/): labor law for eight migrant worker groups in Malaysia, Singapore, Thailand and Brunei (ten de jure features), ASEAN and bilateral instruments, and emigration law of seven origin states; CSV downloads.
+- [Countries of Origin](https://theimr.org/countries-of-origin/): emigration and protection law in eight countries of origin
+- [Migrant Domestic Workers](https://theimr.org/domestic-workers/): international, regional, bilateral and national instruments on migrant domestic workers; 44 jurisdictions coded against ILO C189, with corridors, timeline, statistics and CSV downloads
+- [Government Hate Speech: elections and non-citizens](https://theimr.org/government-hate-speech/elections/): party hate speech, votes and non-citizen protection in 34 democracies
+- [Government Hate Speech](https://theimr.org/government-hate-speech/): research project on hateful speech by officials
+
+## Help for migrant workers
+- [Legal Clinic](https://theimr.org/legal-clinic/): submit a rights communication
+- [Find legal help](https://theimr.org/legal-help/): map and directory of free legal help
+
+## About
+- [People](https://theimr.org/people.html)
+- [Publications: Indonesian Journal of International & Comparative Law and IMR Press books](https://theimr.org/publications.html)
+- [Contact](https://theimr.org/contact.html)
+
+Summaries are for research and advocacy, not legal advice. Cite the dataset name, version and URL.
+
+## How we use AI
+- [How we use AI](https://theimr.org/ai-use/): AI re-confirms that none of the data used infringes intellectual property law and tests labels; it edits summaries into plain language, which people re-edit; summaries pre-written by AI are marked "unverified".
+
+## Databases overview
+- [Databases](https://theimr.org/databases/): Migration Jurisprudence from the South (umbrella), the overview of all IMR databases; welcoming remark by Pranoto Iskandar and links to all IMR databases, in five groups (Law across tiers; Destination states; Origin states; Themes; Courts). Free, no account needed.
+- [Could this be human trafficking? A self-check](https://theimr.org/legal-clinic/trafficking-check/): rule-based check of a situation against the Palermo Protocol (act, means, purpose), the ILO forced labour test, Indonesian law and 14 destination countries' laws, with a printable result sheet. Nothing is stored.
+- [What works where](https://theimr.org/legal-clinic/what-works/): which legal arguments for migrant workers courts accepted or rejected in each jurisdiction, with a note on what sets each jurisdiction apart.
