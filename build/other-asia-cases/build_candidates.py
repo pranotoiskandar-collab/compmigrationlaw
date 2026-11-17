@@ -119,6 +119,20 @@ PH_CORE = {"Migrant Workers and Overseas Filipinos Act", "Republic Act No. 8042"
            "deportation", "Bureau of Immigration"}
 
 
+PH_NO = re.compile(r"^\s*(G\.\s*R\.|A\.\s*M\.|A\.\s*C\.|UDK|B\.\s*M\.)\s*(?:No[s]?\.?)?\s*([A-Z]?-?[\d\-]+(?:\s*(?:&|and|,)\s*[A-Z]?-?[\d\-]+)*)", re.I)
+
+
+def ph_key(s):
+    """Normalised case number (kind + first number), so the search hit and the monthly listing can be matched."""
+    m = PH_NO.match(s)
+    if not m:
+        return ""
+    return re.sub(r"\W", "", m.group(1)).upper() + re.split(r"\s*(?:&|and|,)\s*", m.group(2))[0].upper()
+
+
+PH_MIN_HITS = 30  # the E-Library counts how often the search words occur in the decision
+
+
 def philippines():
     f, ft = RAW / "ph_elibrary.csv", RAW / "ph_titles.csv"
     if not f.exists():
@@ -126,34 +140,30 @@ def philippines():
     titles = {}
     if ft.exists():
         for r in csv.DictReader(open(ft, encoding="utf-8")):
-            m = re.match(r"\s*((?:G\.R\.|A\.M\.|A\.C\.|UDK)[^A-Z]*?\d[\w\-]*)", r["t"])
-            if m:
-                titles[re.sub(r"\s+", " ", m.group(1)).rstrip(" .,")] = r
+            k = ph_key(r["t"])
+            if k:
+                titles[k] = r
     rows = {}
-    for r in csv.DictReader(open(f, encoding="utf-8")):
-        x = rows.setdefault(r["doc"], {**r, "terms": [], "hits": 0})
-        t = r["term"].strip('"')
-        if t not in x["terms"]:
-            x["terms"].append(t)
-        h = re.search(r"No\. of hits: (\d+)", r["snip"])
-        x["hits"] = max(x["hits"], int(h.group(1)) if h else 0)
+    for r in csv.DictReader(open(f, encoding="utf-8")):  # one row per document: doc, head, hits, terms
+        rows[r["doc"]] = {**r, "terms": r["terms"].split(";"), "hits": int(r["hits"] or 0)}
     out = []
     for doc, r in rows.items():
         head = re.sub(r"\s+", " ", r["head"]).strip()
         m = re.match(r"(.+?)[.,]? ((?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4})", head)
         case_no = (m.group(1) if m else head).rstrip(" .,")
         d = re.search(r"(\w+) (\d{1,2}), (\d{4})", m.group(2)) if m else None
-        t = titles.get(case_no)
-        title = re.sub(r"^\s*(?:G\.R\.|A\.M\.|A\.C\.|UDK)[^A-Z]*?\d[\w\-]*\s*", "", t["t"]).strip() if t else ""
+        t = titles.get(ph_key(case_no))
+        title = PH_NO.sub("", t["t"], count=1).strip(" .,") if t else ""
         title = re.sub(r"\s*(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\s*$", "", title)
         url = f"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/{t['u']}" if t else ""
         out.append({"jurisdiction": "PH", "source": "Supreme Court E-Library (elibrary.judiciary.gov.ph)",
                     "court": "Supreme Court of the Philippines", "case_no": case_no,
                     "date": iso(d.group(2), d.group(1), d.group(3)) if d else "", "date_local": "",
                     "title": title, "url": url, "lang": "en", "matched_terms": ";".join(r["terms"]),
-                    "farm_terms": ";".join(sorted({x.lower() for x in FARM_EN.findall(title + " " + r["snip"])})),
+                    "farm_terms": ";".join(sorted({x.lower() for x in FARM_EN.findall(title)})),
                     "retrieved": DATE, "_level": "apex",
-                    "_site": bool(title) and (bool(PH_CORE & set(r["terms"])) and r["hits"] >= 3 or bool(FARM_EN.search(title)))})
+                    "_hits": r["hits"], "_terms": set(r["terms"]),
+                    "_site": bool(title) and (bool(PH_CORE & set(r["terms"])) and r["hits"] >= PH_MIN_HITS or bool(FARM_EN.search(title)))})
     return out
 
 
@@ -171,7 +181,7 @@ def tcase(t):
     """Readable party names from an all-capitals title. A party written as a short code (anonymised, e.g. BDB) is kept."""
     t = re.sub(r",?\s*\b(PETITIONERS?|RESPONDENTS?|PLAINTIFF-APPELLEES?|ACCUSED-APPELLANTS?|ACCUSED|APPELLANTS?|APPELLEES?)\b[.,]?", "", t, flags=re.I)
     t = re.sub(r"\[\*\]", "", t)
-    parties = re.split(r"\s+(?:v\.?|vs\.?|VS\.?|V\.?)\s+", t.strip())
+    parties = re.split(r"\s+(?:v\.?|vs\.?|VS\.?|Vs\.?)\s+", t.strip())  # capital "V." is a middle initial
     out = []
     for p in parties:
         p = p.strip(" ,.")
