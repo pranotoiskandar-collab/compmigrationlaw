@@ -30,6 +30,10 @@ When Netlify publishes, `data/<database>/<file>` appears at `https://theimr.org/
 | `data/government-hate-speech/` | Government hate speech, with the elections comparison in `elections/` |
 | `data/africa/` | African migration laws and court decisions (incoming and sources only; decisions are shown in Court Decisions) |
 
+## Licence
+
+Data and site text: CC BY 4.0. See [LICENSE.md](LICENSE.md) for the details and the exceptions.
+
 ## Citing the data
 
 Cite the database page on theimr.org and the date you downloaded it, for example: Institute for Migrant Rights, *Court Decisions* (theimr.org/court-decisions/, accessed 17 November 2026). The history of every file is visible on GitHub.
