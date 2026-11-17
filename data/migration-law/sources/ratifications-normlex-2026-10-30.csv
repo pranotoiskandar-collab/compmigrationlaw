@@ -1,0 +1,770 @@
+instrument,country,date,status
+C11,Albania,03 Jun 1957,in force
+C11,Algeria,19 Oct 1962,in force
+C11,Antigua and Barbuda,02 Feb 1983,in force
+C11,Argentina,26 May 1936,in force
+C11,Australia,24 Dec 1957,in force
+C11,Austria,12 Jun 1924,in force
+C11,Azerbaijan,19 May 1992,in force
+C11,Bahamas,25 May 1976,in force
+C11,Bangladesh,22 Jun 1972,in force
+C11,Barbados,08 May 1967,in force
+C11,Belarus,06 Nov 1956,in force
+C11,Belgium,19 Jul 1926,in force
+C11,Belize,15 Dec 1983,in force
+C11,Benin,12 Dec 1960,in force
+C11,Bosnia and Herzegovina,02 Jun 1993,in force
+C11,Brazil,25 Apr 1957,in force
+C11,Bulgaria,06 Mar 1925,in force
+C11,Burkina Faso,21 Nov 1960,in force
+C11,Burundi,11 Mar 1963,in force
+C11,Cameroon,07 Jun 1960,in force
+C11,Central African Republic,27 Oct 1960,in force
+C11,Chad,10 Nov 1960,in force
+C11,Chile,15 Sep 1925,in force
+C11,China,27 Apr 1934,in force
+C11,Colombia,20 Jun 1933,in force
+C11,Comoros,23 Oct 1978,in force
+C11,Congo,10 Nov 1960,in force
+C11,Cook Islands,12 Jun 2015,in force
+C11,Costa Rica,16 Sep 1963,in force
+C11,Croatia,08 Oct 1991,in force
+C11,Cuba,22 Aug 1935,in force
+C11,Cyprus,08 Oct 1965,in force
+C11,Czechia,01 Jan 1993,in force
+C11,Côte d'Ivoire,21 Nov 1960,in force
+C11,Democratic Republic of the Congo,20 Sep 1960,in force
+C11,Denmark,20 Jun 1930,in force
+C11,Djibouti,03 Aug 1978,in force
+C11,Dominica,28 Feb 1983,in force
+C11,Ecuador,10 Mar 1969,in force
+C11,Egypt,03 Jul 1954,in force
+C11,Estonia,08 Sep 1922,in force
+C11,Eswatini,26 Apr 1978,in force
+C11,Ethiopia,04 Jun 1963,in force
+C11,Fiji,19 Apr 1974,in force
+C11,Finland,19 Jun 1923,in force
+C11,France,23 Mar 1929,in force
+C11,Gabon,14 Oct 1960,in force
+C11,Germany,06 Jun 1925,in force
+C11,Ghana,14 Mar 1968,in force
+C11,Greece,13 Jun 1952,in force
+C11,Grenada,09 Jul 1979,in force
+C11,Guatemala,14 Jun 1988,in force
+C11,Guinea,21 Jan 1959,in force
+C11,Guyana,08 Jun 1966,in force
+C11,Iceland,21 Aug 1956,in force
+C11,India,11 May 1923,in force
+C11,Iraq,01 Apr 1985,in force
+C11,Ireland,17 Jun 1924,in force
+C11,Italy,08 Sep 1924,in force
+C11,Jamaica,08 Jul 1963,in force
+C11,Kenya,13 Jan 1964,in force
+C11,Kyrgyzstan,31 Mar 1992,in force
+C11,Latvia,09 Sep 1924,in force
+C11,Lesotho,31 Oct 1966,in force
+C11,Lithuania,26 Sep 1994,in force
+C11,Luxembourg,16 Apr 1928,in force
+C11,Madagascar,01 Nov 1960,in force
+C11,Malawi,22 Mar 1965,in force
+C11,Malaysia,11 Jan 1960,in force
+C11,Mali,22 Sep 1960,in force
+C11,Malta,04 Jan 1965,in force
+C11,Mauritania,20 Jun 1961,in force
+C11,Mauritius,02 Dec 1969,in force
+C11,Mexico,20 May 1937,in force
+C11,Montenegro,03 Jun 2006,in force
+C11,Morocco,20 May 1957,in force
+C11,Mozambique,06 Jun 1977,in force
+C11,Myanmar,11 May 1923,in force
+C11,Netherlands,20 Aug 1926,in force
+C11,New Zealand,29 Mar 1938,in force
+C11,Nicaragua,12 Apr 1934,in force
+C11,Niger,27 Feb 1961,in force
+C11,Nigeria,16 Jun 1961,in force
+C11,North Macedonia,17 Nov 1991,in force
+C11,Norway,11 Jun 1929,in force
+C11,Pakistan,11 May 1923,in force
+C11,Panama,19 Jun 1970,in force
+C11,Papua New Guinea,01 May 1976,in force
+C11,Paraguay,16 May 1968,in force
+C11,Peru,08 Nov 1945,in force
+C11,Poland,21 Jun 1924,in force
+C11,Portugal,27 Sep 1977,in force
+C11,Republic of Moldova,04 Apr 2003,in force
+C11,Romania,10 Nov 1930,in force
+C11,Russian Federation,10 Aug 1956,in force
+C11,Rwanda,18 Sep 1962,in force
+C11,Saint Lucia,14 May 1980,in force
+C11,Saint Vincent and the Grenadines,21 Oct 1998,in force
+C11,Senegal,04 Nov 1960,in force
+C11,Serbia,24 Nov 2000,in force
+C11,Seychelles,06 Feb 1978,in force
+C11,Singapore,25 Oct 1965,in force
+C11,Slovakia,01 Jan 1993,in force
+C11,Slovenia,29 May 1992,in force
+C11,Solomon Islands,06 Aug 1985,in force
+C11,Spain,29 Aug 1932,in force
+C11,Sri Lanka,25 Aug 1952,in force
+C11,Suriname,15 Jun 1976,in force
+C11,Sweden,27 Nov 1923,in force
+C11,Switzerland,23 May 1940,in force
+C11,Syrian Arab Republic,26 Jul 1960,in force
+C11,Tajikistan,26 Nov 1993,in force
+C11,Togo,07 Jun 1960,in force
+C11,Tunisia,15 May 1957,in force
+C11,Türkiye,29 Mar 1961,in force
+C11,Uganda,04 Jun 1963,in force
+C11,Ukraine,14 Sep 1956,in force
+C11,United Kingdom,06 Aug 1923,in force
+C11,United Republic of Tanzania,19 Nov 1962,in force
+C11,Uruguay,06 Jun 1933,in force
+C11,Venezuela,20 Nov 1944,in force
+C11,Zambia,02 Dec 1964,in force
+C99,Algeria,19 Oct 1962,in force
+C99,Australia,19 Jun 1969,in force
+C99,Austria,29 Oct 1953,in force
+C99,Belgium,17 Oct 1968,in force
+C99,Belize,15 Dec 1983,in force
+C99,Brazil,25 Apr 1957,in force
+C99,Cameroon,25 May 1970,in force
+C99,Central African Republic,09 Jun 1964,in force
+C99,Colombia,04 Mar 1969,in force
+C99,Comoros,23 Oct 1978,in force
+C99,Cook Islands,12 Jun 2015,in force
+C99,Costa Rica,02 Jun 1960,in force
+C99,Cuba,13 Jan 1954,in force
+C99,Czechia,01 Jan 1993,in force
+C99,Côte d'Ivoire,05 May 1961,in force
+C99,Djibouti,03 Aug 1978,in force
+C99,El Salvador,15 Jun 1995,in force
+C99,Eswatini,05 Jun 1981,in force
+C99,France,29 Mar 1954,in force
+C99,Gabon,13 Jun 1961,in force
+C99,Germany,25 Feb 1954,in force
+C99,Grenada,09 Jul 1979,in force
+C99,Guatemala,04 Aug 1961,in force
+C99,Guinea,12 Dec 1966,in force
+C99,Hungary,18 Jun 1969,in force
+C99,Ireland,22 Jun 1978,in force
+C99,Italy,05 May 1971,in force
+C99,Kenya,09 Feb 1971,in force
+C99,Malawi,22 Mar 1965,in force
+C99,Malta,28 Nov 1969,in force
+C99,Mauritius,02 Dec 1969,in force
+C99,Mexico,23 Aug 1952,in force
+C99,Morocco,14 Oct 1960,in force
+C99,Netherlands,11 Jun 1954,in force
+C99,New Zealand,01 Jul 1952,in force
+C99,Papua New Guinea,01 May 1976,in force
+C99,Paraguay,24 Jun 1964,in force
+C99,Peru,01 Feb 1960,in force
+C99,Philippines,29 Dec 1953,in force
+C99,Poland,05 Jul 1977,in force
+C99,Republic of Moldova,04 Apr 2003,in force
+C99,Senegal,22 Oct 1962,in force
+C99,Seychelles,06 Feb 1978,in force
+C99,Sierra Leone,13 Jun 1961,in force
+C99,Slovakia,01 Jan 1993,in force
+C99,Spain,04 Jun 1970,in force
+C99,Sri Lanka,05 Apr 1954,in force
+C99,Syrian Arab Republic,10 Aug 1965,in force
+C99,Tunisia,12 Jan 1959,in force
+C99,Türkiye,23 Jun 1970,in force
+C99,United Kingdom,09 Jun 1953,denounced
+C99,Uruguay,18 Mar 1954,in force
+C99,Zambia,20 Jun 1972,in force
+C99,Zimbabwe,16 Sep 1993,in force
+C110,Brazil,01 Mar 1965,denounced
+C110,Cuba,30 Dec 1958,in force
+C110,Côte d'Ivoire,05 May 1961,in force
+C110,Ecuador,03 Oct 1969,in force
+C110,Guatemala,04 Aug 1961,in force
+C110,Liberia,22 Jul 1959,denounced
+C110,Mexico,20 Jun 1960,in force
+C110,Nicaragua,01 Oct 1981,in force
+C110,Panama,15 Jul 1971,in force
+C110,Philippines,10 Oct 1968,in force
+C110,Sri Lanka,24 Apr 1995,in force
+C110,Uruguay,28 Jun 1973,in force
+C129,Albania,11 Oct 2007,in force
+C129,Argentina,20 Jun 1985,in force
+C129,Azerbaijan,09 Aug 2000,in force
+C129,Belgium,08 Sep 1997,in force
+C129,Bolivia,31 Jan 1977,in force
+C129,Bosnia and Herzegovina,02 Jun 1993,in force
+C129,Botswana,22 Dec 2022,in force
+C129,Burkina Faso,21 May 1974,in force
+C129,Colombia,16 Nov 1976,in force
+C129,Congo,26 Oct 2023,in force
+C129,Costa Rica,16 Mar 1972,in force
+C129,Croatia,08 Oct 1991,in force
+C129,Czechia,16 Mar 2011,in force
+C129,Côte d'Ivoire,05 Jun 1987,in force
+C129,Denmark,30 Nov 1972,in force
+C129,Egypt,20 Jun 2003,in force
+C129,El Salvador,15 Jun 1995,in force
+C129,Estonia,01 Feb 2005,in force
+C129,Fiji,18 Jan 2010,in force
+C129,Finland,03 Sep 1974,in force
+C129,France,28 Dec 1972,in force
+C129,Germany,26 Sep 1973,in force
+C129,Guatemala,20 May 1994,in force
+C129,Guyana,19 Jan 1971,in force
+C129,Hungary,04 Jan 1994,in force
+C129,Iceland,24 Mar 2009,in force
+C129,Italy,23 Jun 1981,in force
+C129,Kazakhstan,06 Jul 2001,in force
+C129,Kenya,09 Apr 1979,in force
+C129,Latvia,25 Jul 1994,in force
+C129,Luxembourg,08 Apr 2008,in force
+C129,Madagascar,21 Dec 1971,in force
+C129,Malawi,20 Jul 1971,in force
+C129,Malta,09 Jun 1988,in force
+C129,Montenegro,03 Jun 2006,in force
+C129,Morocco,11 May 1979,in force
+C129,Netherlands,29 Jun 1973,in force
+C129,North Macedonia,17 Nov 1991,in force
+C129,Norway,14 Apr 1971,in force
+C129,Panama,22 Mar 2022,in force
+C129,Poland,02 Jun 1995,in force
+C129,Portugal,24 Feb 1983,in force
+C129,Republic of Moldova,09 Dec 1997,in force
+C129,Romania,28 Oct 1975,in force
+C129,Saint Vincent and the Grenadines,09 Nov 2010,in force
+C129,Serbia,24 Nov 2000,in force
+C129,Slovakia,17 Sep 2009,in force
+C129,Slovenia,29 May 1992,in force
+C129,Spain,05 May 1971,in force
+C129,Suriname,28 Nov 2024,in force
+C129,Sweden,14 May 1970,in force
+C129,Syrian Arab Republic,18 Apr 1972,in force
+C129,Togo,30 Mar 2012,in force
+C129,Ukraine,10 Nov 2004,in force
+C129,Uruguay,28 Jun 1973,in force
+C129,Uzbekistan,19 Nov 2019,in force
+C129,Zambia,23 Dec 2013,in force
+C129,Zimbabwe,16 Sep 1993,in force
+C141,Afghanistan,16 May 1979,in force
+C141,Albania,18 Aug 2004,in force
+C141,Austria,18 Sep 1978,in force
+C141,Belgium,19 Dec 2003,in force
+C141,Belize,22 Jun 1999,in force
+C141,Brazil,27 Sep 1994,in force
+C141,Burkina Faso,25 Aug 1997,in force
+C141,Costa Rica,23 Jul 1991,in force
+C141,Cuba,14 Apr 1977,in force
+C141,Cyprus,28 Jun 1977,in force
+C141,Denmark,06 Jun 1978,in force
+C141,Ecuador,26 Oct 1977,in force
+C141,El Salvador,15 Jun 1995,in force
+C141,Finland,14 Sep 1977,in force
+C141,France,10 Sep 1984,in force
+C141,Germany,05 Dec 1978,in force
+C141,Greece,17 Oct 1989,in force
+C141,Guatemala,13 Jun 1989,in force
+C141,Guyana,10 Jan 1983,in force
+C141,Hungary,04 Jan 1994,in force
+C141,India,18 Aug 1977,in force
+C141,Israel,21 Jun 1979,in force
+C141,Italy,18 Oct 1979,in force
+C141,Kenya,09 Apr 1979,in force
+C141,Mali,12 Jun 1995,in force
+C141,Malta,09 Jun 1988,in force
+C141,Mexico,28 Jun 1978,in force
+C141,Netherlands,26 Jan 1977,in force
+C141,Nicaragua,01 Oct 1981,in force
+C141,North Macedonia,02 Mar 2018,in force
+C141,Norway,24 Nov 1976,in force
+C141,Philippines,18 Jun 1979,in force
+C141,Poland,29 Nov 1991,in force
+C141,Republic of Moldova,04 Apr 2003,in force
+C141,Spain,28 Apr 1978,in force
+C141,Sweden,19 Jul 1976,in force
+C141,Switzerland,23 May 1977,in force
+C141,United Kingdom,15 Feb 1977,in force
+C141,Uruguay,19 Jun 1989,in force
+C141,Venezuela,05 Jul 1983,in force
+C141,Zambia,04 Dec 1978,in force
+C184,Antigua and Barbuda,28 Jul 2021,in force
+C184,Argentina,26 Jun 2006,in force
+C184,Belgium,10 Nov 2015,in force
+C184,Bosnia and Herzegovina,18 Jan 2010,in force
+C184,Burkina Faso,28 Oct 2009,in force
+C184,Fiji,28 May 2008,in force
+C184,Finland,21 Feb 2003,in force
+C184,France,26 Jan 2021,in force
+C184,Germany,12 Jun 2024,in force
+C184,Ghana,06 Jun 2011,in force
+C184,Iraq,21 May 2021,in force
+C184,Kyrgyzstan,10 May 2004,in force
+C184,Luxembourg,08 Apr 2008,in force
+C184,Malawi,07 Nov 2019,in force
+C184,Portugal,08 Nov 2012,in force
+C184,Republic of Moldova,20 Sep 2002,in force
+C184,Sao Tome and Principe,04 May 2005,in force
+C184,Serbia,12 Mar 2019,in force
+C184,Slovakia,14 Jun 2002,in force
+C184,Spain,11 Jun 2024,in force
+C184,Sweden,09 Jun 2004,in force
+C184,Ukraine,01 Dec 2009,in force
+C184,Uruguay,25 May 2005,in force
+C169,Argentina,03 Jul 2000,in force
+C169,Bolivia,11 Dec 1991,in force
+C169,Brazil,25 Jul 2002,in force
+C169,Central African Republic,30 Aug 2010,in force
+C169,Chile,15 Sep 2008,in force
+C169,Colombia,07 Aug 1991,in force
+C169,Costa Rica,02 Apr 1993,in force
+C169,Denmark,22 Feb 1996,in force
+C169,Dominica,25 Jun 2002,in force
+C169,Ecuador,15 May 1998,in force
+C169,Fiji,03 Mar 1998,in force
+C169,Germany,23 Jun 2021,in force
+C169,Guatemala,05 Jun 1996,in force
+C169,Honduras,28 Mar 1995,in force
+C169,Luxembourg,05 Jun 2018,in force
+C169,Mexico,05 Sep 1990,in force
+C169,Nepal,14 Sep 2007,in force
+C169,Netherlands,02 Feb 1998,in force
+C169,Nicaragua,25 Aug 2010,in force
+C169,Norway,19 Jun 1990,in force
+C169,Paraguay,10 Aug 1993,in force
+C169,Peru,02 Feb 1994,in force
+C169,Spain,15 Feb 2007,in force
+C169,Venezuela,22 May 2002,in force
+C170,Belgium,14 Jun 2017,in force
+C170,Brazil,23 Dec 1996,in force
+C170,Burkina Faso,15 Sep 1997,in force
+C170,China,11 Jan 1995,in force
+C170,Colombia,06 Sep 1994,in force
+C170,Cyprus,02 Aug 2016,in force
+C170,Côte d'Ivoire,01 Nov 2019,in force
+C170,Dominican Republic,03 Jan 2006,in force
+C170,Finland,21 Jan 2014,in force
+C170,Germany,23 Nov 2007,in force
+C170,Italy,03 Jul 2002,in force
+C170,Lebanon,26 Apr 2006,in force
+C170,Luxembourg,08 Apr 2008,in force
+C170,Mexico,17 Sep 1992,in force
+C170,Netherlands,08 Jun 2017,in force
+C170,Norway,26 Nov 1993,in force
+C170,Poland,19 May 2005,in force
+C170,Republic of Korea,11 Apr 2003,in force
+C170,Sweden,04 Nov 1992,in force
+C170,Switzerland,25 Apr 2022,in force
+C170,Syrian Arab Republic,14 Jun 2006,in force
+C170,Ukraine,06 Dec 2023,in force
+C170,United Republic of Tanzania,15 Mar 1999,in force
+C170,Zimbabwe,27 Aug 1998,in force
+C181,Albania,30 Jun 1999,in force
+C181,Algeria,06 Jun 2006,in force
+C181,Antigua and Barbuda,28 Jul 2021,in force
+C181,Belgium,28 Sep 2004,in force
+C181,Bosnia and Herzegovina,18 Jan 2010,in force
+C181,Bulgaria,24 Mar 2005,in force
+C181,Czechia,09 Oct 2000,in force
+C181,Djibouti,17 Dec 2025,"ratified, not yet in force"
+C181,Ethiopia,24 Mar 1999,in force
+C181,Fiji,21 Jan 2013,in force
+C181,Finland,25 May 1999,in force
+C181,France,28 Oct 2015,in force
+C181,Georgia,27 Aug 2002,in force
+C181,Hungary,19 Sep 2003,in force
+C181,Israel,04 Oct 2012,in force
+C181,Italy,01 Feb 2000,in force
+C181,Japan,28 Jul 1999,in force
+C181,Kyrgyzstan,26 Nov 2025,"ratified, not yet in force"
+C181,Lithuania,19 Mar 2004,in force
+C181,Madagascar,11 Jun 2019,in force
+C181,Mali,12 Apr 2016,in force
+C181,Mongolia,17 Apr 2015,in force
+C181,Morocco,10 May 1999,in force
+C181,Netherlands,15 Sep 1999,in force
+C181,Niger,14 May 2015,in force
+C181,Nigeria,23 Mar 2023,in force
+C181,North Macedonia,03 Oct 2012,in force
+C181,Panama,10 Aug 1999,in force
+C181,Poland,15 Sep 2008,in force
+C181,Portugal,25 Mar 2002,in force
+C181,Republic of Moldova,19 Dec 2001,in force
+C181,Rwanda,29 Jun 2018,in force
+C181,Serbia,15 Mar 2013,in force
+C181,Sierra Leone,25 Aug 2021,in force
+C181,Slovakia,22 Feb 2010,in force
+C181,Somalia,08 Mar 2021,in force
+C181,Spain,15 Jun 1999,in force
+C181,Suriname,12 Apr 2006,in force
+C181,Uruguay,14 Jun 2004,in force
+C181,Zambia,23 Dec 2013,in force
+C190,Albania,06 May 2022,in force
+C190,Angola,11 Jun 2025,in force
+C190,Antigua and Barbuda,09 May 2022,in force
+C190,Argentina,23 Feb 2021,in force
+C190,Armenia,04 Dec 2025,"ratified, not yet in force"
+C190,Australia,09 Jun 2023,in force
+C190,Austria,11 Sep 2024,in force
+C190,Bahamas,30 Nov 2022,in force
+C190,Bangladesh,20 Nov 2025,"ratified, not yet in force"
+C190,Barbados,01 Sep 2022,in force
+C190,Belgium,13 Jun 2023,in force
+C190,Canada,30 Jan 2023,in force
+C190,Central African Republic,09 Jun 2022,in force
+C190,Chile,12 Jun 2023,in force
+C190,Costa Rica,02 Oct 2025,in force
+C190,Cyprus,04 Mar 2025,in force
+C190,Denmark,06 Jun 2024,in force
+C190,Ecuador,19 May 2021,in force
+C190,El Salvador,07 Jun 2022,in force
+C190,Estonia,18 Dec 2024,in force
+C190,Fiji,25 Jun 2020,in force
+C190,Finland,07 Jun 2024,in force
+C190,France,12 Apr 2023,in force
+C190,Germany,14 Jun 2023,in force
+C190,Greece,30 Aug 2021,in force
+C190,Ireland,12 Jan 2023,in force
+C190,Italy,29 Oct 2021,in force
+C190,Kyrgyzstan,03 Jun 2024,in force
+C190,Lesotho,15 Mar 2023,in force
+C190,Mauritius,01 Jul 2021,in force
+C190,Mexico,06 Jul 2022,in force
+C190,Montenegro,27 Feb 2025,in force
+C190,Mozambique,26 Nov 2025,"ratified, not yet in force"
+C190,Namibia,09 Dec 2020,in force
+C190,Nigeria,08 Nov 2022,in force
+C190,North Macedonia,20 Oct 2023,in force
+C190,Norway,06 Oct 2023,in force
+C190,Panama,01 Nov 2022,in force
+C190,Papua New Guinea,27 Sep 2023,in force
+C190,Peru,08 Jun 2022,in force
+C190,Philippines,20 Feb 2024,in force
+C190,Portugal,16 Feb 2024,in force
+C190,Republic of Moldova,19 Mar 2024,in force
+C190,Romania,12 Jun 2024,in force
+C190,Rwanda,01 Nov 2023,in force
+C190,Samoa,31 May 2024,in force
+C190,San Marino,14 Apr 2022,in force
+C190,Slovenia,30 Apr 2026,"ratified, not yet in force"
+C190,Somalia,08 Mar 2021,in force
+C190,South Africa,29 Nov 2021,in force
+C190,Spain,25 May 2022,in force
+C190,Sri Lanka,16 Apr 2026,"ratified, not yet in force"
+C190,Uganda,07 Aug 2023,in force
+C190,United Kingdom,07 Mar 2022,in force
+C190,Uruguay,12 Jun 2020,in force
+C190,Zambia,13 Dec 2024,in force
+P29,Antigua and Barbuda,28 Jul 2021,in force
+P29,Argentina,09 Nov 2016,in force
+P29,Australia,31 Mar 2022,in force
+P29,Austria,12 Sep 2019,in force
+P29,Bangladesh,20 Jan 2022,in force
+P29,Belgium,10 Sep 2019,in force
+P29,Bosnia and Herzegovina,09 Aug 2018,in force
+P29,Brazil,25 Aug 2025,in force
+P29,Canada,17 Jun 2019,in force
+P29,Chile,19 Jan 2021,in force
+P29,Comoros,15 Jul 2021,in force
+P29,Costa Rica,16 Nov 2020,in force
+P29,Cyprus,01 Feb 2017,in force
+P29,Czechia,09 Jun 2016,in force
+P29,Côte d'Ivoire,01 Nov 2019,in force
+P29,Denmark,14 Jun 2017,in force
+P29,Djibouti,09 Mar 2018,in force
+P29,Estonia,24 Nov 2016,in force
+P29,Finland,27 Jan 2017,in force
+P29,France,07 Jun 2016,in force
+P29,Germany,19 Jun 2019,in force
+P29,Greece,03 Mar 2026,"ratified, not yet in force"
+P29,Iceland,14 Jun 2017,in force
+P29,Ireland,04 Feb 2019,in force
+P29,Israel,11 Oct 2018,in force
+P29,Italy,09 Jun 2026,"ratified, not yet in force"
+P29,Jamaica,13 Jun 2017,in force
+P29,Kyrgyzstan,06 Oct 2020,in force
+P29,Latvia,07 Dec 2017,in force
+P29,Lesotho,22 Aug 2019,in force
+P29,Lithuania,05 Mar 2020,in force
+P29,Luxembourg,18 Mar 2021,in force
+P29,Madagascar,11 Jun 2019,in force
+P29,Malawi,07 Nov 2019,in force
+P29,Malaysia,21 Mar 2022,in force
+P29,Mali,12 Apr 2016,in force
+P29,Malta,14 Feb 2019,in force
+P29,Mauritania,09 Feb 2016,in force
+P29,Mexico,11 Jun 2023,in force
+P29,Mozambique,14 Jun 2018,in force
+P29,Namibia,06 Nov 2017,in force
+P29,Nepal,07 Aug 2026,"ratified, not yet in force"
+P29,Netherlands,08 Aug 2017,in force
+P29,New Zealand,13 Dec 2019,in force
+P29,Niger,14 May 2015,in force
+P29,Norway,09 Nov 2015,in force
+P29,Pakistan,14 Mar 2025,in force
+P29,Panama,07 Sep 2016,in force
+P29,Peru,18 Jun 2021,in force
+P29,Poland,10 Mar 2017,in force
+P29,Portugal,23 Dec 2020,in force
+P29,Russian Federation,17 Jan 2019,in force
+P29,Saudi Arabia,26 May 2021,in force
+P29,Sierra Leone,25 Aug 2021,in force
+P29,Spain,20 Sep 2017,in force
+P29,Sri Lanka,10 Apr 2019,in force
+P29,Sudan,17 Mar 2021,in force
+P29,Suriname,03 Jun 2019,in force
+P29,Sweden,14 Jun 2017,in force
+P29,Switzerland,28 Sep 2017,in force
+P29,Tajikistan,24 Jan 2020,in force
+P29,Thailand,04 Jun 2018,in force
+P29,United Arab Emirates,15 Jan 2026,"ratified, not yet in force"
+P29,United Kingdom,22 Jan 2016,in force
+P29,Uzbekistan,16 Sep 2019,in force
+P29,Zimbabwe,22 May 2019,in force
+ICESCR,Afghanistan,24 Jan 1983,party
+ICESCR,Albania,4 Oct 1991,party
+ICESCR,Algeria,12 Sep 1989,party
+ICESCR,Andorra,22 Sep 2026,party
+ICESCR,Angola,10 Jan 1992,party
+ICESCR,Antigua and Barbuda,3 Jul 2019,party
+ICESCR,Argentina,8 Aug 1986,party
+ICESCR,Armenia,13 Sep 1993,party
+ICESCR,Australia,10 Dec 1975,party
+ICESCR,Austria,10 Sep 1978,party
+ICESCR,Azerbaijan,13 Aug 1992,party
+ICESCR,Bahamas,23 Dec 2008,party
+ICESCR,Bahrain,27 Sep 2007,party
+ICESCR,Bangladesh,5 Oct 1998,party
+ICESCR,Barbados,5 Jan 1973,party
+ICESCR,Belarus,12 Nov 1973,party
+ICESCR,Belgium,21 Apr 1983,party
+ICESCR,Belize,9 Mar 2015,party
+ICESCR,Benin,12 Mar 1992,party
+ICESCR,Bolivia,12 Aug 1982,party
+ICESCR,Bosnia and Herzegovina,1 Sep 1993,party
+ICESCR,Brazil,24 Jan 1992,party
+ICESCR,Bulgaria,21 Sep 1970,party
+ICESCR,Burkina Faso,4 Jan 1999,party
+ICESCR,Burundi,9 May 1990,party
+ICESCR,Cabo Verde,6 Aug 1993,party
+ICESCR,Cambodia,26 May 1992,party
+ICESCR,Cameroon,27 Jun 1984,party
+ICESCR,Canada,19 May 1976,party
+ICESCR,Central African Republic,8 May 1981,party
+ICESCR,Chad,9 Jun 1995,party
+ICESCR,Chile,10 Feb 1972,party
+ICESCR,China,27 Mar 2001,party
+ICESCR,Colombia,29 Oct 1969,party
+ICESCR,Comoros,,signatory only
+ICESCR,Congo,5 Oct 1983,party
+ICESCR,Costa Rica,29 Nov 1968,party
+ICESCR,Côte d'Ivoire,26 Mar 1992,party
+ICESCR,Croatia,12 Oct 1992,party
+ICESCR,Cuba,,signatory only
+ICESCR,Cyprus,2 Apr 1969,party
+ICESCR,Czechia,22 Feb 1993,party
+ICESCR,Democratic People's Republic of Korea,14 Sep 1981,party
+ICESCR,Democratic Republic of the Congo,1 Nov 1976,party
+ICESCR,Denmark,6 Jan 1972,party
+ICESCR,Djibouti,5 Nov 2002,party
+ICESCR,Dominica,17 Jun 1993,party
+ICESCR,Dominican Republic,4 Jan 1978,party
+ICESCR,Ecuador,6 Mar 1969,party
+ICESCR,Egypt,14 Jan 1982,party
+ICESCR,El Salvador,30 Nov 1979,party
+ICESCR,Equatorial Guinea,25 Sep 1987,party
+ICESCR,Eritrea,17 Apr 2001,party
+ICESCR,Estonia,21 Oct 1991,party
+ICESCR,Eswatini,26 Mar 2004,party
+ICESCR,Ethiopia,11 Jun 1993,party
+ICESCR,Fiji,16 Aug 2018,party
+ICESCR,Finland,19 Aug 1975,party
+ICESCR,France,4 Nov 1980,party
+ICESCR,Gabon,21 Jan 1983,party
+ICESCR,Gambia,29 Dec 1978,party
+ICESCR,Georgia,3 May 1994,party
+ICESCR,Germany,17 Dec 1973,party
+ICESCR,Ghana,7 Sep 2000,party
+ICESCR,Greece,16 May 1985,party
+ICESCR,Grenada,6 Sep 1991,party
+ICESCR,Guatemala,19 May 1988,party
+ICESCR,Guinea,24 Jan 1978,party
+ICESCR,Guinea-Bissau,2 Jul 1992,party
+ICESCR,Guyana,15 Feb 1977,party
+ICESCR,Haiti,8 Oct 2013,party
+ICESCR,Honduras,17 Feb 1981,party
+ICESCR,Hungary,17 Jan 1974,party
+ICESCR,Iceland,22 Aug 1979,party
+ICESCR,India,10 Apr 1979,party
+ICESCR,Indonesia,23 Feb 2006,party
+ICESCR,Iran,24 Jun 1975,party
+ICESCR,Iraq,25 Jan 1971,party
+ICESCR,Ireland,8 Dec 1989,party
+ICESCR,Israel,3 Oct 1991,party
+ICESCR,Italy,15 Sep 1978,party
+ICESCR,Jamaica,3 Oct 1975,party
+ICESCR,Japan,21 Jun 1979,party
+ICESCR,Jordan,28 May 1975,party
+ICESCR,Kazakhstan,24 Jan 2006,party
+ICESCR,Kenya,1 May 1972,party
+ICESCR,Kuwait,21 May 1996,party
+ICESCR,Kyrgyzstan,7 Oct 1994,party
+ICESCR,Lao People's Democratic Republic,13 Feb 2007,party
+ICESCR,Latvia,14 Apr 1992,party
+ICESCR,Lebanon,3 Nov 1972,party
+ICESCR,Lesotho,9 Sep 1992,party
+ICESCR,Liberia,22 Sep 2004,party
+ICESCR,Libya,15 May 1970,party
+ICESCR,Liechtenstein,10 Dec 1998,party
+ICESCR,Lithuania,20 Nov 1991,party
+ICESCR,Luxembourg,18 Aug 1983,party
+ICESCR,Madagascar,22 Sep 1971,party
+ICESCR,Malawi,22 Dec 1993,party
+ICESCR,Maldives,19 Sep 2006,party
+ICESCR,Mali,16 Jul 1974,party
+ICESCR,Malta,13 Sep 1990,party
+ICESCR,Marshall Islands,12 Mar 2018,party
+ICESCR,Mauritania,17 Nov 2004,party
+ICESCR,Mauritius,12 Dec 1973,party
+ICESCR,Mexico,23 Mar 1981,party
+ICESCR,Monaco,28 Aug 1997,party
+ICESCR,Mongolia,18 Nov 1974,party
+ICESCR,Montenegro,23 Oct 2006,party
+ICESCR,Morocco,3 May 1979,party
+ICESCR,Myanmar,6 Oct 2017,party
+ICESCR,Namibia,28 Nov 1994,party
+ICESCR,Nepal,14 May 1991,party
+ICESCR,Netherlands,11 Dec 1978,party
+ICESCR,New Zealand,28 Dec 1978,party
+ICESCR,Nicaragua,12 Mar 1980,party
+ICESCR,Niger,7 Mar 1986,party
+ICESCR,Nigeria,29 Jul 1993,party
+ICESCR,North Macedonia,18 Jan 1994,party
+ICESCR,Norway,13 Sep 1972,party
+ICESCR,Oman,9 Jun 2020,party
+ICESCR,Pakistan,17 Apr 2008,party
+ICESCR,Palau,,signatory only
+ICESCR,Panama,8 Mar 1977,party
+ICESCR,Papua New Guinea,21 Jul 2008,party
+ICESCR,Paraguay,10 Jun 1992,party
+ICESCR,Peru,28 Apr 1978,party
+ICESCR,Philippines,7 Jun 1974,party
+ICESCR,Poland,18 Mar 1977,party
+ICESCR,Portugal,31 Jul 1978,party
+ICESCR,Qatar,21 May 2018,party
+ICESCR,Republic of Korea,10 Apr 1990,party
+ICESCR,Republic of Moldova,26 Jan 1993,party
+ICESCR,Romania,9 Dec 1974,party
+ICESCR,Russian Federation,16 Oct 1973,party
+ICESCR,Rwanda,16 Apr 1975,party
+ICESCR,San Marino,18 Oct 1985,party
+ICESCR,Sao Tome and Principe,10 Jan 2017,party
+ICESCR,Senegal,13 Feb 1978,party
+ICESCR,Serbia,12 Mar 2001,party
+ICESCR,Seychelles,5 May 1992,party
+ICESCR,Sierra Leone,23 Aug 1996,party
+ICESCR,Slovakia,28 May 1993,party
+ICESCR,Slovenia,6 Jul 1992,party
+ICESCR,Solomon Islands,17 Mar 1982,party
+ICESCR,Somalia,24 Jan 1990,party
+ICESCR,South Africa,12 Jan 2015,party
+ICESCR,South Sudan,5 Feb 2024,party
+ICESCR,Spain,27 Apr 1977,party
+ICESCR,Sri Lanka,11 Jun 1980,party
+ICESCR,Saint Kitts and Nevis,1 Nov 2024,party
+ICESCR,Saint Vincent and the Grenadines,9 Nov 1981,party
+ICESCR,State of Palestine,2 Apr 2014,party
+ICESCR,Sudan,18 Mar 1986,party
+ICESCR,Suriname,28 Dec 1976,party
+ICESCR,Sweden,6 Dec 1971,party
+ICESCR,Switzerland,18 Jun 1992,party
+ICESCR,Syrian Arab Republic,21 Apr 1969,party
+ICESCR,Tajikistan,4 Jan 1999,party
+ICESCR,Thailand,5 Sep 1999,party
+ICESCR,Timor-Leste,16 Apr 2003,party
+ICESCR,Togo,24 May 1984,party
+ICESCR,Trinidad and Tobago,8 Dec 1978,party
+ICESCR,Tunisia,18 Mar 1969,party
+ICESCR,Türkiye,23 Sep 2003,party
+ICESCR,Turkmenistan,1 May 1997,party
+ICESCR,Uganda,21 Jan 1987,party
+ICESCR,Ukraine,12 Nov 1973,party
+ICESCR,United Kingdom,20 May 1976,party
+ICESCR,United Republic of Tanzania,11 Jun 1976,party
+ICESCR,United States of America,,signatory only
+ICESCR,Uruguay,1 Apr 1970,party
+ICESCR,Uzbekistan,28 Sep 1995,party
+ICESCR,Venezuela,10 May 1978,party
+ICESCR,Viet Nam,24 Sep 1982,party
+ICESCR,Yemen,9 Feb 1987,party
+ICESCR,Zambia,10 Apr 1984,party
+ICESCR,Zimbabwe,13 May 1991,party
+ICRMW,Albania,5 Jun 2007,party
+ICRMW,Algeria,21 Apr 2005,party
+ICRMW,Argentina,23 Feb 2007,party
+ICRMW,Armenia,,signatory only
+ICRMW,Azerbaijan,11 Jan 1999,party
+ICRMW,Bangladesh,24 Aug 2011,party
+ICRMW,Belize,14 Nov 2001,party
+ICRMW,Benin,6 Jul 2018,party
+ICRMW,Bolivia,16 Oct 2000,party
+ICRMW,Bosnia and Herzegovina,13 Dec 1996,party
+ICRMW,Burkina Faso,26 Nov 2003,party
+ICRMW,Cabo Verde,16 Sep 1997,party
+ICRMW,Cambodia,,signatory only
+ICRMW,Cameroon,,signatory only
+ICRMW,Chad,22 Feb 2022,party
+ICRMW,Chile,21 Mar 2005,party
+ICRMW,Colombia,24 May 1995,party
+ICRMW,Comoros,,signatory only
+ICRMW,Congo,31 Mar 2017,party
+ICRMW,Côte d'Ivoire,26 Sep 2023,party
+ICRMW,Ecuador,5 Feb 2002,party
+ICRMW,Egypt,19 Feb 1993,party
+ICRMW,El Salvador,14 Mar 2003,party
+ICRMW,Fiji,19 Aug 2019,party
+ICRMW,Gabon,,signatory only
+ICRMW,Gambia,28 Sep 2018,party
+ICRMW,Ghana,7 Sep 2000,party
+ICRMW,Guatemala,14 Mar 2003,party
+ICRMW,Guinea,7 Sep 2000,party
+ICRMW,Guinea-Bissau,22 Oct 2018,party
+ICRMW,Guyana,7 Jul 2010,party
+ICRMW,Haiti,,signatory only
+ICRMW,Honduras,9 Aug 2005,party
+ICRMW,Indonesia,31 May 2012,party
+ICRMW,Jamaica,25 Sep 2008,party
+ICRMW,Kyrgyzstan,29 Sep 2003,party
+ICRMW,Lesotho,16 Sep 2005,party
+ICRMW,Liberia,,signatory only
+ICRMW,Libya,18 Jun 2004,party
+ICRMW,Madagascar,13 May 2015,party
+ICRMW,Malawi,23 Sep 2022,party
+ICRMW,Mali,5 Jun 2003,party
+ICRMW,Mauritania,22 Jan 2007,party
+ICRMW,Mexico,8 Mar 1999,party
+ICRMW,Montenegro,,signatory only
+ICRMW,Morocco,21 Jun 1993,party
+ICRMW,Mozambique,19 Aug 2013,party
+ICRMW,Nicaragua,26 Oct 2005,party
+ICRMW,Niger,18 Mar 2009,party
+ICRMW,Nigeria,27 Jul 2009,party
+ICRMW,Palau,,signatory only
+ICRMW,Paraguay,23 Sep 2008,party
+ICRMW,Peru,14 Sep 2005,party
+ICRMW,Philippines,5 Jul 1995,party
+ICRMW,Rwanda,15 Dec 2008,party
+ICRMW,Sao Tome and Principe,10 Jan 2017,party
+ICRMW,Senegal,9 Jun 1999,party
+ICRMW,Serbia,,signatory only
+ICRMW,Seychelles,15 Dec 1994,party
+ICRMW,Sierra Leone,,signatory only
+ICRMW,Sri Lanka,11 Mar 1996,party
+ICRMW,Saint Vincent and the Grenadines,29 Oct 2010,party
+ICRMW,Syrian Arab Republic,2 Jun 2005,party
+ICRMW,Tajikistan,8 Jan 2002,party
+ICRMW,Timor-Leste,30 Jan 2004,party
+ICRMW,Togo,16 Dec 2020,party
+ICRMW,Türkiye,27 Sep 2004,party
+ICRMW,Uganda,14 Nov 1995,party
+ICRMW,Uruguay,15 Feb 2001,party
+ICRMW,Venezuela,25 Oct 2016,party
+ICRMW,Zimbabwe,5 Nov 2024,party

@@ -1,0 +1,105 @@
+iso,country,group,kind,name,operator,url,language,source_type
+SA,Saudi Arabia,Gulf,courts,Scientific Portal for Judicial Decisions (Al-Bawaba al-'Ilmiya),Ministry of Justice,https://sjp.moj.gov.sa/,Arabic,official
+SA,Saudi Arabia,Gulf,laws,Laws and Regulations,Bureau of Experts at the Council of Ministers,https://laws.boe.gov.sa/,"Arabic, English",official
+AE,United Arab Emirates,Gulf,laws,UAE Legislation,UAE Government (General Secretariat of the Cabinet),https://uaelegislation.gov.ae/,"Arabic, English",official
+AE,United Arab Emirates,Gulf,courts,Dubai Courts (judgments and principles),Dubai Courts,https://www.dc.gov.ae/,"Arabic, English",official
+AE,United Arab Emirates,Gulf,courts,Abu Dhabi Judicial Department,Abu Dhabi Judicial Department,https://www.adjd.gov.ae/,"Arabic, English",official
+QA,Qatar,Gulf,laws,Al Meezan Qatar Legal Portal (laws and court rulings),Ministry of Justice,https://www.almeezan.qa/,"Arabic, English",official
+QA,Qatar,Gulf,courts,Supreme Judiciary Council,Supreme Judiciary Council,https://www.sjc.gov.qa/,"Arabic, English",official
+KW,Kuwait,Gulf,laws,Legal Advice and Legislation Department,Government of Kuwait,https://www.fatwa.gov.kw/,Arabic,official
+KW,Kuwait,Gulf,courts,Ministry of Justice (court services),Ministry of Justice,https://www.moj.gov.kw/,Arabic,official
+BH,Bahrain,Gulf,laws,Legislation and Legal Opinion Commission,Government of Bahrain,https://www.lloc.gov.bh/,"Arabic, English",official
+BH,Bahrain,Gulf,courts,Supreme Judicial Council,Supreme Judicial Council,https://www.sjc.bh/,Arabic,official
+OM,Oman,Gulf,laws,"Ministry of Justice and Legal Affairs (laws, Official Gazette)",Ministry of Justice and Legal Affairs,https://mjla.gov.om/,Arabic,official
+OM,Oman,Gulf,courts,Council of Administrative Affairs for the Judiciary,Judiciary of Oman,https://www.cajs.gov.om/,Arabic,official
+JP,Japan,East Asia,courts,"Courts in Japan, judgment search",Supreme Court of Japan,https://www.courts.go.jp/app/hanrei_jp/search1,Japanese (some English),official
+JP,Japan,East Asia,laws,e-Gov Laws Search,Digital Agency,https://laws.e-gov.go.jp/,Japanese,official
+JP,Japan,East Asia,laws,Japanese Law Translation,Ministry of Justice,https://www.japaneselawtranslation.go.jp/,English (unofficial translations),official
+KR,Korea,East Asia,courts,Supreme Court judgment search (Comprehensive Legal Information),Supreme Court of Korea,https://glaw.scourt.go.kr/,Korean,official
+KR,Korea,East Asia,courts,Constitutional Court decisions,Constitutional Court of Korea,https://isearch.ccourt.go.kr/,Korean (some English),official
+KR,Korea,East Asia,laws,National Law Information Center,Ministry of Government Legislation,https://www.law.go.kr/,Korean,official
+KR,Korea,East Asia,laws,Statutes of the Republic of Korea (English),Korea Legislation Research Institute,https://elaw.klri.re.kr/,English,official
+TW,Taiwan,East Asia,courts,Judgment search system,Judicial Yuan,https://judgment.judicial.gov.tw/,Chinese,official
+TW,Taiwan,East Asia,courts,Constitutional Court,Judicial Yuan,https://cons.judicial.gov.tw/,"Chinese, English",official
+TW,Taiwan,East Asia,laws,Laws and Regulations Database,Ministry of Justice,https://law.moj.gov.tw/,"Chinese, English",official
+HK,Hong Kong,East Asia,courts,Legal Reference System,Judiciary of Hong Kong,https://legalref.judiciary.hk/,"English, Chinese",official
+HK,Hong Kong,East Asia,laws,Hong Kong e-Legislation,Department of Justice,https://www.elegislation.gov.hk/,"English, Chinese",official
+CN,China,East Asia,courts,China Judgments Online,Supreme People's Court,https://wenshu.court.gov.cn/,Chinese,official
+CN,China,East Asia,laws,National Database of Laws and Regulations,NPC Standing Committee,https://flk.npc.gov.cn/,Chinese,official
+MY,Malaysia,Southeast Asia,courts,eJudgment portal,"Office of the Chief Registrar, Federal Court",https://ejudgment.kehakiman.gov.my/,"English, Malay",official
+MY,Malaysia,Southeast Asia,laws,Laws of Malaysia,Attorney General's Chambers,https://lom.agc.gov.my/,"Malay, English",official
+SG,Singapore,Southeast Asia,courts,Judgments (Supreme Court and State Courts),Singapore Courts,https://www.judiciary.gov.sg/judgments,English,official
+SG,Singapore,Southeast Asia,courts,eLitigation published judgments,Singapore Courts,https://www.elitigation.sg/gd/,English,official
+SG,Singapore,Southeast Asia,laws,Singapore Statutes Online,Attorney-General's Chambers,https://sso.agc.gov.sg/,English,official
+TH,Thailand,Southeast Asia,courts,Supreme Court decision search (Deka),Supreme Court of Thailand,https://deka.supremecourt.or.th/,Thai,official
+TH,Thailand,Southeast Asia,courts,Constitutional Court rulings,Constitutional Court of Thailand,https://www.constitutionalcourt.or.th/,Thai (some English),official
+TH,Thailand,Southeast Asia,laws,Office of the Council of State (Krisdika),Office of the Council of State,https://www.krisdika.go.th/,Thai (some English),official
+TH,Thailand,Southeast Asia,laws,Royal Thai Government Gazette,Secretariat of the Cabinet,https://ratchakitcha.soc.go.th/,Thai,official
+BN,Brunei,Southeast Asia,courts,Judiciary of Brunei Darussalam,State Judiciary Department,https://www.judiciary.gov.bn/,"English, Malay",official
+BN,Brunei,Southeast Asia,laws,Laws of Brunei,Attorney General's Chambers,https://www.agc.gov.bn/,"English, Malay",official
+ID,Indonesia,Southeast Asia (origin),courts,Direktori Putusan,Mahkamah Agung,https://putusan3.mahkamahagung.go.id/,Indonesian,official
+ID,Indonesia,Southeast Asia (origin),courts,Putusan Mahkamah Konstitusi,Mahkamah Konstitusi,https://www.mkri.id/,Indonesian,official
+ID,Indonesia,Southeast Asia (origin),laws,JDIH BPK (Database Peraturan),Badan Pemeriksa Keuangan,https://peraturan.bpk.go.id/,Indonesian,official
+ID,Indonesia,Southeast Asia (origin),laws,Peraturan.go.id,Kementerian Hukum,https://peraturan.go.id/,Indonesian,official
+ID,Indonesia,Southeast Asia (origin),laws,JDIH Kemnaker,Kementerian Ketenagakerjaan,https://jdih.kemnaker.go.id/,Indonesian,official
+PH,Philippines,Southeast Asia (origin),courts,Supreme Court E-Library,Supreme Court of the Philippines,https://elibrary.judiciary.gov.ph/,English,official
+PH,Philippines,Southeast Asia (origin),courts,Supreme Court decisions,Supreme Court of the Philippines,https://sc.judiciary.gov.ph/,English,official
+PH,Philippines,Southeast Asia (origin),laws,Official Gazette,Presidential Communications Office,https://www.officialgazette.gov.ph/,English,official
+PH,Philippines,Southeast Asia (origin),laws,Department of Migrant Workers issuances,Department of Migrant Workers,https://dmw.gov.ph/,English,official-guidance
+PH,Philippines,Southeast Asia (origin),courts,Lawphil (decisions and laws),"Arellano Law Foundation (private, non-government)",https://lawphil.net/,English,secondary
+VN,Viet Nam,Southeast Asia (origin),courts,Published judgments (Cong bo ban an),Supreme People's Court,https://congbobanan.toaan.gov.vn/,Vietnamese,official
+VN,Viet Nam,Southeast Asia (origin),courts,Precedents (An le),Supreme People's Court,https://anle.toaan.gov.vn/,Vietnamese,official
+VN,Viet Nam,Southeast Asia (origin),laws,National Database of Legal Documents,Ministry of Justice,https://vbpl.vn/,Vietnamese,official
+MM,Myanmar,Southeast Asia (origin),laws,Myanmar Law Information System,Union Attorney General's Office,https://www.mlis.gov.mm/,"Burmese, English",official
+MM,Myanmar,Southeast Asia (origin),courts,Supreme Court of the Union,Supreme Court of the Union,https://www.unionsupremecourt.gov.mm/,Burmese,official
+KH,Cambodia,Southeast Asia (origin),laws,"Ministry of Labour and Vocational Training (laws, prakas)",Ministry of Labour and Vocational Training,https://www.mlvt.gov.kh/,"Khmer, English",official-guidance
+LA,Laos,Southeast Asia (origin),laws,Official Gazette of Lao PDR,Ministry of Justice,http://www.laoofficialgazette.gov.la/,"Lao, English",official
+TL,Timor-Leste,Southeast Asia (origin),laws,Jornal da Republica,Government of Timor-Leste,http://www.jornal.gov.tl/,"Portuguese, Tetum",official
+IN,India,Origin states,courts,Supreme Court judgments,Supreme Court of India,https://www.sci.gov.in/judgements-judgment-date/,English,official
+IN,India,Origin states,courts,eCourts judgments search,"eCommittee, Supreme Court of India",https://judgments.ecourts.gov.in/,English,official
+IN,India,Origin states,laws,India Code,"Legislative Department, Ministry of Law and Justice",https://www.indiacode.nic.in/,"English, Hindi",official
+BD,Bangladesh,Origin states,courts,Supreme Court of Bangladesh (judgments),Supreme Court of Bangladesh,https://www.supremecourt.gov.bd/,"English, Bengali",official
+BD,Bangladesh,Origin states,laws,Laws of Bangladesh,Legislative and Parliamentary Affairs Division,http://bdlaws.minlaw.gov.bd/,"English, Bengali",official
+NP,Nepal,Origin states,courts,Nepal Kanoon Patrika (law reports),Supreme Court of Nepal,https://nkp.gov.np/,Nepali,official
+NP,Nepal,Origin states,laws,Nepal Law Commission,Nepal Law Commission,https://lawcommission.gov.np/,"Nepali, English",official
+LK,Sri Lanka,Origin states,courts,Supreme Court judgments,Supreme Court of Sri Lanka,https://supremecourt.lk/,English,official
+LK,Sri Lanka,Origin states,laws,LawNet,Ministry of Justice,https://www.lawnet.gov.lk/,"English, Sinhala, Tamil",official
+PK,Pakistan,Origin states,laws,Pakistan Code,Ministry of Law and Justice,https://pakistancode.gov.pk/,"English, Urdu",official
+ZA,South Africa,Court Decisions,courts,Constitutional Court judgments,Constitutional Court of South Africa,https://www.concourt.org.za/,English,official
+ZA,South Africa,Court Decisions,laws,Department of Justice legislation,Department of Justice and Constitutional Development,https://www.justice.gov.za/legislation/acts/acts_full.html,English,official
+ZA,South Africa,Court Decisions,courts,SAFLII,"Southern African Legal Information Institute (university-based, free)",https://www.saflii.org/,English,lii-free
+KE,Kenya,Court Decisions,courts,Kenya Law (case law and legislation),National Council for Law Reporting,https://new.kenyalaw.org/,English,official
+UG,Uganda,Origin states,courts,ULII (Uganda Legal Information Institute),Law Development Centre with the Judiciary,https://ulii.org/,English,official
+ZM,Zambia,Court Decisions,courts,ZambiaLII,Judiciary of Zambia,https://zambialii.org/,English,official
+ZW,Zimbabwe,Court Decisions,courts,ZimLII,Judicial Service Commission partnership,https://zimlii.org/,English,lii-free
+NA,Namibia,Court Decisions,courts,NamibLII,Legal Assistance Centre partnership,https://namiblii.org/,English,lii-free
+GH,Ghana,Origin states,courts,GhaLII,Judicial Service of Ghana partnership,https://ghalii.org/,English,lii-free
+NG,Nigeria,Origin states,courts,Supreme Court of Nigeria,Supreme Court of Nigeria,https://supremecourt.gov.ng/,English,official
+ET,Ethiopia,Origin states,courts,Federal Supreme Court (cassation decisions),Federal Supreme Court,https://www.fsc.gov.et/,"Amharic, English",official
+MA,Morocco,Court Decisions,laws,"Secretariat General of the Government (laws, Bulletin officiel)",Secretariat General of the Government,https://www.sgg.gov.ma/,"Arabic, French",official
+CO,Colombia,Court Decisions,courts,"Relatoria, Corte Constitucional",Corte Constitucional,https://www.corteconstitucional.gov.co/relatoria/,Spanish,official
+CO,Colombia,Court Decisions,laws,SUIN-Juriscol,Ministerio de Justicia,https://www.suin-juriscol.gov.co/,Spanish,official
+MX,Mexico,Court Decisions,courts,Buscador Juridico,Suprema Corte de Justicia de la Nacion,https://bj.scjn.gob.mx/,Spanish,official
+MX,Mexico,Court Decisions,laws,Leyes Federales Vigentes,Camara de Diputados,https://www.diputados.gob.mx/LeyesBiblio/,Spanish,official
+AR,Argentina,Court Decisions,courts,Secretaria de Jurisprudencia,Corte Suprema de Justicia de la Nacion,https://sjconsulta.csjn.gov.ar/,Spanish,official
+AR,Argentina,Court Decisions,laws,InfoLEG,Ministerio de Justicia,https://www.infoleg.gob.ar/,Spanish,official
+AR,Argentina,Court Decisions,laws,SAIJ (laws and case law),Ministerio de Justicia,https://www.saij.gob.ar/,Spanish,official
+BR,Brazil,Court Decisions,courts,STF jurisprudence,Supremo Tribunal Federal,https://jurisprudencia.stf.jus.br/,Portuguese,official
+BR,Brazil,Court Decisions,courts,TST jurisprudence (labour),Tribunal Superior do Trabalho,https://jurisprudencia.tst.jus.br/,Portuguese,official
+BR,Brazil,Court Decisions,laws,Legislacao (Planalto),Presidencia da Republica,https://www.planalto.gov.br/ccivil_03/,Portuguese,official
+CL,Chile,Court Decisions,courts,Buscador de jurisprudencia,Poder Judicial de Chile,https://juris.pjud.cl/,Spanish,official
+CL,Chile,Court Decisions,laws,LeyChile,Biblioteca del Congreso Nacional,https://www.bcn.cl/leychile/,Spanish,official
+PE,Peru,Court Decisions,courts,"Jurisprudencia, Tribunal Constitucional",Tribunal Constitucional,https://www.tc.gob.pe/jurisprudencia/,Spanish,official
+PE,Peru,Court Decisions,laws,SPIJ,Ministerio de Justicia y Derechos Humanos,https://spij.minjus.gob.pe/,Spanish,official
+DO,Dominican Republic,Court Decisions,courts,Tribunal Constitucional (sentencias),Tribunal Constitucional,https://www.tc.gob.do/,Spanish,official
+CR,Costa Rica,Court Decisions,courts,Nexus PJ,Poder Judicial de Costa Rica,https://nexuspj.poder-judicial.go.cr/,Spanish,official
+EC,Ecuador,Court Decisions,courts,Corte Constitucional (relatoria),Corte Constitucional del Ecuador,https://www.corteconstitucional.gob.ec/,Spanish,official
+IL,Israel,Court Decisions,courts,Supreme Court rulings,Judicial Authority,https://supreme.court.gov.il/,Hebrew (some English),official
+JO,Jordan,Destination (other),laws,Legislation and Opinion Bureau,Prime Ministry,https://www.lob.gov.jo/,Arabic,official
+LB,Lebanon,Destination (other),laws,"Lebanese University legal informatics centre (laws, judgments)",Lebanese University (public university),http://www.legallaw.ul.edu.lb/,Arabic,official
+XA,African Court,Regional,courts,African Court on Human and Peoples' Rights,African Court,https://www.african-court.org/,"English, French",official
+XE,ECOWAS,Regional,courts,ECOWAS Community Court of Justice,ECOWAS Court,https://www.courtecowas.org/,"English, French, Portuguese",official
+XK,East African Community,Regional,courts,East African Court of Justice,EACJ,https://www.eacj.org/,English,official
+XC,Caribbean,Regional,courts,Caribbean Court of Justice,CCJ,https://ccj.org/,English,official
+XN,Andean Community,Regional,courts,Tribunal de Justicia de la Comunidad Andina,Andean Tribunal,https://www.tribunalandino.org.ec/,Spanish,official
+XI,ILO,International,laws,NATLEX (national labour and social security laws),International Labour Organization,https://natlex.ilo.org/,Multilingual,official

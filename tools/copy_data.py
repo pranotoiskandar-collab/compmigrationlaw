@@ -2,8 +2,9 @@
 
 data/<database>/<file>  ->  site/<database>/data/<file>
 
-Files inside any "incoming/" folder are not published: they wait for
-review and for the database page to be rebuilt.
+Files inside any "incoming/" or "sources/" folder are not published as
+downloads: incoming/ waits for review, and sources/ keeps the working files
+and raw listings the databases were built from.
 """
 import pathlib
 import shutil
@@ -19,7 +20,7 @@ for source in sorted(DATA.rglob("*")):
     if not source.is_file():
         continue
     relative = source.relative_to(DATA)
-    if "incoming" in relative.parts or source.name.startswith(".") or source.suffix == ".md":
+    if {"incoming", "sources"} & set(relative.parts) or source.name.startswith(".") or source.suffix == ".md":
         continue
     database = relative.parent
     if not (SITE / database).is_dir():

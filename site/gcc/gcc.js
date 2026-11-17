@@ -280,7 +280,7 @@
     var L = G.laws || [], q = LF.q.toLowerCase();
     var R = L.filter(function (r) { return (!LF.s || r.s === LF.s) && (!LF.topic || r.topic === LF.topic) && (!LF.type || r.type === LF.type) && (!q || (r.title + " " + r.orig + " " + r.no + " " + r.groups).toLowerCase().indexOf(q) >= 0); });
     $("g-lcount").textContent = fmt(R.length) + t(" of ", " dari ") + fmt(L.length) + t(" instruments", " instrumen");
-    var LK = {text: t("text", "teks"), db: t("database", "basis data"), glmm: "GLMM"};
+    var LK = {text: t("text", "teks"), db: t("database", "basis data"), glmm: "GLMM (secondary)", guidance: t("official guidance", "panduan resmi")};
     $("g-ltable").innerHTML = "<thead><tr><th>" + t("Gulf state", "Negara Teluk") + "</th><th>" + t("Instrument", "Instrumen") + "</th><th>" + t("Year", "Tahun") + "</th><th>" + t("Type", "Jenis") + "</th><th>" + t("Topic", "Topik") + "</th><th>" + t("Who it covers", "Siapa yang dicakup") + "</th><th>" + t("Link", "Tautan") + "</th></tr></thead><tbody>" +
       R.map(function (r) {
         return '<tr><td class="c">' + esc(sname(r.s)) + "</td><td>" + esc(r.title) + (r.no ? '<br><span class="g-mono">' + esc(r.no) + "</span>" : "") + (r.orig ? '<br><span dir="rtl" lang="ar">' + esc(r.orig) + "</span>" : "") + '</td><td class="c g-mono">' + esc(r.year) + (r.amended ? "<br>" + t("amended ", "diubah ") + esc(r.amended) : "") + "</td><td>" + esc(lname(LTYP, r.type)) + "</td><td>" + esc(lname(LTOP, r.topic)) + "</td><td>" + esc(r.groups) + '</td><td class="c">' + (r.url ? '<a href="' + esc(r.url) + '">' + esc(LK[r.link] || r.link) + "</a>" : "") + (r.checked === "yes" ? "" : '<br><span class="g-mono">' + t("unchecked", "belum dicek") + "</span>") + "</td></tr>";

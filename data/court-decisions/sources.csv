@@ -1,13 +1,16 @@
 database,run_by,site,kind,decisions_linked,home
-lawlibrary.org.za,,lawlibrary.org.za,report,56,https://lawlibrary.org.za/
+law.go.kr (National Law Information Center),,www.law.go.kr,official,170,https://www.law.go.kr/
+Courts of Macau (court.gov.mo),,www.court.gov.mo,official,80,https://www.court.gov.mo/
+lawlibrary.org.za,,lawlibrary.org.za,report,59,https://lawlibrary.org.za/
+Courts in Japan,Supreme Court of Japan,courts.go.jp,official,57,https://www.courts.go.jp/
 Lawphil,"Arellano Law Foundation, Philippines",lawphil.net,legaldb,50,https://lawphil.net/
 HUDOC,European Court of Human Rights,hudoc.echr.coe.int,official,41,https://hudoc.echr.coe.int/
+Kenya Law,"National Council for Law Reporting, Kenya",kenyalaw.org,legaldb,39,https://new.kenyalaw.org/
+HKLII,Hong Kong Legal Information Institute,hklii.hk,legaldb,35,https://www.hklii.hk/
 SAFLII,Southern African Legal Information Institute,saflii.org,legaldb,34,https://www.saflii.org/
-HKLII,Hong Kong Legal Information Institute,hklii.hk,legaldb,31,https://www.hklii.hk/
 Corte Constitucional,"Constitutional Court, Colombia",corteconstitucional.gov.co,official,30,https://www.corteconstitucional.gov.co/
 Indian Kanoon,Indian Kanoon,indiankanoon.org,legaldb,25,https://indiankanoon.org/
 africanlii.org,,africanlii.org,report,23,https://africanlii.org/
-Kenya Law,"National Council for Law Reporting, Kenya",kenyalaw.org,legaldb,20,https://new.kenyalaw.org/
 Inter-American Court of Human Rights,Inter-American Court of Human Rights,corteidh.or.cr,official,19,https://www.corteidh.or.cr/
 Constitutional Court of Korea,Constitutional Court of Korea,ccourt.go.kr,official,18,https://english.ccourt.go.kr/
 Supreme Court of Canada judgments,Supreme Court of Canada / Lexum,scc-csc.lexum.com,official,17,https://scc-csc.lexum.com/
@@ -15,14 +18,18 @@ OHCHR jurisprudence database,UN Human Rights Office,juris.ohchr.org,official,16,
 UN Official Document System,United Nations,docs.un.org,official,13,https://docs.un.org/
 ICJ,International Court of Justice,icj-cij.org,official,12,https://www.icj-cij.org/
 African Commission decisions,African Commission on Human and Peoples’ Rights,achpr.au.int,official,12,https://achpr.au.int/
+ZimLII (Zimbabwe),,zimlii.org,official,12,https://zimlii.org/
 Constitutional Court,"Constitutional Court, Taiwan",cons.judicial.gov.tw,official,10,https://cons.judicial.gov.tw/
 tbinternet.ohchr.org,,tbinternet.ohchr.org,report,10,https://tbinternet.ohchr.org/
-Courts in Japan,Supreme Court of Japan,courts.go.jp,official,9,https://www.courts.go.jp/
+"Al Meezan, Qatar legal portal (official)",,almeezan.qa,official,9,https://almeezan.qa/
+"Constitutional Court of South Africa, judgment archive",,hdl.handle.net,official,9,https://hdl.handle.net/
+GhaLII (Ghana),,ghalii.org,official,9,https://ghalii.org/
 Supreme Court of Israel,Judicial Authority of Israel,supreme.court.gov.il,official,8,https://supreme.court.gov.il/
 CanLII,Canadian Legal Information Institute,canlii.org,legaldb,8,https://www.canlii.org/
 WorldLII,World Legal Information Institute,worldlii.org,legaldb,8,https://www.worldlii.org/
 CommonLII,Commonwealth Legal Information Institute,commonlii.org,legaldb,7,https://www.commonlii.org/
 AustLII,Australasian Legal Information Institute,austlii.edu.au,legaldb,7,https://www.austlii.edu.au/
+ULII (Uganda),,ulii.org,official,7,https://ulii.org/
 Supreme Court E-Library,Supreme Court of the Philippines,elibrary.judiciary.gov.ph,official,6,https://elibrary.judiciary.gov.ph/
 Inter-American Commission on Human Rights,Organization of American States,oas.org,official,6,https://www.oas.org/
 Justia US Supreme Court,Justia,supreme.justia.com,legaldb,5,https://supreme.justia.com/
@@ -98,3 +105,6 @@ Tribunal Constitucional,"Constitutional Tribunal, Chile",tribunalconstitucional.
 hrlibrary.law.umn.edu,,hrlibrary.law.umn.edu,report,1,https://hrlibrary.law.umn.edu/
 curia.europa.eu,,curia.europa.eu,report,1,https://curia.europa.eu/
 tanzlii.org,,tanzlii.org,report,1,https://tanzlii.org/
+concourt.org.za,,www.concourt.org.za,official,1,https://www.concourt.org.za/
+NigeriaLII,,nigerialii.org,secondary,1,https://nigerialii.org/
+courtecowas.org,,courtecowas.org,official,1,https://courtecowas.org/
