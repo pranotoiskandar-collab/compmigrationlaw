@@ -370,6 +370,15 @@ window.EA = {
 
   /* Domestic laws database. type: constitution | statute | regulation | contract | policy. link: "text" = official text page, "db" = official database (search the title). */
   laws: [
+    {s:"KR", title:"Immigration Act", orig:"출입국관리법", year:"1963", amended:"", type:"statute", topic:"Entry, stay, deportation, detention (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"KR", title:"Refugee Act", orig:"난민법", year:"2012", amended:"", type:"statute", topic:"Refugees (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"KR", title:"Act on the Employment of Foreign Workers (Employment Permit System)", orig:"외국인근로자의 고용 등에 관한 법률", year:"2003", amended:"", type:"statute", topic:"Labour migration (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"KR", title:"Nationality Act", orig:"국적법", year:"1948", amended:"", type:"statute", topic:"Nationality (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"KR", title:"Framework Act on Treatment of Foreigners Residing in the Republic of Korea", orig:"재한외국인 처우 기본법", year:"2007", amended:"", type:"statute", topic:"Integration (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"KR", title:"Multicultural Families Support Act", orig:"다문화가족지원법", year:"2008", amended:"", type:"statute", topic:"Marriage migration (added 2026-11-17, unverified)", groups:"", url:"https://www.law.go.kr/", link:"db"},
+    {s:"JP", title:"Nationality Act", orig:"国籍法", year:"1950", amended:"", type:"statute", topic:"Nationality (added 2026-11-17, unverified)", groups:"", url:"https://laws.e-gov.go.jp/", link:"db"},
+    {s:"TW", title:"Immigration Act", orig:"入出國及移民法", year:"1999", amended:"", type:"statute", topic:"Entry, stay, deportation, detention (added 2026-11-17, unverified)", groups:"", url:"https://law.moj.gov.tw/", link:"db"},
+    {s:"TW", title:"Nationality Act", orig:"國籍法", year:"1929", amended:"", type:"statute", topic:"Nationality (added 2026-11-17, unverified)", groups:"", url:"https://law.moj.gov.tw/", link:"db"},
     {s:"TW", title:"Labor Standards Act", orig:"勞動基準法", year:"1984", amended:"2024", type:"statute", topic:"Labor standards", groups:"TW-C", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001", link:"text"},
     {s:"TW", title:"Employment Service Act", orig:"就業服務法", year:"1992", amended:"2025-01", type:"statute", topic:"Admission, permits, change of employer (Art. 59), brokers", groups:"TW-C", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001", link:"text"},
     {s:"TW", title:"Act for Distant Water Fisheries", orig:"遠洋漁業條例", year:"2016", amended:"2024", type:"statute", topic:"Distant-water fleet; Art. 26 basis for crew regulations", groups:"TW-DWF", url:"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050051", link:"text"},

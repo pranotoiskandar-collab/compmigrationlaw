@@ -1,4 +1,13 @@
 s,title,orig,year,amended,type,topic,groups,url,link
+KR,Immigration Act,출입국관리법,1963,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+KR,Refugee Act,난민법,2012,,statute,"Refugees (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+KR,Act on the Employment of Foreign Workers (Employment Permit System),외국인근로자의 고용 등에 관한 법률,2003,,statute,"Labour migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+KR,Nationality Act,국적법,1948,,statute,"Nationality (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+KR,Framework Act on Treatment of Foreigners Residing in the Republic of Korea,재한외국인 처우 기본법,2007,,statute,"Integration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+KR,Multicultural Families Support Act,다문화가족지원법,2008,,statute,"Marriage migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
+JP,Nationality Act,国籍法,1950,,statute,"Nationality (added 2026-11-17, unverified)",,https://laws.e-gov.go.jp/,db
+TW,Immigration Act,入出國及移民法,1999,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db
+TW,Nationality Act,國籍法,1929,,statute,"Nationality (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db
 TW,Labor Standards Act,勞動基準法,1984,2024,statute,Labor standards,TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001,text
 TW,Employment Service Act,就業服務法,1992,2025-01,statute,"Admission, permits, change of employer (Art. 59), brokers",TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001,text
 TW,Act for Distant Water Fisheries,遠洋漁業條例,2016,2024,statute,Distant-water fleet; Art. 26 basis for crew regulations,TW-DWF,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050051,text

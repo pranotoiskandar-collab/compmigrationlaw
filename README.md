@@ -8,7 +8,8 @@ This repository holds the website of the **Institute for Migrant Rights** ([thei
 |---|---|
 | `site/` | The website exactly as published: HTML pages, styles, scripts and images. |
 | `data/<database>/` | The downloadable data for each database (CSV and BibTeX). Each folder has a `codebook.csv` that explains every column and code. |
-| `data/<database>/incoming/` | New material sent in for review. It is **not** published until an editor merges it into the database. |
+| `data/<database>/incoming/` | New material sent in for review. Not offered as a download until an editor merges it into the database. |
+| `data/<database>/sources/` | The working files each database was built from: raw portal listings, verification worksheets, ratification extracts and editors' notes. Kept for transparency; not offered as downloads on the site. |
 | `build/` | The scripts that generated the pages and data. Kept for the record; they were written for the IMR working folder and refer to its paths. |
 | `tools/` | `copy_data.py` copies `data/` into the site at publish time; `check_csv.py` checks that every CSV is well formed. |
 
@@ -27,6 +28,11 @@ When Netlify publishes, `data/<database>/<file>` appears at `https://theimr.org/
 | `data/countries-of-origin/` | Countries of origin |
 | `data/domestic-workers/` | Migrant domestic workers |
 | `data/government-hate-speech/` | Government hate speech, with the elections comparison in `elections/` |
+| `data/africa/` | African migration laws and court decisions (incoming and sources only; decisions are shown in Court Decisions) |
+
+## Licence
+
+Data and site text: CC BY 4.0. See [LICENSE.md](LICENSE.md) for the details and the exceptions.
 
 ## Citing the data
 
@@ -38,3 +44,7 @@ New legal sources from the Middle East, East Asia and other regions go into `dat
 
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Licences of third-party material
+
+Files in `sources/` that come from other datasets keep their own terms. The V-Dem and V-Party extracts in `data/government-hate-speech/elections/sources/` are under CC BY-SA 4.0 (cite V-Dem). ODIHR hate-crime figures come from hatecrime.osce.org. Books, articles and agency reports used as sources (for example the ILO FAIRWAY country profiles) are cited but not copied into this repository.
