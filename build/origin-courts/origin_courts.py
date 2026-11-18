@@ -35,8 +35,29 @@ STAGE = [[int(m.group(1)), [m.group(2), m.group(3)]] for m in re.finditer(r'\[(\
 BRANCH = [["criminal", ["Criminal", "Pidana"]], ["private", ["Private dispute (labor, contract, tort)", "Sengketa perdata (kerja, kontrak, perbuatan melawan hukum)"]],
           ["administrative", ["Administrative (challenge to a government decision)", "Tata usaha negara (gugatan atas keputusan pemerintah)"]],
           ["constitutional", ["Constitutional and human rights", "Konstitusi dan hak asasi manusia"]]]
+# Importance order of the situations (oto, 18 November 2026: themes "organized by the popularity or importance",
+# based on a survey online). Ranked from official complaint figures of origin states and ILO studies,
+# read through web search on 18 November 2026; the government sites themselves were not reachable from the
+# cloud, so the figures are marked as being checked.
+RANK = ["fees", "wages", "dismissed", "forced", "injury", "passport", "arrest", "coverage"]
+WHY = {"lead": ["Ordered by how often each problem comes up in the complaints that origin-state agencies receive and in ILO studies of migrant workers in Asia, not by the number of court decisions. The figures were read online on 18 November 2026 and are being checked against the agencies' own tables.",
+                "Diurutkan menurut seberapa sering tiap masalah muncul dalam pengaduan yang diterima lembaga di negara asal dan dalam kajian ILO tentang pekerja migran di Asia, bukan menurut jumlah putusan pengadilan. Angka-angka tersebut kami baca secara daring pada 18 November 2026 dan sedang dicocokkan dengan tabel resmi lembaga yang bersangkutan."],
+       "items": [
+    {"t": ["Indonesia, 2024: 1,500 complaints to BP2MI/KP2MI. The largest categories were requests to be brought home (316), failure to depart after recruitment (170), unpaid wages (129), social security (85) and deportation (61).",
+           "Indonesia, 2024: 1.500 pengaduan kepada BP2MI/KP2MI. Kategori terbesar ialah PMI ingin dipulangkan (316), gagal berangkat setelah direkrut (170), gaji tidak dibayar (129), jaminan sosial (85) dan deportasi (61)."],
+     "s": "KP2MI, Laporan Tahunan Publikasi Data PMI 2024", "u": "https://kp2mi.go.id/uploads/statistik/images/data_06-02-2025_Laporan_Tahunan__Publikasi_Data_PMI_2024.pdf"},
+    {"t": ["Nepal: among grievances registered at Migrant Resource Centres, cheating by recruiters comes first, followed by deaths of workers and money withheld in Nepal.",
+           "Nepal: di antara keluhan yang tercatat di Migrant Resource Centre, penipuan oleh perekrut berada di urutan pertama, disusul kematian pekerja dan uang yang ditahan di Nepal."],
+     "s": "Ministry of Labour, Employment and Social Security, Nepal Labour Migration Report 2024", "u": "https://moless.gov.np/content/13312/nepal-labor-migration-report--2024/"},
+    {"t": ["Philippines, 2023: the Department of Migrant Workers filed 4,521 administrative charges and revoked the licences of 14 recruitment agencies for prohibited practices.",
+           "Filipina, 2023: Department of Migrant Workers mengajukan 4.521 dakwaan administratif dan mencabut izin 14 agen perekrutan karena praktik terlarang."],
+     "s": "ILO Committee on the Application of Standards, Philippines (C29), 2025", "u": "https://ilo.org/sites/default/files/2025-05/ILC113-CAN-D-Philippines-C29-[NORMES-250520-017]-EN.pdf"},
+    {"t": ["ILO: excessive recruitment fees, deception about the contract, fake documents and confiscation of passports are the most common recruitment abuses for migrants in low-wage jobs; wage claims are the abuse workers most often take further.",
+           "ILO: biaya rekrutmen berlebihan, penipuan isi kontrak, dokumen palsu dan penahanan paspor merupakan pelanggaran rekrutmen yang paling umum bagi pekerja migran berupah rendah; tuntutan upah merupakan pelanggaran yang paling sering dibawa pekerja ke jalur hukum."],
+     "s": "ILO, Access to justice for migrant workers in South-East Asia", "u": "https://www.ilo.org/media/423796/download"},
+]}
 ccs = sorted(by, key=lambda cc: -len(by[cc]))
-DATA = {"dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
+DATA = {"rank": RANK, "why": WHY, "dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
         "d": [[d["id"], d["name"], d["cc"], d["date"][:4], d.get("situations", []), d.get("stages", []), d.get("branch", ""), d["status"]] for d in home]}
 JS = (Path(__file__).parent / "oc_courts_js.txt").read_text(encoding="utf-8").replace("__DATA__", json.dumps(DATA, ensure_ascii=False, separators=(",", ":")))
 (SITE / "countries-of-origin/oc-courts.js").write_text(JS, encoding="utf-8")
@@ -45,8 +66,8 @@ lead_en = (f"Courts in countries of origin also make migration law. They try ill
            f"The Court Decisions database holds {total} decisions by national courts of the countries on this page. {unchecked} of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.")
 lead_id = (f"Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. "
            f"Basis data Putusan Pengadilan memuat {total} putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak {unchecked} di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.")
-CMP_EN = "Pick a theme to set the countries side by side: the table counts the decisions on each theme from each country's courts, and choosing a row lists them next to each other. Group the themes by the worker's situation, by the stage of the migration journey, or by the type of case."
-CMP_ID = "Pilih satu tema untuk menyandingkan negara-negara: tabel menghitung putusan tentang tiap tema dari pengadilan tiap negara, dan memilih satu baris menampilkan daftarnya secara berdampingan. Tema dapat dikelompokkan menurut situasi pekerja, tahap perjalanan migrasi, atau jenis perkara."
+CMP_EN = "Pick a theme to set the countries side by side: the table counts the decisions on each theme from each country's courts, and choosing a row lists them next to each other. Group the themes by the worker's situation, by the stage of the migration journey, or by the type of case. Situations are listed by importance, from the complaints that origin-state agencies receive and from ILO studies, and can be re-sorted by number of decisions; the stages follow the order of the journey."
+CMP_ID = "Pilih satu tema untuk menyandingkan negara-negara: tabel menghitung putusan tentang tiap tema dari pengadilan tiap negara, dan memilih satu baris menampilkan daftarnya secara berdampingan. Tema dapat dikelompokkan menurut situasi pekerja, tahap perjalanan migrasi, atau jenis perkara. Situasi diurutkan menurut tingkat kepentingannya, berdasarkan pengaduan yang diterima lembaga di negara asal dan kajian ILO, dan dapat diurutkan ulang menurut jumlah putusan; tahap perjalanan mengikuti urutan perjalanan."
 I18N = {lead_en: lead_id, "XII · COURTS AT HOME": "XII · PENGADILAN DI NEGARA ASAL", "Courts at home": "Pengadilan di negara asal",
         "Court decisions from countries of origin": "Putusan pengadilan dari negara asal", "List of decisions →": "Daftar putusan →",
         "Compare countries by theme": "Bandingkan negara menurut tema",
