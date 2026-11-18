@@ -68,7 +68,44 @@ drank = {k: i + 1 for i, k in enumerate(sorted(RANK, key=lambda k: (-cnt[k], RAN
 n = len(RANK); rho = 1 - 6 * sum((RANK.index(k) + 1 - drank[k]) ** 2 for k in RANK) / (n * (n * n - 1))
 GAP = {"total": len(home), "bp_total": 1500, "rho": round(rho, 2),
        "rows": [[k, i + 1, drank[k], cnt[k], BP2MI.get(k)] for i, k in enumerate(RANK)]}
-DATA = {"gap": GAP, "rank": RANK, "why": WHY, "dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
+# Law on the books and in court (oto, 18 November 2026): which statute each origin-court decision names,
+# from the full-text search terms that found it (PR 5 search results), set beside the Countries of Origin codings.
+import csv as _csv
+ALL = list(_csv.DictReader(open(Path(__file__).resolve().parents[2] / "data/court-decisions/incoming/other-asia/migration-cases-all-2026-11-17.csv", encoding="utf-8")))
+STAT = [
+    {"k": "ra8042", "cc": "PH", "en": "Migrant Workers and Overseas Filipinos Act (RA 8042, amended by RA 10022)", "id": "Undang-Undang Pekerja Migran dan Warga Filipina di Luar Negeri (RA 8042, diubah dengan RA 10022)",
+     "year": 1995, "re": r"Migrant Workers and Overseas Filipinos Act|Republic Act No\. 8042|Republic Act No\. 10022", "feat": ["rec", "fees", "redress"], "src": "codings"},
+    {"k": "ra9208", "cc": "PH", "en": "Anti-Trafficking in Persons Act (RA 9208, amended)", "id": "Undang-Undang Anti-Perdagangan Orang (RA 9208, sebagaimana diubah)",
+     "year": 2003, "re": r"Anti-Trafficking|Republic Act No\. 9208", "feat": ["traffic"], "src": "protection"},
+    {"k": "fea", "cc": "NP", "en": "Foreign Employment Act 2064 (2007)", "id": "Undang-Undang Kerja Luar Negeri 2064 (2007)",
+     "year": 2007, "re": r"वैदेशिक रोजगार", "feat": ["rec", "fees", "redress"], "src": "codings"},
+    {"k": "htta", "cc": "NP", "en": "Human Trafficking and Transportation (Control) Act 2064 (2007)", "id": "Undang-Undang Pengendalian Perdagangan dan Pengangkutan Orang 2064 (2007)",
+     "year": 2007, "re": r"मानव बेचबिखन", "feat": ["traffic"], "src": "protection"},
+]
+DROOT = Path(__file__).resolve().parents[2] / "data/countries-of-origin"
+CODES = {}
+for f in ["codings.csv", "protection.csv"]:
+    for r in _csv.DictReader(open(DROOT / f, encoding="utf-8")):
+        CODES[(r["country"], r["feature"])] = [r["value"], r["feature_name"]]
+FEAT_ID = {"rec": "Perizinan dan tanggung jawab perekrut", "fees": "Biaya rekrutmen yang dibebankan kepada pekerja",
+           "redress": "Pemulihan di negara asal", "traffic": "Hukum anti-perdagangan orang yang mencakup kerja"}
+url2stat = {}
+for st in STAT:
+    hits = [x for x in ALL if x["jurisdiction"] == st["cc"] and re.search(st["re"], x["matched_terms"])]
+    st["hits"] = len(hits)
+    per = Counter(int(x["date"][:4]) // 5 * 5 for x in hits if x["date"][:4].isdigit())
+    st["per"] = sorted(per.items())
+    st["before"] = sum(v for k, v in per.items() if k + 4 < st["year"])
+    for x in hits:
+        if x["url"]:
+            url2stat.setdefault(x["url"].rstrip("/"), []).append(st["k"])
+    st["codes"] = [[f, CODES.get((st["cc"], f), ["", f])[0], CODES.get((st["cc"], f), ["", f])[1], FEAT_ID.get(f, f)] for f in st["feat"]]
+    del st["re"]
+dstat = {d["id"]: sorted(set(sum((url2stat.get(s["u"].rstrip("/"), []) for s in d["src"]), []))) for d in home}
+for st in STAT:
+    st["site"] = sum(st["k"] in v for v in dstat.values())
+LAW = {"stat": STAT, "dec": {k: v for k, v in dstat.items() if v}}
+DATA = {"law": LAW, "gap": GAP, "rank": RANK, "why": WHY, "dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
         "d": [[d["id"], d["name"], d["cc"], d["date"][:4], d.get("situations", []), d.get("stages", []), d.get("branch", ""), d["status"]] for d in home]}
 JS = (Path(__file__).parent / "oc_courts_js.txt").read_text(encoding="utf-8").replace("__DATA__", json.dumps(DATA, ensure_ascii=False, separators=(",", ":")))
 (SITE / "countries-of-origin/oc-courts.js").write_text(JS, encoding="utf-8")
