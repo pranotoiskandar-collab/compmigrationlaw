@@ -20,7 +20,7 @@ E = html.escape
 
 # Country labels used by the interactive page. Add the ones it does not know yet.
 J = (CD / "cd.js").read_text(encoding="utf-8")
-EXTRA = {"MO": ["Macau", "Makau"], "GH": ["Ghana", "Ghana"], "UG": ["Uganda", "Uganda"], "EG": ["Egypt", "Mesir"]}
+EXTRA = {"MO": ["Macau", "Makau"], "GH": ["Ghana", "Ghana"], "UG": ["Uganda", "Uganda"], "EG": ["Egypt", "Mesir"], "MM": ["Myanmar", "Myanmar"]}
 for k, v in EXTRA.items():
     if not re.search(rf"\b{k}: \[", J):
         J = J.replace('HK: ["Hong Kong", "Hong Kong"],', f'HK: ["Hong Kong", "Hong Kong"], {k}: {json.dumps(v, ensure_ascii=False)},', 1)

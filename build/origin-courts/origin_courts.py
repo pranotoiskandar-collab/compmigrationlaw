@@ -37,17 +37,17 @@ BRANCH = [["criminal", ["Criminal", "Pidana"]], ["private", ["Private dispute (l
           ["constitutional", ["Constitutional and human rights", "Konstitusi dan hak asasi manusia"]]]
 # Importance order of the situations (oto, 18 November 2026: themes "organized by the popularity or importance",
 # based on a survey online). Ranked from official complaint figures of origin states and ILO studies,
-# read through web search on 18 November 2026; the government sites themselves were not reachable from the
-# cloud, so the figures are marked as being checked.
+# first read through web search on 18 November 2026, then checked the same day against the agencies' own
+# reports downloaded on oto's Mac (OneDrive IMR-data/complaint-stats-2026-11-18/).
 RANK = ["fees", "wages", "dismissed", "forced", "injury", "passport", "arrest", "coverage"]
-WHY = {"lead": ["Ordered by how often each problem comes up in the complaints that origin-state agencies receive and in ILO studies of migrant workers in Asia, not by the number of court decisions. The figures were read online on 18 November 2026 and are being checked against the agencies' own tables.",
-                "Diurutkan menurut seberapa sering tiap masalah muncul dalam pengaduan yang diterima lembaga di negara asal dan dalam kajian ILO tentang pekerja migran di Asia, bukan menurut jumlah putusan pengadilan. Angka-angka tersebut kami baca secara daring pada 18 November 2026 dan sedang dicocokkan dengan tabel resmi lembaga yang bersangkutan."],
+WHY = {"lead": ["Ordered by how often each problem comes up in the complaints that origin-state agencies receive and in ILO studies of migrant workers in Asia, not by the number of court decisions. The figures come from the agencies' own annual reports, checked on 18 November 2026.",
+                "Diurutkan menurut seberapa sering tiap masalah muncul dalam pengaduan yang diterima lembaga di negara asal dan dalam kajian ILO tentang pekerja migran di Asia, bukan menurut jumlah putusan pengadilan. Angka-angka tersebut berasal dari laporan tahunan resmi lembaga yang bersangkutan dan telah kami periksa pada 18 November 2026."],
        "items": [
     {"t": ["Indonesia, 2024: 1,500 complaints to BP2MI/KP2MI. The largest categories were requests to be brought home (316), failure to depart after recruitment (170), unpaid wages (129), social security (85) and deportation (61).",
            "Indonesia, 2024: 1.500 pengaduan kepada BP2MI/KP2MI. Kategori terbesar ialah PMI ingin dipulangkan (316), gagal berangkat setelah direkrut (170), gaji tidak dibayar (129), jaminan sosial (85) dan deportasi (61)."],
      "s": "KP2MI, Laporan Tahunan Publikasi Data PMI 2024", "u": "https://kp2mi.go.id/uploads/statistik/images/data_06-02-2025_Laporan_Tahunan__Publikasi_Data_PMI_2024.pdf"},
-    {"t": ["Nepal: among grievances registered at Migrant Resource Centres, cheating by recruiters comes first, followed by deaths of workers and money withheld in Nepal.",
-           "Nepal: di antara keluhan yang tercatat di Migrant Resource Centre, penipuan oleh perekrut berada di urutan pertama, disusul kematian pekerja dan uang yang ditahan di Nepal."],
+    {"t": ["Nepal, 2022/23 to 2023/24: of 14,350 cases registered at Migrant Resource Centres, 45.5% concerned cheating by recruiters, followed by deaths of workers (9.2%), money withheld (8.7%), contract substitution (8.1%) and money and passport both withheld (7.1%).",
+           "Nepal, 2022/23 sampai 2023/24: dari 14.350 kasus yang tercatat di Migrant Resource Centre, 45,5% menyangkut penipuan oleh perekrut, disusul kematian pekerja (9,2%), uang yang ditahan (8,7%), penggantian kontrak (8,1%) serta uang dan paspor yang sama-sama ditahan (7,1%)."],
      "s": "Ministry of Labour, Employment and Social Security, Nepal Labour Migration Report 2024", "u": "https://moless.gov.np/content/13312/nepal-labor-migration-report--2024/"},
     {"t": ["Philippines, 2023: the Department of Migrant Workers filed 4,521 administrative charges and revoked the licences of 14 recruitment agencies for prohibited practices.",
            "Filipina, 2023: Department of Migrant Workers mengajukan 4.521 dakwaan administratif dan mencabut izin 14 agen perekrutan karena praktik terlarang."],
@@ -58,7 +58,7 @@ WHY = {"lead": ["Ordered by how often each problem comes up in the complaints th
 ]}
 ccs = sorted(by, key=lambda cc: -len(by[cc]))
 # Do complaints reach the courts? Importance rank (complaints) against the rank by number of origin-court
-# decisions; BP2MI/KP2MI 2024 complaint counts where a category matches a situation (being checked).
+# decisions; BP2MI/KP2MI 2024 complaint counts where a category matches a situation (KP2MI annual report 2024, checked 18 Nov 2026).
 BP2MI = {"fees": [170, "failed to depart after recruitment", "gagal berangkat setelah direkrut"],
          "wages": [129, "unpaid wages", "gaji tidak dibayar"],
          "dismissed": [316, "asked to be brought home", "ingin dipulangkan"],
