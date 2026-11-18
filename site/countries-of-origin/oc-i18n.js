@@ -3,7 +3,7 @@
 (function () {
   var A = {
 /* origin-courts:start */
-"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 529 decisions by national courts of the countries on this page. 512 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 529 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 512 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
+"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 541 decisions by national courts of the countries on this page. 512 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 541 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 512 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
 "XII · COURTS AT HOME": "XII · PENGADILAN DI NEGARA ASAL",
 "Courts at home": "Pengadilan di negara asal",
 "Court decisions from countries of origin": "Putusan pengadilan dari negara asal",
@@ -18,11 +18,13 @@
 "112 decisions, 110 unchecked.": "112 putusan, 110 belum diperiksa.",
 "Nepal": "Nepal",
 "Supreme Court decisions from Nepal Kanoon Patrika (nkp.gov.np), the Court's official law reports: foreign employment, trafficking, refugees, citizenship and immigration. Names are English labels made from the Nepali subject line, and years are converted from the Bikram Sambat calendar, so they can be off by one.": "Putusan Mahkamah Agung dari Nepal Kanoon Patrika (nkp.gov.np), laporan hukum resmi Mahkamah tersebut: kerja di luar negeri, perdagangan orang, pengungsi, kewarganegaraan dan imigrasi. Judul merupakan label bahasa Inggris yang kami susun dari pokok perkara dalam bahasa Nepal, dan tahun dikonversi dari kalender Bikram Sambat, sehingga bisa selisih satu tahun.",
-"2 decisions, 1 unchecked.": "2 putusan, 1 belum diperiksa.",
+"13 decisions.": "13 putusan.",
 "Indonesia": "Indonesia",
 "1 decision.": "1 putusan.",
 "Bangladesh": "Bangladesh",
 "Sri Lanka": "Sri Lanka",
+"1 decision, 1 unchecked.": "1 putusan, 1 belum diperiksa.",
+"Myanmar": "Myanmar",
 /* origin-courts:end */
 "Countries of origin": "Negara asal",
 "Most migrant workers in Asia leave from a small number of countries: Indonesia, the Philippines, Vietnam, Nepal, Bangladesh, India, Sri Lanka and Pakistan. Each regulates how its citizens are recruited and sent abroad, what they may be charged, how they are insured and assisted while away, and how they are received when they return. This comparative overview codes the laws and binding policies of the eight countries on nine features, maps the treaties, regional processes and bilateral agreements each has entered into, and lets you explore and download the data.": "Sebagian besar pekerja migran di Asia berangkat dari sejumlah kecil negara: Indonesia, Filipina, Vietnam, Nepal, Bangladesh, India, Sri Lanka dan Pakistan. Setiap negara mengatur bagaimana warganya direkrut dan diberangkatkan, biaya apa yang boleh dibebankan, bagaimana mereka diasuransikan dan dibantu selama di luar negeri, dan bagaimana mereka diterima ketika pulang. Tinjauan perbandingan ini mengodekan hukum dan kebijakan mengikat kedelapan negara pada sembilan fitur, memetakan traktat, proses kawasan dan perjanjian bilateral yang dibuat masing-masing, serta memungkinkan Anda menjelajahi dan mengunduh datanya.",
