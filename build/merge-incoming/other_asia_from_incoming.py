@@ -3,8 +3,9 @@
 Usage: python3 build/merge-incoming/other_asia_from_incoming.py SITE OUT.json
 Reads   build/other-asia-cases/imr_candidates.json (398 candidates: Philippines 275, Nepal 110, Singapore 13)
 Writes  OUT.json with {"new": [...], "links": {}} for patch_site_decisions.py.
-Only Southeast Asia (Singapore, the Philippines) is merged. oto decided on 18 November 2026 to leave South
-Asia out, so the 110 Nepal candidates stay in data/court-decisions/incoming/other-asia/.
+Singapore and the Philippines were merged first (PR 6). On 18 November 2026 oto asked for the Nepal cases
+too, as origin-state jurisprudence (no South Asia page), so all three are kept now; cases already merged
+are skipped as duplicates, which makes the script safe to rerun.
 Candidates already on the site (same citation or same source link) are skipped.
 """
 import json, re, sys
@@ -13,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SITE = Path(sys.argv[1])
-KEEP = {"SG", "PH"}
+KEEP = {"SG", "PH", "NP"}
 
 src = (SITE / "court-decisions/cd-data.js").read_text(encoding="utf-8")
 existing = json.loads(src.split("window.CD=", 1)[1].rstrip().rstrip(";"))["decisions"]
