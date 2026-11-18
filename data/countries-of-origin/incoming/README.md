@@ -7,3 +7,7 @@
 - **Needs an editor:** Laws of Bangladesh marks the 2012 Prevention and Suppression of Human Trafficking Act as repealed. The site still lists it as current; the 2026 Act appears to replace it.
 - Sources: lawcommission.gov.np, pakistancode.gov.pk, bdlaws.minlaw.gov.bd (all official). Links found with each portal's own search on 2026-11-18. `adopted` is the year in the title only; in-force dates and coverage still have to be read from the texts, so every row is Unverified.
 - Not reached this time: India Code (site migration), peraturan.bpk.go.id (Cloudflare), officialgazette.gov.ph (Cloudflare), vbpl.vn (search did not respond), slbfe.lk.
+
+## Sri Lanka (2026-11-18)
+
+- `laws-lk-2026-11-18.csv`: official link for the Sri Lanka Bureau of Foreign Employment Act No. 21 of 1985. The site currently links only to the Bureau's front page. The new link goes to the English text the Bureau publishes. LawNet (lawnet.gov.lk) failed with a certificate error, so other Sri Lankan laws are listed in the follow-up doc.
