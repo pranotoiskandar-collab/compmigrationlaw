@@ -5,3 +5,6 @@ site/**/data/
 __pycache__/
 *.zip
 .env
+
+# Internal editor notes, kept out of the public repo
+editor-questions.csv
