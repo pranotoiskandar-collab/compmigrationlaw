@@ -1,6 +1,6 @@
 # Government hate speech: incoming official links (2026-11-18)
 
-`official-links-2026-11-18.csv` gives an official link for 59 of the coded cells in `elections/codings.csv` (34 countries; features `adl`, `hsl`, `mig`, `const`). Before this, no cell linked to an official text.
+`official-links-2026-11-18.csv` gives 59 official links covering 53 of the 170 coded cells (some cells cite two laws) in `elections/codings.csv` (34 countries; features `adl`, `hsl`, `mig`, `const`). Before this, no cell linked to an official text.
 
 - `iso3` + `feature` match `elections/codings.csv`. `law` is the instrument the cell cites.
 - Every link was opened on 2026-11-18 in an ordinary browser on oto's computer, and the page title matched the law. `page_title_seen` is what the page showed.
