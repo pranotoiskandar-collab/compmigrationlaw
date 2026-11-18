@@ -57,7 +57,18 @@ WHY = {"lead": ["Ordered by how often each problem comes up in the complaints th
      "s": "ILO, Access to justice for migrant workers in South-East Asia", "u": "https://www.ilo.org/media/423796/download"},
 ]}
 ccs = sorted(by, key=lambda cc: -len(by[cc]))
-DATA = {"rank": RANK, "why": WHY, "dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
+# Do complaints reach the courts? Importance rank (complaints) against the rank by number of origin-court
+# decisions; BP2MI/KP2MI 2024 complaint counts where a category matches a situation (being checked).
+BP2MI = {"fees": [170, "failed to depart after recruitment", "gagal berangkat setelah direkrut"],
+         "wages": [129, "unpaid wages", "gaji tidak dibayar"],
+         "dismissed": [316, "asked to be brought home", "ingin dipulangkan"],
+         "arrest": [61, "deportation", "deportasi"]}
+cnt = {k: sum(k in d.get("situations", []) for d in home) for k in RANK}
+drank = {k: i + 1 for i, k in enumerate(sorted(RANK, key=lambda k: (-cnt[k], RANK.index(k))))}
+n = len(RANK); rho = 1 - 6 * sum((RANK.index(k) + 1 - drank[k]) ** 2 for k in RANK) / (n * (n * n - 1))
+GAP = {"total": len(home), "bp_total": 1500, "rho": round(rho, 2),
+       "rows": [[k, i + 1, drank[k], cnt[k], BP2MI.get(k)] for i, k in enumerate(RANK)]}
+DATA = {"gap": GAP, "rank": RANK, "why": WHY, "dims": {"sit": SIT, "stage": STAGE, "branch": BRANCH}, "countries": [[cc, list(CN.get(cc, (cc, cc)))] for cc in ccs],
         "d": [[d["id"], d["name"], d["cc"], d["date"][:4], d.get("situations", []), d.get("stages", []), d.get("branch", ""), d["status"]] for d in home]}
 JS = (Path(__file__).parent / "oc_courts_js.txt").read_text(encoding="utf-8").replace("__DATA__", json.dumps(DATA, ensure_ascii=False, separators=(",", ":")))
 (SITE / "countries-of-origin/oc-courts.js").write_text(JS, encoding="utf-8")

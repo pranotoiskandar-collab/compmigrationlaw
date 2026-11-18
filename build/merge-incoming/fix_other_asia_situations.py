@@ -5,13 +5,16 @@ Usage: python3 build/merge-incoming/fix_other_asia_situations.py SITE   (idempot
   "Passport kept by employer". They are about citizenship, so the situation is left empty.
 - "Immigration control, detention or deportation" cases were coded "residence"; they belong
   under "arrest" ("Arrested, detained or expelled").
+- Recruitment cases were coded "recruitment", a key the site does not know, so they appeared under no
+  situation; they belong under "fees" ("Recruitment and the agency").
 Updates cd-data.js and data/decisions.json/.csv under SITE/court-decisions and DATA (data/court-decisions).
 """
 import csv, json, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]; SITE = Path(sys.argv[1])
-FIX = {"Citizenship and identity documents.": ("passport", None),
+FIX = {"Recruitment for work abroad, including illegal recruitment and fraud.": ("recruitment", "fees"),
+       "Citizenship and identity documents.": ("passport", None),
        "Immigration control, detention or deportation of a foreign national.": ("residence", "arrest")}
 OA = {e["id"] for e in json.load(open(ROOT / "build/other-asia-cases/imr_candidates.json", encoding="utf-8"))}
 

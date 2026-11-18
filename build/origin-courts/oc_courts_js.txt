@@ -44,7 +44,25 @@
     } else {
       h += '<p class="g-note">' + (l ? "Pilih satu baris untuk melihat putusan dari tiap negara secara berdampingan." : "Choose a row to see the decisions from each country side by side.") + "</p>";
     }
+    h += gap(l);
     root.innerHTML = h;
+  }
+  function gap(l) {
+    var G = C.gap, lab = {}; C.dims.sit.forEach(function (r) { lab[r[0]] = r[1]; });
+    var pct = function (a, b) { return (100 * a / b).toFixed(1).replace(".", l ? "," : ".") + "%"; };
+    var h = '<h3 style="margin:36px 0 8px">' + (l ? "Apakah pengaduan sampai ke pengadilan?" : "Do complaints reach the courts?") + "</h3>";
+    h += "<p>" + (l ? "Tabel ini menyandingkan urutan kepentingan tiap masalah (dari pengaduan dan kajian ILO, lihat \u201cMengapa urutan ini\u201d) dengan urutannya menurut jumlah putusan pengadilan di negara asal. Masalah yang penting tetapi jarang diputus pengadilan menunjukkan di mana pekerja kemungkinan tidak sampai ke pengadilan."
+                    : "This table sets each problem's importance rank (from complaints and ILO studies, see \u201cWhy this order\u201d) beside its rank by the number of decisions of courts in countries of origin. A problem that matters a lot but rarely reaches a judgment shows where workers are likely not getting to court.") + "</p>";
+    h += '<div class="g-scroll"><table class="g-t"><thead><tr><th>' + (l ? "Situasi" : "Situation") + "</th><th>" + (l ? "Urutan kepentingan" : "Importance rank") + "</th><th>" + (l ? "Putusan di negara asal" : "Decisions at home") + "</th><th>" + (l ? "Urutan menurut putusan" : "Rank by decisions") + "</th><th>" + (l ? "Pengaduan BP2MI 2024 (Indonesia)" : "BP2MI complaints 2024 (Indonesia)") + "</th><th>" + (l ? "Bacaan" : "Reading") + "</th></tr></thead><tbody>";
+    G.rows.forEach(function (r) {
+      var d = r[2] - r[1], read = d >= 3 ? (l ? "Sedikit putusan dibanding kepentingannya" : "Few decisions for its importance") : d <= -3 ? (l ? "Banyak putusan dibanding kepentingannya" : "Many decisions for its importance") : (l ? "Sejalan" : "In line");
+      var bp = r[4] ? r[4][0] + " (" + pct(r[4][0], G.bp_total) + ", " + (l ? r[4][2] : r[4][1]) + ")" : '<span class="g-note">–</span>';
+      h += "<tr><td>" + esc(t(lab[r[0]] || [r[0], r[0]])) + "</td><td>" + r[1] + "</td><td>" + r[3] + " (" + pct(r[3], G.total) + ")</td><td>" + r[2] + "</td><td>" + bp + "</td><td>" + (d >= 3 || d <= -3 ? "<b>" + read + "</b>" : read) + "</td></tr>";
+    });
+    h += "</tbody></table></div>";
+    h += '<p class="g-note">' + (l ? "Korelasi peringkat Spearman antara kepentingan dan jumlah putusan: \u03c1 = " + String(G.rho).replace(".", ",") + " (8 situasi). Angka yang mendekati 1 berarti pengadilan memutus masalah yang paling penting; angka di bawah 0 berarti sebaliknya. \u201cSedikit\u201d atau \u201cbanyak\u201d berarti kedua urutan berselisih tiga tingkat atau lebih. Pengaduan berasal dari Indonesia, sedangkan putusan sebagian besar berasal dari Filipina dan Nepal, dan sebagian besar putusan belum dibaca; jadi tabel ini menunjukkan arah kasar, bukan pengukuran. Angka BP2MI sedang dicocokkan dengan tabel resminya."
+                                  : "Spearman rank correlation between importance and number of decisions: \u03c1 = " + G.rho + " (8 situations). A value near 1 would mean the courts decide the problems that matter most; below 0 means the opposite. \u201cFew\u201d or \u201cmany\u201d means the two ranks differ by three places or more. The complaints come from Indonesia while most decisions come from the Philippines and Nepal, and most decisions have not yet been read, so the table shows a rough direction, not a measurement. The BP2MI figures are being checked against the agency\u2019s own table.") + "</p>";
+    return h;
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest("[data-occby],[data-occrow],[data-occord]"); if (!b) return;
