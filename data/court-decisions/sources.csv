@@ -1,4 +1,5 @@
 database,run_by,site,kind,decisions_linked,home
+Supreme Court E-Library,Supreme Court of the Philippines,elibrary.judiciary.gov.ph,official,274,https://elibrary.judiciary.gov.ph/
 law.go.kr (National Law Information Center),,www.law.go.kr,official,170,https://www.law.go.kr/
 Courts of Macau (court.gov.mo),,www.court.gov.mo,official,80,https://www.court.gov.mo/
 lawlibrary.org.za,,lawlibrary.org.za,report,59,https://lawlibrary.org.za/
@@ -14,6 +15,7 @@ africanlii.org,,africanlii.org,report,23,https://africanlii.org/
 Inter-American Court of Human Rights,Inter-American Court of Human Rights,corteidh.or.cr,official,19,https://www.corteidh.or.cr/
 Constitutional Court of Korea,Constitutional Court of Korea,ccourt.go.kr,official,18,https://english.ccourt.go.kr/
 Supreme Court of Canada judgments,Supreme Court of Canada / Lexum,scc-csc.lexum.com,official,17,https://scc-csc.lexum.com/
+eLitigation,Supreme Court of Singapore,elitigation.sg,official,17,https://www.elitigation.sg/
 OHCHR jurisprudence database,UN Human Rights Office,juris.ohchr.org,official,16,https://juris.ohchr.org/
 UN Official Document System,United Nations,docs.un.org,official,13,https://docs.un.org/
 ICJ,International Court of Justice,icj-cij.org,official,12,https://www.icj-cij.org/
@@ -30,7 +32,6 @@ WorldLII,World Legal Information Institute,worldlii.org,legaldb,8,https://www.wo
 CommonLII,Commonwealth Legal Information Institute,commonlii.org,legaldb,7,https://www.commonlii.org/
 AustLII,Australasian Legal Information Institute,austlii.edu.au,legaldb,7,https://www.austlii.edu.au/
 ULII (Uganda),,ulii.org,official,7,https://ulii.org/
-Supreme Court E-Library,Supreme Court of the Philippines,elibrary.judiciary.gov.ph,official,6,https://elibrary.judiciary.gov.ph/
 Inter-American Commission on Human Rights,Organization of American States,oas.org,official,6,https://www.oas.org/
 Justia US Supreme Court,Justia,supreme.justia.com,legaldb,5,https://supreme.justia.com/
 NZLII,New Zealand Legal Information Institute,nzlii.org,legaldb,5,https://www.nzlii.org/
@@ -38,7 +39,6 @@ malawilii.org,,malawilii.org,report,5,https://malawilii.org/
 namiblii.org,,namiblii.org,report,5,https://namiblii.org/
 BAILII,British and Irish Legal Information Institute,bailii.org,legaldb,4,https://www.bailii.org/
 NORMLEX,International Labour Organization,normlex.ilo.org,official,4,https://normlex.ilo.org/
-eLitigation,Supreme Court of Singapore,elitigation.sg,official,4,https://www.elitigation.sg/
 zimlii.org,,zimlii.org,report,4,https://zimlii.org/
 Amnesty International,Amnesty International,amnesty.org,report,3,https://www.amnesty.org/
 Business & Human Rights Resource Centre,Business & Human Rights Resource Centre,business-humanrights.org,report,3,https://www.business-humanrights.org/
