@@ -142,6 +142,40 @@ if cat_page.exists():
         return obj
     cat_page.write_text(replace_ld(cat_page.read_text(encoding="utf-8"), catalog), encoding="utf-8")
 
+# ---------------------------------------------------------------- the organisation
+# IMR was founded in 2007 (oto, 2026-11-19); search engines had shown 2010.
+FOUNDED = "2007"
+
+
+def org(obj):
+    if not isinstance(obj, dict):
+        return obj
+    for k, v in list(obj.items()):
+        if isinstance(v, dict):
+            obj[k] = org(v)
+        elif isinstance(v, list):
+            obj[k] = [org(x) for x in v]
+    if obj.get("@type") in ("Organization", "NGO", "ResearchOrganization") and obj.get("name") == "Institute for Migrant Rights" and len(obj) > 3:
+        obj["foundingDate"] = FOUNDED
+    return obj
+
+
+n_org = 0
+for page in [SITE / "index.html", SITE / "contact.html", SITE / "people.html", SITE / "legal-clinic" / "how-we-work" / "index.html"]:
+    if not page.exists():
+        continue
+    html = page.read_text(encoding="utf-8")
+    new = replace_ld(html, lambda o: org(o) if "Institute for Migrant Rights" in json.dumps(o) else None)
+    if '"foundingDate"' not in new and page.name == "index.html" and page.parent == SITE:
+        ld = {"@context": "https://schema.org", "@type": "Organization", "name": "Institute for Migrant Rights",
+              "alternateName": "IMR", "url": f"{BASE}/", "foundingDate": FOUNDED,
+              "address": {"@type": "PostalAddress", "addressLocality": "Cianjur", "addressRegion": "Jawa Barat", "addressCountry": "ID"}}
+        new = new.replace("</head>", f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n</head>', 1)
+    if new != html:
+        page.write_text(new, encoding="utf-8")
+        n_org += 1
+print(f"  organisation: foundingDate {FOUNDED} on {n_org} pages")
+
 # ---------------------------------------------------------------- country pages
 LAW_FILES = [("gcc", "domestic-laws.csv"), ("east-asia", "domestic-laws.csv"), ("southeast-asia", "domestic-laws.csv"),
              ("countries-of-origin", "laws-policies.csv")]
