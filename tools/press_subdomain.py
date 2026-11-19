@@ -77,6 +77,20 @@ def fix_main_page(html):
     return html
 
 
+def press_books():
+    """(url, title, description) for each press page, press home first."""
+    out = []
+    for page in sorted(PRESS.rglob("index.html"), key=lambda p: (len(p.parts), str(p))):
+        html = page.read_text(encoding="utf-8")
+        rel = page.relative_to(PRESS).parent
+        url = SUB + "/" + ("%s/" % rel.as_posix() if str(rel) != "." else "")
+        m = re.search(r"<title>(.*?)</title>", html, re.S)
+        d = re.search(r'<meta name="description" content="([^"]*)"', html)
+        title = re.sub(r"\s*·\s*IMR Press\s*$", "", (m.group(1).strip() if m else url)).replace("&amp;", "&")
+        out.append((url, title, (d.group(1) if d else "").replace("&amp;", "&")))
+    return out
+
+
 def main():
     if not PRESS.is_dir():
         print("press_subdomain: no site/press/, nothing to do")
@@ -101,9 +115,19 @@ def main():
         text = sitemap.read_text(encoding="utf-8")
         text = re.sub(r"\s*<url><loc>https://theimr\.org/press/[^<]*</loc>.*?</url>", "", text)
         sitemap.write_text(text, encoding="utf-8")
+    books = press_books()
+    block = "## IMR Press (press.theimr.org)\n" + "\n".join(
+        "- [%s](%s): %s" % (title, url, desc) for url, title, desc in books) + "\n"
     llms = SITE / "llms.txt"
     if llms.exists():
-        llms.write_text(llms.read_text(encoding="utf-8").replace(MAIN + "/press/", SUB + "/"), encoding="utf-8")
+        text = llms.read_text(encoding="utf-8").replace(MAIN + "/press/", SUB + "/")
+        if "## IMR Press" not in text:
+            text = text.replace("\n## About", "\n" + block + "\n## About", 1) if "\n## About" in text else text + "\n" + block
+        llms.write_text(text, encoding="utf-8")
+    (PRESS / "llms.txt").write_text(
+        "# IMR Press\n\n> The publishing house of the Institute for Migrant Rights (Cianjur, Indonesia): "
+        "books in international and comparative law and Indonesian editions of major works. "
+        "Main site: https://theimr.org/\n\n" + block, encoding="utf-8")
 
     urls = "\n".join("  <url><loc>%s</loc></url>" % u for u in press_urls)
     (PRESS / "sitemap.xml").write_text(
