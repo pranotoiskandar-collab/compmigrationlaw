@@ -264,8 +264,10 @@ def main():
             state_file.write_text("\n".join(sorted(s for s in seen if s)), encoding="utf-8")
 
     if args.dry_run:
-        bad = [r for r in report if r[1] != "ok"]
-        print(f"\n{len(report) - len(bad)} of {len(report)} sources read; {len(found)} new items would be listed.")
+        manual = [r for r in report if r[1].startswith("checked by hand")]
+        bad = [r for r in report if r[1] != "ok" and r not in manual]
+        print(f"\n{len(report) - len(bad) - len(manual)} sources read, {len(manual)} left to a person, "
+              f"{len(bad)} failed; {len(found)} new items would be listed.")
         return
 
     if found:

@@ -79,7 +79,7 @@
    "listing": "https://kenyalaw.org/search/api/documents/?search=%22migrant+worker%22+OR+%22foreign+national%22+OR+deportation+OR+%22work+permit%22&ordering=-date&doc_type=judgment",
    "mode": "json-html",
    "url_prefix": "https://kenyalaw.org",
-   "item": "^/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
+   "item": "^(/[a-z]{2})?/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
   },
   {
    "id": "ug-ulii-immigration",
@@ -91,7 +91,7 @@
    "listing": "https://ulii.org/en/search/api/documents/?search=deportation&ordering=-date&doc_type=judgment",
    "mode": "json-html",
    "url_prefix": "https://ulii.org",
-   "item": "^/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
+   "item": "^(/[a-z]{2})?/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
   },
   {
    "id": "zm-zambialii-immigration",
@@ -103,7 +103,7 @@
    "listing": "https://zambialii.org/search/api/documents/?search=immigration+OR+deportation+OR+%22migrant+worker%22&ordering=-date&doc_type=judgment",
    "mode": "json-html",
    "url_prefix": "https://zambialii.org",
-   "item": "^/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
+   "item": "^(/[a-z]{2})?/akn/[a-z]{2}/judgment/[^#]+@\\d{4}-\\d{2}-\\d{2}$"
   },
   {
    "id": "za-concourt-ccspace",
