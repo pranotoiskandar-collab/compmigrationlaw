@@ -1,0 +1,83 @@
+# Checks every pull request before it is merged (and every push to main).
+# A pull request fails only for problems it adds; see tools/checks/README.md.
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+    steps:
+      - name: Get this version
+        uses: actions/checkout@v4
+        with:
+          path: head
+      - name: Get the version it is compared with
+        id: base
+        if: env.BASE_SHA != '' && env.BASE_SHA != '0000000000000000000000000000000000000000'
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_SHA }}
+          path: base
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install the test browser
+        run: |
+          pip install --quiet playwright==1.49.1
+          python -m playwright install --with-deps chromium > /dev/null
+
+      - name: Build the site as Netlify does
+        working-directory: head
+        run: python3 tools/copy_data.py && python3 tools/press_subdomain.py
+      - name: Python scripts compile
+        working-directory: head
+        run: python3 -m py_compile tools/*.py tools/checks/*.py tools/watch/*.py
+      - name: Build the base version
+        id: basebuild
+        if: steps.base.outcome == 'success'
+        continue-on-error: true
+        working-directory: base
+        run: python3 tools/copy_data.py && (test ! -f tools/press_subdomain.py || python3 tools/press_subdomain.py)
+
+      - name: Check data, links and English/Indonesian text
+        run: |
+          python3 head/tools/checks/site_check.py --root head --out head.json
+          if [ "${{ steps.basebuild.outcome }}" = "success" ]; then python3 head/tools/checks/site_check.py --root base --out base.json; fi
+      - name: Open the pages in a browser
+        run: |
+          python3 head/tools/checks/browser_check.py --site head/site --out head-browser.json
+          if [ "${{ steps.basebuild.outcome }}" = "success" ]; then python3 head/tools/checks/browser_check.py --site base/site --out base-browser.json; fi
+      - name: Compare and report
+        working-directory: head
+        run: |
+          args="--head ../head.json --head ../head-browser.json --hosts"
+          if [ -f ../base.json ]; then args="$args --base ../base.json --base ../base-browser.json --external"; fi
+          python3 tools/checks/compare.py $args --report ../report.md
+      - name: Keep the full results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-check-results
+          path: |
+            head.json
+            head-browser.json
+            base.json
+            base-browser.json
+            report.md
+          if-no-files-found: ignore
+          retention-days: 14
