@@ -33,3 +33,12 @@ for source in sorted(DATA.rglob("*")):
 for database in sorted(download_only):
     print(f"Note: data/{database}/ has no page folder in site/; its files are published as downloads only")
 print(f"Copied {copied} data files into site/")
+
+# Publish-time steps (tools/publish/NN_*.py), run in order after the data is copied.
+# They change only the copy Netlify publishes, never the files in the repository's
+# history, so page rebuilds (for example the redesign) never conflict with them.
+import runpy
+
+for step in sorted((ROOT / "tools" / "publish").glob("[0-9][0-9]_*.py")):
+    print(f"Publish step: {step.name}")
+    runpy.run_path(str(step), run_name="__main__")
