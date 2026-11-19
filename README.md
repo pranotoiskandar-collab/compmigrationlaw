@@ -42,7 +42,7 @@ Data and site text: CC BY 4.0. See [LICENSE.md](LICENSE.md) for the details and 
 
 Every database page on theimr.org has a "How to cite" block with a citation, BibTeX and the database's version number. To cite the collection as a whole:
 
-> Iskandar, P., & Institute for Migrant Rights (2026). *Migration Jurisprudence from the South: databases of migration and labor law* [Data set]. https://theimr.org/databases/
+> Institute for Migrant Rights (2026). *Migration Jurisprudence from the South: databases of migration and labor law* [Data set]. https://theimr.org/databases/
 
 Each GitHub release is archived on Zenodo with a DOI; see [docs/RELEASING.md](docs/RELEASING.md) and [CHANGELOG.md](CHANGELOG.md). GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff).
 

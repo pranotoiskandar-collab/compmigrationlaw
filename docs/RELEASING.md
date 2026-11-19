@@ -23,12 +23,9 @@ Zenodo copies cannot be deleted, so check a release before publishing it.
 1. Go to <https://zenodo.org> and choose **Log in**, then **Log in with GitHub**,
    using the account that owns this repository. If you already have a Zenodo
    account, log in and connect GitHub under **Settings → Linked accounts**.
-2. Optional but useful: under **Settings → Linked accounts**, connect ORCID too,
-   and send the ORCID iD to the editors so it can be added to `.zenodo.json`
-   and `CITATION.cff`.
-3. Open the GitHub page in Zenodo: click your name (top right) → **GitHub**, or
+2. Open the GitHub page in Zenodo: click your name (top right) → **GitHub**, or
    go to <https://zenodo.org/account/settings/github/>.
-4. Click **Sync now**. Find `pranotoiskandar-collab/compmigrationlaw` in the
+3. Click **Sync now**. Find `pranotoiskandar-collab/compmigrationlaw` in the
    list and switch it **On**. (If GitHub asks you to approve Zenodo's access,
    approve it.)
 

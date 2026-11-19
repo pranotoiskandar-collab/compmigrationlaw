@@ -6,20 +6,60 @@
   "collection_url": "https://theimr.org/databases/",
   "github": "https://github.com/pranotoiskandar-collab/compmigrationlaw",
   "authors": [
-    {"family": "Iskandar", "given": "Pranoto", "initials": "P.",
-     "affiliation": "Institute for Migrant Rights; Centre for Human Rights and Legal Pluralism, McGill University"},
-    {"organization": "Institute for Migrant Rights"}
+    {
+      "organization": "Institute for Migrant Rights"
+    }
   ],
   "pages": [
-    {"path": "migration-law", "key": "migration_law", "title": "Migration Law Atlas"},
-    {"path": "court-decisions", "key": "court_decisions", "title": "Court Decisions"},
-    {"path": "gcc", "key": "gulf", "title": "Migrant Workers in the Gulf States: Migration and Labor Laws in Comparison"},
-    {"path": "east-asia", "key": "east_asia", "title": "Migrant Workers in East Asia: Migration and Labor Laws in Comparison"},
-    {"path": "southeast-asia", "key": "southeast_asia", "title": "Migrant Workers in Southeast Asia: Migration and Labor Laws in Comparison"},
-    {"path": "countries-of-origin", "key": "countries_of_origin", "title": "Countries of Origin: Emigration and Protection Law and Policy Compared"},
-    {"path": "domestic-workers", "key": "domestic_workers", "title": "Migrant Domestic Workers: International, Regional and National Law Compared"},
-    {"path": "government-hate-speech", "key": "government_hate_speech", "title": "Government Hate Speech: Country Data"},
-    {"path": "government-hate-speech/elections", "key": "hate_speech_voting", "title": "Hate Speech, Voting and the Legal Protection of Non-Citizens"},
-    {"path": "databases", "key": "collection", "collection": true}
+    {
+      "path": "migration-law",
+      "key": "migration_law",
+      "title": "Migration Law Atlas"
+    },
+    {
+      "path": "court-decisions",
+      "key": "court_decisions",
+      "title": "Court Decisions"
+    },
+    {
+      "path": "gcc",
+      "key": "gulf",
+      "title": "Migrant Workers in the Gulf States: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "east-asia",
+      "key": "east_asia",
+      "title": "Migrant Workers in East Asia: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "southeast-asia",
+      "key": "southeast_asia",
+      "title": "Migrant Workers in Southeast Asia: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "countries-of-origin",
+      "key": "countries_of_origin",
+      "title": "Countries of Origin: Emigration and Protection Law and Policy Compared"
+    },
+    {
+      "path": "domestic-workers",
+      "key": "domestic_workers",
+      "title": "Migrant Domestic Workers: International, Regional and National Law Compared"
+    },
+    {
+      "path": "government-hate-speech",
+      "key": "government_hate_speech",
+      "title": "Government Hate Speech: Country Data"
+    },
+    {
+      "path": "government-hate-speech/elections",
+      "key": "hate_speech_voting",
+      "title": "Hate Speech, Voting and the Legal Protection of Non-Citizens"
+    },
+    {
+      "path": "databases",
+      "key": "collection",
+      "collection": true
+    }
   ]
 }

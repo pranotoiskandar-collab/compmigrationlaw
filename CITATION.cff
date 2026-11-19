@@ -5,9 +5,6 @@ message: >-
 title: "Migration Jurisprudence from the South: databases of migration and labor law"
 type: dataset
 authors:
-  - family-names: Iskandar
-    given-names: Pranoto
-    affiliation: "Institute for Migrant Rights; Centre for Human Rights and Legal Pluralism, McGill University"
   - name: Institute for Migrant Rights
     website: "https://theimr.org/"
 # doi: added after the first Zenodo release (see docs/RELEASING.md)
