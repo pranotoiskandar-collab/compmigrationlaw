@@ -121,6 +121,8 @@ def expand(url):
 def read_source(src):
     """Return (items, status). items: list of dicts with url, title, date."""
     items = []
+    if src.get("manual"):
+        return [], f"checked by hand: {src['manual']}"
     secret = src.get("needs_secret")
     if secret and not os.environ.get(secret):
         return [], f"needs a key: add the repository secret {secret} (see source-watch/README.md)"
@@ -159,6 +161,14 @@ def read_source(src):
                 title_el = get.get("title")
                 items.append({"url": href, "title": " ".join(((title_el.text if title_el is not None else "") or "").split()),
                               "date": ((date_el.text if date_el is not None else "") or "")[:40]})
+        elif mode == "json-html":  # JSON whose field holds an HTML list (Peachjam / LII search API)
+            p = Links()
+            p.feed(str(dig(json.loads(text), src.get("html_field", "results_html"))))
+            pat = re.compile(src["item"])
+            for href, title in p.items:
+                if pat.search(href):
+                    items.append({"url": urllib.parse.urljoin(src.get("url_prefix", final), href), "title": title,
+                                  "date": (re.search(r"@(\d{4}-\d{2}-\d{2})", href) or [None, ""])[1]})
         elif mode == "json":
             data = json.loads(text)
             for it in dig(data, src.get("items_path")):
