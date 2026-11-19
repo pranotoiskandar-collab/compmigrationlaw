@@ -1,11 +1,3 @@
-# IMR Press lives at press.theimr.org (pages kept in site/press/; see tools/press_subdomain.py).
-# These rules must stay at the top: Netlify uses the first rule that matches.
-https://press.theimr.org/*      /press/:splat                    200!
-https://theimr.org/press        https://press.theimr.org/        301!
-https://theimr.org/press/*      https://press.theimr.org/:splat  301!
-https://www.theimr.org/press    https://press.theimr.org/        301!
-https://www.theimr.org/press/*  https://press.theimr.org/:splat  301!
-
 /about           /legal-clinic/how-we-work/  301
 /about.html      /legal-clinic/how-we-work/  301
 /about/          /legal-clinic/how-we-work/  301
