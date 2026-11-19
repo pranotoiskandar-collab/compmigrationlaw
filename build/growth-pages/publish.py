@@ -19,11 +19,16 @@ OLD = '<a href="/ai-use/" style="color: #FFFFFF">How we use AI</a>'
 NEW = (OLD + ' · <a href="/materials/" style="color: #FFFFFF">Materials</a>'
        ' · <a href="/partners/" style="color: #FFFFFF">Partner badge</a>'
        ' · <a href="/impact/" style="color: #FFFFFF">Our impact</a>')
+# Link the data-quality page (another pull request) only once it is published.
+HAS_DQ = (SITE / "data-quality" / "index.html").exists()
+DQ = ' · <a href="/data-quality/" style="color: #FFFFFF">How we check our data</a>'
 changed = 0
 for f in SITE.rglob("*.html"):
     text = f.read_text(encoding="utf-8")
     if OLD in text and 'href="/partners/" style="color: #FFFFFF"' not in text:
-        text = text.replace(OLD, NEW, 1)
+        text = text.replace(OLD, NEW + (DQ if HAS_DQ and 'href="/data-quality/"' not in text else ""), 1)
+        if HAS_DQ:
+            text = text.replace("<!-- data-quality-link -->", '<li><a href="/data-quality/">How we find, code and check the data</a></li>')
         # Indonesian for the three new footer words
         lang = '<script src="/assets/lang.js" defer></script>'
         if lang in text and "/assets/lang-growth.js" not in text:

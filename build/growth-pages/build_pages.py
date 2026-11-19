@@ -176,6 +176,7 @@ def impact(n):
 <li>{tr("Data figures are counted from the CSV files in the public repository each time the page is built.", "Angka data dihitung dari berkas CSV di repositori publik setiap kali halaman ini dibangun.")}</li>
 <li>{tr("Use figures come from GoatCounter, a privacy-friendly counter without cookies. Ask IMR counts only the country and the topic of a question.", "Angka pemakaian berasal dari GoatCounter, penghitung yang ramah privasi tanpa kuki. Tanya IMR hanya menghitung negara dan topik suatu pertanyaan.")}</li>
 <li>{tr("Citations, partners and stories are listed only after we have seen them, with a link where one exists.", "Kutipan, mitra dan kisah hanya dicantumkan setelah kami melihatnya sendiri, dengan tautan bila tersedia.")}</li>
+<!-- data-quality-link -->
 </ul>
 <p class="gp-noprint"><button type="button" class="gp-copy" onclick="window.print()">{tr("Print or save as PDF", "Cetak atau simpan sebagai PDF")}</button> <a class="gp-btn ghost" href="mailto:secretariat@theimr.org?subject=IMR%20impact">secretariat@theimr.org</a></p>
 </section>
@@ -311,6 +312,8 @@ def main():
     tr("Materials", "Bahan")
     tr("Partner badge", "Lencana mitra")
     tr("Copy", "Salin")
+    tr("How we check our data", "Cara kami memeriksa data")
+    tr("How we find, code and check the data", "Cara kami menemukan, mengodekan dan memeriksa data")
     write_lang()
 
 
