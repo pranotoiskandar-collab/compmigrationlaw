@@ -11,6 +11,8 @@
      still opens and works without internet. A rights communication sent without
      internet waits on the phone (in IndexedDB, see /legal-clinic/outbox.js) and is
      sent here as soon as the phone is online again. Nothing is sent anywhere else.
+   - "Save for use without signal" (on /app/): the Clinic plus the help directory, the
+     rights checklists and a few key pages are saved in one go, and kept.
    - Other websites (GoatCounter, map tiles, court portals) are never touched.
 
    BUILD is replaced at publish time by tools/optimize_site.py, so each publish
@@ -30,6 +32,10 @@ var CLINIC = ['/legal-clinic/', '/legal-clinic/i18n.js', '/legal-clinic/procedur
   '/legal-clinic/thanks.html', '/assets/lang.js', '/assets/editorial.css', '/assets/notebook.css', '/assets/fonts/figtree-latin.woff2'];
 // Skipped when the phone asks to save data.
 var CLINIC_MORE = ['/legal-clinic/how-we-work/', '/legal-clinic/after-return.html', '/assets/fonts/figtree-italic-latin.woff2'];
+// "Save for use without signal" on /app/: the pages a worker abroad needs most, saved in one go.
+var ESSENTIALS = ['/', '/app/', '/legal-help/', '/legal-help/places.js', '/rights-checklist/', '/rights-checklist/rc.js',
+  '/rights-checklist/checklist-data.json', '/assets/features.js', '/assets/features.css', '/assets/research.js',
+  '/contact.html', '/legal-clinic/trafficking-check/', '/manifest.webmanifest', '/assets/app/icon-192.png'];
 // Never kept: staff pages, form posts, downloads.
 var NEVER = /^\/(legal-clinic\/review\.html|admin|\.netlify)|\/data\/|\.(csv|zip|pdf|bib|docx?|xlsx?)$/i;
 
@@ -47,6 +53,10 @@ self.addEventListener('message', function (e) {
   var d = e.data || {};
   if (d.type === 'save-clinic') e.waitUntil(saveList(CLINIC.concat(d.lite ? [] : CLINIC_MORE)));
   if (d.type === 'flush-outbox') e.waitUntil(flushOutbox());
+  if (d.type === 'save-essentials') {
+    var list = CLINIC.concat(d.lite ? [] : CLINIC_MORE).concat(ESSENTIALS);
+    e.waitUntil(saveList(list).then(function () { return tell({type: 'essentials-saved', count: list.length}); }));
+  }
 });
 
 self.addEventListener('sync', function (e) {
@@ -131,7 +141,7 @@ function saveList(list) {
 }
 
 // Oldest saved copies go first, but the Clinic and the files it needs are always kept.
-var KEEP = /\/legal-clinic\/|\/offline\.html|\/assets\/(lang\.js|editorial\.css|notebook\.css|fonts\/)/;
+var KEEP = /\/legal-clinic\/|\/legal-help\/|\/rights-checklist\/|\/app\/|\/offline\.html|\/assets\/(lang\.js|editorial\.css|notebook\.css|fonts\/)/;
 function trim(name, max) {
   return caches.open(name).then(function (c) {
     return c.keys().then(function (keys) {

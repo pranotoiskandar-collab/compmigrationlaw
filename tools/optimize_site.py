@@ -14,6 +14,9 @@ Speed
   copy until the file really changes (see sw.js and the headers in netlify.toml).
 * A small service worker (/sw.js) is registered: pages already opened work offline,
   and the Legal Clinic is saved for offline use when someone opens it.
+* The web app manifest is linked, so phones offer to install the site as an app
+  (see /app/), and /assets/research.js adds "Save this search" and "Add to reading
+  list" to the database and decision pages.
 
 Accessibility
 * A "Skip to main content" link at the top of every page (Indonesian when the page
@@ -91,6 +94,13 @@ HEAD_EXTRA = (
     "*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}"
     "</style>"
 )
+
+# Installable app (see site/manifest.webmanifest and /app/), and the research tools (saved searches, reading list).
+APP_HEAD = ('<link rel="manifest" href="/manifest.webmanifest">'
+            '<meta name="theme-color" content="#172D24">'
+            '<meta name="apple-mobile-web-app-capable" content="yes">'
+            '<meta name="apple-mobile-web-app-title" content="IMR">')
+RESEARCH = '<script src="/assets/research.js" defer></script>'
 
 SKIP = '<a class="imr-skip" href="#%s" data-noi18n>Skip to main content</a>'
 
@@ -283,6 +293,10 @@ def optimize(page, report):
         if cdn in html:
             html = html.replace(cdn, local)
             report["vendor"] += 1
+    if 'rel="manifest"' not in html:
+        html = html.replace("</head>", APP_HEAD + "</head>", 1)
+    if "/assets/research.js" not in html and not name.startswith("press/") and "</body>" in html:
+        html = html.replace("</body>", RESEARCH + "</body>", 1)
     html = stamp(html, page)
 
     # Landmarks for blocks that sit outside <main>, and a map whose countries can be focused.

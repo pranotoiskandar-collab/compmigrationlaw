@@ -81,6 +81,7 @@ MAIN = r"""<main id="rights-checklist">
 </div>
 <article id="rc-sheet" data-noi18n aria-live="polite"></article>
 <p class="ft-note" style="margin-top:28px">Countries and jobs shown are those our databases code today: domestic work in the Gulf States, Malaysia, Singapore, Hong Kong and Taiwan (Migrant Domestic Workers database), and the worker groups of the East Asia and Southeast Asia pages. Factory and care work in Taiwan, and other jobs, will follow as the databases grow.</p>
+<p class="ft-note">To keep these sheets on your phone for use without signal, see <a href="/app/">Use IMR without signal</a>.</p>
 </div></section>
 </main>"""
 
@@ -94,6 +95,8 @@ I18N = {
     "Where are you going?": "Ke mana anda akan pergi?",
     "What work will you do?": "Pekerjaan apa yang akan anda lakukan?",
     "Sheet language": "Bahasa lembar",
+    "To keep these sheets on your phone for use without signal, see ": "Untuk menyimpan lembar ini di ponsel agar bisa dipakai tanpa sinyal, lihat ",
+    "Use IMR without signal": "Pakai IMR tanpa sinyal",
     "Print": "Cetak", "Download PDF": "Unduh PDF", "Share on WhatsApp": "Bagikan lewat WhatsApp",
     "Countries and jobs shown are those our databases code today: domestic work in the Gulf States, Malaysia, Singapore, Hong Kong and Taiwan (Migrant Domestic Workers database), and the worker groups of the East Asia and Southeast Asia pages. Factory and care work in Taiwan, and other jobs, will follow as the databases grow.":
         "Negara dan pekerjaan yang tersedia merupakan yang saat ini dikodekan dalam basis data kami, yakni pekerjaan rumah tangga di negara-negara Teluk, Malaysia, Singapura, Hong Kong, dan Taiwan (basis data Pekerja Rumah Tangga Migran), serta kelompok pekerja pada halaman Asia Timur dan Asia Tenggara. Pekerjaan pabrik dan perawatan di Taiwan, serta pekerjaan lain, akan menyusul seiring bertambahnya basis data.",

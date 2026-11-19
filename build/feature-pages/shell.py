@@ -16,12 +16,24 @@ SITE = os.path.join(ROOT, "site")
 I18N_JS = """<script>(function(){var A=%s;function m(D){D.id=D.id||{};for(var k in A)if(!Object.prototype.hasOwnProperty.call(D.id,k))D.id[k]=A[k];return D}if(window.SITE_I18N){m(window.SITE_I18N);return}var c;try{Object.defineProperty(window,"SITE_I18N",{configurable:true,enumerable:true,get:function(){return c},set:function(v){c=m(v||{})}})}catch(e){window.SITE_I18N=m({})}})();</script>"""
 
 
+# Menu entries added by these pages (Indonesian), merged into every page's dictionary.
+NAV_ID = {
+    "Know your rights before you go": "Kenali hak anda sebelum berangkat",
+    "Use IMR without signal": "Pakai IMR tanpa sinyal",
+    "Case of the month": "Putusan bulan ini",
+    "Tools": "Alat",
+    "Ratification tracker": "Pelacak ratifikasi",
+    "Saved searches and reading list": "Pencarian tersimpan dan daftar bacaan",
+}
+
+
 def page(path, title, desc, main, head="", scripts="", i18n=None, out=None):
     t = open(os.path.join(HERE, "shell-template.html"), encoding="utf-8").read()
     full = title + " · Institute for Migrant Rights"
     t = (t.replace("{{TITLE}}", html.escape(full)).replace("{{DESC}}", html.escape(desc, quote=True))
           .replace("{{PATH}}", path).replace("{{HEAD}}", head).replace("{{MAIN}}", main))
     tail = ""
+    i18n = dict(NAV_ID, **(i18n or {}))
     if i18n:
         tail += I18N_JS % json.dumps(i18n, ensure_ascii=False)
     t = t.replace("{{SCRIPTS}}", scripts)
