@@ -204,14 +204,21 @@ for lang, folder in (("en", SITE / "countries"), ("id", SITE / "id" / "negara"))
                   "name": f"Laws on migrant workers in {name(code)} in the IMR databases", "numberOfItems": len(items), "itemListElement": items}
             html = html.replace("</head>", f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n</head>', 1)
         if code in api_index:
-            box = (f'<section class="imr-country-data" style="margin:32px 0;padding:16px 20px;border:1px solid rgba(120,110,100,.45);border-radius:10px">'
+            box = (f'<div role="region" aria-label="Open data" class="imr-country-data" style="margin:32px 0;padding:16px 20px;max-width:100%;box-sizing:border-box;border:1px solid rgba(120,110,100,.45);border-radius:10px">'
                    f'<h2 style="margin:0 0 6px;font-size:22px">{"Unduh data negara ini" if lang == "id" else "Download the data for this country"}</h2>'
                    f'<p style="margin:0">{api_index[code]["records"]:,} {"baris dari semua basis data IMR" if lang == "id" else "rows from all IMR databases"}: '
                    f'<a href="/api/v1/countries/{code}.zip" data-goatcounter-click="event/open-data/csv/{code}">CSV (zip)</a> · '
                    f'<a href="/api/v1/countries/{code}.json" data-goatcounter-click="event/open-data/json/{code}">JSON</a> · '
-                   f'<a href="/open-data/">{"Tentang data terbuka" if lang == "id" else "About the open data"}</a>. CC BY 4.0.</p></section>')
-            html = re.sub(r"(</main>)", box.replace("\\", "\\\\") + r"\1", html, count=1) if "<main" in html else html
-            html = html.replace("<section class=\"imr-country-data\"", "<section data-noi18n class=\"imr-country-data\"", 1) if lang == "id" else html
+                   f'<a href="/open-data/">{"Tentang data terbuka" if lang == "id" else "About the open data"}</a>. CC BY 4.0.</p></div>')
+            m = re.search(r"<h2[^>]*>\s*(About this page|Tentang halaman ini)", html)
+            if m:
+                start = m.start()
+                opener = re.search(r"<(section|div)\b[^>]*>\s*$", html[:start])
+                if opener:
+                    start = opener.start()
+                html = html[:start] + box + html[start:]
+            else:
+                html = re.sub(r"(</div>\s*</main>)", lambda mm: box + mm.group(1), html, count=1)
         page.write_text(html, encoding="utf-8")
         n_ct += 1
 print(f"  structured data: {n_dec} decision pages, {n_ds} database pages, {n_ct} country pages")
