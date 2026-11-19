@@ -44,6 +44,7 @@ FOUND_COLS = ["found_on", "source", "country", "kind", "body", "title", "date", 
               "matched_terms", "site_status", "note"]
 
 _last_hit = {}
+DEBUG = False
 
 
 def fetch(url, data=None, timeout=60):
@@ -154,9 +155,10 @@ def read_source(src):
                 get = {c.tag.split("}")[-1]: c for c in el}
                 link = get.get("link")
                 href = (link.get("href") or link.text or "").strip() if link is not None else ""
-                items.append({"url": href, "title": " ".join((get["title"].text or "").split()) if "title" in get else "",
-                              "date": ((get.get("pubDate") or get.get("updated") or get.get("published") or get.get("date"))
-                                       .text or "")[:40] if any(k in get for k in ("pubDate", "updated", "published", "date")) else ""})
+                date_el = next((get[k] for k in ("pubDate", "updated", "published", "date") if k in get), None)
+                title_el = get.get("title")
+                items.append({"url": href, "title": " ".join(((title_el.text if title_el is not None else "") or "").split()),
+                              "date": ((date_el.text if date_el is not None else "") or "")[:40]})
         elif mode == "json":
             data = json.loads(text)
             for it in dig(data, src.get("items_path")):
@@ -173,6 +175,14 @@ def read_source(src):
         else:
             raise ValueError(f"unknown mode {mode}")
     if not items:
+        if DEBUG:
+            p = Links()
+            try:
+                p.feed(text)
+            except Exception:  # noqa: BLE001
+                pass
+            print(f"  [debug] {final} status {status}, {len(text)} chars; first links: "
+                  + " | ".join(h for h, _ in p.items[:40])[:2500] + "\n  [debug] start: " + " ".join(text[:600].split()))
         return [], "read, but no items found (the page layout may have changed)"
     return items, "ok"
 
@@ -192,7 +202,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="read the sources but write nothing")
     ap.add_argument("--only", help="run one source id")
+    ap.add_argument("--debug", action="store_true", help="show what a page held when no items were found")
     args = ap.parse_args()
+    global DEBUG
+    DEBUG = args.debug or args.dry_run
 
     config = json.loads((WATCH / "sources.json").read_text(encoding="utf-8"))
     sources = [s for s in config["sources"] if not args.only or s["id"] == args.only]
