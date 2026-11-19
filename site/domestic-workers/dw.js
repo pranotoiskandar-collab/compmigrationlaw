@@ -15,9 +15,10 @@
   var level = function (d, v) { return v == null ? t("Not yet determined", "Belum ditentukan") : t(d["l" + v], d["l" + v + "_id"]); };
   var cell = function (k, f) { var cb = BY[k].role === "dest" ? G.dc : G.oc; return (cb[k] || {})[f] || [null, "", "", "S"]; };
   var cbOf = function (k) { return BY[k].role === "dest" ? DCB : OCB; };
+  function pillText(v) { return v === 2 ? t("Full", "Penuh") : v === 1 ? t("Partial", "Sebagian") : v === 0 ? t("None", "Tidak ada") : "?"; }
   function pill(v, txt) {
     var cls = v === 2 ? "p-yes" : v === 1 ? "p-partial" : v === 0 ? "p-no" : "p-unclear";
-    var tx = txt || (v === 2 ? t("Full", "Penuh") : v === 1 ? t("Partial", "Sebagian") : v === 0 ? t("None", "Tidak ada") : "?");
+    var tx = txt || pillText(v);
     return '<span class="g-pill ' + cls + '">' + esc(tx) + "</span>";
   }
   var evTag = function (e) { return e === "P" ? '<span class="g-ev p">P</span>' : '<span class="g-ev s" title="' + esc(t("Secondary source, not yet checked against the official text", "Sumber sekunder, belum dicocokkan dengan teks resmi")) + '">S</span>'; };
@@ -32,8 +33,8 @@
     rows.forEach(function (s) {
       if (s.region !== reg) { reg = s.region; h += '<tr class="g-reg"><td colspan="' + (cb.length + 1) + '">' + esc(rname(reg)) + "</td></tr>"; }
       h += '<tr><th scope="row" class="c">' + esc(sname(s.k)) + "</th>" + cb.map(function (d) {
-        var c = cell(s.k, d.k), on = SEL && SEL[0] === s.k && SEL[1] === d.k;
-        return '<td class="c"><button type="button" class="g-cell" data-c="' + s.k + "|" + d.k + '" aria-pressed="' + on + '" aria-label="' + esc(sname(s.k) + ": " + lab(d)) + '">' + pill(c[0]) + (c[3] === "P" ? '<span class="g-dot" aria-hidden="true">•</span>' : "") + "</button></td>";
+        var c = cell(s.k, d.k), on = !!(SEL && SEL[0] === s.k && SEL[1] === d.k);
+        return '<td class="c"><button type="button" class="g-cell" data-c="' + s.k + "|" + d.k + '" aria-pressed="' + on + '" aria-label="' + esc(sname(s.k) + ", " + lab(d) + ": " + pillText(c[0])) + '">' + pill(c[0]) + (c[3] === "P" ? '<span class="g-dot" aria-hidden="true">•</span>' : "") + "</button></td>";
       }).join("") + "</tr>";
     });
     $("g-glance").innerHTML = h + "</tbody>";
@@ -142,7 +143,7 @@
     $("g-corr").innerHTML = '<div class="g-grid3"><div class="g-card"><h3>' + t("Before departure", "Sebelum berangkat") + " · " + esc(sname(CO)) + '</h3><ul class="g-list">' + OCB.map(function (d) { var c = cell(CO, d.k); return "<li>" + pill(c[0]) + " <b>" + esc(lab(d)) + '</b><br><span class="g-small">' + esc(c[1]) + "</span></li>"; }).join("") + "</ul></div>" +
       '<div class="g-card"><h3>' + t("Between the two", "Di antara keduanya") + '</h3><h4 class="g-h4">' + t("Bilateral instruments", "Instrumen bilateral") + "</h4>" + (bil.length ? '<ul class="g-list">' + bil.map(function (x) { return "<li><b>" + esc(x.title) + "</b> (" + x.year + ')<br><span class="g-small">' + esc(t(x.sum, x.sum_id)) + "</span></li>"; }).join("") + "</ul>" : '<p class="g-small">' + esc(t("None recorded in this database.", "Tidak ada yang tercatat dalam basis data ini.")) + "</p>") +
       (reg.length ? '<h4 class="g-h4">' + t("Regional and interregional", "Kawasan dan antarkawasan") + '</h4><ul class="g-list">' + reg.map(function (x) { return "<li>" + esc(x.title) + " (" + x.year + ")</li>"; }).join("") + "</ul>" : "") +
-      '<h4 class="g-h4">' + t("Treaties", "Traktat") + '</h4><div class="g-scroll"><table class="g-t"><thead><tr><th></th><th>' + esc(sname(CO)) + "</th><th>" + esc(sname(CD)) + "</th></tr></thead><tbody>" + both + "</tbody></table></div></div>" +
+      '<h4 class="g-h4">' + t("Treaties", "Traktat") + '</h4><div class="g-scroll"><table class="g-t"><thead><tr><th scope="col">' + t("Treaty", "Traktat") + '</th><th>' + esc(sname(CO)) + "</th><th>" + esc(sname(CD)) + "</th></tr></thead><tbody>" + both + "</tbody></table></div></div>" +
       '<div class="g-card"><h3>' + t("At work", "Saat bekerja") + " · " + esc(sname(CD)) + '</h3><ul class="g-list">' + DCB.map(function (d) { var c = cell(CD, d.k); return "<li>" + pill(c[0]) + " <b>" + esc(lab(d)) + '</b><br><span class="g-small">' + esc(c[1]) + "</span></li>"; }).join("") + "</ul></div></div>";
   }
 

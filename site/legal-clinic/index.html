@@ -324,7 +324,7 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
 <div class="checkwrap" id="wiz">
 <div class="panel" id="wizpanel">
 <div class="prog" aria-hidden="true"><span id="bar"></span></div>
-<p class="stepno" id="stepno"></p>
+<p class="stepno" id="stepno" role="status"></p>
 <div id="step"></div>
 <div class="navrow">
 <button type="button" class="b2" id="back">Back</button>
@@ -369,7 +369,7 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
 <input type="hidden" name="language" id="draftlang" value="en">
 <input type="hidden" name="rights" id="rightsfield">
 <ol class="dsteps" id="dsteps" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li></ol>
-<p class="stepno" id="dstepno" style="margin:0 0 6px"></p>
+<p class="stepno" id="dstepno" role="status" style="margin:0 0 6px"></p>
 
 <fieldset class="dpart" data-d="1"><legend>Where to send it, and who you are</legend>
 <p class="hint">Choose the body for this draft. You can change it later.</p>
@@ -455,7 +455,7 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
 </div>
 </form>
 </div>
-<div class="paperwrap side" aria-live="polite"><div class="paperbar"><span>Live preview</span><span class="dtabs" id="dtabs" hidden><button type="button" data-dv="own" aria-pressed="true">Draft in your language</button><button type="button" data-dv="en" aria-pressed="false">Draft in English</button></span><span id="previewtarget"></span></div><div class="paper" id="paper" data-noi18n></div></div>
+<div class="paperwrap side" role="region" aria-label="Live preview of the draft"><div class="paperbar"><span>Live preview</span><span class="dtabs" id="dtabs" hidden><button type="button" data-dv="own" aria-pressed="true">Draft in your language</button><button type="button" data-dv="en" aria-pressed="false">Draft in English</button></span><span id="previewtarget"></span></div><div class="paper" id="paper" data-noi18n></div></div>
 </div>
 </div>
 </section>
@@ -474,6 +474,12 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
 </div>
 <script src="i18n.js"></script>
 <script src="procedures.js"></script>
+<script src="outbox.js" defer></script>
+<style>/* accessibility: readable stage names, visible focus on form fields */
+.rail li b{color:var(--ink)}
+.intake input:focus-visible,.intake textarea:focus-visible,.intake select:focus-visible,.csel:focus-visible{box-shadow:0 0 0 3px var(--ink)}
+.sendfail:focus{outline:3px solid var(--ink);outline-offset:2px}
+</style>
 <script>
 (function () {
   // Questions. "multi" allows several answers; "when" decides whether a question is asked.
@@ -953,7 +959,9 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
     var bad = Array.prototype.filter.call(document.querySelectorAll('.dpart[data-d="' + dpos + '"] [required]'), function (e) { return !e.closest('[hidden]') && !e.checkValidity(); });
     if (bad.length) { bad[0].reportValidity(); bad[0].focus(); return false; } return true;
   }
-  $('#dnext').addEventListener('click', function () { if (!stepOK()) return; dpos++; drawD(); $('.formcard').scrollIntoView({block: 'start'}); });
+  $('#dnext').addEventListener('click', function () { if (!stepOK()) return; dpos++; drawD(); $('.formcard').scrollIntoView({block: 'start'}); focusPart(); });
+  // Screen readers: start reading at the new step's title.
+  function focusPart() { var lg = document.querySelector('.dpart:not([hidden]) legend'); if (lg) { lg.tabIndex = -1; lg.focus({preventScroll: true}); } }
   $('#dback').addEventListener('click', function () { if (dpos === 1) { setStage(2); $('#rail').scrollIntoView(); return; } dpos--; drawD(); });
   $('#todraft').addEventListener('click', function () { openDraft(null); });
   $('#cards').addEventListener('click', function (e) { var b = e.target.closest('[data-draft]'); if (b) openDraft(+b.dataset.draft); });
@@ -1035,9 +1043,15 @@ if(!o){b.setAttribute("aria-expanded","true");r.querySelector('.jy-p[data-j="'+b
     var btn = $('#dsend'); btn.disabled = true; btn.textContent = 'Sending…';
     var fd = new FormData(this); fd.delete('voice_message');
     if (VOICE) fd.append('voice_message', new File([VOICE], (REF || 'imr') + '-voice.' + ((VOICE.type.split('/')[1] || 'webm').split(';')[0]), {type: VOICE.type}));
+    // No connection: keep the draft on this phone and send it later (outbox.js).
+    function keep() { btn.disabled = false; btn.textContent = 'Send to an IMR lawyer'; window.IMROutbox.queue(REF, fd).catch(function () { fallback('The draft could not be sent just now.'); }); }
+    if (navigator.onLine === false && window.IMROutbox) { keep(); return; }
     fetch('/', {method: 'POST', body: fd})
-      .then(function (r) { if (!r.ok) throw new Error(r.status); location.href = '/legal-clinic/thanks.html?ref=' + encodeURIComponent(REF); })
-      .catch(function () { btn.disabled = false; btn.textContent = 'Send to an IMR lawyer'; fallback('The draft could not be sent just now.'); });
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); location.href = '/legal-clinic/thanks.html?ref=' + encodeURIComponent(REF); })
+      .catch(function (err) {
+        if (window.IMROutbox && !/^HTTP /.test(err && err.message)) { keep(); return; }
+        btn.disabled = false; btn.textContent = 'Send to an IMR lawyer'; fallback('The draft could not be sent just now.');
+      });
   });
   $('#dldraft').addEventListener('click', function () {
     buildDraft(); var html = '<html><head><meta charset="utf-8"><style>body{font-family:"Times New Roman";font-size:12pt;line-height:1.5}h5{font-size:11pt;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #958679;margin:18pt 0 6pt}.stamp{color:#900;font-weight:bold}.empty{color:#958679;font-style:italic}.paper+.paper{page-break-before:always}</style></head><body>' + $('#paperfull').innerHTML + '</body></html>';
