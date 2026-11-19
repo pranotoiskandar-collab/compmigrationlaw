@@ -1,0 +1,22 @@
+{
+ "month": "2026-11",
+ "base_commit": "7b725ac7ff1a2f621bf356cbcbd906f963b28661",
+ "end_commit": "38a0bfcf3de3d17d338b6c28dcface957a6024d6",
+ "published": "2026-12-01",
+ "title_en": "What’s new in the databases: November 2026",
+ "title_id": "Kabar terbaru basis data: November 2026",
+ "brief_en": "1,014 court decisions added to Court Decisions (11 full entries with a summary, 1,003 unchecked candidates).1 earlier entry moved up a step in checking.86 laws, regulations and instruments added to the lists of legal texts.15 new or updated files of material received for review (not yet in the databases).",
+ "decisions_new": 1014,
+ "decisions_checked": 1,
+ "laws_new": 86,
+ "developments_new": 0,
+ "incoming_new": {
+  "africa": 2,
+  "countries-of-origin": 2,
+  "court-decisions": 3,
+  "east-asia": 3,
+  "gcc": 3,
+  "government-hate-speech": 1,
+  "migration-law": 1
+ }
+}
