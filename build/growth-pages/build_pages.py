@@ -193,6 +193,17 @@ MATERIALS = [
 ]
 
 
+# Teaching packs: (file stem in site/materials/files/teaching/, title EN, title ID, text EN, text ID, citation)
+TEACHING = [
+    ("paket-ajar-hukum-migrasi-tenaga-kerja-id",
+     "Teaching pack on migrant labor law: five court-decision case studies (in Indonesian)",
+     "Paket Ajar Hukum Migrasi Tenaga Kerja: lima studi kasus putusan pengadilan",
+     "Five modules on decisions of the Indonesian Constitutional Court and foreign courts about Indonesian migrant workers. 13 pages, A4.",
+     "Lima modul tentang putusan Mahkamah Konstitusi dan pengadilan negara lain mengenai pekerja migran Indonesia. 13 halaman, A4.",
+     "Institute for Migrant Rights (2026). Paket Ajar Hukum Migrasi Tenaga Kerja: lima studi kasus dari putusan pengadilan, versi 1.0."),
+]
+
+
 def copy_materials():
     """Copy the public outreach files into site/materials/files/ (only when the project folder is there)."""
     out = SITE / "materials" / "files"
@@ -211,6 +222,20 @@ def copy_materials():
             im = Image.open(next(pathlib.Path(tmp).glob("p*.png"))).convert("RGB")
         im.thumbnail((480, 680))
         im.save(out / name.replace(".pdf", ".jpg"), quality=82, optimize=True)
+    teach = out / "teaching"
+    teach.mkdir(exist_ok=True)
+    for stem, *_ in TEACHING:
+        for ext in (".pdf", ".docx"):
+            if (PROJECT / "teaching-packs" / (stem + ext)).exists():
+                shutil.copy2(PROJECT / "teaching-packs" / (stem + ext), teach / (stem + ext))
+        if (teach / (stem + ".pdf")).exists():
+            import subprocess
+            import tempfile
+            with tempfile.TemporaryDirectory() as tmp:
+                subprocess.run(["pdftoppm", "-f", "1", "-l", "1", "-r", "60", "-png", str(teach / (stem + ".pdf")), f"{tmp}/p"], check=True)
+                im = Image.open(next(pathlib.Path(tmp).glob("p*.png"))).convert("RGB")
+            im.thumbnail((480, 680))
+            im.save(teach / (stem + ".jpg"), quality=82, optimize=True)
 
 
 def size(name):
@@ -220,11 +245,23 @@ def size(name):
 
 def materials():
     teaching = SITE / "materials" / "files" / "teaching"
-    packs = sorted(teaching.glob("*.pdf")) if teaching.exists() else []
+    packs = [t for t in TEACHING if (teaching / (t[0] + ".pdf")).exists()]
     if packs:
-        packs_html = '<div class="gp-grid">' + "".join(
-            f'<div class="gp-card"><h3>{esc(p.stem.replace("-", " ").capitalize())}</h3><p class="gp-meta">PDF, {p.stat().st_size / 1e6:.1f} MB</p>'
-            f'<a class="gp-btn" href="/materials/files/teaching/{p.name}" download>{tr("Download", "Unduh")}</a></div>' for p in packs) + "</div>"
+        cards = []
+        for stem, title_en, title_id, text_en, text_id, cite in packs:
+            pdf, docx, jpg = (teaching / (stem + ext) for ext in (".pdf", ".docx", ".jpg"))
+            thumb = ""
+            if jpg.exists():
+                from PIL import Image
+                w, h = Image.open(jpg).size
+                thumb = f'<a href="/materials/files/teaching/{pdf.name}"><img class="gp-thumb" src="/materials/files/teaching/{jpg.name}" alt="" width="{w}" height="{h}" loading="lazy"></a>'
+            word = f'<a class="gp-btn ghost" href="/materials/files/teaching/{docx.name}" download>Word</a>' if docx.exists() else ""
+            cards.append(f'<div class="gp-card">{thumb}<h3>{tr(title_en, title_id)}</h3><p>{tr(text_en, text_id)}</p>'
+                         f'<p class="gp-meta">Bahasa Indonesia · PDF, {pdf.stat().st_size / 1e6:.1f} MB · CC BY 4.0</p>'
+                         f'<p class="gp-meta"><span>{tr("Cite as:", "Kutip sebagai:")}</span> <span data-noi18n>{esc(cite)}</span></p>'
+                         f'<a class="gp-btn" href="/materials/files/teaching/{pdf.name}" download>PDF</a>{word}</div>')
+        packs_html = (f'<p>{tr("Ready-made case studies for law faculties, built on court decisions in the IMR databases, with questions for class. Lecturers may copy and adapt them.", "Studi kasus siap pakai bagi fakultas hukum, yang disusun dari putusan pengadilan dalam basis data IMR, lengkap dengan pertanyaan untuk diskusi kelas. Para dosen boleh menyalin dan menyesuaikannya.")}</p>'
+                      '<div class="gp-grid">' + "".join(cards) + "</div>")
     else:
         packs_html = f'<p class="gp-note">{tr("Teaching packs for law faculties are being prepared: case studies built on IMR court decisions and laws, with questions for class. They will appear here for download.", "Bahan ajar untuk fakultas hukum sedang disiapkan, berupa studi kasus yang disusun dari putusan pengadilan dan undang-undang dalam basis data IMR, lengkap dengan pertanyaan untuk diskusi kelas. Bahan tersebut akan tersedia untuk diunduh di sini.")}</p>'
 

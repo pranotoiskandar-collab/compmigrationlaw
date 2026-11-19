@@ -5,7 +5,7 @@
 | Ask IMR (Tanya IMR) on the Legal Clinic page | `site/assets/ask-imr.js`, `ask-imr.css`, index in `site/legal-clinic/ask/` | `build_ask_index.py` (also run at publish), `clinic_ask.py` puts the box on the Clinic page |
 | Partner badge, country box, reuse terms | `site/partners/`, badges in `site/partners/badge/`, widget in `site/embed/country/` | `build_pages.py`, `badges.py`, `render_png.js` |
 | Impact page | `site/impact/` | `build_pages.py`, figures in `impact-figures.json` |
-| Materials page | `site/materials/`, files in `site/materials/files/` (teaching packs go in `files/teaching/`) | `build_pages.py` (copies from /mnt/project-files when mounted) |
+| Materials page | `site/materials/`, files in `site/materials/files/` (teaching packs: copied from /mnt/project-files/teaching-packs/, listed in TEACHING in build_pages.py) | `build_pages.py` (copies from /mnt/project-files when mounted) |
 | Indonesian for these pages | `site/assets/lang-growth.js` | `build_pages.py` |
 
 Ask IMR uses no AI model and no paid service: it matches the question to a country and a topic
