@@ -13,3 +13,4 @@ jobs:
           python-version: "3.12"
       - run: python3 tools/check_csv.py
       - run: python3 tools/copy_data.py
+      - run: python3 tools/cite_blocks.py --check

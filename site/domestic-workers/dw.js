@@ -257,7 +257,7 @@
     var P = provRows(), nP = P.filter(function (r) { return r.evidence === "P"; }).length, nN = P.filter(function (r) { return r.value == null; }).length;
     $("g-prov").innerHTML = "<thead><tr><th>" + t("Cells coded", "Sel dikodekan") + "</th><th>" + t("From the official text (P)", "Dari teks resmi (P)") + "</th><th>" + t("Secondary (S)", "Sekunder (S)") + "</th><th>" + t("Not yet determined", "Belum ditentukan") + "</th><th>" + t("Instruments", "Instrumen") + "</th></tr></thead><tbody><tr><td class=\"c g-mono\">" + P.length + '</td><td class="c g-mono">' + nP + '</td><td class="c g-mono">' + (P.length - nP) + '</td><td class="c g-mono">' + nN + '</td><td class="c g-mono">' + G.ins.length + "</td></tr></tbody>";
     var apa = "Institute for Migrant Rights. (2026). Migrant domestic workers: International, regional and national law compared (Version " + G.version + ", " + G.updated + ") [Data set]. https://theimr.org/domestic-workers/";
-    $("g-cite").textContent = apa;
+    if ($("g-cite")) $("g-cite").textContent = apa;
   }
 
   /* ---------- XIII. downloads ---------- */

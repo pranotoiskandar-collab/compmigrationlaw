@@ -1,0 +1,45 @@
+{
+  "title": "Migration Jurisprudence from the South: databases of migration and labor law",
+  "upload_type": "dataset",
+  "description": "<p>Open, coded data on migration and labor law from the perspective of the Global South, published by the Institute for Migrant Rights at <a href=\"https://theimr.org/databases/\">theimr.org/databases</a>.</p><p>The archive holds every database as CSV, JSON and BibTeX files with codebooks (folder <code>data/</code>), and the website pages that explain the methods (folder <code>site/</code>):</p><ul><li>Migration Law Atlas: international, regional and national instruments, ratifications, with a farmworker view</li><li>Court Decisions: judgments on migrant workers' rights, centred on courts in Asia, Africa, the Middle East and Latin America</li><li>Destination states compared: Gulf States, East Asia, Southeast Asia</li><li>Countries of Origin: emigration and protection law and policy</li><li>Migrant Domestic Workers: international, regional and national law</li><li>Government Hate Speech, with a comparison of hate speech, voting and the legal protection of non-citizens</li></ul><p>Each database carries its own version number; the release notes list them. Each row links to an official source where one is available, and entries not yet checked against the official text are marked. The data are not legal advice.</p><p>License: CC BY 4.0 for the data and site text. Third-party material keeps its own terms (see LICENSE.md); court judgments and legislation are linked, not copied.</p>",
+  "creators": [
+    {
+      "name": "Iskandar, Pranoto",
+      "affiliation": "Institute for Migrant Rights; Centre for Human Rights and Legal Pluralism, McGill University"
+    },
+    {
+      "name": "Institute for Migrant Rights"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "migration law",
+    "labor law",
+    "migrant workers",
+    "court decisions",
+    "comparative law",
+    "Global South",
+    "farmworkers",
+    "domestic workers",
+    "hate speech",
+    "Southeast Asia",
+    "Gulf States",
+    "East Asia",
+    "Africa"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://theimr.org/databases/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/pranotoiskandar-collab/compmigrationlaw",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    }
+  ],
+  "notes": "Cite the release you used. Each database page at theimr.org gives a citation with that database's own version number."
+}
