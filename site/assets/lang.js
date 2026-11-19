@@ -71,7 +71,7 @@ window.SITE_I18N={"id":{"More decisions from the same region":"Putusan lain dari
     if (!el) {
       var h = document.querySelector('h1'); if (!h) return;
       el = document.createElement('p'); el.id = 'imr-langnote'; el.setAttribute('data-noi18n', '');
-      el.style.cssText = 'margin:8px 0 0;padding:6px 10px;display:inline-block;border-radius:4px;background:#E5DED8;color:#4A3B2D;font:14px/1.4 "Figtree",system-ui,sans-serif';
+      el.style.cssText = 'margin:8px 0 0;padding:6px 10px;display:inline-block;border-radius:4px;background:#D8E5DE;color:#2E493D;font:14px/1.4 "Figtree",system-ui,sans-serif';
       h.insertAdjacentElement('afterend', el);
     }
     el.textContent = NOTE[LANG] || ''; el.hidden = false;
@@ -101,11 +101,11 @@ window.SITE_I18N={"id":{"More decisions from the same region":"Putusan lain dari
     box.className = 'imr-lang'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', 'Language');
     box.innerHTML = LANGS.map(function (x) { return '<button type="button" data-sl="' + x[0] + '" lang="' + x[0] + '" title="' + x[2] + '">' + x[1] + '</button>'; }).join('');
     var css = document.createElement('style');
-    css.textContent = '.imr-lang{display:inline-flex;border:1px solid #C8BCB1;border-radius:999px;overflow:hidden;font:600 12.5px/1 "Figtree",system-ui,sans-serif;vertical-align:middle}' +
+    css.textContent = '.imr-lang{display:inline-flex;border:1px solid #B2C7BC;border-radius:999px;overflow:hidden;font:600 12.5px/1 "Figtree",system-ui,sans-serif;vertical-align:middle}' +
       '.imr-lang{border-color:currentColor!important}.imr-lang button{all:unset;cursor:pointer;padding:7px 10px;color:inherit;letter-spacing:.06em;opacity:.75}' +
       '.imr-lang button[aria-pressed="true"]{background:rgba(128,128,128,.3);opacity:1;text-decoration:underline;text-underline-offset:3px}' +
-      '.imr-lang button:focus-visible{outline:2px solid #2E2116;outline-offset:-2px}' +
-      '.imr-lang.float{position:fixed;top:12px;right:12px;z-index:60;background:#E8E2DC}';
+      '.imr-lang button:focus-visible{outline:2px solid #172D24;outline-offset:-2px}' +
+      '.imr-lang.float{position:fixed;top:12px;right:12px;z-index:60;background:#DCE8E1}';
     document.head.appendChild(css);
     var nav = document.querySelector('nav[aria-label="Main"]');
     if (nav) nav.appendChild(box); else { box.classList.add('float'); document.body.appendChild(box); }
