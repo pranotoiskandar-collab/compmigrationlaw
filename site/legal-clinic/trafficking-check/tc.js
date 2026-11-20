@@ -456,7 +456,7 @@
     c.querySelectorAll('a[href^="#"]').forEach(function (a) { a.href = 'https://theimr.org/legal-clinic/trafficking-check/' + a.getAttribute('href'); });
     var css = $('#tc-css').textContent;
     var html = '<!doctype html><html lang="' + l + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' +
-      (l === 'id' ? 'Lembar hasil' : 'Result sheet') + ' · IMR</title><style>body{margin:0;padding:24px;background:#fff;color:#2E2116;font:17px/1.6 system-ui,sans-serif}' + css + '</style></head><body>' + c.outerHTML + '</body></html>';
+      (l === 'id' ? 'Lembar hasil' : 'Result sheet') + ' · IMR</title><style>body{margin:0;padding:24px;background:#fff;color:#172D24;font:17px/1.6 system-ui,sans-serif}' + css + '</style></head><body>' + c.outerHTML + '</body></html>';
     var b = new Blob([html], { type: 'text/html' }), a = document.createElement('a');
     a.href = URL.createObjectURL(b); a.download = 'imr-trafficking-check-' + new Date().toISOString().slice(0, 10) + '.html';
     document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);

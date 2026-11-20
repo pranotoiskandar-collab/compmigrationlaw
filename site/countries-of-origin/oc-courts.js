@@ -74,7 +74,7 @@
     L2.stat.forEach(function (st) {
       var bars = st.per.map(function (p) {
         var w = Math.max(2, Math.round(80 * p[1] / maxv));
-        return '<div style="display:flex;align-items:center;gap:6px;font-size:12px"><span class="g-mono" style="width:70px">' + p[0] + "\u2013" + String(p[0] + 4).slice(2) + '</span><span style="display:inline-block;height:9px;width:' + w + 'px;background:' + (p[0] + 4 < st.year ? "#C8BCB1" : "#8F5E12") + '"></span><span class="g-mono">' + p[1] + "</span></div>";
+        return '<div style="display:flex;align-items:center;gap:6px;font-size:12px"><span class="g-mono" style="width:70px">' + p[0] + "\u2013" + String(p[0] + 4).slice(2) + '</span><span style="display:inline-block;height:9px;width:' + w + 'px;background:' + (p[0] + 4 < st.year ? "#B2C7BC" : "#1E6B4A") + '"></span><span class="g-mono">' + p[1] + "</span></div>";
       }).join("");
       h += "<tr><td><b>" + esc(t(cn[st.cc] || [st.cc, st.cc])) + "</b><br>" + esc(l ? st.id : st.en) + '<br><span class="g-note">' + (l ? "berlaku sejak " : "in force since ") + st.year + "</span></td><td>" +
         st.codes.map(function (c) { return esc(l ? c[3] : c[2]) + ": <b>" + esc(c[1]) + "</b>"; }).join("<br>") + "</td><td>" + st.hits + '<br><span class="g-note">' + st.site + (l ? " di basis data kami" : " in our database") + '</span><br><button type="button" class="g-btn" data-occlaw="' + st.k + '" aria-pressed="' + (S.law === st.k) + '">' + (l ? "Tampilkan" : "Show them") + "</button></td><td>" + bars + "</td></tr>";

@@ -3,16 +3,6 @@
   <url><loc>https://theimr.org/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://theimr.org/legal-clinic/how-we-work/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://theimr.org/publications.html</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/satu-bumi/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/membela-globalisasi/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/muslim-dan-keadilan-global/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/hukum-ham-internasional/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/standar-internasional-migrasi-ketenagakerjaan/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/tradisi-hukum-indonesia/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/using-world-trade-law/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/pemajuan-kepentingan-negara-berkembang-wto/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://theimr.org/press/relasi-negara-dan-agama/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://theimr.org/people.html</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://theimr.org/contact.html</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://theimr.org/migration-law/</loc><lastmod>2026-10-31</lastmod></url>
@@ -28,8 +18,14 @@
   <url><loc>https://theimr.org/government-hate-speech/elections/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/ai-use/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://theimr.org/data-quality/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://theimr.org/databases/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://theimr.org/domestic-workers/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://theimr.org/compare/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://theimr.org/timeline/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://theimr.org/coverage/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://theimr.org/laws/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://theimr.org/follow/</loc><lastmod>2026-11-19</lastmod></url>
 
   <url><loc>https://theimr.org/court-decisions/d/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/mk-127-2023/</loc><lastmod>2026-11-01</lastmod></url>
@@ -469,7 +465,6 @@
   <url><loc>https://theimr.org/court-decisions/d/c-h-mr-s-o-s-esclaves-1999/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-hk-thang-thieu-quyen-1998/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-hk-ng-siu-tung-2002/</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://theimr.org/court-decisions/d/c-h-hk-ga-2014/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-hk-gutierrez-joseph-james-2014/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-hk-h-2020/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-hk-mohammed-selim-2020/</loc><lastmod>2026-11-01</lastmod></url>
@@ -513,7 +508,6 @@
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-2014hun-ba421-2016/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-2014hun-ba211-2015/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-2011hun-ma502-2014/</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-2007hun-ma1083-2011/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-99hun-ma494-2001/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-97hun-ka12-2000/</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-kr-ccourt-2012hun-ba192-2014/</loc><lastmod>2026-11-01</lastmod></url>
@@ -1500,7 +1494,6 @@
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2019-sghc-243/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2019-sghc-269/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2020-sghc-46/</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2020-sghc-187/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2020-sghc-195/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2021-sghc-3/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-h-sg-2021-sghc-77/</loc><lastmod>2026-11-17</lastmod></url>
@@ -1579,4 +1572,5 @@
   <url><loc>https://theimr.org/court-decisions/d/mk-040-2011/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/mk-064-2011/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://theimr.org/court-decisions/d/c-mm-usc-82b-2020/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://theimr.org/open-data/</loc><lastmod>2026-11-20</lastmod></url>
 </urlset>

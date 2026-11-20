@@ -149,7 +149,7 @@ def block(page, meta, collection_meta):
         chtm, _, _ = citation({"path": "databases", "collection": True}, collection_meta)
         out += ['<p class="imr-cite-lab">The whole collection</p>', f'<p class="imr-cite-txt" data-noi18n>{chtm}</p>']
     out.append('<p class="imr-cite-note">License: CC BY 4.0. You may reuse and adapt the data if you give credit. '
-               f'Reference managers can read the citation file <a href="{CFG["github"]}/blob/main/CITATION.cff">CITATION.cff</a> on GitHub.</p>')
+               f'Reference managers can read the citation file <a href="{CFG["github"]}/blob/main/CITATION.cff" data-noi18n>CITATION.cff</a> on GitHub.</p>')
     out += ["</section>", SCRIPT, END]
     return "".join(out)
 

@@ -1,0 +1,30 @@
+name: Country alerts (weekly drafts)
+on:
+  schedule:
+    - cron: '30 20 * * 0'   # Monday 03:30 Jakarta time
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Changes since (git date, e.g. "7 days ago")'
+        default: '7 days ago'
+permissions:
+  contents: read
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare the emails (and Buttondown drafts if the key is set)
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python3 tools/alerts/alerts.py --since "${{ github.event.inputs.since || '7 days ago' }}" --out alerts-out --buttondown
+      - uses: actions/upload-artifact@v4
+        with:
+          name: country-alerts
+          path: alerts-out/
+          if-no-files-found: ignore
