@@ -1,36 +1,36 @@
-s,title,orig,year,amended,type,topic,groups,url,link
-KR,Immigration Act,출입국관리법,1963,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-KR,Refugee Act,난민법,2012,,statute,"Refugees (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-KR,Act on the Employment of Foreign Workers (Employment Permit System),외국인근로자의 고용 등에 관한 법률,2003,,statute,"Labour migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-KR,Nationality Act,국적법,1948,,statute,"Nationality (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-KR,Framework Act on Treatment of Foreigners Residing in the Republic of Korea,재한외국인 처우 기본법,2007,,statute,"Integration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-KR,Multicultural Families Support Act,다문화가족지원법,2008,,statute,"Marriage migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db
-JP,Nationality Act,国籍法,1950,,statute,"Nationality (added 2026-11-17, unverified)",,https://laws.e-gov.go.jp/,db
-TW,Immigration Act,入出國及移民法,1999,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db
-TW,Nationality Act,國籍法,1929,,statute,"Nationality (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db
-TW,Labor Standards Act,勞動基準法,1984,2024,statute,Labor standards,TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001,text
-TW,Employment Service Act,就業服務法,1992,2025-01,statute,"Admission, permits, change of employer (Art. 59), brokers",TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001,text
-TW,Act for Distant Water Fisheries,遠洋漁業條例,2016,2024,statute,Distant-water fleet; Art. 26 basis for crew regulations,TW-DWF,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050051,text
-TW,Regulations on the Authorization and Management of Overseas Employment of Foreign Crew Members,境外僱用非我國籍船員許可及管理辦法,2017,2025-11,regulation,"Wages, rest, insurance, agencies for distant-water crew",TW-DWF,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050061,text
-TW,Act to Implement the ICCPR and the ICESCR,公民與政治權利國際公約及經濟社會文化權利國際公約施行法,2009,,statute,Domestic force of the UN covenants,all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020028,text
-TW,Human Trafficking Prevention Act,人口販運防制法,2009,2023,statute,"Trafficking, labor exploitation",all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080177,text
-TW,Labor Incident Act,勞動事件法,2018,2023,statute,Labor courts and procedure (in force 2020),TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064,text
-TW,"Constitution, Art. 7 (equality) and Art. 15 (right to work)",中華民國憲法,1947,,constitution,Equality and work,all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001,text
-KR,Labor Standards Act (Art. 63: exclusions for agriculture and fisheries),근로기준법,1953,2026-04,statute,Labor standards,KR-E9,https://www.law.go.kr/법령/근로기준법,text
-KR,"Act on the Employment, etc. of Foreign Workers",외국인근로자의 고용 등에 관한 법률,2003,2025-10,statute,Employment Permit System; change of workplace (Art. 25),KR-E9,https://www.law.go.kr/법령/외국인근로자의%20고용%20등에%20관한%20법률,text
-KR,Seafarers Act,선원법,1962,2026-10,statute,Labor terms on vessels of 20 tons and over,KR-E10,https://www.law.go.kr/법령/선원법,text
-KR,Distant Water Fisheries Development Act,원양산업발전법,2007,2026-03,statute,Distant-water fleet licensing and obligations,KR-E10,https://www.law.go.kr/법령/원양산업발전법,text
-KR,Minimum Wage Act,최저임금법,1986,2020,statute,Minimum wage,KR-E9,https://www.law.go.kr/법령/최저임금법,text
-KR,Act on the Prevention of Human Trafficking and Protection of Victims,인신매매등방지 및 피해자보호 등에 관한 법률,2021,2026-09,statute,Trafficking (in force 2023),all,https://www.law.go.kr/법령/인신매매등방지%20및%20피해자보호%20등에%20관한%20법률,text
-HK,Employment Ordinance (Cap. 57),《僱傭條例》,1968,2026-05,statute,"Wages, rest days, holidays, termination",HK-FDH,https://www.elegislation.gov.hk/hk/cap57,text
-HK,Employment Agency Regulations (Cap. 57A),《職業介紹所規例》,1968,2018,regulation,10% commission cap,HK-FDH,https://www.elegislation.gov.hk/hk/cap57A,text
-HK,"Minimum Wage Ordinance (Cap. 608), s. 7 (live-in domestic workers excluded)",《最低工資條例》,2010,2026-08,statute,Minimum wage,HK-FDH,https://www.elegislation.gov.hk/hk/cap608,text
-HK,Employees' Compensation Ordinance (Cap. 282),《僱員補償條例》,1953,2026-05,statute,Compulsory work-injury insurance,HK-FDH,https://www.elegislation.gov.hk/hk/cap282,text
-HK,Trade Unions Ordinance (Cap. 332),《職工會條例》,1961,2026-01,statute,Freedom of association,HK-FDH,https://www.elegislation.gov.hk/hk/cap332,text
-HK,Immigration Ordinance (Cap. 115),《入境條例》,1972,2025-08,statute,Admission and conditions of stay,HK-FDH,https://www.elegislation.gov.hk/hk/cap115,text
-HK,Standard Employment Contract for Domestic Helpers (ID 407),,,2016 (version 11/2016),contract,"Wage, food, live-in, medical care",HK-FDH,https://www.immd.gov.hk/eng/forms/forms/id407.html,text
-JP,"Labor Standards Act (Art. 41: exclusions for agriculture, livestock and fisheries)",労働基準法,1947,2026-07,statute,Labor standards,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/322AC0000000049,text
-JP,Act on Proper Technical Intern Training and Protection of Technical Intern Trainees,外国人の技能実習の適正な実施及び技能実習生の保護に関する法律,2016,2022,statute,Technical Intern Training; replaced from April 2027,JP-TITP,https://laws.e-gov.go.jp/law/428AC0000000089,text
-JP,Immigration Control and Refugee Recognition Act,出入国管理及び難民認定法,1951,2026-06,statute,Residence statuses incl. Specified Skilled Worker,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/326CO0000000319,text
-JP,Minimum Wage Act,最低賃金法,1959,2022,statute,Prefectural minimum wages,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/334AC0000000137,text
-JP,Mariners Act,船員法,1947,2025-05,statute,Labor terms for crew of larger vessels,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/322AC0000000100,text
+id,s,title,orig,year,amended,type,topic,groups,url,link,last_checked
+kr-1963-immigration-act,KR,Immigration Act,출입국관리법,1963,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+kr-2012-refugee-act,KR,Refugee Act,난민법,2012,,statute,"Refugees (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+kr-2003-act-on-the-employment-of-foreign-workers,KR,Act on the Employment of Foreign Workers (Employment Permit System),외국인근로자의 고용 등에 관한 법률,2003,,statute,"Labour migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+kr-1948-nationality-act,KR,Nationality Act,국적법,1948,,statute,"Nationality (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+kr-2007-framework-act-on-treatment-of-foreigners,KR,Framework Act on Treatment of Foreigners Residing in the Republic of Korea,재한외국인 처우 기본법,2007,,statute,"Integration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+kr-2008-multicultural-families-support-act,KR,Multicultural Families Support Act,다문화가족지원법,2008,,statute,"Marriage migration (added 2026-11-17, unverified)",,https://www.law.go.kr/,db,2026-11-17
+jp-1950-nationality-act,JP,Nationality Act,国籍法,1950,,statute,"Nationality (added 2026-11-17, unverified)",,https://laws.e-gov.go.jp/,db,2026-11-17
+tw-1999-immigration-act,TW,Immigration Act,入出國及移民法,1999,,statute,"Entry, stay, deportation, detention (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db,2026-11-17
+tw-1929-nationality-act,TW,Nationality Act,國籍法,1929,,statute,"Nationality (added 2026-11-17, unverified)",,https://law.moj.gov.tw/,db,2026-11-17
+tw-1984-labor-standards-act,TW,Labor Standards Act,勞動基準法,1984,2024,statute,Labor standards,TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001,text,2026-11-13
+tw-1992-employment-service-act,TW,Employment Service Act,就業服務法,1992,2025-01,statute,"Admission, permits, change of employer (Art. 59), brokers",TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001,text,2026-11-13
+tw-2016-act-for-distant-water-fisheries,TW,Act for Distant Water Fisheries,遠洋漁業條例,2016,2024,statute,Distant-water fleet; Art. 26 basis for crew regulations,TW-DWF,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050051,text,2026-11-13
+tw-2017-regulations-on-the-authorization-and-man,TW,Regulations on the Authorization and Management of Overseas Employment of Foreign Crew Members,境外僱用非我國籍船員許可及管理辦法,2017,2025-11,regulation,"Wages, rest, insurance, agencies for distant-water crew",TW-DWF,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0050061,text,2026-11-13
+tw-2009-act-to-implement-the-iccpr-and-the-icesc,TW,Act to Implement the ICCPR and the ICESCR,公民與政治權利國際公約及經濟社會文化權利國際公約施行法,2009,,statute,Domestic force of the UN covenants,all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020028,text,2026-11-13
+tw-2009-human-trafficking-prevention-act,TW,Human Trafficking Prevention Act,人口販運防制法,2009,2023,statute,"Trafficking, labor exploitation",all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080177,text,2026-11-13
+tw-2018-labor-incident-act,TW,Labor Incident Act,勞動事件法,2018,2023,statute,Labor courts and procedure (in force 2020),TW-C,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064,text,2026-11-13
+tw-1947-constitution-art-7-equality-and-art-15-r,TW,"Constitution, Art. 7 (equality) and Art. 15 (right to work)",中華民國憲法,1947,,constitution,Equality and work,all,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001,text,2026-11-13
+kr-1953-labor-standards-act-art-63-exclusions-fo,KR,Labor Standards Act (Art. 63: exclusions for agriculture and fisheries),근로기준법,1953,2026-04,statute,Labor standards,KR-E9,https://www.law.go.kr/법령/근로기준법,text,2026-11-13
+kr-2003-act-on-the-employment-etc-of-foreign-wor,KR,"Act on the Employment, etc. of Foreign Workers",외국인근로자의 고용 등에 관한 법률,2003,2025-10,statute,Employment Permit System; change of workplace (Art. 25),KR-E9,https://www.law.go.kr/법령/외국인근로자의%20고용%20등에%20관한%20법률,text,2026-11-13
+kr-1962-seafarers-act,KR,Seafarers Act,선원법,1962,2026-10,statute,Labor terms on vessels of 20 tons and over,KR-E10,https://www.law.go.kr/법령/선원법,text,2026-11-13
+kr-2007-distant-water-fisheries-development-act,KR,Distant Water Fisheries Development Act,원양산업발전법,2007,2026-03,statute,Distant-water fleet licensing and obligations,KR-E10,https://www.law.go.kr/법령/원양산업발전법,text,2026-11-13
+kr-1986-minimum-wage-act,KR,Minimum Wage Act,최저임금법,1986,2020,statute,Minimum wage,KR-E9,https://www.law.go.kr/법령/최저임금법,text,2026-11-13
+kr-2021-act-on-the-prevention-of-human-trafficki,KR,Act on the Prevention of Human Trafficking and Protection of Victims,인신매매등방지 및 피해자보호 등에 관한 법률,2021,2026-09,statute,Trafficking (in force 2023),all,https://www.law.go.kr/법령/인신매매등방지%20및%20피해자보호%20등에%20관한%20법률,text,2026-11-13
+hk-1968-employment-ordinance-cap-57,HK,Employment Ordinance (Cap. 57),《僱傭條例》,1968,2026-05,statute,"Wages, rest days, holidays, termination",HK-FDH,https://www.elegislation.gov.hk/hk/cap57,text,2026-11-13
+hk-1968-employment-agency-regulations-cap-57a,HK,Employment Agency Regulations (Cap. 57A),《職業介紹所規例》,1968,2018,regulation,10% commission cap,HK-FDH,https://www.elegislation.gov.hk/hk/cap57A,text,2026-11-13
+hk-2010-minimum-wage-ordinance-cap-608-s-7-live,HK,"Minimum Wage Ordinance (Cap. 608), s. 7 (live-in domestic workers excluded)",《最低工資條例》,2010,2026-08,statute,Minimum wage,HK-FDH,https://www.elegislation.gov.hk/hk/cap608,text,2026-11-13
+hk-1953-employees-compensation-ordinance-cap-282,HK,Employees' Compensation Ordinance (Cap. 282),《僱員補償條例》,1953,2026-05,statute,Compulsory work-injury insurance,HK-FDH,https://www.elegislation.gov.hk/hk/cap282,text,2026-11-13
+hk-1961-trade-unions-ordinance-cap-332,HK,Trade Unions Ordinance (Cap. 332),《職工會條例》,1961,2026-01,statute,Freedom of association,HK-FDH,https://www.elegislation.gov.hk/hk/cap332,text,2026-11-13
+hk-1972-immigration-ordinance-cap-115,HK,Immigration Ordinance (Cap. 115),《入境條例》,1972,2025-08,statute,Admission and conditions of stay,HK-FDH,https://www.elegislation.gov.hk/hk/cap115,text,2026-11-13
+hk-nd-standard-employment-contract-for-domesti,HK,Standard Employment Contract for Domestic Helpers (ID 407),,,2016 (version 11/2016),contract,"Wage, food, live-in, medical care",HK-FDH,https://www.immd.gov.hk/eng/forms/forms/id407.html,text,2026-11-13
+jp-1947-labor-standards-act-art-41-exclusions-fo,JP,"Labor Standards Act (Art. 41: exclusions for agriculture, livestock and fisheries)",労働基準法,1947,2026-07,statute,Labor standards,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/322AC0000000049,text,2026-11-13
+jp-2016-act-on-proper-technical-intern-training,JP,Act on Proper Technical Intern Training and Protection of Technical Intern Trainees,外国人の技能実習の適正な実施及び技能実習生の保護に関する法律,2016,2022,statute,Technical Intern Training; replaced from April 2027,JP-TITP,https://laws.e-gov.go.jp/law/428AC0000000089,text,2026-11-13
+jp-1951-immigration-control-and-refugee-recognit,JP,Immigration Control and Refugee Recognition Act,出入国管理及び難民認定法,1951,2026-06,statute,Residence statuses incl. Specified Skilled Worker,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/326CO0000000319,text,2026-11-13
+jp-1959-minimum-wage-act,JP,Minimum Wage Act,最低賃金法,1959,2022,statute,Prefectural minimum wages,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/334AC0000000137,text,2026-11-13
+jp-1947-mariners-act,JP,Mariners Act,船員法,1947,2025-05,statute,Labor terms for crew of larger vessels,JP-TITP JP-SSW,https://laws.e-gov.go.jp/law/322AC0000000100,text,2026-11-13

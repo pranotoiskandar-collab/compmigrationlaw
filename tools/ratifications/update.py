@@ -70,6 +70,9 @@ def today():
 
 
 def iso_date(text):
+    iso = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", text or "")
+    if iso:
+        return iso.group(0)
     m = DATE_RE.search(text or "")
     if not m:
         return ""

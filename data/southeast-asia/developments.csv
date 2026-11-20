@@ -1,23 +1,23 @@
-﻿date,state,change,change_id,kind
-1990-01,MY,Malaysia denounces ILO C105 (abolition of forced labor).,Malaysia menarik diri dari ILO C105 (penghapusan kerja paksa).,cut
-2003-10,TH,"Thailand signs employment memoranda with Cambodia and Myanmar (Laos 2002), the basis of the MOU recruitment system.","Thailand menandatangani nota kesepahaman ketenagakerjaan dengan Kamboja dan Myanmar (Laos 2002), dasar sistem rekrutmen MOU.",origin
-2007-01,MY,ASEAN leaders adopt the Cebu Declaration on the rights of migrant workers.,Para pemimpin ASEAN mengadopsi Deklarasi Cebu tentang hak pekerja migran.,law
-2013-01,SG,Weekly rest day for migrant domestic workers (compensation in lieu allowed).,Hari istirahat mingguan bagi PRT migran (boleh diganti kompensasi).,partial
-2013-01,MY,Minimum wage extended to foreign workers.,Upah minimum diperluas ke pekerja asing.,real
-2014-11,TH,Ministerial regulations on labor protection in agricultural work and in sea fishing work.,Peraturan menteri tentang perlindungan tenaga kerja di pertanian dan perikanan laut.,partial
-2015-04,TH,EU issues a 'yellow card' to Thailand over illegal fishing; labor reforms in fisheries follow.,UE memberi 'kartu kuning' kepada Thailand terkait penangkapan ikan ilegal; reformasi ketenagakerjaan perikanan menyusul.,market
-2015-11,MY,ASEAN Convention against Trafficking in Persons adopted (in force March 2017).,Konvensi ASEAN Menentang Perdagangan Orang diadopsi (berlaku Maret 2017).,law
-2017-06,TH,"Royal Ordinance on the Management of Employment of Foreign Workers, amended in 2018 after protests over penalties.","Royal Ordinance tentang Pengelolaan Ketenagakerjaan Pekerja Asing, diubah pada 2018 setelah protes atas sanksinya.",law
-2017-11,SG,ASEAN Consensus on the Protection and Promotion of the Rights of Migrant Workers signed in Manila.,Konsensus ASEAN tentang Pelindungan dan Pemajuan Hak Pekerja Migran ditandatangani di Manila.,law
-2018-06,TH,Thailand ratifies the ILO forced labor protocol (P29).,Thailand meratifikasi protokol kerja paksa ILO (P29).,law
-2019-01,TH,Thailand ratifies ILO C188 (work in fishing); the EU lifts the yellow card the same month.,Thailand meratifikasi ILO C188 (kerja di perikanan); UE mencabut kartu kuning pada bulan yang sama.,law
-2019-01,MY,Foreign workers enter the national employment injury scheme (PERKESO).,Pekerja asing masuk skema jaminan kecelakaan kerja nasional (PERKESO).,real
-2019-04,TH,Work in Fishing Act B.E. 2562 implements C188.,UU Kerja di Perikanan B.E. 2562 melaksanakan C188.,real
-2021-06,MY,"Domestic workers, including foreign ones, enter the PERKESO employment injury scheme.","PRT, termasuk yang asing, masuk skema jaminan kecelakaan kerja PERKESO.",real
-2022-03,MY,Malaysia ratifies the ILO forced labor protocol (P29).,Malaysia meratifikasi protokol kerja paksa ILO (P29).,law
-2022-04,MY,Malaysia–Indonesia MOU on domestic workers (One Channel System).,Nota kesepahaman Malaysia–Indonesia tentang PRT (Sistem Satu Kanal).,origin
-2023-01,MY,"Employment Act amendments in force: 45-hour week, forced labor offence, approval to employ foreign workers.","Perubahan Akta Kerja berlaku: 45 jam seminggu, tindak pidana kerja paksa, persetujuan untuk mempekerjakan pekerja asing.",real
-2023-01,SG,One rest day a month for migrant domestic workers can no longer be compensated in lieu.,Satu hari istirahat sebulan bagi PRT migran tidak lagi boleh diganti kompensasi.,partial
-2023-05,MY,ASEAN declarations on migrant fishers and on migrant workers in crisis situations.,Deklarasi ASEAN tentang nelayan migran dan pekerja migran dalam situasi krisis.,law
-2023-07,BN,"Brunei's first Minimum Wage Order, limited to two sectors.","Perintah Upah Minimum pertama Brunei, terbatas pada dua sektor.",partial
-2025-02,MY,"Minimum wage raised to RM1,700 a month.",Upah minimum dinaikkan menjadi RM1.700 sebulan.,real
+date,state,change,change_id,kind,last_checked
+1990-01,MY,Malaysia denounces ILO C105 (abolition of forced labor).,Malaysia menarik diri dari ILO C105 (penghapusan kerja paksa).,cut,2026-11-13
+2003-10,TH,"Thailand signs employment memoranda with Cambodia and Myanmar (Laos 2002), the basis of the MOU recruitment system.","Thailand menandatangani nota kesepahaman ketenagakerjaan dengan Kamboja dan Myanmar (Laos 2002), dasar sistem rekrutmen MOU.",origin,2026-11-13
+2007-01,MY,ASEAN leaders adopt the Cebu Declaration on the rights of migrant workers.,Para pemimpin ASEAN mengadopsi Deklarasi Cebu tentang hak pekerja migran.,law,2026-11-13
+2013-01,SG,Weekly rest day for migrant domestic workers (compensation in lieu allowed).,Hari istirahat mingguan bagi PRT migran (boleh diganti kompensasi).,partial,2026-11-13
+2013-01,MY,Minimum wage extended to foreign workers.,Upah minimum diperluas ke pekerja asing.,real,2026-11-13
+2014-11,TH,Ministerial regulations on labor protection in agricultural work and in sea fishing work.,Peraturan menteri tentang perlindungan tenaga kerja di pertanian dan perikanan laut.,partial,2026-11-13
+2015-04,TH,EU issues a 'yellow card' to Thailand over illegal fishing; labor reforms in fisheries follow.,UE memberi 'kartu kuning' kepada Thailand terkait penangkapan ikan ilegal; reformasi ketenagakerjaan perikanan menyusul.,market,2026-11-13
+2015-11,MY,ASEAN Convention against Trafficking in Persons adopted (in force March 2017).,Konvensi ASEAN Menentang Perdagangan Orang diadopsi (berlaku Maret 2017).,law,2026-11-13
+2017-06,TH,"Royal Ordinance on the Management of Employment of Foreign Workers, amended in 2018 after protests over penalties.","Royal Ordinance tentang Pengelolaan Ketenagakerjaan Pekerja Asing, diubah pada 2018 setelah protes atas sanksinya.",law,2026-11-13
+2017-11,SG,ASEAN Consensus on the Protection and Promotion of the Rights of Migrant Workers signed in Manila.,Konsensus ASEAN tentang Pelindungan dan Pemajuan Hak Pekerja Migran ditandatangani di Manila.,law,2026-11-13
+2018-06,TH,Thailand ratifies the ILO forced labor protocol (P29).,Thailand meratifikasi protokol kerja paksa ILO (P29).,law,2026-11-13
+2019-01,TH,Thailand ratifies ILO C188 (work in fishing); the EU lifts the yellow card the same month.,Thailand meratifikasi ILO C188 (kerja di perikanan); UE mencabut kartu kuning pada bulan yang sama.,law,2026-11-13
+2019-01,MY,Foreign workers enter the national employment injury scheme (PERKESO).,Pekerja asing masuk skema jaminan kecelakaan kerja nasional (PERKESO).,real,2026-11-13
+2019-04,TH,Work in Fishing Act B.E. 2562 implements C188.,UU Kerja di Perikanan B.E. 2562 melaksanakan C188.,real,2026-11-13
+2021-06,MY,"Domestic workers, including foreign ones, enter the PERKESO employment injury scheme.","PRT, termasuk yang asing, masuk skema jaminan kecelakaan kerja PERKESO.",real,2026-11-13
+2022-03,MY,Malaysia ratifies the ILO forced labor protocol (P29).,Malaysia meratifikasi protokol kerja paksa ILO (P29).,law,2026-11-13
+2022-04,MY,Malaysia–Indonesia MOU on domestic workers (One Channel System).,Nota kesepahaman Malaysia–Indonesia tentang PRT (Sistem Satu Kanal).,origin,2026-11-13
+2023-01,MY,"Employment Act amendments in force: 45-hour week, forced labor offence, approval to employ foreign workers.","Perubahan Akta Kerja berlaku: 45 jam seminggu, tindak pidana kerja paksa, persetujuan untuk mempekerjakan pekerja asing.",real,2026-11-13
+2023-01,SG,One rest day a month for migrant domestic workers can no longer be compensated in lieu.,Satu hari istirahat sebulan bagi PRT migran tidak lagi boleh diganti kompensasi.,partial,2026-11-13
+2023-05,MY,ASEAN declarations on migrant fishers and on migrant workers in crisis situations.,Deklarasi ASEAN tentang nelayan migran dan pekerja migran dalam situasi krisis.,law,2026-11-13
+2023-07,BN,"Brunei's first Minimum Wage Order, limited to two sectors.","Perintah Upah Minimum pertama Brunei, terbatas pada dua sektor.",partial,2026-11-13
+2025-02,MY,"Minimum wage raised to RM1,700 a month.",Upah minimum dinaikkan menjadi RM1.700 sebulan.,real,2026-11-13

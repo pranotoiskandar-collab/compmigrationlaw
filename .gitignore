@@ -8,3 +8,5 @@ __pycache__/
 
 # Internal editor notes, kept out of the public repo
 editor-questions.csv
+site/api/
+site/open-data/
