@@ -1,33 +1,33 @@
-date,country,change,kind
-1979-07,PK,"Emigration Ordinance promulgated, with the Emigration Rules.",law
-1983-12,IN,"Emigration Act adopted, creating the Protector General of Emigrants and the clearance system.",law
-1985-07,LK,Sri Lanka Bureau of Foreign Employment Act adopted.,law
-1995-06,PH,Migrant Workers and Overseas Filipinos Act (RA 8042) adopted after the execution of Flor Contemplacion in Singapore.,real
-1995-07,PH,Ratifies the UN migrant workers convention.,law
-2004-08,ID,"Employment Permit System memoranda with South Korea signed by Indonesia, the Philippines, Vietnam and Sri Lanka.",bilateral
-2007-01,IN,Clearance withheld from women under 30 with ECR passports for work in ECR countries.,restrict
-2007-11,NP,"Foreign Employment Act adopted, with a welfare fund, labor attachés and a tribunal.",real
-2010-03,PH,"RA 10022 strengthens RA 8042: compulsory insurance, certification of destination countries.",real
-2011-08,BD,Ratifies the UN migrant workers convention.,law
-2012-05,ID,Ratifies the UN migrant workers convention (Law No. 6 of 2012).,law
-2012-09,PH,"Ratifies ILO C189 on domestic workers, the second state to do so.",law
-2013-10,BD,Overseas Employment and Migrants Act adopted.,real
-2015-05,ID,Placement of domestic workers with individual employers in 19 Middle Eastern countries halted.,restrict
-2015-07,NP,"'Free visa, free ticket' policy for Malaysia and six Gulf states.",partial
-2016-05,PH,OWWA Act (RA 10801) puts the welfare fund on a statutory footing.,real
-2017-11,ID,"Law No. 18 of 2017 replaces the 2004 placement law, shifting the emphasis to protection.",real
-2017-11,ID,ASEAN Consensus on migrant workers adopted in Manila.,bilateral
-2018-05,PH,Agreement with Kuwait on domestic workers after a deployment ban.,bilateral
-2018-10,BD,Wage Earners' Welfare Board Act adopted.,real
-2020-08,ID,BP2MI Regulation 9/2020 exempts ten occupations from placement costs (implementation later postponed).,partial
-2020-11,VN,Law 69/2020 on workers abroad adopted (in force January 2022); workers no longer refund brokerage commissions.,real
-2021-12,PH,Department of Migrant Workers Act (RA 11641) creates a dedicated department.,law
-2022-04,ID,MOU with Malaysia on domestic workers (one-channel system).,bilateral
-2022-06,LK,Cabinet approves removal of the Family Background Report for women migrant workers.,real
-2024-02,IN,MOU with Taiwan on labor mobility.,bilateral
-2024-02,PH,Ratifies ILO C190 on violence and harassment in the world of work.,law
-2024-10,ID,BP2MI becomes the Ministry for the Protection of Indonesian Migrant Workers (KP2MI).,law
-2025-07,PK,Minimum age for women going abroad as domestic workers lowered from 35 to 25.,partial
-2025-11,BD,Ratifies ILO C190 on violence and harassment in the world of work (in force for Bangladesh from November 2026).,law
-2026-04,LK,Ratifies ILO C190 on violence and harassment in the world of work (in force for Sri Lanka from April 2027).,law
-2026-05,VN,Circular 09/2026 amends the implementing rules on fees and procedures.,law
+date,country,change,kind,last_checked
+1979-07,PK,"Emigration Ordinance promulgated, with the Emigration Rules.",law,2026-11-11
+1983-12,IN,"Emigration Act adopted, creating the Protector General of Emigrants and the clearance system.",law,2026-11-11
+1985-07,LK,Sri Lanka Bureau of Foreign Employment Act adopted.,law,2026-11-11
+1995-06,PH,Migrant Workers and Overseas Filipinos Act (RA 8042) adopted after the execution of Flor Contemplacion in Singapore.,real,2026-11-11
+1995-07,PH,Ratifies the UN migrant workers convention.,law,2026-11-11
+2004-08,ID,"Employment Permit System memoranda with South Korea signed by Indonesia, the Philippines, Vietnam and Sri Lanka.",bilateral,2026-11-11
+2007-01,IN,Clearance withheld from women under 30 with ECR passports for work in ECR countries.,restrict,2026-11-11
+2007-11,NP,"Foreign Employment Act adopted, with a welfare fund, labor attachés and a tribunal.",real,2026-11-11
+2010-03,PH,"RA 10022 strengthens RA 8042: compulsory insurance, certification of destination countries.",real,2026-11-11
+2011-08,BD,Ratifies the UN migrant workers convention.,law,2026-11-11
+2012-05,ID,Ratifies the UN migrant workers convention (Law No. 6 of 2012).,law,2026-11-11
+2012-09,PH,"Ratifies ILO C189 on domestic workers, the second state to do so.",law,2026-11-11
+2013-10,BD,Overseas Employment and Migrants Act adopted.,real,2026-11-11
+2015-05,ID,Placement of domestic workers with individual employers in 19 Middle Eastern countries halted.,restrict,2026-11-11
+2015-07,NP,"'Free visa, free ticket' policy for Malaysia and six Gulf states.",partial,2026-11-11
+2016-05,PH,OWWA Act (RA 10801) puts the welfare fund on a statutory footing.,real,2026-11-11
+2017-11,ID,"Law No. 18 of 2017 replaces the 2004 placement law, shifting the emphasis to protection.",real,2026-11-11
+2017-11,ID,ASEAN Consensus on migrant workers adopted in Manila.,bilateral,2026-11-11
+2018-05,PH,Agreement with Kuwait on domestic workers after a deployment ban.,bilateral,2026-11-11
+2018-10,BD,Wage Earners' Welfare Board Act adopted.,real,2026-11-11
+2020-08,ID,BP2MI Regulation 9/2020 exempts ten occupations from placement costs (implementation later postponed).,partial,2026-11-11
+2020-11,VN,Law 69/2020 on workers abroad adopted (in force January 2022); workers no longer refund brokerage commissions.,real,2026-11-11
+2021-12,PH,Department of Migrant Workers Act (RA 11641) creates a dedicated department.,law,2026-11-11
+2022-04,ID,MOU with Malaysia on domestic workers (one-channel system).,bilateral,2026-11-11
+2022-06,LK,Cabinet approves removal of the Family Background Report for women migrant workers.,real,2026-11-11
+2024-02,IN,MOU with Taiwan on labor mobility.,bilateral,2026-11-11
+2024-02,PH,Ratifies ILO C190 on violence and harassment in the world of work.,law,2026-11-11
+2024-10,ID,BP2MI becomes the Ministry for the Protection of Indonesian Migrant Workers (KP2MI).,law,2026-11-11
+2025-07,PK,Minimum age for women going abroad as domestic workers lowered from 35 to 25.,partial,2026-11-11
+2025-11,BD,Ratifies ILO C190 on violence and harassment in the world of work (in force for Bangladesh from November 2026).,law,2026-11-11
+2026-04,LK,Ratifies ILO C190 on violence and harassment in the world of work (in force for Sri Lanka from April 2027).,law,2026-11-11
+2026-05,VN,Circular 09/2026 amends the implementing rules on fees and procedures.,law,2026-11-11

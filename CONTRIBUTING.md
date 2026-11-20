@@ -6,7 +6,7 @@ Other IMR projects and researchers add data through **pull requests**. Nothing r
 
 1. Put new rows in a CSV file in `data/<database>/incoming/`, named `<what>-<YYYY-MM-DD>.csv` (for example `data/east-asia/incoming/judgments-jp-kr-2026-11-17.csv`).
 2. Open a pull request that says where the rows came from and how they were checked.
-3. An automatic check makes sure the CSV can be read. An editor reviews the content, then merges it into the database files and rebuilds the page.
+3. Automatic checks look at the CSV (columns, dates, country codes, links) and at the site the pull request would publish (broken links, missing Indonesian text, script errors). They report only problems the pull request adds; see [tools/checks/README.md](tools/checks/README.md). An editor reviews the content, then merges it into the database files and rebuilds the page.
 
 Corrections to a published file (`data/<database>/*.csv`) are welcome too. Edit the file directly in the pull request and give the source for each change. Note that these files go live as soon as the pull request is merged.
 
@@ -15,6 +15,7 @@ Corrections to a published file (`data/<database>/*.csv`) are welcome too. Edit 
 - **CSV, UTF-8, comma separated**, with one header row. Every row has the same number of columns as the header.
 - **Column names** in lowercase with underscores (`case_no`, `official_link`).
 - **Dates** as `YYYY-MM-DD`. If only the year is known, write `YYYY`.
+- **When a row is accepted** into a published file it gets an `id` and a `last_checked` date (the day someone confirmed it against the official link; `checked_on` in incoming files). See `data/README.md`.
 - **Countries** as two-letter ISO 3166 codes (`JP`, `KR`, `AE`).
 - **One source link per row**, pointing to the official text (court, legislature, ministry, ILO, UN). Secondary sources are allowed only when no official one exists; say so in a `note` column.
 - Use the column names and codes in that database's `codebook.csv` wherever they fit. New columns are fine in `incoming/`; explain them in the pull request.

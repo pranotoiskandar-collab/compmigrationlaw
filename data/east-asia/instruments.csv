@@ -1,26 +1,26 @@
-s,partner,title,level,nature,signed,in_force,scope
-TW,—,Act to Implement the ICCPR and the ICESCR,international,domestic,2009,2009-12-10,Gives both UN covenants domestic legal force; independent international review of reports
-TW,—,C188 alignment in the Overseas Employment Regulations; C188 implementing bill (draft),international,domestic,2022,,"Rest hours, insurance, written agreements benchmarked to ILO C188"
-KR,ILO,Forced Labor Convention (C29),international,treaty,2021,2022,Ratified with C87 and C98 in April 2021
-KR,ILO,Freedom of Association Convention (C87),international,treaty,2021,2022,
-KR,ILO,Right to Organise and Collective Bargaining Convention (C98),international,treaty,2021,2022,
-KR,ILO,Maritime Labor Convention 2006,international,treaty,2014,2015,Merchant shipping; fishing vessels largely outside its scope
-KR,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2015,2015,
-JP,ILO,Abolition of Forced Labor Convention (C105),international,treaty,2022,2023,
-JP,ILO,Maritime Labor Convention 2006,international,treaty,2013,2014,
-JP,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2017,2017,
-HK,UN,ICESCR and ICCPR (applied),international,treaty,1976,1976,Applied by extension; China reports for Hong Kong
-TW,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,Western and Central Pacific Fisheries Commission; Taiwan takes part as a fishing entity
-KR,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,
-JP,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,
-TW,United States,US Department of Labor list of goods produced by forced labor: fish (TVPRA),market,listing,2020,,"Listed in 2020, 2022 and 2024 editions"
-TW,United States,US Customs Withhold Release Orders on named Taiwan-flagged or -owned vessels,market,listing,2020,,Imports from named vessels detained under 19 USC 1307
-TW,European Union,EU IUU 'yellow card' (pre-identification),market,listing,2015,2019,Lifted June 2019
-KR,European Union,EU IUU 'yellow card' (pre-identification),market,listing,2013,2015,Lifted April 2015
-TW,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Bans products made with forced labor from the EU market; applies to all four
-KR,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,
-JP,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,
-HK,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,
-TW,Indonesia,"MOU on the recruitment, placement and protection of Indonesian migrant workers (KDEI–TETO)",bilateral,mou,2018-12,,Excludes distant-water fishers; talks on a fishers' MOU stalled in March 2024
-KR,Indonesia,Arrangement on the placement of Indonesian fishers on Korean coastal vessels,bilateral,mou,2021-05,,Government-to-government recruitment and a training center; vessels over 20 tons
-KR,Laos,E-10-2 fishing crew pathway,bilateral,agreement,2025-06,,Crew of vessels beyond coastal waters
+id,s,partner,title,level,nature,signed,in_force,scope,last_checked
+tw-2009-act-to-implement-the-iccpr-and-the-icesc,TW,—,Act to Implement the ICCPR and the ICESCR,international,domestic,2009,2009-12-10,Gives both UN covenants domestic legal force; independent international review of reports,2026-11-13
+tw-2022-c188-alignment-in-the-overseas-employmen,TW,—,C188 alignment in the Overseas Employment Regulations; C188 implementing bill (draft),international,domestic,2022,,"Rest hours, insurance, written agreements benchmarked to ILO C188",2026-11-13
+kr-2021-forced-labor-convention-c29,KR,ILO,Forced Labor Convention (C29),international,treaty,2021,2022,Ratified with C87 and C98 in April 2021,2026-11-13
+kr-2021-freedom-of-association-convention-c87,KR,ILO,Freedom of Association Convention (C87),international,treaty,2021,2022,,2026-11-13
+kr-2021-right-to-organise-and-collective-bargain,KR,ILO,Right to Organise and Collective Bargaining Convention (C98),international,treaty,2021,2022,,2026-11-13
+kr-2014-maritime-labor-convention-2006,KR,ILO,Maritime Labor Convention 2006,international,treaty,2014,2015,Merchant shipping; fishing vessels largely outside its scope,2026-11-13
+kr-2015-trafficking-in-persons-protocol-palermo,KR,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2015,2015,,2026-11-13
+jp-2022-abolition-of-forced-labor-convention-c10,JP,ILO,Abolition of Forced Labor Convention (C105),international,treaty,2022,2023,,2026-11-13
+jp-2013-maritime-labor-convention-2006,JP,ILO,Maritime Labor Convention 2006,international,treaty,2013,2014,,2026-11-13
+jp-2017-trafficking-in-persons-protocol-palermo,JP,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2017,2017,,2026-11-13
+hk-1976-icescr-and-iccpr-applied,HK,UN,ICESCR and ICCPR (applied),international,treaty,1976,1976,Applied by extension; China reports for Hong Kong,2026-11-13
+tw-2024-conservation-and-management-measure-on-c,TW,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,Western and Central Pacific Fisheries Commission; Taiwan takes part as a fishing entity,2026-11-13
+kr-2024-conservation-and-management-measure-on-c,KR,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,,2026-11-13
+jp-2024-conservation-and-management-measure-on-c,JP,WCPFC,Conservation and Management Measure on crew labor standards,regional,measure,2024,2028,,2026-11-13
+tw-2020-us-department-of-labor-list-of-goods-pro,TW,United States,US Department of Labor list of goods produced by forced labor: fish (TVPRA),market,listing,2020,,"Listed in 2020, 2022 and 2024 editions",2026-11-13
+tw-2020-us-customs-withhold-release-orders-on-na,TW,United States,US Customs Withhold Release Orders on named Taiwan-flagged or -owned vessels,market,listing,2020,,Imports from named vessels detained under 19 USC 1307,2026-11-13
+tw-2015-eu-iuu-yellow-card-pre-identification,TW,European Union,EU IUU 'yellow card' (pre-identification),market,listing,2015,2019,Lifted June 2019,2026-11-13
+kr-2013-eu-iuu-yellow-card-pre-identification,KR,European Union,EU IUU 'yellow card' (pre-identification),market,listing,2013,2015,Lifted April 2015,2026-11-13
+tw-2024-eu-forced-labour-regulation-2024-3015,TW,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Bans products made with forced labor from the EU market; applies to all four,2026-11-13
+kr-2024-eu-forced-labour-regulation-2024-3015,KR,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,,2026-11-13
+jp-2024-eu-forced-labour-regulation-2024-3015,JP,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,,2026-11-13
+hk-2024-eu-forced-labour-regulation-2024-3015,HK,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,,2026-11-13
+tw-2018-mou-on-the-recruitment-placement-and-pro,TW,Indonesia,"MOU on the recruitment, placement and protection of Indonesian migrant workers (KDEI–TETO)",bilateral,mou,2018-12,,Excludes distant-water fishers; talks on a fishers' MOU stalled in March 2024,2026-11-13
+kr-2021-arrangement-on-the-placement-of-indonesi,KR,Indonesia,Arrangement on the placement of Indonesian fishers on Korean coastal vessels,bilateral,mou,2021-05,,Government-to-government recruitment and a training center; vessels over 20 tons,2026-11-13
+kr-2025-e-10-2-fishing-crew-pathway,KR,Laos,E-10-2 fishing crew pathway,bilateral,agreement,2025-06,,Crew of vessels beyond coastal waters,2026-11-13
