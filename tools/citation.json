@@ -1,7 +1,7 @@
 {
   "_comment": "Settings for the 'How to cite' blocks. Edit, then run: python3 tools/cite_blocks.py. Set 'doi' to the Zenodo concept DOI (the 'Cite all versions' DOI, e.g. 10.5281/zenodo.1234567) after the first GitHub release is archived, and 'collection_version' to the latest release tag without the leading v.",
-  "doi": "",
-  "collection_version": "",
+  "doi": "10.5281/zenodo.24389324",
+  "collection_version": "2026.11",
   "collection_title": "Migration Jurisprudence from the South: databases of migration and labor law",
   "collection_url": "https://theimr.org/databases/",
   "github": "https://github.com/pranotoiskandar-collab/compmigrationlaw",

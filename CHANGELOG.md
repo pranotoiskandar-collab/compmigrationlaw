@@ -8,7 +8,9 @@ The databases keep their own version numbers. Each release lists them, so a
 reader can match a citation such as "Court Decisions, version 0.1" to the
 archived files.
 
-## v2026.11 (first archived release, not yet published)
+## v2026.11 (20 November 2026)
+
+Zenodo: https://doi.org/10.5281/zenodo.24389325 (this release); https://doi.org/10.5281/zenodo.24389324 (all versions).
 
 | Database | Page | Version | Last updated |
 |---|---|---|---|
