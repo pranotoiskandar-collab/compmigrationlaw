@@ -1,0 +1,73 @@
+# Weekly source watch: reads the official sources in source-watch/sources.json
+# and opens (or updates) a pull request from the branch "source-watch" listing
+# new decisions, laws and ratification changes. See source-watch/README.md.
+name: Source watch
+on:
+  schedule:
+    - cron: "17 1 * * 1"   # Mondays 01:17 UTC (08:17 in Jakarta)
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - source-watch/sources.json
+      - tools/watch/**
+      - .github/workflows/source-watch.yml
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: source-watch-${{ github.event_name }}
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      LAWGO_OC: ${{ secrets.LAWGO_OC }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Try every source (pull request test, nothing is saved)
+        if: github.event_name == 'pull_request'
+        run: |
+          python3 tools/watch/watch.py --dry-run | tee watch.log
+          { echo '## Source watch test'; echo '```'; cat watch.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Read the sources
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "IMR source watch"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git fetch origin source-watch 2>/dev/null; then
+            git checkout -B source-watch origin/source-watch
+            git merge --no-edit origin/main || { git merge --abort; git checkout -B source-watch origin/main; }
+          else
+            git checkout -B source-watch origin/main
+          fi
+          python3 tools/watch/watch.py
+          cat source-watch/reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+          git add source-watch
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          git commit -q -m "Source watch $(date -u +%F)"
+          git push origin source-watch
+
+      - name: Open or update the pull request
+        if: github.event_name != 'pull_request'
+        run: |
+          body="$(cat source-watch/reports/latest.md)
+
+          ---
+          Opened by the weekly source watch (.github/workflows/source-watch.yml). Rows in source-watch/found/ are search hits from official sites, not read decisions: someone has to read and confirm each one before it moves into data/<database>/incoming/."
+          if [ -n "$(git diff --name-only origin/main...source-watch)" ]; then
+            if [ -n "$(gh pr list --head source-watch --state open --json number -q '.[].number')" ]; then
+              gh pr edit source-watch --body "$body"
+            else
+              gh pr create --base main --head source-watch --title "Source watch: new items to check" --body "$body" \
+                || echo "::warning::Could not open the pull request. In the repository settings, Actions > General > Workflow permissions, tick 'Allow GitHub Actions to create and approve pull requests'. The results are on the branch source-watch."
+            fi
+          fi
