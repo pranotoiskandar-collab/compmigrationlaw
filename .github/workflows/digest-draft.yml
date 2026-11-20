@@ -1,0 +1,33 @@
+name: Put the monthly email in Buttondown (draft only)
+# When a new issue reaches main, create a Buttondown DRAFT from newsletter/<YYYY-MM>/email.html.
+# It never sends: a person opens Buttondown and presses Send.
+# Needs the repository secret BUTTONDOWN_API_KEY; without it this does nothing.
+on:
+  push:
+    branches: [main]
+    paths: ["newsletter/*/email.html"]
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month to put in Buttondown as a draft, as YYYY-MM"
+        required: true
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Create the draft
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          MONTHS="${{ github.event.inputs.month }}"
+          if [ -z "$MONTHS" ]; then
+            MONTHS=$(git diff --name-only --diff-filter=AM "${{ github.event.before }}" "${{ github.sha }}" -- 'newsletter/*/email.html' | cut -d/ -f2 | sort -u)
+          fi
+          if [ -z "$MONTHS" ]; then echo "No new issue in this push."; exit 0; fi
+          python3 tools/digest/buttondown_draft.py $MONTHS
