@@ -534,7 +534,7 @@ window.OC = {
     {s:"PK", title:"Emigration Ordinance 1979", orig:"", year:"1979", amended:"", type:"statute", topic:"Promoters, Protectors of Emigrants, offenses", url:"https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-cZ%2BU-sg-jjjjjjjjjjjjj", link:"text"},
     {s:"PK", title:"Emigration Rules 1979", orig:"", year:"1979", amended:"2025", type:"regulation", topic:"Registration, fees, insurance, minimum age for women in domestic work", url:"https://beoe.gov.pk/", link:"db"},
     {s:"PK", title:"National Emigration and Welfare Policy for Overseas Pakistanis", orig:"", year:"2020", amended:"", type:"policy", topic:"Welfare, skills, reintegration", url:"https://ophrd.gov.pk/", link:"db"},
-    {s:"PK", title:"Prevention of Trafficking in Persons Act 2018", orig:"", year:"2018", amended:"", type:"statute", topic:"Trafficking", url:"https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Nob50%3D-sg-jjjjjjjjjjjjj", link:"text"}
+    {s:"PK", title:"Prevention of Trafficking in Persons Act 2018", orig:"", year:"2018", amended:"", type:"statute", topic:"Trafficking", url:"https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Nob50%3D-sg-jjjjjjjjjjjjj", link:"text"},
     {s:"PK", title:"Prevention of Smuggling of Migrants Act 2018", orig:"", year:"2018", amended:"", type:"statute", topic:"Migrant smuggling (added 2026-11-20, unverified)", url:"https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Nob5Y%3D-sg-jjjjjjjjjjjjj", link:"text"},
   ],
 

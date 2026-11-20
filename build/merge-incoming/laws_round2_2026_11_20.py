@@ -276,6 +276,8 @@ for r in inc:
     a = next(i for i, ln in enumerate(lines) if ln.strip() == "laws: [")
     b = next(i for i in range(a, len(lines)) if lines[i].strip() == "],")
     last = max((i for i in range(a, b) if lines[i].lstrip().startswith("{s:" + json.dumps(x["s"]))), default=b - 1)
+    if not lines[last].rstrip().endswith(","):  # previous last entry of the array had no comma
+        lines[last] = lines[last].rstrip() + ","
     lines.insert(last + 1, js); ocjs = "\n".join(lines)
 order_s = []
 for r in OC:
