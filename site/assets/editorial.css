@@ -1,19 +1,19 @@
 /* IMR shared masthead, model F (chosen by oto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
    Same fonts (Figtree, Figtree) and Puncak green palette. Loaded after notebook.css on every page.
    Selectors use .ed-navrow>nav, not nav[aria-label="Main"], because lang.js translates aria-label in Indonesian. */
-header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #C8BCB1!important;font-family:'Figtree',system-ui,sans-serif;color:#2E2116}
+header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #B2C7BC!important;font-family:'Figtree',system-ui,sans-serif;color:#172D24}
 .ed-mast .ed-in{max-width:1180px;margin:0 auto;padding:10px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px}
-.ed-brand{display:flex;align-items:center;gap:12px;color:#2E2116!important;text-decoration:none!important}
-.ed-brand i{display:block;width:36px;height:36px;background:#8F5E12;color:#FFFFFF;font:700 15px/36px 'Figtree',system-ui,sans-serif;text-align:center;font-style:normal;letter-spacing:0}
+.ed-brand{display:flex;align-items:center;gap:12px;color:#172D24!important;text-decoration:none!important}
+.ed-brand i{display:block;width:36px;height:36px;background:#1E6B4A;color:#FFFFFF;font:700 15px/36px 'Figtree',system-ui,sans-serif;text-align:center;font-style:normal;letter-spacing:0}
 .ed-brand b{display:block;font-size:19px;line-height:1.15;letter-spacing:-.01em;font-weight:700}
-.ed-brand small{display:block;font:500 11px/1.3 'Figtree',ui-monospace,monospace;color:#5B4A3C;letter-spacing:.06em;text-transform:uppercase}
+.ed-brand small{display:block;font:500 11px/1.3 'Figtree',ui-monospace,monospace;color:#3D5A4D;letter-spacing:.06em;text-transform:uppercase}
 .ed-navrow>nav{display:flex!important;flex-wrap:wrap;align-items:center;gap:0 20px!important;font-size:14.5px}
-.ed-navrow>nav>a,.ed-navrow>nav>details>summary{display:block;padding:10px 0!important;color:#2E2116!important;text-decoration:none;font-weight:600}
-.ed-navrow>nav>a:hover,.ed-navrow>nav>details>summary:hover{color:#8F5E12!important}
-.ed-navrow>nav>a.cta-clinic{background:#8F5E12!important;color:#FFFFFF!important;padding:8px 14px!important;border-radius:0!important}
-.ed-navrow>nav>a.cta-clinic:hover{background:#6B450B!important;color:#FFFFFF!important}
-.ed-navrow>nav .imr-lang{color:#2E2116}
-.ed-mast .nav .menu{text-align:left;border:1px solid #2E2116!important;border-top:3px solid #8F5E12!important;background:#FFFFFF!important;box-shadow:0 10px 24px rgba(46,33,22,.12)}
+.ed-navrow>nav>a,.ed-navrow>nav>details>summary{display:block;padding:10px 0!important;color:#172D24!important;text-decoration:none;font-weight:600}
+.ed-navrow>nav>a:hover,.ed-navrow>nav>details>summary:hover{color:#1E6B4A!important}
+.ed-navrow>nav>a.cta-clinic{background:#1E6B4A!important;color:#FFFFFF!important;padding:8px 14px!important;border-radius:0!important}
+.ed-navrow>nav>a.cta-clinic:hover{background:#134A33!important;color:#FFFFFF!important}
+.ed-navrow>nav .imr-lang{color:#172D24}
+.ed-mast .nav .menu{text-align:left;border:1px solid #172D24!important;border-top:3px solid #1E6B4A!important;background:#FFFFFF!important;box-shadow:0 10px 24px rgba(23,45,36,.12)}
 .ed-mast .nav .menu a{font-weight:400}
 .imr-hd.ed-mast{margin-top:0!important}
 @media (max-width:720px){
@@ -41,14 +41,14 @@ header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #C8BCB1!impo
  .ed-brand{flex:1;min-width:0}
  .ed-brand b{font-size:17px}
  .ed-brand small{font-size:10px;letter-spacing:.04em}
- .ed-burger{display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;border:1px solid #2E2116;color:#2E2116;font:600 14px 'Figtree',system-ui,sans-serif;padding:8px 12px;cursor:pointer;border-radius:0}
- .ed-burger span,.ed-burger span::before,.ed-burger span::after{display:block;width:16px;height:2px;background:#2E2116;position:relative;content:""}
+ .ed-burger{display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;border:1px solid #172D24;color:#172D24;font:600 14px 'Figtree',system-ui,sans-serif;padding:8px 12px;cursor:pointer;border-radius:0}
+ .ed-burger span,.ed-burger span::before,.ed-burger span::after{display:block;width:16px;height:2px;background:#172D24;position:relative;content:""}
  .ed-burger span::before{position:absolute;top:-5px}.ed-burger span::after{position:absolute;top:5px}
  .ed-open .ed-burger span{background:transparent}.ed-open .ed-burger span::before{top:0;transform:rotate(45deg)}.ed-open .ed-burger span::after{top:0;transform:rotate(-45deg)}
- .ed-burger:focus-visible{outline:3px solid #8F5E12;outline-offset:2px}
+ .ed-burger:focus-visible{outline:3px solid #1E6B4A;outline-offset:2px}
  .ed-navrow{flex-basis:100%}
  .ed-mast:not(.ed-open) .ed-navrow>nav>details,.ed-mast:not(.ed-open) .ed-navrow>nav>a:not(.cta-clinic){display:none!important}
- .ed-open .ed-navrow>nav>details,.ed-open .ed-navrow>nav>a:not(.cta-clinic){flex-basis:100%;border-top:1px solid #E6E1DC}
+ .ed-open .ed-navrow>nav>details,.ed-open .ed-navrow>nav>a:not(.cta-clinic){flex-basis:100%;border-top:1px solid #DCE6E0}
  .ed-open .ed-navrow>nav{padding-bottom:8px}
  .ed-open .ed-mast .nav .menu,.ed-open .nav .menu{position:static!important;box-shadow:none;max-height:none!important;margin:0 0 8px}
  .ed-navrow>nav>a.cta-clinic{margin:4px 0}

@@ -304,7 +304,7 @@
 
   /* ---------- styles ---------- */
   const CSS = `
-.imrst{white-space:normal;--st-fg:var(--fg,#2E2116);--st-mute:var(--muted,#5B4A3C);--st-rule:var(--rule,#C8BCB1);--st-bg:var(--surface,#FFFFFF);--st-acc:#8F5E12;--st-blue:var(--t4,#256ABF);--st-chip:var(--chip,#E5DED8);font-size:15px;line-height:1.55;color:var(--st-fg)}
+.imrst{white-space:normal;--st-fg:var(--fg,#172D24);--st-mute:var(--muted,#3D5A4D);--st-rule:var(--rule,#B2C7BC);--st-bg:var(--surface,#FFFFFF);--st-acc:#1E6B4A;--st-blue:var(--t4,#256ABF);--st-chip:var(--chip,#D8E5DE);font-size:15px;line-height:1.55;color:var(--st-fg)}
 .imrst *{box-sizing:border-box}
 .st-modes{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--st-fg);width:max-content;max-width:100%}
 .st-modes button{font:inherit;font-size:14px;font-weight:600;min-height:44px;padding:0 16px;border:0;border-right:1px solid var(--st-fg);background:transparent;color:var(--st-fg);cursor:pointer}
@@ -708,7 +708,7 @@
       return `<div class="st-chart">${chart}${tbl}${tooSmall ? `<p class="st-note">${l.small}</p>` : ""}</div>${plain("", paras, N, dropped, methodBox(meth), hyp)}`;
     }
     function kmChart(groups, maxT) {
-      const l = L(), lft = 52, r = 12, t = 10, b = 40, H = 320, cols = ["var(--st-fg)", "var(--st-acc)", "var(--st-blue)", "#7A6A2E", "#88796B"], dash = ["", "", "", "6 3", "2 3"];
+      const l = L(), lft = 52, r = 12, t = 10, b = 40, H = 320, cols = ["var(--st-fg)", "var(--st-acc)", "var(--st-blue)", "#7A6A2E", "#6C877A"], dash = ["", "", "", "6 3", "2 3"];
       const X = v => lft + v / maxT * (W - lft - r), Y = v => H - b - v * (H - t - b);
       let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(l.ratd)}">`;
       niceTicks(0, maxT, 6).forEach(v => { if (v > maxT) return; s += `<line x1="${X(v)}" x2="${X(v)}" y1="${t}" y2="${H - b}" stroke="var(--st-rule)"/><text x="${X(v)}" y="${H - b + 14}" text-anchor="middle">${fn(v, 0)}</text>`; });

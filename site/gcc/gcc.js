@@ -141,7 +141,7 @@
     $("g-codebook").innerHTML = "<thead><tr><th>" + t("Feature", "Fitur") + "</th><th>" + t("Coding rule", "Aturan pengodean") + "</th><th>" + t("Primary source", "Sumber utama") + "</th></tr></thead><tbody>" + C.map(function (r) { return "<tr><td><b>" + esc(r[0]) + "</b></td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") + "</tbody>";
     var y = (G.updated || "2026").slice(0, 4), apa = "Institute for Migrant Rights. (" + y + "). Migrant workers in the Gulf states: Migration and labor laws in comparison (Version " + G.version + ", " + (G.updated || "") + ") [Data set and overview]. https://theimr.org/gcc/";
     var bib = "@misc{imr_gulf_" + y + ",\n  author = {{Institute for Migrant Rights}},\n  title = {Migrant Workers in the Gulf States, Migration Jurisprudence from the South},\n  year = {" + y + "},\n  version = {" + G.version + "},\n  note = {Data set and overview, updated " + (G.updated || "") + "},\n  url = {https://theimr.org/gcc/}\n}";
-    $("g-cite").innerHTML = '<p style="margin:0 0 10px">' + esc(apa) + '</p><pre class="g-mono" style="white-space:pre-wrap;background:#F4F1EE;border:1px solid #C8BCB1;padding:12px;margin:0">' + esc(bib) + '</pre><div class="g-btns" style="margin-top:10px"><button type="button" class="g-btn" id="g-cp1">' + t("Copy citation", "Salin sitasi") + '</button><button type="button" class="g-btn" id="g-cp2">' + t("Copy BibTeX", "Salin BibTeX") + "</button></div>";
+    $("g-cite").innerHTML = '<p style="margin:0 0 10px">' + esc(apa) + '</p><pre class="g-mono" style="white-space:pre-wrap;background:#EEF4F0;border:1px solid #B2C7BC;padding:12px;margin:0">' + esc(bib) + '</pre><div class="g-btns" style="margin-top:10px"><button type="button" class="g-btn" id="g-cp1">' + t("Copy citation", "Salin sitasi") + '</button><button type="button" class="g-btn" id="g-cp2">' + t("Copy BibTeX", "Salin BibTeX") + "</button></div>";
     var cp = function (txt, b) { try { navigator.clipboard.writeText(txt); b.textContent = t("Copied", "Tersalin"); } catch (e) {} };
     $("g-cp1").onclick = function () { cp(apa, this); }; $("g-cp2").onclick = function () { cp(bib.replace(/\\n/g, "\n"), this); };
   }
@@ -182,7 +182,7 @@
 
   /* ---------- IV. people and jobs ---------- */
   var curD = "SA";
-  var COL = ["#2E2116", "#8F5E12", "#6B7A63", "#C79A16", "#2F3657", "#8A9285", "#D98C7F", "#5B4A3C"];
+  var COL = ["#172D24", "#1E6B4A", "#6B7A63", "#C79A16", "#2F3657", "#8A9285", "#D98C7F", "#3D5A4D"];
   function demog() {
     stateBtns($("g-dstates"), curD, function (k) { curD = k; demog(); });
     var D = (G.demog || {})[curD];
@@ -191,13 +191,13 @@
     if (D.pop) {
       var tot = D.pop.nat + D.pop.non, sh = 100 * D.pop.non / tot;
       h += '<h3 style="font-weight:500;font-size:22px;margin:6px 0 0">' + t("Population", "Penduduk") + ' <span class="g-mono">' + esc(D.pop.year) + "</span></h3>" +
-        '<div class="g-stack" role="img" aria-label="' + sh.toFixed(0) + '%"><span style="width:' + (100 - sh) + '%;background:#6B7A63"></span><span style="width:' + sh + '%;background:#8F5E12"></span></div>' +
+        '<div class="g-stack" role="img" aria-label="' + sh.toFixed(0) + '%"><span style="width:' + (100 - sh) + '%;background:#6B7A63"></span><span style="width:' + sh + '%;background:#1E6B4A"></span></div>' +
         '<p class="g-mono" style="margin:0">' + t("Nationals", "Warga negara") + " " + fmt(D.pop.nat) + " · " + t("Non-nationals", "Bukan warga negara") + " " + fmt(D.pop.non) + " (" + sh.toFixed(0) + "%)</p>";
     }
     if (D.sex) {
       var fs = 100 * D.sex.f / (D.sex.m + D.sex.f);
       h += '<h3 style="font-weight:500;font-size:22px;margin:22px 0 0">' + esc(t(D.sex.base, D.sex.base_id)) + ' <span class="g-mono">' + esc(D.sex.year) + "</span></h3>" +
-        '<div class="g-stack"><span style="width:' + (100 - fs) + '%;background:#2E2116"></span><span style="width:' + fs + '%;background:#C79A16"></span></div>' +
+        '<div class="g-stack"><span style="width:' + (100 - fs) + '%;background:#172D24"></span><span style="width:' + fs + '%;background:#C79A16"></span></div>' +
         '<p class="g-mono" style="margin:0">' + t("Men", "Laki-laki") + " " + (100 - fs).toFixed(0) + "% · " + t("Women", "Perempuan") + " " + fs.toFixed(0) + "%</p>";
     }
     if (D.sectors && D.sectors.length) {

@@ -21,7 +21,7 @@
   var isC = function (d) { return d.status === "C"; };
   var OUT = {unknown: ["Outcome to be checked", "Hasil perlu diperiksa"], won: ["Worker side won", "Pihak pekerja menang"], lost: ["Worker side lost", "Pihak pekerja kalah"], advisory: ["Advisory: rights affirmed", "Nasihat: hak ditegaskan"]};
   var FOL = {carried: ["Carried out", "Dilaksanakan"], partly: ["Partly carried out", "Sebagian dilaksanakan"], not: ["Not carried out", "Tidak dilaksanakan"], unknown: ["Not yet known", "Belum diketahui"], none: ["Nothing to carry out", "Tidak ada yang perlu dilaksanakan"]};
-  var FOLC = {carried: "#6B450B", partly: "#8B7C6E", not: "#C8BCB1", unknown: "#FFFFFF", none: "#E8E2DC"};
+  var FOLC = {carried: "#134A33", partly: "#6F8A7D", not: "#B2C7BC", unknown: "#FFFFFF", none: "#DCE8E1"};
   var SIT = [
     ["wages", "Wages not paid", "Upah tidak dibayar"], ["passport", "Passport kept by employer", "Paspor ditahan majikan"],
     ["employer", "Could not change employer", "Tidak bisa pindah majikan"], ["dismissed", "Dismissed or sent home", "Dipecat atau dipulangkan"],
