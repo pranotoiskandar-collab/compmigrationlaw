@@ -8,7 +8,7 @@ for root, _, files in os.walk(SITE):
     for f in files:
         if not f.endswith('.html'): continue
         p = os.path.join(root, f)
-        if '/embed/' in p: skip += 1; continue  # embeddable widgets on partner sites stay bare
+        if '/embed/' in p or f == 'offline.html': skip += 1; continue  # embeddable widgets on partner sites stay bare
         s = open(p, encoding='utf-8').read()
         if TAG in s or '</head>' not in s: skip += 1; continue
         i = s.index('</head>'); s = s[:i] + SNIP + s[i:]

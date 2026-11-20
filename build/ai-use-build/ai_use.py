@@ -114,7 +114,7 @@ MINI = ('<footer class="imr-foot-ai" style="background: #172D24; color: #BCCFC5;
         '<a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></div></footer>\n')
 nf = nm = 0
 for p in glob.glob(SITE + '/**/*.html', recursive=True):
-    if '/embed/' in p: continue  # embeddable widgets on partner sites stay bare
+    if '/embed/' in p or p.endswith('/offline.html'): continue  # embeddable widgets on partner sites stay bare
     s = rd(p)
     if 'imr-foot-ai' in s: continue
     if '</footer>' in s:
