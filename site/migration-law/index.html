@@ -25,22 +25,22 @@
 <style>
 /* Layout: an app shell like a treaty database. Header, a sticky tab bar, one view at a time, and a side drawer for country and instrument profiles. */
 :root{
-  --bg:#EEE9E5; --surface:#FFFFFF; --fg:#2E2116; --muted:#5B4A3C; --rule:#C8BCB1; --accent:#2E2116; --accent-ink:#FFFFFF; --chip:#EBE5E0;
-  --t5:#184F95; --t4:#256ABF; --t3:#3987E5; --t2:#6DA7EC; --t1:#9EC5F4; --t1ink:#2F2217;
-  --grid:#E6E0DA; --nat:#C26A1F; --pub:#7A5BC4;
-  --s0:#EBE5E0; --s1:#CDE2FB; --s2:#9EC5F4; --s3:#5598E7; --s4:#256ABF; --s5:#104281; --nodata:#D8CFC8; --land-stroke:#FFFFFF;
+  --bg:#E5EEE8; --surface:#FFFFFF; --fg:#172D24; --muted:#3D5A4D; --rule:#B2C7BC; --accent:#172D24; --accent-ink:#FFFFFF; --chip:#E0EBE6;
+  --t5:#184F95; --t4:#256ABF; --t3:#3987E5; --t2:#6DA7EC; --t1:#9EC5F4; --t1ink:#182E24;
+  --grid:#DAE6E0; --nat:#C26A1F; --pub:#7A5BC4;
+  --s0:#E0EBE6; --s1:#CDE2FB; --s2:#9EC5F4; --s3:#5598E7; --s4:#256ABF; --s5:#104281; --nodata:#C8D8D1; --land-stroke:#FFFFFF;
   --f-display:"Figtree", system-ui, sans-serif;
   --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono:"Figtree", ui-monospace, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#281C11; --surface:#2F2217; --fg:#EBE5E0; --muted:#A7998C; --rule:#443528; --accent:#C3A58B; --accent-ink:#25190F; --chip:#392B1F;
-  --t5:#CDE2FB; --t4:#9EC5F4; --t3:#6DA7EC; --t2:#3987E5; --t1:#256ABF; --t1ink:#EBE5E0; --grid:#3A2C20; --nat:#E08A3C; --pub:#A993E6;
-  --s0:#3C2E22; --s1:#184F95; --s2:#256ABF; --s3:#3987E5; --s4:#86B6EF; --s5:#CDE2FB; --nodata:#4B3C2E; --land-stroke:#2F2217; color-scheme:dark}}
+  --bg:#12271D; --surface:#182E24; --fg:#E0EBE6; --muted:#8DA69A; --rule:#294337; --accent:#8CC2A9; --accent-ink:#10241B; --chip:#20382D;
+  --t5:#CDE2FB; --t4:#9EC5F4; --t3:#6DA7EC; --t2:#3987E5; --t1:#256ABF; --t1ink:#E0EBE6; --grid:#21392E; --nat:#E08A3C; --pub:#A993E6;
+  --s0:#233B30; --s1:#184F95; --s2:#256ABF; --s3:#3987E5; --s4:#86B6EF; --s5:#CDE2FB; --nodata:#2F4A3D; --land-stroke:#182E24; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#281C11; --surface:#2F2217; --fg:#EBE5E0; --muted:#A7998C; --rule:#443528; --accent:#C3A58B; --accent-ink:#25190F; --chip:#392B1F;
-  --t5:#CDE2FB; --t4:#9EC5F4; --t3:#6DA7EC; --t2:#3987E5; --t1:#256ABF; --t1ink:#EBE5E0; --grid:#3A2C20; --nat:#E08A3C; --pub:#A993E6;
-  --s0:#3C2E22; --s1:#184F95; --s2:#256ABF; --s3:#3987E5; --s4:#86B6EF; --s5:#CDE2FB; --nodata:#4B3C2E; --land-stroke:#2F2217; color-scheme:dark}
+  --bg:#12271D; --surface:#182E24; --fg:#E0EBE6; --muted:#8DA69A; --rule:#294337; --accent:#8CC2A9; --accent-ink:#10241B; --chip:#20382D;
+  --t5:#CDE2FB; --t4:#9EC5F4; --t3:#6DA7EC; --t2:#3987E5; --t1:#256ABF; --t1ink:#E0EBE6; --grid:#21392E; --nat:#E08A3C; --pub:#A993E6;
+  --s0:#233B30; --s1:#184F95; --s2:#256ABF; --s3:#3987E5; --s4:#86B6EF; --s5:#CDE2FB; --nodata:#2F4A3D; --land-stroke:#182E24; color-scheme:dark}
 [hidden]{display:none!important}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
@@ -228,7 +228,7 @@ ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .imp-bar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--chip)}
 .imp-bar i{display:block;height:100%}
 .st{display:inline-block;font-style:normal;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
-.st.F,.imp-bar .F{background:#2F7D4A;color:#fff}.st.P,.imp-bar .P{background:#D9A21B;color:#2F2217}.st.G,.imp-bar .G{background:#8F5E12;color:#fff}.st.D,.imp-bar .D{background:#5D6FB0;color:#fff}
+.st.F,.imp-bar .F{background:#2F7D4A;color:#fff}.st.P,.imp-bar .P{background:#D9A21B;color:#182E24}.st.G,.imp-bar .G{background:#1E6B4A;color:#fff}.st.D,.imp-bar .D{background:#5D6FB0;color:#fff}
 .impcard{border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 20px}
 .impcard h4{margin:0;font-size:15px}
 .impcard .meta{grid-column:1;font-size:12.5px;color:var(--muted)}
@@ -243,7 +243,7 @@ ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .rec{border:1px solid var(--rule);background:var(--surface);border-radius:8px;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;font-size:13.5px}
 .rec .who{font-size:12px;color:var(--muted)}
 .rs{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap;align-self:start}
-.rs.done{background:#2F7D4A;color:#fff}.rs.part{background:#D9A21B;color:#2F2217}.rs.open{background:#8F5E12;color:#fff}
+.rs.done{background:#2F7D4A;color:#fff}.rs.part{background:#D9A21B;color:#182E24}.rs.open{background:#1E6B4A;color:#fff}
 .caselist{display:flex;flex-direction:column;gap:10px}
 .case .norms .fam{white-space:normal;text-align:left;max-width:100%}
 .sdg{margin-top:6px}
@@ -282,16 +282,16 @@ ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 
 <style>
 body{margin:0}
-.imr-hd{background:#EEE9E5;border-bottom:1px solid #C8BCB1;margin:-28px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 8px;font-family:'Figtree',system-ui,sans-serif;font-size:14px;color:#2E2116}
+.imr-hd{background:#E5EEE8;border-bottom:1px solid #B2C7BC;margin:-28px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 8px;font-family:'Figtree',system-ui,sans-serif;font-size:14px;color:#172D24}
 .imr-hd .in{max-width:1180px;margin:0 auto;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 28px}
-.imr-hd .brand{color:#2E2116;text-decoration:none;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.imr-hd .brand{color:#172D24;text-decoration:none;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .imr-hd nav{display:flex;flex-wrap:wrap;align-items:center;gap:2px 22px}
-.imr-hd nav a{color:#2E2116;text-decoration:none;padding:10px 0}
+.imr-hd nav a{color:#172D24;text-decoration:none;padding:10px 0}
 .imr-hd details{position:relative}
 .imr-hd summary{cursor:pointer;padding:10px 0;list-style:none;font-weight:600}
 .imr-hd summary::-webkit-details-marker{display:none}
 .imr-hd summary::after{content:" \25BE";font-size:11px}
-.imr-hd .menu{position:absolute;right:0;top:100%;z-index:40;min-width:230px;background:#E8E2DC;border:1px solid #C8BCB1;padding:6px 0}
+.imr-hd .menu{position:absolute;right:0;top:100%;z-index:40;min-width:230px;background:#DCE8E1;border:1px solid #B2C7BC;padding:6px 0}
 .imr-hd .menu a{display:block;padding:8px 16px}
 .imr-hd .menu a[aria-current]{font-weight:600}
 @media (max-width:640px){.imr-hd .menu{right:auto;left:0}}
@@ -302,7 +302,7 @@ body{margin:0}
 <link rel="stylesheet" href="/assets/editorial.css">
 </head>
 <body>
-<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#2E2116;color:#E5DED8;font-family:'Figtree',system-ui,sans-serif;font-size:14px;line-height:1.4"><div style="max-width:1120px;margin:0 auto;padding:7px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px"><q class="imr-bq" style="font-style:italic">Every man his own lawyer!</q><q class="imr-bq" style="font-style:italic" hidden>Whatever is not in the code of laws, ought not to be law.</q><a href="/databases/#bentham" style="color:#E3C58F;text-underline-offset:3px">Jeremy Bentham, Legislator of the World</a><button type="button" class="imr-bnext" style="margin-left:auto;background:none;border:0;padding:0;color:#E3C58F;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Another maxim</button></div></nav>
+<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#172D24;color:#D8E5DE;font-family:'Figtree',system-ui,sans-serif;font-size:14px;line-height:1.4"><div style="max-width:1120px;margin:0 auto;padding:7px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px"><q class="imr-bq" style="font-style:italic">Every man his own lawyer!</q><q class="imr-bq" style="font-style:italic" hidden>Whatever is not in the code of laws, ought not to be law.</q><a href="/databases/#bentham" style="color:#9CC9B2;text-underline-offset:3px">Jeremy Bentham, Legislator of the World</a><button type="button" class="imr-bnext" style="margin-left:auto;background:none;border:0;padding:0;color:#9CC9B2;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Another maxim</button></div></nav>
 <script>(function(){var b=document.currentScript.previousElementSibling,q=b.querySelectorAll(".imr-bq"),i=0;function sw(){q[i].hidden=true;i=(i+1)%q.length;q[i].hidden=false;}b.querySelector(".imr-bnext").addEventListener("click",sw);if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))setInterval(function(){if(!b.matches(":hover"))sw();},12000);})();</script>
 <header class="imr-hd ed-mast">
 <div class="ed-in">
@@ -317,14 +317,14 @@ body{margin:0}
 <a href="/legal-clinic/trafficking-check/">Could this be trafficking? Self-check</a>
 <a href="/legal-clinic/how-we-work/">How the Clinic works</a>
 <a href="/legal-help/">Find free legal help</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Arguments that work</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Arguments that work</span>
 <a href="/legal-clinic/what-works/">What works where</a>
 <a href="/court-decisions/#argument">Arguments courts accepted or rejected</a>
 <a href="/court-decisions/#compare">Compare courts and countries</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Where to take a case</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Where to take a case</span>
 <a href="/gcc/mechanisms/">Gulf States</a>
 <a href="/east-asia/mechanisms/">East Asia</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">From research to practice</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">From research to practice</span>
 <a href="/gcc/#help">Gulf States</a>
 <a href="/east-asia/#help">East Asia</a>
 <a href="/southeast-asia/#help">Southeast Asia</a>
@@ -338,19 +338,19 @@ body{margin:0}
 <summary>Migration Jurisprudence from the South</summary>
 <div class="menu" style="max-height:80vh;overflow-y:auto">
 <a href="/databases/" style="font-weight:600">Overview</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Law across tiers</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Law across tiers</span>
 <a href="/migration-law/" aria-current="page">Migration Law Atlas</a>
 <a href="/migration-law/?lens=farm" style="padding-left:28px">Farmworker law view</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Destination states</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Destination states</span>
 <a href="/gcc/">Gulf States</a>
 <a href="/east-asia/">East Asia</a>
 <a href="/southeast-asia/">Southeast Asia</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Origin states</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Origin states</span>
 <a href="/countries-of-origin/">Countries of Origin</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Themes</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Themes</span>
 <a href="/domestic-workers/">Migrant Domestic Workers</a>
 <a href="/government-hate-speech/">Government Hate Speech</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Courts</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Courts</span>
 <a href="/court-decisions/">Court Decisions</a>
 </div>
 </details>
@@ -990,7 +990,7 @@ body{margin:0}
 
   /* ---------- styles ---------- */
   const CSS = `
-.imrst{white-space:normal;--st-fg:var(--fg,#2E2116);--st-mute:var(--muted,#5B4A3C);--st-rule:var(--rule,#C8BCB1);--st-bg:var(--surface,#FFFFFF);--st-acc:#8F5E12;--st-blue:var(--t4,#256ABF);--st-chip:var(--chip,#E5DED8);font-size:15px;line-height:1.55;color:var(--st-fg)}
+.imrst{white-space:normal;--st-fg:var(--fg,#172D24);--st-mute:var(--muted,#3D5A4D);--st-rule:var(--rule,#B2C7BC);--st-bg:var(--surface,#FFFFFF);--st-acc:#1E6B4A;--st-blue:var(--t4,#256ABF);--st-chip:var(--chip,#D8E5DE);font-size:15px;line-height:1.55;color:var(--st-fg)}
 .imrst *{box-sizing:border-box}
 .st-modes{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--st-fg);width:max-content;max-width:100%}
 .st-modes button{font:inherit;font-size:14px;font-weight:600;min-height:44px;padding:0 16px;border:0;border-right:1px solid var(--st-fg);background:transparent;color:var(--st-fg);cursor:pointer}
@@ -1394,7 +1394,7 @@ body{margin:0}
       return `<div class="st-chart">${chart}${tbl}${tooSmall ? `<p class="st-note">${l.small}</p>` : ""}</div>${plain("", paras, N, dropped, methodBox(meth), hyp)}`;
     }
     function kmChart(groups, maxT) {
-      const l = L(), lft = 52, r = 12, t = 10, b = 40, H = 320, cols = ["var(--st-fg)", "var(--st-acc)", "var(--st-blue)", "#7A6A2E", "#88796B"], dash = ["", "", "", "6 3", "2 3"];
+      const l = L(), lft = 52, r = 12, t = 10, b = 40, H = 320, cols = ["var(--st-fg)", "var(--st-acc)", "var(--st-blue)", "#7A6A2E", "#6C877A"], dash = ["", "", "", "6 3", "2 3"];
       const X = v => lft + v / maxT * (W - lft - r), Y = v => H - b - v * (H - t - b);
       let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(l.ratd)}">`;
       niceTicks(0, maxT, 6).forEach(v => { if (v > maxT) return; s += `<line x1="${X(v)}" x2="${X(v)}" y1="${t}" y2="${H - b}" stroke="var(--st-rule)"/><text x="${X(v)}" y="${H - b + 14}" text-anchor="middle">${fn(v, 0)}</text>`; });
@@ -2280,7 +2280,7 @@ const BRIEF_ID={"Country brief":"Ringkasan negara","Prepared by the Institute fo
 function briefDoc(name, lang){
   const t=s=>lang==="id"&&BRIEF_ID[s]?BRIEF_ID[s]:s, d=countryRec(name), rb=RBY[name]||{}, im=IMPL[name], rs=RECS[name]||[], cs=CASES.filter(c=>ctyName(c[3])===name), nat=natFor(name);
   const IMPT={F:t("Implemented"),P:t("Partly"),G:t("Gap"),D:t("Law without ratification")}, RT={done:t("Implemented"),part:t("Partly"),open:t("Not implemented")};
-  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${esc(t("Country brief"))}: ${esc(name)}</title><style>body{font:11pt/1.45 Georgia,serif;color:#2F2217;max-width:780px;margin:24px auto;padding:0 20px}h1{font-size:22pt;margin:0}h2{font:600 10pt Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5E442E;border-bottom:1px solid #CEC4BB;padding-bottom:3px;margin:18px 0 6px}table{width:100%;border-collapse:collapse;font-size:9.5pt}td,th{border-bottom:1px solid #E3DCD6;padding:4px 6px;text-align:left;vertical-align:top}.k{font:600 9pt Arial,sans-serif;color:#5F4E40}.foot{margin-top:20px;font:9pt Arial,sans-serif;color:#5F4E40}@media print{body{margin:0}}</style></head><body>
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${esc(t("Country brief"))}: ${esc(name)}</title><style>body{font:11pt/1.45 Georgia,serif;color:#182E24;max-width:780px;margin:24px auto;padding:0 20px}h1{font-size:22pt;margin:0}h2{font:600 10pt Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#2F5D48;border-bottom:1px solid #BBCEC5;padding-bottom:3px;margin:18px 0 6px}table{width:100%;border-collapse:collapse;font-size:9.5pt}td,th{border-bottom:1px solid #D6E3DC;padding:4px 6px;text-align:left;vertical-align:top}.k{font:600 9pt Arial,sans-serif;color:#415E50}.foot{margin-top:20px;font:9pt Arial,sans-serif;color:#415E50}@media print{body{margin:0}}</style></head><body>
 <p class="k">${esc(t("Country brief"))} · ${esc(t("Prepared by the Institute for Migrant Rights"))} · ${new Date().toISOString().slice(0,10)}</p><h1>${esc(name)}</h1>
 <p>${esc(t("Overall score"))}: <b>${d.sc.toFixed(1)}</b>${d.rk?` (${esc(t("rank"))} ${d.rk}/${C.length})`:""}</p>
 <h2>${esc(t("Ratification of 13 farm-relevant treaties"))}</h2><table><tr><th>${esc(t("Instrument"))}</th><th>${esc(t("Status"))}</th></tr>${BASKET.map(k=>{const r=rb[k];return `<tr><td>${k} ${esc(INAME[k])}</td><td>${r?esc(r[0]||"")+" "+esc(t(STATUS[r[1]])):esc(t("Not ratified"))}</td></tr>`;}).join("")}</table>
@@ -2647,7 +2647,7 @@ route();
 
 <script src="/assets/lang.js" defer></script>
 <script src="/assets/plain.js" defer></script>
-<section id="imr-research" style="max-width:1120px;margin:0 auto;padding:28px 24px 36px;font-family:'Figtree',system-ui,sans-serif;color:#2E2116;border-top:1px solid #C8BCB1"><h2 style="font-size:18px;margin:0 0 8px">For researchers</h2><p style="margin:0 0 8px;max-width:760px">This atlas is built for empirical legal scholarship and socio-legal research on migration and the rights of migrant workers, as well as for advocacy.</p><p style="margin:0 0 8px;max-width:760px">The coded variables support statistical analysis in law: cross-national comparison, regression and event-history designs, and law and economics questions such as how recruitment fees, wage protection and limits on changing employer affect migrant workers. The data can be downloaded for replication.</p><p style="margin:0;max-width:760px;font-size:13px;color:#5B4A3C">Keywords: treaty ratification; international law compliance; legal indicators; regional integration; legal origins; empirical legal studies; empirical legal scholarship; quantitative legal research; statistical analysis in law; law and economics; law and economics of migration; comparative law; socio-legal studies; legal pluralism; migration law; labor migration; migrant workers’ rights; human rights law; access to justice; Global South; Asia; Africa; Middle East; Latin America; Indonesia; open data; replication data.</p></section>
-<footer class="imr-foot-ai" style="background: #2E2116; color: #CFC5BC; padding: 20px 24px; font-family: 'Figtree', system-ui, sans-serif; font-size: 14px"><div style="max-width: 1120px; margin: 0 auto"><span>Institute for Migrant Rights</span> · <a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></div></footer>
+<section id="imr-research" style="max-width:1120px;margin:0 auto;padding:28px 24px 36px;font-family:'Figtree',system-ui,sans-serif;color:#172D24;border-top:1px solid #B2C7BC"><h2 style="font-size:18px;margin:0 0 8px">For researchers</h2><p style="margin:0 0 8px;max-width:760px">This atlas is built for empirical legal scholarship and socio-legal research on migration and the rights of migrant workers, as well as for advocacy.</p><p style="margin:0 0 8px;max-width:760px">The coded variables support statistical analysis in law: cross-national comparison, regression and event-history designs, and law and economics questions such as how recruitment fees, wage protection and limits on changing employer affect migrant workers. The data can be downloaded for replication.</p><p style="margin:0;max-width:760px;font-size:13px;color:#3D5A4D">Keywords: treaty ratification; international law compliance; legal indicators; regional integration; legal origins; empirical legal studies; empirical legal scholarship; quantitative legal research; statistical analysis in law; law and economics; law and economics of migration; comparative law; socio-legal studies; legal pluralism; migration law; labor migration; migrant workers’ rights; human rights law; access to justice; Global South; Asia; Africa; Middle East; Latin America; Indonesia; open data; replication data.</p></section>
+<footer class="imr-foot-ai" style="background: #172D24; color: #BCCFC5; padding: 20px 24px; font-family: 'Figtree', system-ui, sans-serif; font-size: 14px"><div style="max-width: 1120px; margin: 0 auto"><span>Institute for Migrant Rights</span> · <a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></div></footer>
 </body>
 </html>

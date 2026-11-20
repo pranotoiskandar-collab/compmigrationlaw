@@ -11,7 +11,8 @@ This repository holds the website of the **Institute for Migrant Rights** ([thei
 | `data/<database>/incoming/` | New material sent in for review. Not offered as a download until an editor merges it into the database. |
 | `data/<database>/sources/` | The working files each database was built from: raw portal listings, verification worksheets, ratification extracts and editors' notes. Kept for transparency; not offered as downloads on the site. |
 | `build/` | The scripts that generated the pages and data. Kept for the record; they were written for the IMR working folder and refer to its paths. |
-| `tools/` | `copy_data.py` copies `data/` into the site at publish time; `press_subdomain.py` prepares the IMR Press pages for press.theimr.org; `check_csv.py` checks that every CSV is well formed. |
+| `tools/` | `copy_data.py` copies `data/` into the site at publish time; `press_subdomain.py` prepares the IMR Press pages for press.theimr.org; `check_csv.py` checks that every CSV is well formed; `checks/` holds the checks every pull request runs ([how they work](tools/checks/README.md)); `watch/` reads official sources each week. |
+| `source-watch/` | Weekly source watch: the official sources it reads and the new decisions, laws and ratification changes it finds ([how it works](source-watch/README.md)). |
 
 When Netlify publishes, `data/<database>/<file>` appears at `https://theimr.org/<database>/data/<file>`. For example, `data/court-decisions/decisions.csv` is served at `https://theimr.org/court-decisions/data/decisions.csv`.
 

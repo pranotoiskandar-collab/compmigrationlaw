@@ -1,0 +1,12 @@
+variable,definition,values
+key,"Identifier of the law: dataset|country or group|title, as in site/features/laws.json",text
+dataset,Database the law comes from,gcc | east-asia | southeast-asia | countries-of-origin | domestic-workers | migration-law
+country,ISO 3166 code of the country; for international and regional instruments the group named in the source database,code or text
+title,Title of the law as in the source database,text
+line1,"First line of the plain Indonesian summary: what kind of instrument, where and when (generated from the database row)",text (Indonesian)
+line2,"Second line: what it does for workers, in simple Indonesian, written from the notes in the database row (not from the legal text)",text (Indonesian)
+check,"yes = a person should compare the summary with the official text first, because the database row itself marks something as unverified or the text has not been read",yes | no
+check_reason,Why the summary is flagged,text (Indonesian)
+reviewed_by,"Name or initials of the person who checked the summary against the official text; empty = not yet checked",text
+written,Date the summary was written,YYYY-MM-DD
+method,How the summary was written,text

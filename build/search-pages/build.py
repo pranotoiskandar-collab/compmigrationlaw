@@ -298,7 +298,7 @@ def rat_cell(c, inst, L):
     code = r['status_code']
     st = {'F': ('in force', 'berlaku'), 'W': ('withdrawn or denounced', 'ditarik atau didenonsiasi'), 'D': ('denounced', 'didenonsiasi'),
           'S': ('signed only', 'hanya ditandatangani'), 'P': ('party', 'pihak') if inst.startswith('IC') else ('ratified, not yet in force', 'diratifikasi, belum berlaku')}.get(code, (r['status'], r['status']))[0 if L == 'en' else 1]
-    return '<td>%s (%s)</td>' % (E(r['date'][-4:]), E(st))
+    return '<td>%s (%s)</td>' % (E((re.search(r'\d{4}', r['date']) or [''])[0]), E(st))
 
 def treaty_table(cs, L):
     if any(c in ('HK', 'MO', 'TW') for c in cs) and len(cs) == 1:
