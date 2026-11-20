@@ -7,7 +7,7 @@ visitor sees them, after the official-text checks and recodes). OUTDIR gets:
   answer-key.csv                our codes for the same cells (keep away from the coder)
 The sample is stratified: 2 cells per worker group (East Asia, Southeast Asia) or per country
 (Countries of Origin), drawn with a fixed seed so it can be rebuilt. Promised on the pages as
-"Second coding: planned (Cohen's kappa)"; started 18 November 2026 at oto's request.
+"Second coding: planned (Cohen's kappa)"; started 18 November 2026 at Pranoto's request.
 """
 import csv, json, random, sys
 from pathlib import Path

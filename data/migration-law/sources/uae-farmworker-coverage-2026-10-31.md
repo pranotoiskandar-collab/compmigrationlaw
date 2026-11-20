@@ -16,7 +16,7 @@ Sources:
 - MOHRE PDF of Decree-Law 33/2021 with its amendments: https://www.mohre.gov.ae/en/laws-and-regulations/Laws.aspx
 - u.ae page on domestic helpers: https://u.ae/en/information-and-services/jobs/workplace-regulations/domestic-helpers
 
-The raw files are on oto's OneDrive in IMR-data/morning-2026-10-31/:
+The raw files are on Pranoto's OneDrive in IMR-data/morning-2026-10-31/:
 - uae_check.txt
 - safehabitus.csv (96 pairs)
 - faolex.csv (209 FAO rural employment policy records)

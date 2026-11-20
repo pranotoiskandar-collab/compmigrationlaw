@@ -3,7 +3,7 @@
 Usage: python3 build/merge-incoming/other_asia_from_incoming.py SITE OUT.json
 Reads   build/other-asia-cases/imr_candidates.json (398 candidates: Philippines 275, Nepal 110, Singapore 13)
 Writes  OUT.json with {"new": [...], "links": {}} for patch_site_decisions.py.
-Singapore and the Philippines were merged first (PR 6). On 18 November 2026 oto asked for the Nepal cases
+Singapore and the Philippines were merged first (PR 6). On 18 November 2026 Pranoto asked for the Nepal cases
 too, as origin-state jurisprudence (no South Asia page), so all three are kept now; cases already merged
 are skipped as duplicates, which makes the script safe to rerun.
 Candidates already on the site (same citation or same source link) are skipped.

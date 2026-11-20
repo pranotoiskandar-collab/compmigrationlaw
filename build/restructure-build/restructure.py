@@ -1,4 +1,4 @@
-# Site restructure (oto, 2026-11-13): "Migration Jurisprudence from the South" is the umbrella name of the whole
+# Site restructure (Pranoto, 2026-11-13): "Migration Jurisprudence from the South" is the umbrella name of the whole
 # databases project. One menu replaces "Projects" + "Migration and Labor Laws in Comparison", in five groups:
 #   Law across tiers (Migration Law Atlas, incl. farmworker view) / Destination states (Gulf, East Asia, Southeast Asia)
 #   / Origin states (Countries of Origin) / Themes (Domestic Workers, Government Hate Speech) / Courts (Court Decisions)
@@ -118,7 +118,7 @@ for p in files('.html'):
     if s != o: wr(p, s); n += 1
 print('menu updated on', n, 'pages')
 
-# ---------- 6b. Legal Clinic menu: the practical parts of the site (oto, 2026-11-13) ----------
+# ---------- 6b. Legal Clinic menu: the practical parts of the site (Pranoto, 2026-11-13) ----------
 def ex(u): return os.path.exists(SITE + u.split('#')[0] + ('index.html' if u.split('#')[0].endswith('/') else ''))
 CLIN = [(None, [('/legal-clinic/', 'Prepare a rights communication'), ('/legal-clinic/trafficking-check/', 'Could this be trafficking? Self-check'), ('/legal-clinic/how-we-work/', 'How the Clinic works'), ('/legal-help/', 'Find free legal help')]),
         ('Arguments that work', [('/legal-clinic/what-works/', 'What works where'), ('/court-decisions/#argument', 'Arguments courts accepted or rejected'), ('/court-decisions/#compare', 'Compare courts and countries')]),
@@ -218,7 +218,7 @@ subprocess.run([sys.executable, HERE + '/landing.py', SITE], check=True)
 p = SITE + '/databases/index.html'; s = rd(p)
 s = NEW.sub(lambda m: menu('/databases/'), s, count=1); s = COLD.sub(lambda m: cmenu(None), s, count=1); s = CNEW.sub(lambda m: cmenu(None), s, count=1); wr(p, s)
 
-# ---------- 10b. Bentham banner on every page + citations on /databases/#bentham (oto, 2026-11-13) ----------
+# ---------- 10b. Bentham banner on every page + citations on /databases/#bentham (Pranoto, 2026-11-13) ----------
 Q1 = 'Every man his own lawyer!'
 Q2 = 'Whatever is not in the code of laws, ought not to be law.'
 BAN = ('<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#172D24;color:#D8E5DE;font-family:\'Familjen Grotesk\',system-ui,sans-serif;font-size:14px;line-height:1.4">'

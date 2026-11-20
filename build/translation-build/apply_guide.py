@@ -1,11 +1,11 @@
-"""Apply oto's Indonesian translation guide (doc "Terjemahan situs IMR: beranda (draf)",
+"""Apply Pranoto's Indonesian translation guide (doc "Terjemahan situs IMR: beranda (draf)",
 https://claude.ai/artifact/GFGq8WG3Rcm4zVppXAWMkF) to theimr.org.
 
 Usage: python3 apply_guide.py SITE_DIR [more files or dirs ...]
 Idempotent. Run it LAST, after restructure.py / other builds (they still emit older wording),
 then ai_use.py and analytics.py as usual.
 
-Fixed terms that override the guide draft (oto, 2026-10-31): hate speech = "ucapan kebencian"
+Fixed terms that override the guide draft (Pranoto, 2026-10-31): hate speech = "ucapan kebencian"
 (never "ujaran"), impunity = "kekebalan", nativist = "pro-pribumi", "suara" only = vote.
 """
 import json, os, re, sys
@@ -22,7 +22,7 @@ OVERRIDES = {
  "People": "Tim",
  "Contact": "Hubungi Kami",
  "Contact · Institute for Migrant Rights": "Hubungi Kami · Institute for Migrant Rights",
- "Write to us": "Hubungi Kami",  # contact page heading (oto 2026-11-15: the contact page is "Hubungi Kami")
+ "Write to us": "Hubungi Kami",  # contact page heading (Pranoto 2026-11-15: the contact page is "Hubungi Kami")
  "An initiative trying to be of some use to people who cross borders to work.":
    "Sebuah prakarsa yang berusaha sedikit berguna bagi mereka yang melintasi batas negara untuk bekerja.",
  "Were your rights violated? Prepare a rights communication to a UN or regional human rights body.":
@@ -71,7 +71,7 @@ REMOVE = ["Relational self and farmworker law reform: the case of Indonesia"]
 #    Every pattern is Indonesian-only, so English text is never touched.
 NOUN_BEFORE = r"(melindungi|bagi|menyebut|melarang|membedakan|dan|pelindungan|perlindungan|Bolehkah|bahwa|tempat)"
 RULES = [
- # oto's fixed terms (guard)
+ # Pranoto's fixed terms (guard)
  (r"\bujaran\b", "ucapan"), (r"\bUjaran\b", "Ucapan"),
  (r"\bimpunitas\b", "kekebalan"),
  # rights communication -> pengaduan hak (lay wording; technical UN terms such as
@@ -94,12 +94,12 @@ RULES = [
  (r"\bPekerja Pertanian\b", "Buruh Tani"),
  # non-citizens as a noun -> orang yang bukan warga negara
  (NOUN_BEFORE + r" bukan warga negara\b", r"\1 orang yang bukan warga negara"),
- # tiers: global/regional -> tingkat dunia/kawasan (oto 2026-11-15: kawasan)
+ # tiers: global/regional -> tingkat dunia/kawasan (Pranoto 2026-11-15: kawasan)
  (r"\b([Hh]ukum(?: migrasi)?) global, regional,? dan nasional\b", r"\1 tingkat dunia, kawasan, dan nasional"),
  (r"\b([Hh]ukum(?: migrasi)?) tingkat dunia, wilayah, dan nasional\b", r"\1 tingkat dunia, kawasan, dan nasional"),
  (r"\bbadan hak asasi manusia PBB atau regional\b", "badan hak asasi manusia PBB atau badan HAM kawasan"),
  (r"\bbadan HAM tingkat wilayah\b", "badan HAM kawasan"),
- # oto 2026-11-15: regional = "kawasan" everywhere (Indonesian text only; see fix_regional)
+ # Pranoto 2026-11-15: regional = "kawasan" everywhere (Indonesian text only; see fix_regional)
  (r'"Regional", "Regional"\]', '"Regional", "Kawasan"]'),
  (r"\bsatu penjelajah\b", "satu alat jelajah"),
  (r"\bdi penjelajah\b", "di alat jelajah"),

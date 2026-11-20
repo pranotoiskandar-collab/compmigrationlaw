@@ -1,4 +1,4 @@
-/* IMR shared masthead, model F (chosen by oto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
+/* IMR shared masthead, model F (chosen by Pranoto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
    Same fonts (Familjen Grotesk, JetBrains Mono) and Puncak green palette. Loaded after notebook.css on every page.
    Selectors use .ed-navrow>nav, not nav[aria-label="Main"], because lang.js translates aria-label in Indonesian. */
 header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #B2C7BC!important;font-family:'Familjen Grotesk',system-ui,sans-serif;color:#172D24}

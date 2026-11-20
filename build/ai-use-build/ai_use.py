@@ -1,5 +1,5 @@
 # 2026-11-13: paths updated for the site restructure (hate-speech-voting -> government-hate-speech/elections; /atlas/ page retired).
-# Adds the "How we use AI" statement to theimr.org (oto, 2026-11-03).
+# Adds the "How we use AI" statement to theimr.org (Pranoto, 2026-11-03).
 # 1. writes /ai-use/index.html (EN, with ID strings in /assets/lang.js)
 # 2. adds a "How we use AI" link to the footer of every page (a small footer where a page has none)
 # 3. adds a one-line "Use of AI" note to the method/data section of each database page

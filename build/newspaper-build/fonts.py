@@ -1,4 +1,4 @@
-# Site font swap (oto 2026-11-17: "less robotic"). Idempotent. Run LAST, after responsive.py.
+# Site font swap (Pranoto 2026-11-17: "less robotic"). Idempotent. Run LAST, after responsive.py.
 # Usage: python3 fonts.py SITE A|B|C
 #  A = Familjen Grotesk everywhere (typewriter labels removed); B = Figtree; C = Source Sans 3.
 import os, re, sys

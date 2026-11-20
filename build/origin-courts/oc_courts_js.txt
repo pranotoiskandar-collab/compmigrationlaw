@@ -16,7 +16,7 @@
       Object.keys(BY).map(function (k) { return '<button type="button" class="g-btn" data-occby="' + k + '" aria-pressed="' + (S.by === k) + '">' + esc(t(BY[k])) + "</button>"; }).join("") + "</div>";
     if (S.by === "sit") h += '<div class="g-btns" role="group" aria-label="' + (l ? "Urutan" : "Order") + '">' + Object.keys(ORD).map(function (k) { return '<button type="button" class="g-btn" data-occord="' + k + '" aria-pressed="' + (S.ord === k) + '">' + esc(t(ORD[k])) + "</button>"; }).join("") + "</div>";
     h += '<div class="g-scroll"><table class="g-t"><thead><tr><th>' + esc(t(BY[S.by])) + "</th>" + cs.map(function (c) { return "<th>" + esc(t(c[1])) + "</th>"; }).join("") + "</tr></thead><tbody>";
-    // most decisions first (oto, 18 November 2026); the stages keep the order of the journey
+    // most decisions first (Pranoto, 18 November 2026); the stages keep the order of the journey
     var rs = rows().map(function (r, i) { return {r: r, i: i, counts: cs.map(function (c) { return C.d.filter(function (d) { return d[2] === c[0] && has(d, r[0]); }).length; })}; });
     rs.forEach(function (x) { x.n = x.counts.reduce(function (a, b) { return a + b; }, 0); x.k = x.counts.filter(function (v) { return v > 0; }).length; });
     var rank = function (k) { var i = C.rank.indexOf(k); return i < 0 ? 99 : i; };

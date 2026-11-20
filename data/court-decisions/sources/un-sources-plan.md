@@ -1,6 +1,6 @@
 # UN and related databases to mine for "Migration Jurisprudence from the South"
 
-*Plan prepared 11 November 2026, to run from oto's iMac (these sites are blocked from the cloud). Focus: decisions on migrant workers and other non-citizens, in states outside Europe and North America. Gulf entries: doctrinal description only.*
+*Plan prepared 11 November 2026, to run from Pranoto's iMac (these sites are blocked from the cloud). Focus: decisions on migrant workers and other non-citizens, in states outside Europe and North America. Gulf entries: doctrinal description only.*
 
 ## A. Decisions that become database entries
 
@@ -46,7 +46,7 @@ Not available: ASEAN and the Arab Charter system have no individual complaint bo
 | **IOM Key Migration Terms** (iom.int/key-migration-terms), drawn from the IOM *Glossary on Migration* (International Migration Law No. 34, 2019) | Standard definitions (migrant, migrant worker, irregular migration, smuggling, trafficking, etc.). Use to align terms in the explanatory notes and page glossaries, with citation. Blocked from the cloud; save the page or the Glossary PDF via the iMac |
 | **Arab Human Rights Committee** (League of Arab States site) | State reports and concluding observations under the Arab Charter, including the 2012–2015 compilation. Background only; keep off the Gulf pages |
 
-## E. Other case collections suggested by oto (11 November 2026)
+## E. Other case collections suggested by Pranoto (11 November 2026)
 
 | Source | Use | Priority |
 |---|---|---|

@@ -1,4 +1,4 @@
-# Builds the live homepage in model F (oto chose it 2026-11-16). Usage: python3 home_f.py SITE
+# Builds the live homepage in model F (Pranoto chose it 2026-11-16). Usage: python3 home_f.py SITE
 # Keeps the homepage's <head> (title, meta, JSON-LD, analytics) and footer; replaces header + body with model F.
 import os, re, sys, runpy, tempfile
 SITE = sys.argv[1]; HERE = os.path.dirname(os.path.abspath(__file__))

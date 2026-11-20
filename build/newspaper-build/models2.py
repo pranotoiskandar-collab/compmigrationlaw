@@ -1,4 +1,4 @@
-# Two more homepage models for oto (2026-11-16): D "Along the journey" and E "Ask the law" (unit chart + plain questions).
+# Two more homepage models for Pranoto (2026-11-16): D "Along the journey" and E "Ask the law" (unit chart + plain questions).
 # Usage: python3 models2.py SITE OUTDIR   (reuses helpers/data from models.py)
 import os, sys, runpy, json, collections, html
 SITE, OUT = sys.argv[1], sys.argv[2]

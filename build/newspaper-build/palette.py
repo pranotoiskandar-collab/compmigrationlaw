@@ -1,4 +1,4 @@
-# Colour palette swap for theimr.org (2026-11-17, oto asked for a different palette). Idempotent per palette.
+# Colour palette swap for theimr.org (2026-11-17, Pranoto asked for a different palette). Idempotent per palette.
 # Usage: python3 palette.py SITE laut|soga|navy     (or: python3 palette.py --map NAME  -> prints JSON map)
 # Every colour of the Puncak green family is moved to the new hue, keeping its lightness, so contrast stays the same.
 # Status/chart colours (yellows, reds, the won/lost greens of badges) are left alone.

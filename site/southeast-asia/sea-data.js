@@ -9,7 +9,7 @@ window.SEA = {
   updated: "13 November 2026",
   version: "1.0",
 
-  /* Cells compared with the official legal text: none yet. Check run on oto's iMac, official sites only
+  /* Cells compared with the official legal text: none yet. Check run on Pranoto's iMac, official sites only
      (lom.agc.gov.my, sso.agc.gov.sg, krisdika.go.th, ratchakitcha.soc.go.th, agc.gov.bn; ministry sites as
      official guidance); output folder IMR-data/southeast-asia-2026-11-13/. */
   checked_on: "",

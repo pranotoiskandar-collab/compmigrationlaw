@@ -1,4 +1,4 @@
-/* IMR shared masthead, model F (chosen by oto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
+/* IMR shared masthead, model F (chosen by Pranoto 2026-11-16): compact white bar, IMR square + name left, menu and Clinic button.
    Same fonts (Figtree, Figtree) and Puncak green palette. Loaded after notebook.css on every page.
    Selectors use .ed-navrow>nav, not nav[aria-label="Main"], because lang.js translates aria-label in Indonesian. */
 header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #B2C7BC!important;font-family:'Figtree',system-ui,sans-serif;color:#172D24}
@@ -61,7 +61,7 @@ header.ed-mast{background:#FFFFFF!important;border-bottom:1px solid #B2C7BC!impo
  .stop>.dot{align-self:start}.stop .what{min-height:0}.stop .go{align-self:start}
 }
 
-/* calmer phone layout (responsive.py, oto 2026-11-17: phone site too crowded) */
+/* calmer phone layout (responsive.py, Pranoto 2026-11-17: phone site too crowded) */
 @media (max-width:600px){
  .imr-bentham .imr-bnext,.imr-bentham a{display:none!important}
  .imr-bentham>div{padding:6px 16px!important;font-size:13px}
