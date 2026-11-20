@@ -80,6 +80,14 @@ VENDOR = {
 SCRIPT_SRC = re.compile(r'(<script\b[^>]*?\bsrc=")([^"?#]+\.js)(")')
 CSS_HREF = re.compile(r'(<link\b[^>]*?\bhref=")([^"?#]+\.css)(")')
 
+# Site icon (tea hills, 2026-11-20): scalable tab icon, install manifest and phone bar colour.
+# Pages already link favicon.ico, favicon-32.png and apple-touch-icon.png themselves.
+ICON_HEAD = (
+    '<link rel="icon" type="image/svg+xml" href="/favicon.svg">'
+    '<link rel="manifest" href="/site.webmanifest">'
+)
+THEME_COLOR = '<meta name="theme-color" content="#1E6B4A">'
+
 HEAD_EXTRA = (
     '<style id="imr-a11y">'
     ".imr-skip{position:absolute;left:8px;top:-80px;z-index:1000;background:#fff;color:#172D24;padding:12px 16px;"
@@ -292,7 +300,12 @@ def optimize(page, report):
     html, main_id = fix_main(html, report, name)
     head_end = html.find("</head>")
     if head_end > 0:
-        html = html[:head_end] + HEAD_EXTRA + html[head_end:]
+        extra = HEAD_EXTRA
+        if "site.webmanifest" not in html:
+            extra = ICON_HEAD + extra
+        if 'name="theme-color"' not in html:
+            extra = THEME_COLOR + extra
+        html = html[:head_end] + extra + html[head_end:]
     m = re.search(r"<body\b[^>]*>", html)
     if m and main_id:
         html = html[: m.end()] + SKIP % main_id + html[m.end():]

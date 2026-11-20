@@ -136,7 +136,7 @@ def main():
         encoding="utf-8")
     (PRESS / "robots.txt").write_text(
         "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SUB, encoding="utf-8")
-    for icon in ("favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
+    for icon in ("favicon.ico", "favicon-32.png", "favicon.svg", "favicon-512.png", "icon-192.png", "apple-touch-icon.png", "site.webmanifest"):
         if (SITE / icon).exists():
             shutil.copy2(SITE / icon, PRESS / icon)
     print("press_subdomain: %d pages adjusted, %d press pages in press sitemap" % (pages, len(press_urls)))
