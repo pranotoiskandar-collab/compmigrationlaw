@@ -22,91 +22,91 @@
 <meta name="twitter:card" content="summary_large_image">
 <style>
 body{margin:0}
-a{color:#8F5E12}a:hover{color:#6B450B}
+a{color:#1E6B4A}a:hover{color:#134A33}
 .nav details{position:relative}
-.nav summary{cursor:pointer;padding:10px 0;list-style:none;color:#2E2116;font-weight:600}
+.nav summary{cursor:pointer;padding:10px 0;list-style:none;color:#172D24;font-weight:600}
 .nav summary::-webkit-details-marker{display:none}
 .nav summary::after{content:" \25BE";font-size:11px}
-.nav .menu{position:absolute;right:0;top:100%;z-index:5;min-width:230px;background:#E8E2DC;border:1px solid #C8BCB1;padding:6px 0}
-.nav .menu a{display:block;padding:8px 16px;color:#2E2116;text-decoration:none}
-.nav .menu a:hover,.nav .menu a[aria-current]{color:#8F5E12}
+.nav .menu{position:absolute;right:0;top:100%;z-index:5;min-width:230px;background:#DCE8E1;border:1px solid #B2C7BC;padding:6px 0}
+.nav .menu a{display:block;padding:8px 16px;color:#172D24;text-decoration:none}
+.nav .menu a:hover,.nav .menu a[aria-current]{color:#1E6B4A}
 @media (max-width:640px){.nav .menu{right:auto;left:0}}
 .g-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.g-eye{margin:0;font-family:'Figtree',monospace;font-size:13px;color:#8F5E12;letter-spacing:.04em}
+.g-eye{margin:0;font-family:'Figtree',monospace;font-size:13px;color:#1E6B4A;letter-spacing:.04em}
 .g-h1{margin:14px 0 0;font-weight:400!important;font-size:52px;line-height:1.1}
-.g-lede{margin:18px 0 0;color:#4A3B2D;max-width:780px}
+.g-lede{margin:18px 0 0;color:#2E493D;max-width:780px}
 .g-toc{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0;list-style:none}
-.g-toc a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid #2E2116;color:#2E2116;text-decoration:none;font-size:15px}
-.g-toc a:hover{background:#2E2116;color:#EEE9E5}
-.g-sec{padding:56px 0 8px;border-top:1px solid #C8BCB1;margin-top:56px}
+.g-toc a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid #172D24;color:#172D24;text-decoration:none;font-size:15px}
+.g-toc a:hover{background:#172D24;color:#E5EEE8}
+.g-sec{padding:56px 0 8px;border-top:1px solid #B2C7BC;margin-top:56px}
 .g-sec h2{margin:8px 0 6px;font-weight:400;font-size:36px;line-height:1.15}
-.g-sec .g-lead{margin:0 0 22px;color:#4A3B2D;max-width:820px}
-.g-note{font-size:15px;color:#5B4A3C;margin:12px 0 0;max-width:820px}
-.g-mono{font-family:'Figtree',monospace;font-size:13px;color:#5B4A3C}
-.g-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #2E2116;background:#F4F1EE}
+.g-sec .g-lead{margin:0 0 22px;color:#2E493D;max-width:820px}
+.g-note{font-size:15px;color:#3D5A4D;margin:12px 0 0;max-width:820px}
+.g-mono{font-family:'Figtree',monospace;font-size:13px;color:#3D5A4D}
+.g-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #172D24;background:#EEF4F0}
 table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
-.g-t th,.g-t td{padding:10px 12px;border-bottom:1px solid #D8CFC7;text-align:left;vertical-align:top}
-.g-t th{font-family:'Figtree',monospace;font-size:12px;font-weight:500;color:#5B4A3C;background:#E8E2DC;position:sticky;top:0}
+.g-t th,.g-t td{padding:10px 12px;border-bottom:1px solid #C7D8CE;text-align:left;vertical-align:top}
+.g-t th{font-family:'Figtree',monospace;font-size:12px;font-weight:500;color:#3D5A4D;background:#DCE8E1;position:sticky;top:0}
 .g-t td.c{white-space:nowrap}
 .g-pill{display:inline-block;padding:2px 9px;font-size:13px;font-weight:500;border-radius:2px;white-space:nowrap}
-.p-yes{background:#D5E6D0;color:#1F4D1A}.p-partial{background:#F2E3B8;color:#5C4400}.p-no{background:#CFE3D8;color:#6B450B}.p-unclear{background:#DDE0EA;color:#2F3657}
+.p-yes{background:#D5E6D0;color:#1F4D1A}.p-partial{background:#F2E3B8;color:#5C4400}.p-no{background:#CFE3D8;color:#134A33}.p-unclear{background:#DDE0EA;color:#2F3657}
 .g-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:10px 0 0;font-size:14px}
 .g-btns{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
-.g-btn{min-height:44px;padding:0 16px;border:1px solid #2E2116;background:transparent;font:inherit;font-size:16px;cursor:pointer;color:#2E2116}
-.g-btn[aria-pressed="true"]{background:#2E2116;color:#EEE9E5}
-.g-btn.dl{background:#2E2116;color:#EEE9E5}.g-btn.dl:hover{background:#8F5E12}
+.g-btn{min-height:44px;padding:0 16px;border:1px solid #172D24;background:transparent;font:inherit;font-size:16px;cursor:pointer;color:#172D24}
+.g-btn[aria-pressed="true"]{background:#172D24;color:#E5EEE8}
+.g-btn.dl{background:#172D24;color:#E5EEE8}.g-btn.dl:hover{background:#1E6B4A}
 .g-grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.g-card{border-top:4px solid #2E2116;padding:14px 0 0}
+.g-card{border-top:4px solid #172D24;padding:14px 0 0}
 .g-card h3{margin:0 0 8px;font-size:24px;font-weight:500}
 .g-dl{display:grid;grid-template-columns:200px 1fr;gap:8px 18px;margin:0;font-size:16px}
-.g-dl dt{font-family:'Figtree',monospace;font-size:12.5px;color:#5B4A3C;padding-top:3px}
+.g-dl dt{font-family:'Figtree',monospace;font-size:12.5px;color:#3D5A4D;padding-top:3px}
 .g-dl dd{margin:0}
 .g-acts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
-.g-acts a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:#2E2116;color:#EEE9E5;text-decoration:none;font-weight:500;font-size:16px}
-.g-acts a:hover{background:#8F5E12}
+.g-acts a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:#172D24;color:#E5EEE8;text-decoration:none;font-weight:500;font-size:16px}
+.g-acts a:hover{background:#1E6B4A}
 .g-w{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:10px 24px;margin:0 0 18px}
 .g-w label{display:block;font-size:15px}
-.g-w input[type=range]{width:100%;accent-color:#8F5E12}
-.g-w output{font-family:'Figtree',monospace;font-size:13px;color:#8F5E12}
+.g-w input[type=range]{width:100%;accent-color:#1E6B4A}
+.g-w output{font-family:'Figtree',monospace;font-size:13px;color:#1E6B4A}
 .g-bars{display:grid;gap:8px}
 .g-bar{display:grid;grid-template-columns:170px 1fr 64px;gap:12px;align-items:center;font-size:15px}
-.g-bar .tr{height:22px;background:#E3DCD6;position:relative}
-.g-bar .fl{position:absolute;left:0;top:0;bottom:0;background:#2E2116}
-.g-bar .fl.hi{background:#8F5E12}
+.g-bar .tr{height:22px;background:#D6E3DC;position:relative}
+.g-bar .fl{position:absolute;left:0;top:0;bottom:0;background:#172D24}
+.g-bar .fl.hi{background:#1E6B4A}
 .g-bar .v{font-family:'Figtree',monospace;font-size:13px;text-align:right}
 .g-tools{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 14px}
-.g-tools label{display:block;font-family:'Figtree',monospace;font-size:12.5px;color:#5B4A3C;margin-bottom:4px}
-.g-tools input,.g-tools select{width:100%;box-sizing:border-box;min-height:46px;padding:0 10px;font:inherit;font-size:16px;background:#fff;border:1px solid #2E2116;border-radius:0;color:#2E2116}
-.g-tl{list-style:none;margin:0;padding:0;border-left:2px solid #2E2116}
+.g-tools label{display:block;font-family:'Figtree',monospace;font-size:12.5px;color:#3D5A4D;margin-bottom:4px}
+.g-tools input,.g-tools select{width:100%;box-sizing:border-box;min-height:46px;padding:0 10px;font:inherit;font-size:16px;background:#fff;border:1px solid #172D24;border-radius:0;color:#172D24}
+.g-tl{list-style:none;margin:0;padding:0;border-left:2px solid #172D24}
 .g-tl li{position:relative;padding:0 0 18px 22px}
-.g-tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:#EEE9E5;border:2px solid #2E2116;border-radius:50%}
-.g-tl li.real::before{background:#2E6B27;border-color:#2E6B27}.g-tl li.partial::before{background:#C79A16;border-color:#C79A16}.g-tl li.origin::before{background:#8F5E12;border-color:#8F5E12}
-.g-tl .d{font-family:'Figtree',monospace;font-size:13px;color:#5B4A3C}
-.g-stack{display:flex;height:26px;margin:6px 0 2px;border:1px solid #2E2116}
+.g-tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:#E5EEE8;border:2px solid #172D24;border-radius:50%}
+.g-tl li.real::before{background:#2E6B27;border-color:#2E6B27}.g-tl li.partial::before{background:#C79A16;border-color:#C79A16}.g-tl li.origin::before{background:#1E6B4A;border-color:#1E6B4A}
+.g-tl .d{font-family:'Figtree',monospace;font-size:13px;color:#3D5A4D}
+.g-stack{display:flex;height:26px;margin:6px 0 2px;border:1px solid #172D24}
 .g-stack span{display:block;height:100%}
-.g-empty{padding:18px;color:#4A3B2D;background:#F4F1EE;border:1px dashed #8A9285}
+.g-empty{padding:18px;color:#2E493D;background:#EEF4F0;border:1px dashed #8A9285}
 @media print{header,footer,.g-toc,.g-sec:not(#profiles),.g-btns,.g-acts,.g-lede,.g-h1,.g-eye{display:none!important}#profiles{display:block!important;border:0;margin:0;padding:0}body{font-size:12pt}}
 @media (max-width:760px){.g-h1{font-size:38px}.g-grid2{grid-template-columns:1fr}.g-dl{grid-template-columns:1fr}.g-dl dt{padding-top:8px}.g-tools{grid-template-columns:1fr 1fr}.g-bar{grid-template-columns:110px 1fr 56px}.g-sec h2{font-size:30px}}
-.g-cell{all:unset;cursor:pointer;display:inline-block;border-radius:2px}.g-cell:focus-visible{outline:2px solid #2E2116;outline-offset:2px}.g-cell[aria-pressed="true"] .g-pill{outline:2px solid #2E2116;outline-offset:1px}
+.g-cell{all:unset;cursor:pointer;display:inline-block;border-radius:2px}.g-cell:focus-visible{outline:2px solid #172D24;outline-offset:2px}.g-cell[aria-pressed="true"] .g-pill{outline:2px solid #172D24;outline-offset:1px}
 .g-h4{margin:18px 0 4px;font-size:17px;font-weight:600}
-.g-adv{margin-top:18px;border-top:1px solid #C8BCB1}.g-adv ul{margin:4px 0 0;padding-left:22px;font-size:16px}
+.g-adv{margin-top:18px;border-top:1px solid #B2C7BC}.g-adv ul{margin:4px 0 0;padding-left:22px;font-size:16px}
 #g-cellnote{margin-top:18px}
 #g-outt,#g-atable,#g-ltable,#g-deaths{min-width:860px}#g-vglance{min-width:820px}#g-bmat{min-width:760px}
 @media (max-width:760px){#g-stats .st-out{grid-template-columns:minmax(0,1fr)}}
-.g-bench{font-family:'Figtree',monospace;font-size:11px;color:#5B4A3C;font-weight:400}
-.g-reg td{background:#E8E2DC;font-family:'Figtree',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#4A3B2D;padding:6px 12px}
-.g-dot{color:#8F5E12;font-weight:700;margin-left:3px}
-.g-ev{display:inline-block;margin-left:4px;padding:0 5px;border:1px solid #9C928A;border-radius:2px;font:500 11px/1.5 'Figtree',monospace;color:#5B4A3C;vertical-align:1px}.g-ev.p{border-color:#8F5E12;color:#8F5E12}
-.g-small{font-size:14.5px;line-height:1.45;color:#4A3B2D}.g-src{font-family:'Figtree',monospace;font-size:12px;color:#5B4A3C}
+.g-bench{font-family:'Figtree',monospace;font-size:11px;color:#3D5A4D;font-weight:400}
+.g-reg td{background:#DCE8E1;font-family:'Figtree',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#2E493D;padding:6px 12px}
+.g-dot{color:#1E6B4A;font-weight:700;margin-left:3px}
+.g-ev{display:inline-block;margin-left:4px;padding:0 5px;border:1px solid #8A9C94;border-radius:2px;font:500 11px/1.5 'Figtree',monospace;color:#3D5A4D;vertical-align:1px}.g-ev.p{border-color:#1E6B4A;color:#1E6B4A}
+.g-small{font-size:14.5px;line-height:1.45;color:#2E493D}.g-src{font-family:'Figtree',monospace;font-size:12px;color:#3D5A4D}
 .g-list{margin:4px 0 0;padding-left:20px;font-size:16px}.g-list li{margin:0 0 8px}
 .g-btn.sm{min-height:40px;font-size:15px;padding:0 12px}.g-btn:disabled{opacity:.4;cursor:not-allowed}
 .g-grid3{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:24px}
 .g-c189r{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:14px;align-items:center;margin:0 0 8px;font-size:15px}
 .g-stack .p-no{background:#FFFFFF}.g-stack span{display:flex;align-items:center;justify-content:center;font:500 12px 'Figtree',monospace}
-.g-hist{display:flex;align-items:flex-end;gap:3px;height:140px;border-bottom:1px solid #2E2116;margin:0 0 26px}
+.g-hist{display:flex;align-items:flex-end;gap:3px;height:140px;border-bottom:1px solid #172D24;margin:0 0 26px}
 .g-hcol{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
-.g-hbar{display:block;background:#8F5E12;min-height:0}.g-hlab{position:absolute;top:100%;left:0;font:400 11px 'Figtree',monospace;color:#5B4A3C;padding-top:4px}
-.g-tl li.intl::before{background:#2E2116}.g-tl li.reg::before{background:#8F5E12;border-color:#8F5E12}.g-tl li.bil::before{background:#C79A16;border-color:#C79A16}
+.g-hbar{display:block;background:#1E6B4A;min-height:0}.g-hlab{position:absolute;top:100%;left:0;font:400 11px 'Figtree',monospace;color:#3D5A4D;padding-top:4px}
+.g-tl li.intl::before{background:#172D24}.g-tl li.reg::before{background:#1E6B4A;border-color:#1E6B4A}.g-tl li.bil::before{background:#C79A16;border-color:#C79A16}
 .g-tools .wide{grid-column:span 2}
 #g-glance{min-width:1500px}#g-gorig #g-glance{min-width:900px}#g-ctable{min-width:760px}#g-itable{min-width:900px}#g-ttable{min-width:900px}
 @media (max-width:900px){.g-grid3{grid-template-columns:1fr}.g-c189r{grid-template-columns:1fr;gap:2px}.g-tools .wide{grid-column:span 2}}
@@ -119,8 +119,8 @@ table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
 <style>body{font-variant-numeric:tabular-nums}</style>
 </head>
 <body>
-<div style="background: #EEE9E5; color: #2E2116; font-family: 'Figtree', system-ui, sans-serif; font-size: 19px; line-height: 1.65">
-<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#2E2116;color:#E5DED8;font-family:'Figtree',system-ui,sans-serif;font-size:14px;line-height:1.4"><div style="max-width:1120px;margin:0 auto;padding:7px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px"><q class="imr-bq" style="font-style:italic">Every man his own lawyer!</q><q class="imr-bq" style="font-style:italic" hidden>Whatever is not in the code of laws, ought not to be law.</q><a href="/databases/#bentham" style="color:#E3C58F;text-underline-offset:3px">Jeremy Bentham, Legislator of the World</a><button type="button" class="imr-bnext" style="margin-left:auto;background:none;border:0;padding:0;color:#E3C58F;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Another maxim</button></div></nav>
+<div style="background: #E5EEE8; color: #172D24; font-family: 'Figtree', system-ui, sans-serif; font-size: 19px; line-height: 1.65">
+<nav class="imr-bentham" aria-label="Jeremy Bentham" style="background:#172D24;color:#D8E5DE;font-family:'Figtree',system-ui,sans-serif;font-size:14px;line-height:1.4"><div style="max-width:1120px;margin:0 auto;padding:7px 24px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px"><q class="imr-bq" style="font-style:italic">Every man his own lawyer!</q><q class="imr-bq" style="font-style:italic" hidden>Whatever is not in the code of laws, ought not to be law.</q><a href="/databases/#bentham" style="color:#9CC9B2;text-underline-offset:3px">Jeremy Bentham, Legislator of the World</a><button type="button" class="imr-bnext" style="margin-left:auto;background:none;border:0;padding:0;color:#9CC9B2;font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Another maxim</button></div></nav>
 <script>(function(){var b=document.currentScript.previousElementSibling,q=b.querySelectorAll(".imr-bq"),i=0;function sw(){q[i].hidden=true;i=(i+1)%q.length;q[i].hidden=false;}b.querySelector(".imr-bnext").addEventListener("click",sw);if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))setInterval(function(){if(!b.matches(":hover"))sw();},12000);})();</script>
 <header class="ed-mast">
 <div class="ed-in">
@@ -135,14 +135,14 @@ table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
 <a href="/legal-clinic/trafficking-check/">Could this be trafficking? Self-check</a>
 <a href="/legal-clinic/how-we-work/">How the Clinic works</a>
 <a href="/legal-help/">Find free legal help</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Arguments that work</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Arguments that work</span>
 <a href="/legal-clinic/what-works/">What works where</a>
 <a href="/court-decisions/#argument">Arguments courts accepted or rejected</a>
 <a href="/court-decisions/#compare">Compare courts and countries</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Where to take a case</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Where to take a case</span>
 <a href="/gcc/mechanisms/">Gulf States</a>
 <a href="/east-asia/mechanisms/">East Asia</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">From research to practice</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">From research to practice</span>
 <a href="/gcc/#help">Gulf States</a>
 <a href="/east-asia/#help">East Asia</a>
 <a href="/southeast-asia/#help">Southeast Asia</a>
@@ -156,31 +156,31 @@ table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
 <summary>Migration Jurisprudence from the South</summary>
 <div class="menu" style="max-height:80vh;overflow-y:auto">
 <a href="/databases/" style="font-weight:600">Overview</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Law across tiers</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Law across tiers</span>
 <a href="/migration-law/">Migration Law Atlas</a>
 <a href="/migration-law/?lens=farm" style="padding-left:28px">Farmworker law view</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Destination states</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Destination states</span>
 <a href="/gcc/">Gulf States</a>
 <a href="/east-asia/">East Asia</a>
 <a href="/southeast-asia/">Southeast Asia</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Origin states</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Origin states</span>
 <a href="/countries-of-origin/">Countries of Origin</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Themes</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Themes</span>
 <a href="/domestic-workers/" aria-current="page">Migrant Domestic Workers</a>
 <a href="/government-hate-speech/">Government Hate Speech</a>
-<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#5B4A3C">Courts</span>
+<span style="display:block;padding:12px 16px 2px;font:500 11px 'Figtree',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Courts</span>
 <a href="/court-decisions/">Court Decisions</a>
 </div>
 </details>
-<a href="/publications.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">Publications</a>
-<a href="/people.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">People</a>
-<a href="/contact.html" style="color: #2E2116; text-decoration: none; padding: 10px 0">Contact</a>
+<a href="/publications.html" style="color: #172D24; text-decoration: none; padding: 10px 0">Publications</a>
+<a href="/people.html" style="color: #172D24; text-decoration: none; padding: 10px 0">People</a>
+<a href="/contact.html" style="color: #172D24; text-decoration: none; padding: 10px 0">Contact</a>
 <a class="cta-clinic" href="/legal-clinic/">Submit a rights communication</a>
 </nav>
 </div>
 </div>
 </header>
-<figure class="imr-band" style="margin:0;position:relative;line-height:0;background:#E8E2DC"><img src="/images/cianjur-old/pasir-nangka-tea-fields.jpg" alt="" loading="lazy" decoding="async" width="2000" height="500" style="display:block;width:100%;height:clamp(84px,11vw,160px);object-fit:cover"><figcaption style="position:absolute;right:12px;bottom:8px;max-width:calc(100% - 24px);box-sizing:border-box;padding:3px 7px;border-radius:3px;background:rgba(46,33,22,.62);text-align:right;font:400 10.5px/1.45 'Figtree',monospace;letter-spacing:.05em;text-transform:uppercase;color:#F4F1EE"><span>Tea and dry rice fields, Pasir Nangka, c. 1920</span> · <a href="https://commons.wikimedia.org/wiki/File:Theeonderneming_Pasir_Nangka_ten_zuiden_van_Tjiandjoer_met_droge_rijstvelden_op_de_achtergrond,_KITLV_18544.tiff" rel="noopener" style="color:#F4F1EE;text-decoration:underline;text-underline-offset:2px">KITLV, CC BY 4.0</a></figcaption></figure>
+<figure class="imr-band imr-hills" aria-hidden="true" style="margin:0;position:relative;line-height:0;background:#EEF4F0"><img src="/images/puncak/hills-3.svg" alt="" decoding="async" width="2400" height="340" style="display:block;width:100%;height:clamp(96px,13vw,190px);object-fit:cover;object-position:right bottom"></figure>
 <main style="padding: 64px 0 88px">
 <div class="g-wrap">
 <p class="g-eye">MIGRATION JURISPRUDENCE FROM THE SOUTH</p>
@@ -284,7 +284,7 @@ table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
 <section class="g-sec" id="methods">
 <p class="g-eye">XI · METHOD AND CITATION</p>
 <h2>How the data was built</h2>
-<p class="imr-ai-note" style="margin:0 0 20px;max-width:820px;font-size:16px;line-height:1.55;color:#4A3B2D"><b>Use of AI:</b> AI is used to re-confirm that none of the data we use infringes intellectual property law, to test our labels and to edit summaries into plain language, which people then re-edit. <a href="/ai-use/">How we use AI</a></p>
+<p class="imr-ai-note" style="margin:0 0 20px;max-width:820px;font-size:16px;line-height:1.55;color:#2E493D"><b>Use of AI:</b> AI is used to re-confirm that none of the data we use infringes intellectual property law, to test our labels and to edit summaries into plain language, which people then re-edit. <a href="/ai-use/">How we use AI</a></p>
 <p class="g-lead">The unit of analysis is the law in force for migrant domestic workers in each jurisdiction, on paper (de jure), as of the date shown. Statutes, regulations, binding standard contracts and collective agreements are coded; practice is not. Each cell records a value, a note, the provision relied on and whether it rests on the official text (P) or on a secondary source (S). Benchmarks are the provisions of C189 for destinations and of ICRMW, CMW General Comment No. 1 and CEDAW General Recommendation No. 26 for origins. A higher value means the rule is closer to the benchmark, not that a country is a better place to work.</p>
 <div class="g-scroll" style="margin-bottom:18px"><table class="g-t" id="g-prov" data-noi18n></table></div>
 <h3 style="font-weight:500;font-size:24px;margin:24px 0 8px">Codebook: countries of destination</h3>
@@ -319,15 +319,15 @@ table.g-t{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
 <!-- imr-updates-signup -->
 <aside class="imr-updates" aria-label="Monthly updates by email" data-noi18n><style>.imr-updates{background:var(--nb-paper,#EEE9E5);border-top:1px solid var(--nb-rule,#C8BCB1);padding:22px 0;font-family:'Figtree',system-ui,sans-serif;font-size:16px;line-height:1.5;color:var(--nb-ink,#2E2116)}.imr-updates .iu-in{max-width:1120px;margin:0 auto;padding:0 24px}.imr-updates .iu-t{margin:0 0 10px}.imr-updates a{color:var(--nb-red,#8F5E12)}.imr-updates form{display:flex;flex-wrap:wrap;gap:8px;max-width:560px}.imr-updates input[type=email]{flex:1 1 220px;min-width:0;font:inherit;padding:8px 10px;border:1px solid var(--nb-rule,#C8BCB1);background:#fff}.imr-updates button{font:inherit;font-weight:600;padding:8px 16px;border:0;background:var(--nb-ink,#2E2116);color:#fff;cursor:pointer}html[lang=id] .imr-updates .iu-en{display:none}html:not([lang=id]) .imr-updates .iu-id{display:none}</style><div class="iu-in"><div class="iu-en" lang="en"><p class="iu-t"><b>Monthly email</b>: new court decisions and laws in the databases, in English and Indonesian. <a href="/updates/">See past issues</a></p><form name="database-updates" method="POST" action="/updates/thanks/" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="database-updates"><p hidden><label>Leave this empty <input name="bot-field"></label></p><input type="email" name="email" required autocomplete="email" placeholder="Your email address" aria-label="Your email address"><button type="submit">Sign up</button></form></div><div class="iu-id" lang="id"><p class="iu-t"><b>Email bulanan</b>: putusan pengadilan dan undang-undang baru dalam basis data, dalam bahasa Inggris dan Indonesia. <a href="/updates/">Lihat edisi sebelumnya</a></p><form name="database-updates-id" method="POST" action="/updates/thanks/" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="database-updates-id"><p hidden><label>Leave this empty <input name="bot-field"></label></p><input type="email" name="email" required autocomplete="email" placeholder="Alamat email anda" aria-label="Alamat email anda"><button type="submit">Daftar</button></form></div></div></aside>
 <!-- /imr-updates-signup -->
-<div class="imr-ridge" aria-hidden="true" style="line-height:0;margin:48px 0 -2px;position:relative;z-index:1"><svg viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice" style="display:block;width:100%;height:clamp(84px,11vw,170px)" focusable="false"><path fill="#D8CFC7" d="M0 128 L180 112 L330 96 L470 70 L560 44 L610 26 L640 18 L668 26 L720 46 L760 52 L800 44 L840 34 L866 30 L896 36 L940 52 L1010 72 L1120 90 L1260 104 L1440 116 L1440 170 L0 170Z"/><path fill="#9B8C7E" d="M0 140 C120 124 220 120 320 128 C420 136 470 112 560 108 C650 104 700 126 790 128 C880 130 930 108 1030 106 C1130 104 1190 126 1290 128 C1360 129 1400 124 1440 120 L1440 170 L0 170Z"/><path fill="none" stroke="#C8BCB1" stroke-width="1" opacity=".55" d="M330 140 C420 146 470 126 560 122 C650 118 700 138 790 140 M960 130 C1030 120 1130 118 1220 136"/><path fill="#2E2116" d="M0 156 C160 144 300 142 440 150 C580 158 700 140 840 142 C980 144 1100 158 1240 154 C1330 151 1390 146 1440 144 L1440 170 L0 170Z"/></svg></div>
-<section id="imr-research" style="max-width:1120px;margin:0 auto;padding:28px 24px 36px;font-family:'Figtree',system-ui,sans-serif;color:#2E2116;border-top:1px solid #C8BCB1"><h2 style="font-size:18px;margin:0 0 8px">For researchers</h2><p style="margin:0 0 8px;max-width:760px">This comparison is built for empirical legal scholarship and socio-legal research on migration and the rights of migrant domestic workers, as well as for advocacy.</p><p style="margin:0 0 8px;max-width:760px">The coded variables support statistical analysis in law: cross-national comparison, regression and event-history designs, and law and economics questions such as how coverage by labor law, recruitment fees and limits on changing employer relate to the conditions of migrant domestic workers. The data can be downloaded for replication.</p><p style="margin:0;max-width:760px;font-size:13px;color:#5B4A3C">Keywords: migrant domestic workers; domestic work; ILO C189; kafala; live-in care work; recruitment fees; bilateral labor agreements; empirical legal studies; empirical legal scholarship; quantitative legal research; statistical analysis in law; law and economics; law and economics of migration; comparative law; socio-legal studies; legal pluralism; migration law; labor migration; migrant workers’ rights; human rights law; access to justice; Global South; Asia; Africa; Middle East; Latin America; Indonesia; open data; replication data.</p></section>
-<footer style="background: #2E2116; color: #E5DED8; padding: 56px 0 44px">
+<div class="imr-ridge" aria-hidden="true" style="line-height:0;margin:48px 0 -2px;position:relative;z-index:1"><svg viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice" style="display:block;width:100%;height:clamp(84px,11vw,170px)" focusable="false"><path fill="#C7D8CE" d="M0 128 L180 112 L330 96 L470 70 L560 44 L610 26 L640 18 L668 26 L720 46 L760 52 L800 44 L840 34 L866 30 L896 36 L940 52 L1010 72 L1120 90 L1260 104 L1440 116 L1440 170 L0 170Z"/><path fill="#7F9A8C" d="M0 140 C120 124 220 120 320 128 C420 136 470 112 560 108 C650 104 700 126 790 128 C880 130 930 108 1030 106 C1130 104 1190 126 1290 128 C1360 129 1400 124 1440 120 L1440 170 L0 170Z"/><path fill="none" stroke="#B2C7BC" stroke-width="1" opacity=".55" d="M330 140 C420 146 470 126 560 122 C650 118 700 138 790 140 M960 130 C1030 120 1130 118 1220 136"/><path fill="#172D24" d="M0 156 C160 144 300 142 440 150 C580 158 700 140 840 142 C980 144 1100 158 1240 154 C1330 151 1390 146 1440 144 L1440 170 L0 170Z"/></svg></div>
+<section id="imr-research" style="max-width:1120px;margin:0 auto;padding:28px 24px 36px;font-family:'Figtree',system-ui,sans-serif;color:#172D24;border-top:1px solid #B2C7BC"><h2 style="font-size:18px;margin:0 0 8px">For researchers</h2><p style="margin:0 0 8px;max-width:760px">This comparison is built for empirical legal scholarship and socio-legal research on migration and the rights of migrant domestic workers, as well as for advocacy.</p><p style="margin:0 0 8px;max-width:760px">The coded variables support statistical analysis in law: cross-national comparison, regression and event-history designs, and law and economics questions such as how coverage by labor law, recruitment fees and limits on changing employer relate to the conditions of migrant domestic workers. The data can be downloaded for replication.</p><p style="margin:0;max-width:760px;font-size:13px;color:#3D5A4D">Keywords: migrant domestic workers; domestic work; ILO C189; kafala; live-in care work; recruitment fees; bilateral labor agreements; empirical legal studies; empirical legal scholarship; quantitative legal research; statistical analysis in law; law and economics; law and economics of migration; comparative law; socio-legal studies; legal pluralism; migration law; labor migration; migrant workers’ rights; human rights law; access to justice; Global South; Asia; Africa; Middle East; Latin America; Indonesia; open data; replication data.</p></section>
+<footer style="background: #172D24; color: #D8E5DE; padding: 56px 0 44px">
 <div style="max-width: 1120px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px,100%),1fr)); gap: 28px; font-family: 'Figtree', sans-serif; font-size: 16px">
-<div><p style="margin: 0; font-family: 'Figtree', system-ui, sans-serif; font-size: 26px; color: #FFFFFF">Institute for Migrant Rights</p><p style="margin: 6px 0 0; color: #CFC5BC">and IMR Press</p></div>
+<div><p style="margin: 0; font-family: 'Figtree', system-ui, sans-serif; font-size: 26px; color: #FFFFFF">Institute for Migrant Rights</p><p style="margin: 6px 0 0; color: #BCCFC5">and IMR Press</p></div>
 <p style="margin: 0">Jl. Amalia Rubini 35, Sayang<br>Cianjur, Jawa Barat 43213<br>Indonesia</p>
 <p style="margin: 0"><a href="mailto:secretariat@theimr.org" style="color: #FFFFFF">secretariat@theimr.org</a><br>+62 263 271 769<br>+62 263 271 284</p>
 </div>
-<div class="imr-foot-ai" style="max-width: 1120px; margin: 32px auto 0; padding: 0 24px; font-family: 'Figtree', sans-serif; font-size: 14px"><p style="margin: 0; padding-top: 16px; border-top: 1px solid #4A3B2D; color: #CFC5BC"><a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></p></div>
+<div class="imr-foot-ai" style="max-width: 1120px; margin: 32px auto 0; padding: 0 24px; font-family: 'Figtree', sans-serif; font-size: 14px"><p style="margin: 0; padding-top: 16px; border-top: 1px solid #2E493D; color: #BCCFC5"><a href="/ai-use/" style="color: #FFFFFF">How we use AI</a></p></div>
 </footer>
 </div>
 <script>

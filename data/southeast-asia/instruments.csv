@@ -1,34 +1,34 @@
-﻿s,partner,title,level,nature,signed,in_force,scope
-ASEAN,ASEAN,ASEAN Declaration on the Protection and Promotion of the Rights of Migrant Workers (Cebu Declaration),regional,declaration,2007-01-13,,Non-binding; obligations of receiving and sending states; mandate for a regional instrument
-ASEAN,ASEAN,ASEAN Consensus on the Protection and Promotion of the Rights of Migrant Workers,regional,declaration,2017-11-14,,Non-binding; fundamental and specific rights of migrant workers and family members; covers documented workers; subject to national laws
-ASEAN,ASEAN,"ASEAN Convention against Trafficking in Persons, Especially Women and Children (ACTIP)",regional,treaty,2015-11-21,2017-03-08,"Binding; criminalization, protection of victims, cooperation"
-ASEAN,ASEAN,ASEAN Human Rights Declaration,regional,declaration,2012-11-18,,"Non-binding; general rights, including just and favorable conditions of work"
-ASEAN,ASEAN,ASEAN Declaration on the Placement and Protection of Migrant Fishers,regional,declaration,2023-05-10,,"Non-binding; recruitment, decent work and protection of migrant fishers"
-ASEAN,ASEAN,ASEAN Declaration on the Protection of Migrant Workers and Family Members in Crisis Situations,regional,declaration,2023-05-10,,"Non-binding; protection in crisis, repatriation, data"
-ASEAN,ASEAN,ASEAN Guidelines on Effective Return and Reintegration of Migrant Workers,regional,declaration,2020,,Non-binding guidance; return and reintegration
-ASEAN,ASEAN,ASEAN Forum on Migrant Labour (annual tripartite forum),regional,declaration,2008,,Annual recommendations; tripartite with civil society
-MY,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2009,2009,Accession
-MY,ILO,Protocol of 2014 to the Forced Labour Convention (P29),international,treaty,2022-03-21,2023-03-21,Ratified 21 March 2022 (NORMLEX)
-MY,ILO,"Migration for Employment Convention (C97), Sabah only",international,treaty,1964-03-03,1964,Territorial limit: Sabah; Annexes I to III excluded (NORMLEX)
-SG,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2015,2015,Accession
-TH,ILO,Protocol of 2014 to the Forced Labour Convention (P29),international,treaty,2018-06-04,2019-06-04,Ratified 4 June 2018 (NORMLEX)
-TH,ILO,Work in Fishing Convention (C188),international,treaty,2019-01-30,2020-01-30,First ratification in Asia; implemented by the Work in Fishing Act B.E. 2562
-TH,UN,ICCPR and ICESCR,international,treaty,1996 / 1999,,Accession
-TH,European Union,"EU IUU 'yellow card' (2015, lifted January 2019)",market,listing,2015-04,2019-01,Prompted the 2014–2019 fisheries labor reforms
-TH,United States,US Department of Labor list of goods produced by forced labor: shrimp and fish (TVPRA),market,listing,,,Listing; check the current edition
-MY,United States,US Customs Withhold Release Orders on palm oil and rubber-glove producers,market,listing,2020,,"Several orders since 2020, some modified after remediation; check current status"
-MY,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Ban on products made with forced labor; applies from December 2027
-TH,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Ban on products made with forced labor; applies from December 2027
-MY,Indonesia,"MOU on the recruitment, placement and protection of Indonesian domestic workers",bilateral,mou,2022-04-01,,One Channel System; agreed wage; costs borne by the employer
-MY,Indonesia,MOU on the recruitment and placement of Indonesian workers in the plantation sector,bilateral,mou,,,To confirm date and status
-MY,Bangladesh,MOU on the recruitment of workers,bilateral,mou,2021-12,,Recruitment from Bangladesh
-MY,Nepal,"MOU on the recruitment, employment and repatriation of workers",bilateral,mou,2018-10-29,,Employer pays recruitment costs
-MY,Philippines,MOU on the recruitment of domestic workers (expired; renewal discussed),bilateral,mou,,,To confirm status
-MY,Cambodia,MOU on the recruitment and employment of Cambodian domestic workers,bilateral,mou,2015,,To confirm status
-TH,Myanmar,MOU on cooperation in the employment of workers,bilateral,mou,2003,,Revised 2016; basis of the MOU system
-TH,Cambodia,MOU on cooperation in the employment of workers,bilateral,mou,2003,,Revised 2015
-TH,Laos,MOU on employment cooperation,bilateral,mou,2002,,Revised 2016
-TH,Vietnam,MOU on labor cooperation,bilateral,mou,2015,,Construction and fisheries
-SG,—,No bilateral labor agreements; recruitment is regulated unilaterally through work pass conditions,bilateral,agreement,,,Singapore relies on domestic rules rather than bilateral memoranda
-BN,Philippines,MOU on labor cooperation,bilateral,mou,,,To confirm date and status
-BN,Indonesia,MOU on the placement and protection of Indonesian workers,bilateral,mou,,,To confirm date and status
+id,s,partner,title,level,nature,signed,in_force,scope,last_checked
+asean-2007-asean-declaration-on-the-protection-and,ASEAN,ASEAN,ASEAN Declaration on the Protection and Promotion of the Rights of Migrant Workers (Cebu Declaration),regional,declaration,2007-01-13,,Non-binding; obligations of receiving and sending states; mandate for a regional instrument,2026-11-13
+asean-2017-asean-consensus-on-the-protection-and-pr,ASEAN,ASEAN,ASEAN Consensus on the Protection and Promotion of the Rights of Migrant Workers,regional,declaration,2017-11-14,,Non-binding; fundamental and specific rights of migrant workers and family members; covers documented workers; subject to national laws,2026-11-13
+asean-2015-asean-convention-against-trafficking-in,ASEAN,ASEAN,"ASEAN Convention against Trafficking in Persons, Especially Women and Children (ACTIP)",regional,treaty,2015-11-21,2017-03-08,"Binding; criminalization, protection of victims, cooperation",2026-11-13
+asean-2012-asean-human-rights-declaration,ASEAN,ASEAN,ASEAN Human Rights Declaration,regional,declaration,2012-11-18,,"Non-binding; general rights, including just and favorable conditions of work",2026-11-13
+asean-2023-asean-declaration-on-the-placement-and-p,ASEAN,ASEAN,ASEAN Declaration on the Placement and Protection of Migrant Fishers,regional,declaration,2023-05-10,,"Non-binding; recruitment, decent work and protection of migrant fishers",2026-11-13
+asean-2023-asean-declaration-on-the-protection-of-m,ASEAN,ASEAN,ASEAN Declaration on the Protection of Migrant Workers and Family Members in Crisis Situations,regional,declaration,2023-05-10,,"Non-binding; protection in crisis, repatriation, data",2026-11-13
+asean-2020-asean-guidelines-on-effective-return-and,ASEAN,ASEAN,ASEAN Guidelines on Effective Return and Reintegration of Migrant Workers,regional,declaration,2020,,Non-binding guidance; return and reintegration,2026-11-13
+asean-2008-asean-forum-on-migrant-labour-annual-tri,ASEAN,ASEAN,ASEAN Forum on Migrant Labour (annual tripartite forum),regional,declaration,2008,,Annual recommendations; tripartite with civil society,2026-11-13
+my-2009-trafficking-in-persons-protocol-palermo,MY,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2009,2009,Accession,2026-11-13
+my-2022-protocol-of-2014-to-the-forced-labour-co,MY,ILO,Protocol of 2014 to the Forced Labour Convention (P29),international,treaty,2022-03-21,2023-03-21,Ratified 21 March 2022 (NORMLEX),2026-11-13
+my-1964-migration-for-employment-convention-c97,MY,ILO,"Migration for Employment Convention (C97), Sabah only",international,treaty,1964-03-03,1964,Territorial limit: Sabah; Annexes I to III excluded (NORMLEX),2026-11-13
+sg-2015-trafficking-in-persons-protocol-palermo,SG,UN,Trafficking in Persons Protocol (Palermo),international,treaty,2015,2015,Accession,2026-11-13
+th-2018-protocol-of-2014-to-the-forced-labour-co,TH,ILO,Protocol of 2014 to the Forced Labour Convention (P29),international,treaty,2018-06-04,2019-06-04,Ratified 4 June 2018 (NORMLEX),2026-11-13
+th-2019-work-in-fishing-convention-c188,TH,ILO,Work in Fishing Convention (C188),international,treaty,2019-01-30,2020-01-30,First ratification in Asia; implemented by the Work in Fishing Act B.E. 2562,2026-11-13
+th-1996-iccpr-and-icescr,TH,UN,ICCPR and ICESCR,international,treaty,1996 / 1999,,Accession,2026-11-13
+th-2015-eu-iuu-yellow-card-2015-lifted-january-2,TH,European Union,"EU IUU 'yellow card' (2015, lifted January 2019)",market,listing,2015-04,2019-01,Prompted the 2014–2019 fisheries labor reforms,2026-11-13
+th-nd-us-department-of-labor-list-of-goods-pro,TH,United States,US Department of Labor list of goods produced by forced labor: shrimp and fish (TVPRA),market,listing,,,Listing; check the current edition,2026-11-13
+my-2020-us-customs-withhold-release-orders-on-pa,MY,United States,US Customs Withhold Release Orders on palm oil and rubber-glove producers,market,listing,2020,,"Several orders since 2020, some modified after remediation; check current status",2026-11-13
+my-2024-eu-forced-labour-regulation-2024-3015,MY,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Ban on products made with forced labor; applies from December 2027,2026-11-13
+th-2024-eu-forced-labour-regulation-2024-3015,TH,European Union,EU Forced Labour Regulation (2024/3015),market,measure,2024,2027-12,Ban on products made with forced labor; applies from December 2027,2026-11-13
+my-2022-mou-on-the-recruitment-placement-and-pro,MY,Indonesia,"MOU on the recruitment, placement and protection of Indonesian domestic workers",bilateral,mou,2022-04-01,,One Channel System; agreed wage; costs borne by the employer,2026-11-13
+my-nd-mou-on-the-recruitment-and-placement-of,MY,Indonesia,MOU on the recruitment and placement of Indonesian workers in the plantation sector,bilateral,mou,,,To confirm date and status,2026-11-13
+my-2021-mou-on-the-recruitment-of-workers,MY,Bangladesh,MOU on the recruitment of workers,bilateral,mou,2021-12,,Recruitment from Bangladesh,2026-11-13
+my-2018-mou-on-the-recruitment-employment-and-re,MY,Nepal,"MOU on the recruitment, employment and repatriation of workers",bilateral,mou,2018-10-29,,Employer pays recruitment costs,2026-11-13
+my-nd-mou-on-the-recruitment-of-domestic-worke,MY,Philippines,MOU on the recruitment of domestic workers (expired; renewal discussed),bilateral,mou,,,To confirm status,2026-11-13
+my-2015-mou-on-the-recruitment-and-employment-of,MY,Cambodia,MOU on the recruitment and employment of Cambodian domestic workers,bilateral,mou,2015,,To confirm status,2026-11-13
+th-2003-mou-on-cooperation-in-the-employment-of,TH,Myanmar,MOU on cooperation in the employment of workers,bilateral,mou,2003,,Revised 2016; basis of the MOU system,2026-11-13
+th-2003-mou-on-cooperation-in-the-employment-of-2,TH,Cambodia,MOU on cooperation in the employment of workers,bilateral,mou,2003,,Revised 2015,2026-11-13
+th-2002-mou-on-employment-cooperation,TH,Laos,MOU on employment cooperation,bilateral,mou,2002,,Revised 2016,2026-11-13
+th-2015-mou-on-labor-cooperation,TH,Vietnam,MOU on labor cooperation,bilateral,mou,2015,,Construction and fisheries,2026-11-13
+sg-nd-no-bilateral-labor-agreements-recruitmen,SG,—,No bilateral labor agreements; recruitment is regulated unilaterally through work pass conditions,bilateral,agreement,,,Singapore relies on domestic rules rather than bilateral memoranda,2026-11-13
+bn-nd-mou-on-labor-cooperation,BN,Philippines,MOU on labor cooperation,bilateral,mou,,,To confirm date and status,2026-11-13
+bn-nd-mou-on-the-placement-and-protection-of-i,BN,Indonesia,MOU on the placement and protection of Indonesian workers,bilateral,mou,,,To confirm date and status,2026-11-13
