@@ -1,4 +1,6 @@
 en,id
+"(summaries). The short answers restate the database codes in everyday words; the database pages give the legal sources. This is general information, not legal advice.","(ringkasan). Jawaban singkat merupakan penjelasan kode basis data dalam bahasa sehari-hari; halaman basis data memuat sumber hukumnya. Lembar ini merupakan informasi umum, bukan nasihat hukum."
+"). Paragraphs are numbered for pinpoint citation (for example, ¶ 5.2).","). Paragraf diberi nomor agar dapat dikutip secara tepat (misalnya, ¶ 5.2)."
 ", foreword by Robyn Iredale.",", kata pengantar oleh Robyn Iredale."
 ", it uses farm relevance (R), so a binding farm-specific convention outranks both a binding general treaty and a farm-specific guideline. Ties are broken by relevance, then by date. Norms are ranked separately within each tier.",", Atlas memakai relevansi pertanian (R), sehingga konvensi khusus pertanian yang mengikat berperingkat lebih tinggi daripada perjanjian umum yang mengikat maupun pedoman khusus pertanian. Nilai yang sama diurutkan menurut relevansi, lalu tanggal. Norma diberi peringkat terpisah dalam setiap tingkatan."
 ", trans. Jawahir Thontowi.",", terj. Jawahir Thontowi."
@@ -8,6 +10,7 @@ en,id
 ". If you have already returned home and are owed wages, see",". Jika anda sudah pulang dan gaji anda belum dibayar, lihat"
 . Please quote it if you contact the Clinic.,. Harap sebutkan nomor ini jika anda menghubungi Klinik.
 . Questions:,. Pertanyaan:
+". To suggest a correction,",". Untuk mengusulkan koreksi,"
 1. Spread and spot,1. Sebarkan dan temukan
 17 March 2018,17 Maret 2018
 "187 states scored on 13 farm-relevant treaties. Click a row to open the country profile, or tick up to four countries to compare them.","187 negara diberi skor pada 13 perjanjian yang relevan bagi pertanian. Klik sebuah baris untuk membuka profil negara, atau centang hingga empat negara untuk membandingkannya."
@@ -132,8 +135,10 @@ Back to the Clinic,Kembali ke Klinik
 Back to the GCC Observatory,Kembali ke GCC Observatory
 Back to the news,Kembali ke berita
 Background,Latar belakang
+Bahasa Indonesia · PDF,Bahasa Indonesia · PDF
 Bahrain,Bahrain
 Bahrain: National Institution for Human Rights,Bahrain: Lembaga Nasional Hak Asasi Manusia
+Bangladesh,Bangladesh
 "Before and after, district by district.","Sebelum dan sesudah, kabupaten demi kabupaten."
 "Before you leave, if you can","Sebelum pulang, jika memungkinkan"
 "Bentham wanted the law written down in a complete code that anyone could read and consult without paying a lawyer. Migration Jurisprudence from the South shares that aim for migrant workers and the people who help them: the law, collected, coded and explained, within everyone’s reach. Bentham wrote “every man”, as people did in his time; we read it as every person.","Bentham menginginkan hukum dituliskan dalam kitab yang lengkap, yang bisa dibaca dan dirujuk siapa pun tanpa membayar pengacara. Pandangan Hukum Migrasi dari Dunia Berkembang berbagi cita-cita itu bagi pekerja migran dan orang-orang yang membantu mereka: hukum yang dihimpun, dikodekan, dan dijelaskan, dalam jangkauan semua orang. Bentham menulis “every man” (setiap laki-laki), sesuai kebiasaan zamannya; kami membacanya sebagai setiap orang."
@@ -156,6 +161,7 @@ Can I take my case to the UN?,Bisakah saya ajukan perkara saya ke PBB?
 Can my employer keep my passport?,Bolehkah majikan menahan paspor saya?
 Case law,Yurisprudensi
 Case law: how courts and committees apply the norms,Yurisprudensi: bagaimana pengadilan dan komite menerapkan norma
+Case of the month,Putusan bulan ini
 Changes to the data,Perubahan data
 "Changing employer, dismissal",Pindah majikan dan pemecatan
 Changing or losing the job,Pindah atau kehilangan pekerjaan
@@ -169,6 +175,7 @@ Choose one,Pilih salah satu
 "Cianjur, West Java · Indonesia","Cianjur, Jawa Barat · Indonesia"
 "Cisokan railway bridge, c. 1890","Jembatan kereta Cisokan, sekitar 1890"
 Cite,Kutip
+Cite as:,Kutip sebagai:
 "Cite as: Institute for Migrant Rights (2026),","Kutip sebagai: Institute for Migrant Rights (2026),"
 Cited by courts,Dikutip oleh pengadilan
 "Cited by the U.S. Court of Appeals, 9th Cir.","Dikutip oleh pengadilan banding Amerika Serikat (U.S. Court of Appeals, 9th Cir.)"
@@ -205,6 +212,9 @@ Contact the Clinic,Hubungi Klinik
 Contact · Institute for Migrant Rights,Hubungi Kami · Institute for Migrant Rights
 Contents,Daftar isi
 Contributing to the law,Berkontribusi pada hukum
+Copied,Tersalin
+Copy BibTeX,Salin BibTeX
+Copy citation,Salin sitasi
 Corrections,Koreksi
 "Corridor analyses treat each origin–destination pair as a case. Pairs within the same Gulf state are not independent, so the presets include state fixed effects (the Gulf state as a control); the p-values do not correct for clustering and should be read as descriptive.","Analisis koridor memperlakukan setiap pasangan asal–tujuan sebagai satu kasus. Pasangan dalam negara Teluk yang sama tidak independen, sehingga preset menyertakan efek tetap negara (negara Teluk sebagai kontrol); nilai p tidak dikoreksi untuk pengelompokan dan hendaknya dibaca secara deskriptif."
 Corridors,Koridor
@@ -218,6 +228,8 @@ Country profiles,Profil negara
 Country ranking,Peringkat negara
 Country ratification ranking,Peringkat ratifikasi negara
 Country ratification scores,Skor ratifikasi negara
+Country sheets to print and share,Lembar negara untuk dicetak dan dibagikan
+Country sheets to print and share · Institute for Migrant Rights,Lembar negara untuk dicetak dan dibagikan · Institute for Migrant Rights
 Country-by-country comparisons of laws and court decisions.,Perbandingan hukum dan putusan pengadilan antarnegara.
 Court Decisions,Putusan Pengadilan
 Courts,Pengadilan
@@ -259,6 +271,7 @@ Draft a rights communication with the Legal Clinic,Susun pengaduan hak bersama K
 EU law that applies,Hukum Uni Eropa yang berlaku
 "Each claim of the working paper set against cross-country data, with the test you can run yourself and the evidence still to gather.","Setiap klaim makalah kerja dihadapkan pada data lintas negara, dengan uji yang bisa anda jalankan sendiri dan bukti yang masih perlu dikumpulkan."
 Each country profile above lists the arguments and avenues that its gaps open. The tools below turn them into action.,Setiap profil negara di atas mencantumkan argumen dan jalur yang dibuka oleh celahnya. Alat di bawah mengubahnya menjadi tindakan.
+"Each database has its own version number and citation on its page. To cite the collection as a whole, use:","Setiap basis data memiliki nomor versi dan sitasinya sendiri pada halamannya. Untuk mengutip koleksi ini secara keseluruhan, gunakanlah:"
 "Each dot marks adoption, and the line runs to entry into force, so its length shows how long states took to bring an instrument into effect. Lanes group norms by tier (global, regional, national) and, within the global and regional tiers, into binding and soft law. Dot color shows binding quality. Click a dot to open the entry.","Setiap titik menandai pengesahan, dan garisnya memanjang sampai mulai berlaku, sehingga panjangnya menunjukkan berapa lama negara-negara membuat instrumen itu berlaku. Jalur mengelompokkan norma menurut tingkatan (global, kawasan, nasional) dan, dalam tingkatan global dan kawasan, menjadi mengikat dan hukum lunak. Warna titik menunjukkan kekuatan mengikat. Klik sebuah titik untuk membuka entrinya."
 "Each norm gets a binding-quality score and two relevance scores, all from 1 to 5. Its rank is binding quality multiplied by the relevance for the scope you are viewing (maximum 25). With","Setiap norma mendapat satu skor kekuatan mengikat dan dua skor relevansi, semuanya dari 1 sampai 5. Peringkatnya adalah kekuatan mengikat dikalikan relevansi untuk cakupan yang sedang anda lihat (maksimum 25). Bila"
 "Each norm is scored for binding quality and farm relevance (see Method), and ranked within its tier. Click any row for the full entry, ratifying states and downloads.","Setiap norma diberi skor untuk kekuatan mengikat dan relevansi bagi pertanian (lihat Metode), lalu diberi peringkat dalam tingkatannya. Klik baris mana pun untuk entri lengkap, negara yang meratifikasi dan unduhan."
@@ -277,6 +290,7 @@ Email,Email
 Email or phone. Leave empty to stay anonymous.,Email atau telepon. Kosongkan jika ingin tetap anonim.
 "Embassies and consulates of sending countries run labor attaché offices, shelters and legal aid. For Indonesians, the embassy in Riyadh, the consulate in Jeddah, the embassies in Abu Dhabi, Doha, Kuwait City, Manama and Muscat, and the consulate in Dubai give citizen services. After returning home, workers can still bring claims, report to the Ministry for the Protection of Indonesian Migrant Workers (KP2MI), and claim BPJS Ketenagakerjaan insurance.","Kedutaan dan konsulat negara pengirim menjalankan kantor atase ketenagakerjaan, tempat penampungan dan bantuan hukum. Bagi warga Indonesia, KBRI Riyadh, KJRI Jeddah, KBRI di Abu Dhabi, Doha, Kuwait City, Manama dan Muscat, serta KJRI Dubai memberi layanan warga. Setelah pulang, pekerja masih bisa mengajukan tuntutan, melapor ke Kementerian Pelindungan Pekerja Migran Indonesia (KP2MI), dan mengklaim asuransi BPJS Ketenagakerjaan."
 Embassies and cross-border help,Kedutaan dan bantuan lintas negara
+English · PDF,Bahasa Inggris · PDF
 Enthusiasm,Antusiasme
 Entry into force,Mulai berlaku
 Europe,Eropa
@@ -345,6 +359,7 @@ Frameworks and agreements,Kerangka dan perjanjian
 Free,Gratis
 Free legal assistance for non-citizens,Bantuan hukum gratis bagi orang asing
 Free legal help near you,Bantuan hukum gratis di dekat anda
+"Free to copy, print and share under","Bebas disalin, dicetak, dan dibagikan dengan lisensi"
 Free version on SSRN,Versi gratis di SSRN
 Free version on SSRN →,Versi gratis di SSRN →
 Free · International Legal Clinic,Gratis · Klinik Hukum Internasional
@@ -431,13 +446,16 @@ If the authorities fail you,Jika pihak berwenang tidak menolong
 "If you have tried and the authorities did nothing, or the harm was serious, the IMR Legal Clinic can help you take the case to a UN or regional human rights body.","Jika anda sudah berusaha dan pihak berwenang tidak berbuat apa-apa, atau kerugiannya serius, Klinik Hukum IMR bisa membantu anda membawa kasus ke badan hak asasi manusia PBB atau badan HAM kawasan."
 "If you, or someone you work with, may need the Clinic, please write to us or call. Tell us briefly what happened and how to reach you. There is no charge.","Jika anda, atau seseorang yang bekerja dengan anda, mungkin membutuhkan Klinik, silakan tulis surat atau telepon kami. Ceritakan secara singkat apa yang terjadi dan bagaimana menghubungi anda. Tidak dipungut biaya."
 "If your agency or placement company charged illegal fees, broke the contract, or failed to help you, you can ask KP2MI or the local manpower office (Disnaker) to mediate. If that fails, a lawyer can bring a claim in an Indonesian court.","Jika agen atau perusahaan penempatan memungut biaya yang dilarang, melanggar kontrak, atau tidak membantu anda, anda bisa meminta KP2MI atau Dinas Tenaga Kerja (Disnaker) setempat untuk menengahi. Jika gagal, seorang pengacara bisa mengajukan gugatan ke pengadilan di Indonesia."
+Image for WhatsApp,Gambar untuk WhatsApp
 Implementation,Pelaksanaan
 Implemented,Terlaksana
 "In all six states a wage or contract claim starts with a complaint to the labor ministry, which tries to settle it. If that fails, the case goes to a labor court or a dispute committee. Workers excluded from the labor law, such as domestic workers and in some states farmworkers, use separate routes with fewer guarantees.","Di keenam negara, tuntutan upah atau kontrak dimulai dengan pengaduan ke kementerian ketenagakerjaan, yang mencoba menyelesaikannya. Bila gagal, perkara dibawa ke pengadilan perburuhan atau komite perselisihan. Pekerja yang dikecualikan dari UU ketenagakerjaan, seperti pekerja rumah tangga dan di beberapa negara buruh tani, memakai jalur terpisah dengan jaminan lebih sedikit."
 In force,Berlaku
 In some instances we have used summaries pre-written by AI. These are marked “unverified”.,Dalam beberapa kasus kami memakai ringkasan yang ditulis lebih dahulu oleh AI. Ringkasan ini ditandai “belum diverifikasi”.
 In the news,IMR di publik
+India,India
 Indirect relevance only,Hanya relevan secara tidak langsung
+Indonesia,Indonesia
 Indonesia and other major countries of origin compared on nine questions.,Indonesia dan negara asal utama lainnya dibandingkan pada sembilan soal.
 Indonesia and seven other countries of origin compared on nine questions.,Indonesia dan tujuh negara asal lain dibandingkan pada sembilan soal.
 Indonesian migrant remittances,Kiriman uang pekerja migran Indonesia
@@ -479,6 +497,7 @@ Journalism or documentary,Jurnalisme atau dokumenter
 Key decisions,Putusan penting
 Key decisions applying it,Putusan penting yang menerapkannya
 "Key decisions of regional courts, national supreme courts and ILO and UN bodies. Each decision is linked to the norms it applies, which you can open from here or find in a norm's profile.","Putusan penting pengadilan kawasan, mahkamah agung nasional serta badan ILO dan PBB. Setiap putusan ditautkan ke norma yang diterapkannya, yang bisa anda buka dari sini atau temukan di profil norma."
+Know your rights before you go,Kenali hak anda sebelum berangkat
 Kuwait,Kuwait
 Kuwait: Diwan of Human Rights,Kuwait: Diwan Hak Asasi Manusia
 "Labor and migration law in the six Gulf states, coded rule by rule with sources.","Hukum ketenagakerjaan dan migrasi di enam negara Teluk, dikodekan per aturan beserta sumbernya."
@@ -487,6 +506,7 @@ Labor courts,Pengadilan perburuhan
 Labour Dispute Settlement Committees,Komite Penyelesaian Perselisihan Perburuhan
 Language,Bahasa
 Languages you read well,Bahasa yang anda baca dengan baik
+Last made on:,Terakhir dibuat pada:
 Last updated 3 November 2026.,Terakhir diperbarui 3 November 2026.
 Law across tiers,Hukum lintas tingkat
 Law without ratification,Hukum tanpa ratifikasi
@@ -503,6 +523,7 @@ Legal mechanisms,Mekanisme hukum
 Legal mechanisms for migrant workers in the Gulf,Mekanisme hukum bagi pekerja migran di Teluk
 Legal practitioner in Cianjur specializing in Indonesian immigration law; founder of Sudirman & Rekan.,Praktisi hukum di Cianjur yang mendalami hukum keimigrasian Indonesia; pendiri Sudirman & Rekan.
 Legal research,Riset hukum
+License: CC BY 4.0. You may reuse and adapt the data if you give credit. Reference managers can read the citation file,Lisensi: CC BY 4.0. Anda boleh memakai ulang dan mengolah data ini asalkan mencantumkan sumbernya. Pengelola referensi (reference manager) dapat membaca berkas sitasi
 Likely drivers of adoption,Kemungkinan pendorong pengesahan
 "Limitations: English translations are unofficial and the Arabic text prevails; ministerial decisions change faster than statutes; enforcement is not measured, only the rules on paper. Instruments are classified by level and nature from their titles and published texts; a memorandum of understanding is treated as non-binding unless its text says otherwise.","Keterbatasan: terjemahan bahasa Inggris tidak resmi dan teks Arab yang berlaku; keputusan menteri berubah lebih cepat daripada undang-undang; penegakan tidak diukur, hanya aturan di atas kertas. Instrumen diklasifikasikan menurut tingkat dan sifat dari judul dan teks yang diterbitkan; nota kesepahaman dianggap tidak mengikat kecuali teksnya menyatakan lain."
 "Link: text = official text; db = official database (search it for the instrument); GLMM = Gulf Labour Markets, Migration and Population copy. ""Checked"" means the page opened on 31 October 2026; some official sites refuse automated access, so an unchecked link may still work in your browser. Items marked [to verify] or [not verified] are open questions, not findings.","Tautan: teks = teks resmi; basis data = basis data resmi (cari instrumennya di sana); GLMM = salinan Gulf Labour Markets, Migration and Population. ""Dicek"" berarti halaman terbuka pada 31 Oktober 2026; sebagian situs resmi menolak akses otomatis, jadi tautan yang belum dicek mungkin tetap berfungsi di peramban anda. Butir bertanda [to verify] atau [not verified] adalah pertanyaan terbuka, bukan temuan."
@@ -625,6 +646,7 @@ National law:,Hukum nasional:
 National laws,Hukum nasional
 Need help with a case?,Perlu bantuan untuk suatu perkara?
 Need legal help yourself? Volunteers cannot give legal advice. Please use the,Anda sendiri memerlukan bantuan hukum? Relawan tidak bisa memberikan nasihat hukum. Silakan memakai
+Nepal,Nepal
 "Never sign a document you do not understand, especially one that says you were paid in full.","Jangan pernah menandatangani dokumen yang tidak anda pahami, terutama yang menyatakan anda sudah dibayar penuh."
 New law,Undang-undang baru
 "New laws, court rulings and ratifications in migration and farmworker law, newest first. Each item links to its source.","Undang-undang baru, putusan pengadilan dan ratifikasi dalam hukum migrasi dan hukum buruh tani, yang terbaru di atas. Setiap butir ditautkan ke sumbernya."
@@ -652,6 +674,8 @@ Oman,Oman
 Oman: Oman Human Rights Commission,Oman: Komisi Hak Asasi Manusia Oman
 On adoption,Sejak disahkan
 "On the rights of non-citizens in Southeast Asia, and why ASEAN needs a new course to protect them.","Tentang hak orang yang bukan warga negara di Asia Tenggara, dan mengapa ASEAN perlu menempuh jalan baru untuk melindungi mereka."
+"One page for each country. Each sheet says, in plain words, what the law of the worker's own country promises before departure and while abroad, lists free help with checked phone numbers, and summarises court decisions that helped workers. Clinics, unions, embassies and families can print them or send them on WhatsApp.","Satu halaman untuk setiap negara. Setiap lembar menjelaskan dengan bahasa sederhana apa yang dijanjikan hukum negara asal pekerja sebelum keberangkatan dan selama di luar negeri, mencantumkan bantuan gratis dengan nomor telepon yang telah diperiksa, serta meringkas putusan pengadilan yang membantu pekerja. Klinik hukum, serikat pekerja, perwakilan, dan keluarga dapat mencetaknya atau mengirimkannya melalui WhatsApp."
+One-page country sheets to print or send on WhatsApp →,Lembar negara satu halaman untuk dicetak atau dikirim melalui WhatsApp →
 Online complaint to the Ministry of Labour,Pengaduan daring ke Kementerian Tenaga Kerja
 Open in Google Maps,Buka di Google Maps
 Open its profile,Buka profilnya
@@ -674,6 +698,7 @@ Our work,Kerja kami
 Overall,Keseluruhan
 Overall score,Skor keseluruhan
 Overview,Ikhtisar
+Pakistan,Pakistan
 Partly,Sebagian
 Partly implemented,Sebagian terlaksana
 Partner,Mitra
@@ -685,9 +710,12 @@ Peer-reviewed scholarship or academic monograph,Karya ilmiah yang ditelaah sejaw
 People,Tim
 People and jobs,Penduduk dan pekerjaan
 People · Institute for Migrant Rights,Orang-orang · Institute for Migrant Rights
+Philippines,Filipina
 "Pick a step: the law, the decisions, the help","Pilih satu tahap. Di sana anda akan menemukan hukumnya, putusannya, dan bantuannya."
 "Pick up to four countries to see their ratifications side by side, along with the national and EU laws in the Atlas that apply to them.","Pilih hingga empat negara untuk melihat ratifikasinya berdampingan, bersama undang-undang nasional dan hukum Uni Eropa dalam Atlas yang berlaku bagi mereka."
 "Plain pages that bring the databases together for one country, one problem or one migration route.","Halaman sederhana yang menghimpun basis data untuk satu negara, satu masalah, atau satu jalur migrasi."
+"Please cite the database name, its version and the DOI. The DOI leads to the latest archived release on Zenodo. Each release also has its own DOI, listed on Zenodo; use that one when others need to find exactly the data you used.","Mohon cantumkan nama basis data, versinya, serta DOI-nya. DOI tersebut mengarah ke rilis arsip terbaru di Zenodo. Setiap rilis juga memiliki DOI tersendiri yang tercantum di Zenodo; gunakanlah DOI tersebut apabila pembaca perlu menemukan data yang persis sama dengan yang anda gunakan."
+"Please cite the database name, its version and the web address, with the date you consulted it.","Mohon cantumkan nama basis data, versinya, serta alamat webnya, beserta tanggal anda mengaksesnya."
 Political violence events (ACLED),Peristiwa kekerasan politik (ACLED)
 "Pranoto Iskandar and François Crépeau, former UN Special Rapporteur on the human rights of migrants, on Indonesia’s ratification of the Migrant Workers Convention.","Pranoto Iskandar dan François Crépeau, mantan Pelapor Khusus PBB tentang hak asasi manusia migran, tentang ratifikasi Konvensi Pekerja Migran oleh Indonesia."
 Pranoto Iskandar and Nicola Piper argue that ASEAN’s focus on high-skilled migration leaves out most of the region’s migrant workers.,Pranoto Iskandar dan Nicola Piper berpendapat bahwa fokus ASEAN pada migrasi berketerampilan tinggi mengabaikan sebagian besar pekerja migran di kawasan ini.
@@ -718,6 +746,7 @@ RSS feed,umpan RSS
 Ranked register of norms,Daftar norma berperingkat
 Ratification record,Catatan ratifikasi
 Ratification records,Catatan ratifikasi
+Ratification tracker,Pelacak ratifikasi
 Ratifications,Ratifikasi
 Ratifications of migrant-worker treaties,Ratifikasi perjanjian tentang pekerja migran
 Ratified,Diratifikasi
@@ -761,6 +790,7 @@ SOURCES,SUMBER
 Saudi Arabia,Arab Saudi
 "Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman are home to tens of millions of migrant workers. This comparative overview brings together how each labor law applies to them, the agreements each state has made with countries of origin, who the workers are and what jobs they do. You can compare the six systems and explore the data yourself.","Arab Saudi, Uni Emirat Arab, Qatar, Kuwait, Bahrain dan Oman menjadi tempat tinggal puluhan juta pekerja migran. Tinjauan perbandingan ini menghimpun bagaimana UU ketenagakerjaan tiap negara berlaku bagi mereka, perjanjian yang dibuat tiap negara dengan negara asal, siapa para pekerja itu dan pekerjaan apa yang mereka lakukan. Anda bisa membandingkan keenam sistem dan menjelajahi datanya sendiri."
 Saudi Arabia: Human Rights Commission,Arab Saudi: Komisi Hak Asasi Manusia
+Saved searches and reading list,Pencarian tersimpan dan daftar bacaan
 "Sawah in the Priangan, before 1874","Sawah di Priangan, sebelum 1874"
 Scholarly publication,Terbitan ilmiah
 Scope and limits,Cakupan dan keterbatasan
@@ -777,6 +807,7 @@ Send the report,Kirim laporan
 "Share our pages, report a broken link, flag a new law or court ruling you read about. Ten minutes at a time.","Bagikan halaman kami, laporkan tautan yang rusak, atau beri tahu kami tentang undang-undang atau putusan pengadilan baru yang anda baca. Cukup sepuluh menit setiap kali."
 Short answers from the databases,Jawaban singkat yang kami ambil dari basis data
 Show,Tampilkan
+Show BibTeX,Tampilkan BibTeX
 Show news about,Tampilkan berita tentang
 Sign up,Daftar
 "Signed, not ratified","Ditandatangani, belum diratifikasi"
@@ -791,6 +822,7 @@ Sources and downloads,Sumber dan unduhan
 "Sources: ILO NORMLEX; UN Treaty Collection; Council of Europe Treaty Office; EUR-Lex; FAO, OECD and CFS publication records; scheme owners' standard documents; official national gazettes and codes. Ratification records collected 30 October 2026. Every per-instrument count matched the official total. Malaysia's separate Peninsular and Sarawak ratifications of C11 are counted once.","Sumber: ILO NORMLEX; UN Treaty Collection; Kantor Perjanjian Dewan Eropa; EUR-Lex; catatan publikasi FAO, OECD dan CFS; dokumen standar pemilik skema; lembaran negara dan kitab undang-undang resmi. Catatan ratifikasi dikumpulkan 30 Oktober 2026. Setiap jumlah per instrumen cocok dengan total resmi. Ratifikasi C11 yang terpisah oleh Semenanjung Malaysia dan Sarawak dihitung satu kali."
 Southeast Asia,Asia Tenggara
 Spread the word and spot problems,Menyebarkan informasi dan menemukan masalah
+Sri Lanka,Sri Lanka
 Start with the Clinic →,Mulai dengan Klinik →
 Start your communication →,Mulai pengaduan anda →
 State,Negara
@@ -853,8 +885,11 @@ The national labor dispute system,Sistem penyelesaian perselisihan perburuhan na
 "The officer checks the facts with you, asks for any documents, and confirms that you agree to go ahead.","Petugas memeriksa fakta bersama anda, meminta dokumen yang diperlukan, dan memastikan anda setuju untuk melanjutkan."
 The overlooked soft power of migrants,Kekuatan lunak para migran yang terabaikan
 "The ratification map covers 13 treaties chosen for farm work, three of them migration treaties: the Migrant Workers Convention, C181 on recruitment agencies and P29 on forced labor. Ratifications of the other migration treaties, such as the Refugee Convention, C97, C143 and C189, are not in the map yet.","Peta ratifikasi mencakup 13 perjanjian yang dipilih untuk kerja pertanian, tiga di antaranya perjanjian migrasi: Konvensi Pekerja Migran, C181 tentang agen perekrutan dan P29 tentang kerja paksa. Ratifikasi perjanjian migrasi lain, seperti Konvensi Pengungsi, C97, C143 dan C189, belum dimasukkan ke peta."
+The sheets are made automatically from our open data: the,"Lembar ini dibuat secara otomatis dari data terbuka kami, yakni basis data"
 The statement covers the databases and comparison pages below. Each of them repeats it in one line in its method or data section.,Pernyataan ini mencakup basis data dan halaman perbandingan di bawah ini. Setiap halaman mengulanginya dalam satu baris di bagian metode atau datanya.
+The summaries are ours and the judgments belong to their courts. Links point to official or public copies.,"Ringkasan ini kami susun sendiri, sedangkan putusannya merupakan milik pengadilan masing-masing. Tautan mengarah ke salinan resmi atau salinan publik."
 "The unit of analysis is the state's legal framework on paper (de jure) as of the date shown; enforcement (de facto) is not measured. Each state is coded on the features below by a written rule, from the text of the law where it could be obtained and from institutional or peer-reviewed secondary sources otherwise. Every coding records its source, the date checked and whether it rests on primary text (marked P) or a secondary source (marked S).","Unit analisis adalah kerangka hukum negara di atas kertas (de jure) per tanggal yang tertera; penegakan (de facto) tidak diukur. Setiap negara dikodekan pada fitur di bawah dengan aturan tertulis, dari teks hukum bila tersedia dan dari sumber sekunder kelembagaan atau telaah sejawat bila tidak. Setiap kode mencatat sumbernya, tanggal pengecekan dan apakah bersandar pada teks primer (P) atau sumber sekunder (S)."
+The whole collection,Seluruh koleksi
 The whole instrument is about agricultural or plantation work,Seluruh instrumen membahas kerja pertanian atau perkebunan
 "The whole instrument is about migration, migrants, refugees or nationality","Seluruh instrumen membahas migrasi, migran, pengungsi atau kewarganegaraan"
 "The words, as closely as you remember them. Any language is fine.","Kata-katanya, sedekat yang anda ingat. Bahasa apa pun boleh."
@@ -887,6 +922,7 @@ Timeline of farmworker norms by adoption year,Linimasa norma buruh tani menurut 
 Timeline of promulgation,Linimasa pengesahan
 "To fill that gap, the Institute for Migrant Rights in Cianjur has spent several years building the open legal databases on this site, helped by many volunteers, most of them law students from many countries. All of them can be downloaded and are explained in everyday language, in Indonesian and English.","Untuk mengisi kekosongan itu, Institute for Migrant Rights (IMR) di Cianjur menyusun basis data hukum terbuka di situs ini selama beberapa tahun, dibantu banyak relawan, sebagian besar mahasiswa hukum dari berbagai negara. Semuanya bisa diunduh dan dijelaskan dalam bahasa sehari-hari, dalam bahasa Indonesia dan Inggris."
 To volunteer:,Untuk menjadi relawan:
+Tools,Alat
 Top 10 by overall score,10 teratas menurut skor keseluruhan
 Topic,Topik
 Topics,Topik
@@ -911,6 +947,7 @@ Use of AI:,Penggunaan AI:
 VI · Testing the argument,VI · Menguji argumen
 VII · Explore the data,VII · Jelajahi data
 VIII · Elections and non-citizens,VIII · Pemilu dan orang yang bukan warga negara
+Viet Nam,Vietnam
 View on Google Books,Lihat di Google Books
 Violence before and after,Kekerasan sebelum dan sesudah
 Visit the Clinic →,Kunjungi Klinik →
@@ -953,6 +990,7 @@ What would you like to do?,Apa yang ingin anda kerjakan?
 "When her son’s wages from abroad stopped arriving, a mother in Cianjur went to the village head, who wanted to help but did not know which law applied.","Ketika gaji anaknya di luar negeri berhenti datang, seorang ibu di Cianjur mengadu kepada kepala desa, yang ingin menolong tetapi tidak tahu hukum mana yang berlaku."
 Where are you on the journey?,Di tahap mana anda dalam migrasi?
 Where it was said or published,Di mana diucapkan atau diterbitkan
+Where the content comes from,Asal isi lembar
 Where the workers come from,Dari mana para pekerja berasal
 Where this applies,Di mana pernyataan ini berlaku
 Where to take a case,Ke mana perkara bisa ditujukan
@@ -990,7 +1028,9 @@ covers ASEAN instruments and the Asian-African Bangkok Principles.,mencakup inst
 "covers Council of Europe treaties, EU law and the European Court of Human Rights.","mencakup perjanjian Dewan Eropa, hukum Uni Eropa dan Pengadilan Hak Asasi Manusia Eropa."
 "covers the African Union, the OAU and ECOWAS. The","mencakup Uni Afrika, OAU dan ECOWAS."
 "covers the OAS system, the Inter-American Court and MERCOSUR.","mencakup sistem OAS, Pengadilan Antar-Amerika dan MERCOSUR."
+"database (law), the","(hukum), direktori"
 decisions accepted that labor rights apply whatever a worker’s immigration status.,"putusan menerima bila hak pekerja tetap berlaku, apa pun status keimigrasiannya."
+"directory (help, with phone numbers only where checked), and","(bantuan, dengan nomor telepon hanya jika telah diperiksa), serta"
 farm work,kerja pertanian
 "farm-relevant treaties, including","perjanjian yang relevan bagi pertanian, termasuk"
 farm-specific,khusus pertanian
@@ -1002,9 +1042,11 @@ get in touch,hubungi kami
 "law exists, with gaps in coverage or enforcement","hukumnya ada, tetapi cakupan atau penegakannya masih berlubang"
 legal mechanisms for migrant workers in the Gulf,mekanisme hukum bagi pekerja migran di Teluk
 "looks only at the seven instruments adopted since 1989, so states that became independent late are not penalized for missing 1920s conventions. Each ratification earns half a point, plus up to half a point more for speed: full marks if ratified in the adoption year, falling to zero after 15 years.","hanya melihat tujuh instrumen yang disahkan sejak 1989, sehingga negara yang merdeka belakangan tidak dirugikan karena tidak meratifikasi konvensi tahun 1920-an. Setiap ratifikasi bernilai setengah poin, ditambah hingga setengah poin lagi untuk kecepatan: nilai penuh jika diratifikasi pada tahun pengesahan, turun hingga nol setelah 15 tahun."
+more formats,format lain
 national law gives effect to the instrument,hukum nasional memberlakukan instrumen tersebut
 national law on a standard the state has not ratified,hukum nasional tentang standar yang belum diratifikasi negara itu
 near you.,di dekat anda.
+on GitHub.,di GitHub.
 other ratified,"lainnya, diratifikasi"
 please write to,silakan tulis ke
 "ratified or binding, but law falls short or excludes workers","diratifikasi atau mengikat, tetapi hukumnya kurang atau mengecualikan pekerja"
@@ -1016,6 +1058,7 @@ sign up here,daftar di sini
 signed only (UN),hanya ditandatangani (PBB)
 "tell us briefly what happened, where you are, and how we can reach you safely. There is no charge.","ceritakan secara singkat apa yang terjadi, di mana anda berada, dan bagaimana kami bisa menghubungi anda dengan aman. Tidak dipungut biaya."
 volunteer starter kit,paket awal relawan
+write to us,hubungi kami
 § 1 · AT A GLANCE,§ 1 · SEKILAS
 § 10 · FROM RESEARCH TO PRACTICE,§ 10 · DARI RISET KE PRAKTIK
 § 11 · SOURCES AND DOWNLOADS,§ 11 · SUMBER DAN UNDUHAN

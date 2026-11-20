@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use these data, please cite them as below. Each database also has its
+  own version number and citation on its page at theimr.org.
+title: "Migration Jurisprudence from the South: databases of migration and labor law"
+type: dataset
+authors:
+  - name: Institute for Migrant Rights
+    website: "https://theimr.org/"
+doi: "10.5281/zenodo.24389324"
+url: "https://theimr.org/databases/"
+repository-code: "https://github.com/pranotoiskandar-collab/compmigrationlaw"
+license: CC-BY-4.0
+abstract: >-
+  Open, coded data on migration and labor law from the perspective of the
+  Global South: international, regional and national instruments (Migration
+  Law Atlas, with a farmworker view), court decisions from Asia, Africa, the
+  Middle East and Latin America, comparisons of destination states (Gulf
+  States, East Asia, Southeast Asia) and countries of origin, migrant domestic
+  workers, and government hate speech. Each row links to an official source
+  where one is available. Published by the Institute for Migrant Rights.
+keywords:
+  - migration law
+  - labor law
+  - migrant workers
+  - court decisions
+  - comparative law
+  - Global South
+  - farmworkers
+  - domestic workers
+  - hate speech

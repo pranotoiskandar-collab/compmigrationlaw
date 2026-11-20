@@ -1,0 +1,53 @@
+# Ratification tracker: refreshes data/ratifications/ from NORMLEX (ILO C097, C143, C189, C190) and the
+# UN Treaty Collection (ICRMW) every Monday, and commits the result to main so Netlify publishes it.
+# A portal that blocks the run leaves its rows unchanged; the job summary and
+# data/ratifications/sources-status.csv say which one. Start it by hand from Actions > "Ratification update".
+name: Ratification update
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # Mondays 03:17 UTC (07:17 Dubai)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ratification-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch official ratification records
+        run: python3 tools/ratifications/update.py 2> warnings.txt || (cat warnings.txt; exit 1)
+      - name: Write summary
+        run: |
+          {
+            echo "### Ratification update"
+            echo
+            echo "| Instrument | Source | Result | Rows |"
+            echo "|---|---|---|---|"
+            tail -n +2 data/ratifications/sources-status.csv | awk -F, '{print "| "$1" | "$2" | "$4" | "$5" |"}'
+            echo
+            if [ -s warnings.txt ]; then echo "**Warnings**"; echo; sed 's/^/- /' warnings.txt; fi
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- data/ratifications/; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "IMR ratification tracker"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ratifications/
+          git commit -m "Ratification tracker: weekly update from NORMLEX and UN Treaty Collection"
+          git push origin HEAD:main

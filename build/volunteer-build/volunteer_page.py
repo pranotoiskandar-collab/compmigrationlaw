@@ -30,6 +30,9 @@ def page(title, desc, url, body, noindex=False):
     t = t.replace("https://theimr.org/contact.html", url)
     if noindex:
         t = t.replace('<meta name="viewport"', '<meta name="robots" content="noindex">\n<meta name="viewport"', 1)
+    # Contact is the current page in the copied menu; make Volunteer current instead.
+    t = re.sub(r'(<a href="/contact.html") aria-current="page" style="color: #[0-9A-F]+; text-decoration: underline; text-underline-offset: 6px;', r'\1 style="color: #2E2116; text-decoration: none;', t)
+    t = re.sub(r'<a href="/volunteer/" style="color: (#[0-9A-F]+); text-decoration: none;', r'<a href="/volunteer/" aria-current="page" style="color: #8F5E12; text-decoration: underline; text-underline-offset: 6px;', t)
     return t + "\n" + body + "\n" + bottom
 
 CSS = """<style>

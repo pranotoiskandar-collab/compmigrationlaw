@@ -1,0 +1,92 @@
+/* Country sheet: one A4 page (794 x 1123 CSS px). Puncak green palette, Figtree. */
+:root{--ink:#172D24;--muted:#3D5A4D;--rule:#B2C7BC;--panel:#E5EEE8;--panel2:#DCE8E1;--bg:#EEF4F0;--accent:#1E6B4A;--dark:#134A33;
+  --strong:#1E6B4A;--part:#B7791F;--none:#8A9A92}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:'Figtree',system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:794px;height:1123px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+p{margin:0}
+ul,ol{margin:0;padding:0}
+.hero{flex:none;position:relative;height:136px;overflow:hidden;background:var(--bg)}
+.hills{position:absolute;left:0;right:0;bottom:0;height:46px}
+.hills svg{width:100%;height:100%;display:block}
+.ht{position:relative;padding:14px 30px 0}
+.org{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dark)}
+h1{font-size:33px;line-height:1.05;margin:6px 0 6px;font-weight:800;letter-spacing:-.01em;max-width:560px}
+.sub{font-size:15px;font-weight:500;color:var(--ink);max-width:520px;line-height:1.3}
+.cols{flex:1;display:grid;grid-template-columns:1.08fr 1fr;gap:22px;padding:12px 30px 2px}
+h2{font-size:17px;margin:0 0 8px;font-weight:800;display:flex;align-items:center;gap:7px;color:var(--dark)}
+h3{font-size:13px;margin:10px 0 4px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.ic{width:26px;height:26px;flex:none;color:var(--accent)}
+.ic.h{width:20px;height:20px}
+.ic.s{width:13px;height:13px;margin-right:4px;vertical-align:-1px}
+.feat{list-style:none}
+.f{display:flex;gap:10px;padding:5px 0;border-bottom:1px solid var(--panel2)}
+.f:last-child{border-bottom:0}
+.f .ic{margin-top:2px}
+.f>div{flex:1}
+.fl{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.fl b{font-size:14.5px}
+.f p{font-size:12.8px;line-height:1.32;color:var(--ink);margin-top:2px}
+.lv{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;display:inline-flex;align-items:center;gap:5px;padding:2px 8px 2px 6px;border-radius:99px}
+.lv i{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid currentColor}
+.v2 .lv{color:var(--strong);background:#E1EFE7}.v2 .lv i{background:currentColor}
+.v1 .lv{color:#8A5A12;background:#F6EBD6}.v1 .lv i{background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+.v0 .lv{color:#4E5C55;background:#ECEFED}
+.small{font-size:10.5px;color:var(--muted);line-height:1.35;margin-top:5px}
+.laws{list-style:none}
+.laws li{font-size:11.6px;line-height:1.3;padding:2px 0 2px 12px;position:relative}
+.laws li:before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;background:var(--accent);border-radius:1px}
+.side{display:flex;flex-direction:column;gap:10px}
+.law .tips{margin-top:14px}
+.law .court{margin-top:14px}
+.help{background:var(--panel);border-radius:10px;padding:12px 14px}
+.hl{list-style:none}
+.hl li{padding:3px 0;border-bottom:1px solid var(--rule)}
+.hl li:last-child{border-bottom:0}
+.hl b{font-size:13px}
+.city{font-size:11px;color:var(--muted)}
+.tel{font-size:15px;font-weight:800;color:var(--dark);margin-top:1px}
+.web{font-size:11.5px;color:var(--accent);font-weight:600}
+.hl p{font-size:10.8px;line-height:1.3;margin-top:1px}
+.none{font-size:12.5px;line-height:1.35;padding:4px 0 6px}
+.tips{border:2px solid var(--accent);border-radius:10px;padding:10px 14px 10px}
+.tips h2{margin-bottom:5px}
+.tips ol{padding-left:18px}
+.tips li{font-size:12.5px;line-height:1.32;margin:2px 0}
+.cases{list-style:none}
+.cases li{padding:4px 0 6px;border-bottom:1px solid var(--panel2)}
+.cases li:last-child{border-bottom:0}
+.cases p{font-size:12px;line-height:1.33}
+.cite{font-size:10px;color:var(--muted);margin-top:2px}
+.foot{flex:none;display:grid;grid-template-columns:auto auto auto;justify-content:space-between;gap:6px 16px;align-items:center;background:var(--ink);color:#E5EEE8;padding:9px 30px}
+.qr{display:flex;align-items:center;gap:9px}
+.qr .code{width:62px;height:62px;background:#fff;padding:3px;border-radius:4px;flex:none}
+.qr .code svg{display:block}
+.qr b{display:block;font-size:11.5px;line-height:1.2;max-width:150px}
+.qr span{display:block;font-size:10.5px;opacity:.85;margin-top:2px}
+.made{grid-column:1/-1;font-size:9.5px;line-height:1.3;opacity:.95}
+.made b{font-size:10.5px;margin-right:4px}
+
+/* Phone image for WhatsApp: one column, bigger type, no fixed height. */
+@media screen and (max-width:600px){
+  .page{width:100%;height:auto;overflow:visible}
+  .hero{height:190px}
+  .hills{height:56px}
+  .ht{padding:16px 18px 0}
+  h1{font-size:30px}
+  .sub{font-size:15px}
+  .cols{display:block;padding:14px 16px 4px}
+  .law{margin-bottom:14px}
+  .side{gap:14px}
+  .f p{font-size:14px}
+  .fl b{font-size:15.5px}
+  .hl p,.cases p,.tips li{font-size:13.5px}
+  .tel{font-size:17px}
+  .foot{grid-template-columns:1fr;padding:14px 16px;margin-top:14px;gap:10px}
+  .made{grid-column:1/-1}
+  .side .help{order:-1}
+}
+/* A4: one court decision fits; the phone image shows two. */
+@media print, screen and (min-width:601px){ .cases li:nth-child(n+2){display:none} }
+@media print, screen and (min-width:601px){ .cases li{border-bottom:0} }

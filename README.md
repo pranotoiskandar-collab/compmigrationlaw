@@ -1,5 +1,7 @@
 # Comparative migration law: theimr.org website and open data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24389324.svg)](https://doi.org/10.5281/zenodo.24389324)
+
 This repository holds the website of the **Institute for Migrant Rights** ([theimr.org](https://theimr.org)) and every dataset it publishes under *Migration Jurisprudence from the South*. Netlify publishes the site automatically whenever the `main` branch changes.
 
 ## What is where
@@ -11,7 +13,7 @@ This repository holds the website of the **Institute for Migrant Rights** ([thei
 | `data/<database>/incoming/` | New material sent in for review. Not offered as a download until an editor merges it into the database. |
 | `data/<database>/sources/` | The working files each database was built from: raw portal listings, verification worksheets, ratification extracts and editors' notes. Kept for transparency; not offered as downloads on the site. |
 | `build/` | The scripts that generated the pages and data. Kept for the record; they were written for the IMR working folder and refer to its paths. |
-| `tools/` | `copy_data.py` copies `data/` into the site at publish time; `press_subdomain.py` prepares the IMR Press pages for press.theimr.org; `check_csv.py` checks that every CSV is well formed; `checks/` holds the checks every pull request runs ([how they work](tools/checks/README.md)); `watch/` reads official sources each week. |
+| `tools/` | `copy_data.py` copies `data/` into the site at publish time; `press_subdomain.py` prepares the IMR Press pages for press.theimr.org; `check_csv.py` checks that every CSV is well formed; `checks/` holds the checks every pull request runs ([how they work](tools/checks/README.md)); `watch/` reads official sources each week; `cite_blocks.py` writes the "How to cite" block on each database page from `citation.json`. |
 | `source-watch/` | Weekly source watch: the official sources it reads and the new decisions, laws and ratification changes it finds ([how it works](source-watch/README.md)). |
 
 When Netlify publishes, `data/<database>/<file>` appears at `https://theimr.org/<database>/data/<file>`. For example, `data/court-decisions/decisions.csv` is served at `https://theimr.org/court-decisions/data/decisions.csv`.
@@ -41,7 +43,11 @@ Data and site text: CC BY 4.0. See [LICENSE.md](LICENSE.md) for the details and 
 
 ## Citing the data
 
-Cite the database page on theimr.org and the date you downloaded it, for example: Institute for Migrant Rights, *Court Decisions* (theimr.org/court-decisions/, accessed 17 November 2026). The history of every file is visible on GitHub.
+Every database page on theimr.org has a "How to cite" block with a citation, BibTeX and the database's version number. To cite the collection as a whole:
+
+> Institute for Migrant Rights (2026). *Migration Jurisprudence from the South: databases of migration and labor law* (Version 2026.11) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24389324
+
+This DOI always points to the newest release. Each GitHub release is also archived on Zenodo with its own DOI (v2026.11: 10.5281/zenodo.24389325); see [docs/RELEASING.md](docs/RELEASING.md) and [CHANGELOG.md](CHANGELOG.md). GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff).
 
 ## Adding data
 

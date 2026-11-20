@@ -1,0 +1,65 @@
+{
+  "_comment": "Settings for the 'How to cite' blocks. Edit, then run: python3 tools/cite_blocks.py. Set 'doi' to the Zenodo concept DOI (the 'Cite all versions' DOI, e.g. 10.5281/zenodo.1234567) after the first GitHub release is archived, and 'collection_version' to the latest release tag without the leading v.",
+  "doi": "10.5281/zenodo.24389324",
+  "collection_version": "2026.11",
+  "collection_title": "Migration Jurisprudence from the South: databases of migration and labor law",
+  "collection_url": "https://theimr.org/databases/",
+  "github": "https://github.com/pranotoiskandar-collab/compmigrationlaw",
+  "authors": [
+    {
+      "organization": "Institute for Migrant Rights"
+    }
+  ],
+  "pages": [
+    {
+      "path": "migration-law",
+      "key": "migration_law",
+      "title": "Migration Law Atlas"
+    },
+    {
+      "path": "court-decisions",
+      "key": "court_decisions",
+      "title": "Court Decisions"
+    },
+    {
+      "path": "gcc",
+      "key": "gulf",
+      "title": "Migrant Workers in the Gulf States: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "east-asia",
+      "key": "east_asia",
+      "title": "Migrant Workers in East Asia: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "southeast-asia",
+      "key": "southeast_asia",
+      "title": "Migrant Workers in Southeast Asia: Migration and Labor Laws in Comparison"
+    },
+    {
+      "path": "countries-of-origin",
+      "key": "countries_of_origin",
+      "title": "Countries of Origin: Emigration and Protection Law and Policy Compared"
+    },
+    {
+      "path": "domestic-workers",
+      "key": "domestic_workers",
+      "title": "Migrant Domestic Workers: International, Regional and National Law Compared"
+    },
+    {
+      "path": "government-hate-speech",
+      "key": "government_hate_speech",
+      "title": "Government Hate Speech: Country Data"
+    },
+    {
+      "path": "government-hate-speech/elections",
+      "key": "hate_speech_voting",
+      "title": "Hate Speech, Voting and the Legal Protection of Non-Citizens"
+    },
+    {
+      "path": "databases",
+      "key": "collection",
+      "collection": true
+    }
+  ]
+}
