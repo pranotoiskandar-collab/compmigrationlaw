@@ -66,7 +66,7 @@ def article(h):
                 "Kutip tulisan ini sebagai: Institute for Migrant Rights, &ldquo;%s&rdquo;, Putusan bulan ini, %s, theimr.org/court-decisions/highlights/%s/.")
         out.append('<p class="ft-note">%s</p>' % (cite % (E(t), mname(h["month"], lang), h["month"])))
         return "\n".join(out)
-    return ('<div class="ft-en">%s</div>\n<div class="ft-id" data-noi18n lang="id">%s</div>' % (side("en"), side("id")))
+    return ('<div class="ft-en" data-noi18n>%s</div>\n<div class="ft-id" data-noi18n lang="id">%s</div>' % (side("en"), side("id")))
 
 
 COPY_JS = """<script>document.addEventListener('click',function(e){var b=e.target.closest('.hl-copy');if(!b)return;var t=b.parentNode.previousElementSibling.textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){window.IMRF&&IMRF.toast(document.documentElement.lang==='id'?'Disalin':'Copied')},function(){var r=document.createRange();r.selectNode(b.parentNode.previousElementSibling);getSelection().removeAllRanges();getSelection().addRange(r)})});</script>"""
@@ -86,7 +86,8 @@ def main():
              "%s: %s" % (h["court_en"], h["body_en"][0][1][:150]), main_html,
              head=CSS + '<script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False),
              scripts='<script src="/assets/features.js" defer></script>\n' + COPY_JS,
-             i18n={"All cases of the month": "Semua putusan bulan ini"})
+             i18n={"All cases of the month": "Semua putusan bulan ini", "IMR Case of the month": "Putusan bulan ini IMR",
+                   h["title_en"] + " · Case of the month": h["title_id"] + " · Putusan bulan ini"})
     items = "".join('<li><a href="/court-decisions/highlights/%s/"><span class="ft-en">%s</span><span class="ft-id" data-noi18n>%s</span>'
                     '<b class="ft-en">%s</b><b class="ft-id" data-noi18n>%s</b><span class="ft-en">%s</span><span class="ft-id" data-noi18n>%s</span></a></li>'
                     % (h["month"], mname(h["month"], "en"), mname(h["month"], "id"), E(h["title_en"]), E(h["title_id"]), E(h["court_en"]), E(h["court_id"])) for h in hs)
@@ -100,7 +101,7 @@ def main():
     page("/court-decisions/highlights/", "Case of the month",
          "One court decision each month from the IMR Court Decisions database, explained in English and Indonesian: what the court decided, why it matters for migrant workers, and what to watch.",
          idx, head=CSS, scripts='<script src="/assets/features.js" defer></script>',
-         i18n={"Court Decisions": "Putusan Pengadilan", "Case of the month": "Putusan bulan ini",
+         i18n={"IMR Case of the month": "Putusan bulan ini IMR", "Court Decisions": "Putusan Pengadilan", "Case of the month": "Putusan bulan ini",
                "Each month we pick one decision from the Court Decisions database and explain, in a few paragraphs, what the court decided, why it matters for migrant workers, and what to watch next. Every write-up comes in English and Indonesian, with a short post you can share.":
                "Setiap bulan kami memilih satu putusan dari basis data Putusan Pengadilan dan menjelaskan dalam beberapa paragraf apa yang diputuskan pengadilan, mengapa putusan tersebut penting bagi pekerja migran, dan apa yang perlu dicermati selanjutnya. Setiap tulisan tersedia dalam bahasa Inggris dan Indonesia, disertai unggahan singkat yang dapat dibagikan.",
                "Follow by RSS": "Ikuti melalui RSS", "All court decisions": "Semua putusan pengadilan"})

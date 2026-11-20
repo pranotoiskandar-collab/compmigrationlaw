@@ -57,7 +57,7 @@ INSTRUMENTS = {
 # Dates the ILO conventions enter into force for a country: twelve months after registration.
 ILO_DELAY_MONTHS = 12
 
-FIELDS = ["iso2", "country", "instrument", "status", "date_signed", "date_ratified", "in_force",
+FIELDS = ["iso2", "country", "instrument", "status", "date_signed", "date_ratified", "binding_now",
           "source", "source_url", "last_checked"]
 
 MONTHS = {m: i for i, m in enumerate(
@@ -158,13 +158,13 @@ def parse_normlex(page, instrument, names, url):
             continue
         low = rest.lower()
         if "denounced" in low or "abrogated" in low:
-            status, in_force = "denounced", "no"
+            status, binding_now = "denounced", "no"
         elif "not in force" in low:
-            status, in_force = "ratified", "no"
+            status, binding_now = "ratified", "no"
         else:
-            status, in_force = "ratified", "yes"
+            status, binding_now = "ratified", "yes"
         out[iso] = {"iso2": iso, "country": cells[0].strip(), "instrument": instrument, "status": status,
-                    "date_signed": "", "date_ratified": date, "in_force": in_force,
+                    "date_signed": "", "date_ratified": date, "binding_now": binding_now,
                     "source": "normlex", "source_url": url}
     return out
 
@@ -185,7 +185,7 @@ def parse_untc(page, instrument, names, url):
         status = "ratified" if ratified else "signed"
         out[iso] = {"iso2": iso, "country": re.sub(r"\s*\d+\s*$", "", cells[0]).strip(), "instrument": instrument,
                     "status": status, "date_signed": signed, "date_ratified": ratified,
-                    "in_force": "yes" if ratified else "no", "source": "untc", "source_url": url}
+                    "binding_now": "yes" if ratified else "no", "source": "untc", "source_url": url}
     return out
 
 
@@ -208,23 +208,23 @@ def seed(names):
                "source_url": meta["url"], "last_checked": "2026-10-30", "date_signed": "", "date_ratified": ""}
         if ins == "ICRMW":
             if code == "S":
-                row.update(status="signed", in_force="no")
+                row.update(status="signed", binding_now="no")
             else:  # the Convention itself is in force since 1 July 2003, so every party is bound
-                row.update(status="ratified", date_ratified=date, in_force="yes")
+                row.update(status="ratified", date_ratified=date, binding_now="yes")
         else:
             row["date_ratified"] = date
             if code == "F":
-                row.update(status="ratified", in_force="yes")
+                row.update(status="ratified", binding_now="yes")
             elif code == "P":
-                row.update(status="ratified", in_force="no")
+                row.update(status="ratified", binding_now="no")
             elif code in ("W", "D"):
                 # The 30 Oct 2026 extract marks five recent C190 registrations as "withdrawn". They are less than
                 # twelve months old, which matches NORMLEX "Not in force" (awaiting entry into force), not a
                 # denunciation: C190 cannot be denounced until ten years after it came into force.
                 if ins == "C190" and date and add_months(date, ILO_DELAY_MONTHS) > now.isoformat():
-                    row.update(status="ratified", in_force="no")
+                    row.update(status="ratified", binding_now="no")
                 else:
-                    row.update(status="denounced", in_force="no")
+                    row.update(status="denounced", binding_now="no")
         rows.append(row)
     return rows
 
@@ -287,12 +287,12 @@ def main():
             k = (ins, iso)
             before = current.get(k)
             new["last_checked"] = today()
-            compare = ("status", "date_signed", "date_ratified", "in_force")
+            compare = ("status", "date_signed", "date_ratified", "binding_now")
             if before is None or any(before.get(c, "") != new[c] for c in compare):
                 changes.append({"date_seen": today(), "instrument": ins, "iso2": iso, "country": new["country"],
                                 "change": "new" if before is None else "updated",
-                                "before": "" if before is None else "%s %s %s" % (before["status"], before["date_ratified"] or before["date_signed"], before["in_force"]),
-                                "after": "%s %s %s" % (new["status"], new["date_ratified"] or new["date_signed"], new["in_force"])})
+                                "before": "" if before is None else "%s %s %s" % (before["status"], before["date_ratified"] or before["date_signed"], before["binding_now"]),
+                                "after": "%s %s %s" % (new["status"], new["date_ratified"] or new["date_signed"], new["binding_now"])})
             if before is not None:
                 new["country"] = before["country"]  # keep the established spelling
             current[k] = new

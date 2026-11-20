@@ -1,4 +1,4 @@
-iso2,country,instrument,status,date_signed,date_ratified,in_force,source,source_url,last_checked
+iso2,country,instrument,status,date_signed,date_ratified,binding_now,source,source_url,last_checked
 AL,Albania,C097,ratified,,2005-03-02,yes,normlex,https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:11300:0::NO::P11300_INSTRUMENT_ID:312242,2026-10-30
 DZ,Algeria,C097,ratified,,1962-10-19,yes,normlex,https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:11300:0::NO::P11300_INSTRUMENT_ID:312242,2026-10-30
 AM,Armenia,C097,ratified,,2006-01-27,yes,normlex,https://normlex.ilo.org/dyn/nrmlx_en/f?p=NORMLEXPUB:11300:0::NO::P11300_INSTRUMENT_ID:312242,2026-10-30

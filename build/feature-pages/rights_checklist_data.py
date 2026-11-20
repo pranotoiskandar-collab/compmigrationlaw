@@ -201,7 +201,7 @@ def main():
                 c["groups"].append({"k": g, "id": GROUP_ID[g][0], "en": GROUP_ID[g][1], "db": db, "items": items})
         for r in rat:
             if r["iso2"] == iso:
-                c["treaties"][r["instrument"]] = {"s": r["status"], "d": r["date_ratified"] or r["date_signed"], "f": r["in_force"]}
+                c["treaties"][r["instrument"]] = {"s": r["status"], "d": r["date_ratified"] or r["date_signed"], "f": r["binding_now"]}
         out["countries"].append(c)
 
     origin = []

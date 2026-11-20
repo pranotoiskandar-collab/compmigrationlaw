@@ -64,6 +64,8 @@ MAIN = r"""<main id="ratifications">
 </main>"""
 
 I18N = {
+    "Ratification table": "Tabel ratifikasi",
+    "e.g. Indonesia": "misalnya Indonesia",
     "Migration Jurisprudence from the South · Tools": "Pandangan Hukum Migrasi dari Dunia Berkembang · Alat",
     "Ratification tracker": "Pelacak ratifikasi",
     "Which states have joined the five treaties written for migrant workers: the ILO Migration for Employment Convention (C97), the ILO Migrant Workers Convention (C143), the ILO Domestic Workers Convention (C189), the ILO Violence and Harassment Convention (C190), and the UN Migrant Workers Convention (ICRMW).":

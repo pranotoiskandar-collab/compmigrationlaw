@@ -29,7 +29,7 @@
     var y = (r.date_ratified || r.date_signed || '').slice(0, 4), cls, tip;
     if (r.status === 'denounced') { cls = 'ft-den'; tip = T[l].den; }
     else if (r.status === 'signed') { cls = 'ft-sig'; tip = T[l].signed; }
-    else if (r.in_force === 'yes') { cls = 'ft-yes'; tip = T[l].inforce; }
+    else if (r.binding_now === 'yes') { cls = 'ft-yes'; tip = T[l].inforce; }
     else { cls = 'ft-wait'; tip = T[l].wait; }
     var d = F.date(r.date_ratified || r.date_signed, l);
     return '<td><span class="ft-pill ' + cls + '" title="' + esc(tip + ' · ' + d) + '">' + esc(y) + '<span class="visually-hidden" style="position:absolute;left:-9999px"> ' + esc(tip) + '</span></span></td>';
