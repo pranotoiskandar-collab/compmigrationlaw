@@ -15,6 +15,7 @@ Corrections to a published file (`data/<database>/*.csv`) are welcome too. Edit 
 - **CSV, UTF-8, comma separated**, with one header row. Every row has the same number of columns as the header.
 - **Column names** in lowercase with underscores (`case_no`, `official_link`).
 - **Dates** as `YYYY-MM-DD`. If only the year is known, write `YYYY`.
+- **When a row is accepted** into a published file it gets an `id` and a `last_checked` date (the day someone confirmed it against the official link; `checked_on` in incoming files). See `data/README.md`.
 - **Countries** as two-letter ISO 3166 codes (`JP`, `KR`, `AE`).
 - **One source link per row**, pointing to the official text (court, legislature, ministry, ILO, UN). Secondary sources are allowed only when no official one exists; say so in a `note` column.
 - Use the column names and codes in that database's `codebook.csv` wherever they fit. New columns are fine in `incoming/`; explain them in the pull request.
