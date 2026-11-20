@@ -27,8 +27,8 @@ def shell():
     m = re.search(r'<figure class="imr-band.*?</figure>', t, re.S)
     if m:
         band = m.group(0)
-    head = head.replace(' aria-current="page" style="color: #8F5E12; text-decoration: underline; text-underline-offset: 6px; padding: 10px 0"',
-                        ' style="color: #2E2116; text-decoration: none; padding: 10px 0"')
+    head = head.replace(' aria-current="page" style="color: #1E6B4A; text-decoration: underline; text-underline-offset: 6px; padding: 10px 0"',
+                        ' style="color: #172D24; text-decoration: none; padding: 10px 0"')
     # relative links on Contact -> absolute, since the new pages live in folders
     for f in ('publications.html', 'people.html', 'contact.html', 'favicon.ico', 'favicon-32.png', 'apple-touch-icon.png'):
         head = head.replace(f'href="{f}"', f'href="/{f}"')
@@ -267,6 +267,14 @@ def build():
              '<p class="ft-note">' + T('We use your address only for these emails. We never add addresses we did not receive from you, and we never share them.',
                                        'Alamat anda hanya kami pakai untuk surel ini. Kami tidak pernah menambahkan alamat yang tidak anda berikan sendiri, '
                                        'dan tidak pernah membagikannya.') + '</p></form>'
+             + '<h2>' + T('Or follow with a feed reader (RSS)', 'Atau ikuti melalui pembaca umpan (RSS)') + '</h2>'
+             '<p class="ft-note">' + T('No email needed. Paste one of these addresses into a feed reader such as Feedly, Inoreader or Thunderbird.',
+                                       'Tanpa surel. Tempelkan salah satu alamat ini ke aplikasi pembaca umpan (feed reader), misalnya Feedly, Inoreader, atau Thunderbird.') + '</p>'
+             '<ul class="ft-note"><li><a href="/feeds/decisions.xml">' + T('New court decisions', 'Putusan pengadilan baru') + '</a></li>'
+             '<li><a href="/updates/feed.xml">' + T('What is new in the databases (monthly)', 'Kabar baru di basis data (bulanan)') + '</a></li>'
+             '<li><a href="/feed.xml">' + T('Migration and farmworker law news', 'Berita hukum migrasi dan buruh tani') + '</a></li></ul>'
+             '<div class="ft-pick"><label>' + T('Feed for one country', 'Umpan untuk satu negara') + '<select id="fd-c"></select></label>'
+             '<p class="ft-chk-b" style="margin:0 0 10px"><a id="fd-link" href="/feeds/c/ID.xml">/feeds/c/ID.xml</a></p></div>'
              + (('<p class="ft-note">' + T('Prefer one email a month about everything?', 'Lebih suka satu surel sebulan tentang semuanya?') +
                  ' <a href="/updates/">' + T('Monthly updates', 'Kabar bulanan') + '</a></p>') if os.path.isdir(os.path.join(SITE, 'updates')) else '')
              + '</div>')
