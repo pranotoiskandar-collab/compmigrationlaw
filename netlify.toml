@@ -1,6 +1,6 @@
 [build]
   publish = "site"
-  command = "python3 tools/copy_data.py && python3 tools/features/publish.py && python3 tools/optimize_site.py && python3 tools/press_subdomain.py"
+  command = "python3 tools/copy_data.py && python3 tools/features/publish.py && python3 build/growth-pages/publish.py && python3 tools/optimize_site.py && python3 tools/press_subdomain.py"
 
 # Speed on weak networks (see tools/optimize_site.py and site/sw.js).
 # Fonts and the map libraries never change under the same name, so phones may keep them.
