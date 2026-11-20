@@ -181,7 +181,8 @@ def main():
 
     # 2. Laws and policies, with the official link the database gives
     for path, page in (("southeast-asia/domestic-laws.csv", "/southeast-asia/"), ("east-asia/domestic-laws.csv", "/east-asia/"),
-                       ("gcc/domestic-laws.csv", "/gcc/"), ("countries-of-origin/laws-policies.csv", "/countries-of-origin/")):
+                       ("gcc/domestic-laws.csv", "/gcc/"), ("countries-of-origin/laws-policies.csv", "/countries-of-origin/"),
+                       ("migration-law/national-laws.csv", "/migration-law/national-laws/")):
         for r in rows(path):
             laws.append(dict(c=r["s"], ti=r["title"], or_=r.get("orig", ""), y=r.get("year", ""),
                              tp=short(r.get("topic", ""), 240), u=r.get("url", ""), p=page,

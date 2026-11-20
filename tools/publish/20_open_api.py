@@ -35,7 +35,7 @@ TITLES = {
 COUNTRY_COLS = ["country", "iso3", "s", "state", "gcc", "gcc_state", "origin", "destination", "jurisdiction", "o",
                 "partner", "countries"]
 SKIP_FILES = {"codebook.csv", "protection-codebook.csv", "argument-codes.csv", "reasoning-tools.csv", "duplicates.csv",
-              "sources.csv", "demography-sources.csv"}
+              "sources.csv", "demography-sources.csv", "national-laws-codebook.csv"}
 
 
 def published_csvs():

@@ -23,7 +23,7 @@
     en: {add: '+ Add to reading list', added: '✓ In your reading list', saveS: '☆ Save this search', savedS: '★ Search saved', open: 'My reading list',
       toastAdd: 'Added to your reading list (kept in this browser only)', toastS: 'Search saved (kept in this browser only)', full: 'Could not save: this browser blocks storage.'},
     id: {add: '+ Tambahkan ke daftar bacaan', added: '✓ Ada di daftar bacaan anda', saveS: '☆ Simpan pencarian ini', savedS: '★ Pencarian tersimpan', open: 'Daftar bacaan saya',
-      toastAdd: 'Ditambahkan ke daftar bacaan (hanya tersimpan di peramban ini)', toastS: 'Pencarian tersimpan (hanya di peramban ini)', full: 'Tidak dapat menyimpan: peramban ini memblokir penyimpanan.'}
+      toastAdd: 'Ditambahkan ke daftar bacaan (hanya tersimpan di peramban ini)', toastS: 'Pencarian tersimpan (hanya di peramban ini)', full: 'Tidak bisa menyimpan: peramban ini memblokir penyimpanan.'}
   };
   function toast(m) {
     var t = document.createElement('div'); t.setAttribute('role', 'status'); t.setAttribute('data-noi18n', '');

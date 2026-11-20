@@ -8,6 +8,16 @@ The databases keep their own version numbers. Each release lists them, so a
 reader can match a citation such as "Court Decisions, version 0.1" to the
 archived files.
 
+## Unreleased (since v2026.11)
+
+Not yet archived on Zenodo. A new release (for example `v2026.11.1`) would capture these changes.
+
+- 20 November 2026: every incoming row waiting in `data/*/incoming/` was published.
+  - Court Decisions: 1,540 → 1,912 decisions (372 new, all "Unverified: unchecked candidate"): Supreme Court of Chile 162, Nauru 144 (PacLII, a secondary source), Philippines unpaid wages 32, Fiji 12, UN treaty bodies 15, East African Court of Justice 1, Australia 3, New Zealand 2, Vanuatu 1.
+  - New table `data/migration-law/national-laws.csv` (133 national laws of 25 states without a regional page), shown at /migration-law/national-laws/.
+  - Migration Law Atlas: 14 regional instruments added (97 → 111 norms).
+  - Countries of Origin: 8 laws added (44 → 52), 9 links to the official text. Gulf States: 5 Qatar labour agreements added, 15 official ratification-decree links.
+
 ## v2026.11 (20 November 2026)
 
 Zenodo: https://doi.org/10.5281/zenodo.24389325 (this release); https://doi.org/10.5281/zenodo.24389324 (all versions).
