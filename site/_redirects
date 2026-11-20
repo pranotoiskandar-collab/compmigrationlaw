@@ -14,11 +14,3 @@ https://www.theimr.org/press/*  https://press.theimr.org/:splat  301!
 /atlas                    /migration-law/?lens=farm  301
 /atlas/                   /migration-law/?lens=farm  301
 /atlas/index.html         /migration-law/?lens=farm  301
-
-# Merged duplicate court decisions (data/court-decisions/duplicates.csv)
-/court-decisions/d/c-h-sg-2020-sghc-187/  /court-decisions/d/sg-parti-liyani-2020/  301!
-/court-decisions/d/c-h-sg-2020-sghc-187  /court-decisions/d/sg-parti-liyani-2020/  301!
-/court-decisions/d/c-h-hk-ga-2014/  /court-decisions/d/hk-ga-2014/  301!
-/court-decisions/d/c-h-hk-ga-2014  /court-decisions/d/hk-ga-2014/  301!
-/court-decisions/d/c-h-kr-ccourt-2007hun-ma1083-2011/  /court-decisions/d/kr-eps-2011/  301!
-/court-decisions/d/c-h-kr-ccourt-2007hun-ma1083-2011  /court-decisions/d/kr-eps-2011/  301!
