@@ -1,0 +1,117 @@
+{
+ "bd-laws-chronological": {
+  "detail": "checked by hand: the site does not answer GitHub within 60 seconds; open the chronological index",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "eacj-cases": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "id-jdih-kemnaker": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "ilo-c097-status": {
+  "detail": "checked by hand: NORMLEX refuses automated visits (HTTP 403); compare the ratification table with the Atlas",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "ilo-c143-status": {
+  "detail": "checked by hand: NORMLEX refuses automated visits (HTTP 403); compare the ratification table with the Atlas",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "ilo-c189-status": {
+  "detail": "checked by hand: NORMLEX refuses automated visits (HTTP 403); compare the ratification table with the Atlas",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "jp-courts-latest": {
+  "detail": "checked by hand: the judgment search only shows results after scripts run in a browser; search \u51fa\u5165\u56fd\u7ba1\u7406 sorted by date",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "ke-kenyalaw-immigration": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "kr-lawgo-api": {
+  "detail": "needs a key: add the repository secret LAWGO_OC (see source-watch/README.md)",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "kw-moj-laws": {
+  "detail": "checked by hand: the page shows a captcha",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "np-lawcommission": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "om-mjla-laws": {
+  "detail": "checked by hand: the law list is filled in by scripts; open it in a browser",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "om-mol-decisions": {
+  "detail": "checked by hand: the decision list is filled in by scripts; open it in a browser",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "ph-dmw-issuances": {
+  "detail": "checked by hand: the issuances page is filled in by scripts; open it in a browser",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "ph-sc-elibrary": {
+  "detail": "checked by hand: the E-Library refuses automated visits (HTTP 403); open the month list and look for overseas-work cases",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "sa-hrsd-decisions": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "sg-elitigation-fdw": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "sg-elitigation-fmw": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "ug-ulii-immigration": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "un-icrmw-status": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "za-concourt-ccspace": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ },
+ "za-dha-directives": {
+  "detail": "checked by hand: the site refuses connections from GitHub; open the immigration directives page",
+  "since": "2026-11-20",
+  "status": "fail"
+ },
+ "zm-zambialii-immigration": {
+  "detail": "ok",
+  "since": "2026-11-20",
+  "status": "ok"
+ }
+}
