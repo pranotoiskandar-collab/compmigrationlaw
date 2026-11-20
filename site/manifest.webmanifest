@@ -1,0 +1,24 @@
+{
+  "name": "Institute for Migrant Rights",
+  "short_name": "IMR",
+  "description": "Free legal help and open legal data for migrant workers: Legal Clinic, rights checklists, help contacts and the Migration Jurisprudence from the South databases.",
+  "id": "/",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#E5EEE8",
+  "theme_color": "#172D24",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "government", "reference"],
+  "icons": [
+    {"src": "/assets/app/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/assets/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/assets/app/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Legal Clinic / Klinik Hukum", "url": "/legal-clinic/", "icons": [{"src": "/assets/app/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Know your rights before you go / Kenali hak anda", "url": "/rights-checklist/", "icons": [{"src": "/assets/app/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Find free legal help / Cari bantuan hukum", "url": "/legal-help/", "icons": [{"src": "/assets/app/icon-192.png", "sizes": "192x192"}]}
+  ]
+}

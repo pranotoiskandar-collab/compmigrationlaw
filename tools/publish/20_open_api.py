@@ -28,6 +28,7 @@ TITLES = {
     "southeast-asia": "Southeast Asia", "countries-of-origin": "Countries of Origin",
     "domestic-workers": "Migrant Domestic Workers", "government-hate-speech": "Government Hate Speech",
     "government-hate-speech/elections": "Elections and non-citizens", "africa": "Africa",
+    "ratifications": "Ratification tracker",
     "plain-summaries": "Laws in plain words (Indonesian summaries)",
 }
 # Columns that name a state. Values may be names, ISO-2 or ISO-3 codes, or lists.
