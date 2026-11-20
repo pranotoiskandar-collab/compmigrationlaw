@@ -1,0 +1,47 @@
+name: Monthly database update
+# On the 1st of each month, write last month's "What's new in the databases" issue
+# (web page in site/updates/, email in newsletter/) and open a pull request for an editor.
+# Nothing is emailed here.
+on:
+  schedule:
+    - cron: "0 3 1 * *"   # 03:00 UTC on the 1st = 10:00 in Jakarta
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month to write, as YYYY-MM (leave empty for last month)"
+        required: false
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Write the issue
+        id: write
+        run: |
+          MONTH="${{ github.event.inputs.month }}"
+          if [ -z "$MONTH" ]; then MONTH=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y-%m); fi
+          echo "month=$MONTH" >> "$GITHUB_OUTPUT"
+          python3 tools/digest/digest.py --month "$MONTH"
+      - name: Open a pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: digest/${{ steps.write.outputs.month }}
+          commit-message: "Monthly database update: ${{ steps.write.outputs.month }}"
+          title: "Monthly database update: ${{ steps.write.outputs.month }}"
+          body: |
+            The monthly "What's new in the databases" issue for ${{ steps.write.outputs.month }}, written automatically from the changes to `data/`.
+
+            - Web page: `site/updates/${{ steps.write.outputs.month }}/index.html`
+            - Email: `newsletter/${{ steps.write.outputs.month }}/email.html`
+
+            Optional: add a short editor's note in `tools/digest/notes/${{ steps.write.outputs.month }}.json` and re-run this workflow.
+            Merging publishes the page. If Buttondown is connected, the email then appears there as a draft for one person to send.
+          assignees: pranotoiskandar-collab
