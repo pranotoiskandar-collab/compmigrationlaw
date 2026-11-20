@@ -7,7 +7,7 @@ t='''# Institute for Migrant Rights (IMR)
 - [Migration Jurisprudence from the South](https://theimr.org/court-decisions/): about 500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
 - [All decisions, one page each](https://theimr.org/court-decisions/d/)
 - [Migration Law Atlas](https://theimr.org/migration-law/): global, regional and national migration law, ratifications, country profiles
-- [Farmworker Norms Atlas](https://theimr.org/atlas/): ranked international, regional and national norms on farm work
+- [Farmworker Norms Atlas](https://theimr.org/migration-law/?lens=farm): ranked international, regional and national norms on farm work
 - [Gulf States](https://theimr.org/gcc/): migration and labor laws in comparison, six Gulf states
 - [East Asia](https://theimr.org/east-asia/): Taiwan, South Korea, Hong Kong and Japan
 - [Countries of Origin](https://theimr.org/countries-of-origin/): emigration and protection law in eight countries of origin
