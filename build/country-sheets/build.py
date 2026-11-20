@@ -300,7 +300,8 @@ def index_page(done, today):
 <ul class="cs-grid">{"".join(cards)}</ul>
 <div class="cs-how">
 <h2>Where the content comes from</h2>
-<p>The sheets are made automatically from our open data: the <a href="/countries-of-origin/">Countries of Origin</a> database (law), the <a href="/legal-help/">Find legal help</a> directory (help, with phone numbers only where checked), and <a href="/court-decisions/">Court Decisions</a> (summaries). The short answers restate the database codes in everyday words; the database pages give the legal sources. This is general information, not legal advice. Last made on {nice_date(today, "en")}.</p>
+<p>The sheets are made automatically from our open data: the <a href="/countries-of-origin/">Countries of Origin</a> database (law), the <a href="/legal-help/">Find legal help</a> directory (help, with phone numbers only where checked), and <a href="/court-decisions/">Court Decisions</a> (summaries). The short answers restate the database codes in everyday words; the database pages give the legal sources. This is general information, not legal advice.</p>
+<p>Last made on: <span data-noi18n>{today.isoformat()}</span></p>
 <p>Free to copy, print and share under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. To suggest a correction, <a href="/contact.html">write to us</a>.</p>
 </div>
 </main>
@@ -316,6 +317,20 @@ def i18n_block():
             'Satu halaman untuk setiap negara. Setiap lembar menjelaskan dengan bahasa sederhana apa yang dijanjikan hukum negara asal pekerja sebelum keberangkatan dan selama di luar negeri, mencantumkan bantuan gratis dengan nomor telepon yang telah diperiksa, serta meringkas putusan pengadilan yang membantu pekerja. Klinik hukum, serikat pekerja, perwakilan, dan keluarga dapat mencetaknya atau mengirimkannya melalui WhatsApp.',
         'Where the content comes from': 'Asal isi lembar',
         'Image for WhatsApp': 'Gambar untuk WhatsApp',
+        'English · PDF': 'Bahasa Inggris · PDF',
+        'Bahasa Indonesia · PDF': 'Bahasa Indonesia · PDF',
+        'Country sheets to print and share · Institute for Migrant Rights': 'Lembar negara untuk dicetak dan dibagikan · Institute for Migrant Rights',
+        'Philippines': 'Filipina', 'Viet Nam': 'Vietnam', 'Indonesia': 'Indonesia', 'Nepal': 'Nepal',
+        'Bangladesh': 'Bangladesh', 'India': 'India', 'Sri Lanka': 'Sri Lanka', 'Pakistan': 'Pakistan',
+        'The sheets are made automatically from our open data: the': 'Lembar ini dibuat secara otomatis dari data terbuka kami, yakni basis data',
+        'database (law), the': '(hukum), direktori',
+        'directory (help, with phone numbers only where checked), and': '(bantuan, dengan nomor telepon hanya jika telah diperiksa), serta',
+        '(summaries). The short answers restate the database codes in everyday words; the database pages give the legal sources. This is general information, not legal advice.':
+            '(ringkasan). Jawaban singkat merupakan penjelasan kode basis data dalam bahasa sehari-hari; halaman basis data memuat sumber hukumnya. Lembar ini merupakan informasi umum, bukan nasihat hukum.',
+        'Last made on:': 'Terakhir dibuat pada:',
+        'Free to copy, print and share under': 'Bebas disalin, dicetak, dan dibagikan dengan lisensi',
+        '. To suggest a correction,': '. Untuk mengusulkan koreksi,',
+        'write to us': 'hubungi kami',
         'One-page country sheets to print or send on WhatsApp →': 'Lembar negara satu halaman untuk dicetak atau dikirim melalui WhatsApp →',
     }
     return d
