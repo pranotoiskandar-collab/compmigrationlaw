@@ -55,6 +55,12 @@ def press_path(path):
     return MAIN + path
 
 
+def before_last_body(html, text):
+    """Insert before the LAST </body>; an earlier one may sit inside a JS string (print or Word copies)."""
+    b = html.rfind("</body>")
+    return html if b < 0 else html[:b] + text + html[b:]
+
+
 def fix_press_page(html):
     if MARK in html:  # already adjusted in this publish
         return html
@@ -65,7 +71,7 @@ def fix_press_page(html):
     if MARK not in html:
         html = html.replace("<script data-goatcounter=", MARK + GOAT_PREFIX + LANG_CARRY + "<script data-goatcounter=", 1)
         if MARK not in html:
-            html = html.replace("</body>", MARK + LANG_CARRY + "</body>", 1)
+            html = before_last_body(html, MARK + LANG_CARRY)
     return html
 
 
@@ -73,7 +79,7 @@ def fix_main_page(html):
     html = re.sub(r'(=")/press/', r'\1' + SUB + "/", html)
     html = html.replace(MAIN + "/press/", SUB + "/")
     if MARK not in html and SUB in html:
-        html = html.replace("</body>", MARK + LANG_CARRY + "</body>", 1)
+        html = before_last_body(html, MARK + LANG_CARRY)
     return html
 
 

@@ -43,7 +43,8 @@ jobs:
 
       - name: Build the site as Netlify does
         working-directory: head
-        run: python3 tools/copy_data.py && python3 tools/press_subdomain.py
+        # The same steps as the build command in netlify.toml, so a publish step that breaks a page is caught here.
+        run: python3 tools/copy_data.py && python3 tools/features/publish.py && python3 build/growth-pages/publish.py && python3 tools/optimize_site.py && python3 tools/phone_compat.py && python3 tools/press_subdomain.py
       - name: Python scripts compile
         working-directory: head
         run: python3 -m py_compile tools/*.py tools/checks/*.py tools/watch/*.py
@@ -55,7 +56,11 @@ jobs:
         if: steps.base.outcome == 'success'
         continue-on-error: true
         working-directory: base
-        run: python3 tools/copy_data.py && (test ! -f tools/press_subdomain.py || python3 tools/press_subdomain.py)
+        run: |
+          python3 tools/copy_data.py
+          for s in tools/features/publish.py build/growth-pages/publish.py tools/optimize_site.py tools/phone_compat.py tools/press_subdomain.py; do
+            if [ -f "$s" ]; then python3 "$s"; fi
+          done
 
       - name: Check data, links and English/Indonesian text
         run: |

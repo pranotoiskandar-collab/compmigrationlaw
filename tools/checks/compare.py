@@ -144,7 +144,7 @@ def main():
 
     errors = [p for p in new if p["level"] == "error"]
     warnings = [p for p in new if p["level"] != "error"]
-    names = {"data": "Data files", "links": "Links", "i18n": "English and Indonesian", "browser": "Pages in a browser",
+    names = {"data": "Data files", "links": "Links", "i18n": "English and Indonesian", "browser": "Pages in a browser", "phone": "Pages on a small phone",
              "hosts": "Site addresses", "external": "External links (new in this pull request)"}
 
     lines = ["## Site checks", ""]

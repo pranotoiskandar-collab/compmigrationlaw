@@ -2020,7 +2020,7 @@ function survCfg(farm){
 const INCOME_ORDER = ["High income","Upper middle income","Lower middle income","Low income"];
 const INCOME_ID = {"High income":"Pendapatan tinggi","Upper middle income":"Pendapatan menengah atas","Lower middle income":"Pendapatan menengah bawah","Low income":"Pendapatan rendah"};
 const REGION_ID = {Africa:"Afrika",Americas:"Amerika",Asia:"Asia",Europe:"Eropa",Oceania:"Oseania"};
-function implShare(c){ const rs=(IMPL[c]?.rows||[]).filter(r=>"FPG".includes(r[3])); if(rs.length<3) return null; return 100*rs.reduce((s,r)=>s+(r[3]==="F"?1:r[3]==="P"?.5:0),0)/rs.length; }
+function implShare(c){ const rs=((IMPL[c]&&IMPL[c].rows)||[]).filter(r=>"FPG".includes(r[3])); if(rs.length<3) return null; return 100*rs.reduce((s,r)=>s+(r[3]==="F"?1:r[3]==="P"?.5:0),0)/rs.length; }
 function statRows(){
   return C.map(d => {
     const cv = COV[d.c] || {}, r = {id:d.c, region:UNREGION[d.c]||null, sc:d.sc, br:d.br, en:d.en, n:d.n, nf:d.nf,
@@ -2104,7 +2104,7 @@ const TOPO = {"type":"Topology","objects":{"countries":{"type":"GeometryCollecti
 
 /* ---------- helpers ---------- */
 const $ = s => document.querySelector(s);
-const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const fmt = s => { if(!s) return "—"; const p=s.split("-"); return p.length===3 ? `${+p[2]} ${MON[p[1]-1]} ${p[0]}` : p.length===2 ? `${MON[p[1]-1]} ${p[0]}` : p[0]; };
 const yr = s => { if(!s) return null; const p=s.split("-").map(Number); return p[0] + ((p[1]||6)-1)/12 + ((p[2]||15)-1)/365; };
@@ -2177,7 +2177,7 @@ const STATUS = {F:"In force",W:"Ratified, not yet in force",D:"Denounced",P:"Par
 const FARM=["C11","C99","C110","C129","C141","C184"], REL=["C169","C170","C181","C190","P29","ICESCR","ICRMW"], BASKET=FARM.concat(REL);
 const INAME = {C11:"Right of Association (Agriculture), 1921",C99:"Minimum Wage Fixing Machinery (Agriculture), 1951",C110:"Plantations, 1958",C129:"Labour Inspection (Agriculture), 1969",C141:"Rural Workers' Organisations, 1975",C184:"Safety and Health in Agriculture, 2001",C169:"Indigenous and Tribal Peoples, 1989",C170:"Chemicals, 1990",C181:"Private Employment Agencies, 1997",C190:"Violence and Harassment, 2019",P29:"Protocol to the Forced Labour Convention, 2014",ICESCR:"Covenant on Economic, Social and Cultural Rights, 1966",ICRMW:"Migrant Workers Convention, 1990"};
 const CBY = Object.fromEntries(C.map(d=>[d.c,d]));
-const RBY = {}; for (const k in RATS) for (const [c,d,f] of RATS[k]) (RBY[c] ??= {})[k]=[d,f];
+const RBY = {}; for (const k in RATS) for (const [c,d,f] of RATS[k]) (RBY[c] || (RBY[c] = {}))[k]=[d,f];
 const EU27 = ["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland","Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"];
 const NATMAP = {"United States":"United States of America","United States (California)":"United States of America","South Korea":"Republic of Korea"};
 const natFor = c => lensRows("N").filter(d => { const k=d.fam.replace("National: ",""); return (NATMAP[k]||k)===c; });
@@ -2270,7 +2270,7 @@ function drawCorr(){
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-corr]"); if(b){ CORSEL=+b.dataset.corr; drawCorr(); } });
 const impRat = (c,v) => { if(!v.startsWith("@")) return v; const k=v.slice(1), r=(RBY[c]||{})[k]; return r?(r[1]==="S"?"Signed only":r[1]==="D"?r[0]+" (denounced)":r[0]+(r[1]==="W"?" (not yet in force)":"")):"Not ratified"; };
-const impRows = c => (IMPL[c]?.rows||[]).filter(r=>LENS!=="farm"||r[5]);
+const impRows = c => ((IMPL[c]&&IMPL[c].rows)||[]).filter(r=>LENS!=="farm"||r[5]);
 const impLabel = c => c==="United States of America"?"United States":c;
 let IMPC="Indonesia";
 function drawImpl(){
@@ -2363,7 +2363,7 @@ function openCountry(name, setHash=true){
     <p class="note">Source: ILO NORMLEX and UN Treaty Collection, collected 30 October 2026.</p>`;
   openDrawer("Country profile", name, "", html);
   $("#dl-prof").onclick=()=>save(`farmworker-atlas_${slug(name)}.csv`, toCSV(["country","instrument","instrument_name","farm_specific","date","status","years_after_adoption","overall_score","breadth","enthusiasm","rank"],
-    BASKET.map(k=>{const r=rb[k],cl=d.cells[k]; return [name,k,INAME[k],FARM.includes(k)?"yes":"no",r?r[0]:"",r?STATUS[r[1]]:"Not ratified",cl&&cl[2]!=null?cl[2]:"",d.sc,d.br,d.en,d.rk??""];})));
+    BASKET.map(k=>{const r=rb[k],cl=d.cells[k]; return [name,k,INAME[k],FARM.includes(k)?"yes":"no",r?r[0]:"",r?STATUS[r[1]]:"Not ratified",cl&&cl[2]!=null?cl[2]:"",d.sc,d.br,d.en,(d.rk==null?"":d.rk)];})));
   if($("#pr-prof")) $("#pr-prof").onclick=printDrawer;
 }
 document.addEventListener("click",e=>{
@@ -2374,7 +2374,7 @@ document.addEventListener("click",e=>{
 
 /* ---------- norm detail ---------- */
 function normRecord(d){
-  return [LEVEL[d.lvl], d.sys, d.rank??"", d.b*d.rm, d.b*d.r, d.name, d.cite, d.fam, d.b, d.rm, d.r, d.topics.join("; "), d.inFarm?"yes":"no", d.a, d.e||"", d.rat??"", d.farm, d.why, d.link||""];
+  return [LEVEL[d.lvl], d.sys, (d.rank==null?"":d.rank), d.b*d.rm, d.b*d.r, d.name, d.cite, d.fam, d.b, d.rm, d.r, d.topics.join("; "), d.inFarm?"yes":"no", d.a, d.e||"", (d.rat==null?"":d.rat), d.farm, d.why, d.link||""];
 }
 const NORMHEAD=["tier","regional_system","rank_in_current_view","score_migration","score_farm","name","citation","family","binding_or_authority","migration_relevance","farm_relevance","topics","in_farmworker_subset","adopted_or_published","in_force","ratifications","provisions_or_findings","drivers_or_influence","link"];
 const PFX = () => LENS==="farm" ? "farmworker-atlas" : "migration-atlas";
