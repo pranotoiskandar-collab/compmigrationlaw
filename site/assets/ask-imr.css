@@ -1,0 +1,45 @@
+/* Ask IMR (Tanya IMR) on the Legal Clinic page. Puncak green palette. */
+#ask-imr{max-width:1120px;margin:0 auto 40px;padding:0 24px;box-sizing:border-box;font-family:'Figtree',system-ui,sans-serif;color:#172D24;scroll-margin-top:16px}
+#ask-imr .ai-in{background:#FFFFFF;border:1px solid #B2C7BC;border-top:4px solid #1E6B4A;border-radius:6px;padding:24px clamp(16px,3vw,32px) 28px}
+#ask-imr .ai-eb{margin:0;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#1E6B4A;font-weight:600}
+#ask-imr h2{margin:6px 0 4px;font-size:clamp(24px,3.2vw,30px);line-height:1.2;font-weight:600;letter-spacing:-.01em}
+#ask-imr .ai-sub{margin:0 0 16px;color:#2E493D;font-size:17px;line-height:1.5;max-width:760px}
+#ask-imr .ai-form{display:flex;gap:8px;flex-wrap:wrap}
+#ask-imr input{flex:1 1 260px;min-width:0;font:inherit;font-size:18px;padding:12px 14px;border:2px solid #7F9A8C;border-radius:6px;background:#FFFFFF;color:#172D24}
+#ask-imr input:focus{outline:3px solid #1E6B4A;outline-offset:1px;border-color:#1E6B4A}
+#ask-imr .ai-form button{font:inherit;font-size:18px;font-weight:600;padding:12px 22px;border:0;border-radius:6px;background:#1E6B4A;color:#FFFFFF;cursor:pointer}
+#ask-imr .ai-form button:hover{background:#134A33}
+#ask-imr .ai-try{margin:14px 0 6px;font-size:14px;color:#3D5A4D}
+#ask-imr .ai-chips{display:flex;flex-wrap:wrap;gap:6px}
+#ask-imr .ai-chip{font:inherit;font-size:15px;padding:7px 12px;border:1px solid #B2C7BC;border-radius:999px;background:#EEF4F0;color:#172D24;cursor:pointer;text-align:left}
+#ask-imr .ai-chip:hover,#ask-imr .ai-chip.on{background:#1E6B4A;border-color:#1E6B4A;color:#FFFFFF}
+#ask-imr .ai-chip:focus-visible,#ask-imr .ai-all:focus-visible{outline:3px solid #1E6B4A;outline-offset:2px}
+#ask-imr .ai-note{margin:16px 0 0;padding:10px 12px;background:#E5EEE8;border-radius:4px;font-size:14.5px;line-height:1.5;color:#2E493D}
+#ask-imr .ai-out:empty{display:none}
+#ask-imr .ai-out{margin-top:20px;border-top:1px solid #B2C7BC;padding-top:16px}
+#ask-imr .ai-q{margin:0 0 8px;font-size:17px}
+#ask-imr .ai-wait,#ask-imr .ai-none{font-size:16px;color:#3D5A4D}
+#ask-imr .ai-more summary{cursor:pointer;font-size:15px;color:#1E6B4A;font-weight:600;margin:4px 0 8px}
+#ask-imr .ai-h{margin:22px 0 8px;font-size:19px;font-weight:600}
+#ask-imr .ai-h span{display:inline-block;min-width:22px;padding:1px 7px;border-radius:999px;background:#DCE8E1;font-size:13px;text-align:center;vertical-align:2px}
+#ask-imr .ai-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:10px}
+#ask-imr .ai-rest{display:contents}
+#ask-imr .ai-rest[hidden]{display:none}
+#ask-imr .ai-card{border:1px solid #B2C7BC;border-radius:6px;padding:12px 14px;background:#FFFFFF;font-size:15.5px;line-height:1.5}
+#ask-imr .ai-card p{margin:0 0 6px}
+#ask-imr .ai-k{color:#3D5A4D;font-size:14px}
+#ask-imr .ai-d{color:#172D24}
+#ask-imr .ai-m{font-size:14px;color:#3D5A4D;margin-top:8px!important}
+#ask-imr .ai-card details{margin:4px 0;font-size:14.5px}
+#ask-imr .ai-card summary{cursor:pointer;color:#1E6B4A}
+#ask-imr .ai-src{color:#3D5A4D;word-break:break-word}
+#ask-imr .ai-ok{color:#1E6B4A;font-weight:600}
+#ask-imr .ai-warn{color:#8A5A00}
+#ask-imr .ai-oc{font-weight:600}
+#ask-imr .ai-won{color:#1E6B4A}#ask-imr .ai-lost{color:#9B2C2C}
+#ask-imr .ai-tel{display:inline-block;margin:2px 6px 2px 0;padding:5px 10px;border-radius:999px;background:#1E6B4A;color:#FFFFFF!important;text-decoration:none;font-weight:600}
+#ask-imr .ai-all{grid-column:1/-1;justify-self:start;font:inherit;font-size:15px;font-weight:600;padding:6px 12px;border:1px solid #1E6B4A;border-radius:6px;background:#FFFFFF;color:#1E6B4A;cursor:pointer}
+#ask-imr .ai-next{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;font-size:16px;font-weight:600}
+#ask-imr a{color:#1E6B4A}#ask-imr a:hover{color:#134A33}
+#ask-imr .ai-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:560px){#ask-imr{padding:0 12px}#ask-imr .ai-form button{flex:1 1 100%}}
