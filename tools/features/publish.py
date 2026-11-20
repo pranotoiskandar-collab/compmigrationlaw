@@ -6,6 +6,8 @@
    (the monthly digest, PR #23) or tools/alerts/config.json. Empty username = the follow form stays a Netlify form.
 3. Adds <script src="/assets/report-link.js" defer> before </body> on every page, once. The HTML in site/ is not
    changed in the repository; this runs on the copy Netlify publishes. Idempotent.
+4. Builds the RSS feeds in site/feeds/ (feeds.py) and adds feed links (<link rel="alternate">) to the <head> of every
+   page that has none, so feed readers find them.
 Run from the Netlify build command (or as tools/publish/60_features.py once that folder exists).
 """
 import json, os, subprocess, sys
@@ -17,6 +19,10 @@ TAG = '<script src="/assets/report-link.js" defer></script>'
 SKIP = ('report/', 'legal-clinic/review.html')
 
 subprocess.run([sys.executable, os.path.join(HERE, 'build_data.py'), ROOT], check=True)
+subprocess.run([sys.executable, os.path.join(HERE, 'feeds.py'), ROOT], check=True)
+FEEDS = ('<link rel="alternate" type="application/rss+xml" title="IMR: what\u2019s new in the databases (monthly)" href="/updates/feed.xml">'
+         '<link rel="alternate" type="application/rss+xml" title="IMR: new court decisions" href="/feeds/decisions.xml">'
+         '<link rel="alternate" type="application/rss+xml" title="IMR: migration and farmworker law news" href="/feed.xml">')
 
 user = ''
 for p in ('tools/digest/config.json', 'tools/alerts/config.json'):
@@ -36,9 +42,14 @@ for d, _, files in os.walk(SITE):
         if rel.startswith(SKIP):
             continue
         t = open(p, encoding='utf-8').read()
-        if 'report-link.js' in t or '</body>' not in t:
-            continue
-        i = t.rindex('</body>')
-        open(p, 'w', encoding='utf-8').write(t[:i] + TAG + '\n' + t[i:])
-        n += 1
+        t0 = t
+        if 'application/rss+xml' not in t and '</head>' in t:
+            i = t.index('</head>')
+            t = t[:i] + FEEDS + '\n' + t[i:]
+        if 'report-link.js' not in t and '</body>' in t:
+            i = t.rindex('</body>')
+            t = t[:i] + TAG + '\n' + t[i:]
+            n += 1
+        if t != t0:
+            open(p, 'w', encoding='utf-8').write(t)
 print(f'features publish: report link added to {n} pages; Buttondown {"on" if user else "off (Netlify form)"}')
