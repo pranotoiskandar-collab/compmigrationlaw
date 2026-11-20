@@ -1,0 +1,16 @@
+{
+  "_read_me": "Figures for /impact/. Leave a value null until it has been counted; the page then shows 'Being collected' instead of a number. Never estimate. After editing, run: python3 build/growth-pages/build_pages.py",
+  "period": null,
+  "visitors": {"value": null, "source": "GoatCounter (theimr.goatcounter.com), unique visitors in the period"},
+  "visitor_countries": {"value": null, "source": "GoatCounter, countries with at least one visit in the period"},
+  "downloads": {"value": null, "source": "GoatCounter events starting with event/download"},
+  "ask_questions": {"value": null, "source": "GoatCounter events starting with event/ask (country and topic only; the questions themselves are never stored)"},
+  "clinic_drafts": {"value": null, "source": "Rights communications prepared with the Legal Clinic tool and sent to the Clinic (Clinic log)"},
+  "widget_views": {"value": null, "source": "GoatCounter page views of /embed/country/"},
+  "citations": [],
+  "_citations_example": {"title": "Author, Title, Journal or report, year", "url": "https://...", "type": "scholarship | policy | media | court"},
+  "partners": [],
+  "_partners_example": {"name": "Organization name", "url": "https://...", "uses": "badge | widget | data"},
+  "stories": [],
+  "_stories_example": {"title": "Short title", "text": "Two or three sentences, anonymized, published with written consent", "consent": "date consent was given"}
+}
