@@ -17,10 +17,10 @@ S = [
  ("levels", "How far each entry has been checked", [
   "Court decisions carry one of three status marks, shown on every decision page and in the downloadable data.",
   ("ul", [
-   "C, candidate: we know the case name, court, year and topic, but have not yet coded it. 1,318 decisions are at this stage.",
+   "C, candidate: we know the case name, court, year and topic, but have not yet coded it. 1,315 decisions are at this stage.",
    "S, coded: the entry is fully coded from secondary sources and official summaries, and is waiting for a line-by-line check against the full judgment. 225 decisions are at this stage.",
    "P, checked: the coding has been compared line by line with the full judgment. No decision has reached this stage yet; the first checks are under way."]),
-  "These figures describe the 1,543 decisions published on 19 November 2026. Each entry on the other database pages links to the law, treaty or report it was coded from."]),
+  "These figures describe the 1,540 decisions published on 20 November 2026. Each entry on the other database pages links to the law, treaty or report it was coded from."]),
  ("coding", "How entries are coded", [
   "Each database has a codebook that defines every column and every code. The codebook can be downloaded from the data section of each database page, next to the data.",
   "Entries are coded by IMR editors and by trained student researchers from partner law faculties, working from a written checking guide and worksheet. An editor reviews new entries before they are published."]),

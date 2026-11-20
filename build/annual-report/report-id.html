@@ -1,0 +1,215 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Laporan Tahunan IMR 2026</title>
+<style>
+@font-face{font-family:Figtree;src:url(figtree-latin.woff2) format('woff2');font-weight:300 900;font-style:normal}
+@font-face{font-family:Figtree;src:url(figtree-latin-ext.woff2) format('woff2');font-weight:300 900;font-style:normal;unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Figtree;src:url(figtree-italic-latin.woff2) format('woff2');font-weight:300 900;font-style:italic}
+@page{size:A4;margin:0}
+:root{--ink:#172D24;--mut:#3D5A4D;--acc:#1E6B4A;--dark:#134A33;--rule:#B2C7BC;--pan:#E5EEE8;--bg:#EEF4F0;--lt:#D7E6DC}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:Figtree,sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff;padding:20mm 20mm 22mm}
+.page:last-child{page-break-after:auto}
+.foot{position:absolute;left:20mm;right:20mm;bottom:10mm;display:flex;justify-content:space-between;font-size:8pt;color:var(--mut);border-top:1px solid var(--rule);padding-top:3mm}
+.kick{font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600;margin:0 0 3mm}
+h1{font-weight:700;margin:0}
+h2{font-size:22pt;font-weight:600;line-height:1.15;margin:0 0 6mm;letter-spacing:-.01em}
+h3{font-size:12.5pt;font-weight:650;margin:0 0 1.5mm;color:var(--dark)}
+p{margin:0 0 3mm}
+.lead{font-size:12.5pt;line-height:1.55;color:var(--mut)}
+/* cover */
+.cover{background:var(--ink);color:#fff;padding:0}
+.cover .top{padding:24mm 22mm 0}
+.cover .brand{display:flex;align-items:center;gap:4mm;font-size:11pt;font-weight:600}
+.cover .brand i{font-style:normal;background:#fff;color:var(--ink);font-weight:800;padding:2mm 2.6mm;border-radius:1mm;font-size:12pt}
+.cover h1{font-size:46pt;line-height:1.02;margin:34mm 0 6mm;letter-spacing:-.02em}
+.cover h1 span{display:block;color:#9FD3B6}
+.cover .sub{font-size:14pt;line-height:1.45;max-width:140mm;color:#D6E6DC}
+.cover .quote{margin-top:14mm;font-size:11pt;font-style:italic;color:#B9D4C4;border-left:2px solid #9FD3B6;padding-left:4mm;max-width:120mm}
+.cover .art{position:absolute;left:0;right:0;bottom:0;height:105mm}
+.cover .art img{width:100%;height:100%;object-fit:cover;object-position:right bottom;display:block}
+.cover .addr{position:absolute;left:22mm;bottom:9mm;font-size:9pt;color:#fff;font-weight:600;z-index:2}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:6mm 0}
+.tile{background:var(--pan);border-radius:2mm;padding:5mm 5mm 4mm}
+.tile b{display:block;font-size:24pt;line-height:1;font-weight:700;color:var(--acc);letter-spacing:-.02em}
+.tile span{display:block;font-size:9pt;line-height:1.35;margin-top:2mm;color:var(--ink)}
+/* chart */
+.bars{margin:3mm 0 0}
+.bar{display:grid;grid-template-columns:34mm 1fr 14mm;align-items:center;gap:3mm;margin:1.8mm 0;font-size:9.5pt}
+.bar .t{height:5mm;background:var(--lt);border-radius:1mm;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--acc)}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:8.5pt;color:var(--mut)}
+.box{background:var(--bg);border-left:3px solid var(--acc);padding:4mm 5mm;margin:5mm 0;border-radius:0 2mm 2mm 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+.item{margin:0 0 5.5mm}
+.num{display:inline-block;width:7mm;height:7mm;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;font-size:9.5pt;text-align:center;line-height:7mm;margin-right:2mm;vertical-align:1px}
+table{width:100%;border-collapse:collapse;font-size:9.3pt}
+td,th{text-align:left;vertical-align:top;padding:2.4mm 2mm;border-bottom:1px solid var(--rule)}
+th{font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600}
+td:first-child{font-weight:600;width:44mm}
+.people{columns:2;column-gap:8mm;font-size:9.5pt}
+.people p{break-inside:avoid;margin:0 0 3mm}
+.people b{display:block}
+.books{display:grid;grid-template-columns:1fr 1fr;gap:2mm 8mm;font-size:9pt}
+.books div{border-top:1px solid var(--rule);padding-top:1.6mm}
+.books i{display:block;color:var(--mut);font-style:normal;font-size:8.5pt}
+.back{background:var(--bg)}
+.back .art{position:absolute;left:0;right:0;bottom:0;height:80mm}
+.back .art img{width:100%;height:100%;object-fit:cover;object-position:left bottom;display:block}
+.cite{font-size:10pt;background:#fff;border:1px solid var(--rule);border-radius:2mm;padding:4mm 5mm}
+a{color:var(--acc);text-decoration:none}
+.fw p{font-size:10.2pt;line-height:1.5}
+.fw .lead{font-size:12pt;line-height:1.5}
+.fw .sigs{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:6mm}
+.fw .sig{margin:0;font-size:9.5pt;color:var(--mut)}
+.fw .sig b{display:block;font-size:11pt;color:var(--ink)}
+</style></head><body>
+
+<section class="page cover">
+<div class="top">
+<div class="brand"><i>IMR</i>Institute for Migrant Rights</div>
+<h1>Laporan Tahunan<span>2026</span></h1>
+<p class="sub">Pandangan Hukum Migrasi dari Dunia Berkembang: menjadikan hukum yang mengatur pekerja migran mudah ditemukan, dibaca, dan digunakan.</p>
+<p class="quote">“Hukum yang tidak dapat ditemukan tidak dapat digunakan.”</p>
+</div>
+<div class="art"><img src="hills-1.svg" alt=""></div>
+<div class="addr">Cianjur, Jawa Barat, Indonesia · theimr.org</div>
+</section>
+
+<section class="page fw">
+<p class="kick">Kata pengantar</p>
+<h2>Menjadikan janji dapat dibaca</h2>
+<p class="lead">Asia Tenggara merupakan salah satu pasar kerja terbesar di dunia. Sedikit kawasan yang begitu bergantung pada orang-orang yang menyeberangi perbatasan untuk bekerja, dan sedikit pula yang telah berjanji sebanyak itu, di atas kertas, untuk melindungi mereka.</p>
+<p>Pekerja dari Myanmar, Kamboja, dan Laos menggerakkan ladang, kapal, dan proyek bangunan di Thailand. Pekerja Indonesia dan Filipina merawat rumah tangga di Singapura dan Malaysia. ASEAN mengadopsi Deklarasi Cebu tentang pekerja migran pada 2007 dan sebuah Konsensus untuk melaksanakannya pada 2017. Namun, ajukanlah satu pertanyaan sederhana dalam pertemuan kawasan mana pun, dan tidak ada yang dapat menjawabnya dengan yakin: apa sebenarnya isi hukum negara-negara anggota tentang biaya perekrutan, kontrak, upah, atau hak pekerja untuk berganti majikan? Konsensus tersebut menggantungkan pelindungan pada “hukum, peraturan, dan kebijakan nasional”. Komitmen yang bergantung pada hukum nasional, tanpa catatan yang jelas tentang hukum tersebut, sulit untuk ditagih.</p>
+<p>Kawasan ini juga tidak dapat sekadar meminjam perangkat yang sudah ada. Sebagian besar basis data dan indeks hukum migrasi internasional dirancang dan didanai di negara-negara paling maju, sehingga pertanyaannya adalah pertanyaan negara-negara tersebut, yakni suaka, integrasi, dan masuk secara tidak reguler. Perangkat itu kurang memperhatikan hal-hal yang membentuk migrasi di Selatan: nota kesepahaman antarnegara tetangga, izin kerja yang terikat pada satu majikan, arus musiman dan informal, serta peran sentral negara asal.</p>
+<p>Laporan ini menjelaskan bagaimana IMR, pada 2026, mulai mengisi kekosongan tersebut, bagi Asia Tenggara dan bagi negara-negara berkembang secara lebih luas. Dengan bantuan banyak relawan, sebagian besar mahasiswa hukum dari berbagai negara, IMR kini menerbitkan 1.540 putusan pengadilan tentang pekerja migran dari 92 negara, atlas 97 norma global, kawasan, dan nasional beserta data ratifikasi di 187 negara, perbandingan dua belas negara asal pada sembilan pertanyaan, serta direktori bantuan hukum gratis di 37 negara. Pengadilan di kawasan ini, dari Mahkamah Agung Filipina hingga pengadilan Malaysia dan Thailand, telah membangun penalaran tentang upah, dokumen, penahanan, dan tanggung jawab perekrut, yang jarang dilihat hakim di luar negaranya masing-masing. Kami ingin penalaran itu terlihat. Sejauh ini, semuanya kami kerjakan tanpa satu pun hibah.</p>
+<p>Kami perlu berterus terang. Ini merupakan draf pertama, bukan register yang selesai. Cakupannya belum merata, banyak isian masih menunggu pemeriksaan terhadap teks resmi, dan sebagian pilihan pengodean kami tentu akan dipersoalkan. Kami menerbitkannya lebih awal justru agar pejabat, fakultas hukum, pengawas ketenagakerjaan, serikat pekerja, dan organisasi pekerja migran dapat menyempurnakannya. Setiap sumbangan dicantumkan namanya dan setiap perubahan dicatat secara terbuka.</p>
+<p>Semua ini tidak memerlukan perjanjian baru maupun lembaga baru. Yang diperlukan adalah kesediaan kawasan untuk menuliskan, di satu tempat, apa yang sudah dikatakan hukumnya. Setelah hampir dua dasawarsa berjanji kepada pekerja migran, menjadikan janji-janji itu dapat dibaca merupakan langkah paling sederhana berikutnya, dan mungkin justru yang paling berguna.</p>
+<div class="sigs"><p class="sig"><b>Pranoto Iskandar</b>Direktur Pendiri, Institute for Migrant Rights</p><p class="sig"><b>Beth Lyon</b>Ketua Dewan Penasihat IMR</p></div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>2</span></div>
+</section>
+
+<section class="page">
+<p class="kick">Tentang kami</p>
+<h2>Lembaga Indonesia bagi mereka yang melintasi batas negara untuk bekerja</h2>
+<p class="lead">Mereka yang bermigrasi untuk bekerja diatur oleh hukum yang tidak mudah mereka temukan atau pahami, yakni perjanjian internasional, aturan lembaga kawasan, serta undang-undang dan putusan pengadilan, baik di negara asal maupun di negara tempat mereka bekerja.</p>
+<p>Institute for Migrant Rights (IMR), yang berkedudukan di Cianjur, Jawa Barat, menjawab persoalan tersebut melalui dua cara. Kami memberikan informasi dan bantuan hukum gratis bagi pekerja dan keluarganya, serta menerbitkan data terbuka yang telah dikodekan mengenai hukum migrasi bagi peneliti, praktisi hukum, dan pembuat kebijakan. Basis data kami dihimpun dengan judul <i>Pandangan Hukum Migrasi dari Dunia Berkembang</i> (<i>Migration Jurisprudence from the South</i>), karena sebagian besar hukum yang menentukan kehidupan pekerja migran dibentuk dan diterapkan di luar Eropa dan Amerika Utara.</p>
+<p class="kick" style="margin-top:9mm">Sekilas 2026</p>
+<div class="tiles">
+<div class="tile"><b>1,540</b><span>putusan pengadilan tentang pekerja migran dari 92 negara</span></div>
+<div class="tile"><b>97</b><span>norma global, kawasan, dan nasional dalam Atlas Hukum Migrasi</span></div>
+<div class="tile"><b>187</b><span>negara dengan data ratifikasi perjanjian internasional</span></div>
+<div class="tile"><b>115</b><span>instrumen tentang pekerja rumah tangga migran di 44 yurisdiksi</span></div>
+<div class="tile"><b>91</b><span>lembaga bantuan hukum gratis di 37 negara</span></div>
+<div class="tile"><b>8</b><span>bahasa di Klinik Hukum</span></div>
+</div>
+<div class="box"><b>Terbuka sejak awal.</b> Setiap basis data dapat diunduh beserta buku kodenya dengan lisensi Creative Commons Atribusi 4.0 (CC BY 4.0). Setiap putusan memiliki ringkasan berbahasa sederhana dalam bahasa Inggris dan bahasa Indonesia.</div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>3</span></div>
+</section>
+
+<section class="page">
+<p class="kick">Putusan pengadilan</p>
+<h2>Asal putusan-putusan tersebut</h2>
+<p>Basis data Putusan Pengadilan menghimpun putusan tentang pekerja migran dari pengadilan nasional, lembaga hak asasi manusia kawasan, dan badan traktat Perserikatan Bangsa-Bangsa. Pengadilan di Asia, Afrika, Timur Tengah, dan Amerika Latin kami utamakan, sedangkan putusan pengadilan Eropa dan Amerika Utara hanya dimuat sebagai pembanding yang diberi tanda.</p>
+<div class="bars">
+<div class="bar"><span>Asia</span><div class="t"><i style="width:100%"></i></div><span class="n">1,113</span></div>
+<div class="bar"><span>Afrika</span><div class="t"><i style="width:18.5%"></i></div><span class="n">206</span></div>
+<div class="bar"><span>Amerika</span><div class="t"><i style="width:8.3%"></i></div><span class="n">92</span></div>
+<div class="bar"><span>Eropa (pembanding)</span><div class="t"><i style="width:4.1%"></i></div><span class="n">46</span></div>
+<div class="bar"><span>PBB dan badan global</span><div class="t"><i style="width:3.4%"></i></div><span class="n">38</span></div>
+<div class="bar"><span>Timur Tengah dan Teluk</span><div class="t"><i style="width:2.9%"></i></div><span class="n">32</span></div>
+<div class="bar"><span>Pasifik</span><div class="t"><i style="width:1.2%"></i></div><span class="n">13</span></div>
+</div>
+<p class="note" style="margin-top:3mm">Putusan menurut kawasan, 20 November 2026 (n = 1.540). Sumber: basis data Putusan Pengadilan IMR, decisions.csv.</p>
+<div class="cols" style="margin-top:8mm">
+<div><h3>Menurut tingkat pengadilan</h3>
+<table><tr><td>Pengadilan nasional</td><td>1.394</td></tr><tr><td>Lembaga kawasan</td><td>98</td></tr><tr><td>Pengadilan internasional dan badan traktat PBB</td><td>48</td></tr></table>
+<p class="note" style="margin-top:3mm">Di antara putusan pengadilan nasional, 820 putusan berasal dari negara tujuan dan 569 dari negara asal.</p></div>
+<div><h3>Sejauh mana setiap entri diperiksa</h3>
+<table><tr><td>Dikodekan lengkap dari sumber sekunder dan ringkasan</td><td>225</td></tr><tr><td>Kandidat yang menunggu pemeriksaan</td><td>1.315</td></tr><tr><td>Diperiksa baris demi baris terhadap putusan</td><td>sedang berlangsung</td></tr></table>
+<p class="note" style="margin-top:3mm">Setiap halaman putusan menampilkan statusnya. Metodenya dijelaskan di theimr.org/data-quality.</p></div>
+</div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>4</span></div>
+</section>
+
+<section class="page">
+<p class="kick">Kegiatan kami pada 2026</p>
+<h2>Lima hal yang kami kerjakan</h2>
+<div class="item"><h3><span class="num">1</span>Membuka akses hukum bagi peneliti</h3>
+<p>IMR menerbitkan rangkaian basis data terbuka yang saling terhubung, mulai dari perjanjian internasional dan instrumen kawasan hingga undang-undang nasional dan putusan pengadilan, yakni Atlas Hukum Migrasi beserta tampilan buruh tani, Putusan Pengadilan, Pekerja Rumah Tangga Migran, Negara Asal, perbandingan hukum migrasi dan ketenagakerjaan di Negara-Negara Teluk, Asia Timur, dan Asia Tenggara, serta Ucapan Kebencian oleh Pemerintah. Setiap entri memuat tautan ke sumbernya dan setiap basis data memiliki buku kode. Pada bulan November, seluruh situs beserta datanya dipindahkan ke repositori GitHub yang terbuka untuk umum, sehingga setiap perubahan tercatat secara terbuka dan proyek lain dapat menyumbangkan data.</p></div>
+<div class="item"><h3><span class="num">2</span>Mendekatkan hukum kepada pekerja</h3>
+<p>Klinik Hukum membantu pekerja dan keluarganya menyiapkan pengaduan hak dalam bahasa yang sederhana, dalam delapan bahasa, yakni bahasa Inggris, Indonesia, Arab, Dari/Farsi, Bengali, Nepali, Tagalog, dan Vietnam. Cek mandiri perdagangan orang, panduan tentang argumen yang berhasil di pengadilan, dan direktori bantuan hukum gratis di 37 negara memberikan langkah praktis selanjutnya. Lembar negara satu halaman untuk delapan negara asal tersedia dalam bahasa Inggris dan bahasa Indonesia. IMR tidak menjalankan layanan telepon langsung, sehingga bantuan kami tidak bergantung pada staf yang sedang daring.</p></div>
+<div class="item"><h3><span class="num">3</span>Menjaga kejujuran data</h3>
+<p>Setiap basis data menunjukkan sejauh mana setiap entri telah diperiksa, dan sumber sekunder diberi tanda. IMR menerbitkan pernyataan tentang cara kami menggunakan AI serta halaman publik tentang cara kami memeriksa data. Pengodean kedua secara buta terhadap sampel entri, dengan tingkat kesepakatan yang diukur menggunakan Cohen’s kappa, telah direncanakan.</p></div>
+<div class="item"><h3><span class="num">4</span>Melatih mahasiswa peneliti</h3>
+<p>Mahasiswa hukum dari fakultas mitra, antara lain Universitas Tarumanagara di Jakarta dan Universitas Khorfakkan di Uni Emirat Arab, belajar menemukan, mengodekan, dan memverifikasi sumber hukum dengan berpedoman pada panduan pemeriksaan dan lembar kerja tertulis.</p></div>
+<div class="item"><h3><span class="num">5</span>Menerbitkan</h3>
+<p>IMR Press dibuka di press.theimr.org dengan sembilan judul dalam bahasa Indonesia dan bahasa Inggris (tercantum pada halaman 6). <i>Indonesian Journal of International &amp; Comparative Law</i> (ijicl.org), jurnal yang ditelaah sejawat sejak 2014, terus terbit.</p></div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>5</span></div>
+</section>
+
+<section class="page">
+<p class="kick">Basis data</p>
+<h2>Sepuluh halaman basis data, satu metode</h2>
+<table>
+<tr><th>Basis data</th><th>Isinya</th></tr>
+<tr><td>Atlas Hukum Migrasi</td><td>97 norma pada tiga tingkat (31 global, 37 kawasan, 25 nasional, ditambah 4 laporan utama), dengan data ratifikasi di 187 negara</td></tr>
+<tr><td>Tampilan hukum buruh tani</td><td>106 norma tentang buruh tani (82 internasional atau kawasan, 24 nasional)</td></tr>
+<tr><td>Putusan Pengadilan</td><td>1.540 putusan dari 92 negara, dengan ringkasan dalam bahasa Inggris dan bahasa Indonesia</td></tr>
+<tr><td>Pekerja Rumah Tangga Migran</td><td>115 instrumen di 44 yurisdiksi, dikodekan berdasarkan Konvensi ILO No. 189</td></tr>
+<tr><td>Negara Asal</td><td>12 negara asal dibandingkan berdasarkan 9 pertanyaan</td></tr>
+<tr><td>Negara-Negara Teluk, Asia Timur, Asia Tenggara</td><td>Perbandingan netral hukum migrasi dan ketenagakerjaan di negara tujuan</td></tr>
+<tr><td>Ucapan Kebencian oleh Pemerintah</td><td>34 negara demokrasi, beserta perbandingan pemilu dan warga negara asing</td></tr>
+<tr><td>Cari bantuan hukum gratis</td><td>91 lembaga di 37 negara; nomor telepon hanya dicantumkan setelah diperiksa</td></tr>
+</table>
+<div class="box" style="margin-top:8mm"><b>Cara kami memeriksa.</b> Setiap entri berangkat dari sumber resmi sepanjang tersedia, yakni situs pengadilan, lembaran negara, kementerian yang berwenang, ILO, atau Perserikatan Bangsa-Bangsa. Sumber sekunder hanya digunakan apabila teks resmi tidak dapat ditemukan, dan diberi tanda. Bahan baru disimpan dalam folder tersendiri sampai ditelaah oleh editor.</div>
+<p class="note">Angka dihitung dari berkas data yang diterbitkan per 20 November 2026.</p>
+<p class="kick" style="margin-top:9mm">Pendanaan IMR</p>
+<div class="box"><b>Sejauh ini didanai secara mandiri.</b> Hingga saat ini IMR belum menerima hibah maupun pendanaan dari pihak luar. Seluruh kegiatan dalam laporan ini didanai secara mandiri dan dikerjakan oleh tim serta relawan IMR. Setiap pendanaan di masa mendatang akan kami laporkan di sini dan di theimr.org.</div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>6</span></div>
+</section>
+
+<section class="page">
+<p class="kick">Tim</p>
+<h2>Tim kami</h2>
+<div class="people">
+<p><b>Saru Arifin</b>Direktur Eksekutif; dosen hukum, Universitas Negeri Semarang</p>
+<p><b>Pranoto Iskandar</b>Direktur Pendiri</p>
+<p><b>Dan Trevanion</b>Manajer Program</p>
+<p><b>Wallace Huang</b>Direktur Pengembangan</p>
+<p><b>Michelle Tjugito</b>Manajer Operasional</p>
+<p><b>Felicia Nathania</b>Asisten Peneliti; Fakultas Hukum, Universitas Tarumanagara</p>
+<p><b>Klinik Hukum Internasional</b>Chris Cason · Bambang Suryowidodo · Sudirman</p>
+<p><b>Riset &amp; Publikasi</b>Nandang Sutrisno · Ratno Lukito · Sarah Ingle · Abdurrachman Satrio · Felicia Nathania</p>
+<p><b>Dewan Penasihat</b>Beth Lyon (ketua) · Abdullahi Ahmed An-Na’im · Jagdish Bhagwati · Hilary Charlesworth · Tom Ginsburg · Rhoda E. Howard-Hassmann</p>
+</div>
+<p class="kick" style="margin-top:8mm">IMR Press</p>
+<div class="books">
+<div>Hukum HAM Internasional: Sebuah Pengantar Kontekstual<i>Pranoto Iskandar</i></div>
+<div>Standar Internasional Migrasi Ketenagakerjaan Berbasis HAM<i>Pranoto Iskandar</i></div>
+<div>Membela Globalisasi (In Defense of Globalization)<i>Jagdish Bhagwati</i></div>
+<div>Muslim dan Keadilan Global (Muslims and Global Justice)<i>Abdullahi Ahmed An-Na’im</i></div>
+<div>Satu Bumi (One World: The Ethics of Globalization)<i>Peter Singer</i></div>
+<div>Tradisi Hukum Indonesia<i>Ratno Lukito</i></div>
+<div>Relasi Negara &amp; Agama: Redefinisi Diskursus Konstitusionalisme di Indonesia<i>Yudi Junadi</i></div>
+<div>Pemajuan Kepentingan Negara-Negara Berkembang dalam Sistem WTO<i>Nandang Sutrisno</i></div>
+<div>Using World Trade Law to Promote the Interests of Global South<i>Nandang Sutrisno</i></div>
+</div>
+<div class="foot"><span>Laporan Tahunan IMR 2026</span><span>7</span></div>
+</section>
+
+<section class="page back">
+<p class="kick">Ke depan</p>
+<h2>Rencana 2027</h2>
+<div class="item"><h3><span class="num">1</span>Memeriksa putusan</h3><p>Meningkatkan status putusan dari “telah dikodekan” menjadi “telah diperiksa terhadap putusan”, dimulai dari entri yang paling sering digunakan, serta menerbitkan hasil pertama uji keandalan antarpengode.</p></div>
+<div class="item"><h3><span class="num">2</span>Membawa hukum ke desa</h3><p>Sesi literasi hukum dan pelatihan paralegal mahasiswa di kabupaten pengirim pekerja migran di Jawa, apabila pendanaan tersedia.</p></div>
+<div class="item"><h3><span class="num">3</span>Memperluas cakupan yang masih tipis</h3><p>Menambah putusan dari Afrika, Amerika Latin, dan Pasifik, serta dari pengadilan di negara asal.</p></div>
+<div class="item"><h3><span class="num">4</span>Menjadikan data dapat dikutip</h3><p>Mengarsipkan rilis berversi pertama dengan pengenal permanen (DOI) dan menerbitkan makalah yang menjelaskan himpunan data tersebut.</p></div>
+<div class="item"><h3><span class="num">5</span>Memperluas jejaring</h3><p>Menyambut anggota baru Dewan Penasihat dan fakultas hukum mitra yang baru.</p></div>
+<p class="kick" style="margin-top:6mm">Cara mengutip data kami</p>
+<p class="cite">Institute for Migrant Rights (2026). <i>Migration Jurisprudence from the South: databases of migration and labor law</i> [Data set]. https://theimr.org/databases/</p>
+<p style="margin-top:6mm;font-size:9.5pt"><b>Institute for Migrant Rights</b><br>Jl. Amalia Rubini 35, Sayang, Cianjur, Jawa Barat 43213, Indonesia<br>secretariat@theimr.org · +62 263 271 769 · theimr.org</p>
+<div class="art"><img src="hills-3.svg" alt=""></div>
+</section>
+</body></html>
