@@ -23,7 +23,7 @@
   function glance() {
     var h = "<thead><tr><th>" + t("Country", "Negara") + "</th>" + CB.map(function (d) { return "<th>" + esc(t(d.en, d.id)) + "</th>"; }).join("") + "<th>" + t("Index (0–8)", "Indeks (0–8)") + "</th><th>" + t("Comparison group", "Kelompok pembanding") + "</th></tr></thead><tbody>";
     ["W", "N"].forEach(function (g) {
-      h += '<tr><td colspan="' + (CB.length + 3) + '" style="background:#E8E2DC;font-family:\'Figtree\',monospace;font-size:12.5px">' + esc(t(GRP[g][0], GRP[g][1])).toUpperCase() + "</td></tr>";
+      h += '<tr><td colspan="' + (CB.length + 3) + '" style="background:#DCE8E1;font-family:\'Figtree\',monospace;font-size:12.5px">' + esc(t(GRP[g][0], GRP[g][1])).toUpperCase() + "</td></tr>";
       S.filter(function (s) { return s.g === g; }).forEach(function (s) {
         var r = row(s.k);
         h += "<tr><td><b>" + esc(t(s.n, s.n_id)) + "</b></td>" + CB.map(function (d) {
@@ -135,7 +135,7 @@
   function impunity() {
     var h = "<thead><tr><th>" + t("Country", "Negara") + "</th><th>" + t("Hate crime aggravation", "Pemberatan kejahatan kebencian") + "</th><th>" + t("Access to justice", "Akses keadilan") + "</th><th>" + t("Equal protection across groups", "Perlindungan setara antarkelompok") + "</th><th>" + t("Rule of law", "Negara hukum") + "</th><th>" + t("Prosecuted · sentenced, % of recorded (OSCE)", "Dituntut · divonis, % dari yang tercatat (OSCE)") + "</th></tr></thead><tbody>";
     ["W", "N"].forEach(function (g) {
-      h += '<tr><td colspan="6" style="background:#E8E2DC;font-family:\'Figtree\',monospace;font-size:12.5px">' + esc(t(GRP[g][0], GRP[g][1])).toUpperCase() + "</td></tr>";
+      h += '<tr><td colspan="6" style="background:#DCE8E1;font-family:\'Figtree\',monospace;font-size:12.5px">' + esc(t(GRP[g][0], GRP[g][1])).toUpperCase() + "</td></tr>";
       S.filter(function (s) { return s.g === g; }).forEach(function (s) {
         var r = row(s.k), c = HC[s.k] || [];
         h += "<tr><td><b>" + esc(t(s.n, s.n_id)) + '</b></td><td class="c"><button type="button" class="g-cell" data-h="' + s.k + '" aria-pressed="' + (impSel === s.k) + '" title="' + esc(c[1] || "") + '">' + pill(c[0]) + '</button></td><td class="c g-mono">' + fn(r.acjst) + '</td><td class="c g-mono">' + fn(r.eqprotec) + '</td><td class="c g-mono">' + fn(r.rule) + '</td><td class="c g-mono">' + (r.osce_total_pm != null ? (r.osce_pros_rate == null && r.osce_sent_rate == null ? t("not reported", "tidak dilaporkan") : fn(r.osce_pros_rate, 1) + " · " + fn(r.osce_sent_rate, 1)) : t("not covered", "tidak dicakup")) + "</td></tr>";
@@ -171,11 +171,11 @@
     var nf = FT.filter(function (f) { return BD.feat[f[0]]; }).length;
     if (BD.min > Math.max(nf, 1)) BD.min = Math.max(nf, 1);
     var h = '<div class="g-grid2"><div><p class="g-h4">' + t("1. What counts as explicit protection?", "1. Apa yang dihitung sebagai perlindungan eksplisit?") + "</p><p class=\"g-note\" style=\"margin:0 0 8px\">" + t("A country is in your explicit group when enough of the ticked features name non-citizens or nationality (score 2).", "Suatu negara masuk kelompok eksplisit Anda bila cukup banyak fitur yang dicentang menyebut orang yang bukan warga negara atau kewarganegaraan (nilai 2).") + "</p>";
-    FT.forEach(function (f) { h += '<label style="display:flex;gap:10px;align-items:center;min-height:40px;font-size:16px"><input type="checkbox" data-bf="' + f[0] + '"' + (BD.feat[f[0]] ? " checked" : "") + ' style="width:20px;height:20px;accent-color:#8F5E12"> ' + esc(ftName(f)) + "</label>"; });
-    h += '<label style="display:block;margin-top:8px;font-size:15px">' + t("At least this many ticked features must be explicit: ", "Setidaknya sebanyak ini fitur yang dicentang harus eksplisit: ") + '<select data-bmin style="min-height:40px;font:inherit;border:1px solid #2E2116;background:#fff">' + [1, 2, 3, 4, 5].filter(function (n) { return n <= Math.max(nf, 1); }).map(function (n) { return '<option' + (n === BD.min ? " selected" : "") + ">" + n + "</option>"; }).join("") + "</select></label>";
+    FT.forEach(function (f) { h += '<label style="display:flex;gap:10px;align-items:center;min-height:40px;font-size:16px"><input type="checkbox" data-bf="' + f[0] + '"' + (BD.feat[f[0]] ? " checked" : "") + ' style="width:20px;height:20px;accent-color:#1E6B4A"> ' + esc(ftName(f)) + "</label>"; });
+    h += '<label style="display:block;margin-top:8px;font-size:15px">' + t("At least this many ticked features must be explicit: ", "Setidaknya sebanyak ini fitur yang dicentang harus eksplisit: ") + '<select data-bmin style="min-height:40px;font:inherit;border:1px solid #172D24;background:#fff">' + [1, 2, 3, 4, 5].filter(function (n) { return n <= Math.max(nf, 1); }).map(function (n) { return '<option' + (n === BD.min ? " selected" : "") + ">" + n + "</option>"; }).join("") + "</select></label>";
     h += '<p class="g-h4" style="margin-top:22px">' + t("2. Which countries?", "2. Negara mana?") + "</p>";
     [["W", t("Western democracies", "Demokrasi Barat")], ["N", t("Non-Western democracies", "Demokrasi non-Barat")], ["aut", t("Countries V-Dem classifies as electoral autocracies (India, Indonesia, Mexico, Philippines)", "Negara yang diklasifikasikan V-Dem sebagai otokrasi elektoral (India, Indonesia, Meksiko, Filipina)")], ["lka", t("Sri Lanka (outlier on the vote measures)", "Sri Lanka (pencilan pada ukuran suara)")]].forEach(function (c) {
-      h += '<label style="display:flex;gap:10px;align-items:center;min-height:40px;font-size:16px"><input type="checkbox" data-bi="' + c[0] + '"' + (BD.inc[c[0]] ? " checked" : "") + ' style="width:20px;height:20px;accent-color:#8F5E12"> ' + esc(c[1]) + "</label>";
+      h += '<label style="display:flex;gap:10px;align-items:center;min-height:40px;font-size:16px"><input type="checkbox" data-bi="' + c[0] + '"' + (BD.inc[c[0]] ? " checked" : "") + ' style="width:20px;height:20px;accent-color:#1E6B4A"> ' + esc(c[1]) + "</label>";
     });
     h += '</div><div><p class="g-h4">' + t("3. Weights for your own index", "3. Bobot untuk indeks Anda sendiri") + '</p><p class="g-note" style="margin:0 0 8px">' + t("Your index adds each feature's score (0, 1 or 2) times its weight. It appears in the tools below as \u201cYour index\u201d.", "Indeks Anda menjumlahkan nilai setiap fitur (0, 1 atau 2) dikali bobotnya. Indeks ini muncul di alat di bawah sebagai \u201cIndeks Anda\u201d.") + '</p><div class="g-w" style="grid-template-columns:1fr">';
     FT.forEach(function (f) { h += "<label>" + esc(ftName(f)) + ' <output id="bw-' + f[0] + '">' + BD.w[f[0]] + '</output><input type="range" min="0" max="3" step="1" value="' + BD.w[f[0]] + '" data-bw="' + f[0] + '"></label>'; });
@@ -296,7 +296,7 @@
       return s === "all" || (s === "W" && r.western) || (s === "N" && !r.western) || (s === "ex" && r.explicit) || (s === "co" && !r.explicit) || (s === "dem" && r.democracy);
     });
   }
-  function pcSel(k, opts, v) { return '<select data-pc="' + k + '" style="min-height:40px;font:inherit;border:1px solid #2E2116;background:#fff;max-width:100%">' + opts.map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === v ? " selected" : "") + ">" + esc(t(o[1], o[2])) + "</option>"; }).join("") + "</select>"; }
+  function pcSel(k, opts, v) { return '<select data-pc="' + k + '" style="min-height:40px;font:inherit;border:1px solid #172D24;background:#fff;max-width:100%">' + opts.map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === v ? " selected" : "") + ">" + esc(t(o[1], o[2])) + "</option>"; }).join("") + "</select>"; }
   function lab(L, k) { var o = L.filter(function (x) { return x[0] === k; })[0]; return o ? t(o[1], o[2]) : k; }
   function popcrime() {
     var el = $("g-pc"); if (!el) return;
@@ -327,12 +327,12 @@
     var sx = function (v) { return L + (v - x0) / (x1 - x0) * (W - L - 48); }, sy = function (v) { return H - B - (v - y0) / (y1 - y0) * (H - B - 16); };
     var fit = T.ols(px.map(function (v) { return [1, v]; }), py);
     var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(t("Scatter plot", "Diagram sebar")) + '" style="width:100%;height:auto;max-width:720px;display:block;margin:16px 0 4px;font-family:\'Figtree\',monospace;font-size:11px">' +
-      '<line x1="' + L + '" y1="' + (H - B) + '" x2="' + (W - 20) + '" y2="' + (H - B) + '" stroke="#C8BCB1"/><line x1="' + L + '" y1="16" x2="' + L + '" y2="' + (H - B) + '" stroke="#C8BCB1"/>' +
-      '<text x="' + L + '" y="' + (H - B + 16) + '" fill="#5B4A3C">' + fn(x0, 1) + '</text><text x="' + (W - 20) + '" y="' + (H - B + 16) + '" text-anchor="end" fill="#5B4A3C">' + fn(x1, 1) + "</text>" +
-      '<text x="' + (L - 6) + '" y="' + (H - B) + '" text-anchor="end" fill="#5B4A3C">' + fn(y0, 1) + '</text><text x="' + (L - 6) + '" y="22" text-anchor="end" fill="#5B4A3C">' + fn(y1, 1) + "</text>" +
-      '<text x="' + ((W + L) / 2) + '" y="' + (H - 8) + '" text-anchor="middle" fill="#2E2116">' + esc((PC.rank ? t("Rank: ", "Peringkat: ") : "") + lab(PCX, PC.x)) + "</text>";
-    if (fit) svg += '<line x1="' + sx(x0) + '" y1="' + sy(fit.b[0] + fit.b[1] * x0) + '" x2="' + sx(x1) + '" y2="' + sy(fit.b[0] + fit.b[1] * x1) + '" stroke="#8F5E12" stroke-width="2" stroke-dasharray="6 4"/>';
-    D.forEach(function (r, i) { svg += '<g><title>' + esc(cname(r.iso3) + ": " + fn(x[i], 1) + " · " + fn(y[i], 2)) + '</title><circle cx="' + sx(px[i]) + '" cy="' + sy(py[i]) + '" r="5" fill="' + (r.explicit ? "#2E2116" : "#FFFFFF") + '" stroke="#2E2116" stroke-width="1.5"/><text x="' + (sx(px[i]) + 7) + '" y="' + (sy(py[i]) + 4) + '" fill="#4A3B2D">' + esc(r.iso3) + "</text></g>"; });
+      '<line x1="' + L + '" y1="' + (H - B) + '" x2="' + (W - 20) + '" y2="' + (H - B) + '" stroke="#B2C7BC"/><line x1="' + L + '" y1="16" x2="' + L + '" y2="' + (H - B) + '" stroke="#B2C7BC"/>' +
+      '<text x="' + L + '" y="' + (H - B + 16) + '" fill="#3D5A4D">' + fn(x0, 1) + '</text><text x="' + (W - 20) + '" y="' + (H - B + 16) + '" text-anchor="end" fill="#3D5A4D">' + fn(x1, 1) + "</text>" +
+      '<text x="' + (L - 6) + '" y="' + (H - B) + '" text-anchor="end" fill="#3D5A4D">' + fn(y0, 1) + '</text><text x="' + (L - 6) + '" y="22" text-anchor="end" fill="#3D5A4D">' + fn(y1, 1) + "</text>" +
+      '<text x="' + ((W + L) / 2) + '" y="' + (H - 8) + '" text-anchor="middle" fill="#172D24">' + esc((PC.rank ? t("Rank: ", "Peringkat: ") : "") + lab(PCX, PC.x)) + "</text>";
+    if (fit) svg += '<line x1="' + sx(x0) + '" y1="' + sy(fit.b[0] + fit.b[1] * x0) + '" x2="' + sx(x1) + '" y2="' + sy(fit.b[0] + fit.b[1] * x1) + '" stroke="#1E6B4A" stroke-width="2" stroke-dasharray="6 4"/>';
+    D.forEach(function (r, i) { svg += '<g><title>' + esc(cname(r.iso3) + ": " + fn(x[i], 1) + " · " + fn(y[i], 2)) + '</title><circle cx="' + sx(px[i]) + '" cy="' + sy(py[i]) + '" r="5" fill="' + (r.explicit ? "#172D24" : "#FFFFFF") + '" stroke="#172D24" stroke-width="1.5"/><text x="' + (sx(px[i]) + 7) + '" y="' + (sy(py[i]) + 4) + '" fill="#2E493D">' + esc(r.iso3) + "</text></g>"; });
     svg += "</svg>";
     h += svg + '<p class="g-note" style="margin:0">' + esc(t("Vertical axis: ", "Sumbu tegak: ") + (PC.rank ? t("rank of ", "peringkat ") : "") + lab(Y, PC.y)) + t(". Filled dots: explicit protection; open dots: conventional law. Dashed line: least-squares fit. Hover for values.", ". Titik penuh: perlindungan eksplisit; titik kosong: hukum konvensional. Garis putus-putus: garis kuadrat terkecil. Arahkan kursor untuk melihat nilai.") + "</p>";
     /* results */
