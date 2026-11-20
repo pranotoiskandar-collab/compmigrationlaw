@@ -110,13 +110,13 @@ def pages_to_open(site):
     return ["/" + (r[: -len("index.html")] if r.endswith("index.html") else r) for r in out]
 
 
-def run(site, out_path):
+def run(site, out_path, shard=(0, 1)):
     from playwright.sync_api import sync_playwright
 
     httpd, origin = serve(site)
     problems = []
     english = {}  # text -> [interface, count, where, case]
-    urls = pages_to_open(site)
+    urls = pages_to_open(site)[shard[0]::shard[1]]
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         for url in urls:
@@ -181,8 +181,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site", default="site")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--shard", default="0/1", help="i/n: open only every n-th page starting at i, so several copies can run side by side")
     args = ap.parse_args()
-    run(pathlib.Path(args.site).resolve(), args.out)
+    i, n = (int(x) for x in args.shard.split("/"))
+    run(pathlib.Path(args.site).resolve(), args.out, (i, n))
 
 
 if __name__ == "__main__":
