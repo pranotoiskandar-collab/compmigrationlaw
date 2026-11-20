@@ -28,7 +28,7 @@
     if (h && !document.querySelector('.imr-rep-btn')) {
       var p = document.createElement('p'); p.style.margin = '6px 0 0';
       var b = link('imr-rep-btn', decodeURIComponent(m[1]), 'Report a problem with this decision', 'Laporkan masalah pada putusan ini');
-      b.style.cssText = 'font:14px/1.4 Figtree,system-ui,sans-serif;color:#8F5E12';
+      b.style.cssText = 'font:14px/1.4 Figtree,system-ui,sans-serif;color:#1E6B4A';
       p.appendChild(b); h.insertAdjacentElement('afterend', p);
     }
   }

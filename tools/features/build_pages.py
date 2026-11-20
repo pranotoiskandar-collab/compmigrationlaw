@@ -27,8 +27,8 @@ def shell():
     m = re.search(r'<figure class="imr-band.*?</figure>', t, re.S)
     if m:
         band = m.group(0)
-    head = head.replace(' aria-current="page" style="color: #8F5E12; text-decoration: underline; text-underline-offset: 6px; padding: 10px 0"',
-                        ' style="color: #2E2116; text-decoration: none; padding: 10px 0"')
+    head = head.replace(' aria-current="page" style="color: #1E6B4A; text-decoration: underline; text-underline-offset: 6px; padding: 10px 0"',
+                        ' style="color: #172D24; text-decoration: none; padding: 10px 0"')
     # relative links on Contact -> absolute, since the new pages live in folders
     for f in ('publications.html', 'people.html', 'contact.html', 'favicon.ico', 'favicon-32.png', 'apple-touch-icon.png'):
         head = head.replace(f'href="{f}"', f'href="/{f}"')
