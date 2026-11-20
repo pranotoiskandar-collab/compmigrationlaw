@@ -93,7 +93,7 @@
         shared.forEach(function (r) {
           var f0 = r.v[0][0];
           cbody += '<tr><th scope="row">' + FT.esc(FT.t(r.fn, f0.fi || r.fn)) + '</th>' + r.v.map(function (fs) {
-            return cell(fs.map(one).join('<hr style="border:0;border-top:1px dotted #C8BCB1">'));
+            return cell(fs.map(one).join('<hr style="border:0;border-top:1px dotted #B2C7BC">'));
           }).join('') + '</tr>';
         });
       }
@@ -102,7 +102,7 @@
         if (!only.length) return;
         solo += '<details class="ft-sec"><summary><b>' + FT.esc(FT.dsName(META, ds)) + '</b>: ' + FT.t('features coded for ', 'fitur yang dikodekan hanya untuk ') + FT.esc(FT.name(who)) +
           FT.t(' only', '') + ' (' + only.length + ')</summary><div class="ft-scroll"><table class="ft-t"><tbody>' + only.map(function (r) {
-            return '<tr><th scope="row">' + FT.esc(FT.t(r.fn, r.v[i][0].fi || r.fn)) + '</th><td>' + r.v[i].map(one).join('<hr style="border:0;border-top:1px dotted #C8BCB1">') + '</td></tr>';
+            return '<tr><th scope="row">' + FT.esc(FT.t(r.fn, r.v[i][0].fi || r.fn)) + '</th><td>' + r.v[i].map(one).join('<hr style="border:0;border-top:1px dotted #B2C7BC">') + '</td></tr>';
           }).join('') + '</tbody></table></div></details>';
       });
     });

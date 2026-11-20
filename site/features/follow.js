@@ -30,6 +30,19 @@
     FT.onLang(draw);
   });
 
+  // RSS: one feed per country (tools/features/feeds.py writes the list of countries that have one)
+  Promise.all([FT.index(), FT.json('/feeds/countries.json')]).then(function (r) {
+    var have = {}; r[1].forEach(function (c) { have[c] = 1; });
+    function fill() {
+      var cur = $('fd-c').value || 'ID';
+      $('fd-c').innerHTML = FT.sortByName(r[0].countries.filter(function (c) { return have[c.c]; }))
+        .map(function (c) { return '<option value="' + c.c + '">' + FT.esc(FT.name(c)) + '</option>'; }).join('');
+      $('fd-c').value = cur; link();
+    }
+    function link() { var u = '/feeds/c/' + $('fd-c').value + '.xml'; $('fd-link').href = u; $('fd-link').textContent = 'https://theimr.org' + u; }
+    fill(); $('fd-c').addEventListener('change', link); FT.onLang(fill);
+  }).catch(function () {});
+
   var form = $('follow-form');
   form.addEventListener('submit', function (e) {
     if (!Object.keys(picked).length) {
