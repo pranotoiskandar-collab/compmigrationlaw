@@ -6,6 +6,8 @@ For each page, in English and then with the Indonesian switch on, it records:
   * files on the site that fail to load (missing scripts, data files, images)
   * text the page's own scripts write that stays in English when Indonesian is
     chosen (the static check in site_check.py only sees text in the HTML)
+and, on a 320 px wide touch phone (the narrowest cheap Android phones):
+  * a page wider than the screen, so readers must scroll sideways
 
     python3 tools/checks/browser_check.py --site site --out browser.json
 
@@ -63,6 +65,24 @@ FIND_ENGLISH = r"""
 """
 
 
+# Width of the page on a phone, and the element that sticks out furthest (not counting
+# boxes that scroll or clip on their own).
+PHONE_WIDTH = r"""
+() => {
+  const w = 320, sw = document.documentElement.scrollWidth;  // not innerWidth: a phone widens it to fit a page that is too wide
+  if (sw <= w + 1) return null;
+  const clipped = el => { for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) { if (getComputedStyle(a).overflowX !== 'visible') return true; } return false; };
+  let what = '', far = w;
+  for (const el of document.querySelectorAll('body *')) {
+    if (el.closest('svg') && el.tagName.toLowerCase() !== 'svg') continue;
+    const r = el.getBoundingClientRect();
+    if (r.right > far && !clipped(el)) { far = r.right; what = el.tagName.toLowerCase() + (el.className && typeof el.className === 'string' ? '.' + el.className.split(' ')[0] : '') + ' "' + (el.textContent || '').trim().slice(0, 40) + '"'; }
+  }
+  return {width: sw, what: what || 'unknown'};
+}
+"""
+
+
 def serve(site):
     handler = functools.partial(QuietHandler, directory=str(site))
     httpd = socketserver.ThreadingTCPServer(("127.0.0.1", 0), handler)
@@ -90,18 +110,21 @@ def pages_to_open(site):
     return ["/" + (r[: -len("index.html")] if r.endswith("index.html") else r) for r in out]
 
 
-def run(site, out_path):
+def run(site, out_path, shard=(0, 1)):
     from playwright.sync_api import sync_playwright
 
     httpd, origin = serve(site)
     problems = []
     english = {}  # text -> [interface, count, where, case]
-    urls = pages_to_open(site)
+    urls = pages_to_open(site)[shard[0]::shard[1]]
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         for url in urls:
-            for lang in ("en", "id"):
-                ctx = browser.new_context(viewport={"width": 1280, "height": 900})
+            for lang in ("en", "id", "phone"):
+                if lang == "phone":
+                    ctx = browser.new_context(viewport={"width": 320, "height": 640}, is_mobile=True, has_touch=True)
+                else:
+                    ctx = browser.new_context(viewport={"width": 1280, "height": 900})
                 ctx.route(re.compile(r"https?://([^/]*\.)?(zgo\.at|goatcounter\.com)/.*"), lambda r: r.abort())
                 page = ctx.new_page()
                 errors, missing = [], []
@@ -115,10 +138,16 @@ def run(site, out_path):
                 try:
                     page.goto(origin + url + ("?lang=id" if lang == "id" else ""), wait_until="load", timeout=45000)
                     try:
-                        page.wait_for_load_state("networkidle", timeout=8000)
+                        if lang != "phone":  # the phone pass only measures width: no need to wait for the network
+                            page.wait_for_load_state("networkidle", timeout=8000)
                     except Exception:  # noqa: BLE001  (maps keep fetching tiles)
                         pass
                     page.wait_for_timeout(800)
+                    if lang == "phone":
+                        wide = page.evaluate(PHONE_WIDTH)
+                        if wide:
+                            problems.append(problem("phone", "error", f"wide|{url}", where,
+                                                    f"{url} is {wide['width']} px wide on a 320 px phone, so readers must scroll sideways. Widest part: {wide['what']}"))
                     if lang == "id":
                         for t, inter, case in page.evaluate(FIND_ENGLISH):
                             if not needs_translation(t) or looks_indonesian(t):
@@ -145,15 +174,17 @@ def run(site, out_path):
         problems.append(problem("i18n", level, t[:200], where,
                                 f"{kind} shown in English when Indonesian is chosen: \"{t[:120]}\". Add it to site/assets/lang.js or the page's *-i18n.js file, or mark the element data-noi18n if it should stay in English."))
     pathlib.Path(out_path).write_text(json.dumps({"problems": problems, "pages_opened": len(urls)}, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"Opened {len(urls)} pages in English and Indonesian; {len(problems)} findings.")
+    print(f"Opened {len(urls)} pages in English, in Indonesian and on a 320 px phone; {len(problems)} findings.")
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site", default="site")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--shard", default="0/1", help="i/n: open only every n-th page starting at i, so several copies can run side by side")
     args = ap.parse_args()
-    run(pathlib.Path(args.site).resolve(), args.out)
+    i, n = (int(x) for x in args.shard.split("/"))
+    run(pathlib.Path(args.site).resolve(), args.out, (i, n))
 
 
 if __name__ == "__main__":

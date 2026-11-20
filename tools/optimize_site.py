@@ -304,7 +304,9 @@ def optimize(page, report):
     if 'rel="manifest"' not in html:
         html = html.replace("</head>", APP_HEAD + "</head>", 1)
     if "/assets/research.js" not in html and not name.startswith("press/") and "</body>" in html:
-        html = html.replace("</body>", RESEARCH + "</body>", 1)
+        # The LAST </body>: some pages build Word or print copies from a JS string that contains "</body>".
+        b = html.rfind("</body>")
+        html = html[:b] + RESEARCH + html[b:]
     html = stamp(html, page)
 
     # Landmarks for blocks that sit outside <main>, and a map whose countries can be focused.
