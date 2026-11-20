@@ -14,6 +14,9 @@ Speed
   copy until the file really changes (see sw.js and the headers in netlify.toml).
 * A small service worker (/sw.js) is registered: pages already opened work offline,
   and the Legal Clinic is saved for offline use when someone opens it.
+* The web app manifest is linked, so phones offer to install the site as an app
+  (see /app/), and /assets/research.js adds "Save this search" and "Add to reading
+  list" to the database and decision pages.
 
 Accessibility
 * A "Skip to main content" link at the top of every page (Indonesian when the page
@@ -80,6 +83,14 @@ VENDOR = {
 SCRIPT_SRC = re.compile(r'(<script\b[^>]*?\bsrc=")([^"?#]+\.js)(")')
 CSS_HREF = re.compile(r'(<link\b[^>]*?\bhref=")([^"?#]+\.css)(")')
 
+# Site icon (tea hills, 2026-11-20): scalable tab icon, install manifest and phone bar colour.
+# Pages already link favicon.ico, favicon-32.png and apple-touch-icon.png themselves.
+ICON_HEAD = (
+    '<link rel="icon" type="image/svg+xml" href="/favicon.svg">'
+    '<link rel="manifest" href="/site.webmanifest">'
+)
+THEME_COLOR = '<meta name="theme-color" content="#1E6B4A">'
+
 HEAD_EXTRA = (
     '<style id="imr-a11y">'
     ".imr-skip{position:absolute;left:8px;top:-80px;z-index:1000;background:#fff;color:#172D24;padding:12px 16px;"
@@ -91,6 +102,13 @@ HEAD_EXTRA = (
     "*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}"
     "</style>"
 )
+
+# Installable app (see site/manifest.webmanifest and /app/), and the research tools (saved searches, reading list).
+APP_HEAD = ('<link rel="manifest" href="/manifest.webmanifest">'
+            '<meta name="theme-color" content="#172D24">'
+            '<meta name="apple-mobile-web-app-capable" content="yes">'
+            '<meta name="apple-mobile-web-app-title" content="IMR">')
+RESEARCH = '<script src="/assets/research.js" defer></script>'
 
 SKIP = '<a class="imr-skip" href="#%s" data-noi18n>Skip to main content</a>'
 
@@ -283,6 +301,10 @@ def optimize(page, report):
         if cdn in html:
             html = html.replace(cdn, local)
             report["vendor"] += 1
+    if 'rel="manifest"' not in html:
+        html = html.replace("</head>", APP_HEAD + "</head>", 1)
+    if "/assets/research.js" not in html and not name.startswith("press/") and "</body>" in html:
+        html = html.replace("</body>", RESEARCH + "</body>", 1)
     html = stamp(html, page)
 
     # Landmarks for blocks that sit outside <main>, and a map whose countries can be focused.
@@ -292,7 +314,12 @@ def optimize(page, report):
     html, main_id = fix_main(html, report, name)
     head_end = html.find("</head>")
     if head_end > 0:
-        html = html[:head_end] + HEAD_EXTRA + html[head_end:]
+        extra = HEAD_EXTRA
+        if "site.webmanifest" not in html:
+            extra = ICON_HEAD + extra
+        if 'name="theme-color"' not in html:
+            extra = THEME_COLOR + extra
+        html = html[:head_end] + extra + html[head_end:]
     m = re.search(r"<body\b[^>]*>", html)
     if m and main_id:
         html = html[: m.end()] + SKIP % main_id + html[m.end():]

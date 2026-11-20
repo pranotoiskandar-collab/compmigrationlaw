@@ -1,0 +1,11 @@
+column,meaning,values
+iso2,Country or territory (ISO 3166-1 alpha-2; XK = Kosovo),two upper-case letters
+country,Name as written in the official record,text
+instrument,Treaty,"C097 = ILO Migration for Employment Convention (Revised), 1949; C143 = ILO Migrant Workers (Supplementary Provisions) Convention, 1975; C189 = ILO Domestic Workers Convention, 2011; C190 = ILO Violence and Harassment Convention, 2019; ICRMW = International Convention on the Protection of the Rights of All Migrant Workers and Members of Their Families, 1990"
+status,Status in the official record,"ratified = ratified, accepted, approved or acceded; signed = signed only (ICRMW); denounced = denounced or abrogated (ILO). States with no row are not party and have not signed."
+date_signed,Date of signature (ICRMW only),YYYY-MM-DD or empty
+date_ratified,"Date of ratification, accession or ILO registration",YYYY-MM-DD or empty
+binding_now,Whether the treaty binds the state now,"yes; no = ILO ratification registered less than twelve months ago, signature only, or denounced"
+source,Official record used,normlex = ILO NORMLEX; untc = UN Treaty Collection
+source_url,Page of the official record,URL
+last_checked,Date the row was last compared with the official record,YYYY-MM-DD
