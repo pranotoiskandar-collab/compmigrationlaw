@@ -1,0 +1,5 @@
+# Files left out of release archives (GitHub zip/tar downloads and the Zenodo
+# copy made from each release). They stay on the website as usual.
+# Book covers and historical photographs carry their own rights, see LICENSE.md.
+site/images/** export-ignore
+site/press/** export-ignore

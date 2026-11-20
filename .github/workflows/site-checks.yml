@@ -47,6 +47,9 @@ jobs:
       - name: Python scripts compile
         working-directory: head
         run: python3 -m py_compile tools/*.py tools/checks/*.py tools/watch/*.py
+      - name: Citation blocks match the page versions
+        working-directory: head
+        run: python3 tools/cite_blocks.py --check
       - name: Build the base version
         id: basebuild
         if: steps.base.outcome == 'success'
