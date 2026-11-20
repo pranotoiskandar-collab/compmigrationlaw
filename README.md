@@ -1,5 +1,7 @@
 # Comparative migration law: theimr.org website and open data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24389324.svg)](https://doi.org/10.5281/zenodo.24389324)
+
 This repository holds the website of the **Institute for Migrant Rights** ([theimr.org](https://theimr.org)) and every dataset it publishes under *Migration Jurisprudence from the South*. Netlify publishes the site automatically whenever the `main` branch changes.
 
 ## What is where
@@ -43,9 +45,9 @@ Data and site text: CC BY 4.0. See [LICENSE.md](LICENSE.md) for the details and 
 
 Every database page on theimr.org has a "How to cite" block with a citation, BibTeX and the database's version number. To cite the collection as a whole:
 
-> Institute for Migrant Rights (2026). *Migration Jurisprudence from the South: databases of migration and labor law* [Data set]. https://theimr.org/databases/
+> Institute for Migrant Rights (2026). *Migration Jurisprudence from the South: databases of migration and labor law* (Version 2026.11) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24389324
 
-Each GitHub release is archived on Zenodo with a DOI; see [docs/RELEASING.md](docs/RELEASING.md) and [CHANGELOG.md](CHANGELOG.md). GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff).
+This DOI always points to the newest release. Each GitHub release is also archived on Zenodo with its own DOI (v2026.11: 10.5281/zenodo.24389325); see [docs/RELEASING.md](docs/RELEASING.md) and [CHANGELOG.md](CHANGELOG.md). GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff).
 
 ## Adding data
 

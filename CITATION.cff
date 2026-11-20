@@ -7,7 +7,7 @@ type: dataset
 authors:
   - name: Institute for Migrant Rights
     website: "https://theimr.org/"
-# doi: added after the first Zenodo release (see docs/RELEASING.md)
+doi: "10.5281/zenodo.24389324"
 url: "https://theimr.org/databases/"
 repository-code: "https://github.com/pranotoiskandar-collab/compmigrationlaw"
 license: CC-BY-4.0
