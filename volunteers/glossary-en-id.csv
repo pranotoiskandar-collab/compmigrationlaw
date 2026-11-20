@@ -1,0 +1,42 @@
+en,id,status,where,note
+Institute for Migrant Rights,Institute for Migrant Rights,open,everywhere,Name kept in English for now. "Institut Hak-Hak Migran" is under discussion; do not use it yet.
+Migration Jurisprudence from the South (databases project),Pandangan Hukum Migrasi dari Dunia Berkembang,fixed,menus; databases page,Replaces the older "Yurisprudensi Migrasi dari Selatan" everywhere.
+hate speech,ucapan kebencian,fixed,Government Hate Speech pages,"""ujaran kebencian"" is also correct Indonesian, but the site uses ""ucapan"". Use ""ucapan"" for speech in new text."
+Government Hate Speech,Ucapan Kebencian oleh Negara,fixed,menu; page titles,
+Hate speech and elections,Ucapan Kebencian dan Pemilu,fixed,menu,
+vote / votes,suara,fixed,elections pages,"""suara"" is reserved for election votes. Do not use it for voice or opinion. Voice message = ""pesan audio""."
+voice message,pesan audio,fixed,Legal Clinic,Not "pesan suara" (suara means vote on this site).
+impunity,kekebalan,fixed,everywhere,"Not ""impunitas"" or ""imunitas""."
+nativist,pro-pribumi,fixed,elections pages,"Not ""nativis"" or ""anti-migran"". Add a one-line note explaining the term the first time it appears on a page. English keeps ""nativist""."
+regional (tier),kawasan,fixed,everywhere,"For example ""tingkat dunia, kawasan"" (global/regional tiers). Not ""regional""."
+global and regional tiers,"tingkat dunia, kawasan",fixed,Atlas; migration law,
+rights communication,pengaduan hak,fixed,Legal Clinic; site-wide,"Never translate as ""keluhan"". In English never say ""complaint"" except in official names (HRC Complaint Procedure, ECSR Collective Complaints)."
+individual communication (UN technical term),komunikasi perorangan,fixed,UN treaty body pages,Technical UN terms stay as they are.
+admissibility of communications,dapat diterimanya komunikasi,fixed,UN treaty body pages,
+report to a national body (e.g. Komnas HAM),pengaduan,fixed,Legal Clinic,National bodies take reports (pengaduan).
+farmworker,buruh tani,fixed,everywhere,
+migrant worker (Indonesian),pekerja migran Indonesia (PMI),preferred,origin pages,Official term in Law 18/2017. Avoid the older "TKI" except in quotations or old titles.
+trafficking in persons,tindak pidana perdagangan orang (TPPO),preferred,Legal Clinic; court decisions,Use the statutory term from Law 21/2007.
+non-citizens,orang yang bukan warga negara,fixed,everywhere,
+origin states / countries of origin,Negara asal,fixed,menus; page titles,
+destination states,negara tujuan,preferred,everywhere,
+People (team page),Tim,fixed,menu,"""Orang-Orang Kami"" is still an open option for oto."
+Contact,Hubungi Kami,fixed,"menu, footer, page title",
+In the news,IMR di publik,fixed,menu,Earlier "IMR di media" replaced on 2026-11-17.
+Arguments that work,Gugatan hukum yang berhasil,fixed,Legal Clinic menu,
+journey (migration journey),migrasi,fixed,Legal Clinic,
+editor,penyunting,fixed,everywhere,
+explorer (data tool),alat jelajah,fixed,databases,
+Ideas from the fields,Gagasan dari sawah dan ladang,fixed,homepage,"""lapangan"" is an open option."
+references,rujukan,fixed,everywhere,"Not ""referensi""."
+method,cara,preferred,method notes,"""metode"" only in statistical terms where needed."
+scholarly,kesarjanaan,preferred,everywhere,"Not ""ilmiah"" when it means academic scholarship."
+China,Cina,fixed,everywhere,"Not ""Tiongkok""."
+United Kingdom / British,Inggris,fixed,everywhere,"Not ""Britania""."
+you (to the reader),anda,fixed,everywhere,Lowercase "anda" in the middle of a sentence.
+we (IMR speaking),kami,fixed,everywhere,"Write in the ""kami"" voice. Avoid ""halaman ini"" and long passive di- sentences."
+is (formal connector),merupakan,style,everywhere,"Prefer merupakan over adalah; memiliki over punya; melalui over lewat; tersebut over itu; yakni over "":"" or yaitu; sebagian besar over kebanyakan; tidak over tak."
+use,memakai,style,everywhere,"Everyday register: memakai, bisa, ada, sebuah."
+Court Decisions,Putusan Pengadilan,preferred,menu,Check against lang.js before changing.
+codebook,buku kode,preferred,method notes,Give the English term in brackets the first time: buku kode (codebook).
+second coding / inter-coder reliability,pengodean kedua / keandalan antarpengode,preferred,method notes,Give the English term in brackets.

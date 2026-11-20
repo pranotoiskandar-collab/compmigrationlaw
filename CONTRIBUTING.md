@@ -1,3 +1,7 @@
+# Contributing
+
+**New volunteer?** Start with the [volunteer starter kit](volunteers/README.md) ([Bahasa Indonesia](volunteers/README.id.md)) and sign up at [theimr.org/volunteer](https://theimr.org/volunteer/). It explains the four task packs, the ground rules and where to send your work. This page covers the technical rules for pull requests.
+
 # Adding data
 
 Other IMR projects and researchers add data through **pull requests**. Nothing reaches theimr.org until an editor has looked at it and merged it.
@@ -53,3 +57,26 @@ These match the East Asia starting file and suit any country:
 ## Working with git
 
 You can do all of this in the browser: open the folder on GitHub, choose **Add file → Upload files**, and select **Create a new branch and start a pull request**.
+
+## Translations
+
+- Website text in Indonesian lives in `site/assets/lang.js` (a dictionary keyed by the English text). The Legal Clinic has its own `site/legal-clinic/i18n.js`.
+- Use the fixed terms in `volunteers/glossary-en-id.csv`. For a new language, start from `volunteers/translation-memory-en-id.csv`; refresh it with `python3 tools/export_tm.py` after `lang.js` changes.
+- A second speaker reviews every translation before it is merged. Say in the pull request who checked it.
+- Legal data (treaty names, case summaries) stays in English.
+
+## Code
+
+- Keep scripts small, with a docstring that says how to run them. Build scripts live in `build/<name>-build/`.
+- Scrapers must respect `robots.txt` and wait a few seconds between requests. Fetch official portals only.
+- Run `python3 tools/check_csv.py` before you open a pull request. The same check runs automatically on every pull request.
+
+## What never goes in this repository
+
+This repository is public. Never commit:
+
+- anything from the Legal Clinic or the hate speech report form (submissions, names, contact details, drafts);
+- second-coding answer keys, verification worksheets with reviewers' names, or other internal working files;
+- passwords, API keys or private contact details.
+
+If you find such material here, do not copy it. Write to secretariat@theimr.org.
