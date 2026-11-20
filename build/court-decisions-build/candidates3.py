@@ -1,4 +1,4 @@
-# Candidates, third set (2026-11-01): 176 decisions harvested from official and free law databases on oto's iMac
+# Candidates, third set (2026-11-01): 176 decisions harvested from official and free law databases on Pranoto's iMac
 # (lawlibrary.org.za, Kenya Law, AfricanLII and national LIIs, LawPhil, HKLII, Corte Constitucional, Constitutional Court of Korea,
 # HUDOC, OHCHR treaty body database). Duplicates of existing entries removed. Status C: confirmed to exist with a direct link; summaries to be written.
 from candidates import C

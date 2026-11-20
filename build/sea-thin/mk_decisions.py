@@ -1,7 +1,7 @@
 """Indonesian Constitutional Court decisions on the migrant worker laws, plus one Myanmar ruling.
 
 Source list: imrdata repo, decisions/tables/mk_decisions.csv (MK list, 17 Nov 2026).
-Texts: the official PDFs on s.mkri.id, downloaded on oto's Mac on 18 Nov 2026
+Texts: the official PDFs on s.mkri.id, downloaded on Pranoto's Mac on 18 Nov 2026
 (OneDrive IMR-data/sea-courts-2026-11-18/mk/, with summary.csv of verbatim holdings
 and reasoning sentences with page numbers). Summaries below are written from those
 texts. Myanmar: Myanmar Law Reports (Rulings) 2021, Union Supreme Court site.

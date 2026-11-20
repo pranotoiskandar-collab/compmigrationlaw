@@ -1,7 +1,7 @@
 """Add more Philippine illegal recruitment cases from the PR 5 search results (status C, unverified).
 
 Usage: python3 build/merge-incoming/ph_recruitment_more.py SITE OUT.json, then patch_site_decisions.py SITE OUT.json
-oto (18 November 2026) asked for more recruitment cases. The PR 5 shortlist kept a Philippine decision only
+Pranoto (18 November 2026) asked for more recruitment cases. The PR 5 shortlist kept a Philippine decision only
 if a core term occurred at least 30 times in it. This adds the Supreme Court decisions from the full list
 (data/court-decisions/incoming/other-asia/migration-cases-all-2026-11-17.csv) that matched "illegal
 recruitment" together with "POEA" or "overseas employment", have a title and a link, and are not on the

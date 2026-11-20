@@ -1,15 +1,15 @@
-# Umbrella landing page "Migration Jurisprudence from the South" at /databases/ (restructure, oto 2026-11-13; based on databases-build/databases.py of 2026-11-05)
+# Umbrella landing page "Migration Jurisprudence from the South" at /databases/ (restructure, Pranoto 2026-11-13; based on databases-build/databases.py of 2026-11-05)
 # Called by restructure.py with the site dir as argv[1].
-# /databases/ landing page (oto, 2026-11-05): a welcoming remark adapted from oto's Kompas op-ed
+# /databases/ landing page (Pranoto, 2026-11-05): a welcoming remark adapted from Pranoto's Kompas op-ed
 # ("Melindungi Pekerja Migran Tanpa Kompas"), then the databases in two groups (the two menus).
-# EN on the page; ID (oto's original Indonesian) in /assets/lang.js. Safe to rerun.
+# EN on the page; ID (Pranoto's original Indonesian) in /assets/lang.js. Safe to rerun.
 import os, re, json, glob
 import sys
 SITE = sys.argv[1] if len(sys.argv) > 1 else '/mnt/project-files/theimr-site'
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, s): open(p, 'w', encoding='utf-8').write(s)
 
-# (English, Indonesian) pairs. The ID side is oto's Kompas text, lightly adapted for the site.
+# (English, Indonesian) pairs. The ID side is Pranoto's Kompas text, lightly adapted for the site.
 T = {}
 def t(en, id_): T[en] = id_; return en
 

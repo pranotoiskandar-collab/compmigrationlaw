@@ -3,7 +3,7 @@
 Usage: python3 build/origin-courts/origin_courts.py SITE
 Counts the Court Decisions entries decided by national courts of the origin states on the page and writes
 one card per country, linking to that country's list in /court-decisions/all/. Indonesian strings go into
-oc-i18n.js. Added 18 November 2026 (oto) so that Nepal's Supreme Court cases show as origin-state
+oc-i18n.js. Added 18 November 2026 (Pranoto) so that Nepal's Supreme Court cases show as origin-state
 jurisprudence without a South Asia page.
 """
 import html, json, re, sys
@@ -29,16 +29,16 @@ NOTES = {
     "PH": ("Supreme Court decisions, mostly from its E-Library (elibrary.judiciary.gov.ph): illegal recruitment, claims by overseas workers and seafarers against recruitment agencies, and trafficking.",
            "Putusan Mahkamah Agung, sebagian besar dari E-Library-nya (elibrary.judiciary.gov.ph): perekrutan ilegal, gugatan pekerja luar negeri dan pelaut terhadap agen perekrutan, serta perdagangan orang."),
 }
-# theme-by-country comparison (oto, 18 November 2026: "each country can be connected ... based on thematic question")
+# theme-by-country comparison (Pranoto, 18 November 2026: "each country can be connected ... based on thematic question")
 SIT = [[m.group(1), [m.group(2), m.group(3)]] for m in re.finditer(r'\["([a-z]+)", "([^"]+)", "([^"]+)"\]', J[J.index("var SIT = ["):J.index("var STAGE = [")])]
 STAGE = [[int(m.group(1)), [m.group(2), m.group(3)]] for m in re.finditer(r'\[(\d), "([^"]+)", "([^"]+)"', J[J.index("var STAGE = ["):])][:5]
 BRANCH = [["criminal", ["Criminal", "Pidana"]], ["private", ["Private dispute (labor, contract, tort)", "Sengketa perdata (kerja, kontrak, perbuatan melawan hukum)"]],
           ["administrative", ["Administrative (challenge to a government decision)", "Tata usaha negara (gugatan atas keputusan pemerintah)"]],
           ["constitutional", ["Constitutional and human rights", "Konstitusi dan hak asasi manusia"]]]
-# Importance order of the situations (oto, 18 November 2026: themes "organized by the popularity or importance",
+# Importance order of the situations (Pranoto, 18 November 2026: themes "organized by the popularity or importance",
 # based on a survey online). Ranked from official complaint figures of origin states and ILO studies,
 # first read through web search on 18 November 2026, then checked the same day against the agencies' own
-# reports downloaded on oto's Mac (OneDrive IMR-data/complaint-stats-2026-11-18/).
+# reports downloaded on Pranoto's Mac (OneDrive IMR-data/complaint-stats-2026-11-18/).
 RANK = ["fees", "wages", "dismissed", "forced", "injury", "passport", "arrest", "coverage"]
 WHY = {"lead": ["Ordered by how often each problem comes up in the complaints that origin-state agencies receive and in ILO studies of migrant workers in Asia, not by the number of court decisions. The figures come from the agencies' own annual reports, checked on 18 November 2026.",
                 "Diurutkan menurut seberapa sering tiap masalah muncul dalam pengaduan yang diterima lembaga di negara asal dan dalam kajian ILO tentang pekerja migran di Asia, bukan menurut jumlah putusan pengadilan. Angka-angka tersebut berasal dari laporan tahunan resmi lembaga yang bersangkutan dan telah kami periksa pada 18 November 2026."],
@@ -68,7 +68,7 @@ drank = {k: i + 1 for i, k in enumerate(sorted(RANK, key=lambda k: (-cnt[k], RAN
 n = len(RANK); rho = 1 - 6 * sum((RANK.index(k) + 1 - drank[k]) ** 2 for k in RANK) / (n * (n * n - 1))
 GAP = {"total": len(home), "bp_total": 1500, "rho": round(rho, 2),
        "rows": [[k, i + 1, drank[k], cnt[k], BP2MI.get(k)] for i, k in enumerate(RANK)]}
-# Law on the books and in court (oto, 18 November 2026): which statute each origin-court decision names,
+# Law on the books and in court (Pranoto, 18 November 2026): which statute each origin-court decision names,
 # from the full-text search terms that found it (PR 5 search results), set beside the Countries of Origin codings.
 import csv as _csv
 ALL = list(_csv.DictReader(open(Path(__file__).resolve().parents[2] / "data/court-decisions/incoming/other-asia/migration-cases-all-2026-11-17.csv", encoding="utf-8")))

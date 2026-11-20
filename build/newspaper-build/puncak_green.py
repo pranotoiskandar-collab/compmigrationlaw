@@ -1,4 +1,4 @@
-# "Puncak green" look for theimr.org (oto chose look B on 2026-11-19).
+# "Puncak green" look for theimr.org (Pranoto chose look B on 2026-11-19).
 # 1. Turns the Soga browns back into the Puncak tea-garden greens (inverse of palette.py soga; status colours untouched).
 # 2. Replaces the old-photo banners (figure.imr-band) with drawn Gede-Pangrango tea-hill bands (/images/puncak/hills-N.svg).
 # 3. Legal Clinic: the hills band replaces the banana leaves in the hero. Homepage: a large hills band under the hero.

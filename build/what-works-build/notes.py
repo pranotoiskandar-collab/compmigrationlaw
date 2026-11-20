@@ -1,5 +1,5 @@
-# "What makes this jurisdiction distinctive" notes for /legal-clinic/what-works/ (oto, 2026-11-13).
-# Written with AI assistance from the decisions in the Court Decisions collection and from materials oto supplied:
+# "What makes this jurisdiction distinctive" notes for /legal-clinic/what-works/ (Pranoto, 2026-11-13).
+# Written with AI assistance from the decisions in the Court Decisions collection and from materials Pranoto supplied:
 #   Iskandar 2018 (Social & Legal Studies 27(2), ASEAN), Lyon & Iskandar 2024 (LPCSA 56(3)), Oishi & Chien 2026 (JEMS, East Asia),
 #   Farnsworth, The Tools of Argument (reasoning tools), ILO FAIRWAY Gulf factsheets 2023-24. All notes are status "being checked".
 # Each entry: key, EN name, ID name, country codes, EN note, ID note, list of (EN, ID) sources beyond the decisions themselves.

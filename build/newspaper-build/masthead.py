@@ -1,4 +1,4 @@
-# Model F masthead for every page of theimr.org (oto chose it 2026-11-16). Idempotent.
+# Model F masthead for every page of theimr.org (Pranoto chose it 2026-11-16). Idempotent.
 # Usage: python3 masthead.py SITE
 # Replaces the old one-line <header> (brand left, nav right) with the compact F header: IMR square + name + subtitle,
 # the page's own <nav aria-label="Main"> block (untouched, so restructure.py and lang.js keep working).

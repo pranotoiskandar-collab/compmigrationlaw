@@ -1,4 +1,4 @@
-# Homepage layout models for oto (2026-11-16): A "Data desk" (data-journal style) and C "Mix" (newspaper masthead + data lead).
+# Homepage layout models for Pranoto (2026-11-16): A "Data desk" (data-journal style) and C "Mix" (newspaper masthead + data lead).
 # Usage: python3 models.py SITE OUTDIR   (SITE = an unpacked site; writes OUTDIR/model-a.html, model-c.html using SITE's real data)
 import os, sys, re, json, csv, collections, html
 SITE, OUT = sys.argv[1], sys.argv[2]

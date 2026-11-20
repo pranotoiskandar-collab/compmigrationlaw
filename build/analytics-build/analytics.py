@@ -1,4 +1,4 @@
-# Adds the GoatCounter snippet (site code "theimr", set up by oto 2026-11-12) and /assets/imr-events.js to every HTML page. Idempotent: rerun after any page rebuild.
+# Adds the GoatCounter snippet (site code "theimr", set up by Pranoto 2026-11-12) and /assets/imr-events.js to every HTML page. Idempotent: rerun after any page rebuild.
 import os, sys
 SITE = sys.argv[1] if len(sys.argv) > 1 else '/mnt/project-files/theimr-site'
 TAG = '<!-- imr-analytics -->'

@@ -143,7 +143,7 @@ if cat_page.exists():
     cat_page.write_text(replace_ld(cat_page.read_text(encoding="utf-8"), catalog), encoding="utf-8")
 
 # ---------------------------------------------------------------- the organisation
-# IMR was founded in 2007 (oto, 2026-11-19); search engines had shown 2010.
+# IMR was founded in 2007 (Pranoto, 2026-11-19); search engines had shown 2010.
 FOUNDED = "2007"
 
 

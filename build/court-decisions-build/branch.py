@@ -1,4 +1,4 @@
-# Field of law (2026-11-01, oto's request): criminal | private | administrative | constitutional.
+# Field of law (2026-11-01, Pranoto's request): criminal | private | administrative | constitutional.
 # 'constitutional' = constitutional review and human rights complaints (incl. regional and UN bodies).
 # Coded by rule from court, parties and arguments, then corrected by hand in OVERRIDE. Researchers confirm.
 import re

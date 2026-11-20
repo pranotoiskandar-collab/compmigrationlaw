@@ -1,4 +1,4 @@
-# Added 2026-11-11 (v1.1, oto: "yes, add them"). All cells S (secondary sources), to be checked against official texts.
+# Added 2026-11-11 (v1.1, Pranoto: "yes, add them"). All cells S (secondary sources), to be checked against official texts.
 RAW = {
 "MA": """cov|1|Dedicated statute with narrower terms than the Labour Code.|Law 19-12 (2016, in force 2018)
 con|1|Written contract on a model form, deposited with the labor inspector.|Law 19-12 art. 3

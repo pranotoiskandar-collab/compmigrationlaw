@@ -1,4 +1,4 @@
-# Applies oto's approved Indonesian (Google Doc "theimr.org – terjemahan bahasa Indonesia, versi baru", 2026-11-17)
+# Applies Pranoto's approved Indonesian (Google Doc "theimr.org – terjemahan bahasa Indonesia, versi baru", 2026-11-17)
 # to /assets/lang.js and /legal-clinic/i18n.js. Run AFTER apply_guide.py. Idempotent.
 # Usage: python3 apply_v2.py SITE   (reads docrows.json beside this script: en -> final)
 import sys, os, re, json
@@ -8,7 +8,7 @@ rows = json.load(open(os.path.join(HERE, 'docrows.json'), encoding='utf-8'))
 sys.path.insert(0, HERE); from newid import SITPAIR
 NAME_OLD, NAME_NEW = 'Yurisprudensi Migrasi dari Selatan', 'Pandangan Hukum Migrasi dari Dunia Berkembang'
 STR = r'"(?:[^"\\]|\\.)*"'
-# oto's doc writes lowercase 'anda' mid-sentence (2026-11-17)
+# Pranoto's doc writes lowercase 'anda' mid-sentence (2026-11-17)
 ANDA = re.compile(r'(?<=[a-z0-9,;)\]] )Anda\b')
 MO = 'Yang paling sering muncul: %s, serta %s'
 

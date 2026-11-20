@@ -1,7 +1,7 @@
 # id | tier | region | countries (comma) | type | year adopted | in force | issuer | title | summary EN | summary ID | topics
 # tier: intl, reg, bil, nat.  type: treaty, protocol, rec (ILO recommendation), interp (treaty-body interpretation),
 # soft (declaration, framework, guideline), statute, reg (regulation/decree), contract (standard contract), mou, judgment.
-# Evidence: everything S except FDL 9/2022 (oto's copy of the official translation, P).
+# Evidence: everything S except FDL 9/2022 (Pranoto's copy of the official translation, P).
 ROWS = r"""
 C189|intl||all|treaty|2011|2013|ILO|Domestic Workers Convention, 2011 (No. 189)|The first treaty on domestic work: decent work, equal treatment on hours, rest, minimum wage and social security, written terms for migrant workers before departure, and regulation of agencies.|Traktat pertama tentang kerja rumah tangga: kerja layak, perlakuan setara soal jam kerja, istirahat, upah minimum dan jaminan sosial, syarat tertulis bagi pekerja migran sebelum berangkat, serta pengaturan agen.|cov,con,wage,pay,hrs,rest,leave,doc,live,fee,agen,insp,disp,soc,viol,org
 R201|intl||all|rec|2011||ILO|Domestic Workers Recommendation, 2011 (No. 201)|Guidance on implementing C189: hours records, on-call time, accommodation standards, model contracts, repatriation and cooperation between states.|Pedoman pelaksanaan C189: catatan jam kerja, waktu siaga, standar akomodasi, kontrak model, pemulangan dan kerja sama antarnegara.|hrs,live,con,mob

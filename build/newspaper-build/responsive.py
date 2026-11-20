@@ -35,7 +35,7 @@ CSS2 = '''
 }
 '''
 CSS3 = '''
-/* calmer phone layout (responsive.py, oto 2026-11-17: phone site too crowded) */
+/* calmer phone layout (responsive.py, Pranoto 2026-11-17: phone site too crowded) */
 @media (max-width:600px){
  .imr-bentham .imr-bnext,.imr-bentham a{display:none!important}
  .imr-bentham>div{padding:6px 16px!important;font-size:13px}

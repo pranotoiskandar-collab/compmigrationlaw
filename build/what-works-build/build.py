@@ -1,4 +1,4 @@
-# Builds /legal-clinic/what-works/ ("What works where", oto 2026-11-13) from the Court Decisions data and notes.py.
+# Builds /legal-clinic/what-works/ ("What works where", Pranoto 2026-11-13) from the Court Decisions data and notes.py.
 # Usage: python3 build.py SITE_DIR   (rerun whenever court-decisions/cd-data.js changes; then restructure.py, ai_use.py, analytics.py)
 import os, sys, json, subprocess, html, re
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)

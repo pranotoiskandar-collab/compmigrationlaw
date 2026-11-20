@@ -1,7 +1,7 @@
 """Add Singapore migrant-worker cases below the Court of Appeal from the PR 5 search results (status C).
 
 Usage: python3 build/merge-incoming/sg_more.py SITE OUT.json, then patch_site_decisions.py SITE OUT.json
-PR 5 put only 13 Court of Appeal decisions on the site. oto (18 November 2026) agreed to sort the
+PR 5 put only 13 Court of Appeal decisions on the site. Pranoto (18 November 2026) agreed to sort the
 other eLitigation hits without a new crawl. Kept: decisions that matched a statute-specific term
 (Employment of Foreign Manpower Act, Employment Claims Act, Employment Agencies Act, Prevention of
 Human Trafficking Act, "foreign domestic worker", "migrant worker"), all Employment Claims Tribunal

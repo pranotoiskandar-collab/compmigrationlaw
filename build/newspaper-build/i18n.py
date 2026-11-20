@@ -1,7 +1,7 @@
 # Indonesian for the model F homepage, the shared masthead and the Clinic journey (2026-11-16). Idempotent.
 # Usage: python3 i18n.py SITE
 # Site pages: /assets/lang.js (window.SITE_I18N.id + __pat). Clinic page: /legal-clinic/i18n.js (window.CLINIC_I18N.id).
-# Follows oto's translation guide: everyday register (bisa, memakai), pengaduan hak, Negara asal, kawasan.
+# Follows Pranoto's translation guide: everyday register (bisa, memakai), pengaduan hak, Negara asal, kawasan.
 import sys, os, json
 SITE = sys.argv[1]
 J = lambda x: json.dumps(x, ensure_ascii=False)
