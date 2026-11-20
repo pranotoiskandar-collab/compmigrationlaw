@@ -3,7 +3,7 @@
    statutory citations not yet checked against the official text) until the second coding is complete.
    Corrections: secretariat@theimr.org */
 window.OC = {
-  updated: "11 November 2026",
+  updated: "20 November 2026",
   version: "1.2",
 
   states: [
@@ -626,6 +626,7 @@ window.OC = {
   ],
 
   changelog: [
+    ["2026-11-20", "1.3", "Eight laws added for Nepal, Bangladesh and Pakistan (44 to 52), and nine laws now link to the official text.", "Delapan undang-undang Nepal, Bangladesh dan Pakistan ditambahkan (44 menjadi 52), dan sembilan undang-undang kini ditautkan ke teks resminya."],
     ["2026-11-11", "1.2", "Treaty status checked against official records: C097, C143 and C189 on NORMLEX (11 November 2026) confirm that only the Philippines is party; C190 corrected for Bangladesh (ratified November 2025) and Sri Lanka (ratified April 2026), both not yet in force; two developments added.", "Status traktat diperiksa terhadap catatan resmi: C097, C143 dan C189 di NORMLEX (11 November 2026) memastikan hanya Filipina yang menjadi pihak; C190 dikoreksi untuk Bangladesh (diratifikasi November 2025) dan Sri Lanka (diratifikasi April 2026), keduanya belum berlaku; dua perkembangan ditambahkan."],
     ["2026-10-31", "1.1", "Added protection from violence: 6 features × 8 countries, a note on migration status and reporting (Innes et al. 2024), deaths recorded by origin authorities, ILO C190, two international instruments.", "Ditambahkan pelindungan dari kekerasan: 6 fitur × 8 negara, catatan tentang status migrasi dan pelaporan (Innes dkk. 2024), kematian yang dicatat otoritas negara asal, ILO C190, dua instrumen internasional."],
     ["2026-10-31", "1.0", "First release: 8 countries of origin × 9 features, treaty status, 66 instruments, 43 laws and policies, outflows, 17 corridors, developments.", "Rilis pertama: 8 negara asal × 9 fitur, status traktat, 66 instrumen, 43 hukum dan kebijakan, arus keluar, 17 koridor, perkembangan."]
