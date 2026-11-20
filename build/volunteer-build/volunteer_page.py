@@ -5,6 +5,7 @@ the rest of the site. The sign-up form is a Netlify form named
 "volunteer-signup", kept separate from the Legal Clinic form ("clinic-intake").
 
     python3 build/volunteer-build/volunteer_page.py
+    python3 build/newspaper-build/puncak_green.py site   # turns the page green
 """
 import pathlib, re
 

@@ -312,14 +312,14 @@
   function css() {
     var s = document.createElement("style");
     s.textContent =
-      ".imr-plain{grid-column:1;margin:14px 0 18px;max-width:760px;border:1px solid #C8BCB1;border-left:4px solid #8F5E12;background:#F0ECE8;color:#2E2116;font:400 16px/1.55 'Figtree',system-ui,sans-serif;text-align:left}" +
-      ".imr-plain>summary{cursor:pointer;list-style:none;padding:10px 14px;font:600 13px/1.3 'Figtree',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8F5E12;min-height:24px}" +
+      ".imr-plain{grid-column:1;margin:14px 0 18px;max-width:760px;border:1px solid #B2C7BC;border-left:4px solid #1E6B4A;background:#E8F0EC;color:#172D24;font:400 16px/1.55 'Figtree',system-ui,sans-serif;text-align:left}" +
+      ".imr-plain>summary{cursor:pointer;list-style:none;padding:10px 14px;font:600 13px/1.3 'Figtree',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1E6B4A;min-height:24px}" +
       ".imr-plain>summary::-webkit-details-marker{display:none}" +
       ".imr-plain>summary::before{content:'+';display:inline-block;width:1.1em;font-weight:700}" +
       ".imr-plain[open]>summary::before{content:'\\2212'}" +
       ".imr-plain>div{padding:0 16px 6px}.imr-plain p{margin:0 0 10px}" +
-      ".imr-plain-sw{position:fixed;left:12px;bottom:12px;z-index:70;all:unset;position:fixed;left:12px;bottom:12px;z-index:70;cursor:pointer;background:#2E2116;color:#fff;border-radius:999px;padding:10px 16px;font:600 13px/1 'Figtree',system-ui,sans-serif;letter-spacing:.04em;box-shadow:0 2px 8px rgba(0,0,0,.25)}" +
-      ".imr-plain-sw[aria-pressed='true']{background:#8F5E12}" +
+      ".imr-plain-sw{position:fixed;left:12px;bottom:12px;z-index:70;all:unset;position:fixed;left:12px;bottom:12px;z-index:70;cursor:pointer;background:#172D24;color:#fff;border-radius:999px;padding:10px 16px;font:600 13px/1 'Figtree',system-ui,sans-serif;letter-spacing:.04em;box-shadow:0 2px 8px rgba(0,0,0,.25)}" +
+      ".imr-plain-sw[aria-pressed='true']{background:#1E6B4A}" +
       ".imr-plain-sw:focus-visible{outline:3px solid #E8B4B0;outline-offset:2px}" +
       "@media print{.imr-plain-sw{display:none}.imr-plain{display:none}body.imr-plain-on .imr-plain{display:block}}";
     document.head.appendChild(s);
