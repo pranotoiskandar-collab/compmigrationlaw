@@ -12,7 +12,7 @@ What it draws (seed 20261120, so the sample can be rebuilt):
   Domestic workers about 20% of the coded cells in codings.csv for each of the 25 features (blank
                    cells, "not determined", are left out), spread across jurisdictions.
   Comparison pages the 54 cells already drawn on 18 November 2026, reused unchanged.
-Each item gets one second coder (round robin within each stratum, so every coder gets a mix).
+Each item gets one second coder (four coders since 20 November 2026) (round robin within each stratum, so every coder gets a mix).
 About 20% of items also get a second human coder ("overlap"), so agreement between two people can be
 reported alongside agreement between a person and IMR's own coding.
 
@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2] / "data"
 PAGES_WS, PAGES_KEY, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 (OUT / "keys").mkdir(parents=True, exist_ok=True)
 SEED, SHARE, OVERLAP = 20261120, 0.20, 0.20
-CODERS = ["Felicia Nathania", "Michelle Tjugito", "Intan Nevia Cahyana"]
+CODERS = ["Felicia Nathania", "Michelle Tjugito", "Intan Nevia Cahyana", "Chris Cason"]
 rng = random.Random(SEED)
 rd = lambda p: list(csv.DictReader(open(p, encoding="utf-8")))
 
@@ -79,7 +79,7 @@ def deal(items, strat):
     k = 0
     for g in sorted(groups):
         for it in groups[g]:
-            assign[it].append(CODERS[k % 3]); k += 1
+            assign[it].append(CODERS[k % len(CODERS)]); k += 1
 court_ids = [f"cd-{d['id']}" for d in court]
 dw_ids = [f"dw-{c['country']}-{c['role']}-{c['feature']}" for c in dws]
 page_ids = [r[0] for r in pages_rows]
@@ -89,7 +89,7 @@ deal(page_ids, lambda i: pages_key[i]["page"])
 for ids in (court_ids, dw_ids, page_ids):
     for i in rng.sample(ids, round(len(ids) * OVERLAP)):
         first = assign[i][0]
-        assign[i].append(CODERS[(CODERS.index(first) + 1 + rng.randrange(2)) % 3])
+        assign[i].append(CODERS[(CODERS.index(first) + 1 + rng.randrange(len(CODERS) - 1)) % len(CODERS)])
 
 # ---------- answer keys ----------
 with open(OUT / "keys/answer-key-court.csv", "w", newline="", encoding="utf-8") as fh:
