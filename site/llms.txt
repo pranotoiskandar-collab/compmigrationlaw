@@ -18,6 +18,7 @@
 ## Help for migrant workers
 - [Legal Clinic](https://theimr.org/legal-clinic/): submit a rights communication
 - [Find legal help](https://theimr.org/legal-help/): map and directory of free legal help
+- [Country sheets](https://theimr.org/country-sheets/): one-page sheets (PDF and image, English and Indonesian) for workers from origin countries: what their law says, free help with checked phone numbers, court decisions
 
 ## About
 - [People](https://theimr.org/people.html)
