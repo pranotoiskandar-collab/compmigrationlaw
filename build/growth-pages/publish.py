@@ -20,6 +20,7 @@ NEW = (OLD + ' · <a href="/materials/" style="color: #FFFFFF">Materials</a>'
        ' · <a href="/partners/" style="color: #FFFFFF">Partner badge</a>'
        ' · <a href="/impact/" style="color: #FFFFFF">Our impact</a>')
 # Link the data-quality page (another pull request) only once it is published.
+HAS_CS = (SITE / "country-sheets" / "index.html").exists()
 HAS_DQ = (SITE / "data-quality" / "index.html").exists()
 DQ = ' · <a href="/data-quality/" style="color: #FFFFFF">How we check our data</a>'
 changed = 0
@@ -27,12 +28,14 @@ for f in SITE.rglob("*.html"):
     text = f.read_text(encoding="utf-8")
     if OLD in text and 'href="/partners/" style="color: #FFFFFF"' not in text:
         text = text.replace(OLD, NEW + (DQ if HAS_DQ and 'href="/data-quality/"' not in text else ""), 1)
+        if HAS_CS:
+            text = text.replace("<!-- country-sheets-link -->", '<p><a class="gp-btn" href="/country-sheets/">Open the country sheets</a></p>')
         if HAS_DQ:
             text = text.replace("<!-- data-quality-link -->", '<li><a href="/data-quality/">How we find, code and check the data</a></li>')
         # Indonesian for the three new footer words
         lang = '<script src="/assets/lang.js" defer></script>'
         if lang in text and "/assets/lang-growth.js" not in text:
-            text = text.replace(lang, lang + '\n<script src="/assets/lang-growth.js" defer></script>', 1)
+            text = text.replace(lang, '<script src="/assets/lang-growth.js" defer></script>\n' + lang, 1)
         f.write_text(text, encoding="utf-8")
         changed += 1
 print(f"footer links added to {changed} pages")

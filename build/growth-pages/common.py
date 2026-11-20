@@ -98,7 +98,7 @@ def page(slug, title, description, main_html, extra_head="", ld_type="WebPage"):
     end = rest.index("</main>") + len("</main>")
     body = rest[:start] + f'<main id="{slug.replace("/", "-")}">\n' + main_html + "\n</main>" + rest[end:]
     body = body.replace('<script src="/assets/lang.js" defer></script>',
-                        '<script src="/assets/lang.js" defer></script>\n<script src="/assets/lang-growth.js" defer></script>')
+                        '<script src="/assets/lang-growth.js" defer></script>\n<script src="/assets/lang.js" defer></script>')
     out = SITE / slug / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(head + CSS + extra_head + body, encoding="utf-8")
@@ -106,11 +106,16 @@ def page(slug, title, description, main_html, extra_head="", ld_type="WebPage"):
 
 
 def write_lang():
-    js = ("/* Indonesian for the partner, impact and materials pages and the embed widget. Built by build/growth-pages/build_pages.py.\n"
-          "   It adds its strings to the site dictionary in /assets/lang.js and re-applies Indonesian if it is already on. */\n"
-          "(function(){var D=window.SITE_I18N||(window.SITE_I18N={});D.id=D.id||{};var X=" + json.dumps(ID, ensure_ascii=False, sort_keys=True) + ";\n"
-          "for(var k in X)if(!Object.prototype.hasOwnProperty.call(D.id,k))D.id[k]=X[k];\n"
-          "function again(){var l;try{l=localStorage.getItem('imr-lang')}catch(e){}if(l==='id'){var b=document.querySelector('.imr-lang button[data-sl=\"id\"]');if(b)b.click();}}\n"
-          "if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(again,0)});else setTimeout(again,0);})();\n")
+    """Indonesian dictionary for these pages, loaded just before /assets/lang.js (same pattern as oc-i18n.js):
+    the dictionary lang.js assigns to window.SITE_I18N is extended at the moment it is assigned."""
+    js = ("/* Indonesian for the partner, impact and materials pages, the embed box and the new footer links.\n"
+          "   Built by build/growth-pages/build_pages.py. Loaded just before /assets/lang.js. */\n"
+          "(function () {\n  var A = " + json.dumps(ID, ensure_ascii=False, sort_keys=True, indent=0) + ";\n"
+          "  function merge(D) { D.id = D.id || {}; for (var k in A) if (!Object.prototype.hasOwnProperty.call(D.id, k)) D.id[k] = A[k]; return D; }\n"
+          "  if (window.SITE_I18N) { merge(window.SITE_I18N); return; }\n"
+          "  var cur;\n"
+          "  try { Object.defineProperty(window, \"SITE_I18N\", {configurable: true, enumerable: true, get: function () { return cur; }, set: function (v) { cur = merge(v || {}); }}); }\n"
+          "  catch (e) { window.SITE_I18N = merge({}); }\n"
+          "})();\n")
     (SITE / "assets" / "lang-growth.js").write_text(js, encoding="utf-8")
     print("wrote site/assets/lang-growth.js with", len(ID), "strings")

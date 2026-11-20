@@ -40,7 +40,7 @@ def counts():
 def partners():
     countries = json.loads((SITE / "legal-clinic" / "ask" / "ask-index.json").read_text(encoding="utf-8"))["countries"]
     order = sorted(countries, key=lambda c: countries[c]["en"])
-    opts = "".join(f'<option value="{c}"{" selected" if c == "MY" else ""}>{esc(countries[c]["en"])}</option>' for c in order)
+    opts = "".join(f'<option value="{c}"{" selected" if c == "MY" else ""}>{esc(tr(countries[c]["en"], countries[c]["id"]))}</option>' for c in order)
     badge_code = ('<a href="https://theimr.org/?ref=badge" title="Data from the Institute for Migrant Rights (IMR)">'
                   '<img src="https://theimr.org/partners/badge/data-from-imr.svg" width="198" height="42" '
                   'alt="Data from IMR, Institute for Migrant Rights"></a>')
@@ -60,18 +60,18 @@ def partners():
 <h3>{tr("Copy this code into your page (Indonesian)", "Salin kode ini ke halaman anda (bahasa Indonesia)")}</h3>
 <div class="gp-code" data-noi18n><textarea readonly aria-label="Badge code, Indonesian" rows="3">{esc(badge_code_id)}</textarea><button type="button" class="gp-copy" data-copy>Copy</button></div>
 <p>{tr("Download the badge files:", "Unduh berkas lencananya:")}</p>
-<p class="gp-noprint"><a class="gp-btn ghost" href="/partners/badge/data-from-imr.svg" download>SVG EN</a><a class="gp-btn ghost" href="/partners/badge/data-from-imr.png" download>PNG EN</a><a class="gp-btn ghost" href="/partners/badge/data-from-imr-dark.png" download>PNG EN dark</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr.svg" download>SVG ID</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr.png" download>PNG ID</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr-dark.png" download>PNG ID dark</a></p>
+<p class="gp-noprint" data-noi18n><a class="gp-btn ghost" href="/partners/badge/data-from-imr.svg" download>SVG EN</a><a class="gp-btn ghost" href="/partners/badge/data-from-imr.png" download>PNG EN</a><a class="gp-btn ghost" href="/partners/badge/data-from-imr-dark.png" download>PNG EN dark</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr.svg" download>SVG ID</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr.png" download>PNG ID</a><a class="gp-btn ghost" href="/partners/badge/data-dari-imr-dark.png" download>PNG ID dark</a></p>
 </section>
 
 <section class="gp-sec" id="widget"><p class="gp-num">II</p><h2>{tr("Put a country box on your site", "Pasang kotak negara di situs anda")}</h2>
 <p>{tr("The country box shows what IMR has for one country: the main rules, laws with links to the official texts, court decisions and free legal help. It updates itself whenever IMR updates its data. The badge is built into the box.", "Kotak negara menampilkan apa yang dimiliki IMR untuk satu negara, yakni aturan pokok, undang-undang dengan tautan ke teks resminya, putusan pengadilan, dan bantuan hukum gratis. Kotak ini diperbarui dengan sendirinya setiap kali IMR memperbarui datanya. Lencananya sudah terpasang di dalam kotak tersebut.")}</p>
 <form class="gp-form gp-noprint" id="wform" onsubmit="return false">
 <label>{tr("Country", "Negara")}<select id="wc">{opts}</select></label>
-<label>{tr("Language", "Bahasa")}<select id="wl"><option value="id">Bahasa Indonesia</option><option value="en">English</option></select></label>
+<label>{tr("Language", "Bahasa")}<select id="wl" data-noi18n><option value="id">Bahasa Indonesia</option><option value="en">English</option></select></label>
 <label>{tr("Topic", "Topik")}<select id="wt"><option value="">{tr("All topics", "Semua topik")}</option><option value="wage">{tr("Wages", "Gaji dan upah")}</option><option value="fees">{tr("Recruitment and fees", "Perekrutan dan biaya")}</option><option value="passport">{tr("Passport and documents", "Paspor dan dokumen")}</option><option value="employer">{tr("Changing or losing a job", "Pindah atau kehilangan pekerjaan")}</option><option value="violence">{tr("Violence and abuse", "Kekerasan dan penganiayaan")}</option><option value="status">{tr("Visa, arrest and deportation", "Visa, penangkapan dan deportasi")}</option><option value="domestic">{tr("Domestic work", "Pekerja rumah tangga")}</option></select></label>
 </form>
 <div class="gp-code" data-noi18n><textarea readonly id="wcode" aria-label="Country box code" rows="4"></textarea><button type="button" class="gp-copy" data-copy>Copy</button></div>
-<iframe class="gp-frame" id="wprev" title="Preview of the IMR country box" loading="lazy"></iframe>
+<iframe class="gp-frame" id="wprev" title="{tr("Preview of the IMR country box", "Pratinjau kotak negara IMR")}" loading="lazy"></iframe>
 </section>
 
 <section class="gp-sec" id="connect"><p class="gp-num">III</p><h2>{tr("Connect to the data", "Sambungkan ke datanya")}</h2>
@@ -256,9 +256,9 @@ def materials():
                 from PIL import Image
                 w, h = Image.open(jpg).size
                 thumb = f'<a href="/materials/files/teaching/{pdf.name}"><img class="gp-thumb" src="/materials/files/teaching/{jpg.name}" alt="" width="{w}" height="{h}" loading="lazy"></a>'
-            word = f'<a class="gp-btn ghost" href="/materials/files/teaching/{docx.name}" download>Word</a>' if docx.exists() else ""
+            word = f'<a class="gp-btn ghost" href="/materials/files/teaching/{docx.name}" download data-noi18n>Word</a>' if docx.exists() else ""
             cards.append(f'<div class="gp-card">{thumb}<h3>{tr(title_en, title_id)}</h3><p>{tr(text_en, text_id)}</p>'
-                         f'<p class="gp-meta">Bahasa Indonesia · PDF, {pdf.stat().st_size / 1e6:.1f} MB · CC BY 4.0</p>'
+                         f'<p class="gp-meta" data-noi18n>Bahasa Indonesia · PDF, {pdf.stat().st_size / 1e6:.1f} MB · CC BY 4.0</p>'
                          f'<p class="gp-meta"><span>{tr("Cite as:", "Kutip sebagai:")}</span> <span data-noi18n>{esc(cite)}</span></p>'
                          f'<a class="gp-btn" href="/materials/files/teaching/{pdf.name}" download>PDF</a>{word}</div>')
         packs_html = (f'<p>{tr("Ready-made case studies for law faculties, built on court decisions in the IMR databases, with questions for class. Lecturers may copy and adapt them.", "Studi kasus siap pakai bagi fakultas hukum, yang disusun dari putusan pengadilan dalam basis data IMR, lengkap dengan pertanyaan untuk diskusi kelas. Para dosen boleh menyalin dan menyesuaikannya.")}</p>'
@@ -273,7 +273,7 @@ def materials():
             from PIL import Image
             w, h = Image.open(jpg).size
         return (f'<div class="gp-card"><a href="/materials/files/{name}"><img class="gp-thumb" src="/materials/files/{name.replace(".pdf", ".jpg")}" alt="" width="{w}" height="{h}" loading="lazy"></a>'
-                f'<h3>{title}</h3><p>{text}</p><p class="gp-meta">{lang_label} · {size(name)}</p>'
+                f'<h3>{title}</h3><p>{text}</p><p class="gp-meta" data-noi18n>{lang_label} · {size(name)}</p>'
                 f'<a class="gp-btn" href="/materials/files/{name}" download>{tr("Download", "Unduh")}</a></div>')
 
     m = f"""
@@ -286,7 +286,7 @@ def materials():
 {card("imr-flyer-id.pdf", tr("IMR flyer (Indonesian)", "Selebaran IMR (bahasa Indonesia)"), tr("The same flyer in Indonesian.", "Selebaran yang sama dalam bahasa Indonesia."), "Bahasa Indonesia")}</div></section>
 <section class="gp-sec" id="country-sheets"><p class="gp-num">II</p><h2>{tr("Country sheets", "Lembar negara")}</h2>
 <p>{tr("One page for each of eight countries of origin, in English and Indonesian, as a PDF to print and as an image for phones.", "Satu halaman untuk masing-masing dari delapan negara asal, dalam bahasa Inggris dan Indonesia, sebagai PDF untuk dicetak dan sebagai gambar untuk ponsel.")}</p>
-<p><a class="gp-btn" href="/country-sheets/">{tr("Open the country sheets", "Buka lembar negara")}</a></p></section>
+<!-- country-sheets-link --></section>
 <section class="gp-sec" id="volunteers"><p class="gp-num">III</p><h2>{tr("Volunteer briefs", "Panduan relawan")}</h2>
 <div class="gp-grid">{card("imr-volunteer-brief-en.pdf", tr("Volunteer with IMR (English)", "Menjadi relawan IMR (bahasa Inggris)"), tr("Tasks from sharing and translating to research, data and code.", "Tugas mulai dari menyebarkan dan menerjemahkan hingga penelitian, data dan pemrograman."), "English")}
 {card("imr-relawan-mahasiswa-hukum-id.pdf", tr("Volunteer brief for law students (Indonesian)", "Panduan relawan untuk mahasiswa hukum (bahasa Indonesia)"), tr("Tasks for Indonesian law students and campus legal clinics.", "Tugas bagi mahasiswa hukum Indonesia dan klinik hukum kampus."), "Bahasa Indonesia")}</div></section>
@@ -312,6 +312,9 @@ def main():
     tr("Materials", "Bahan")
     tr("Partner badge", "Lencana mitra")
     tr("Copy", "Salin")
+    for en, idn in (("Impact", "Dampak"), ("Materials", "Bahan"), ("Partner badge and country box", "Lencana mitra dan kotak negara")):
+        tr(en + " · Institute for Migrant Rights", idn + " · Institute for Migrant Rights")
+    tr("Open the country sheets", "Buka lembar negara")
     tr("How we check our data", "Cara kami memeriksa data")
     tr("How we find, code and check the data", "Cara kami menemukan, mengodekan dan memeriksa data")
     write_lang()
