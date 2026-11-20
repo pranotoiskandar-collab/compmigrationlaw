@@ -69,7 +69,7 @@ FIND_ENGLISH = r"""
 # boxes that scroll or clip on their own).
 PHONE_WIDTH = r"""
 () => {
-  const w = innerWidth, sw = document.documentElement.scrollWidth;
+  const w = 320, sw = document.documentElement.scrollWidth;  // not innerWidth: a phone widens it to fit a page that is too wide
   if (sw <= w + 1) return null;
   const clipped = el => { for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) { if (getComputedStyle(a).overflowX !== 'visible') return true; } return false; };
   let what = '', far = w;
@@ -138,7 +138,8 @@ def run(site, out_path):
                 try:
                     page.goto(origin + url + ("?lang=id" if lang == "id" else ""), wait_until="load", timeout=45000)
                     try:
-                        page.wait_for_load_state("networkidle", timeout=8000)
+                        if lang != "phone":  # the phone pass only measures width: no need to wait for the network
+                            page.wait_for_load_state("networkidle", timeout=8000)
                     except Exception:  # noqa: BLE001  (maps keep fetching tiles)
                         pass
                     page.wait_for_timeout(800)
