@@ -10,7 +10,7 @@ Reading κ: 1 is perfect agreement, 0 is no better than chance, and above about 
 
 ## Second coding for the two data papers (20 November 2026)
 
-`make_paper_sheets.py` extends the sample to the two Data in Brief papers: 44 of the 225 fully coded court decisions (about 20% per region; branch, outcome, follow-up, stages, arguments) and 131 of the 638 coded domestic-worker cells (about 20% per feature, spread across jurisdictions), plus the 54 comparison-page cells drawn on 18 November. Each item has one second coder (Felicia Nathania, Michelle Tjugito or Intan Nevia Cahyana), and about 20% also have a second person, so agreement between two people can be reported as well as agreement with IMR's codes. Seed 20261120.
+`make_paper_sheets.py` extends the sample to the two Data in Brief papers: 44 of the 225 fully coded court decisions (about 20% per region; branch, outcome, follow-up, stages, arguments) and 131 of the 638 coded domestic-worker cells (about 20% per feature, spread across jurisdictions), plus the 54 comparison-page cells drawn on 18 November. Each item has one second coder (Felicia Nathania, Michelle Tjugito, Intan Nevia Cahyana or Chris Cason), and about 20% also have a second person, so agreement between two people can be reported as well as agreement with IMR's codes. Seed 20261120.
 
     python3 build/second-coding/make_paper_sheets.py PAGES_WORKSHEET.xlsx PAGES_ANSWER_KEY.csv OUTDIR
     python3 build/second-coding/kappa_papers.py OUTDIR/keys RETURNED_DIR PAGES_ANSWER_KEY.csv
