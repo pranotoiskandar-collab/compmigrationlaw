@@ -28,6 +28,7 @@ TITLES = {
     "southeast-asia": "Southeast Asia", "countries-of-origin": "Countries of Origin",
     "domestic-workers": "Migrant Domestic Workers", "government-hate-speech": "Government Hate Speech",
     "government-hate-speech/elections": "Elections and non-citizens", "africa": "Africa",
+    "plain-summaries": "Laws in plain words (Indonesian summaries)",
 }
 # Columns that name a state. Values may be names, ISO-2 or ISO-3 codes, or lists.
 COUNTRY_COLS = ["country", "iso3", "s", "state", "gcc", "gcc_state", "origin", "destination", "jurisdiction", "o",
@@ -170,7 +171,7 @@ body = f"""
 {ds_html}
 <h2>For developers</h2>
 <p>The API is a set of static JSON files: read-only, no key, no sign-up, open to any website (CORS). It is rebuilt from the repository each time the data changes.</p>
-<ul>
+<ul style="overflow-wrap:anywhere">
 <li><a href="/api/v1/index.json" data-noi18n>/api/v1/index.json</a>: what is available</li>
 <li><a href="/api/v1/countries/index.json" data-noi18n>/api/v1/countries/index.json</a>: every country with its row counts</li>
 <li><span data-noi18n>/api/v1/countries/&lt;ISO2&gt;.json</span>: all rows for one country, for example <a href="/api/v1/countries/ID.json" data-noi18n>/api/v1/countries/ID.json</a></li>
