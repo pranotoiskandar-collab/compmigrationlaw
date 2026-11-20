@@ -1,0 +1,224 @@
+What’s new in the databases: November 2026
+Kabar terbaru basis data: November 2026
+
+=== English ===
+
+IN BRIEF: NOVEMBER 2026
+This first issue covers everything added since the databases moved to GitHub on 17 November 2026.
+- 1,014 court decisions added to Court Decisions (11 full entries with a summary, 1,003 unchecked candidates).
+- 1 earlier entry moved up a step in checking.
+- 86 laws, regulations and instruments added to the lists of legal texts.
+- 15 new or updated files of material received for review (not yet in the databases).
+Court Decisions now holds 1,543 decisions in all.
+
+NEW DECISIONS WITH A SUMMARY
+These entries have a plain-language summary. They were coded from the courts’ own summaries, law reports and news coverage and are still to be checked line by line against the judgment.
+Decision 83/PUU-XVII/2019 (capital and deposit rules for placement companies) (https://theimr.org/court-decisions/d/mk-083-2019/)
+Constitutional Court of Indonesia · Indonesia · 25 November 2020
+The association of placement companies said the high capital and deposit rules of the 2017 law shut small agencies out. A narrow majority upheld the rules, which help make sure agencies can answer for what happens to the workers they send.
+Decision 20/PUU-XVIII/2020 (bank deposit required of placement companies) (https://theimr.org/court-decisions/d/mk-020-2020/)
+Constitutional Court of Indonesia · Indonesia · 25 November 2020
+Directors of two placement companies challenged the bank deposit rule. The Court kept it, as it had in a decision the same day.
+Decision 32/PUU-XV/2017 (meaning of 'exploitation' in the trafficking law) (https://theimr.org/court-decisions/d/mk-032-2017/)
+Constitutional Court of Indonesia · Indonesia · 19 October 2017
+A man prosecuted under the anti-trafficking law argued that it was unfair to convict without proof of actual exploitation. The Court said the law is clear: the crime is complete when the acts are done for the purpose of exploitation, and his complaint was about the evidence in his own case.
+Decision 12/PUU-XIV/2016 (settling disputes between workers and placement companies) (https://theimr.org/court-decisions/d/mk-012-2016/)
+Constitutional Court of Indonesia · Indonesia · 30 May 2017
+The head of a union of Indonesian overseas workers said the law's dispute rules left workers without a way to court against their placement company. The Court said the rule itself is valid and that any failure lies in how it is applied.
+Decision 6/PUU-XIII/2015 (overseas worker card (KTKLN) for seafarers) (https://theimr.org/court-decisions/d/mk-006-2015/)
+Constitutional Court of Indonesia · Indonesia · 4 August 2016
+Six seafarers argued that the card required of workers going abroad was a burden that did not fit their work. The Court disagreed: the card is one of the ways the state protects workers before, during and after work abroad.
+Decision 61/PUU-XIII/2015 (placement rules behind the Middle East moratorium) (https://theimr.org/court-decisions/d/mk-061-2015/)
+Constitutional Court of Indonesia · Indonesia · 20 October 2015
+A placement company, a former worker in Riyadh and a woman who could not leave because of the halt on placements to the Middle East challenged the rules behind it. The Court upheld them, saying the rules aim to protect workers.
+Decision 50/PUU-XI/2013 (renewing a contract without first going home) (https://theimr.org/court-decisions/d/mk-050-2013/)
+Constitutional Court of Indonesia · Indonesia · 16 October 2014
+Women domestic workers from Cianjur challenged a rule forcing workers with household employers to come home before they could renew their contract. The Court struck the rule down: a protection law should not take away a worker's chance to stay with an employer she wants to keep working for.
+Decision 5/PUU-XI/2013 (challenge to Law 39/2004, Art. 60, by a former worker's brother) (https://theimr.org/court-decisions/d/mk-005-2013/)
+Constitutional Court of Indonesia · Indonesia · 27 August 2013
+A man asked the Court to review a rule of the 2004 migrant worker law on behalf of his sister, a former migrant worker. The Court did not look at the rule itself, because he could not show he had the right to act for her.
+Decision 64/PUU-IX/2011 (repeated extension of exit bans) (https://theimr.org/court-decisions/d/mk-064-2011/)
+Constitutional Court of Indonesia · Indonesia · 20 June 2012
+A law professor under a travel ban challenged the rule that let the ban be renewed again and again. The Court removed the words 'each time', so renewals now have a limit.
+Decision 40/PUU-IX/2011 (exit ban during a preliminary investigation) (https://theimr.org/court-decisions/d/mk-040-2011/)
+Constitutional Court of Indonesia · Indonesia · 8 February 2012
+Six advocates challenged the power to stop people leaving the country before they are even suspects. The Court agreed and removed it, so a ban on leaving now needs at least a formal criminal investigation.
+Decision 028-029/PUU-IV/2006 (minimum age of 21 for work with private employers abroad) (https://theimr.org/court-decisions/d/mk-028-029-2006/)
+Constitutional Court of Indonesia · Indonesia · 12 April 2007
+Women aged 18 to 20 were refused departure because they were under 21, the minimum age for working in a private household abroad. They asked the Constitutional Court to strike the rule down. A narrow majority refused: the Court said the age limit protects workers and does not stop anyone from working.
+
+NEW LEADS FOR RESEARCHERS
+Unchecked candidates are leads for researchers: a case name, court, date and topic taken from the court’s own portal, with no summary yet. Each one links to the official source.
+Country or system  Added  
+Philippines  364  
+South Korea  170  
+Singapore  155  
+Nepal  110  
+Macao  80  
+Japan  48  
+Kenya  19  
+South Africa  13  
+Zimbabwe  12  
+Qatar  9  
+Ghana  8  
+Uganda  7  
+Hong Kong  4  
+Egypt  1  
+Myanmar  1  
+Nigeria  1  
+Tanzania  1
+Most recent among them
+- JJT v. JJU (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-19/), Employment Claims Tribunal of Singapore, 22 October 2026
+- JJQ v. JJR (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-18/), Employment Claims Tribunal of Singapore, 15 October 2026
+- JIA v. JJJ (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-17/), Employment Claims Tribunal of Singapore, 8 October 2026
+- Santos-Tumalip Maria Monalyn Bagaporo v. Public Prosecutor (https://theimr.org/court-decisions/d/c-h-sg-2026-sghc-209/), High Court of Singapore, 7 October 2026
+- Damages claim based on the ICCPR (long immigration detention) (https://theimr.org/court-decisions/d/c-l-jp-reiwa-7-ne-3743-2026/), Tokyo High Court, Japan, 30 September 2026
+- JGC v. JGE (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-16/), Employment Claims Tribunal of Singapore, 29 September 2026
+- JFR v. JFT (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-15/), Employment Claims Tribunal of Singapore, 28 September 2026
+- Kevin Chelvam v. Public Prosecutor (https://theimr.org/court-decisions/d/c-h-sg-2026-sghc-191/), High Court of Singapore, 20 September 2026
+- Unpaid wages and damages (Specified Skilled Worker) (https://theimr.org/court-decisions/d/c-l-jp-reiwa-7-wa-16462-2026/), Tokyo District Court, Japan, 11 September 2026
+- Public Prosecutor v. Wang Jue [2026] Sgmc 102 (https://theimr.org/court-decisions/d/c-h-sg-2026-sgmc-102/), Magistrate's Court of Singapore, 30 August 2026
+
+ENTRIES CHECKED FURTHER
+- Decision 019-020/PUU-III/2005 (education requirement for workers going abroad) (https://theimr.org/court-decisions/d/c-id-mk-019-2005/) (Indonesia): full entry, to be checked against the judgment
+
+NEW LAWS AND INSTRUMENTS
+Titles are listed as they appear in the official gazettes or portals, with the year of adoption. Entries marked as unverified on the database pages are still being checked.
+Gulf States (https://theimr.org/gcc/): 77 added
+- Bahrain: Legislative Decree amending certain provisions of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2021); Legislative Decree amending certain provisions of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2018); Law amending Article 110 of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2015); Legislative Decree amending Article 40 of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2024); Legislative Decree amending certain provisions of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2021); Law amending Article 6 of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2015); and 3 more
+- Kuwait: Ministerial Decision No. 22 of 2022 on Domestic Workers (https://www.moj.gov.kw/AR/Documents/MojDocs/Law22-2022.pdf) (2022)
+- Oman: Royal Decree 40/1977 issuing the Law on Compensation for Work Injuries and Occupational Diseases (https://mjla.gov.om/laws/ar/1/show/7) (1977); Royal Decree 40/2026 ratifying the 1986 Instrument for the Amendment of the ILO Constitution (https://mjla.gov.om/decrees/ar/1/show/1435) (2026); Ministerial Decision 602/2025 issuing the Regulation on Work Permits and Work Practice Licences (https://mjla.gov.om/decisions/ar/1095/show/2091) (2025); Ministerial Decision 44/2026 amending Ministerial Decision 602/2025 (work permits) (https://mjla.gov.om/decisions/ar/1095/show/2139) (2026); Ministerial Decision 299/2023 on the Wage Protection System (earlier version) (https://mjla.gov.om/decisions/ar/1095/show/1751) (2023); Ministerial Decision 730/2024 on temporary transfer of non-Omani workers between private employers (https://mjla.gov.om/decisions/ar/1095/show/1963) (2024); and 9 more
+- Qatar: Law amending certain provisions of the Labour Law (https://almeezan.qa/legislations/law/2026/9/amir-of-qatar) (2026); Cabinet Decision applying certain provisions of the Labour Law to workers in agriculture and herding (https://almeezan.qa/legislations/cabinet-decision/2012/17/general) (2012); Decree-Law amending certain provisions of the Labour Law (https://almeezan.qa/legislations/decree-law/2020/18/general) (2020); Decree-Law amending the Law on Entry, Exit and Residence of Expatriates (https://almeezan.qa/legislations/decree-law/2020/19/general) (2020); Law amending the Labour Law and the Civil and Commercial Procedure Law (labour dispute committees) (https://almeezan.qa/legislations/law/2017/13/general) (2017); Law amending the Labour Law (wage protection) (https://almeezan.qa/legislations/law/2015/1/general) (2015); and 22 more
+- Saudi Arabia: Ministerial Decision approving the rules and procedures for amicable settlement of labour disputes (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/05012024) (2024); Ministerial Decision on protection from behavioural abuse in the workplace (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/343368) (2019); Ministerial Decision on night work (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/342210) (2019)
+- United Arab Emirates: Cabinet Decision No. 106 of 2022 on the Executive Regulations of Federal Decree-Law No. 9 of 2022 (domestic workers) (https://www.mohre.gov.ae/assets/download/11cf0a88/Cabinet%20Decision%20No.%20106%20of%202022%20pertaining%20to%20the%20executive%20regulations%20of%20Federal%20Decree%20Law%20No.%209%20of%202022.pdf.aspx) (2022); Federal Decree-Law No. 47 of 2021 Regarding the Unified General Rules of Labour (https://www.mohre.gov.ae/assets/download/7fe3eeaa/Federal%20Decree-Law%20No.%2047%20of%202021.docx.aspx) (2021); Ministerial Resolution No. 674 of 2022 Regarding the Regulation of Labour Relations for Domestic Workers (https://www.mohre.gov.ae/assets/download/d7546ef2/Ministerial%20Resolution%20No%20674%20of%202022%20Regarding%20the%20Regulation%20of%20Labor%20Relations%20for%20Domestic%20Workers._638944176459581621.pdf.aspx) (2022); Ministerial Resolution No. 675 of 2022 on the Coverage of Certain Domestic Work Professions Under the Wage Protection System (https://www.mohre.gov.ae/assets/download/f597d13d/Ministerial%20Resolution%20No.%20675%20of%202022%20On%20the%20Coverage%20of%20Certain%20Domestic%20Work%20Professions%20Under%20the%20Wages%20Protection%20System_638944177547912261.pdf.aspx) (2022); Administrative Resolution No. 5 of 2024 Establishing the Operation Manual for Ministerial Resolution No. 676 of 2022 (domestic labour recruitment agencies) (https://www.mohre.gov.ae/assets/download/c89a5231/Administrative%20Resolution%20No.%205%20of%202024_638944174598488385.pdf.aspx) (2024); Ministerial Resolution No. 302 of 2022 Amending Ministerial Resolution No. 51 of 2022 on Recruitment Agencies (https://www.mohre.gov.ae/assets/download/ae59df32/Ministerial%20Resolution%20No.302%20of%202022%20Amending%20Ministerial%20Resolution%20No.51%20of%202022%20Concerning%20Licensing%20and%20Regulating%20the%20Activities%20of%20Recruitment%20Agencies_638945709766507109.pdf.aspx) (2022); and 15 more
+East Asia (https://theimr.org/east-asia/): 9 added
+- Japan: Nationality Act (https://laws.e-gov.go.jp/) (1950)
+- South Korea: Immigration Act (https://www.law.go.kr/) (1963); Refugee Act (https://www.law.go.kr/) (2012); Act on the Employment of Foreign Workers (Employment Permit System) (https://www.law.go.kr/) (2003); Nationality Act (https://www.law.go.kr/) (1948); Framework Act on Treatment of Foreigners Residing in the Republic of Korea (https://www.law.go.kr/) (2007); Multicultural Families Support Act (https://www.law.go.kr/) (2008)
+- Taiwan: Immigration Act (https://law.moj.gov.tw/) (1999); Nationality Act (https://law.moj.gov.tw/) (1929)
+
+WAITING FOR REVIEW
+Material collected from official portals and sent in for review. It is published on GitHub for transparency but is not part of the databases until an editor has checked it.
+- Court Decisions: 3 files
+- East Asia: 3 files
+- Gulf States: 3 files
+- Africa: 2 files
+- Countries of Origin: 2 files
+- Government Hate Speech: 1 file
+- Migration Law Atlas: 1 file
+See the incoming folders on GitHub (https://github.com/pranotoiskandar-collab/compmigrationlaw)
+
+USING THE DATA
+All data are free to download under CC BY 4.0 from each database page and from GitHub (https://github.com/pranotoiskandar-collab/compmigrationlaw), where the history of every file is public. Please cite the database page and the date you downloaded it. Corrections are welcome at secretariat@theimr.org (mailto:secretariat@theimr.org).
+
+https://theimr.org/updates/2026-11/
+
+=== Bahasa Indonesia ===
+
+RINGKASAN: NOVEMBER 2026
+Edisi pertama ini mencakup semua yang ditambahkan sejak basis data pindah ke GitHub pada 17 November 2026.
+- 1.014 putusan pengadilan ditambahkan ke basis data Putusan Pengadilan (11 entri lengkap dengan ringkasan, 1.003 kandidat belum diperiksa).
+- 1 entri lama naik satu tahap pemeriksaan.
+- 86 undang-undang, peraturan dan instrumen ditambahkan ke daftar teks hukum.
+- 15 berkas bahan baru atau yang diperbarui telah kami terima untuk ditinjau (belum masuk basis data).
+Basis data Putusan Pengadilan kini memuat 1.543 putusan.
+
+PUTUSAN BARU DENGAN RINGKASAN
+Entri berikut dilengkapi ringkasan dalam bahasa sederhana. Kami mengodekannya dari ringkasan pengadilan, laporan hukum, dan pemberitaan; entri tersebut belum dicocokkan baris demi baris dengan teks putusan.
+Decision 83/PUU-XVII/2019 (capital and deposit rules for placement companies) (https://theimr.org/court-decisions/d/mk-083-2019/)
+Constitutional Court of Indonesia · Indonesia · 25 November 2020
+Asosiasi perusahaan penempatan berpendapat bahwa kewajiban modal dan deposito yang tinggi dalam UU 18/2017 menyingkirkan perusahaan kecil. Mayoritas tipis hakim mempertahankan ketentuan tersebut, yang membantu memastikan perusahaan penempatan dapat bertanggung jawab atas pekerja yang dikirimnya.
+Decision 20/PUU-XVIII/2020 (bank deposit required of placement companies) (https://theimr.org/court-decisions/d/mk-020-2020/)
+Constitutional Court of Indonesia · Indonesia · 25 November 2020
+Direktur dua perusahaan penempatan menguji ketentuan deposito di bank. Mahkamah mempertahankannya, sebagaimana dalam putusan yang diucapkan pada hari yang sama.
+Decision 32/PUU-XV/2017 (meaning of 'exploitation' in the trafficking law) (https://theimr.org/court-decisions/d/mk-032-2017/)
+Constitutional Court of Indonesia · Indonesia · 19 Oktober 2017
+Seorang laki-laki yang dituntut berdasarkan UU TPPO berpendapat bahwa tidak adil menghukum seseorang tanpa bukti eksploitasi yang nyata. Mahkamah menyatakan undang-undang tersebut jelas: tindak pidana telah selesai ketika perbuatan dilakukan dengan tujuan eksploitasi, dan keberatan Pemohon menyangkut pembuktian dalam perkaranya sendiri.
+Decision 12/PUU-XIV/2016 (settling disputes between workers and placement companies) (https://theimr.org/court-decisions/d/mk-012-2016/)
+Constitutional Court of Indonesia · Indonesia · 30 Mei 2017
+Ketua serikat pekerja Indonesia luar negeri berpendapat bahwa ketentuan penyelesaian perselisihan dalam undang-undang membuat pekerja tidak memiliki jalan ke pengadilan untuk menggugat perusahaan penempatan. Mahkamah menyatakan ketentuan tersebut sah dan bahwa kekurangannya terletak pada pelaksanaannya.
+Decision 6/PUU-XIII/2015 (overseas worker card (KTKLN) for seafarers) (https://theimr.org/court-decisions/d/mk-006-2015/)
+Constitutional Court of Indonesia · Indonesia · 4 Agustus 2016
+Enam orang pelaut berpendapat bahwa kartu yang diwajibkan bagi TKI merupakan beban yang tidak sesuai dengan pekerjaan mereka. Mahkamah tidak sependapat: kartu tersebut merupakan salah satu bentuk perlindungan negara sebelum, selama, dan sesudah bekerja di luar negeri.
+Decision 61/PUU-XIII/2015 (placement rules behind the Middle East moratorium) (https://theimr.org/court-decisions/d/mk-061-2015/)
+Constitutional Court of Indonesia · Indonesia · 20 Oktober 2015
+Sebuah perusahaan penempatan, seorang mantan TKI di Riyadh, dan seorang calon TKI yang tidak dapat berangkat karena penghentian penempatan ke Timur Tengah menguji ketentuan yang menjadi dasarnya. Mahkamah menolak permohonan tersebut karena ketentuan itu bertujuan melindungi pekerja.
+Decision 50/PUU-XI/2013 (renewing a contract without first going home) (https://theimr.org/court-decisions/d/mk-050-2013/)
+Constitutional Court of Indonesia · Indonesia · 16 Oktober 2014
+Para pekerja rumah tangga migran perempuan dari Cianjur menguji ketentuan yang mewajibkan TKI pada pengguna perseorangan pulang terlebih dahulu sebelum memperpanjang perjanjian kerja. Mahkamah membatalkan ketentuan tersebut: undang-undang perlindungan tidak boleh menghilangkan kesempatan pekerja untuk tetap bekerja pada majikan yang dikehendakinya.
+Decision 5/PUU-XI/2013 (challenge to Law 39/2004, Art. 60, by a former worker's brother) (https://theimr.org/court-decisions/d/mk-005-2013/)
+Constitutional Court of Indonesia · Indonesia · 27 Agustus 2013
+Seorang laki-laki meminta Mahkamah menguji salah satu ketentuan UU 39/2004 atas nama saudara perempuannya, seorang mantan TKI. Mahkamah tidak memeriksa pokok perkara karena Pemohon tidak dapat membuktikan bahwa ia berhak bertindak atas nama saudaranya.
+Decision 64/PUU-IX/2011 (repeated extension of exit bans) (https://theimr.org/court-decisions/d/mk-064-2011/)
+Constitutional Court of Indonesia · Indonesia · 20 Juni 2012
+Seorang guru besar yang dicegah ke luar negeri menguji ketentuan yang memungkinkan pencegahan diperpanjang berkali-kali. Mahkamah membatalkan frasa “setiap kali” sehingga perpanjangan kini dibatasi.
+Decision 40/PUU-IX/2011 (exit ban during a preliminary investigation) (https://theimr.org/court-decisions/d/mk-040-2011/)
+Constitutional Court of Indonesia · Indonesia · 8 Februari 2012
+Enam advokat menguji kewenangan mencegah orang keluar negeri sebelum ia ditetapkan sebagai tersangka. Mahkamah mengabulkan permohonan tersebut sehingga pencegahan ke luar negeri kini sekurang-kurangnya memerlukan tahap penyidikan.
+Decision 028-029/PUU-IV/2006 (minimum age of 21 for work with private employers abroad) (https://theimr.org/court-decisions/d/mk-028-029-2006/)
+Constitutional Court of Indonesia · Indonesia · 12 April 2007
+Sejumlah perempuan berusia 18 sampai 20 tahun ditolak berangkat karena belum berusia 21 tahun, batas usia minimum untuk bekerja pada pengguna perseorangan di luar negeri. Mereka meminta Mahkamah Konstitusi membatalkan ketentuan tersebut. Mayoritas tipis hakim menolak: menurut Mahkamah, batas usia tersebut melindungi pekerja dan tidak menghalangi hak seseorang untuk bekerja.
+
+PETUNJUK BARU BAGI PENELITI
+Kandidat belum diperiksa merupakan petunjuk bagi peneliti, yakni nama perkara, pengadilan, tanggal, dan topik yang kami ambil dari portal resmi pengadilan, tanpa ringkasan. Setiap kandidat ditautkan ke sumber resminya.
+Negara atau sistem  Ditambahkan  
+Filipina  364  
+Korea Selatan  170  
+Singapura  155  
+Nepal  110  
+Makau  80  
+Jepang  48  
+Kenya  19  
+Afrika Selatan  13  
+Zimbabwe  12  
+Qatar  9  
+Ghana  8  
+Uganda  7  
+Hong Kong  4  
+Mesir  1  
+Myanmar  1  
+Nigeria  1  
+Tanzania  1
+Yang terbaru di antaranya
+- JJT v. JJU (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-19/), Employment Claims Tribunal of Singapore, 22 Oktober 2026
+- JJQ v. JJR (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-18/), Employment Claims Tribunal of Singapore, 15 Oktober 2026
+- JIA v. JJJ (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-17/), Employment Claims Tribunal of Singapore, 8 Oktober 2026
+- Santos-Tumalip Maria Monalyn Bagaporo v. Public Prosecutor (https://theimr.org/court-decisions/d/c-h-sg-2026-sghc-209/), High Court of Singapore, 7 Oktober 2026
+- Damages claim based on the ICCPR (long immigration detention) (https://theimr.org/court-decisions/d/c-l-jp-reiwa-7-ne-3743-2026/), Tokyo High Court, Japan, 30 September 2026
+- JGC v. JGE (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-16/), Employment Claims Tribunal of Singapore, 29 September 2026
+- JFR v. JFT (https://theimr.org/court-decisions/d/c-h-sg-2026-sgect-15/), Employment Claims Tribunal of Singapore, 28 September 2026
+- Kevin Chelvam v. Public Prosecutor (https://theimr.org/court-decisions/d/c-h-sg-2026-sghc-191/), High Court of Singapore, 20 September 2026
+- Unpaid wages and damages (Specified Skilled Worker) (https://theimr.org/court-decisions/d/c-l-jp-reiwa-7-wa-16462-2026/), Tokyo District Court, Japan, 11 September 2026
+- Public Prosecutor v. Wang Jue [2026] Sgmc 102 (https://theimr.org/court-decisions/d/c-h-sg-2026-sgmc-102/), Magistrate's Court of Singapore, 30 Agustus 2026
+
+ENTRI YANG DIPERIKSA LEBIH LANJUT
+- Decision 019-020/PUU-III/2005 (education requirement for workers going abroad) (https://theimr.org/court-decisions/d/c-id-mk-019-2005/) (Indonesia): entri lengkap, belum dicocokkan dengan putusan
+
+UNDANG-UNDANG DAN INSTRUMEN BARU
+Judul kami cantumkan sebagaimana tertulis dalam lembaran negara atau portal resmi, beserta tahun pengesahannya. Entri yang ditandai belum diverifikasi di halaman basis data masih dalam pemeriksaan.
+Negara-Negara Teluk (https://theimr.org/gcc/): 77 ditambahkan
+- Arab Saudi: Ministerial Decision approving the rules and procedures for amicable settlement of labour disputes (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/05012024) (2024); Ministerial Decision on protection from behavioural abuse in the workplace (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/343368) (2019); Ministerial Decision on night work (https://www.hrsd.gov.sa/knowledge-centre/decisions-and-regulations/ministerial-decisions/342210) (2019)
+- Bahrain: Legislative Decree amending certain provisions of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2021); Legislative Decree amending certain provisions of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2018); Law amending Article 110 of the Labour Law for the Private Sector (https://www.lloc.gov.bh/Legislation/Amendments/K3612) (2015); Legislative Decree amending Article 40 of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2024); Legislative Decree amending certain provisions of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2021); Law amending Article 6 of the Labour Market Regulation Law (https://www.lloc.gov.bh/Legislation/Amendments/K1906) (2015); dan 3 lainnya
+- Kuwait: Ministerial Decision No. 22 of 2022 on Domestic Workers (https://www.moj.gov.kw/AR/Documents/MojDocs/Law22-2022.pdf) (2022)
+- Oman: Royal Decree 40/1977 issuing the Law on Compensation for Work Injuries and Occupational Diseases (https://mjla.gov.om/laws/ar/1/show/7) (1977); Royal Decree 40/2026 ratifying the 1986 Instrument for the Amendment of the ILO Constitution (https://mjla.gov.om/decrees/ar/1/show/1435) (2026); Ministerial Decision 602/2025 issuing the Regulation on Work Permits and Work Practice Licences (https://mjla.gov.om/decisions/ar/1095/show/2091) (2025); Ministerial Decision 44/2026 amending Ministerial Decision 602/2025 (work permits) (https://mjla.gov.om/decisions/ar/1095/show/2139) (2026); Ministerial Decision 299/2023 on the Wage Protection System (earlier version) (https://mjla.gov.om/decisions/ar/1095/show/1751) (2023); Ministerial Decision 730/2024 on temporary transfer of non-Omani workers between private employers (https://mjla.gov.om/decisions/ar/1095/show/1963) (2024); dan 9 lainnya
+- Qatar: Law amending certain provisions of the Labour Law (https://almeezan.qa/legislations/law/2026/9/amir-of-qatar) (2026); Cabinet Decision applying certain provisions of the Labour Law to workers in agriculture and herding (https://almeezan.qa/legislations/cabinet-decision/2012/17/general) (2012); Decree-Law amending certain provisions of the Labour Law (https://almeezan.qa/legislations/decree-law/2020/18/general) (2020); Decree-Law amending the Law on Entry, Exit and Residence of Expatriates (https://almeezan.qa/legislations/decree-law/2020/19/general) (2020); Law amending the Labour Law and the Civil and Commercial Procedure Law (labour dispute committees) (https://almeezan.qa/legislations/law/2017/13/general) (2017); Law amending the Labour Law (wage protection) (https://almeezan.qa/legislations/law/2015/1/general) (2015); dan 22 lainnya
+- Uni Emirat Arab: Cabinet Decision No. 106 of 2022 on the Executive Regulations of Federal Decree-Law No. 9 of 2022 (domestic workers) (https://www.mohre.gov.ae/assets/download/11cf0a88/Cabinet%20Decision%20No.%20106%20of%202022%20pertaining%20to%20the%20executive%20regulations%20of%20Federal%20Decree%20Law%20No.%209%20of%202022.pdf.aspx) (2022); Federal Decree-Law No. 47 of 2021 Regarding the Unified General Rules of Labour (https://www.mohre.gov.ae/assets/download/7fe3eeaa/Federal%20Decree-Law%20No.%2047%20of%202021.docx.aspx) (2021); Ministerial Resolution No. 674 of 2022 Regarding the Regulation of Labour Relations for Domestic Workers (https://www.mohre.gov.ae/assets/download/d7546ef2/Ministerial%20Resolution%20No%20674%20of%202022%20Regarding%20the%20Regulation%20of%20Labor%20Relations%20for%20Domestic%20Workers._638944176459581621.pdf.aspx) (2022); Ministerial Resolution No. 675 of 2022 on the Coverage of Certain Domestic Work Professions Under the Wage Protection System (https://www.mohre.gov.ae/assets/download/f597d13d/Ministerial%20Resolution%20No.%20675%20of%202022%20On%20the%20Coverage%20of%20Certain%20Domestic%20Work%20Professions%20Under%20the%20Wages%20Protection%20System_638944177547912261.pdf.aspx) (2022); Administrative Resolution No. 5 of 2024 Establishing the Operation Manual for Ministerial Resolution No. 676 of 2022 (domestic labour recruitment agencies) (https://www.mohre.gov.ae/assets/download/c89a5231/Administrative%20Resolution%20No.%205%20of%202024_638944174598488385.pdf.aspx) (2024); Ministerial Resolution No. 302 of 2022 Amending Ministerial Resolution No. 51 of 2022 on Recruitment Agencies (https://www.mohre.gov.ae/assets/download/ae59df32/Ministerial%20Resolution%20No.302%20of%202022%20Amending%20Ministerial%20Resolution%20No.51%20of%202022%20Concerning%20Licensing%20and%20Regulating%20the%20Activities%20of%20Recruitment%20Agencies_638945709766507109.pdf.aspx) (2022); dan 15 lainnya
+Asia Timur (https://theimr.org/east-asia/): 9 ditambahkan
+- Jepang: Nationality Act (https://laws.e-gov.go.jp/) (1950)
+- Korea Selatan: Immigration Act (https://www.law.go.kr/) (1963); Refugee Act (https://www.law.go.kr/) (2012); Act on the Employment of Foreign Workers (Employment Permit System) (https://www.law.go.kr/) (2003); Nationality Act (https://www.law.go.kr/) (1948); Framework Act on Treatment of Foreigners Residing in the Republic of Korea (https://www.law.go.kr/) (2007); Multicultural Families Support Act (https://www.law.go.kr/) (2008)
+- Taiwan: Immigration Act (https://law.moj.gov.tw/) (1999); Nationality Act (https://law.moj.gov.tw/) (1929)
+
+MENUNGGU TINJAUAN
+Bahan yang kami himpun dari portal resmi dan diajukan untuk ditinjau. Bahan tersebut kami terbitkan di GitHub demi keterbukaan, namun belum menjadi bagian dari basis data sebelum diperiksa editor.
+- Putusan Pengadilan: 3 berkas
+- Asia Timur: 3 berkas
+- Negara-Negara Teluk: 3 berkas
+- Afrika: 2 berkas
+- Negara Asal: 2 berkas
+- Ucapan Kebencian oleh Negara: 1 berkas
+- Atlas Hukum Migrasi: 1 berkas
+Lihat folder incoming di GitHub (https://github.com/pranotoiskandar-collab/compmigrationlaw)
+
+MEMAKAI DATANYA
+Seluruh data dapat diunduh gratis dengan lisensi CC BY 4.0 dari halaman setiap basis data dan dari GitHub (https://github.com/pranotoiskandar-collab/compmigrationlaw), tempat riwayat setiap berkas terbuka untuk umum. Mohon kutip halaman basis data beserta tanggal anda mengunduhnya. Koreksi dapat dikirim ke secretariat@theimr.org (mailto:secretariat@theimr.org).
+
+https://theimr.org/updates/2026-11/

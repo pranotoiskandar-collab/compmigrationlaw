@@ -3,7 +3,7 @@
 > IMR (West Java, Indonesia) runs a free Legal Clinic for migrant workers and publishes open research datasets on migration law and migrant workers' rights, built for empirical legal scholarship, statistical analysis in law, law and economics, comparative law and socio-legal research, and for advocacy. Most pages are in English and Indonesian.
 
 ## Datasets and comparisons
-- [Court Decisions](https://theimr.org/court-decisions/): about 500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
+- [Court Decisions](https://theimr.org/court-decisions/): more than 1,500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
 - [All decisions, one page each](https://theimr.org/court-decisions/d/)
 - [Migration Law Atlas](https://theimr.org/migration-law/): global, regional and national migration law, ratifications, country profiles
 - [Farmworker Norms Atlas](https://theimr.org/atlas/): ranked international, regional and national norms on farm work
