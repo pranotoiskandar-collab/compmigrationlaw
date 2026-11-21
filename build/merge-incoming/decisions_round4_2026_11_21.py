@@ -1,6 +1,8 @@
 """Turn the South and Southeast Asia crawl of 21 November 2026 (PR #56) into Court Decisions entries.
 
-Usage: python3 build/merge-incoming/decisions_round4_2026_11_21.py SITE OUT.json
+Usage: python3 build/merge-incoming/decisions_round4_2026_11_21.py SITE OUT.json [IN.csv]
+IN.csv defaults to the first batch; the second batch (174 more E-Library decisions screened the same day,
+court-decisions-2026-11-21b.csv) is run by passing its path.
 Reads   data/court-decisions/incoming/other-asia/court-decisions-2026-11-21.csv
         (376 Philippine Supreme Court decisions from the E-Library + 2 Bangladesh High Court Division notes)
 Writes  OUT.json with {"new": [...], "links": {}, "cites": {}} for patch_site_decisions.py.
@@ -17,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SITE = Path(sys.argv[1])
-IN = ROOT / "data/court-decisions/incoming/other-asia/court-decisions-2026-11-21.csv"
+IN = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "data/court-decisions/incoming/other-asia/court-decisions-2026-11-21.csv"
 
 src = (SITE / "court-decisions/cd-data.js").read_text(encoding="utf-8")
 existing = json.loads(src.split("window.CD=", 1)[1].rstrip().rstrip(";"))["decisions"]
@@ -60,6 +62,9 @@ TOPIC = {
     "deployment and POEA regulation": ("Deployment of overseas workers and the rules of the overseas employment agency (topic guessed from keywords; not yet read).",
                                        "Penempatan pekerja ke luar negeri dan aturan badan penempatan luar negeri (topik ditebak dari kata kunci; belum dibaca).",
                                        ["fees"], ["recruitment"], [1, 2], ""),
+    "deportation of a foreign national": ("A foreign national's challenge to arrest, detention or deportation by the Bureau of Immigration (topic guessed from keywords; not yet read).",
+                                          "Gugatan warga negara asing atas penangkapan, penahanan, atau deportasi oleh Biro Imigrasi (topik ditebak dari kata kunci; belum dibaca).",
+                                          ["arrest"], ["expulsion", "detention"], [4], ""),
 }
 
 BD = {
@@ -101,14 +106,18 @@ for r in csv.DictReader(open(IN, encoding="utf-8")):
         topic = re.search(r"Topic guessed from keyword counts: ([^.(]+)", r["note"]).group(1).strip()
         en, idn, sits, iss, st, sector = TOPIC[topic]
         date = iso(r["date"])
-        gr = r["citation"].replace("G.R. No. ", "").replace("G.R. Nos. ", "")
+        gr = r["citation"].replace("G.R. No. ", "").replace("G.R. Nos. ", "").replace("A.C. No. ", "")
         name = re.sub(r"\*", "", r["name"])
         name = re.sub(r",? Petitioners?,? (Vs?\.|versus)", " v.", name)
         name = re.sub(r",? (Accused-)?(Appellants?|Appellees?|Respondents?|Petitioners?)\.?$", "", name.strip())
         name = re.sub(r"\s+", " ", name).strip(" ,")[:160]
         branch = "criminal" if r["name"].startswith("People") or topic == "trafficking in persons" and "People" in r["name"] else (
             "criminal" if topic in ("illegal recruitment", "trafficking in persons") and re.search(r"People|Prosecutor", r["name"]) else "private")
-        e = entry(id=f"c-l-ph-gr-{slug(gr)[:40]}-{date[:4]}", name=name, court="Supreme Court of the Philippines", cc="PH",
+        if topic == "deportation of a foreign national":
+            branch = "administrative"
+        if r["citation"].startswith("A.C."):
+            branch = "administrative"
+        e = entry(id=f"c-l-ph-{'ac' if r['citation'].startswith('A.C.') else 'gr'}-{slug(gr)[:40]}-{date[:4]}", forum=r["forum"] or "origin", name=name, court="Supreme Court of the Philippines", cc="PH",
                   level="apex", date=date, cite=r["citation"], branch=branch, sector=sector, issues=iss, situations=sits,
                   stages=st, plain=en, plain_id=idn, src=[{"t": "Supreme Court E-Library (elibrary.judiciary.gov.ph)", "u": u}])
     else:
