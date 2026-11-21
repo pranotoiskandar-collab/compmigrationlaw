@@ -14,3 +14,9 @@ How they were collected, what was left out and why, and the script that rebuilds
 - How they were found: 150 Supreme Court labour cases (NLRC or Court of Appeals in the title) from `migration-cases-all-2026-11-17.csv` that are not yet in `decisions.csv`. Each page on the Court's E-Library was opened and searched for wage terms and overseas-work terms. 37 matched strongly; 5 were dropped (mainly about placement fees, already covered by the recruitment cases, or death benefits).
 - Every row is `Unverified`. The `topic_first_read` line was written from the facts and dispositive part, not from an official summary. Holdings, outcome and Indonesian summaries still need a reader before the rows go into `decisions.csv`.
 - Links are to the official Supreme Court E-Library (`elibrary.judiciary.gov.ph`).
+
+## South and Southeast Asia round (2026-11-21)
+
+- `court-decisions-2026-11-21.csv`: 378 decisions. 376 are from the Supreme Court of the Philippines (E-Library) and 2 are High Court Division writs from Bangladesh (Umrah pilgrims overstaying in Saudi Arabia).
+- Philippine rows: candidates from `migration-cases-all-2026-11-17.csv` that were not yet on the site. Each E-Library page was opened and keyword counts were taken (seafarer, disability, death, trafficking, illegal recruitment, dismissal, wages). A case was kept when the counts were strong: 304 seafarer disability claims, 42 seafarer death claims, 21 trafficking, 7 illegal recruitment, 3 others. 24 more were dropped because their G.R. number is already on the site. The judgments were not read: every row is `Unverified` and the topic in `note` is a guess from the counts. About 180 candidates were not screened yet.
+- Bangladesh rows: from the Supreme Court website's judgment notes, years 2000 to 2026.

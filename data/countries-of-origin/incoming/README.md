@@ -11,3 +11,10 @@
 ## Sri Lanka (2026-11-18)
 
 - `laws-lk-2026-11-18.csv`: official link for the Sri Lanka Bureau of Foreign Employment Act No. 21 of 1985. The site currently links only to the Bureau's front page. The new link goes to the English text the Bureau publishes. LawNet (lawnet.gov.lk) failed with a certificate error, so other Sri Lankan laws are listed in the follow-up doc.
+
+## South and Southeast Asia (2026-11-21)
+
+- `laws-2026-11-21.csv`: 146 rows for Bangladesh (28), Viet Nam (25), Pakistan (23), Nepal (23), Sri Lanka (20), Indonesia (14), India (12) and Cambodia (1). 123 are new. 23 are already on the site (`site_status` starts with "ON SITE"); for those the row gives a better official link, for example the Act's own India Code or Pakistan Code page instead of a ministry front page.
+- Sources: Laws of Bangladesh (bdlaws.minlaw.gov.bd), Pakistan Code, Nepal Law Commission, India Code (indiacode.gov.in), Parliament of Sri Lanka (Acts as passed), the Government of Viet Nam legal documents system (vanban.chinhphu.vn), JDIH of the Ministry of Manpower (Indonesia) and the Ministry of Labour and Vocational Training (Cambodia). The last two are ministry copies, marked "official agency copy".
+- Numbers we could not read from the page are left blank, not guessed. New laws found include Viet Nam Law 22/2026/QH16 (amending the law on contract-based overseas workers), Indonesia UU No. 2 Tahun 2026 on the Protection of Domestic Workers and the Sri Lanka Immigration Bill (No. 85, presented 7 October 2026).
+- Portals we could not reach are listed in `unreachable-portals-asia-2026-11-21.md` and in Part O (items 260 to 275) of the follow-up doc.
