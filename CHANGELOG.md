@@ -10,7 +10,7 @@ archived files.
 
 ## v2026.11.1 (20 November 2026)
 
-Zenodo: https://doi.org/10.5281/zenodo.24389324 (all versions). The DOI of this release is added once Zenodo has archived it.
+Zenodo: https://doi.org/10.5281/zenodo.24411389 (this release); https://doi.org/10.5281/zenodo.24389324 (all versions).
 
 | Database | Page | Version | Last updated |
 |---|---|---|---|
