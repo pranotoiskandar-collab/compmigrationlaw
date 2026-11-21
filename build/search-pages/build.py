@@ -18,7 +18,7 @@ from texts import TOPICS, ORIGINS, DESTS, GCC, EXTRA_CORRIDORS, INSTRUMENTS, ATL
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SITE = os.path.join(ROOT, 'site'); DATA = os.path.join(ROOT, 'data')
 BASE = 'https://theimr.org'
-TODAY = '2026-11-20'
+TODAY = '2026-11-21'
 MIN_CT = 4          # decisions needed for a country x topic page
 MIN_COUNTRY = 5     # decisions needed for a country page (coded countries always get one)
 E = lambda x: html.escape(str(x if x is not None else ''), quote=True)
