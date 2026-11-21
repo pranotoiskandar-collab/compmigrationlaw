@@ -33,7 +33,7 @@ C = [
  ("IR","364","Iran","Iran"),("IQ","368","Iraq","Irak"),("IE","372","Ireland","Irlandia"),
  ("IL","376","Israel","Israel"),("IT","380","Italy","Italia"),("JM","388","Jamaica","Jamaika"),
  ("JP","392","Japan","Jepang"),("JO","400","Jordan","Yordania"),("KZ","398","Kazakhstan","Kazakhstan"),
- ("KE","404","Kenya","Kenya"),("KW","414","Kuwait","Kuwait"),("KG","417","Kyrgyzstan","Kirgizstan"),
+ ("KE","404","Kenya","Kenya"),("KI","296","Kiribati","Kiribati"),("KW","414","Kuwait","Kuwait"),("KG","417","Kyrgyzstan","Kirgizstan"),
  ("LA","418","Laos","Laos"),("LV","428","Latvia","Latvia"),("LB","422","Lebanon","Lebanon"),
  ("LS","426","Lesotho","Lesotho"),("LR","430","Liberia","Liberia"),("LY","434","Libya","Libya"),
  ("LI","438","Liechtenstein","Liechtenstein"),("LT","440","Lithuania","Lituania"),("LU","442","Luxembourg","Luksemburg"),
@@ -43,7 +43,7 @@ C = [
  ("MU","480","Mauritius","Mauritius"),("MX","484","Mexico","Meksiko"),("MC","492","Monaco","Monako"),
  ("MN","496","Mongolia","Mongolia"),("ME","499","Montenegro","Montenegro"),("MA","504","Morocco","Maroko"),
  ("MZ","508","Mozambique","Mozambik"),("MM","104","Myanmar","Myanmar"),("NA","516","Namibia","Namibia"),
- ("NP","524","Nepal","Nepal"),("NL","528","Netherlands","Belanda"),("NZ","554","New Zealand","Selandia Baru"),
+ ("NR","520","Nauru","Nauru"),("NP","524","Nepal","Nepal"),("NL","528","Netherlands","Belanda"),("NZ","554","New Zealand","Selandia Baru"),
  ("NI","558","Nicaragua","Nikaragua"),("NE","562","Niger","Niger"),("NG","566","Nigeria","Nigeria"),
  ("KP","408","North Korea","Korea Utara"),("MK","807","North Macedonia","Makedonia Utara"),("NO","578","Norway","Norwegia"),
  ("OM","512","Oman","Oman"),("PK","586","Pakistan","Pakistan"),("PW","585","Palau","Palau"),
@@ -63,7 +63,7 @@ C = [
  ("SR","740","Suriname","Suriname"),("SE","752","Sweden","Swedia"),("CH","756","Switzerland","Swiss"),
  ("SY","760","Syria","Suriah"),("TW","158","Taiwan","Taiwan"),("TJ","762","Tajikistan","Tajikistan"),
  ("TZ","834","Tanzania","Tanzania"),("TH","764","Thailand","Thailand"),("TL","626","Timor-Leste","Timor-Leste"),
- ("TG","768","Togo","Togo"),("TT","780","Trinidad and Tobago","Trinidad dan Tobago"),("TN","788","Tunisia","Tunisia"),
+ ("TG","768","Togo","Togo"),("TO","776","Tonga","Tonga"),("TV","798","Tuvalu","Tuvalu"),("TT","780","Trinidad and Tobago","Trinidad dan Tobago"),("TN","788","Tunisia","Tunisia"),
  ("TR","792","Türkiye","Turki"),("TM","795","Turkmenistan","Turkmenistan"),("UG","800","Uganda","Uganda"),
  ("UA","804","Ukraine","Ukraina"),("AE","784","United Arab Emirates","Uni Emirat Arab"),("GB","826","United Kingdom","Inggris Raya"),
  ("US","840","United States","Amerika Serikat"),("UY","858","Uruguay","Uruguay"),("UZ","860","Uzbekistan","Uzbekistan"),
@@ -85,7 +85,7 @@ DOTS = {
  "MU":(57.55,-20.3),"AD":(1.52,42.5),"LI":(9.55,47.16),"MC":(7.42,43.74),"SM":(12.46,43.94),"BB":(-59.54,13.19),
  "AG":(-61.8,17.07),"DM":(-61.37,15.41),"GD":(-61.68,12.12),"KN":(-62.78,17.36),"LC":(-60.98,13.91),
  "VC":(-61.2,13.25),"CV":(-23.6,15.1),"KM":(43.87,-11.88),"ST":(6.61,0.19),"SC":(55.49,-4.68),
- "WS":(-172.1,-13.76),"PW":(134.58,7.51),"MH":(171.18,7.13),"CK":(-159.78,-21.24),
+ "WS":(-172.1,-13.76),"NR":(166.93,-0.52),"TO":(-175.2,-21.18),"KI":(173.0,1.45),"TV":(179.19,-8.52),"PW":(134.58,7.51),"MH":(171.18,7.13),"CK":(-159.78,-21.24),
 }
 BY2 = {c[0]: c for c in C}
 NUM = {c[1]: c[0] for c in C}

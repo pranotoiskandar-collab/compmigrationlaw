@@ -26,7 +26,8 @@ def fmt(n):
 def counts():
     dec = rows("court-decisions/decisions.csv")
     laws = sum(len(rows(p)) for p in ("southeast-asia/domestic-laws.csv", "east-asia/domestic-laws.csv",
-                                      "gcc/domestic-laws.csv", "countries-of-origin/laws-policies.csv"))
+                                      "gcc/domestic-laws.csv", "countries-of-origin/laws-policies.csv",
+                                      "migration-law/national-laws.csv"))
     norms = len(rows("migration-law/migration-norms.csv"))
     dw = rows("domestic-workers/instruments.csv")
     idx = json.loads((SITE / "legal-clinic" / "ask" / "ask-index.json").read_text(encoding="utf-8"))
@@ -141,7 +142,7 @@ def impact(n):
     data = "".join([
         stat(n["decisions"], tr("court decisions", "putusan pengadilan"), tr(f"From courts in {n['dec_countries']} countries, and from regional and international bodies.", f"Dari pengadilan di {n['dec_countries']} negara, serta dari badan kawasan dan internasional.")),
         stat(n["coded"], tr("decisions fully coded", "putusan yang dikodekan penuh"), tr("The rest are listed and waiting to be checked.", "Sisanya telah didaftar dan menunggu diperiksa.")),
-        stat(n["laws"], tr("national laws and regulations with official links", "undang-undang dan peraturan nasional dengan tautan resmi"), tr("Gulf States, East Asia, Southeast Asia and countries of origin.", "Negara Teluk, Asia Timur, Asia Tenggara dan negara asal.")),
+        stat(n["laws"], tr("national laws and regulations with source links", "undang-undang dan peraturan nasional dengan tautan sumber"), tr("Gulf States, East Asia, Southeast Asia, countries of origin and other regions.", "Negara Teluk, Asia Timur, Asia Tenggara, negara asal, dan kawasan lain.")),
         stat(n["rules"], tr("coded rules, country by country", "aturan terkode, per negara"), tr("Wages, hours, fees, changing employer and more.", "Upah, jam kerja, biaya, pindah majikan dan lainnya.")),
         stat(n["norms"], tr("global, regional and national norms in the Atlas", "norma global, kawasan dan nasional dalam Atlas"), tr("With ratifications by country.", "Beserta ratifikasinya per negara.")),
         stat(n["help"], tr("free legal help contacts", "kontak bantuan hukum gratis"), tr("Phone numbers only where checked.", "Nomor telepon hanya yang sudah diperiksa.")),

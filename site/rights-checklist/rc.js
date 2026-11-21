@@ -22,7 +22,7 @@
       help: 'Jika ada masalah, hubungi', home: 'Di Indonesia', abroad: function (c) { return 'Di ' + c; },
       nohelp: 'Kami belum punya kontak yang sudah diperiksa untuk negara ini. Hubungi KBRI/KJRI atau Klinik Hukum IMR.',
       clinic: 'Klinik Hukum IMR (gratis): siapkan pengaduan hak di theimr.org/legal-clinic/',
-      foot: function (d, n) { return 'Disusun dari basis data Institute for Migrant Rights (theimr.org), ' + n + '. Data dikodekan per ' + d + '. Hukum dapat berubah; periksa kembali sebelum berangkat. Tanda * berarti belum dicocokkan dengan teks resmi undang-undang. Lembar ini berisi informasi hukum umum, bukan nasihat hukum untuk kasus anda.'; },
+      foot: function (d, n) { return 'Disusun dari basis data Institute for Migrant Rights (theimr.org), ' + n + '. Data dikodekan per ' + d + '. Hukum bisa berubah; periksa kembali sebelum berangkat. Tanda * berarti belum dicocokkan dengan teks resmi undang-undang. Lembar ini berisi informasi hukum umum, bukan nasihat hukum untuk kasus anda.'; },
       link: 'Lembar ini daring: ', more: 'Rincian (bahasa Inggris)', unclear: 'Belum jelas',
       gulf: 'Perhatian'
     },

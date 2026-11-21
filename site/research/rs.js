@@ -8,8 +8,8 @@
       addThem: 'Add them to my list', badfile: 'That file is not an IMR reading list.', cleared: 'Lists cleared.', confirmClear: 'Press again to clear both lists from this browser.',
       count: function (a, b) { return a + ' in the reading list, ' + b + ' saved searches'; }},
     id: {noitems: 'Daftar bacaan anda masih kosong. Buka putusan pengadilan mana pun lalu tekan "Tambahkan ke daftar bacaan".', nosearch: 'Belum ada pencarian tersimpan. Di halaman basis data, atur filter yang anda inginkan lalu tekan "Simpan pencarian ini".',
-      remove: 'Hapus', note: 'Catatan anda', open: 'Buka', added: 'ditambahkan', saved: 'disimpan', rename: 'Ganti nama', storage: 'Peramban ini tidak mengizinkan situs menyimpan apa pun (mode pribadi atau data situs diblokir), sehingga daftar tidak dapat disimpan di sini.',
-      imported: function (n) { return n + ' entri ditambahkan.'; }, shareok: 'Tautan disalin. Siapa pun yang membukanya dapat menambahkan daftar anda ke daftarnya.', incoming: function (n) { return 'Tautan ini membawa daftar bacaan berisi ' + n + ' entri.'; },
+      remove: 'Hapus', note: 'Catatan anda', open: 'Buka', added: 'ditambahkan', saved: 'disimpan', rename: 'Ganti nama', storage: 'Peramban ini tidak mengizinkan situs menyimpan apa pun (mode pribadi atau data situs diblokir), sehingga daftar tidak bisa disimpan di sini.',
+      imported: function (n) { return n + ' entri ditambahkan.'; }, shareok: 'Tautan disalin. Siapa pun yang membukanya bisa menambahkan daftar anda ke daftarnya.', incoming: function (n) { return 'Tautan ini membawa daftar bacaan berisi ' + n + ' entri.'; },
       addThem: 'Tambahkan ke daftar saya', badfile: 'Berkas itu bukan daftar bacaan IMR.', cleared: 'Daftar dikosongkan.', confirmClear: 'Tekan sekali lagi untuk mengosongkan kedua daftar dari peramban ini.',
       count: function (a, b) { return a + ' di daftar bacaan, ' + b + ' pencarian tersimpan'; }}
   };

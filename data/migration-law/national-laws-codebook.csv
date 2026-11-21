@@ -1,0 +1,18 @@
+variable,definition,values
+id,Stable identifier of the row,text
+s,ISO 3166 code of the state that made the law,code
+region,Region used for ordering,africa | mideast | asia | pacific
+title,Title in English (official English title where one exists),text
+orig,"Title in the original language, where recorded",text
+no,Official number,text
+year,Year adopted,YYYY
+amended,"Amending instruments or years, where recorded",text
+type,Kind of instrument,statute | regulation | decision | policy | guidance | agreement | draft
+topic,"Subject, as listed by the source",text
+farm_domestic,"What the source says about farm or domestic workers, where recorded",text
+url,Link to the text or the database entry,URL
+link,"What the link is: text = official text; guidance = official guidance from a ministry or agency site; db = front page of an official database; secondary = not a government site (PacLII); un = copy held in a UN database (UNODC SHERLOC), not the national gazette",text | guidance | db | secondary | un
+source_tier,The source as described when the row was found,text
+status,Unverified = found with AI help on the source named and not yet read by a person,Unverified
+note,Notes for editors: what was checked and what still needs checking,text
+last_checked,Date the row was last compared with its source,YYYY-MM-DD

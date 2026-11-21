@@ -18,7 +18,7 @@
       parties: 'negara pihak', none: 'Tidak ada negara yang cocok.', shown: 'negara ditampilkan', checked: 'Terakhir dicocokkan dengan catatan resmi: ',
       legend: 'Tahun yang tercantum adalah tahun ratifikasi atau penandatanganan. Hijau: mengikat. Hijau muda: diratifikasi, belum berlaku (aturan dua belas bulan ILO). Krem: baru ditandatangani. Merah: diakhiri. Kosong: bukan pihak.',
       nochanges: 'Belum ada perubahan sejak pelacak ini dimulai pada 19 November 2026. Pemeriksaan mingguan pertama berjalan hari Senin.',
-      blocked: 'Upaya terakhir tidak dapat menjangkau sumber: ', loadfail: 'Tabel tidak dapat dimuat. Silakan unduh CSV di bawah.',
+      blocked: 'Upaya terakhir tidak bisa menjangkau sumber: ', loadfail: 'Tabel tidak bisa dimuat. Silakan unduh CSV di bawah.',
       new: 'baru', updated: 'diperbarui', gone: 'tidak lagi tercantum'}
   };
   var rows = [], changes = [], status = [], byCountry = {}, sortKey = 'country', sortDir = 1;

@@ -51,7 +51,7 @@
     $('cmp-share').innerHTML = FT.t('Link to this comparison: ', 'Tautan ke perbandingan ini: ') + '<a href="' + FT.esc(location.href) + '">' + FT.esc(location.href) + '</a>';
     $('cmp-out').innerHTML = '<p class="ft-note">' + FT.t('Loading…', 'Memuat…') + '</p>';
     Promise.all([FT.country(a), FT.country(b)]).then(function (r) { draw(r[0], r[1]); }).catch(function () {
-      $('cmp-out').innerHTML = '<p class="ft-empty">' + FT.t('Could not load the data. Please try again.', 'Data tidak dapat dimuat. Silakan coba lagi.') + '</p>';
+      $('cmp-out').innerHTML = '<p class="ft-empty">' + FT.t('Could not load the data. Please try again.', 'Data tidak bisa dimuat. Silakan coba lagi.') + '</p>';
     });
   }
 

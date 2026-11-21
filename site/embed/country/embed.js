@@ -18,7 +18,7 @@
       more: 'Selengkapnya di theimr.org', ask: 'Tanya IMR', note: 'Informasi hukum, bukan nasihat hukum. Periksa sumber resminya.',
       checked: 'sudah diperiksa pada teks resmi', notChecked: 'belum diperiksa pada teks resmi', official: 'Teks resmi', call: 'Telepon',
       won: 'Pekerja menang', lost: 'Pekerja kalah', counts: function (n) { return n[0] + ' aturan terkode · ' + n[1] + ' undang-undang · ' + n[2] + ' putusan pengadilan'; },
-      none: 'IMR belum memiliki catatan untuk negara ini.', err: 'Data tidak dapat dimuat.', lic: 'Data CC BY 4.0'}
+      none: 'IMR belum memiliki catatan untuk negara ini.', err: 'Data tidak bisa dimuat.', lic: 'Data CC BY 4.0'}
   }[L];
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]; }); }
   var root = document.getElementById('w');

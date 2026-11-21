@@ -30,6 +30,7 @@ DATASETS = {
     'countries-of-origin': ('Countries of Origin', 'Negara Asal', '/countries-of-origin/'),
     'domestic-workers': ('Migrant Domestic Workers', 'Pekerja Rumah Tangga Migran', '/domestic-workers/'),
     'migration-law': ('Migration Law Atlas', 'Atlas Hukum Migrasi', '/migration-law/'),
+    'national-laws': ('National laws: other regions', 'Undang-undang nasional: kawasan lain', '/migration-law/national-laws/'),
     'court-decisions': ('Court Decisions', 'Putusan Pengadilan', '/court-decisions/'),
     'legal-help': ('Find free legal help', 'Cari bantuan hukum gratis', '/legal-help/'),
 }
@@ -145,11 +146,16 @@ def main():
     # National laws
     for ds, fn in [('gcc', 'gcc/domestic-laws.csv'), ('east-asia', 'east-asia/domestic-laws.csv'),
                    ('southeast-asia', 'southeast-asia/domestic-laws.csv'),
-                   ('countries-of-origin', 'countries-of-origin/laws-policies.csv')]:
+                   ('countries-of-origin', 'countries-of-origin/laws-policies.csv'),
+                   ('national-laws', 'migration-law/national-laws.csv')]:
         for r in rows(fn):
             topic = r.get('topic', '')
             if r.get('groups') and ds == 'gcc':
                 topic = f"{topic}: {r['groups']}"
+            if ds == 'national-laws':
+                flag = {'secondary': '; secondary source (PacLII)', 'un': '; UN-hosted copy (SHERLOC)',
+                        'guidance': '; official guidance'}.get(r.get('link', ''), '')
+                topic = f"{topic} ({r.get('status') or 'Unverified'}{flag})".strip()
             add_law(ds, r['s'], r, r['title'], r.get('orig', ''), year_of(r.get('year')), r.get('amended', ''),
                     r.get('type', ''), topic, r.get('link') if (r.get('link') or '').startswith('http') else r.get('url', ''),
                     {'no': clean(r.get('no', '')), 'chkd': clean(r.get('checked', ''))})

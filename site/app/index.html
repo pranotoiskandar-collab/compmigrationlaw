@@ -151,7 +151,7 @@ document.addEventListener('click', function (e) {
 (function(){
 var L=function(){return document.documentElement.lang==='id'?'id':'en'};
 var T={en:{saving:'Saving…',done:'Saved. These pages now open without signal.',nosw:'This browser cannot save pages for offline use. Try Chrome on Android or Safari on iPhone.',already:'IMR is installed on this device.',fail:'Could not save right now. Try again on Wi-Fi.'},
-id:{saving:'Menyimpan…',done:'Tersimpan. Halaman-halaman ini kini bisa dibuka tanpa sinyal.',nosw:'Peramban ini tidak dapat menyimpan halaman untuk dipakai tanpa sinyal. Coba Chrome di Android atau Safari di iPhone.',already:'IMR sudah terpasang di perangkat ini.',fail:'Belum bisa menyimpan. Coba lagi saat tersambung Wi-Fi.'}};
+id:{saving:'Menyimpan…',done:'Tersimpan. Halaman-halaman ini kini bisa dibuka tanpa sinyal.',nosw:'Peramban ini tidak bisa menyimpan halaman untuk dipakai tanpa sinyal. Coba Chrome di Android atau Safari di iPhone.',already:'IMR sudah terpasang di perangkat ini.',fail:'Belum bisa menyimpan. Coba lagi saat tersambung Wi-Fi.'}};
 var ev=null,row=document.getElementById('ap-install-row');
 addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e;row.hidden=false;});
 document.getElementById('ap-install').addEventListener('click',function(){if(!ev)return;ev.prompt();ev.userChoice.then(function(){ev=null;row.hidden=true;});});
