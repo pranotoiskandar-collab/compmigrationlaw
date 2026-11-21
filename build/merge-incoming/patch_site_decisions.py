@@ -14,13 +14,19 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "build/east-asia-cases"))
 from imr_candidates import to_row, COLS  # noqa: E402
 
-SITE = Path(sys.argv[1]); IN = json.load(open(sys.argv[2], encoding="utf-8")); DATE = "2026-11-17"
+import os
+SITE = Path(sys.argv[1]); IN = json.load(open(sys.argv[2], encoding="utf-8")); DATE = os.environ.get("MERGE_DATE", "2026-11-17")
 CD = SITE / "court-decisions"
 E = html.escape
 
 # Country labels used by the interactive page. Add the ones it does not know yet.
 J = (CD / "cd.js").read_text(encoding="utf-8")
-EXTRA = {"MO": ["Macau", "Makau"], "GH": ["Ghana", "Ghana"], "UG": ["Uganda", "Uganda"], "EG": ["Egypt", "Mesir"], "MM": ["Myanmar", "Myanmar"]}
+EXTRA = {"MO": ["Macau", "Makau"], "GH": ["Ghana", "Ghana"], "UG": ["Uganda", "Uganda"], "EG": ["Egypt", "Mesir"], "MM": ["Myanmar", "Myanmar"],
+         # 2026-11-20 round (Pacific, UN treaty bodies)
+         "NR": ["Nauru", "Nauru"], "FJ": ["Fiji", "Fiji"], "VU": ["Vanuatu", "Vanuatu"], "UZ": ["Uzbekistan", "Uzbekistan"],
+         "LY": ["Libya", "Libya"]}
+# Ecuador now has a decision of its own (UN Human Rights Committee), so the label no longer names only the advisory request.
+J = J.replace('EC: ["Americas (requested by Ecuador)", "Amerika (atas permintaan Ekuador)"]', 'EC: ["Ecuador", "Ekuador"]')
 for k, v in EXTRA.items():
     if not re.search(rf"\b{k}: \[", J):
         J = J.replace('HK: ["Hong Kong", "Hong Kong"],', f'HK: ["Hong Kong", "Hong Kong"], {k}: {json.dumps(v, ensure_ascii=False)},', 1)
@@ -45,30 +51,48 @@ for did, srcs in IN["links"].items():
         t = t.replace("<h2>Sources</h2><ul>", "<h2>Sources</h2><ul>" + items, 1)
         page.write_text(t, encoding="utf-8")
 
+# 1b. case numbers (and their official link) for decisions already on the site
+for did, c in IN.get("cites", {}).items():
+    d = byid[did]
+    if c["cite"] in d.get("cite", ""):
+        continue
+    d["cite"] = (d["cite"] + "; " + c["cite"]) if d.get("cite") and "to be added" not in d["cite"] else c["cite"]
+    if c["src"]["u"].rstrip("/") not in {s["u"].rstrip("/") for s in d["src"]}:
+        d["src"] = d["src"] + [c["src"]]
+    page = CD / "d" / did / "index.html"
+    if page.exists():
+        t = page.read_text(encoding="utf-8")
+        t = re.sub(r"(Citation: )([^<]*)", lambda m: m.group(1) + E(d["cite"]), t, count=1)
+        if c["src"]["u"] not in t:
+            t = t.replace("<h2>Sources</h2><ul>", f'<h2>Sources</h2><ul><li><a href="{E(c["src"]["u"])}" rel="noopener">{E(c["src"]["t"])}</a></li>', 1)
+        page.write_text(t, encoding="utf-8")
+LINKED = set(IN["links"]) | set(IN.get("cites", {}))
+
 # 2. new decisions
 add = [e for e in IN["new"] if e["id"] not in byid]
 clean = [{k: v for k, v in e.items() if k != "title_local"} for e in add]
 data["decisions"] = old + clean
 data["date"] = DATE
 N1 = len(data["decisions"])
-pre = pre.replace("2026-11-01", DATE)
+pre = re.sub(r"\(20\d\d-\d\d-\d\d\)", f"({DATE})", pre, count=1)
 (CD / "cd-data.js").write_text(pre + "window.CD=" + json.dumps(data, ensure_ascii=False) + ";\n", encoding="utf-8")
 
 j = json.load(open(CD / "data/decisions.json", encoding="utf-8"))
 jb = {d["id"]: d for d in j["decisions"]}
-for did in IN["links"]:
+for did in LINKED:
     if did in jb:
-        jb[did]["src"] = byid[did]["src"]
+        jb[did]["src"] = byid[did]["src"]; jb[did]["cite"] = byid[did]["cite"]
 j["decisions"] = j["decisions"] + clean; j["date"] = DATE
 json.dump(j, open(CD / "data/decisions.json", "w", encoding="utf-8"), ensure_ascii=False)
 
 rows = list(csv.DictReader(open(CD / "data/decisions.csv", encoding="utf-8")))
 for r in rows:
-    if r["id"] in IN["links"]:
-        r["sources"] = " | ".join(s["u"] for s in byid[r["id"]]["src"])
-rows += [to_row(e) for e in clean]
+    if r["id"] in LINKED:
+        r["sources"] = " | ".join(s["u"] for s in byid[r["id"]]["src"]); r["citation"] = byid[r["id"]]["cite"]
+rows += [dict(to_row(e), last_checked=DATE) for e in clean]
+FIELDS = list(rows[0].keys()) if rows else COLS
 with open(CD / "data/decisions.csv", "w", newline="", encoding="utf-8") as fh:
-    w = csv.DictWriter(fh, COLS); w.writeheader(); w.writerows(rows)
+    w = csv.DictWriter(fh, FIELDS, extrasaction="ignore", restval=""); w.writeheader(); w.writerows(rows)
 
 # sources.csv: count new decisions per database
 srows = list(csv.DictReader(open(CD / "data/sources.csv", encoding="utf-8")))

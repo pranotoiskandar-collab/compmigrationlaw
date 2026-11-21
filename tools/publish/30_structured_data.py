@@ -178,7 +178,7 @@ print(f"  organisation: foundingDate {FOUNDED} on {n_org} pages")
 
 # ---------------------------------------------------------------- country pages
 LAW_FILES = [("gcc", "domestic-laws.csv"), ("east-asia", "domestic-laws.csv"), ("southeast-asia", "domestic-laws.csv"),
-             ("countries-of-origin", "laws-policies.csv")]
+             ("countries-of-origin", "laws-policies.csv"), ("migration-law", "national-laws.csv")]
 laws = {}
 for db, f in LAW_FILES:
     p = DATA / db / f

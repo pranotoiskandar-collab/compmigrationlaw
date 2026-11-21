@@ -6,6 +6,7 @@
 - [Court Decisions](https://theimr.org/court-decisions/): more than 1,500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
 - [All decisions, one page each](https://theimr.org/court-decisions/d/)
 - [Migration Law Atlas](https://theimr.org/migration-law/): global, regional and national migration law, ratifications, country profiles
+- [National laws: other regions](https://theimr.org/migration-law/national-laws/): 133 national laws from Africa, the Middle East, East Asia and the Pacific (unverified, with source links)
 - [Farmworker Norms Atlas](https://theimr.org/migration-law/?lens=farm): ranked international, regional and national norms on farm work
 - [Gulf States](https://theimr.org/gcc/): migration and labor laws in comparison, six Gulf states
 - [East Asia](https://theimr.org/east-asia/): Taiwan, South Korea, Hong Kong and Japan
@@ -36,7 +37,7 @@ Summaries are for research and advocacy, not legal advice. Cite the dataset name
 - [What works where](https://theimr.org/legal-clinic/what-works/): which legal arguments for migrant workers courts accepted or rejected in each jurisdiction, with a note on what sets each jurisdiction apart.
 
 ## Browse by country, topic and corridor
-- [Countries](https://theimr.org/countries/): one page per country (46) with court decisions, laws, treaty status, corridors and free legal help. Indonesian: https://theimr.org/id/negara/
+- [Countries](https://theimr.org/countries/): one page per country (64) with court decisions, laws, treaty status, corridors and free legal help. Indonesian: https://theimr.org/id/negara/
 - [Topics](https://theimr.org/topics/): court decisions by problem (18 topics), e.g. unpaid wages, recruitment fees, passport confiscation, detention and deportation. Indonesian: https://theimr.org/id/topik/
 - [Migration corridors](https://theimr.org/corridors/): 62 origin–destination pages, e.g. [Indonesian workers in Malaysia](https://theimr.org/corridors/indonesia-to-malaysia/). Indonesian: https://theimr.org/id/koridor/
 - [Unpaid wages](https://theimr.org/topics/unpaid-wages/)

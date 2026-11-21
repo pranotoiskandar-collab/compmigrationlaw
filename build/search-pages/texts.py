@@ -173,4 +173,4 @@ INSTRUMENTS = [
 ATLAS_NAME = {'KR': 'Republic of Korea', 'VN': 'Viet Nam', 'US': 'United States of America', 'TZ': 'United Republic of Tanzania',
               'CI': "Côte d'Ivoire", 'BO': 'Bolivia'}
 
-EXTRA_COUNTRY = {'VN': ['Vietnam', 'Vietnam'], 'BN': ['Brunei', 'Brunei Darussalam'], 'JO': ['Jordan', 'Yordania']}
+EXTRA_COUNTRY = {'VN': ['Vietnam', 'Vietnam'], 'BN': ['Brunei', 'Brunei Darussalam'], 'JO': ['Jordan', 'Yordania'], 'WS': ['Samoa', 'Samoa'], 'TO': ['Tonga', 'Tonga'], 'SB': ['Solomon Islands', 'Kepulauan Solomon'], 'KI': ['Kiribati', 'Kiribati'], 'TV': ['Tuvalu', 'Tuvalu'], 'IQ': ['Iraq', 'Irak'], 'MN': ['Mongolia', 'Mongolia'], 'CN': ['China', 'Tiongkok']}

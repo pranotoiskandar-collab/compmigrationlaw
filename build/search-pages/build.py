@@ -18,7 +18,7 @@ from texts import TOPICS, ORIGINS, DESTS, GCC, EXTRA_CORRIDORS, INSTRUMENTS, ATL
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SITE = os.path.join(ROOT, 'site'); DATA = os.path.join(ROOT, 'data')
 BASE = 'https://theimr.org'
-TODAY = '2026-11-19'
+TODAY = '2026-11-20'
 MIN_CT = 4          # decisions needed for a country x topic page
 MIN_COUNTRY = 5     # decisions needed for a country page (coded countries always get one)
 E = lambda x: html.escape(str(x if x is not None else ''), quote=True)
@@ -54,7 +54,8 @@ def order(ds):  # full entries first, newest first
 # laws by state
 LAWS = defaultdict(list)
 for p, src in [('gcc/domestic-laws.csv', 'gcc'), ('east-asia/domestic-laws.csv', 'east-asia'),
-               ('southeast-asia/domestic-laws.csv', 'southeast-asia'), ('countries-of-origin/laws-policies.csv', 'countries-of-origin')]:
+               ('southeast-asia/domestic-laws.csv', 'southeast-asia'), ('countries-of-origin/laws-policies.csv', 'countries-of-origin'),
+               ('migration-law/national-laws.csv', 'national-laws')]:
     for r in rcsv(p):
         r['db'] = src; LAWS[r['s']].append(r)
 
@@ -156,6 +157,16 @@ HEAD = re.sub(r'<meta (?:property|name)="(?:og|twitter):(?:title|description|url
 HEAD = re.sub(r'<link rel="alternate" hreflang[^>]*>\s*', '', HEAD)
 HEAD = re.sub(r'\s*aria-current="[^"]*"', '', HEAD)
 FOOT = re.sub(r'<section id="imr-research".*?</section>\s*', '', FOOT, flags=re.S)
+
+# The court-decisions shell still carries an older menu (a doubled "Know your rights" link, no "Case of the month"
+# or "Tools"); use the menu the homepage and earlier search pages carry (2026-11-20).
+_KYR = '<a href="/rights-checklist/">Know your rights before you go</a>\n'
+HEAD = HEAD.replace(_KYR + _KYR, _KYR)
+if 'href="/court-decisions/highlights/"' not in HEAD:
+    HEAD = HEAD.replace('<a href="/court-decisions/">Court Decisions</a>\n</div>', '<a href="/court-decisions/">Court Decisions</a>\n'
+        '<a href="/court-decisions/highlights/" style="padding-left:28px">Case of the month</a>\n'
+        '<span style="display:block;padding:12px 16px 2px;font:500 11px \'Figtree\',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3D5A4D">Tools</span>\n'
+        '<a href="/ratifications/">Ratification tracker</a>\n<a href="/research/">Saved searches and reading list</a>\n</div>', 1)
 CSS = '''<style id="sp-css">
 .sp-main{padding:40px 0 64px}.sp-main .g-wrap{max-width:960px}
 .sp-main h1{font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.12;margin:10px 0 0}
@@ -232,7 +243,8 @@ T = {  # fixed wording
                won='pihak pekerja menang', lost='pihak pekerja kalah', adv='nasihat', unk='hasil perlu diperiksa'),
 }
 DBNAME = {'gcc': ('Gulf States', 'Negara-Negara Teluk', '/gcc/'), 'east-asia': ('East Asia', 'Asia Timur', '/east-asia/'),
-          'southeast-asia': ('Southeast Asia', 'Asia Tenggara', '/southeast-asia/'), 'countries-of-origin': ('Countries of Origin', 'Negara Asal', '/countries-of-origin/')}
+          'southeast-asia': ('Southeast Asia', 'Asia Tenggara', '/southeast-asia/'), 'countries-of-origin': ('Countries of Origin', 'Negara Asal', '/countries-of-origin/'),
+          'national-laws': ('National laws: other regions', 'Undang-undang nasional: kawasan lain', '/migration-law/national-laws/')}
 def tr(L, k): return T[L][k]
 
 def dec_li(d, L, show_country=False):
@@ -266,6 +278,10 @@ def law_rows(c, L, n=40):
         title = E(r['title']) + ('<br><span class="g-note">%s</span>' % E(r['orig']) if r.get('orig') else '')
         src = '<a href="%s" rel="noopener">%s</a>' % (E(r['url']), 'official site' if L == 'en' else 'situs resmi') if r.get('url', '').startswith('http') else ''
         if r.get('link') == 'glmm': src = '<a href="%s" rel="noopener">GLMM</a>' % E(r['url'])
+        if r.get('link') == 'secondary': src = '<a href="%s" rel="noopener">PacLII</a> (%s)' % (E(r['url']), 'secondary source' if L == 'en' else 'sumber sekunder')
+        if r.get('link') == 'un': src = '<a href="%s" rel="noopener">UNODC SHERLOC</a> (%s)' % (E(r['url']), 'UN-hosted copy' if L == 'en' else 'salinan di situs PBB')
+        if r.get('link') == 'guidance': src = '<a href="%s" rel="noopener">%s</a>' % (E(r['url']), 'official guidance' if L == 'en' else 'panduan resmi')
+        if r.get('status') == 'Unverified': src += ' <span class="g-note">%s</span>' % ('Unverified' if L == 'en' else 'Belum diverifikasi')
         s += '<tr><td>%s</td><td class="c">%s%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
             title, E(r.get('year', '')), (' (am. %s)' % E(r['amended'])) if r.get('amended') and L == 'en' else ((' (ubah %s)' % E(r['amended'])) if r.get('amended') else ''),
             E(r.get('type', '')), E((r.get('topic') or '')[:160]), src)
