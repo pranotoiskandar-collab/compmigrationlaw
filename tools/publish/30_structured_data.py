@@ -147,7 +147,18 @@ if cat_page.exists():
 FOUNDED = "2007"
 
 
+# The same organisation on Wikidata, ROR, Zenodo and GitHub (checked 2026-11-21).
+SAME_AS = [
+    "https://www.wikidata.org/wiki/Q141669545",
+    "https://ror.org/03jwtma89",
+    "https://doi.org/10.5281/zenodo.24389324",
+    "https://github.com/pranotoiskandar-collab/compmigrationlaw",
+]
+
+
 def org(obj):
+    if isinstance(obj, list):
+        return [org(x) for x in obj]
     if not isinstance(obj, dict):
         return obj
     for k, v in list(obj.items()):
@@ -157,6 +168,7 @@ def org(obj):
             obj[k] = [org(x) for x in v]
     if obj.get("@type") in ("Organization", "NGO", "ResearchOrganization") and obj.get("name") == "Institute for Migrant Rights" and len(obj) > 3:
         obj["foundingDate"] = FOUNDED
+        obj["sameAs"] = SAME_AS
     return obj
 
 
@@ -168,7 +180,7 @@ for page in [SITE / "index.html", SITE / "contact.html", SITE / "people.html", S
     new = replace_ld(html, lambda o: org(o) if "Institute for Migrant Rights" in json.dumps(o) else None)
     if '"foundingDate"' not in new and page.name == "index.html" and page.parent == SITE:
         ld = {"@context": "https://schema.org", "@type": "Organization", "name": "Institute for Migrant Rights",
-              "alternateName": "IMR", "url": f"{BASE}/", "foundingDate": FOUNDED,
+              "alternateName": "IMR", "url": f"{BASE}/", "foundingDate": FOUNDED, "sameAs": SAME_AS,
               "address": {"@type": "PostalAddress", "addressLocality": "Cianjur", "addressRegion": "Jawa Barat", "addressCountry": "ID"}}
         new = new.replace("</head>", f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n</head>', 1)
     if new != html:
