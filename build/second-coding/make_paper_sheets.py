@@ -12,7 +12,7 @@ What it draws (seed 20261120, so the sample can be rebuilt):
   Domestic workers about 20% of the coded cells in codings.csv for each of the 25 features (blank
                    cells, "not determined", are left out), spread across jurisdictions.
   Comparison pages the 54 cells already drawn on 18 November 2026, reused unchanged.
-Each item gets one second coder (four coders since 20 November 2026) (round robin within each stratum, so every coder gets a mix).
+Each item gets one second coder (five coders since 21 November 2026) (round robin within each stratum, so every coder gets a mix).
 About 20% of items also get a second human coder ("overlap"), so agreement between two people can be
 reported alongside agreement between a person and IMR's own coding.
 
@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2] / "data"
 PAGES_WS, PAGES_KEY, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 (OUT / "keys").mkdir(parents=True, exist_ok=True)
 SEED, SHARE, OVERLAP = 20261120, 0.20, 0.20
-CODERS = ["Felicia Nathania", "Michelle Tjugito", "Intan Nevia Cahyana", "Chris Cason"]
+CODERS = ["Felicia Nathania", "Michelle Tjugito", "Intan Nevia Cahyana", "Chris Cason", "Oleksiy Kononov"]
 rng = random.Random(SEED)
 rd = lambda p: list(csv.DictReader(open(p, encoding="utf-8")))
 
