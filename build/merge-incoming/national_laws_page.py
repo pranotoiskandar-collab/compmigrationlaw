@@ -12,7 +12,7 @@ from collections import OrderedDict, defaultdict
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SITE = os.path.join(ROOT, "site")
-DATE = "2026-11-20"
+DATE = os.environ.get("MERGE_DATE", "2026-11-21")
 PATH = "/migration-law/national-laws/"
 E = lambda x: html.escape(str(x or ""), quote=True)
 
@@ -20,8 +20,11 @@ R = list(csv.DictReader(open(os.path.join(ROOT, "data/migration-law/national-law
 NAMES = {"ZA": "South Africa", "KE": "Kenya", "UG": "Uganda", "GH": "Ghana", "NG": "Nigeria", "ZW": "Zimbabwe",
          "EG": "Egypt", "LB": "Lebanon", "IQ": "Iraq", "IL": "Israel", "JO": "Jordan", "MO": "Macau", "MN": "Mongolia",
          "CN": "China", "FJ": "Fiji", "PG": "Papua New Guinea", "WS": "Samoa", "TO": "Tonga", "VU": "Vanuatu",
-         "SB": "Solomon Islands", "KI": "Kiribati", "TV": "Tuvalu", "NR": "Nauru", "AU": "Australia", "NZ": "New Zealand"}
-REG = OrderedDict([("africa", ("Africa", "Afrika")), ("mideast", ("Middle East (outside the Gulf States)", "Timur Tengah (di luar Negara-Negara Teluk)")),
+         "SB": "Solomon Islands", "KI": "Kiribati", "TV": "Tuvalu", "NR": "Nauru", "AU": "Australia", "NZ": "New Zealand",
+         # round of 2026-11-21
+         "TZ": "Tanzania", "ZM": "Zambia", "MW": "Malawi", "NA": "Namibia", "LS": "Lesotho", "SZ": "Eswatini",
+         "TR": "Türkiye", "MA": "Morocco", "TN": "Tunisia", "DZ": "Algeria", "LY": "Libya"}
+REG = OrderedDict([("africa", ("Africa", "Afrika")), ("mideast", ("Middle East and North Africa (outside the Gulf States)", "Timur Tengah dan Afrika Utara (di luar Negara-Negara Teluk)")),
                    ("asia", ("East Asia (outside the East Asia page)", "Asia Timur (di luar halaman Asia Timur)")),
                    ("pacific", ("Pacific, with Australia and New Zealand", "Pasifik, dengan Australia dan Selandia Baru"))])
 TYPE = {"statute": "Statute", "regulation": "Regulation", "decision": "Ministerial decision", "policy": "Policy",

@@ -8,6 +8,13 @@ The databases keep their own version numbers. Each release lists them, so a
 reader can match a citation such as "Court Decisions, version 0.1" to the
 archived files.
 
+## Since v2026.11.1 (not yet released)
+
+Published on the site 21 November 2026; the next Zenodo release will archive them (documents and the release are refreshed every two weeks).
+
+- Court Decisions: 1,912 -> 2,028. 116 decisions from Zambia (39), Tanzania (36), Namibia (29), Malawi (10) and Lesotho (2), found on the Laws.Africa legal information institutes. All status C ("Unverified: unchecked candidate"); the subject line comes from the portal's search summary.
+- National laws table: 133 -> 237. 82 laws from Tanzania, Zambia, Namibia, Eswatini, Lesotho and Malawi (LII consolidated texts), 17 from Türkiye (official texts on mevzuat.gov.tr) and 5 from Morocco, Tunisia, Algeria and Libya (UNODC SHERLOC, UN-hosted copies). All Unverified.
+
 ## v2026.11.1 (20 November 2026)
 
 Zenodo: https://doi.org/10.5281/zenodo.24411389 (this release); https://doi.org/10.5281/zenodo.24389324 (all versions).

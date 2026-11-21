@@ -9,10 +9,13 @@ Courts of Macau (court.gov.mo),,www.court.gov.mo,official,80,https://www.court.g
 lawlibrary.org.za,,lawlibrary.org.za,report,59,https://lawlibrary.org.za/
 Courts in Japan,Supreme Court of Japan,courts.go.jp,official,57,https://www.courts.go.jp/
 Lawphil,"Arellano Law Foundation, Philippines",lawphil.net,legaldb,50,https://lawphil.net/
+ZambiaLII (Zambia),Laws.Africa with the judiciary,zambialii.org,legaldb,42,https://zambialii.org/
 HUDOC,European Court of Human Rights,hudoc.echr.coe.int,official,41,https://hudoc.echr.coe.int/
 Kenya Law,"National Council for Law Reporting, Kenya",kenyalaw.org,legaldb,39,https://new.kenyalaw.org/
+TanzLII (Tanzania),Laws.Africa with the judiciary,tanzlii.org,legaldb,37,https://tanzlii.org/
 HKLII,Hong Kong Legal Information Institute,hklii.hk,legaldb,35,https://www.hklii.hk/
 SAFLII,Southern African Legal Information Institute,saflii.org,legaldb,34,https://www.saflii.org/
+NamibLII (Namibia),Laws.Africa with the judiciary,namiblii.org,legaldb,34,https://namiblii.org/
 OHCHR jurisprudence database,UN Human Rights Office,juris.ohchr.org,official,31,https://juris.ohchr.org/
 Corte Constitucional,"Constitutional Court, Colombia",corteconstitucional.gov.co,official,30,https://www.corteconstitucional.gov.co/
 Indian Kanoon,Indian Kanoon,indiankanoon.org,legaldb,25,https://indiankanoon.org/
@@ -20,6 +23,7 @@ africanlii.org,,africanlii.org,report,23,https://africanlii.org/
 Inter-American Court of Human Rights,Inter-American Court of Human Rights,corteidh.or.cr,official,19,https://www.corteidh.or.cr/
 Constitutional Court of Korea,Constitutional Court of Korea,ccourt.go.kr,official,18,https://english.ccourt.go.kr/
 Supreme Court of Canada judgments,Supreme Court of Canada / Lexum,scc-csc.lexum.com,official,17,https://scc-csc.lexum.com/
+MalawiLII (Malawi),Laws.Africa with the judiciary,malawilii.org,legaldb,15,https://malawilii.org/
 UN Official Document System,United Nations,docs.un.org,official,13,https://docs.un.org/
 ICJ,International Court of Justice,icj-cij.org,official,12,https://www.icj-cij.org/
 African Commission decisions,African Commission on Human and Peoples’ Rights,achpr.au.int,official,12,https://achpr.au.int/
@@ -39,15 +43,13 @@ ULII (Uganda),,ulii.org,official,7,https://ulii.org/
 Inter-American Commission on Human Rights,Organization of American States,oas.org,official,6,https://www.oas.org/
 Justia US Supreme Court,Justia,supreme.justia.com,legaldb,5,https://supreme.justia.com/
 NZLII,New Zealand Legal Information Institute,nzlii.org,legaldb,5,https://www.nzlii.org/
-malawilii.org,,malawilii.org,report,5,https://malawilii.org/
-namiblii.org,,namiblii.org,report,5,https://namiblii.org/
 BAILII,British and Irish Legal Information Institute,bailii.org,legaldb,4,https://www.bailii.org/
 NORMLEX,International Labour Organization,normlex.ilo.org,official,4,https://normlex.ilo.org/
 zimlii.org,,zimlii.org,report,4,https://zimlii.org/
+LesLII (Lesotho),Laws.Africa with the judiciary,lesotholii.org,legaldb,4,https://lesotholii.org/
 Amnesty International,Amnesty International,amnesty.org,report,3,https://www.amnesty.org/
 Business & Human Rights Resource Centre,Business & Human Rights Resource Centre,business-humanrights.org,report,3,https://www.business-humanrights.org/
 African Court,African Court on Human and Peoples’ Rights,african-court.org,official,3,https://www.african-court.org/
-zambialii.org,,zambialii.org,report,3,https://zambialii.org/
 "Fair Work Ombudsman, Australia: media release (official guidance)",,www.fairwork.gov.au,official,3,https://www.fairwork.gov.au/
 Mahkamah Konstitusi,Constitutional Court of Indonesia,mkri.id,official,2,https://mkri.id/
 kathmandupost.com,,kathmandupost.com,report,2,https://kathmandupost.com/
@@ -63,7 +65,6 @@ High Court of Australia,High Court of Australia,hcourt.gov.au,official,2,https:/
 UK Supreme Court,UK Supreme Court,supremecourt.uk,official,2,https://www.supremecourt.uk/
 ohchr.org,,ohchr.org,report,2,https://www.ohchr.org/
 hrlibrary.umn.edu,,hrlibrary.umn.edu,report,2,https://hrlibrary.umn.edu/
-lesotholii.org,,lesotholii.org,report,2,https://lesotholii.org/
 Employment Court of New Zealand,,employmentcourt.govt.nz,official,2,https://employmentcourt.govt.nz/
 mongabay.co.id,,mongabay.co.id,report,1,https://mongabay.co.id/
 Notable judgments,"Department of Justice, Hong Kong",doj.gov.hk,official,1,https://www.doj.gov.hk/
@@ -109,7 +110,6 @@ Supreme Court of Thailand,Supreme Court of Thailand,supremecourt.or.th,official,
 Tribunal Constitucional,"Constitutional Tribunal, Chile",tribunalconstitucional.cl,official,1,https://www.tribunalconstitucional.cl/
 hrlibrary.law.umn.edu,,hrlibrary.law.umn.edu,report,1,https://hrlibrary.law.umn.edu/
 curia.europa.eu,,curia.europa.eu,report,1,https://curia.europa.eu/
-tanzlii.org,,tanzlii.org,report,1,https://tanzlii.org/
 concourt.org.za,,www.concourt.org.za,official,1,https://www.concourt.org.za/
 NigeriaLII,,nigerialii.org,secondary,1,https://nigerialii.org/
 courtecowas.org,,courtecowas.org,official,1,https://courtecowas.org/
