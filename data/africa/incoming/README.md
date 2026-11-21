@@ -21,3 +21,16 @@ Two rows are new, because the saved copy was a different instrument from the one
 - Kenya Refugees Act, 2006 (No. 13 of 2006, repealed by the Refugees Act, 2021), saved as file 42 in the Uganda folder. Its `official_link` is empty: Kenya Law no longer has a page for the repealed Act.
 
 Still open: no copy yet for lines 24 (Kenya LN 1 of 2024), 28 (Kenya LN 143 of 2023), 42 (Uganda Refugees Act 2006), 57 (Nigeria Trafficking in Persons Act 2015) and 59 (Nigeria National Diaspora Policy); scans without text for lines 30, 40 and 54; the Zimbabwe Refugees Act year (1978 or 1983, line 52); and the signed text of the EAC Common Market Protocol (the saved copy is headed "Draft").
+
+## 2026-11-21: Tanzania, Zambia, Malawi, Namibia, Lesotho and Eswatini
+
+A new round for six southern and eastern African states that had no laws in the data yet.
+
+| File | Rows | What it holds |
+| --- | --- | --- |
+| `laws-2026-11-21.csv` | 85 | Immigration, refugee, trafficking, citizenship, passport and labour laws and regulations: Tanzania 25, Zambia 20, Namibia 18, Eswatini 9, Lesotho 7, Malawi 6. Includes Zambia's new Immigration Control Act 2026, Tanzania's Non-Citizens (Employment Regulation) Act 2015, Namibia's Regularisation of Status Act 2024, domestic-worker wage orders, and the 1975 Swaziland and South Africa agreement on a labour representative office. 3 rows are already in the Domestic Workers data (marked `ON SITE`). |
+| `court-decisions-2026-11-21.csv` | 116 | Decisions on deportation, immigration detention, work permits of foreign workers, refugees and trafficking: Zambia 39, Tanzania 36, Namibia 29, Malawi 10, Lesotho 2. 11 decisions found in the same searches were already on the site or in earlier incoming files and are left out. |
+
+All rows come from the national legal information institutes (TanzLII, ZambiaLII, MalawiLII, NamibLII, LesLII, EswatiniLII). These are free law portals run with each judiciary, so `source_tier` says "LII", not "official". Decision rows are `status` C and Unverified: the `note` repeats the portal's own one-line summary, and the judgments have not been read yet. Some Namibian rows say "issue to be read" because the search showed only a text snippet. Law rows give the year from the citation; exact dates and Gazette numbers still need checking. EswatiniLII's version date 1998-12-01 is the revised edition, not the date of the law.
+
+What a person still has to do is in the follow-up Google Doc, Part N (items 244 onward), and in `unreachable-portals-2026-11-21.md`.
