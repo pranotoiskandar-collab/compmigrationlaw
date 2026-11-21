@@ -6,7 +6,7 @@
 - [Court Decisions](https://theimr.org/court-decisions/): more than 1,500 court decisions on migrants from national, regional and international courts, led by Asia, Africa, the Middle East and Latin America; coded variables (type of case, outcome, arguments, follow-up), plain-language summaries in English and Indonesian. Data: https://theimr.org/court-decisions/data/decisions.csv
 - [All decisions, one page each](https://theimr.org/court-decisions/d/)
 - [Migration Law Atlas](https://theimr.org/migration-law/): global, regional and national migration law, ratifications, country profiles
-- [National laws: other regions](https://theimr.org/migration-law/national-laws/): 237 national laws from Africa, the Middle East, East Asia and the Pacific (unverified, with source links)
+- [National laws: other regions](https://theimr.org/migration-law/national-laws/): 254 national laws from Africa, the Middle East, East Asia and the Pacific (unverified, with source links)
 - [Farmworker Norms Atlas](https://theimr.org/migration-law/?lens=farm): ranked international, regional and national norms on farm work
 - [Gulf States](https://theimr.org/gcc/): migration and labor laws in comparison, six Gulf states
 - [East Asia](https://theimr.org/east-asia/): Taiwan, South Korea, Hong Kong and Japan

@@ -158,8 +158,11 @@
         var R = F.filter(function (a) { return a.s === s.k && a.partner === d; });
         return '<td class="c">' + (R.length ? '<span class="g-pill p-yes" title="' + esc(R.map(function (a) { return a.title + " (" + a.signed + ")"; }).join("; ")) + '">' + esc(R.map(function (a) { return a.signed.slice(0, 4); }).join(", ")) + "</span>" : '<span class="g-mono">·</span>') + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody>";
   }
+  var REG = {"@SA": [["South Asia", "Asia Selatan"], ["BD", "IN", "LK", "NP", "PK"]], "@SEA": [["Southeast Asia", "Asia Tenggara"], ["ID", "PH", "VN", "MM", "KH", "LA", "TL"]]};
+  var inSel = function (v, k) { return !v || (REG[v] ? REG[v][1].indexOf(k) >= 0 : v === k); };
+  var regOpts = function (v) { return Object.keys(REG).map(function (r) { return '<option value="' + r + '"' + (v === r ? " selected" : "") + ">" + esc(t(REG[r][0][0], REG[r][0][1])) + "</option>"; }).join(""); };
   function atools() {
-    var so = '<option value="">' + t("All eight", "Kedelapannya") + "</option>" + S.map(function (s) { return '<option value="' + s.k + '"' + (AF.s === s.k ? " selected" : "") + ">" + esc(t(s.n, s.n_id)) + "</option>"; }).join("");
+    var so = '<option value="">' + t("All countries", "Semua negara") + "</option>" + regOpts(AF.s) + S.map(function (s) { return '<option value="' + s.k + '"' + (AF.s === s.k ? " selected" : "") + ">" + esc(t(s.n, s.n_id)) + "</option>"; }).join("");
     var lo = '<option value="">' + t("All levels", "Semua tingkat") + "</option>" + LEVELS.map(function (l) { return '<option value="' + l[0] + '"' + (AF.level === l[0] ? " selected" : "") + ">" + esc(t(l[1], l[2])) + "</option>"; }).join("");
     var no = '<option value="">' + t("All kinds", "Semua jenis") + "</option>" + NATURES.map(function (n) { return '<option value="' + n[0] + '"' + (AF.nature === n[0] ? " selected" : "") + ">" + esc(t(n[1], n[2])) + "</option>"; }).join("");
     $("g-atools").innerHTML = '<div><label for="af-s">' + t("Country of origin", "Negara asal") + '</label><select id="af-s">' + so + '</select></div><div><label for="af-l">' + t("Level", "Tingkat") + '</label><select id="af-l">' + lo + '</select></div><div><label for="af-n">' + t("Nature", "Sifat") + '</label><select id="af-n">' + no + '</select></div><div><label for="af-q">' + t("Search", "Cari") + '</label><input id="af-q" type="search" value="' + esc(AF.q) + '" placeholder="' + t("Partner or title", "Mitra atau judul") + '"></div>';
@@ -170,7 +173,7 @@
   }
   function alist() {
     var q = AF.q.toLowerCase(), all = G.frameworks || [];
-    var R = all.filter(function (a) { return (!AF.s || covers(a, AF.s)) && (!AF.level || a.level === AF.level) && (!AF.nature || a.nature === AF.nature) && (!q || (a.partner + " " + a.title + " " + (a.scope || "")).toLowerCase().indexOf(q) >= 0); });
+    var R = all.filter(function (a) { return (!AF.s || (REG[AF.s] ? REG[AF.s][1].some(function (k) { return covers(a, k); }) : covers(a, AF.s))) && (!AF.level || a.level === AF.level) && (!AF.nature || a.nature === AF.nature) && (!q || (a.partner + " " + a.title + " " + (a.scope || "")).toLowerCase().indexOf(q) >= 0); });
     $("g-acount").textContent = fmt(R.length) + t(" of ", " dari ") + fmt(all.length) + t(" instruments", " instrumen");
     $("g-atable").innerHTML = "<thead><tr><th>" + t("Country of origin", "Negara asal") + "</th><th>" + t("Partner", "Mitra") + "</th><th>" + t("Instrument", "Instrumen") + "</th><th>" + t("Level", "Tingkat") + "</th><th>" + t("Nature", "Sifat") + "</th><th>" + t("Adopted", "Diadopsi") + "</th><th>" + t("In force", "Berlaku") + "</th></tr></thead><tbody>" +
       R.map(function (a) { return "<tr><td>" + esc(snames(a)) + "</td><td>" + esc(a.level === "bilateral" ? dname(a.partner) : a.partner) + "</td><td>" + esc(a.title) + (a.scope ? '<br><span class="g-mono">' + esc(a.scope) + "</span>" : "") + '</td><td class="c">' + esc(lname(LEVELS, a.level)) + "</td><td>" + esc(lname(NATURES, a.nature)) + '</td><td class="c g-mono">' + esc(a.signed || "") + '</td><td class="c g-mono">' + esc(a.in_force || "") + "</td></tr>"; }).join("") + "</tbody>";
@@ -182,7 +185,7 @@
   var LANG = {ID:"id", VN:"vi", NP:"ne", BD:"bn"};
   var LF = {s:"", type:"", q:""};
   function laws() {
-    var so = '<option value="">' + t("All eight", "Kedelapannya") + "</option>" + S.map(function (s) { return '<option value="' + s.k + '"' + (LF.s === s.k ? " selected" : "") + ">" + esc(t(s.n, s.n_id)) + "</option>"; }).join("");
+    var so = '<option value="">' + t("All countries", "Semua negara") + "</option>" + regOpts(LF.s) + S.map(function (s) { return '<option value="' + s.k + '"' + (LF.s === s.k ? " selected" : "") + ">" + esc(t(s.n, s.n_id)) + "</option>"; }).join("");
     var to = '<option value="">' + t("All types", "Semua jenis") + "</option>" + Object.keys(LTYPE).map(function (k) { return '<option value="' + k + '"' + (LF.type === k ? " selected" : "") + ">" + esc(t(LTYPE[k][0], LTYPE[k][1])) + "</option>"; }).join("");
     $("g-ltools").innerHTML = '<div><label for="lf-s">' + t("Country", "Negara") + '</label><select id="lf-s">' + so + '</select></div><div><label for="lf-t">' + t("Type", "Jenis") + '</label><select id="lf-t">' + to + '</select></div><div style="grid-column:span 2"><label for="lf-q">' + t("Search", "Cari") + '</label><input id="lf-q" type="search" value="' + esc(LF.q) + '" placeholder="' + t("Title, topic or original title", "Judul, topik atau judul asli") + '"></div>';
     $("lf-s").onchange = function () { LF.s = this.value; laws(); };
@@ -192,10 +195,10 @@
   }
   function lawList() {
     var L = G.laws || [], q = LF.q.toLowerCase();
-    var R = L.filter(function (x) { return (!LF.s || x.s === LF.s) && (!LF.type || x.type === LF.type) && (!q || (x.title + " " + x.orig + " " + x.topic).toLowerCase().indexOf(q) >= 0); });
+    var R = L.filter(function (x) { return inSel(LF.s, x.s) && (!LF.type || x.type === LF.type) && (!q || (x.title + " " + x.orig + " " + x.topic).toLowerCase().indexOf(q) >= 0); });
     $("g-lcount").textContent = fmt(R.length) + t(" of ", " dari ") + fmt(L.length) + t(" laws and policies", " hukum dan kebijakan");
     $("g-ltable").innerHTML = "<thead><tr><th>" + t("Country", "Negara") + "</th><th>" + t("Title", "Judul") + "</th><th>" + t("Type", "Jenis") + "</th><th>" + t("Adopted", "Diadopsi") + "</th><th>" + t("Last amended", "Perubahan terakhir") + "</th><th>" + t("Relevance", "Relevansi") + "</th><th>" + t("Official source", "Sumber resmi") + "</th></tr></thead><tbody>" +
-      R.map(function (x) { return '<tr><td class="c">' + esc(sname(x.s)) + "</td><td><b>" + esc(x.title) + "</b>" + (x.orig ? '<br><span class="g-mono"' + (LANG[x.s] ? ' lang="' + LANG[x.s] + '"' : "") + ">" + esc(x.orig) + "</span>" : "") + "</td><td>" + esc(t(LTYPE[x.type][0], LTYPE[x.type][1])) + '</td><td class="c g-mono">' + esc(x.year) + '</td><td class="c g-mono">' + esc(x.amended || "") + "</td><td>" + esc(x.topic) + '</td><td class="c"><a href="' + esc(x.url) + '" rel="noopener">' + (x.link === "text" ? t("Read the text", "Baca teks") : t("Official database", "Basis data resmi")) + "</a></td></tr>"; }).join("") + "</tbody>";
+      R.map(function (x) { return '<tr><td class="c">' + esc(sname(x.s)) + "</td><td><b>" + esc(x.title) + "</b>" + (x.orig ? '<br><span class="g-mono"' + (LANG[x.s] ? ' lang="' + LANG[x.s] + '"' : "") + ">" + esc(x.orig) + "</span>" : "") + "</td><td>" + esc(t(LTYPE[x.type][0], LTYPE[x.type][1])) + '</td><td class="c g-mono">' + esc(x.year) + '</td><td class="c g-mono">' + esc(x.amended || "") + "</td><td>" + esc(x.topic) + '</td><td class="c"><a href="' + esc(x.url) + '" rel="noopener">' + (x.link === "text" ? t("Read the text", "Baca teks") : x.link === "secondary" ? t("Secondary copy", "Salinan sekunder") : x.link === "un" ? t("UN-hosted copy", "Salinan di situs PBB") : x.link === "guidance" ? t("Official guidance", "Panduan resmi") : t("Official database", "Basis data resmi")) + "</a></td></tr>"; }).join("") + "</tbody>";
   }
 
   /* ---------- VIII. protection from violence ---------- */
