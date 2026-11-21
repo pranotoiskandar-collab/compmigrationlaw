@@ -3,7 +3,7 @@
 (function () {
   var A = {
 /* origin-courts:start */
-"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 943 decisions by national courts of the countries on this page. 914 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 943 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 914 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
+"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 1108 decisions by national courts of the countries on this page. 1079 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 1108 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 1079 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
 "XII · COURTS AT HOME": "XII · PENGADILAN DI NEGARA ASAL",
 "Courts at home": "Pengadilan di negara asal",
 "Court decisions from countries of origin": "Putusan pengadilan dari negara asal",
@@ -12,7 +12,7 @@
 "Pick a theme to set the countries side by side: the table counts the decisions on each theme from each country's courts, and choosing a row lists them next to each other. Group the themes by the worker's situation, by the stage of the migration journey, or by the type of case. Situations are listed by importance, from the complaints that origin-state agencies receive and from ILO studies, and can be re-sorted by number of decisions; the stages follow the order of the journey.": "Pilih satu tema untuk menyandingkan negara-negara: tabel menghitung putusan tentang tiap tema dari pengadilan tiap negara, dan memilih satu baris menampilkan daftarnya secara berdampingan. Tema bisa dikelompokkan menurut situasi pekerja, tahap perjalanan migrasi, atau jenis perkara. Situasi diurutkan menurut tingkat kepentingannya, berdasarkan pengaduan yang diterima lembaga di negara asal dan kajian ILO, dan bisa diurutkan ulang menurut jumlah putusan; tahap perjalanan mengikuti urutan perjalanan.",
 "By country": "Menurut negara",
 "See courts at home and courts abroad side by side, along the migration journey →": "Lihat pengadilan di negara asal dan di negara tujuan secara berdampingan, di sepanjang perjalanan migrasi →",
-"813 decisions, 801 unchecked.": "813 putusan, 801 belum diperiksa.",
+"974 decisions, 962 unchecked.": "974 putusan, 962 belum diperiksa.",
 "Philippines": "Filipina",
 "Supreme Court decisions, mostly from its E-Library (elibrary.judiciary.gov.ph): illegal recruitment, claims by overseas workers and seafarers against recruitment agencies, and trafficking.": "Putusan Mahkamah Agung, sebagian besar dari E-Library-nya (elibrary.judiciary.gov.ph): perekrutan ilegal, gugatan pekerja luar negeri dan pelaut terhadap agen perekrutan, serta perdagangan orang.",
 "112 decisions, 110 unchecked.": "112 putusan, 110 belum diperiksa.",
@@ -20,10 +20,10 @@
 "Supreme Court decisions from Nepal Kanoon Patrika (nkp.gov.np), the Court's official law reports: foreign employment, trafficking, refugees, citizenship and immigration. Names are English labels made from the Nepali subject line, and years are converted from the Bikram Sambat calendar, so they can be off by one.": "Putusan Mahkamah Agung dari Nepal Kanoon Patrika (nkp.gov.np), laporan hukum resmi Mahkamah tersebut: kerja di luar negeri, perdagangan orang, pengungsi, kewarganegaraan dan imigrasi. Judul merupakan label bahasa Inggris yang kami susun dari pokok perkara dalam bahasa Nepal, dan tahun dikonversi dari kalender Bikram Sambat, sehingga bisa selisih satu tahun.",
 "13 decisions.": "13 putusan.",
 "Indonesia": "Indonesia",
+"5 decisions, 4 unchecked.": "5 putusan, 4 belum diperiksa.",
+"Sri Lanka": "Sri Lanka",
 "3 decisions, 2 unchecked.": "3 putusan, 2 belum diperiksa.",
 "Bangladesh": "Bangladesh",
-"1 decision.": "1 putusan.",
-"Sri Lanka": "Sri Lanka",
 "1 decision, 1 unchecked.": "1 putusan, 1 belum diperiksa.",
 "Myanmar": "Myanmar",
 /* origin-courts:end */
