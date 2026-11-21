@@ -3,7 +3,7 @@
 (function () {
   var A = {
 /* origin-courts:start */
-"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 1104 decisions by national courts of the countries on this page. 1075 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 1104 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 1075 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
+"Courts in countries of origin also make migration law. They try illegal recruitment and trafficking, hear workers' claims against recruitment agencies, and review exit bans and passport rules. The Court Decisions database holds 1108 decisions by national courts of the countries on this page. 1079 of them were found by searching the courts' own sites and have not yet been read, so they are marked Unverified and their summaries give the subject only.": "Pengadilan di negara asal juga membentuk hukum migrasi. Pengadilan tersebut mengadili perekrutan ilegal dan perdagangan orang, memeriksa gugatan pekerja terhadap agen perekrutan, dan menguji larangan keluar serta aturan paspor. Basis data Putusan Pengadilan memuat 1108 putusan pengadilan nasional dari negara-negara di halaman ini. Sebanyak 1079 di antaranya kami temukan melalui penelusuran di situs pengadilan itu sendiri dan belum dibaca, sehingga ditandai Belum diverifikasi dan ringkasannya hanya memuat pokok perkara.",
 "XII · COURTS AT HOME": "XII · PENGADILAN DI NEGARA ASAL",
 "Courts at home": "Pengadilan di negara asal",
 "Court decisions from countries of origin": "Putusan pengadilan dari negara asal",
@@ -20,10 +20,10 @@
 "Supreme Court decisions from Nepal Kanoon Patrika (nkp.gov.np), the Court's official law reports: foreign employment, trafficking, refugees, citizenship and immigration. Names are English labels made from the Nepali subject line, and years are converted from the Bikram Sambat calendar, so they can be off by one.": "Putusan Mahkamah Agung dari Nepal Kanoon Patrika (nkp.gov.np), laporan hukum resmi Mahkamah tersebut: kerja di luar negeri, perdagangan orang, pengungsi, kewarganegaraan dan imigrasi. Judul merupakan label bahasa Inggris yang kami susun dari pokok perkara dalam bahasa Nepal, dan tahun dikonversi dari kalender Bikram Sambat, sehingga bisa selisih satu tahun.",
 "13 decisions.": "13 putusan.",
 "Indonesia": "Indonesia",
+"5 decisions, 4 unchecked.": "5 putusan, 4 belum diperiksa.",
+"Sri Lanka": "Sri Lanka",
 "3 decisions, 2 unchecked.": "3 putusan, 2 belum diperiksa.",
 "Bangladesh": "Bangladesh",
-"1 decision.": "1 putusan.",
-"Sri Lanka": "Sri Lanka",
 "1 decision, 1 unchecked.": "1 putusan, 1 belum diperiksa.",
 "Myanmar": "Myanmar",
 /* origin-courts:end */
