@@ -12,6 +12,7 @@ pages free of generated additions, so page rebuilds never clash with them.
 | `30_structured_data.py` | schema.org markup for Google Dataset Search (Dataset, DataCatalog, DataDownload), `Legislation` lists on country pages, richer markup and a "Last checked" line on each decision page, and Google Scholar `citation_*` tags on the working-paper pages |
 | `40_indonesian.py` | Merges `id-extra.json` into `/assets/lang.js` (more Indonesian for decision pages and other gaps) |
 | `50_analytics.py` | Makes sure every page, including new ones, carries the GoatCounter counter |
+| `60_home_cases.py` | Redraws the homepage map of court decisions by country (and the split by court level and outcome) from `data/court-decisions/decisions.csv`, so the homepage numbers always match the data |
 | `90_sitemap.py` | Adds the new pages to `sitemap.xml` and drops redirected ones |
 
 Run locally to preview:  `python3 tools/copy_data.py && python3 -m http.server -d site`
