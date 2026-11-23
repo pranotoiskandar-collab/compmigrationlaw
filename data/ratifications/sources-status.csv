@@ -1,6 +1,6 @@
 instrument,source,last_attempt,result,rows
-C097,normlex,2026-10-30,seeded from the Atlas extract,54
-C143,normlex,2026-10-30,seeded from the Atlas extract,30
-C189,normlex,2026-10-30,seeded from the Atlas extract,40
-C190,normlex,2026-10-30,seeded from the Atlas extract,56
-ICRMW,untc,2026-10-30,seeded from the Atlas extract,71
+C097,normlex,2026-11-23,not reached: HTTP Error 403: Forbidden,54
+C143,normlex,2026-11-23,not reached: HTTP Error 403: Forbidden,30
+C189,normlex,2026-11-23,not reached: HTTP Error 403: Forbidden,40
+C190,normlex,2026-11-23,not reached: HTTP Error 403: Forbidden,56
+ICRMW,untc,2026-11-23,ok,70
